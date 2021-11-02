@@ -324,7 +324,9 @@
             <div class="list__card">
               <div class="list__card-image-container">
                 <div class="list__card-image">
-                  <img src="/website/assets/images/Icon awesome-question-circle.svg" />
+                  <img
+                    src="/website/assets/images/Icon awesome-question-circle.svg"
+                  />
                 </div>
               </div>
               <div class="list__card-content">
@@ -621,3 +623,82 @@
     </section>
   </div>
 </template>
+<script src="/website/assets/js/swiper/swiper-bundle.min.js"></script>
+<script>
+export default {
+  data() {
+    return {};
+  },
+  mounted() {
+    var swiper = new Swiper(".BlogsSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 1,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 2,
+          centeredSlides: false,
+          spaceBetween: 1,
+        },
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3.5,
+          spaceBetween: 30,
+        },
+        1224: {
+          slidesPerView: 3.5,
+          spaceBetween: 5,
+        },
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+    var swiper = new Swiper(".video-slider", {
+      slidesPerView: 1,
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        1224: {
+          slidesPerView: 1,
+          spaceBetween: 5,
+        },
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  },
+  methods() {},
+};
+</script>

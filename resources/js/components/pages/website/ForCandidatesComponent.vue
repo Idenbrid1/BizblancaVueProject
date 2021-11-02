@@ -110,7 +110,11 @@
               <h3>Step 1</h3>
               <p>Sign up with BizBlanca and create your professional CV</p>
             </div>
-            <img class="arrowImg" src="/website/assets/images/arrow.svg" alt="" />
+            <img
+              class="arrowImg"
+              src="/website/assets/images/arrow.svg"
+              alt=""
+            />
           </div>
           <div class="col-6 col-md-3 UpgradeProcessStep">
             <div>
@@ -144,7 +148,11 @@
                 company
               </p>
             </div>
-            <img class="arrowImg" src="/website/assets/images/arrow.svg" alt="" />
+            <img
+              class="arrowImg"
+              src="/website/assets/images/arrow.svg"
+              alt=""
+            />
           </div>
           <div class="col-6 col-md-3 UpgradeProcessStep">
             <div id="expertise">
@@ -537,3 +545,27 @@
     </div>
   </div>
 </template>
+<script src="/website/assets/js/swiper/swiper-bundle.min.js"></script>
+<script>
+export default {
+  data() {
+    return {};
+  },
+  mounted() {
+    var swiper = new Swiper(".successStoriesSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  },
+  methods() {},
+};
+</script>
