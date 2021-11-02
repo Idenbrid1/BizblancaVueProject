@@ -5,6 +5,304 @@
     list-style: none;
 }
 
+/* login */
+.login-page-container {
+    background-color: #fff;
+    border-color: #D9DBDD;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #D9DBDD;
+    /* padding: 50px; */
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.error-messages {
+    font-size: 12px;
+    text-align: right;
+    color: red;
+}
+
+.login-email,
+.login-password {
+    border-radius: 5px;
+}
+
+.login-email:focus,
+.login-password:focus {
+    outline: none !important;
+    border-color: #0F151A !important;
+    box-shadow: 0 0 5px #7A7A7A !important;
+}
+
+.color-theme-darkBlue {
+    color: #081351;
+}
+
+.color-theme-white {
+    color: #fff;
+    margin-top: 25px !important;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.login-wrapper {
+    border: 1px solid #081351;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.left-login,
+.left-register {
+    background: #081351 0% 0% no-repeat padding-box;
+    border: 1px solid #081351;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px !important;
+}
+
+.left-login>span,
+.left-register>span {
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    display: block;
+    padding-top: 15px;
+}
+
+.left-login>p,
+.left-register>p {
+    padding-top: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.right-login,
+.right-register {
+    height: 750px;
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.registerTab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-register {
+    height: auto;
+}
+
+.directLogin {
+    text-align: center;
+}
+
+.directLoginIcons {
+    display: flex;
+    padding: 0px !important;
+}
+
+.directLogin>span {
+    font-size: 14px;
+}
+
+.directLoginIcons>li>a>img {
+    width: 34px;
+    height: 34px;
+}
+
+.directLoginIcons>li>a>img:nth-child(1) {
+    border-radius: 100px;
+}
+
+.directLoginIcons>li>a {
+    margin: 0px 8px;
+}
+
+.directLogin>span>a {
+    margin: 0px 5px;
+}
+
+.directLogin>span>a:hover {
+    text-decoration: underline !important;
+}
+
+.loginFeilds {
+    width: 100%;
+}
+
+.loginFeilds>.form-group {
+    margin: 0px !important;
+}
+
+.loginFeilds>.form-group>label {
+    float: left;
+    letter-spacing: 0px;
+    color: #FF0000;
+    font-size: 12px;
+    margin: 5px 0px;
+}
+
+.loginFeilds>.form-group>input {
+    width: 100%;
+    height: 40px;
+    margin: 0px !important;
+    background: #F1F1F1 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    border: none;
+    border-left: 5px solid #081351;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.loginText>h1 {
+    font-size: 35px;
+    font-weight: 600 !important;
+}
+
+.loginText>p {
+    font-size: 14px;
+    color: #757575;
+}
+
+.loginText {
+    margin-bottom: 20px;
+}
+#employee:checked+label {
+    color: #fff;
+    background-color: #081351;
+}
+
+#company:checked+label {
+    color: #fff;
+    background-color: #081351;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active label {
+    color: #fff !important;
+    background-color: #081351 !important;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #fff !important;
+    background-color: #081351 !important;
+}
+.candidate-register,
+.company-register {
+    padding: 7px 50px;
+    background-color: #fff;
+    display: inline-block;
+    text-align: left;
+    border-radius: 5px 0px 0px 5px !important;
+    justify-content: flex-start;
+    width: fit-content;
+    cursor: pointer;
+    color: #081351 !important;
+    transition: 0.2s linear;
+    font-weight: 500;
+    margin: 10px 0px;
+    border: 1px solid #081351 !important;
+}
+
+.candidate-active,
+.company-active {
+    color: #fff !important;
+    background-color: #081351;
+}
+
+.candidate-register:hover,
+.company-register:hover {
+    color: #fff !important;
+    background-color: #081351;
+    ;
+}
+.is-invalid {
+    border: 1px solid red !important;
+}
+.company-register {
+    border-radius: 0px 5px 5px 0px !important;
+}
+
+.candidate-active {
+    margin: 5px 5px 5px 0px;
+}
+
+.company-active {
+    margin: 5px 5px 5px 0px;
+}
+.rememberforgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.rememberforgot>div>input {
+    color: #757575;
+    width: 16px;
+    height: 16px;
+}
+
+.rememberforgot>div {
+    display: flex;
+    align-items: center;
+
+}
+
+.rememberforgot>div>label {
+    font-size: 14px;
+    margin: 0px !important;
+    padding-left: 7px;
+    cursor: pointer;
+}
+
+.rememberforgot>a {
+    font-size: 14px;
+}
+
+.loginButton {
+    display: block;
+    margin: 20px 0px;
+}
+
+.loginButton>button {
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: #081351 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.loginButton>a {
+    color: #757575;
+    font-size: 14px;
+}
+
+.loginButton>span {
+    font-size: 14px;
+    color: #757575;
+    margin-top: 14px;
+    display: block;
+}
+
+
+/* login end */
+
 /*start-header-css*/
 .mobile-view-btns .register-mbl-btn,
 .mobile-view-btns .signin-mbl-btn {
@@ -44,7 +342,7 @@
     overflow: hidden;
     position: fixed;
     z-index: 999;
-  }
+}
 
 .mobile-view .logo {
     max-width: 126px;
@@ -158,9 +456,10 @@
     font-size: 20px;
     font-weight: 600;
 }
-.mail-subscribe-btn:hover{
-    background-color:#FFDE59;
-    border-color:#FFDE59;
+
+.mail-subscribe-btn:hover {
+    background-color: #FFDE59;
+    border-color: #FFDE59;
 }
 
 .footer__sign-up {
@@ -201,19 +500,21 @@
     color: #000000;
     font-weight: 600;
 }
-.activeCompany{
-padding: 5px;
-background: #FFDE59 0% 0% no-repeat padding-box;
-border-radius: 5px;
-color: #fff !important;
-font-size: 15px;
+
+.activeCompany {
+    padding: 5px;
+    background: #FFDE59 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    color: #fff !important;
+    font-size: 15px;
 }
-.activeCandidate{
-padding: 5px;
-background: #FFDE59 0% 0% no-repeat padding-box;
-border-radius: 5px;
-color: #fff !important;
-font-size: 15px;
+
+.activeCandidate {
+    padding: 5px;
+    background: #FFDE59 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    color: #fff !important;
+    font-size: 15px;
 }
 
 .main-navigation .register-desktop-btn,
@@ -249,16 +550,19 @@ font-size: 15px;
 .account-menu i {
     margin-right: 5px;
 }
+
 .activeseconday {
     background: #081351 0% 0% no-repeat padding-box;
     border-radius: 5px;
     color: #fff !important;
 }
+
 #secondary-header-nav .seprate-line:after {
     content: "|";
     display: inline;
     margin: 0 0.8rem;
 }
+
 ._secondary-header-nav {
     position: relative;
     top: 0px;
@@ -287,6 +591,7 @@ font-size: 15px;
     padding: 0px;
     list-style: none;
 }
+
 ._secondary-header-nav ul>li>a {
     padding: 0.5rem;
     color: #333;
@@ -296,8 +601,9 @@ font-size: 15px;
     color: #0f151a;
     scroll-behavior: smooth;
 }
-._secondary-header-nav ul>li>a:hover{
-    color:#FFDE59;
+
+._secondary-header-nav ul>li>a:hover {
+    color: #FFDE59;
 }
 
 #main-header {
@@ -305,29 +611,37 @@ font-size: 15px;
     padding: 10px 40px;
     border-bottom: 1px solid #C8C8C8;
 }
-.log-site{
+
+.log-site {
     width: 170px;
-    
+
 }
- .dropdown-item:hover {
+
+.dropdown-item:hover {
     color: #fff;
     text-decoration: none;
     background-color: #081351;
 }
-@media only screen and (max-width: 962px) and (min-width: 772px)  {
+
+@media only screen and (max-width: 962px) and (min-width: 772px) {
     #main-header .bizblanca-logo {
         margin-right: 0px;
     }
-    .log-site{
+
+    .log-site {
         width: 132px;
     }
+
     .main-navigation .menu-item {
         font-size: 12px;
     }
-    .main-navigation .register-desktop-btn, .main-navigation .postjob-desktop-btn{
+
+    .main-navigation .register-desktop-btn,
+    .main-navigation .postjob-desktop-btn {
         font-size: 12px;
     }
-    .account-menu{
+
+    .account-menu {
         font-size: 12px;
     }
 
@@ -391,7 +705,7 @@ font-size: 15px;
     }
 
     .mobile-view .navbar ul {
-        padding-top:20px;
+        padding-top: 20px;
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
         position: fixed;
@@ -421,11 +735,12 @@ font-size: 15px;
         margin: 10px;
         color: #757575;
     }
-    .mobile-view .navbar ul a li::after{
+
+    .mobile-view .navbar ul a li::after {
         content: "\f105";
         font-family: 'Font Awesome 5 Pro';
         float: right;
-        }
+    }
 
     .mobile-button .company-mbl-btn,
     .mobile-button .candidate-mbl-btn {
@@ -913,7 +1228,8 @@ font-size: 15px;
 .bg-two {
     background-image: url(../images/looking-employee.png);
 }
-.bg-Grey{
+
+.bg-Grey {
     background-color: #EEEEEE;
     width: 100%;
     padding: 3rem 0px !important;
@@ -1144,7 +1460,7 @@ font-size: 15px;
     margin: 0;
     background: #FFDE59;
     border-radius: 5px;
-    height:4vh;
+    height: 4vh;
 }
 
 .video-slider .swiper-button-prev,
@@ -1258,7 +1574,7 @@ font-size: 15px;
     color: #fff;
     padding: 10px 40px;
     border-radius: 5px;
-    font-size:20px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -3006,8 +3322,9 @@ font-size: 15px;
 .footer .nav__item {
     color: #fff;
 }
-.footer .nav__item:hover{
-    color:#FFDE59;
+
+.footer .nav__item:hover {
+    color: #FFDE59;
 }
 
 .footer .nav__col {
@@ -3031,7 +3348,7 @@ font-size: 15px;
 @media (min-width: 1024px) {
     .footer .nav__col {
         width: 30%;
-        margin-top:0px;
+        margin-top: 0px;
     }
 
 }
@@ -3094,10 +3411,12 @@ font-size: 15px;
     font-weight: 500;
     font-size: 24px;
 }
+
 .news-text {
     color: #081351;
     font-size: 16px;
 }
+
 .BlogsSwiper>.swiper-wrapper>.single-blog-wrap>.single-blog>.news-card-day>.blog-title {
     margin: 10px 0px;
     width: fit-content;
@@ -3162,7 +3481,9 @@ font-size: 15px;
     text-align: center;
     padding: 5px;
 }
-.job-head:hover, .employee-head:hover{
+
+.job-head:hover,
+.employee-head:hover {
     background-color: #FFDE59;
 }
 
@@ -3186,6 +3507,7 @@ font-size: 15px;
     color: #fff;
     font-size: 16px;
 }
+
 /*hapening section*/
 
 .list__card {
@@ -3237,7 +3559,7 @@ font-size: 15px;
 .list__card-content {
     display: flex;
     flex-flow: column nowrap;
-    justify-content:flex-start;
+    justify-content: flex-start;
     flex-grow: 1;
     padding: 2rem 0;
 }
@@ -4408,15 +4730,21 @@ font-size: 15px;
     color: #081351;
     font-weight: bold;
 }
-.companyTestimonial>h4, .companyFlow>h4, .companyFaqs>h4{
+
+.companyTestimonial>h4,
+.companyFlow>h4,
+.companyFaqs>h4 {
     font-size: 32px;
 }
-.companyFlow>h4{
+
+.companyFlow>h4 {
     margin: 30px 0px !important;
 }
-.companyFaqs>h4{
+
+.companyFaqs>h4 {
     margin-bottom: 30px !important;
 }
+
 .companyDifferenceAttribute {
     display: flex;
     justify-content: space-between;
@@ -4443,7 +4771,10 @@ font-size: 15px;
         margin: 15px 0px;
         line-height: inherit;
     }
-    .companyTestimonial>h4, .companyFlow>h4, .companyFaqs>h4{
+
+    .companyTestimonial>h4,
+    .companyFlow>h4,
+    .companyFaqs>h4 {
         font-size: 20px;
     }
 
@@ -4756,7 +5087,7 @@ font-size: 15px;
 
     .footer .nav__col-title {
         font-weight: 700;
-        
+
     }
 
     .footer .nav__item {
@@ -4802,6 +5133,7 @@ font-size: 15px;
         margin-top: 2.6rem;
         text-align: center;
     }
+
     .mail-subscribe-btn {
         background-color: inherit;
         border: 1px solid #fff;
@@ -4809,18 +5141,19 @@ font-size: 15px;
         padding: 10px 58px;
         border-radius: 5px;
         text-align: center;
-        
+
     }
-    
+
 
     .footer__sign-up {
         text-align: center;
     }
 
     @media only screen and (max-width: 600px) {
-        footer .nav__item{
-            font-size:12px;
+        footer .nav__item {
+            font-size: 12px;
         }
+
         .footer__links {
             text-align: left;
         }
@@ -4923,32 +5256,39 @@ font-size: 15px;
 .companyBanner {
     background-color: #EEEEEE;
 }
-.copyright-main{
-    border-top:2px solid #FFDE59;
+
+.copyright-main {
+    border-top: 2px solid #FFDE59;
     margin-top: 10px;
 }
-.company-rights{
+
+.company-rights {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .social-icons-footer {
     padding: 0px;
     margin: 0px;
     display: flex;
     font-size: 24px;
-   
+
 }
+
 .social-icons-footer a {
     color: #fff;
 }
-.social-icons-footer a:hover{
-    color:#FFDE59;
+
+.social-icons-footer a:hover {
+    color: #FFDE59;
 }
+
 .social-icons-footer>li {
     margin: 0px 10px;
 }
-.company-rights>a{
+
+.company-rights>a {
     color: #fff;
 }
 
@@ -4957,42 +5297,51 @@ font-size: 15px;
     color: #081351;
     font-weight: 700;
 }
+
 .heading-div .titleEffect {
     width: 5px;
     height: 30px;
     background-color: #081351;
 }
-.heading-div{
+
+.heading-div {
     display: flex;
     align-items: center;
 }
-.video-heading{
+
+.video-heading {
     font-size: 32px;
     color: #fff;
     font-weight: 700;
 }
+
 .footer-heading-div .footer-titleEffect {
     width: 5px;
     height: 18px;
     background-color: #fff;
 }
-.footer-heading-div{
+
+.footer-heading-div {
     display: flex;
     align-items: center;
 }
-.footer-heading-div{
+
+.footer-heading-div {
     display: flex;
     align-items: center;
 }
+
 .story-heading-div .story-titleEffect {
     width: 5px;
     height: 24px;
     background-color: #fff;
 }
-.story-heading-div{
+
+.story-heading-div {
     display: flex;
     align-items: center;
 }
+
 #back-to-top {
     scroll-behavior: smooth;
     display: none;
@@ -5012,27 +5361,34 @@ font-size: 15px;
     border-radius: 5px;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
-  }
+}
+
 @media only screen and (max-width: 768px) {
-    
-    .video-heading, .site-heading {
-        font-size:20px;
+
+    .video-heading,
+    .site-heading {
+        font-size: 20px;
     }
+
     .bannerSec2Img {
         width: 100%;
     }
-    .company-rights>a{
+
+    .company-rights>a {
         margin: 2px 0px;
-        }
-    .company-rights{
+    }
+
+    .company-rights {
         display: flex;
         flex-direction: column;
-        align-items:center;
+        align-items: center;
         margin-top: 10px;
     }
+
     .social-icons-footer {
         margin: 5px 0px;
     }
+
     .blue-inner-box {
         margin: 0px 20px 0px auto;
         max-width: 85%;

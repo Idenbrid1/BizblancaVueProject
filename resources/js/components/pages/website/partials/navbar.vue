@@ -109,7 +109,14 @@
             ><i class="fas fa-users"></i> Profile</router-link
           >
         </ul>
-        <ul class="main-navigation float-right">
+
+        <ul class="main-navigation float-right d-flex align-items-center">
+          <router-link
+            class="pr-3"
+            data-toggle="collapse"
+            :to="{ name: 'Signin' }"
+            ><i class="fas fa-users"></i> Sign In</router-link
+          >
           <div class="dropdown">
             <button
               class="btn dropdown-toggle account-menu px-0"
@@ -200,17 +207,16 @@ export default {
     return {};
   },
   mounted() {
-    let countDropDown=0;
-    document.querySelector('.account-menu').addEventListener('click',(e)=>{
-      if(countDropDown===0){
-        document.querySelector('#dropdownDiv').style.display="block";
-        countDropDown++
+    let countDropDown = 0;
+    document.querySelector(".account-menu").addEventListener("click", (e) => {
+      if (countDropDown === 0) {
+        document.querySelector("#dropdownDiv").style.display = "block";
+        countDropDown++;
+      } else {
+        document.querySelector("#dropdownDiv").style.display = "none";
+        countDropDown = 0;
       }
-      else{
-        document.querySelector('#dropdownDiv').style.display="none";
-        countDropDown=0
-      }
-    })
+    });
   },
   methods() {},
 };

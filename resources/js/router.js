@@ -4,7 +4,9 @@ import VueRouter from 'vue-router';
 import LandingPage from './components/pages/website/LandingPageComponent.vue';
 import ForCompanies from './components/pages/website/ForCompaniesComponent.vue';
 import ForCandidates from './components/pages/website/ForCandidatesComponent.vue';
-import TestCandidateProfile from './components/pages/website/TestCandidateProfile.vue';
+import TestCandidateProfile from './components/pages/website/candidate/TestCandidateProfile.vue';
+import SignIn from './components/pages/website/Auth/SignInComponent.vue';
+import SignUp from './components/pages/website/Auth/SignUpComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -31,6 +33,16 @@ const router = new VueRouter({
             path: '/test-candidates-profile',
             name: 'Test Candidates Profile',
             component: TestCandidateProfile
+        },
+        {
+            path: '/signin',
+            name: 'Signin',
+            component: SignIn
+        },
+        {
+            path: '/signup',
+            name: 'Signup',
+            component: SignUp
         },
     ]
 });
