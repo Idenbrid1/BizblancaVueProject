@@ -1,0 +1,241 @@
+@media screen and (max-width:769px) {
+    .humburger{
+        display: block;
+    }
+    .hidden-nav{
+        display: none;
+    }
+    .ankers-wrap .about-company-anker {
+        padding: 6px 5px;
+    }
+    .ankers-wrap {
+        width: 100%;
+    }
+    .BlogsSwiper {
+        width: 100%;
+    }
+    .candidate-list>li>div {
+        min-height: 300px;
+    }
+    .ankers-wrap>.about-us-anker {
+        bottom: 5%;
+        left: 4%;
+    }
+
+    .ankers-wrap>.sign-up-anker {
+        padding: 6px 34px;
+
+    }
+    ._secondary-header>.container>ul {
+        padding: 9px;
+        font-size: 0.7rem;
+    }
+
+    .heading-ankers>li>h6 {
+        margin: 0px;
+        width: auto;
+    }
+
+    .image-banner {
+        background-color: #484FE2;
+    }
+
+    .banner-desktop {
+        margin: 0px;
+        display: none;
+    }
+
+    .banner-mobile {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .heading-text {
+        font-size: 15px;
+    }
+
+    .heading-wrap {
+        padding: 30px 0px 10px 0px;
+        justify-content: space-around;
+    }
+
+    .heading-wrap hr {
+        width: 20%;
+    }
+
+    .anker-text-description-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    .features-section {
+        padding: 26px 0px 0px 0px;
+    }
+
+    .human-resource-services-wrap>h3 {
+        font-size: 1.5rem;
+    }
+
+    .view-on-desktop {
+        display: none;
+    }
+
+    .view-on-mobile {
+        display: block;
+    }
+    .candidate-list > li > div > h3{
+        font-size: 5vw;
+        line-height: 1.5;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .introduction-company > ul > li{
+        justify-content: center;
+        padding: 10px 0px;
+    }
+    .success-voice-blocks .single-block > .block{
+        display: flex;
+        flex-direction: column;
+    }
+    .success-voice-blocks > .col-12{
+        padding: 0px;
+    }
+    .successful-voices > .container{
+        padding: 0px 8px 0px 8px;
+    }
+    .about-content-section > h3, .about-content-section > h1, .about-content-section > p{
+        font-size: 12px;
+    }
+    .about-content-section{
+        padding: 40px 0px 20px 0px;
+    }
+    .faq-user-section-about{
+        padding:60px 0px 30px 0px;
+    }
+    .search-by-occupation{
+        border-right: none;
+    }
+    .search-category-section{
+        padding: 5px;
+        padding-top: 20px;
+    }
+    .jobs-block-section {
+        padding-bottom: 30px !important;
+    }
+    .testimonals-blocks{
+        padding: 0px;
+    }
+    .testimonials-user-about > .container{
+        padding: 0px;
+    }
+    .bizer-service-container{
+        padding: 12px;
+    }
+    .view-list-anker {
+        padding: 10px 25px;
+    }
+    .sixth-section {
+        padding: 15px 15px 50px 15px;
+    }
+    .contact-detail{
+        min-width: 100%;
+    }
+    .HomeSwiper>.swiper-wrapper>.swiper-slide h1{
+        font-size: 28px !important;
+    }
+    .HomeSwiper>.swiper-wrapper>.swiper-slide h2{
+        font-size: 18px !important;
+    }
+    .flow-of-use-block{
+        flex: 90%;
+        max-width: 90%;
+        margin: 10px 0px;
+        padding-right: 25px;
+    }
+    .right-login{
+        padding: 10px !important;
+    }
+    .right-register{
+        padding: 10px !important;
+    }
+    .mobileTabsIcons{
+        display: block !important;
+    }
+    #DesktopTabsIcons{
+        display: none;
+    }
+    .h150{
+        height: 105px;
+    }
+    .tabs-content-wrap>.tab-content {
+        padding: 10px;
+      }
+    .profileInfo > .ProfileUserPic {
+        width: 73px;
+        height: 73px;
+        border-radius: 100px;
+        border: 2px solid #081351;
+        margin: 16px 60px 15px 13px;
+    }
+}
+
+@media screen and (min-width:769px) {
+    #DesktopTabsIcons{
+        display: block;
+        height: 100%;
+    }
+    .image-banner {
+        background-color: #484FE2;
+    }
+    .humburger{
+        display: none;
+    }
+    .hidden-nav{
+        display: block;
+    }
+    
+    .view-on-desktop {
+        display: block;
+    }
+
+    .view-on-mobile {
+        display: none;
+    }
+
+    .banner-desktop {
+        display: block;
+        margin: 0 calc((100vw - 2258px) / 2);
+    }
+
+    .banner-mobile {
+        display: none;
+    }
+
+    .heading-wrap hr {
+        width: 25%;
+    }
+
+    .heading-text {
+        font-size: 24px;
+        color: #0f0f0f;
+        font-weight: 520;
+    }
+}
+@media screen and (max-width:993px) {
+    .heading-ankers > li > h6 {
+        margin: 0px;
+        width: auto;
+    }
+}
+@media screen and (max-width:1466px) {
+    .BlogsSwiper>.swiper-wrapper>.single-blog-wrap>.single-blog>img {
+        display: block;
+        height: 160px;
+    }
+}
+@media screen and (min-height:1050px) {
+   .HomeSwiper{
+       height: 60vh;
+   }
+}
