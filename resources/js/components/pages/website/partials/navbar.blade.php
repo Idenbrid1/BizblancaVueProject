@@ -1,34 +1,3 @@
-<!--<nav class="navbar navbar-expand-md header-main" id="header-scroll-color">
-    <div class="container-navbar content-header p-0">
-      <a href="./index.html" class="logo-anker" id="logo-anker">
-        <img
-          src="{{asset('website')}}/assets/img/logo/logo.svg"
-          alt=""
-          style="width: 190px"
-        />
-      </a>
-      <div id="humburger-menu" class="humburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="hidden-nav">
-        <div class="header-ankers">
-            <a href="./comming.html" class="login-anker" id="post-scroll-color"
-            >Search Jobs</a
-          >
-
-          <a href="./about-us.html" class="login-anker" id="scout-scroll-color"
-            >Scout Employees</a
-          >
-          <a href="./login.html" class="login-anker" id="login-scroll-color"
-          >Login</a
-        >
-
-        </div>
-      </div>
-    </div>
-  </nav>-->
 <header id="site-header" role="banner" class="signed-out">
    <div class="header-background"></div>
    <div class="header-inner">
