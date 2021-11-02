@@ -29,6 +29,77 @@
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
     <!-- Optional JavaScript -->
+    <script src="({{asset('website')}}/assets/js/swiper/swiper-bundle.min.js"></script>
+      <script>
+         var swiper = new Swiper(".BlogsSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 1,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+               delay: 2500,
+               disableOnInteraction: false,
+            },
+            pagination: {
+               el: ".swiper-pagination",
+               clickable: true,
+            },
+            breakpoints: {
+               360: {
+                  slidesPerView: 2,
+                  centeredSlides: false,
+                  spaceBetween: 1,
+               },
+               640: {
+                  slidesPerView: 2,
+               },
+               768: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 20,
+               },
+               1024: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 30,
+               },
+               1224: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 5,
+               },
+            },
+            navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+               delay: 3000,
+               disableOnInteraction: false,
+            },
+         });
+         var swiper = new Swiper(".video-slider", {
+            slidesPerView: 1,
+            breakpoints: {
+               640: {
+                  slidesPerView: 1,
+               },
+               768: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+               },
+               1024: {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+               },
+               1224: {
+                  slidesPerView: 1,
+                  spaceBetween: 5,
+               },
+            },
+            navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+            },
+         });
+         </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{asset('website')}}/assets/js/jquery-3.5.1.min.js"></script>
     <script src="{{asset('website')}}/assets/js/bootstrap/popper.min.js"></script>
