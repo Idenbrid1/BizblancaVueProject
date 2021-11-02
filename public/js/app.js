@@ -130,20 +130,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/pages/website/LandingPageComponent.vue */ "./resources/js/components/pages/website/LandingPageComponent.vue");
+/* harmony import */ var _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/website/ForCompaniesComponent.vue */ "./resources/js/components/pages/website/ForCompaniesComponent.vue");
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]({
+
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]);
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]({
   mode: 'history',
   linkExactActiveClass: 'active',
   routes: [{
     path: '/',
     name: 'Landing Page',
     component: _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }, {
+    path: '/for-companies',
+    name: 'For Companies',
+    component: _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
@@ -196,6 +202,42 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/ExampleComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/ForCompaniesComponent.vue":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/pages/website/ForCompaniesComponent.vue ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ForCompaniesComponent_vue_vue_type_template_id_ddefff1e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ForCompaniesComponent.vue?vue&type=template&id=ddefff1e& */ "./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _ForCompaniesComponent_vue_vue_type_template_id_ddefff1e___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ForCompaniesComponent_vue_vue_type_template_id_ddefff1e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/ForCompaniesComponent.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -392,6 +434,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e& ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ForCompaniesComponent_vue_vue_type_template_id_ddefff1e___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ForCompaniesComponent_vue_vue_type_template_id_ddefff1e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ForCompaniesComponent_vue_vue_type_template_id_ddefff1e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ForCompaniesComponent.vue?vue&type=template&id=ddefff1e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/LandingPageComponent.vue?vue&type=template&id=284a2b3e&":
 /*!*******************************************************************************************************!*\
   !*** ./resources/js/components/pages/website/LandingPageComponent.vue?vue&type=template&id=284a2b3e& ***!
@@ -495,6 +553,37 @@ var staticRenderFns = [
         ]),
       ]),
     ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e&":
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e& ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h1", [_vm._v("\n        for companies\n    ")])])
   },
 ]
 render._withStripped = true
@@ -2025,389 +2114,420 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "mobile-view px-0" }, [
+      _vm._m(1),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "mobile-button" },
+        [
+          _c(
+            "router-link",
+            {
+              staticClass: "company-mbl-btn",
+              attrs: {
+                "data-toggle": "collapse",
+                to: { name: "For Companies" },
+              },
+            },
+            [
+              _c("i", { staticClass: "fas fa-building" }),
+              _vm._v(" Forsdf Companies"),
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(2),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _vm._m(3),
+    ]),
+    _vm._v(" "),
+    _c("header", { staticClass: "top-header", attrs: { id: "main-header" } }, [
+      _c("div", { staticClass: "header-inner" }, [
+        _vm._m(4),
+        _vm._v(" "),
+        _c("ul", { staticClass: "main-navigation float-left py-2" }, [
+          _c(
+            "li",
+            { staticClass: "header-block-link" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "company-mbl-btn",
+                  attrs: {
+                    "data-toggle": "collapse",
+                    to: { name: "For Companies" },
+                  },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-building" }),
+                  _vm._v(" For Companies"),
+                ]
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(5),
+        ]),
+        _vm._v(" "),
+        _vm._m(6),
+      ]),
+    ]),
+    _vm._v(" "),
+    _vm._m(7),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "button",
-        {
-          staticClass: "back-to-top",
-          attrs: {
-            onclick: "topFunction()",
-            id: "back-to-top",
-            title: "Go to top",
-          },
+    return _c(
+      "button",
+      {
+        staticClass: "back-to-top",
+        attrs: {
+          onclick: "topFunction()",
+          id: "back-to-top",
+          title: "Go to top",
         },
-        [_c("i", { staticClass: "fa fa-angle-up" })]
+      },
+      [_c("i", { staticClass: "fa fa-angle-up" })]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "logo" }, [
+      _c("a", { attrs: { href: "/index.html" } }, [
+        _c("img", {
+          attrs: { src: "/website/assets/images/Logo.svg", alt: "logo" },
+        }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "candidate-mbl-btn",
+        attrs: { href: "/candidate-detail.html" },
+      },
+      [_c("i", { staticClass: "fas fa-users" }), _vm._v(" For Candidates")]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "navbar" }, [
+      _c(
+        "div",
+        { staticClass: "icon-bar", attrs: { onclick: "ShowNavbar()" } },
+        [_c("i"), _vm._v(" "), _c("i"), _vm._v(" "), _c("i")]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "mobile-view px-0" }, [
-        _c("div", { staticClass: "logo" }, [
-          _c("a", { attrs: { href: "/index.html" } }, [
-            _c("img", {
-              attrs: { src: "/website/assets/images/Logo.svg", alt: "logo" },
+      _c("ul", { attrs: { id: "nav-lists" } }, [
+        _c("div", { staticClass: "d-flex mobile-view-btns px-3" }, [
+          _c(
+            "a",
+            { staticClass: "register-mbl-btn mr-2", attrs: { href: "#" } },
+            [_vm._v("Register CV")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            { staticClass: "signin-mbl-btn ml-2", attrs: { href: "#" } },
+            [_vm._v("Sign in")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#news" } }, [
+          _c("li", [_c("i", { staticClass: "fas fa-globe" }), _vm._v(" News")]),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#expertise" } }, [
+          _c("li", [
+            _c("i", {
+              staticClass: "fas fas fa-search",
+              attrs: { "aria-hidden": "true" },
             }),
+            _vm._v(" Looking for a\n            job\n          "),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "mobile-button" }, [
-          _c(
-            "a",
-            {
-              staticClass: "company-mbl-btn",
-              attrs: { href: "/company-detail.html" },
-            },
-            [
-              _c("i", { staticClass: "fas fa-building" }),
-              _vm._v(" For Companies"),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "candidate-mbl-btn",
-              attrs: { href: "/candidate-detail.html" },
-            },
-            [
-              _c("i", { staticClass: "fas fa-users" }),
-              _vm._v(" For Candidates"),
-            ]
-          ),
+        _c("a", { attrs: { href: "#expertise" } }, [
+          _c("li", [
+            _c("i", {
+              staticClass: "fas fas fa-search",
+              attrs: { "aria-hidden": "true" },
+            }),
+            _vm._v(" Looking for\n            employees\n          "),
+          ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "navbar" }, [
-          _c(
-            "div",
-            { staticClass: "icon-bar", attrs: { onclick: "ShowNavbar()" } },
-            [_c("i"), _vm._v(" "), _c("i"), _vm._v(" "), _c("i")]
-          ),
-          _vm._v(" "),
-          _c("ul", { attrs: { id: "nav-lists" } }, [
-            _c("div", { staticClass: "d-flex mobile-view-btns px-3" }, [
-              _c(
-                "a",
-                { staticClass: "register-mbl-btn mr-2", attrs: { href: "#" } },
-                [_vm._v("Register CV")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                { staticClass: "signin-mbl-btn ml-2", attrs: { href: "#" } },
-                [_vm._v("Sign in")]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "#news" } }, [
-              _c("li", [
-                _c("i", { staticClass: "fas fa-globe" }),
-                _vm._v(" News"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "#expertise" } }, [
-              _c("li", [
-                _c("i", {
-                  staticClass: "fas fas fa-search",
-                  attrs: { "aria-hidden": "true" },
-                }),
-                _vm._v(" Looking for a\n            job\n          "),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "#expertise" } }, [
-              _c("li", [
-                _c("i", {
-                  staticClass: "fas fas fa-search",
-                  attrs: { "aria-hidden": "true" },
-                }),
-                _vm._v(" Looking for\n            employees\n          "),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "#happening" } }, [
-              _c("li", [
-                _c("i", {
-                  staticClass: "fas fa-building",
-                  attrs: { "aria-hidden": "true" },
-                }),
-                _vm._v(" FAQS"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "#video" } }, [
-              _c("li", [
-                _c("i", {
-                  staticClass: "fas fa-video",
-                  attrs: { "aria-hidden": "true" },
-                }),
-                _vm._v(" Videos"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "#contact" } }, [
-              _c("li", [
-                _c("i", {
-                  staticClass: "fas fa-envelope",
-                  attrs: { "aria-hidden": "true" },
-                }),
-                _vm._v(" Contact"),
-              ]),
-            ]),
+        _c("a", { attrs: { href: "#happening" } }, [
+          _c("li", [
+            _c("i", {
+              staticClass: "fas fa-building",
+              attrs: { "aria-hidden": "true" },
+            }),
+            _vm._v(" FAQS"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#video" } }, [
+          _c("li", [
+            _c("i", {
+              staticClass: "fas fa-video",
+              attrs: { "aria-hidden": "true" },
+            }),
+            _vm._v(" Videos"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#contact" } }, [
+          _c("li", [
+            _c("i", {
+              staticClass: "fas fa-envelope",
+              attrs: { "aria-hidden": "true" },
+            }),
+            _vm._v(" Contact"),
           ]),
         ]),
       ]),
-      _vm._v(" "),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "bizblanca-logo header-block-link",
+        attrs: { href: "/index.html", title: "bizblanca" },
+      },
+      [
+        _c("img", {
+          staticClass: "log-site",
+          attrs: { src: "/website/assets/images/Logo.svg", alt: "logo" },
+        }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "header-block-link pr-3 border-line" }, [
       _c(
-        "header",
-        { staticClass: "top-header", attrs: { id: "main-header" } },
-        [
-          _c("div", { staticClass: "header-inner" }, [
-            _c(
-              "a",
-              {
-                staticClass: "bizblanca-logo header-block-link",
-                attrs: { href: "/index.html", title: "bizblanca" },
-              },
-              [
-                _c("img", {
-                  staticClass: "log-site",
-                  attrs: {
-                    src: "/website/assets/images/Logo.svg",
-                    alt: "logo",
-                  },
-                }),
-              ]
-            ),
-            _vm._v(" "),
-            _c("ul", { staticClass: "main-navigation float-left py-2" }, [
-              _c("li", { staticClass: "header-block-link" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "menu-item",
-                    attrs: { href: "/company-detail.html", title: "company" },
-                  },
-                  [_vm._v("For Companies")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "header-block-link pr-3 border-line" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "menu-item",
-                    attrs: {
-                      href: "/candidate-detail.html",
-                      title: "candidate",
-                    },
-                  },
-                  [_vm._v("For Candidates")]
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "main-navigation float-right" }, [
-              _c("li", { staticClass: "dropdown" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn dropdown-toggle account-menu px-0",
-                    attrs: {
-                      type: "button",
-                      id: "dropdownMenuButton",
-                      "data-toggle": "dropdown",
-                      "aria-haspopup": "true",
-                      "aria-expanded": "false",
-                    },
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "fa fa-user-circle",
-                      attrs: { "aria-hidden": "true" },
-                    }),
-                    _vm._v(" My Account\n          "),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "dropdown-menu p-0",
-                    staticStyle: {
-                      position: "absolute",
-                      "will-change": "transform",
-                      top: "0px",
-                      left: "0px",
-                      transform: "translate3d(0px, 26px, 0px)",
-                    },
-                    attrs: {
-                      "aria-labelledby": "dropdownMenuButton",
-                      "x-placement": "bottom-start",
-                    },
-                  },
-                  [
-                    _c(
-                      "a",
-                      { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Dashboard")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Profile")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Setting")]
-                    ),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "dropdown-divider" }),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Logout")]
-                    ),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "header-block-link" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "register-desktop-btn ml-2",
-                    attrs: { href: "#" },
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "fas fa-address-book",
-                      attrs: { "aria-hidden": "true" },
-                    }),
-                    _vm._v(" Register\n            CV"),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "header-block-link" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "postjob-desktop-btn mr-2",
-                    attrs: { href: "#" },
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "fal fa-briefcase",
-                      attrs: { "aria-hidden": "true" },
-                    }),
-                    _vm._v(" Posts a\n            job"),
-                  ]
-                ),
-              ]),
-            ]),
-          ]),
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "header",
+        "a",
         {
-          staticClass: "_secondary-header-nav p-0",
-          attrs: { id: "secondary-header-nav" },
+          staticClass: "menu-item",
+          attrs: { href: "/candidate-detail.html", title: "candidate" },
         },
-        [
-          _c(
-            "div",
-            { staticClass: "p-0 m-auto", staticStyle: { height: "42px" } },
-            [
-              _c("ul", [
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "secondaymenu",
-                      attrs: { href: "#news", id: "secondary-anker" },
-                    },
-                    [_vm._v("News")]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "seprate-line" }),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "secondaymenu",
-                      attrs: { href: "#expertise", id: "secondary-anker" },
-                    },
-                    [_vm._v("Looking for A job")]
-                  ),
-                  _c("span", { staticClass: "seprate-line" }),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "secondaymenu",
-                      attrs: { href: "#expertise", id: "secondary-anker-2" },
-                    },
-                    [_vm._v("Looking for Employees")]
-                  ),
-                  _c("span", { staticClass: "seprate-line" }),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "secondaymenu",
-                      attrs: { href: "#happening", id: "secondary-anker-3" },
-                    },
-                    [_vm._v("FAQ")]
-                  ),
-                  _c("span", { staticClass: "seprate-line" }),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "secondaymenu",
-                      attrs: { href: "#video", id: "secondary-anker-4" },
-                    },
-                    [_vm._v("Videos")]
-                  ),
-                  _c("span", { staticClass: "seprate-line" }),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "secondaymenu",
-                      attrs: { href: "#contact", id: "secondary-anker-5" },
-                    },
-                    [_vm._v("Contact")]
-                  ),
-                ]),
-              ]),
-            ]
-          ),
-        ]
+        [_vm._v("For Candidates")]
       ),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "main-navigation float-right" }, [
+      _c("li", { staticClass: "dropdown" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn dropdown-toggle account-menu px-0",
+            attrs: {
+              type: "button",
+              id: "dropdownMenuButton",
+              "data-toggle": "dropdown",
+              "aria-haspopup": "true",
+              "aria-expanded": "false",
+            },
+          },
+          [
+            _c("i", {
+              staticClass: "fa fa-user-circle",
+              attrs: { "aria-hidden": "true" },
+            }),
+            _vm._v(" My Account\n          "),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "dropdown-menu p-0",
+            staticStyle: {
+              position: "absolute",
+              "will-change": "transform",
+              top: "0px",
+              left: "0px",
+              transform: "translate3d(0px, 26px, 0px)",
+            },
+            attrs: {
+              "aria-labelledby": "dropdownMenuButton",
+              "x-placement": "bottom-start",
+            },
+          },
+          [
+            _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
+              _vm._v("Dashboard"),
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
+              _vm._v("Profile"),
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
+              _vm._v("Setting"),
+            ]),
+            _vm._v(" "),
+            _c("hr", { staticClass: "dropdown-divider" }),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
+              _vm._v("Logout"),
+            ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "header-block-link" }, [
+        _c(
+          "a",
+          { staticClass: "register-desktop-btn ml-2", attrs: { href: "#" } },
+          [
+            _c("i", {
+              staticClass: "fas fa-address-book",
+              attrs: { "aria-hidden": "true" },
+            }),
+            _vm._v(" Register\n            CV"),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "header-block-link" }, [
+        _c(
+          "a",
+          { staticClass: "postjob-desktop-btn mr-2", attrs: { href: "#" } },
+          [
+            _c("i", {
+              staticClass: "fal fa-briefcase",
+              attrs: { "aria-hidden": "true" },
+            }),
+            _vm._v(" Posts a\n            job"),
+          ]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "header",
+      {
+        staticClass: "_secondary-header-nav p-0",
+        attrs: { id: "secondary-header-nav" },
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "p-0 m-auto", staticStyle: { height: "42px" } },
+          [
+            _c("ul", [
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "secondaymenu",
+                    attrs: { href: "#news", id: "secondary-anker" },
+                  },
+                  [_vm._v("News")]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "seprate-line" }),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "secondaymenu",
+                    attrs: { href: "#expertise", id: "secondary-anker" },
+                  },
+                  [_vm._v("Looking for A job")]
+                ),
+                _c("span", { staticClass: "seprate-line" }),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "secondaymenu",
+                    attrs: { href: "#expertise", id: "secondary-anker-2" },
+                  },
+                  [_vm._v("Looking for Employees")]
+                ),
+                _c("span", { staticClass: "seprate-line" }),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "secondaymenu",
+                    attrs: { href: "#happening", id: "secondary-anker-3" },
+                  },
+                  [_vm._v("FAQ")]
+                ),
+                _c("span", { staticClass: "seprate-line" }),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "secondaymenu",
+                    attrs: { href: "#video", id: "secondary-anker-4" },
+                  },
+                  [_vm._v("Videos")]
+                ),
+                _c("span", { staticClass: "seprate-line" }),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "secondaymenu",
+                    attrs: { href: "#contact", id: "secondary-anker-5" },
+                  },
+                  [_vm._v("Contact")]
+                ),
+              ]),
+            ]),
+          ]
+        ),
+      ]
+    )
   },
 ]
 render._withStripped = true

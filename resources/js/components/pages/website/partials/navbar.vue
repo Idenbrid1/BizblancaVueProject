@@ -17,9 +17,11 @@
         /></a>
       </div>
       <div class="mobile-button">
-        <a href="/company-detail.html" class="company-mbl-btn"
-          ><i class="fas fa-building"></i> For Companies</a
-        >
+        <router-link
+          class="company-mbl-btn"
+          data-toggle="collapse"
+          :to="{ name: 'For Companies' }"
+          ><i class="fas fa-building"></i> Forsdf Companies</router-link>
         <a href="/candidate-detail.html" class="candidate-mbl-btn"
           ><i class="fas fa-users"></i> For Candidates</a
         >
@@ -72,19 +74,18 @@
           title="bizblanca"
           class="bizblanca-logo header-block-link"
         >
-          <img src="/website/assets/images/Logo.svg" alt="logo" class="log-site" />
+          <img
+            src="/website/assets/images/Logo.svg"
+            alt="logo"
+            class="log-site"
+          />
         </a>
         <ul class="main-navigation float-left py-2">
           <li class="header-block-link">
-            <a href="/company-detail.html" title="company" class="menu-item"
-              >For Companies</a
-            >
+            <router-link class="company-mbl-btn" data-toggle="collapse" :to="{ name: 'For Companies' }"><i class="fas fa-building"></i> For Companies</router-link>
           </li>
           <li class="header-block-link pr-3 border-line">
-            <a
-              href="/candidate-detail.html"
-              title="candidate"
-              class="menu-item"
+            <a href="/candidate-detail.html" title="candidate" class="menu-item"
               >For Candidates</a
             >
           </li>
