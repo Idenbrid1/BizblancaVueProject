@@ -98,11 +98,18 @@
               class="candidate-mbl-btn"
               data-toggle="collapse"
               :to="{ name: 'For Candidates' }"
-              ><i class="fas fa-users"></i> For Candidate</router-link>
+              ><i class="fas fa-users"></i> For Candidate</router-link
+            >
           </li>
+          <router-link
+            class="candidate-mbl-btn"
+            data-toggle="collapse"
+            :to="{ name: 'Test Candidates Profile' }"
+            ><i class="fas fa-users"></i> Profile</router-link
+          >
         </ul>
         <ul class="main-navigation float-right">
-          <li class="dropdown">
+          <div class="dropdown">
             <button
               class="btn dropdown-toggle account-menu px-0"
               type="button"
@@ -131,7 +138,7 @@
               <hr class="dropdown-divider" />
               <a class="dropdown-item" href="#">Logout</a>
             </div>
-          </li>
+          </div>
           <li class="header-block-link">
             <a href="#" class="register-desktop-btn ml-2"
               ><i class="fas fa-address-book" aria-hidden="true"></i> Register
