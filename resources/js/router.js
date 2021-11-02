@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import LandingPage from './components/pages/website/LandingPageComponent.vue';
 import ForCompanies from './components/pages/website/ForCompaniesComponent.vue';
+import ForCandidates from './components/pages/website/ForCandidatesComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,11 @@ const router = new VueRouter({
             path: '/for-companies',
             name: 'For Companies',
             component: ForCompanies
+        },
+        {
+            path: '/for-candidates',
+            name: 'For Candidates',
+            component: ForCandidates
         },
     ]
 });

@@ -21,9 +21,13 @@
           class="company-mbl-btn"
           data-toggle="collapse"
           :to="{ name: 'For Companies' }"
-          ><i class="fas fa-building"></i> Forsdf Companies</router-link>
-        <a href="/candidate-detail.html" class="candidate-mbl-btn"
-          ><i class="fas fa-users"></i> For Candidates</a
+          ><i class="fas fa-building"></i> For Companies</router-link
+        >
+        <router-link
+          class="candidate-mbl-btn"
+          data-toggle="collapse"
+          :to="{ name: 'For Candidates' }"
+          ><i class="fas fa-users"></i> For Candidate</router-link
         >
       </div>
       <div class="navbar">
@@ -82,12 +86,19 @@
         </a>
         <ul class="main-navigation float-left py-2">
           <li class="header-block-link">
-            <router-link class="company-mbl-btn" data-toggle="collapse" :to="{ name: 'For Companies' }"><i class="fas fa-building"></i> For Companies</router-link>
+            <router-link
+              class="company-mbl-btn"
+              data-toggle="collapse"
+              :to="{ name: 'For Companies' }"
+              ><i class="fas fa-building"></i> For Companies</router-link
+            >
           </li>
           <li class="header-block-link pr-3 border-line">
-            <a href="/candidate-detail.html" title="candidate" class="menu-item"
-              >For Candidates</a
-            >
+            <router-link
+              class="candidate-mbl-btn"
+              data-toggle="collapse"
+              :to="{ name: 'For Candidates' }"
+              ><i class="fas fa-users"></i> For Candidate</router-link>
           </li>
         </ul>
         <ul class="main-navigation float-right">

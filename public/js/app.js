@@ -130,16 +130,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/pages/website/LandingPageComponent.vue */ "./resources/js/components/pages/website/LandingPageComponent.vue");
 /* harmony import */ var _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/website/ForCompaniesComponent.vue */ "./resources/js/components/pages/website/ForCompaniesComponent.vue");
+/* harmony import */ var _components_pages_website_ForCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/website/ForCandidatesComponent.vue */ "./resources/js/components/pages/website/ForCandidatesComponent.vue");
 
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]({
+
+vue__WEBPACK_IMPORTED_MODULE_3__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]);
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]({
   mode: 'history',
   linkExactActiveClass: 'active',
   routes: [{
@@ -150,6 +152,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]({
     path: '/for-companies',
     name: 'For Companies',
     component: _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }, {
+    path: '/for-candidates',
+    name: 'For Candidates',
+    component: _components_pages_website_ForCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
@@ -202,6 +208,42 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/ExampleComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/ForCandidatesComponent.vue":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/pages/website/ForCandidatesComponent.vue ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ForCandidatesComponent_vue_vue_type_template_id_33a9bde4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ForCandidatesComponent.vue?vue&type=template&id=33a9bde4& */ "./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _ForCandidatesComponent_vue_vue_type_template_id_33a9bde4___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ForCandidatesComponent_vue_vue_type_template_id_33a9bde4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/ForCandidatesComponent.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -434,6 +476,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4& ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ForCandidatesComponent_vue_vue_type_template_id_33a9bde4___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ForCandidatesComponent_vue_vue_type_template_id_33a9bde4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ForCandidatesComponent_vue_vue_type_template_id_33a9bde4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ForCandidatesComponent.vue?vue&type=template&id=33a9bde4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e&":
 /*!********************************************************************************************************!*\
   !*** ./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e& ***!
@@ -561,6 +619,924 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("section", { staticClass: "candidateSection" }, [
+        _c("div", { staticClass: "row no-gutters" }, [
+          _c("section", { staticClass: "col-12 CandidateLandingSection" }, [
+            _c("div", { staticClass: "row m-0 BannerCandidate" }, [
+              _c("div", { staticClass: "col-12 col-md-6 leftContent" }, [
+                _c("div", [
+                  _c("h1", [
+                    _vm._v(
+                      "\n                BizBlanca builds IT recruitment community that can source\n                excellent talents to the market.\n              "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                Under the mission of reducing mismatches in changing jobs,\n                BizBlanca supports job-hunting activities that allow job\n                seekers to work for the next company for a long time based on\n                your background and can surely step up.\n              "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "align-self-start", attrs: { href: "" } },
+                    [_vm._v("Signup Now")]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-6 p-0 RightImage" }, [
+                _c("img", {
+                  staticClass: "candiateBannerD",
+                  attrs: {
+                    src: "/website/assets/images/candidate-banner-m.png",
+                    alt: "img",
+                  },
+                }),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("h1", { staticClass: "MsgHeading" }, [
+            _vm._v(
+              "\n        Be scouted and headhunted by the top IT companies of Pakistan\n      "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "section",
+            { staticClass: "col-12 cardsInfoContainer container p-md-0 px-1" },
+            [
+              _c(
+                "div",
+                { staticClass: "row no-gutters cardsInfoWrap container" },
+                [
+                  _c("span", [
+                    _vm._v(
+                      "Upgrade and change your career with style Get scouted by the best\n            companies in Pakistan"
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "offersJobPara" }, [
+                    _vm._v(
+                      "\n            In the coming era, it is important to know your own market value.\n            Recieve job and offers and uncover your potential, your value in\n            the industry. Widen your career options and take a look at which\n            top companies want to hire you.\n          "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cardsInfo col-12 col-md-4" }, [
+                    _c("img", {
+                      staticClass: "CardHappyImg",
+                      attrs: {
+                        src: "/website/assets/images/happy.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("h3", [
+                      _vm._v(
+                        "\n              More than 75% of the job offers on BizBlanca pay 100,000PKR or\n              more.\n            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n              We have over 300 job posts for high- paying, professional-level\n              jobs which can set you up for life.\n            "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cardsInfo col-12 col-md-4" }, [
+                    _c("img", {
+                      staticClass: "CardChooseBestImg",
+                      attrs: {
+                        src: "/website/assets/images/choose-best.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("h3", [
+                      _vm._v(
+                        "\n              With around 200 companies, we select the best companies across\n              the country\n            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n              We only work with the top companies of Pakistan to bring you job\n              offers that will give your career a big boost.\n            "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cardsInfo col-12 col-md-4" }, [
+                    _c("img", {
+                      staticClass: "CardHelpYou",
+                      attrs: {
+                        src: "/website/assets/images/help-you.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("h3", [
+                      _vm._v(
+                        "We support you along the way- both online and offline"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n              We are job hunting specialists and our team of experts will\n              support your career upgrade with dedication and consistency.\n            "
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c("section"),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "section",
+        {
+          staticClass: "careerUpgradeProcess container",
+          attrs: { id: "process" },
+        },
+        [
+          _c("div", { staticClass: "contentCareerSteps" }, [
+            _c("h2", { staticClass: "heading-div" }, [
+              _c("div", { staticClass: "mr-2 titleEffect" }),
+              _vm._v("\n        The career upgrade process\n      "),
+            ]),
+            _vm._v(" "),
+            _c("p", [_vm._v("Follow these steps for career success")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row no-gutters UpgradeProcessSteps" }, [
+              _c("div", { staticClass: "col-6 col-md-3 UpgradeProcessStep" }, [
+                _c("div", [
+                  _c("img", {
+                    staticClass: "stepsimg",
+                    attrs: {
+                      src: "/website/assets/images/signup-bizblanca-cv-upgrade-process.svg",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("Step 1")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Sign up with BizBlanca and create your professional CV"
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "arrowImg",
+                  attrs: { src: "/website/assets/images/arrow.svg", alt: "" },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3 UpgradeProcessStep" }, [
+                _c("div", [
+                  _c("img", {
+                    staticClass: "stepsimg",
+                    attrs: {
+                      src: "/website/assets/images/top-rank-cand.svg",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("Step 2")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n              Become a top-ranking candidate, a.k.a a “Bizer’, and recieve job\n              offers\n            "
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "arrowImg v-on-d",
+                  attrs: { src: "/website/assets/images/arrow.svg", alt: "" },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3 UpgradeProcessStep" }, [
+                _c("div", [
+                  _c("img", {
+                    staticClass: "stepsimg",
+                    attrs: {
+                      src: "/website/assets/images/job-interview.svg",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("Step 3")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n              Attend a job interview and introduce yourself to your dream\n              company\n            "
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "arrowImg",
+                  attrs: { src: "/website/assets/images/arrow.svg", alt: "" },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3 UpgradeProcessStep" }, [
+                _c("div", { attrs: { id: "expertise" } }, [
+                  _c("img", {
+                    staticClass: "stepsimg",
+                    attrs: {
+                      src: "/website/assets/images/rec-offer-job.svg",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("Step 4")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Recieve your job offer and get ready to upgrade your career"
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("h2", [
+              _vm._v(
+                "We are ready to provide expertises in 20 specialist sectors"
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n        We have expertises in 20 specialist sectors, from Project Manager to\n        Developers. We want to partner with experienced IT recruitment team in\n        these, and other, sectors across Pakistan to build successful\n        partnership and improve more lives through work.\n      "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row no-gutters" }, [
+              _c("div", { staticClass: "col-6 col-md-3" }, [
+                _c("ul", { staticClass: "ExpertiseProvide" }, [
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Project Manager")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Project Leader")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Management")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("IT Consultant")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Web UI/UX Designer")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3" }, [
+                _c("ul", { staticClass: "ExpertiseProvide" }, [
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Frontend Engineer")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Backend Engineer")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("WordPress Engineer")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Mob App Engineer")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Network Engineer")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3" }, [
+                _c("ul", { staticClass: "ExpertiseProvide" }, [
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Infrastructure Engineer")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("QA Test Engineer")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Architecture Developer")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("IT Security Engineer")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Sales Engieer")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3" }, [
+                _c("ul", { staticClass: "ExpertiseProvide" }, [
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Data Scientist / Analyst")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("IT Sales Department")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("IT Human Resource")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("IT Customer Support")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/circle-arrow.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("IT Legal / Finance")]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "bg-Grey" }, [
+        _c("section", { staticClass: "uploadYourCv container" }, [
+          _c("div", { staticClass: "row no-gutters" }, [
+            _c("div", { staticClass: "col-12 col-md-6 cvUpload" }, [
+              _c("h3", { staticClass: "heading-div" }, [
+                _c("div", { staticClass: "mr-2 titleEffect" }),
+                _vm._v("\n            What's Next...\n          "),
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n            We're here to help you take your next step in the world of work,\n            wherever or whatever it is.\n          "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "" } }, [_vm._v("Upload your CV")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "replyImg" }, [
+                _c("img", {
+                  attrs: {
+                    src: "/website/assets/images/reply.svg",
+                    alt: "reply",
+                  },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-6 resumeUpload" }, [
+              _c("div", { staticClass: "row no-gutters" }, [
+                _c("div", { staticClass: "col-12 col-md-8" }, [
+                  _c("img", {
+                    attrs: {
+                      height: "250",
+                      width: "235",
+                      src: "/website/assets/images/resume.svg",
+                      alt: "",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-12 col-md-4" }, [
+                  _c("div", [
+                    _c("span", { staticClass: "UploadText" }, [
+                      _vm._v("Upload"),
+                    ]),
+                    _vm._v(" "),
+                    _c("h3", { staticClass: "yourCvOnlineText" }, [
+                      _vm._v("your cv online"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content_para" }, [
+                      _vm._v(
+                        "\n                  Your CV is the first impression recruiters have of you. Most\n                  of the candidates still have a CV that looks like this. Are\n                  you one of them? If you are, there is an opportunity to turn\n                  it into a CV that will get you the WOW effect...\n                "
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c(
+          "section",
+          {
+            staticClass: "CertificationsAndPayments container",
+            attrs: { id: "certificate" },
+          },
+          [
+            _c("div", { staticClass: "row no-gutters" }, [
+              _c("div", { staticClass: "col-3" }, [
+                _c("img", {
+                  attrs: {
+                    src: "/website/assets/images/bizblancaBage.svg",
+                    alt: "",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-9" }, [
+                _c("h3", [
+                  _vm._v("BizBlanca Certification and Payment Partnership"),
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Are you worried about your work? Everyone has some worries."
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "paymentDescrpD" }, [
+                  _vm._v(
+                    "\n            At BizBlanca, we have a Payment Partnership with Bizers who have\n            BizBlanca Certification in order to eliminate the anxiety about\n            salary that many people have. This is a mechanism that allows you\n            to concentrate on your work stress-free by having our company\n            intervene and take over the work of receiving salary so that the\n            company you work for will pay your salary smoothly when you work\n            through BizBlanca.\n          "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "paymentDescrpM" }, [
+              _vm._v(
+                "\n        At BizBlanca, we have a Payment Partnership with Bizers who have\n        BizBlanca Certification in order to eliminate the anxiety about salary\n        that many people have. This is a mechanism that allows you to\n        concentrate on your work stress-free by having our company intervene\n        and take over the work of receiving salary so that the company you\n        work for will pay your salary smoothly when you work through\n        BizBlanca.\n      "
+              ),
+            ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c(
+        "section",
+        {
+          staticClass: "successStories container",
+          attrs: { id: "Testimonials" },
+        },
+        [
+          _c("h3", { staticClass: "heading-div my-md-5" }, [
+            _c("div", { staticClass: "mr-2 titleEffect" }),
+            _vm._v("\n      BizBlanca's Success Stories\n    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "swiper successStoriesSwiper" }, [
+            _c("div", { staticClass: "swiper-wrapper" }, [
+              _c("div", { staticClass: "swiper-slide p-md-5" }, [
+                _c("div", { staticClass: "sliderContent" }, [
+                  _c("img", {
+                    staticClass: "candidateImg",
+                    attrs: {
+                      src: "/website/assets/images/avatart.jpeg",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "CandidateDesignation" }, [
+                    _vm._v("Senior front end developer"),
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "GenderAge" }, [_vm._v("Male's 20")]),
+                  _vm._v(" "),
+                  _c("h3", { staticClass: "Scoutbizblanca" }, [
+                    _vm._v("Because of BizBlanca's scout..."),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "candidateSucessDescrp" }, [
+                    _vm._v(
+                      "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-slide p-md-5" }, [
+                _c("div", { staticClass: "sliderContent" }, [
+                  _c("img", {
+                    staticClass: "candidateImg",
+                    attrs: {
+                      src: "/website/assets/images/avatart.jpeg",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "CandidateDesignation" }, [
+                    _vm._v("Senior front end developer"),
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "GenderAge" }, [_vm._v("Male's 20")]),
+                  _vm._v(" "),
+                  _c("h3", { staticClass: "Scoutbizblanca" }, [
+                    _vm._v("Because of BizBlanca's scout..."),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "candidateSucessDescrp" }, [
+                    _vm._v(
+                      "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-slide p-md-5" }, [
+                _c("div", { staticClass: "sliderContent" }, [
+                  _c("img", {
+                    staticClass: "candidateImg",
+                    attrs: {
+                      src: "/website/assets/images/avatart.jpeg",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "CandidateDesignation" }, [
+                    _vm._v("Senior front end developer"),
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "GenderAge" }, [_vm._v("Male's 20")]),
+                  _vm._v(" "),
+                  _c("h3", { staticClass: "Scoutbizblanca" }, [
+                    _vm._v("Because of BizBlanca's scout..."),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "candidateSucessDescrp" }, [
+                    _vm._v(
+                      "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-slide p-md-5" }, [
+                _c("div", { staticClass: "sliderContent" }, [
+                  _c("img", {
+                    staticClass: "candidateImg",
+                    attrs: {
+                      src: "/website/assets/images/avatart.jpeg",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "CandidateDesignation" }, [
+                    _vm._v("Senior front end developer"),
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "GenderAge" }, [_vm._v("Male's 20")]),
+                  _vm._v(" "),
+                  _c("h3", { staticClass: "Scoutbizblanca" }, [
+                    _vm._v("Because of BizBlanca's scout..."),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "candidateSucessDescrp" }, [
+                    _vm._v(
+                      "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: "swiper-button-next successStoriesSliderArrow",
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: "swiper-button-prev successStoriesSliderArrow",
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "swiper-pagination" }),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-12 py-5 videos-anker", attrs: { id: "MOVIE" } },
+        [
+          _c(
+            "div",
+            { staticClass: "swiper video-slider", attrs: { id: "videos" } },
+            [
+              _c("div", { staticClass: "swiper-wrapper" }, [
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-md-12 pb-3 pl-0" }, [
+                        _c(
+                          "h1",
+                          {
+                            staticClass: "text-left heading-div",
+                            staticStyle: { color: "#fff" },
+                          },
+                          [
+                            _c("div", {
+                              staticClass: "mr-2 titleEffect",
+                              staticStyle: { "background-color": "#fff" },
+                            }),
+                            _vm._v(
+                              "\n                  Vidoes\n                "
+                            ),
+                          ]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-md-6 movie-wrap" }, [
+                        _c("div", { staticClass: "movie-inner" }, [
+                          _c("iframe", {
+                            attrs: {
+                              src: "https://www.youtube.com/embed/djqoRNnDqFU",
+                              frameborder: "0",
+                              allow:
+                                "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+                              allowfullscreen: "",
+                              width: "100%",
+                              height: "280px",
+                            },
+                          }),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-md-6 movie-wrap-text" }, [
+                        _c(
+                          "h2",
+                          {
+                            staticClass: "carousel__item-client",
+                            staticStyle: { color: "#fff" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                  CEO Message for Candidates\n                "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "ceo-msg-description pt-3" }, [
+                          _vm._v(
+                            "\n                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                  Quibusdam non earum impedit commodi tempora sequi? Eligendi\n                  fugit facere eveniet incidunt, tempora maiores esse\n                  doloremque rerum fugiat ducimus velit veniam possimus.\n                "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-12 anker-list d-flex w-100 pt-2 mt-4 px-0",
+                            attrs: { id: "contact-section" },
+                          },
+                          [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "videoview-list-anker",
+                                attrs: { href: "./comming.html" },
+                              },
+                              [
+                                _vm._v("Read More\n                    "),
+                                _c("i", {
+                                  staticClass: "fa fa-long-arrow-right",
+                                  attrs: { "aria-hidden": "true" },
+                                }),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "resume-builder container", attrs: { id: "signupnow" } },
+        [
+          _c("div", { staticClass: "row no-gutters resume-builder-row" }, [
+            _c("div", { staticClass: "col-12 col-md-3" }, [
+              _c("img", {
+                staticClass: "v-on-d",
+                attrs: {
+                  src: "/website/assets/images/resume-builder-banner.png",
+                  alt: "",
+                },
+              }),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "v-on-m w-100 p-2",
+                attrs: {
+                  src: "/website/assets/images/resume-builder-banner@2x.png",
+                  alt: "",
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-9 p-2" }, [
+              _c("p", [
+                _vm._v(
+                  "\n          If you would like to be part of us, please sign up and upload your\n          resume. Your career journey will begin with us.\n        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "" } }, [_vm._v("Signup Now")]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e&":
 /*!***********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCompaniesComponent.vue?vue&type=template&id=ddefff1e& ***!
@@ -583,7 +1559,556 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("\n        for companies\n    ")])])
+    return _c("div", [
+      _c(
+        "div",
+        {
+          staticClass: "companyBanner w-100 row no-gutters",
+          attrs: { id: "why-bizblanca" },
+        },
+        [
+          _c("div", { staticClass: "bannerSec2 col-12 col-lg-6 px-2" }, [
+            _c("div", { staticClass: "leftboxbanner" }, [
+              _c("h4", [_vm._v("WHY USE BIZBLANCA?")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "pb-2" }, [
+                _vm._v(
+                  "\n          Find the perfect match from our extensive candidate database\n        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "d-flex justify-content-center" }, [
+                _c("img", {
+                  staticClass: "bannerSec2Img",
+                  attrs: {
+                    src: "/website/assets/images/pngwing.com (1)@2x.png",
+                    alt: "",
+                  },
+                }),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "bannerSec1 col-md-12 col-lg-6" }, [
+            _c("div", { staticClass: "blue-inner-box" }, [
+              _c("div", { staticClass: "bannerSec1box1" }, [
+                _vm._v("\n          IT JOB KE LIYE "),
+                _c("br"),
+                _vm._v("\n          BIZBANCA\n        "),
+              ]),
+              _vm._v(" "),
+              _c("h4", { staticClass: "my-4" }, [
+                _vm._v("\n          Start a conversation"),
+                _c("br"),
+                _vm._v("\n          with one of our"),
+                _c("br"),
+                _vm._v("\n          specialist consultants\n        "),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mb-4" }, [
+                _vm._v(
+                  "\n          Send a brief overview of your requirements and we will contact you\n          to find out more about your needs.\n        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "bannerSec1box2" }, [
+                _c("a", { attrs: { href: "" } }, [_vm._v("Get in Touch")]),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "companyContainer w-100" }, [
+        _c(
+          "div",
+          { staticClass: "companyDescription container my-4 my-md-5 px-2" },
+          [
+            _c("h4", { staticClass: "heading-div" }, [
+              _c("div", { staticClass: "mr-2 titleEffect" }),
+              _vm._v("\n        How BizBlanca can help you\n      "),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n        BizBlanca provides a tailored service to help you recruit your next\n        employee. So you can be confident you'll find an option to suit your\n        needs, every time.\n      "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n        We go beyond simply finding you a new permanent employee on a one-off\n        basis, BizBlanca offers a level of service which allows us to build a\n        rapport with you and your organization. Even when we have found your\n        new hire, our experts continue to support you after your chosen\n        candidate has joined your organization. Whether you’re searching for a\n        scarce skillset, or are struggling with a high volume of applications,\n        we can find you the right professional for your role, saving you time\n        and money. When working with us to recruit permanently, you’ll receive\n        the following as standard:\n      "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "p-0" }, [
+              _c("li", { staticClass: "my-1" }, [
+                _vm._v(
+                  "\n          - Expert advice on your job description, the salary you should offer\n          and talent attraction strategy\n        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "my-1" }, [
+                _vm._v(
+                  "\n          - A vast range of compliance and screening checks\n        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "my-1" }, [
+                _vm._v(
+                  "\n          - Support with arranging interviews and ensuring follow up\n        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "my-1" }, [
+                _vm._v(
+                  "\n          - Guidance on offer negotiation and counteroffer scenarios\n        "
+                ),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "companyDifference container px-2" }, [
+          _c("h4", { staticClass: "heading-div" }, [
+            _c("div", { staticClass: "mr-2 titleEffect" }),
+            _vm._v("\n        The BizBlanca difference\n      "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+            _vm._v(
+              "\n        Unlike other HR agents, BizBlanca focuses on creating an online\n        community\n        "
+            ),
+            _c("i", { staticClass: "fas fa-chevron-down" }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+            _vm._v(
+              "\n        7 days from the start of service to hiring\n        "
+            ),
+            _c("i", { staticClass: "fas fa-chevron-down" }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+            _vm._v(
+              "\n        50 to 70% cheaper than other companies in the same industry\n        "
+            ),
+            _c("i", { staticClass: "fas fa-chevron-down" }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+            _vm._v(
+              "\n        Our company holds information on more than 5,000+ job seekers as a DB\n        "
+            ),
+            _c("i", { staticClass: "fas fa-chevron-down" }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+            _vm._v(
+              "\n        No need to pay salaries directly to employees\n        "
+            ),
+            _c("i", { staticClass: "fas fa-chevron-down" }),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "companyHelp container px-2" }, [
+          _c("h4", { staticClass: "heading-div mb-2" }, [
+            _c("div", { staticClass: "mr-2 titleEffect" }),
+            _vm._v(
+              "\n        We can help you find the best IT employees...\n      "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "swiper helpslider" }, [
+            _c("div", { staticClass: "swiper-wrapper py-4" }, [
+              _c("div", { staticClass: "swiper-slide" }, [
+                _c("div", { staticClass: "companyHelpBox my-3" }, [
+                  _c("div", { staticClass: "companyHelpBoxTop" }, [
+                    _vm._v("1"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "companyHelpBoxBottom" }, [
+                    _vm._v("\n                We Recruit across"),
+                    _c("span", { staticClass: "boxBottomSpan" }, [
+                      _vm._v("20"),
+                    ]),
+                    _vm._v(
+                      "\n                Specialist Sectors\n              "
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-slide" }, [
+                _c("div", { staticClass: "companyHelpBox my-3" }, [
+                  _c("div", { staticClass: "companyHelpBoxTop" }, [
+                    _vm._v("1"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "companyHelpBoxBottom" }, [
+                    _vm._v("\n                We have access to over"),
+                    _c("span", { staticClass: "boxBottomSpan" }, [
+                      _vm._v("5,000"),
+                    ]),
+                    _vm._v("\n                Candidates\n              "),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-slide" }, [
+                _c("div", { staticClass: "companyHelpBox my-3" }, [
+                  _c("div", { staticClass: "companyHelpBoxTop" }, [
+                    _vm._v("1"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "companyHelpBoxBottom" }, [
+                    _vm._v("\n                Each month over"),
+                    _c("span", { staticClass: "boxBottomSpan" }, [
+                      _vm._v("50"),
+                    ]),
+                    _vm._v(
+                      " business\n                trust us to recruit\n              "
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-slide" }, [
+                _c("div", { staticClass: "companyHelpBox my-3" }, [
+                  _c("div", { staticClass: "companyHelpBoxTop" }, [
+                    _vm._v("1"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "companyHelpBoxBottom" }, [
+                    _vm._v("\n                We Recruit across"),
+                    _c("span", { staticClass: "boxBottomSpan" }, [
+                      _vm._v("20"),
+                    ]),
+                    _vm._v(
+                      "\n                Specialist Sectors\n              "
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-slide" }, [
+                _c("div", { staticClass: "companyHelpBox my-3" }, [
+                  _c("div", { staticClass: "companyHelpBoxTop" }, [
+                    _vm._v("1"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "companyHelpBoxBottom" }, [
+                    _vm._v("\n                We Recruit across"),
+                    _c("span", { staticClass: "boxBottomSpan" }, [
+                      _vm._v("20"),
+                    ]),
+                    _vm._v(
+                      "\n                Specialist Sectors\n              "
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "swiper-button-next helpSliderArrow" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "swiper-button-prev helpSliderArrow" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "swiper-pagination" }),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "companyCapacity" }, [
+          _c("h4", { staticClass: "mb-0" }, [
+            _vm._v(
+              "\n        Over 2000 talented people on standby, ready to receive a scout from\n        your company\n      "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "companyCapacityBody" }, [
+            _c("h5", [
+              _vm._v(
+                "\n          Join Pakistan's best startups and large companies using our platform\n        "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Ratio of company size to no. of people hired using BizBlanca"
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row no-gutters container mx-auto p-0" }, [
+              _c("div", { staticClass: "col-12 col-md-4" }, [
+                _c("div", { staticClass: "companyCapacityBottom" }, [
+                  _c("img", {
+                    attrs: { src: "/website/assets/images/small.png", alt: "" },
+                  }),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("h1", { staticClass: "employeeCount" }, [
+                      _vm._v("\n                  10"),
+                      _c("br"),
+                      _vm._v("\n                  employees\n                "),
+                    ]),
+                    _vm._v(" "),
+                    _c("h2", [_vm._v("45%")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-4" }, [
+                _c("div", { staticClass: "companyCapacityBottom" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/website/assets/images/medium.png",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "ml-2" }, [
+                    _c("h1", { staticClass: "employeeCount" }, [
+                      _vm._v("\n                  10 - 50"),
+                      _c("br"),
+                      _vm._v("\n                  employees\n                "),
+                    ]),
+                    _vm._v(" "),
+                    _c("h2", [_vm._v("32%")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-4" }, [
+                _c("div", { staticClass: "companyCapacityBottom" }, [
+                  _c("img", {
+                    attrs: { src: "/website/assets/images/large.png", alt: "" },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "ml-2" }, [
+                    _c("h1", { staticClass: "employeeCount" }, [
+                      _vm._v("\n                  51"),
+                      _c("br"),
+                      _vm._v("\n                  employees\n                "),
+                    ]),
+                    _vm._v(" "),
+                    _c("h2", [_vm._v("23%")]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "companyTestimonial container" }, [
+          _c("h4", { staticClass: "heading-div testimonialsText" }, [
+            _c("div", { staticClass: "mr-2 titleEffect" }),
+            _vm._v("\n        Testimonials\n      "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row no-gutters" }, [
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c("div", { staticClass: "testimonialCard testimonialCard1" }, [
+                _c("img", {
+                  staticClass: "testimonialCardImg",
+                  attrs: {
+                    src: "/website/assets/images/Group 1386.png",
+                    alt: "1",
+                  },
+                }),
+                _vm._v(" "),
+                _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBox my-1" }, [
+                  _vm._v("Before"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+                  _vm._v(
+                    "\n              TechWorld is a leading cybersecurity and engineering solutions\n              company with vast experience in multiple services such as\n              security product\n            "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBox my-1" }, [
+                  _vm._v("After"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+                  _vm._v(
+                    "\n              TechWorld now have more services such as malware research and\n              managed services for customers around the globe and with the\n              services of BizBlanca could get more better resource for their\n              research work and future goals.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c("div", { staticClass: "testimonialCard testimonialCard2" }, [
+                _c("img", {
+                  staticClass: "testimonialCardImg",
+                  attrs: {
+                    src: "/website/assets/images/Group 1385.png",
+                    alt: "2",
+                  },
+                }),
+                _vm._v(" "),
+                _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBox my-1" }, [
+                  _vm._v("Before"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+                  _vm._v(
+                    "\n              TechWorld is a leading cybersecurity and engineering solutions\n              company with vast experience in multiple services such as\n              security product\n            "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBox my-1" }, [
+                  _vm._v("After"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+                  _vm._v(
+                    "\n              TechWorld now have more services such as malware research and\n              managed services for customers around the globe and with the\n              services of BizBlanca could get more better resource for their\n              research work and future goals.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c("div", { staticClass: "testimonialCard testimonialCard3" }, [
+                _c("img", {
+                  staticClass: "testimonialCardImg",
+                  attrs: {
+                    src: "/website/assets/images/Group 1391.png",
+                    alt: "2",
+                  },
+                }),
+                _vm._v(" "),
+                _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBox my-1" }, [
+                  _vm._v("Before"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+                  _vm._v(
+                    "\n              TechWorld is a leading cybersecurity and engineering solutions\n              company with vast experience in multiple services such as\n              security product\n            "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBox my-1" }, [
+                  _vm._v("After"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+                  _vm._v(
+                    "\n              TechWorld now have more services such as malware research and\n              managed services for customers around the globe and with the\n              services of BizBlanca could get more better resource for their\n              research work and future goals.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c("div", { staticClass: "testimonialCard testimonialCard4" }, [
+                _c("img", {
+                  staticClass: "testimonialCardImg",
+                  attrs: {
+                    src: "/website/assets/images/Group 1394.png",
+                    alt: "3",
+                  },
+                }),
+                _vm._v(" "),
+                _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBox my-1" }, [
+                  _vm._v("Before"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+                  _vm._v(
+                    "\n              TechWorld is a leading cybersecurity and engineering solutions\n              company with vast experience in multiple services such as\n              security product\n            "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBox my-1" }, [
+                  _vm._v("After"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+                  _vm._v(
+                    "\n              TechWorld now have more services such as malware research and\n              managed services for customers around the globe and with the\n              services of BizBlanca could get more better resource for their\n              research work and future goals.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "companyFlowContainer container-fluid",
+            attrs: { id: "flow-of-use" },
+          },
+          [
+            _c("div", { staticClass: "companyFlow container" }, [
+              _c("h4", { staticClass: "my-2 heading-div" }, [
+                _c("div", { staticClass: "mr-2 titleEffect" }),
+                _vm._v("\n          Flow of use\n        "),
+              ]),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "flowPhoto w-100",
+                attrs: {
+                  src: "/website/assets/images/Group 1687.svg",
+                  alt: "",
+                },
+              }),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "companyFaqs container px-2",
+            attrs: { id: "faqs-sec" },
+          },
+          [
+            _c("h4", { staticClass: "my-2 heading-div" }, [
+              _c("div", { staticClass: "mr-2 titleEffect" }),
+              _vm._v("\n        FAQS\n      "),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row no-gutters" }, [
+              _c("div", { staticClass: "col-6 col-lg-4" }, [
+                _c("div", { staticClass: "companyFaqBox" }, [
+                  _c("div", { staticClass: "question" }, [
+                    _vm._v("How much cost?"),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-lg-4" }, [
+                _c("div", { staticClass: "companyFaqBox" }, [
+                  _c("div", { staticClass: "question" }, [
+                    _vm._v("How to try to DB?"),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-sm-12 col-lg-4 my-4 my-lg-0" }, [
+                _c("div", { staticClass: "companyFaqBox" }, [
+                  _c("div", { staticClass: "question" }, [
+                    _vm._v("How to create an account"),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+      ]),
+    ])
   },
 ]
 render._withStripped = true
@@ -2135,21 +3660,31 @@ var render = function () {
             },
             [
               _c("i", { staticClass: "fas fa-building" }),
-              _vm._v(" Forsdf Companies"),
+              _vm._v(" For Companies"),
             ]
           ),
           _vm._v(" "),
-          _vm._m(2),
+          _c(
+            "router-link",
+            {
+              staticClass: "candidate-mbl-btn",
+              attrs: {
+                "data-toggle": "collapse",
+                to: { name: "For Candidates" },
+              },
+            },
+            [_c("i", { staticClass: "fas fa-users" }), _vm._v(" For Candidate")]
+          ),
         ],
         1
       ),
       _vm._v(" "),
-      _vm._m(3),
+      _vm._m(2),
     ]),
     _vm._v(" "),
     _c("header", { staticClass: "top-header", attrs: { id: "main-header" } }, [
       _c("div", { staticClass: "header-inner" }, [
-        _vm._m(4),
+        _vm._m(3),
         _vm._v(" "),
         _c("ul", { staticClass: "main-navigation float-left py-2" }, [
           _c(
@@ -2174,14 +3709,34 @@ var render = function () {
             1
           ),
           _vm._v(" "),
-          _vm._m(5),
+          _c(
+            "li",
+            { staticClass: "header-block-link pr-3 border-line" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "candidate-mbl-btn",
+                  attrs: {
+                    "data-toggle": "collapse",
+                    to: { name: "For Candidates" },
+                  },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-users" }),
+                  _vm._v(" For Candidate"),
+                ]
+              ),
+            ],
+            1
+          ),
         ]),
         _vm._v(" "),
-        _vm._m(6),
+        _vm._m(4),
       ]),
     ]),
     _vm._v(" "),
-    _vm._m(7),
+    _vm._m(5),
   ])
 }
 var staticRenderFns = [
@@ -2213,19 +3768,6 @@ var staticRenderFns = [
         }),
       ]),
     ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "candidate-mbl-btn",
-        attrs: { href: "/candidate-detail.html" },
-      },
-      [_c("i", { staticClass: "fas fa-users" }), _vm._v(" For Candidates")]
-    )
   },
   function () {
     var _vm = this
@@ -2326,21 +3868,6 @@ var staticRenderFns = [
         }),
       ]
     )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "header-block-link pr-3 border-line" }, [
-      _c(
-        "a",
-        {
-          staticClass: "menu-item",
-          attrs: { href: "/candidate-detail.html", title: "candidate" },
-        },
-        [_vm._v("For Candidates")]
-      ),
-    ])
   },
   function () {
     var _vm = this
