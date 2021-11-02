@@ -12,9 +12,9 @@
     <!---mobile view menu-->
     <div class="mobile-view px-0">
       <div class="logo">
-        <a href="/index.html"
-          ><img src="/website/assets/images/Logo.svg" alt="logo"
-        /></a>
+        <router-link data-toggle="collapse" :to="{ name: 'Landing Page' }">
+          <img src="/website/assets/images/Logo.svg" alt="logo"
+        /></router-link>
       </div>
       <div class="mobile-button">
         <router-link
@@ -73,21 +73,21 @@
     <!--desktop-view-->
     <header id="main-header" class="top-header">
       <div class="header-inner">
-        <a
-          href="/index.html"
-          title="bizblanca"
+        <router-link
           class="bizblanca-logo header-block-link"
+          data-toggle="collapse"
+          :to="{ name: 'Landing Page' }"
         >
           <img
+            class="log-site"
             src="/website/assets/images/Logo.svg"
             alt="logo"
-            class="log-site"
-          />
-        </a>
+        /></router-link>
         <ul class="main-navigation float-left py-2">
           <li class="header-block-link">
             <router-link
-              class="company-mbl-btn"
+              title="company"
+              class="menu-item"
               data-toggle="collapse"
               :to="{ name: 'For Companies' }"
               ><i class="fas fa-building"></i> For Companies</router-link
@@ -95,10 +95,12 @@
           </li>
           <li class="header-block-link pr-3 border-line">
             <router-link
-              class="candidate-mbl-btn"
+              title="candidate"
+              class="menu-item"
               data-toggle="collapse"
               :to="{ name: 'For Candidates' }"
-              ><i class="fas fa-users"></i> For Candidate</router-link>
+              ><i class="fas fa-users"></i> For Candidate</router-link
+            >
           </li>
         </ul>
         <ul class="main-navigation float-right">
@@ -124,6 +126,7 @@
                 left: 0px;
                 transform: translate3d(0px, 26px, 0px);
               "
+              id="dropdownDiv"
             >
               <a class="dropdown-item" href="#">Dashboard</a>
               <a class="dropdown-item" href="#">Profile</a>
@@ -185,3 +188,24 @@
     </header>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {};
+  },
+  mounted() {
+    let countDropDown=0;
+    document.querySelector('.account-menu').addEventListener('click',(e)=>{
+      if(countDropDown===0){
+        document.querySelector('#dropdownDiv').style.display="block";
+        countDropDown++
+      }
+      else{
+        document.querySelector('#dropdownDiv').style.display="none";
+        countDropDown=0
+      }
+    })
+  },
+  methods() {},
+};
+</script>
