@@ -89,13 +89,13 @@ Route::post('/search-jobs', [App\Http\Controllers\Website\Candidate\HomeControll
 
 
 //website routes//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Route::get('/get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'show'])->name('profile.show');
 
 Route::prefix('candidate')->name('candidate.')->group(function(){
     Route::get('/index', [App\Http\Controllers\Website\Candidate\HomeController::class, 'index'])->name('index');
 
     Route::middleware('auth')->group(function(){
 		Route::get('/home', [App\Http\Controllers\Website\Candidate\HomeController::class, 'showDashboardPage'])->name('home');
-		Route::get('/profile', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'show'])->name('profile.show');
 		Route::get('/profile_edit/{tab}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'edit'])->name('profile.edit');
 
         Route::post('/update/basicinformation', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'update'])->name('profile.updateBasicInformation');

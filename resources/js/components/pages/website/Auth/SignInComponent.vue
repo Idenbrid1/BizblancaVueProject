@@ -120,6 +120,15 @@
                             text:  'Credentials Not Match',
                         })
                     }
+                    else if(response.data.status == 'activation')
+                    {
+                        Swal.close()
+                        Swal.fire({
+                            icon:  'error',
+                            title: 'Account Not Verified',
+                            text:  'Please Verify your Account! Check Your Mail Box',
+                        })
+                    }
                     else{
                         Swal.close()
                         Swal.fire({
@@ -127,6 +136,14 @@
                             title: 'Signin Successfully',
                             text:  'WellCome Back',
                         })
+                        if(response.data.user.type == 'candidate')
+                        {
+                            this.$router.push({ name: 'CandidateDashboard' })
+                        }
+                        if(response.data.user.type == 'company')
+                        {
+                            this.$router.push({ name: 'CompanyDashboard' })
+                        }
                     }
                 });
             },

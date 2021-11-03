@@ -133,7 +133,7 @@ class AuthenticationController extends Controller
             ];
             if(Auth::attempt($Credentials)){
                 $User = User::where('email', $request->email)->first();
-                if($User->status == 0) {
+                if($User->status == 'Inactive') {
                     Auth::logout();
                     return response()->json([
                         'status' => 'activation',
@@ -146,7 +146,6 @@ class AuthenticationController extends Controller
                         "message" =>"Login Successfully!",
                         'success' => true,
                         'user' => Auth::user(),
-
                     ]);
                 }
             }

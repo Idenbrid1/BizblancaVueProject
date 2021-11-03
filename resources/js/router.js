@@ -8,7 +8,7 @@ import TestCandidateProfile from './components/pages/website/candidate/TestCandi
 import TestCompanyProfile from './components/pages/website/company/TestCompanyProfile.vue';
 import SignIn from './components/pages/website/Auth/SignInComponent.vue';
 import SignUp from './components/pages/website/Auth/SignUpComponent.vue';
-import CandidateDashboard from './components/pages/website/Auth/CandidateDashboardComponent.vue';
+import CandidateDashboard from './components/pages/website/candidate/CandidateDashboardComponent.vue';
 import CompanyProfile from './components/pages/website/company/CompanyProfileComponent.vue';
 
 Vue.use(VueRouter);
