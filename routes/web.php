@@ -38,7 +38,7 @@ Route::get('/job-search', function () {
     return view('website/pages/job-search');
 })->name('job-search');
 
-Route::get('/', [WelcomeController::class, 'index'])->name('index');
+// Route::get('/', [WelcomeController::class, 'index'])->name('index');
 Route::get('/send-message', [App\Http\Controllers\Website\Candidate\HomeController::class, 'sendMessage']);
 
 
@@ -48,9 +48,12 @@ Route::get('/social', function () {
 Route::get('/blog', function () {
     return view('website/pages/blog');
 })->name('blog');
-Route::get('/register', function () {
-    return view('website/pages/register');
-})->name('register');
+// Route::get('/register', function () {
+//     return view('website/pages/register');
+// })->name('register');
+Route::post('/user-registration', [App\Http\Controllers\Admin\AuthenticationController::class, 'userRegistration']);
+Route::post('/user-login', [App\Http\Controllers\Admin\AuthenticationController::class, 'userLogin']);
+
 Route::get('/login', function () {
     return view('website/pages/login');
 })->name('login');

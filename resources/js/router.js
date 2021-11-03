@@ -7,6 +7,7 @@ import ForCandidates from './components/pages/website/ForCandidatesComponent.vue
 import TestCandidateProfile from './components/pages/website/candidate/TestCandidateProfile.vue';
 import SignIn from './components/pages/website/Auth/SignInComponent.vue';
 import SignUp from './components/pages/website/Auth/SignUpComponent.vue';
+import SignUp from './components/pages/website/Auth/CandidateDashboardComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -43,6 +44,11 @@ const router = new VueRouter({
             path: '/signup',
             name: 'Signup',
             component: SignUp
+        },
+        {
+            path: '/candidate-dashboard',
+            name: 'CandidateDashboard',
+            component: CandidateDashboard
         },
     ]
 });

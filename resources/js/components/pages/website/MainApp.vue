@@ -20,11 +20,6 @@
             WebsiteFooter,
             WebsiteNavbar,
         },
-        computed:{
-            
-        },
-        mounted() {
-
-        },
+        
     }
 </script>

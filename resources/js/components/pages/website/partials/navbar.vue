@@ -111,14 +111,16 @@
         </ul>
 
         <ul class="main-navigation float-right d-flex align-items-center">
-          <router-link
-            class="pr-3"
-            data-toggle="collapse"
-            :to="{ name: 'Signin' }"
-            ><i class="fas fa-users"></i> Sign In</router-link
-          >
+          <li class="header-block-link">
+            <router-link
+              class="register-desktop-btn ml-2"
+              data-toggle="collapse"
+              :to="{ name: 'Signin' }"
+              ><i class="fas fa-users"></i> Sign In</router-link
+            >
+          </li>
           <div class="dropdown">
-            <button
+            <!-- <button
               class="btn dropdown-toggle account-menu px-0"
               type="button"
               id="dropdownMenuButton"
@@ -146,7 +148,7 @@
               <a class="dropdown-item" href="#">Setting</a>
               <hr class="dropdown-divider" />
               <a class="dropdown-item" href="#">Logout</a>
-            </div>
+            </div> -->
           </div>
           <li class="header-block-link">
             <a href="#" class="register-desktop-btn ml-2"
@@ -206,18 +208,17 @@ export default {
   data() {
     return {};
   },
-  mounted() {
-    let countDropDown = 0;
-    document.querySelector(".account-menu").addEventListener("click", (e) => {
-      if (countDropDown === 0) {
-        document.querySelector("#dropdownDiv").style.display = "block";
-        countDropDown++;
-      } else {
-        document.querySelector("#dropdownDiv").style.display = "none";
-        countDropDown = 0;
-      }
-    });
-  },
-  methods() {},
+//   mounted() {
+//     let countDropDown = 0;
+//     document.querySelector(".account-menu").addEventListener("click", (e) => {
+//       if (countDropDown === 0) {
+//         document.querySelector("#dropdownDiv").style.display = "block";
+//         countDropDown++;
+//       } else {
+//         document.querySelector("#dropdownDiv").style.display = "none";
+//         countDropDown = 0;
+//       }
+//     });
+//   },
 };
 </script>

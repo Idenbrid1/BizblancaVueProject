@@ -699,6 +699,5 @@ export default {
       },
     });
   },
-  methods() {},
 };
 </script>

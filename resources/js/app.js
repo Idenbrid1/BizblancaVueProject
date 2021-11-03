@@ -10,7 +10,6 @@ window.Vue = require('vue').default;
 import router from './router';
 import App from './components/pages/website/MainApp.vue';
 
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -36,5 +35,5 @@ const app = new Vue({
     components: {
         App,
     },
-    render: h => h(App)
+    
 });

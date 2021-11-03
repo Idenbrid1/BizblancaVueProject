@@ -19,6 +19,9 @@
     <script src="{{asset('website')}}/assets/js/swiper/swiper-bundle.min.js"></script>
     <script src="{{asset('website')}}/assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </head>
 
@@ -26,7 +29,7 @@
 
 <body class="antialiased">
     <div id="app" class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        <main-app></main-app>
+        <app></app>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
     <!-- Optional JavaScript -->
