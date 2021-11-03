@@ -179,6 +179,7 @@
 .loginText {
     margin-bottom: 20px;
 }
+
 #employee:checked+label {
     color: #fff;
     background-color: #081351;
@@ -200,6 +201,7 @@
     color: #fff !important;
     background-color: #081351 !important;
 }
+
 .candidate-register,
 .company-register {
     padding: 7px 50px;
@@ -229,9 +231,11 @@
     background-color: #081351;
     ;
 }
+
 .is-invalid {
     border: 1px solid red !important;
 }
+
 .company-register {
     border-radius: 0px 5px 5px 0px !important;
 }
@@ -243,6 +247,7 @@
 .company-active {
     margin: 5px 5px 5px 0px;
 }
+
 .rememberforgot {
     display: flex;
     justify-content: space-between;
@@ -342,6 +347,7 @@
     overflow: hidden;
     position: fixed;
     z-index: 999;
+    top: 0px;
 }
 
 .mobile-view .logo {
@@ -5417,3 +5423,916 @@
         width: 145px;
     }
 }
+
+/* profile page */
+.profile-wrapper {
+    background: #fff;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-buttons,
+.doucuments-buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+    height: min-content;
+}
+
+.resume-buttons>ul,
+.doucuments-buttons>ul {
+    display: flex;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.resume-buttons>ul>li>a,
+.doucuments-buttons>ul>li>a {
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #bebebe;
+    background: -webkit-linear-gradient(top, #fdfdfd, #ecedee);
+    background: linear-gradient(to bottom, #fdfdfd, #ecedee);
+    background-color: #ecedee;
+    color: #333;
+    margin-left: 10px;
+    transition: 0.3s all linear;
+    cursor: pointer;
+}
+
+.upload-labels {
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #bebebe;
+    background: -webkit-linear-gradient(top, #fdfdfd, #ecedee);
+    background: linear-gradient(to bottom, #fdfdfd, #ecedee);
+    background-color: #ecedee;
+    color: #333;
+    margin: 10px 10px;
+    transition: 0.3s all linear;
+    cursor: pointer;
+}
+
+.resume-buttons>ul>li>label,
+.doucuments-buttons>ul>li>label {
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #bebebe;
+    background: -webkit-linear-gradient(top, #fdfdfd, #ecedee);
+    background: linear-gradient(to bottom, #fdfdfd, #ecedee);
+    background-color: #ecedee;
+    color: #333;
+    margin-left: 10px;
+    transition: 0.3s all linear;
+    cursor: pointer;
+}
+
+.resume-buttons>ul>li>button,
+.doucuments-buttons>ul>li>button {
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #bebebe;
+    background: -webkit-linear-gradient(top, #fdfdfd, #ecedee);
+    background: linear-gradient(to bottom, #fdfdfd, #ecedee);
+    background-color: #ecedee;
+    color: #333;
+    margin-left: 10px;
+    transition: 0.3s all linear;
+    cursor: pointer;
+}
+
+.resume-buttons>ul>li,
+.doucuments-buttons>ul>li {
+    height: fit-content;
+}
+
+.resume-buttons>ul>li>a:hover,
+.doucuments-buttons>ul>li>a:hover {
+    background: linear-gradient(to bottom, #fcf6f6, #fcf6f6);
+    border: 1px solid#333;
+}
+
+.resume-buttons>ul>li>label:hover,
+.doucuments-buttons>ul>li>label:hover {
+    background: linear-gradient(to bottom, #fcf6f6, #fcf6f6);
+    border: 1px solid#333;
+}
+
+.resume-buttons>ul>li>button:hover,
+.doucuments-buttons>ul>li>button:hover {
+    background: linear-gradient(to bottom, #fcf6f6, #fcf6f6);
+    border: 1px solid#333;
+}
+
+.resume-buttons>ul>li>a.english-pdf-btn .doucuments-buttons>ul>li>a.english-pdf-btn {
+    margin-right: 10px;
+}
+
+.alert-message-resume {
+    position: relative;
+    padding: 25px 35px;
+    border: 1px solid #d0b8a0;
+    background-color: #fff;
+    font-size: 13px;
+}
+
+.alert-message-resume>h2 {
+    padding: 0 0 0 35px;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+}
+
+.alert-message-resume>p {
+    padding: 0 0 0 35px;
+    color: #333333;
+    font-size: 12px;
+    position: relative;
+}
+
+.alert-message-resume>h2::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    content: "";
+    border: 0;
+    background: url("https://www.bizreach.jp/img/icons/icon_notification_red.svg") no-repeat;
+    background-size: 100%;
+}
+
+.resume-attention-alert {
+    border-color: #fc7173;
+    background-color: #fefaf9;
+}
+
+/* tabs-career */
+.tabs-section-container {
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+}
+
+.tabs-section-wrap {
+    justify-content: space-between;
+}
+
+.tabs-ankers>.nav-tabs {
+    border-bottom: none;
+}
+
+.tabs-section-wrap>.tabs-ankers>ul {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.tabs-section-wrap>.tabs-ankers>ul>li {
+    width: 100%;
+    padding: 5px 7px;
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: #081351;
+    color: #fff;
+    font: normal normal bold 14px/18px;
+    letter-spacing: 0px;
+    color: #081351;
+}
+
+.profileIconTab {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px 25px 0px !important;
+}
+
+.profileIcon {
+    height: 26px;
+    fill: white !important;
+}
+
+.profileText {
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-left: 8px;
+}
+
+.tabs-section-wrap>.tabs-ankers>ul>li>a {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 0px auto;
+    padding: 4px;
+    padding-left: 20px;
+    background-color: #081351;
+    color: #3a3a3a;
+    font-size: 15px;
+    line-height: 40px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.tabs-ankers>.nav-tabs>.nav-item>.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.tabs-ankers>.nav-tabs>.nav-item>.active {
+    color: #081351 !important;
+    background-color: #fff !important;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.tabs-content-wrap>.tab-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.mobileTabsIcons>li {
+    text-align: center;
+}
+
+.mobileTabsIcons>li>a {
+    padding: 0px !important;
+    text-align: center !important;
+}
+
+.IconsTab {
+    height: 18px;
+    filter: invert(99%) sepia(2%) saturate(359%) hue-rotate(254deg) brightness(120%) contrast(100%);
+}
+
+.IconsTabActive {
+    filter: invert(85%) sepia(42%) saturate(620%) hue-rotate(349deg) brightness(101%) contrast(101%);
+}
+
+.ProfileTabMobileNav {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.IconsModal {
+    padding-left: 10px;
+}
+
+.modalTabConatiner {
+    border-radius: 5px;
+}
+
+.mobileModalTabsIcons {
+    background-color: #081351;
+    padding: 0px !important;
+    height: 610px;
+    width: 50px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.IconsModalTabAnkers {
+    height: 610px;
+    width: 160px;
+    background-color: #FFFFFF;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.IconsModalTabAnkers>ul>li {
+    width: 100%;
+}
+
+.IconsModalTabAnkers>ul>li>a {
+    color: #081351;
+}
+
+.mobileModalTabsIcons>li {
+    padding: 10px;
+}
+
+.tabsHeading {
+    letter-spacing: 0px;
+    color: #081351;
+    font-size: 18px;
+    border-left: 5px solid #081351;
+    padding-left: 10px;
+    height: 53px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #08135129;
+    border-radius: 5px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.border-top-none {
+    border-top: none;
+}
+
+.border-feilds-bottom {
+    border-bottom: 1px solid #d1b99f;
+}
+
+/* labels css start */
+
+.profileLables {
+    padding: 0px !important;
+    margin: 0px;
+}
+
+.profileLabel {
+    background: #141414 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #08135129;
+    width: 120px;
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0px;
+    font-weight: 400;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    text-align: center;
+}
+
+.profileLabelBorder {
+    border-top: 1px solid #08135129;
+    border-bottom: 1px solid #08135129;
+}
+
+.br1 {
+    border-right: 1px solid #707070;
+}
+
+.bl1 {
+    border-left: 1px solid #707070;
+}
+
+.bt1 {
+    border-top: 1px solid #707070;
+}
+
+.profileLabelBorderTop {
+    border-top: 1px solid #08135129;
+}
+
+.profileLabelBorderBottom {
+    border-bottom: 2px solid #08135129;
+}
+
+.awardsTitle,
+.awardsYear,
+.documentsTitle,
+.SkillsTitle {
+    font-weight: 500;
+    color: #000000;
+}
+
+.BasicInfoTab,
+.EducationInfoTab,
+.CurrentJobTab,
+.QualificationInfoTab,
+.ExperienceInfoTab,
+.DesireJobTab,
+.AwardsInfoTab,
+.DocumentsInfoTab {
+    margin-top: 30px !important;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #08135129;
+    border-radius: 5px;
+}
+
+.BasicInfoTab>.col-md-6,
+.EducationInfoTab>.col-md-6,
+.CurrentJobTab>.col-12,
+.QualificationInfoTab>.col-12,
+.ExperienceInfoTab>.col-12,
+.DesireJobTab>.col-12,
+.AwardsInfoTab>.col-12 .DocumentsInfoTab>.col-12 {
+    display: flex;
+}
+
+.profileInfoList {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.profileInfoList>li {
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58px;
+}
+
+.profileInfoBorder {
+    border-top: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+}
+
+.profileInfoBorderTop {
+    border-top: 1px solid #141414;
+}
+
+.profileInfoBorderBottom {
+    border-bottom: 1px solid #141414;
+}
+
+.profileInfo>.ProfileUserPic {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 2px solid #081351;
+}
+
+.profileInfo>div>p {
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #000000;
+    margin: 0px;
+    padding: 10px;
+}
+
+.h150 {
+    height: 150px !important;
+}
+
+
+.viewEditAnkerList,
+.uploadViewAnkerList {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.uploadViewAnkerList {
+    justify-content: center;
+}
+
+.viewEditAnkerList>li>a,
+.uploadViewAnkerList>li>a,
+.uploadViewAnkerList>li>label {
+    background: #081351 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 7px;
+}
+
+.uploadViewAnkerList>li>a,
+.uploadViewAnkerList>li>label {
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+#DesktopTabsIcons {
+    padding-bottom: 50px;
+    background: #081351;
+}
+
+progress {
+    height: 30px;
+}
+
+.btr5 {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.bbl5 {
+    border-radius: 0px 0px 0px 5px;
+}
+
+.bb5 {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.bl5 {
+    border-radius: 5px 0px 0px 0px;
+}
+
+.br5 {
+    border-radius: 0px 5px 0px 0px;
+}
+
+.rt0 {
+    border-top: 0px;
+}
+
+.rb0 {
+    border-bottom: 0px;
+}
+
+
+
+
+/* labels css end */
+
+
+
+
+
+
+/* edit able feilds */
+
+/* candidates-list */
+.candidate-list-wrap {
+    width: 100%;
+    padding-bottom: 36px;
+    background-color: #FBF7F1;
+}
+
+.search-filter {
+    margin: 40px 0px;
+    background-color: #FFF;
+    border: 1px solid #D1B99F;
+    border-radius: 2px;
+}
+
+.search-filter>h2 {
+    display: block;
+    border-left: 3px solid #A38159;
+    padding: 15px 10px;
+    color: #A38159;
+    font-size: 24px;
+    border-bottom: 1px solid #E8DCCF;
+    margin: 0px;
+}
+
+.label-listing-input {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #F4EEE7;
+    color: #916E47;
+    font-weight: 400;
+    margin: 0px;
+    padding: 15px !important;
+    border-right: 1px solid #916E47;
+    border-left: 1px solid #916E47;
+    border-bottom: 1px solid #916E47;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.candidate-selected-feilds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px !important;
+    border-top: 1px solid #F8EFE5;
+}
+
+.candidate-selected-feilds>select {
+    border-radius: 0px;
+    font-size: 12px;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #F8EFE5;
+
+}
+
+.search-button>button {
+    border-radius: 2px;
+    border: 1px solid #725F47;
+    color: #FFF !important;
+    background: -webkit-linear-gradient(top, #A38058, #7D5526);
+    background: linear-gradient(to bottom, #A38058, #7D5526);
+    background-color: #7D5526;
+    text-shadow: -1px -1px 1px rgb(0 0 0 / 30%);
+    width: 150px;
+    height: 42px;
+    text-decoration: none !important;
+    text-align: center;
+    line-height: 42px;
+    font-size: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.single-candidate-info {
+    padding: 20px !important;
+    background-color: #FFF;
+    border: 1px solid #D1B99F;
+    border-radius: 2px;
+    margin: 20px 0px;
+}
+
+.search-candidate-result {
+    position: relative;
+}
+
+.search-candidate-result>figcaption>a>img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #CCC;
+}
+
+.search-candidate-result-content {
+    padding-left: 10px;
+    margin: 0px;
+    width: 80%;
+}
+
+.search-candidate-result-content>li>a:hover {
+    color: #1D568F;
+    text-decoration: underline !important;
+}
+
+.search-candidate-result-content>li>a {
+    color: #1D568F;
+}
+
+.search-candidate-result-content>li>a>p {
+    color: #1D568F;
+    font-size: 18px;
+    margin: 5px 0px;
+}
+
+.search-candidate-result-content>li>p {
+    color: #999;
+    font-size: 14px;
+    margin: 5px 0px;
+}
+
+.location-school {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.location-school>p {
+    padding-left: 15px;
+}
+
+.location-school>p>i {
+    padding-right: 2px;
+}
+
+.location-school>p:nth-child(1) {
+    padding-left: 0px;
+}
+
+.badge-skill>span {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    background-color: #BBB;
+    color: #FFF;
+    line-height: 1.8;
+    font-size: 10px;
+}
+
+.comment-message>p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-of-posted-jobs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE;
+    padding: 20px 0px;
+}
+
+.list-of-posted-jobs>a {
+    border-radius: 2px;
+    border: 1px solid #BEBEBE;
+    background: -webkit-linear-gradient(top, #FDFDFD, #ECEDEE);
+    background: linear-gradient(to bottom, #FDFDFD, #ECEDEE);
+    background-color: #ECEDEE;
+    color: #333;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* candidates-list end */
+
+/* line fix css */
+
+.line-text-1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 1 !important;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+}
+
+.line-text-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.line-text-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.line-text-4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.line-text-5 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 5 !important;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+}
+
+/* profile page end*/
+/* models css */
+.editModel {
+    border-top: 10px solid #081351;
+    border-radius: 5px;
+}
+
+.titleEffect {
+    width: 5px;
+    height: 30px;
+    background-color: #081351;
+}
+
+.modelForm>div>h4 {
+    color: #081351;
+    font-weight: bold;
+}
+
+.modelTitle {
+    display: flex;
+    align-items: center;
+}
+
+.modelForm>.modelTitle>div {
+    width: 5px;
+    height: 30px;
+    background-color: #081351;
+}
+
+.subFormFields .form-group .form-control {
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #757575;
+}
+
+.subFormFields .form-group label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+}
+
+.subFormFields .form-group .form-control::placeholder {
+    color: #757575;
+}
+
+.fileInput {
+    padding: 7px;
+}
+
+.modelBtn {
+    padding: 7px 50px;
+    border-radius: 5px;
+    border: none;
+}
+
+.positiveBtn {
+    background-color: #081351;
+    color: #fff;
+}
+
+.negativeBtn {
+    background-color: #000000;
+    color: #fff;
+}
+
+.modelBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.editModel>h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.fa-plus {
+    color: #081351;
+    border: 3px solid #081351;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+#CurrentlyStudying {
+    cursor: pointer;
+}
+
+.fa-times {
+    cursor: pointer;
+    font-size: larger;
+}
+
+.addNewButton {
+    color: #081351;
+    font-weight: 900;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* models css end */
+/* company profile page css */
+.HeadingProfile {
+    font-size: 20px;
+    color: #081351;
+    padding-left: 10px;
+    border-left: 4px solid #081351;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.CompanyProfileWrap {
+    padding: 60px 0px;
+}
+
+.companyImage {
+    width: 300px;
+    height: 300px;
+    background: #081351 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+}
+
+.companyContent {
+    padding-left: 20px;
+}
+
+.companyContent>ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.companyContent>ul>li {
+    height: auto;
+    display: flex;
+}
+
+.companyContent>ul>li>div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+}
+
+.companyContent>ul>li>div>img {
+    width: 20px;
+    height: 25px;
+}
+
+/* company profile page css */
