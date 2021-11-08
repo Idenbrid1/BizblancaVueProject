@@ -6431,6 +6431,199 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -7261,7 +7454,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -19448,663 +19640,762 @@ var render = function () {
             "div",
             { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
             [
-              _c("form", { attrs: { id: "currentJobForm" } }, [
-                _c("div", { staticClass: "modal-content p-0" }, [
-                  _c("div", { staticClass: "container editModel pb-5" }, [
-                    _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
-                    _vm._v(" "),
-                    _c("section", { staticClass: "modelForm" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "row no-gutters",
-                          attrs: { id: "CurrentJobFieldsContainer" },
-                        },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "col-12 CurrentJobSection" },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "subForm",
-                                  attrs: { id: "subForm" },
-                                },
-                                [
-                                  _vm._m(36),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "subFormFields" }, [
-                                    _c("div", { staticClass: "row" }, [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "col-12 col-md-6 form-group",
-                                        },
-                                        [
-                                          _c(
-                                            "label",
-                                            { attrs: { for: "currentStatus" } },
-                                            [_vm._v("Current Working")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group m-0" },
-                                            [
-                                              _c(
-                                                "label",
-                                                {
-                                                  attrs: {
-                                                    for: "currentStatus",
-                                                  },
-                                                },
-                                                [_vm._v("Yes")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value:
-                                                      _vm.profile
-                                                        .is_working_currently,
-                                                    expression:
-                                                      "profile.is_working_currently",
-                                                  },
-                                                ],
-                                                staticClass: "my-1",
-                                                attrs: {
-                                                  name: "is_working_currently",
-                                                  value: "1",
-                                                  type: "radio",
-                                                },
-                                                domProps: {
-                                                  checked: _vm._q(
-                                                    _vm.profile
-                                                      .is_working_currently,
-                                                    "1"
-                                                  ),
-                                                },
-                                                on: {
-                                                  change: [
-                                                    function ($event) {
-                                                      return _vm.$set(
-                                                        _vm.profile,
-                                                        "is_working_currently",
-                                                        "1"
-                                                      )
-                                                    },
-                                                    function ($event) {
-                                                      return _vm.workingCurrentlyYes()
-                                                    },
-                                                  ],
-                                                },
-                                              }),
-                                              _vm._v(" "),
-                                              _c(
-                                                "label",
-                                                {
-                                                  attrs: {
-                                                    for: "currentStatus",
-                                                  },
-                                                },
-                                                [_vm._v("No")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value:
-                                                      _vm.profile
-                                                        .is_working_currently,
-                                                    expression:
-                                                      "profile.is_working_currently",
-                                                  },
-                                                ],
-                                                staticClass: "my-1",
-                                                attrs: {
-                                                  type: "radio",
-                                                  value: "0",
-                                                  name: "is_working_currently",
-                                                },
-                                                domProps: {
-                                                  checked: _vm._q(
-                                                    _vm.profile
-                                                      .is_working_currently,
-                                                    "0"
-                                                  ),
-                                                },
-                                                on: {
-                                                  change: [
-                                                    function ($event) {
-                                                      return _vm.$set(
-                                                        _vm.profile,
-                                                        "is_working_currently",
-                                                        "0"
-                                                      )
-                                                    },
-                                                    function ($event) {
-                                                      return _vm.workingCurrentlyNo()
-                                                    },
-                                                  ],
-                                                },
-                                              }),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      this.isWorkingCurrently
-                                        ? _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "startingDate",
-                                                      },
-                                                    },
-                                                    [_vm._v("Starting Date")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          _vm.profile
-                                                            .job_start_date,
-                                                        expression:
-                                                          "profile.job_start_date",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "job_start_date",
-                                                      value: "",
-                                                      placeholder:
-                                                        "Please Select Starting Date",
-                                                      type: "date",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        _vm.profile
-                                                          .job_start_date,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          _vm.profile,
-                                                          "job_start_date",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      this.isWorkingCurrently
-                                        ? _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "endingDate",
-                                                      },
-                                                    },
-                                                    [_vm._v("Ending Date")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          _vm.profile
-                                                            .job_end_date,
-                                                        expression:
-                                                          "profile.job_end_date",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "job_end_date",
-                                                      value: "",
-                                                      placeholder:
-                                                        "Please Select Ending Date",
-                                                      type: "date",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        _vm.profile
-                                                          .job_end_date,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          _vm.profile,
-                                                          "job_end_date",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      this.isWorkingCurrently
-                                        ? _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "currentPosition",
-                                                      },
-                                                    },
-                                                    [_vm._v("Current Position")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          _vm.profile
-                                                            .current_position,
-                                                        expression:
-                                                          "profile.current_position",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "currentPosition",
-                                                      placeholder:
-                                                        "Enter current position",
-                                                      type: "text",
-                                                      value: "",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        _vm.profile
-                                                          .current_position,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          _vm.profile,
-                                                          "current_position",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      this.isWorkingCurrently
-                                        ? _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "currentPositionStatus",
-                                                      },
-                                                    },
-                                                    [_vm._v("Current Status")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          _vm.profile
-                                                            .current_status,
-                                                        expression:
-                                                          "profile.current_status",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "currentPositionStatus",
-                                                      placeholder:
-                                                        "Enter Current Status",
-                                                      type: "text",
-                                                      value: "",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        _vm.profile
-                                                          .current_status,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          _vm.profile,
-                                                          "current_status",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      this.isWorkingCurrently
-                                        ? _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "personsManaged",
-                                                      },
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "No of Persons Managed"
-                                                      ),
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          _vm.profile
-                                                            .no_of_persons_managed,
-                                                        expression:
-                                                          "profile.no_of_persons_managed",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "personsManaged",
-                                                      placeholder:
-                                                        "Enter No of Persons Managed",
-                                                      type: "text",
-                                                      value: "",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        _vm.profile
-                                                          .no_of_persons_managed,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          _vm.profile,
-                                                          "no_of_persons_managed",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      this.isWorkingCurrently
-                                        ? _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "personsManaged",
-                                                      },
-                                                    },
-                                                    [_vm._v("Current Company")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          _vm.profile
-                                                            .current_working_company,
-                                                        expression:
-                                                          "profile.current_working_company",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "currentCompany",
-                                                      placeholder:
-                                                        "Enter Current Company",
-                                                      type: "text",
-                                                      value: "",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        _vm.profile
-                                                          .current_working_company,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          _vm.profile,
-                                                          "current_working_company",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      this.isWorkingCurrently
-                                        ? _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: { for: "skills" },
-                                                    },
-                                                    [_vm._v("Current Salary")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          _vm.profile
-                                                            .current_salary,
-                                                        expression:
-                                                          "profile.current_salary",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "currentSalary",
-                                                      placeholder:
-                                                        "Enter Current Salary",
-                                                      type: "text",
-                                                      value: "",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        _vm.profile
-                                                          .current_salary,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          _vm.profile,
-                                                          "current_salary",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                    ]),
-                                  ]),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
+              _c(
+                "form",
+                { staticClass: "w-100", attrs: { id: "currentJobForm" } },
+                [
+                  _c("div", { staticClass: "modal-content p-0" }, [
+                    _c("div", { staticClass: "container editModel pb-5" }, [
+                      _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row mt-4" }, [
+                      _c("section", { staticClass: "modelForm" }, [
                         _c(
                           "div",
-                          { staticClass: "col-lg-12 modelBtnContainer" },
+                          {
+                            staticClass: "row no-gutters",
+                            attrs: { id: "CurrentJobFieldsContainer" },
+                          },
                           [
                             _c(
-                              "button",
-                              {
-                                staticClass: "positiveBtn modelBtn mr-1",
-                                on: {
-                                  click: function ($event) {
-                                    $event.preventDefault()
-                                    return _vm.updateCurrentJob()
+                              "div",
+                              { staticClass: "col-12 CurrentJobSection" },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "subForm",
+                                    attrs: { id: "subForm" },
                                   },
-                                },
-                              },
-                              [_vm._v("Update")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "negativeBtn modelBtn ml-1",
-                                attrs: { "data-dismiss": "modal" },
-                              },
-                              [_vm._v("Cancel")]
+                                  [
+                                    _vm._m(36),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "subFormFields" },
+                                      [
+                                        _c("div", { staticClass: "row" }, [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "col-12 col-md-6 form-group",
+                                            },
+                                            [
+                                              _c(
+                                                "label",
+                                                {
+                                                  attrs: {
+                                                    for: "currentStatus",
+                                                  },
+                                                },
+                                                [_vm._v("Current Working")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass: "form-group m-0",
+                                                },
+                                                [
+                                                  _c(
+                                                    "label",
+                                                    {
+                                                      attrs: {
+                                                        for: "currentStatus",
+                                                      },
+                                                    },
+                                                    [_vm._v("Yes")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c("input", {
+                                                    directives: [
+                                                      {
+                                                        name: "model",
+                                                        rawName: "v-model",
+                                                        value:
+                                                          _vm.profile
+                                                            .is_working_currently,
+                                                        expression:
+                                                          "profile.is_working_currently",
+                                                      },
+                                                    ],
+                                                    staticClass: "my-1",
+                                                    attrs: {
+                                                      name: "is_working_currently",
+                                                      value: "1",
+                                                      type: "radio",
+                                                    },
+                                                    domProps: {
+                                                      checked: _vm._q(
+                                                        _vm.profile
+                                                          .is_working_currently,
+                                                        "1"
+                                                      ),
+                                                    },
+                                                    on: {
+                                                      change: [
+                                                        function ($event) {
+                                                          return _vm.$set(
+                                                            _vm.profile,
+                                                            "is_working_currently",
+                                                            "1"
+                                                          )
+                                                        },
+                                                        function ($event) {
+                                                          return _vm.workingCurrentlyYes()
+                                                        },
+                                                      ],
+                                                    },
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "label",
+                                                    {
+                                                      attrs: {
+                                                        for: "currentStatus",
+                                                      },
+                                                    },
+                                                    [_vm._v("No")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c("input", {
+                                                    directives: [
+                                                      {
+                                                        name: "model",
+                                                        rawName: "v-model",
+                                                        value:
+                                                          _vm.profile
+                                                            .is_working_currently,
+                                                        expression:
+                                                          "profile.is_working_currently",
+                                                      },
+                                                    ],
+                                                    staticClass: "my-1",
+                                                    attrs: {
+                                                      type: "radio",
+                                                      value: "0",
+                                                      name: "is_working_currently",
+                                                    },
+                                                    domProps: {
+                                                      checked: _vm._q(
+                                                        _vm.profile
+                                                          .is_working_currently,
+                                                        "0"
+                                                      ),
+                                                    },
+                                                    on: {
+                                                      change: [
+                                                        function ($event) {
+                                                          return _vm.$set(
+                                                            _vm.profile,
+                                                            "is_working_currently",
+                                                            "0"
+                                                          )
+                                                        },
+                                                        function ($event) {
+                                                          return _vm.workingCurrentlyNo()
+                                                        },
+                                                      ],
+                                                    },
+                                                  }),
+                                                ]
+                                              ),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          this.isWorkingCurrently
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "startingDate",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Starting Date"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.profile
+                                                                .job_start_date,
+                                                            expression:
+                                                              "profile.job_start_date",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "job_start_date",
+                                                          value: "",
+                                                          placeholder:
+                                                            "Please Select Starting Date",
+                                                          type: "date",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.profile
+                                                              .job_start_date,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.profile,
+                                                              "job_start_date",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          this.isWorkingCurrently
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "endingDate",
+                                                          },
+                                                        },
+                                                        [_vm._v("Ending Date")]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.profile
+                                                                .job_end_date,
+                                                            expression:
+                                                              "profile.job_end_date",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "job_end_date",
+                                                          value: "",
+                                                          placeholder:
+                                                            "Please Select Ending Date",
+                                                          type: "date",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.profile
+                                                              .job_end_date,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.profile,
+                                                              "job_end_date",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          this.isWorkingCurrently
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "currentPosition",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Current Position"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.profile
+                                                                .current_position,
+                                                            expression:
+                                                              "profile.current_position",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "currentPosition",
+                                                          placeholder:
+                                                            "Enter current position",
+                                                          type: "text",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.profile
+                                                              .current_position,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.profile,
+                                                              "current_position",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          this.isWorkingCurrently
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "currentPositionStatus",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Current Status"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.profile
+                                                                .current_status,
+                                                            expression:
+                                                              "profile.current_status",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "currentPositionStatus",
+                                                          placeholder:
+                                                            "Enter Current Status",
+                                                          type: "text",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.profile
+                                                              .current_status,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.profile,
+                                                              "current_status",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          this.isWorkingCurrently
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "personsManaged",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "No of Persons Managed"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.profile
+                                                                .no_of_persons_managed,
+                                                            expression:
+                                                              "profile.no_of_persons_managed",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "personsManaged",
+                                                          placeholder:
+                                                            "Enter No of Persons Managed",
+                                                          type: "text",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.profile
+                                                              .no_of_persons_managed,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.profile,
+                                                              "no_of_persons_managed",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          this.isWorkingCurrently
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "personsManaged",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Current Company"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.profile
+                                                                .current_working_company,
+                                                            expression:
+                                                              "profile.current_working_company",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "currentCompany",
+                                                          placeholder:
+                                                            "Enter Current Company",
+                                                          type: "text",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.profile
+                                                              .current_working_company,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.profile,
+                                                              "current_working_company",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          this.isWorkingCurrently
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "skills",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Current Salary"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.profile
+                                                                .current_salary,
+                                                            expression:
+                                                              "profile.current_salary",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "currentSalary",
+                                                          placeholder:
+                                                            "Enter Current Salary",
+                                                          type: "text",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.profile
+                                                              .current_salary,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.profile,
+                                                              "current_salary",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                        ]),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
                             ),
                           ]
                         ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "row mt-4" }, [
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-12 modelBtnContainer" },
+                            [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "positiveBtn modelBtn mr-1",
+                                  on: {
+                                    click: function ($event) {
+                                      $event.preventDefault()
+                                      return _vm.updateCurrentJob()
+                                    },
+                                  },
+                                },
+                                [_vm._v("Update")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "negativeBtn modelBtn ml-1",
+                                  attrs: { "data-dismiss": "modal" },
+                                },
+                                [_vm._v("Cancel")]
+                              ),
+                            ]
+                          ),
+                        ]),
                       ]),
                     ]),
                   ]),
-                ]),
-              ]),
+                ]
+              ),
             ]
           ),
         ]
@@ -20126,887 +20417,1059 @@ var render = function () {
             "div",
             { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
             [
-              _c("form", { attrs: { id: "educationform" } }, [
-                _c("div", { staticClass: "modal-content p-0" }, [
-                  _c("div", { staticClass: "container editModel pb-5" }, [
-                    _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
-                    _vm._v(" "),
-                    _c("section", { staticClass: "modelForm" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "row no-gutters",
-                          attrs: { id: "EducationFieldsContainer" },
-                        },
-                        [
-                          _c("div", { staticClass: "col-12 EductionSection" }, [
+              _c(
+                "form",
+                { staticClass: "w-100", attrs: { id: "educationform" } },
+                [
+                  _c("div", { staticClass: "modal-content p-0" }, [
+                    _c("div", { staticClass: "container editModel pb-5" }, [
+                      _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
+                      _vm._v(" "),
+                      _c("section", { staticClass: "modelForm" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "row no-gutters",
+                            attrs: { id: "EducationFieldsContainer" },
+                          },
+                          [
                             _c(
                               "div",
-                              { staticClass: "subForm" },
+                              { staticClass: "col-12 EductionSection" },
                               [
-                                _vm._m(37),
-                                _vm._v(" "),
-                                _vm._l(
-                                  this.profile.candidate_education,
-                                  function (educationUpdate, index) {
-                                    return _c(
-                                      "div",
-                                      {
-                                        key: index,
-                                        staticClass: "subFormFields",
-                                      },
-                                      [
-                                        _c(
+                                _c(
+                                  "div",
+                                  { staticClass: "subForm" },
+                                  [
+                                    _vm._m(37),
+                                    _vm._v(" "),
+                                    _vm._l(
+                                      this.profile.candidate_education,
+                                      function (educationUpdate, index) {
+                                        return _c(
                                           "div",
-                                          { staticClass: "float-right" },
-                                          [
-                                            _c(
-                                              "a",
-                                              {
-                                                on: {
-                                                  click: function ($event) {
-                                                    return _vm.deleteEducationArray(
-                                                      index
-                                                    )
-                                                  },
-                                                },
-                                              },
-                                              [
-                                                _c("i", {
-                                                  staticClass: "fas fa-times",
-                                                }),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "row" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "institute",
-                                                      },
-                                                    },
-                                                    [_vm._v("Institute Type")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "select",
-                                                    {
-                                                      directives: [
-                                                        {
-                                                          name: "model",
-                                                          rawName: "v-model",
-                                                          value:
-                                                            educationUpdate.school_type,
-                                                          expression:
-                                                            "educationUpdate.school_type",
-                                                        },
-                                                      ],
-                                                      staticClass:
-                                                        "form-control",
-                                                      attrs: {
-                                                        name: "school_type[]",
-                                                        placeholder:
-                                                          "Please Select",
-                                                      },
-                                                      on: {
-                                                        change: function (
-                                                          $event
-                                                        ) {
-                                                          var $$selectedVal =
-                                                            Array.prototype.filter
-                                                              .call(
-                                                                $event.target
-                                                                  .options,
-                                                                function (o) {
-                                                                  return o.selected
-                                                                }
-                                                              )
-                                                              .map(function (
-                                                                o
-                                                              ) {
-                                                                var val =
-                                                                  "_value" in o
-                                                                    ? o._value
-                                                                    : o.value
-                                                                return val
-                                                              })
-                                                          _vm.$set(
-                                                            educationUpdate,
-                                                            "school_type",
-                                                            $event.target
-                                                              .multiple
-                                                              ? $$selectedVal
-                                                              : $$selectedVal[0]
-                                                          )
-                                                        },
-                                                      },
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "option",
-                                                        {
-                                                          attrs: {
-                                                            value: "Metric",
-                                                          },
-                                                        },
-                                                        [_vm._v("Metric")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "option",
-                                                        {
-                                                          attrs: {
-                                                            value:
-                                                              "Intermediate",
-                                                          },
-                                                        },
-                                                        [_vm._v("Intermediate")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "option",
-                                                        {
-                                                          attrs: {
-                                                            value: "Bachelor",
-                                                          },
-                                                        },
-                                                        [_vm._v("Bachelor")]
-                                                      ),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "school_name",
-                                                      },
-                                                    },
-                                                    [_vm._v("Institute name")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          educationUpdate.school_name,
-                                                        expression:
-                                                          "educationUpdate.school_name",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "school_name[]",
-                                                      type: "text",
-                                                      placeholder:
-                                                        "Please Select",
-                                                      value: "",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        educationUpdate.school_name,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          educationUpdate,
-                                                          "school_name",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "startingDate",
-                                                      },
-                                                    },
-                                                    [_vm._v("Starting Date")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          educationUpdate.start_date,
-                                                        expression:
-                                                          "educationUpdate.start_date",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "start_date[]",
-                                                      type: "date",
-                                                      placeholder:
-                                                        "Please Select",
-                                                      value: "",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        educationUpdate.start_date,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          educationUpdate,
-                                                          "start_date",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "col-12 col-md-6" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      attrs: {
-                                                        for: "endingDate",
-                                                      },
-                                                    },
-                                                    [_vm._v("Ending Date")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          educationUpdate.end_date,
-                                                        expression:
-                                                          "educationUpdate.end_date",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "end_date[]",
-                                                      id: "endingDate",
-                                                      type: "date",
-                                                      placeholder:
-                                                        "Please Select",
-                                                      value: "",
-                                                    },
-                                                    domProps: {
-                                                      value:
-                                                        educationUpdate.end_date,
-                                                    },
-                                                    on: {
-                                                      input: function ($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          educationUpdate,
-                                                          "end_date",
-                                                          $event.target.value
-                                                        )
-                                                      },
-                                                    },
-                                                  }),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("div", { staticClass: "col-12" }, [
-                                            _c(
-                                              "div",
-                                              { staticClass: "form-group" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  {
-                                                    attrs: {
-                                                      for: "department",
-                                                    },
-                                                  },
-                                                  [_vm._v("Department")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        educationUpdate.department,
-                                                      expression:
-                                                        "educationUpdate.department",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "department[]",
-                                                    id: "department",
-                                                    type: "text",
-                                                    placeholder: "Faculty",
-                                                    value: "",
-                                                  },
-                                                  domProps: {
-                                                    value:
-                                                      educationUpdate.department,
-                                                  },
-                                                  on: {
-                                                    input: function ($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        educationUpdate,
-                                                        "department",
-                                                        $event.target.value
-                                                      )
-                                                    },
-                                                  },
-                                                }),
-                                              ]
-                                            ),
-                                          ]),
-                                        ]),
-                                      ]
-                                    )
-                                  }
-                                ),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "subFormFields" }, [
-                                  this.addMoreDBEducation == true
-                                    ? _c("div", { staticClass: "row" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "float-right" },
-                                          [
-                                            _c(
-                                              "a",
-                                              {
-                                                on: {
-                                                  click: function ($event) {
-                                                    return _vm.removeAddMoreArrayEducation()
-                                                  },
-                                                },
-                                              },
-                                              [
-                                                _c("i", {
-                                                  staticClass: "fas fa-times",
-                                                }),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "col-12 col-md-6" },
+                                          {
+                                            key: index,
+                                            staticClass: "subFormFields",
+                                          },
                                           [
                                             _c(
                                               "div",
-                                              { staticClass: "form-group" },
+                                              { staticClass: "float-right" },
                                               [
                                                 _c(
-                                                  "label",
+                                                  "a",
                                                   {
-                                                    attrs: { for: "institute" },
-                                                  },
-                                                  [_vm._v("Institute Type")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "select",
-                                                  {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          _vm
-                                                            .education_push_array
-                                                            .school_type,
-                                                        expression:
-                                                          "education_push_array.school_type",
-                                                      },
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      name: "school_type",
-                                                      placeholder:
-                                                        "Please Select",
-                                                    },
                                                     on: {
-                                                      change: function (
-                                                        $event
-                                                      ) {
-                                                        var $$selectedVal =
-                                                          Array.prototype.filter
-                                                            .call(
-                                                              $event.target
-                                                                .options,
-                                                              function (o) {
-                                                                return o.selected
-                                                              }
-                                                            )
-                                                            .map(function (o) {
-                                                              var val =
-                                                                "_value" in o
-                                                                  ? o._value
-                                                                  : o.value
-                                                              return val
-                                                            })
-                                                        _vm.$set(
-                                                          _vm.education_push_array,
-                                                          "school_type",
-                                                          $event.target.multiple
-                                                            ? $$selectedVal
-                                                            : $$selectedVal[0]
+                                                      click: function ($event) {
+                                                        return _vm.deleteEducationArray(
+                                                          index
                                                         )
                                                       },
                                                     },
                                                   },
                                                   [
-                                                    _c(
-                                                      "option",
-                                                      {
-                                                        attrs: {
-                                                          value: "Metric",
-                                                        },
-                                                      },
-                                                      [_vm._v("Metric")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "option",
-                                                      {
-                                                        attrs: {
-                                                          value: "Intermediate",
-                                                        },
-                                                      },
-                                                      [_vm._v("Intermediate")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "option",
-                                                      {
-                                                        attrs: {
-                                                          value: "Bachelor",
-                                                        },
-                                                      },
-                                                      [_vm._v("Bachelor")]
-                                                    ),
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fas fa-times",
+                                                    }),
                                                   ]
                                                 ),
                                               ]
                                             ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "col-12 col-md-6" },
-                                          [
-                                            _c(
-                                              "div",
-                                              { staticClass: "form-group" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  {
-                                                    attrs: {
-                                                      for: "school_name",
-                                                    },
-                                                  },
-                                                  [_vm._v("Institute name")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.education_push_array
-                                                          .school_name,
-                                                      expression:
-                                                        "education_push_array.school_name",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "school_name",
-                                                    type: "text",
-                                                    placeholder:
-                                                      "Please Select",
-                                                    value: "",
-                                                  },
-                                                  domProps: {
-                                                    value:
-                                                      _vm.education_push_array
-                                                        .school_name,
-                                                  },
-                                                  on: {
-                                                    input: function ($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        _vm.education_push_array,
-                                                        "school_name",
-                                                        $event.target.value
-                                                      )
-                                                    },
-                                                  },
-                                                }),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "col-12 col-md-6" },
-                                          [
-                                            _c(
-                                              "div",
-                                              { staticClass: "form-group" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  {
-                                                    attrs: {
-                                                      for: "startingDate",
-                                                    },
-                                                  },
-                                                  [_vm._v("Starting Date")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.education_push_array
-                                                          .start_date,
-                                                      expression:
-                                                        "education_push_array.start_date",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "start_date",
-                                                    type: "date",
-                                                    placeholder:
-                                                      "Please Select",
-                                                    value: "",
-                                                  },
-                                                  domProps: {
-                                                    value:
-                                                      _vm.education_push_array
-                                                        .start_date,
-                                                  },
-                                                  on: {
-                                                    input: function ($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        _vm.education_push_array,
-                                                        "start_date",
-                                                        $event.target.value
-                                                      )
-                                                    },
-                                                  },
-                                                }),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "col-12 col-md-6" },
-                                          [
-                                            _c(
-                                              "div",
-                                              { staticClass: "form-group" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  {
-                                                    attrs: {
-                                                      for: "endingDate",
-                                                    },
-                                                  },
-                                                  [_vm._v("Ending Date")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.education_push_array
-                                                          .end_date,
-                                                      expression:
-                                                        "education_push_array.end_date",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "end_date",
-                                                    id: "endingDate",
-                                                    type: "date",
-                                                    placeholder:
-                                                      "Please Select",
-                                                    value: "",
-                                                  },
-                                                  domProps: {
-                                                    value:
-                                                      _vm.education_push_array
-                                                        .end_date,
-                                                  },
-                                                  on: {
-                                                    input: function ($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        _vm.education_push_array,
-                                                        "end_date",
-                                                        $event.target.value
-                                                      )
-                                                    },
-                                                  },
-                                                }),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-12" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
+                                            _vm._v(" "),
+                                            _c("div", { staticClass: "row" }, [
                                               _c(
-                                                "label",
+                                                "div",
                                                 {
-                                                  attrs: { for: "department" },
+                                                  staticClass:
+                                                    "col-12 col-md-6",
                                                 },
-                                                [_vm._v("Department")]
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "institute",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Institute Type"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "select",
+                                                        {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                educationUpdate.school_type,
+                                                              expression:
+                                                                "educationUpdate.school_type",
+                                                            },
+                                                          ],
+                                                          staticClass:
+                                                            "form-control",
+                                                          attrs: {
+                                                            name: "school_type[]",
+                                                            placeholder:
+                                                              "Please Select",
+                                                          },
+                                                          on: {
+                                                            change: function (
+                                                              $event
+                                                            ) {
+                                                              var $$selectedVal =
+                                                                Array.prototype.filter
+                                                                  .call(
+                                                                    $event
+                                                                      .target
+                                                                      .options,
+                                                                    function (
+                                                                      o
+                                                                    ) {
+                                                                      return o.selected
+                                                                    }
+                                                                  )
+                                                                  .map(
+                                                                    function (
+                                                                      o
+                                                                    ) {
+                                                                      var val =
+                                                                        "_value" in
+                                                                        o
+                                                                          ? o._value
+                                                                          : o.value
+                                                                      return val
+                                                                    }
+                                                                  )
+                                                              _vm.$set(
+                                                                educationUpdate,
+                                                                "school_type",
+                                                                $event.target
+                                                                  .multiple
+                                                                  ? $$selectedVal
+                                                                  : $$selectedVal[0]
+                                                              )
+                                                            },
+                                                          },
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "option",
+                                                            {
+                                                              attrs: {
+                                                                value: "Metric",
+                                                              },
+                                                            },
+                                                            [_vm._v("Metric")]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "option",
+                                                            {
+                                                              attrs: {
+                                                                value:
+                                                                  "Intermediate",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Intermediate"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "option",
+                                                            {
+                                                              attrs: {
+                                                                value:
+                                                                  "Bachelor",
+                                                              },
+                                                            },
+                                                            [_vm._v("Bachelor")]
+                                                          ),
+                                                        ]
+                                                      ),
+                                                    ]
+                                                  ),
+                                                ]
                                               ),
                                               _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value:
-                                                      _vm.education_push_array
-                                                        .department,
-                                                    expression:
-                                                      "education_push_array.department",
-                                                  },
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  name: "department",
-                                                  id: "department",
-                                                  type: "text",
-                                                  placeholder: "Faculty",
-                                                  value: "",
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
                                                 },
-                                                domProps: {
-                                                  value:
-                                                    _vm.education_push_array
-                                                      .department,
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "school_name",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Institute name"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              educationUpdate.school_name,
+                                                            expression:
+                                                              "educationUpdate.school_name",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "school_name[]",
+                                                          type: "text",
+                                                          placeholder:
+                                                            "Please Select",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            educationUpdate.school_name,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              educationUpdate,
+                                                              "school_name",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
                                                 },
-                                                on: {
-                                                  input: function ($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.education_push_array,
-                                                      "department",
-                                                      $event.target.value
-                                                    )
-                                                  },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "startingDate",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Starting Date"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              educationUpdate.start_date,
+                                                            expression:
+                                                              "educationUpdate.start_date",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "start_date[]",
+                                                          type: "date",
+                                                          placeholder:
+                                                            "Please Select",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            educationUpdate.start_date,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              educationUpdate,
+                                                              "start_date",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
                                                 },
-                                              }),
-                                            ]
-                                          ),
-                                        ]),
-                                      ])
-                                    : _vm._e(),
-                                ]),
-                              ],
-                              2
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "row mt-3" }, [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "col-lg-12 btn addNewButton",
-                            attrs: { id: "addEducationBtn" },
-                          },
-                          [
-                            this.addMoreDBEducation
-                              ? _c(
-                                  "a",
-                                  {
-                                    on: {
-                                      click: function ($event) {
-                                        return _vm.addToEducationRecord()
-                                      },
-                                    },
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fas fa-plus mr-1",
-                                    }),
-                                    _vm._v(
-                                      " Add another education\n                                    "
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "endingDate",
+                                                          },
+                                                        },
+                                                        [_vm._v("Ending Date")]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              educationUpdate.end_date,
+                                                            expression:
+                                                              "educationUpdate.end_date",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "end_date[]",
+                                                          id: "endingDate",
+                                                          type: "date",
+                                                          placeholder:
+                                                            "Please Select",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            educationUpdate.end_date,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              educationUpdate,
+                                                              "end_date",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-12" },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "department",
+                                                          },
+                                                        },
+                                                        [_vm._v("Department")]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              educationUpdate.department,
+                                                            expression:
+                                                              "educationUpdate.department",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "department[]",
+                                                          id: "department",
+                                                          type: "text",
+                                                          placeholder:
+                                                            "Faculty",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            educationUpdate.department,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              educationUpdate,
+                                                              "department",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                            ]),
+                                          ]
+                                        )
+                                      }
                                     ),
-                                  ]
-                                )
-                              : _c(
-                                  "a",
-                                  {
-                                    on: {
-                                      click: function ($event) {
-                                        return _vm.addMoreEducation()
-                                      },
-                                    },
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fas fa-plus mr-1",
-                                    }),
-                                    _vm._v(
-                                      " Add another education\n                                    "
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "subFormFields" },
+                                      [
+                                        this.addMoreDBEducation == true
+                                          ? _c("div", { staticClass: "row" }, [
+                                              _c(
+                                                "div",
+                                                { staticClass: "float-right" },
+                                                [
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      on: {
+                                                        click: function (
+                                                          $event
+                                                        ) {
+                                                          return _vm.removeAddMoreArrayEducation()
+                                                        },
+                                                      },
+                                                    },
+                                                    [
+                                                      _c("i", {
+                                                        staticClass:
+                                                          "fas fa-times",
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "institute",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Institute Type"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "select",
+                                                        {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                _vm
+                                                                  .education_push_array
+                                                                  .school_type,
+                                                              expression:
+                                                                "education_push_array.school_type",
+                                                            },
+                                                          ],
+                                                          staticClass:
+                                                            "form-control",
+                                                          attrs: {
+                                                            name: "school_type",
+                                                            placeholder:
+                                                              "Please Select",
+                                                          },
+                                                          on: {
+                                                            change: function (
+                                                              $event
+                                                            ) {
+                                                              var $$selectedVal =
+                                                                Array.prototype.filter
+                                                                  .call(
+                                                                    $event
+                                                                      .target
+                                                                      .options,
+                                                                    function (
+                                                                      o
+                                                                    ) {
+                                                                      return o.selected
+                                                                    }
+                                                                  )
+                                                                  .map(
+                                                                    function (
+                                                                      o
+                                                                    ) {
+                                                                      var val =
+                                                                        "_value" in
+                                                                        o
+                                                                          ? o._value
+                                                                          : o.value
+                                                                      return val
+                                                                    }
+                                                                  )
+                                                              _vm.$set(
+                                                                _vm.education_push_array,
+                                                                "school_type",
+                                                                $event.target
+                                                                  .multiple
+                                                                  ? $$selectedVal
+                                                                  : $$selectedVal[0]
+                                                              )
+                                                            },
+                                                          },
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "option",
+                                                            {
+                                                              attrs: {
+                                                                value: "Metric",
+                                                              },
+                                                            },
+                                                            [_vm._v("Metric")]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "option",
+                                                            {
+                                                              attrs: {
+                                                                value:
+                                                                  "Intermediate",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Intermediate"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "option",
+                                                            {
+                                                              attrs: {
+                                                                value:
+                                                                  "Bachelor",
+                                                              },
+                                                            },
+                                                            [_vm._v("Bachelor")]
+                                                          ),
+                                                        ]
+                                                      ),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "school_name",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Institute name"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm
+                                                                .education_push_array
+                                                                .school_name,
+                                                            expression:
+                                                              "education_push_array.school_name",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "school_name",
+                                                          type: "text",
+                                                          placeholder:
+                                                            "Please Select",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm
+                                                              .education_push_array
+                                                              .school_name,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.education_push_array,
+                                                              "school_name",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "startingDate",
+                                                          },
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Starting Date"
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm
+                                                                .education_push_array
+                                                                .start_date,
+                                                            expression:
+                                                              "education_push_array.start_date",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "start_date",
+                                                          type: "date",
+                                                          placeholder:
+                                                            "Please Select",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm
+                                                              .education_push_array
+                                                              .start_date,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.education_push_array,
+                                                              "start_date",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "col-12 col-md-6",
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "endingDate",
+                                                          },
+                                                        },
+                                                        [_vm._v("Ending Date")]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm
+                                                                .education_push_array
+                                                                .end_date,
+                                                            expression:
+                                                              "education_push_array.end_date",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "end_date",
+                                                          id: "endingDate",
+                                                          type: "date",
+                                                          placeholder:
+                                                            "Please Select",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm
+                                                              .education_push_array
+                                                              .end_date,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.education_push_array,
+                                                              "end_date",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-12" },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          attrs: {
+                                                            for: "department",
+                                                          },
+                                                        },
+                                                        [_vm._v("Department")]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm
+                                                                .education_push_array
+                                                                .department,
+                                                            expression:
+                                                              "education_push_array.department",
+                                                          },
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          name: "department",
+                                                          id: "department",
+                                                          type: "text",
+                                                          placeholder:
+                                                            "Faculty",
+                                                          value: "",
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm
+                                                              .education_push_array
+                                                              .department,
+                                                        },
+                                                        on: {
+                                                          input: function (
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.education_push_array,
+                                                              "department",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          },
+                                                        },
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                            ])
+                                          : _vm._e(),
+                                      ]
                                     ),
-                                  ]
+                                  ],
+                                  2
                                 ),
+                              ]
+                            ),
                           ]
                         ),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "row mt-4" }, [
-                        _c(
-                          "div",
-                          { staticClass: "col-lg-12 modelBtnContainer" },
-                          [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "positiveBtn modelBtn mr-1",
-                                on: {
-                                  click: function ($event) {
-                                    $event.preventDefault()
-                                    return _vm.updateEducation()
+                        _vm._v(" "),
+                        _c("div", { staticClass: "row mt-3" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "col-lg-12 btn addNewButton",
+                              attrs: { id: "addEducationBtn" },
+                            },
+                            [
+                              this.addMoreDBEducation
+                                ? _c(
+                                    "a",
+                                    {
+                                      on: {
+                                        click: function ($event) {
+                                          return _vm.addToEducationRecord()
+                                        },
+                                      },
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "fas fa-plus mr-1",
+                                      }),
+                                      _vm._v(
+                                        " Add another education\n                                    "
+                                      ),
+                                    ]
+                                  )
+                                : _c(
+                                    "a",
+                                    {
+                                      on: {
+                                        click: function ($event) {
+                                          return _vm.addMoreEducation()
+                                        },
+                                      },
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "fas fa-plus mr-1",
+                                      }),
+                                      _vm._v(
+                                        " Add another education\n                                    "
+                                      ),
+                                    ]
+                                  ),
+                            ]
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "row mt-4" }, [
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-12 modelBtnContainer" },
+                            [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "positiveBtn modelBtn mr-1",
+                                  on: {
+                                    click: function ($event) {
+                                      $event.preventDefault()
+                                      return _vm.updateEducation()
+                                    },
                                   },
                                 },
-                              },
-                              [_vm._v("Update")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "negativeBtn modelBtn ml-1",
-                                attrs: { "data-dismiss": "modal" },
-                              },
-                              [_vm._v("Cancel")]
-                            ),
-                          ]
-                        ),
+                                [_vm._v("Update")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "negativeBtn modelBtn ml-1",
+                                  attrs: { "data-dismiss": "modal" },
+                                },
+                                [_vm._v("Cancel")]
+                              ),
+                            ]
+                          ),
+                        ]),
                       ]),
                     ]),
                   ]),
-                ]),
-              ]),
+                ]
+              ),
             ]
           ),
         ]
@@ -22704,7 +23167,7 @@ var render = function () {
             "div",
             { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
             [
-              _c("form", { attrs: { id: "skillForm" } }, [
+              _c("form", { staticClass: "w-100", attrs: { id: "skillForm" } }, [
                 _c("div", { staticClass: "modal-content p-0" }, [
                   _c("div", { staticClass: "container editModel pb-5" }, [
                     _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
@@ -23174,976 +23637,1032 @@ var render = function () {
             "div",
             { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
             [
-              _c("form", { attrs: { id: "projectForm" } }, [
-                _c("div", { staticClass: "modal-content p-0" }, [
-                  _c("div", { staticClass: "container editModel pb-5" }, [
-                    _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
-                    _vm._v(" "),
-                    _c(
-                      "section",
-                      { staticClass: "modelForm" },
-                      [
-                        _vm._l(
-                          this.profile.candidate_projects,
-                          function (projectUpdate, index) {
-                            return _c(
-                              "div",
-                              {
-                                key: index,
-                                staticClass: "row no-gutters",
-                                attrs: { id: "ProjectFieldsContainer" },
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  { staticClass: "col-12 ProjectSection" },
-                                  [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass: "subForm",
-                                        attrs: { id: "subForm" },
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "float-right" },
-                                          [
-                                            _c(
-                                              "a",
-                                              {
-                                                on: {
-                                                  click: function ($event) {
-                                                    return _vm.deleteProjectArray(
-                                                      index
-                                                    )
+              _c(
+                "form",
+                { staticClass: "w-100", attrs: { id: "projectForm" } },
+                [
+                  _c("div", { staticClass: "modal-content p-0" }, [
+                    _c("div", { staticClass: "container editModel pb-5" }, [
+                      _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
+                      _vm._v(" "),
+                      _c(
+                        "section",
+                        { staticClass: "modelForm" },
+                        [
+                          _vm._l(
+                            this.profile.candidate_projects,
+                            function (projectUpdate, index) {
+                              return _c(
+                                "div",
+                                {
+                                  key: index,
+                                  staticClass: "row no-gutters",
+                                  attrs: { id: "ProjectFieldsContainer" },
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "col-12 ProjectSection" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "subForm",
+                                          attrs: { id: "subForm" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "float-right" },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  on: {
+                                                    click: function ($event) {
+                                                      return _vm.deleteProjectArray(
+                                                        index
+                                                      )
+                                                    },
                                                   },
                                                 },
-                                              },
-                                              [
-                                                _c("i", {
-                                                  staticClass: "fas fa-times",
-                                                }),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "modelTitle my-3" },
-                                          [
-                                            _c("div", {
-                                              staticClass: "mr-2 titleEffect",
-                                            }),
-                                            _vm._v(" "),
-                                            _c(
-                                              "h4",
-                                              {
-                                                staticClass:
-                                                  "m-0 modelTitleText",
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "Projects " +
-                                                    _vm._s(projectUpdate.name)
-                                                ),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "subFormFields" },
-                                          [
-                                            _c("div", { staticClass: "row" }, [
+                                                [
+                                                  _c("i", {
+                                                    staticClass: "fas fa-times",
+                                                  }),
+                                                ]
+                                              ),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "modelTitle my-3" },
+                                            [
+                                              _c("div", {
+                                                staticClass: "mr-2 titleEffect",
+                                              }),
+                                              _vm._v(" "),
                                               _c(
-                                                "div",
+                                                "h4",
                                                 {
                                                   staticClass:
-                                                    "col-12 col-md-6",
+                                                    "m-0 modelTitleText",
                                                 },
                                                 [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass: "form-group",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "label",
-                                                        {
-                                                          attrs: {
-                                                            for: "projectName",
-                                                          },
-                                                        },
-                                                        [_vm._v("Project Name")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              projectUpdate.name,
-                                                            expression:
-                                                              "projectUpdate.name",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "projectName[]",
-                                                          value: "",
-                                                          placeholder:
-                                                            "Enter Project Name",
-                                                          type: "text",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            projectUpdate.name,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              projectUpdate,
-                                                              "name",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
-                                                    ]
+                                                  _vm._v(
+                                                    "Projects " +
+                                                      _vm._s(projectUpdate.name)
                                                   ),
                                                 ]
                                               ),
-                                              _vm._v(" "),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "subFormFields" },
+                                            [
                                               _c(
                                                 "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
+                                                { staticClass: "row" },
                                                 [
                                                   _c(
                                                     "div",
                                                     {
-                                                      staticClass: "form-group",
+                                                      staticClass:
+                                                        "col-12 col-md-6",
                                                     },
                                                     [
                                                       _c(
-                                                        "label",
+                                                        "div",
                                                         {
-                                                          attrs: {
-                                                            for: "projectLink",
-                                                          },
-                                                        },
-                                                        [_vm._v("Link")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              projectUpdate.link,
-                                                            expression:
-                                                              "projectUpdate.link",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "projectLink[]",
-                                                          value: "",
-                                                          placeholder:
-                                                            "Enter Link",
-                                                          type: "text",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            projectUpdate.link,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              projectUpdate,
-                                                              "link",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass: "form-group",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "label",
-                                                        {
-                                                          attrs: {
-                                                            for: "startingDate",
-                                                          },
+                                                          staticClass:
+                                                            "form-group",
                                                         },
                                                         [
-                                                          _vm._v(
-                                                            "Starting Date"
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "projectName",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Project Name"
+                                                              ),
+                                                            ]
                                                           ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  projectUpdate.name,
+                                                                expression:
+                                                                  "projectUpdate.name",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "projectName[]",
+                                                              value: "",
+                                                              placeholder:
+                                                                "Enter Project Name",
+                                                              type: "text",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                projectUpdate.name,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  projectUpdate,
+                                                                  "name",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
                                                         ]
                                                       ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              projectUpdate.start_date,
-                                                            expression:
-                                                              "projectUpdate.start_date",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "startingDate[]",
-                                                          value: "",
-                                                          placeholder:
-                                                            "Please Select Starting Date",
-                                                          type: "date",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            projectUpdate.start_date,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              projectUpdate,
-                                                              "start_date",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
                                                     ]
                                                   ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
-                                                [
+                                                  _vm._v(" "),
                                                   _c(
                                                     "div",
                                                     {
-                                                      staticClass: "form-group",
+                                                      staticClass:
+                                                        "col-12 col-md-6",
                                                     },
                                                     [
                                                       _c(
-                                                        "label",
+                                                        "div",
                                                         {
-                                                          attrs: {
-                                                            for: "endingDate",
-                                                          },
-                                                        },
-                                                        [_vm._v("Ending Date")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              projectUpdate.end_date,
-                                                            expression:
-                                                              "projectUpdate.end_date",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "endingDate[]",
-                                                          value: "",
-                                                          placeholder:
-                                                            "Please Select Ending Date",
-                                                          type: "date",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            projectUpdate.end_date,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              projectUpdate,
-                                                              "end_date",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                { staticClass: "col-12" },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass: "form-group",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "label",
-                                                        {
-                                                          attrs: {
-                                                            for: "description",
-                                                          },
-                                                        },
-                                                        [_vm._v("Description")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c("textarea", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              projectUpdate.description,
-                                                            expression:
-                                                              "projectUpdate.description",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          cols: "30",
-                                                          rows: "10",
-                                                          name: "description[]",
-                                                          placeholder:
-                                                            "Description",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            projectUpdate.description,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              projectUpdate,
-                                                              "description",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            )
-                          }
-                        ),
-                        _vm._v(" "),
-                        this.addMoreDBProject == true
-                          ? _c(
-                              "div",
-                              {
-                                staticClass: "row no-gutters",
-                                attrs: { id: "ProjectFieldsContainer" },
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  { staticClass: "col-12 ProjectSection" },
-                                  [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass: "subForm",
-                                        attrs: { id: "subForm" },
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "float-right" },
-                                          [
-                                            _c(
-                                              "a",
-                                              {
-                                                on: {
-                                                  click: function ($event) {
-                                                    return _vm.removeAddMoreArrayProject(
-                                                      _vm.index
-                                                    )
-                                                  },
-                                                },
-                                              },
-                                              [
-                                                _c("i", {
-                                                  staticClass: "fas fa-times",
-                                                }),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "subFormFields" },
-                                          [
-                                            _c("div", { staticClass: "row" }, [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass: "form-group",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "label",
-                                                        {
-                                                          attrs: {
-                                                            for: "projectName",
-                                                          },
-                                                        },
-                                                        [_vm._v("Project Name")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm
-                                                                .project_push_array
-                                                                .name,
-                                                            expression:
-                                                              "project_push_array.name",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "projectName[]",
-                                                          value: "",
-                                                          placeholder:
-                                                            "Enter Project Name",
-                                                          type: "text",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            _vm
-                                                              .project_push_array
-                                                              .name,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              _vm.project_push_array,
-                                                              "name",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass: "form-group",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "label",
-                                                        {
-                                                          attrs: {
-                                                            for: "projectLink",
-                                                          },
-                                                        },
-                                                        [_vm._v("Link")]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm
-                                                                .project_push_array
-                                                                .link,
-                                                            expression:
-                                                              "project_push_array.link",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "projectLink[]",
-                                                          value: "",
-                                                          placeholder:
-                                                            "Enter Link",
-                                                          type: "text",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            _vm
-                                                              .project_push_array
-                                                              .link,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              _vm.project_push_array,
-                                                              "link",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass: "form-group",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "label",
-                                                        {
-                                                          attrs: {
-                                                            for: "startingDate",
-                                                          },
+                                                          staticClass:
+                                                            "form-group",
                                                         },
                                                         [
-                                                          _vm._v(
-                                                            "Starting Date"
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "projectLink",
+                                                              },
+                                                            },
+                                                            [_vm._v("Link")]
                                                           ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  projectUpdate.link,
+                                                                expression:
+                                                                  "projectUpdate.link",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "projectLink[]",
+                                                              value: "",
+                                                              placeholder:
+                                                                "Enter Link",
+                                                              type: "text",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                projectUpdate.link,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  projectUpdate,
+                                                                  "link",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
                                                         ]
                                                       ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm
-                                                                .project_push_array
-                                                                .start_date,
-                                                            expression:
-                                                              "project_push_array.start_date",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "startingDate[]",
-                                                          value: "",
-                                                          placeholder:
-                                                            "Please Select Starting Date",
-                                                          type: "date",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            _vm
-                                                              .project_push_array
-                                                              .start_date,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              _vm.project_push_array,
-                                                              "start_date",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
                                                     ]
                                                   ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
-                                                [
+                                                  _vm._v(" "),
                                                   _c(
                                                     "div",
                                                     {
-                                                      staticClass: "form-group",
+                                                      staticClass:
+                                                        "col-12 col-md-6",
                                                     },
                                                     [
                                                       _c(
-                                                        "label",
+                                                        "div",
                                                         {
-                                                          attrs: {
-                                                            for: "endingDate",
-                                                          },
+                                                          staticClass:
+                                                            "form-group",
                                                         },
-                                                        [_vm._v("Ending Date")]
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "startingDate",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Starting Date"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  projectUpdate.start_date,
+                                                                expression:
+                                                                  "projectUpdate.start_date",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "startingDate[]",
+                                                              value: "",
+                                                              placeholder:
+                                                                "Please Select Starting Date",
+                                                              type: "date",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                projectUpdate.start_date,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  projectUpdate,
+                                                                  "start_date",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
                                                       ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm
-                                                                .project_push_array
-                                                                .end_date,
-                                                            expression:
-                                                              "project_push_array.end_date",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "endingDate[]",
-                                                          value: "",
-                                                          placeholder:
-                                                            "Please Select Ending Date",
-                                                          type: "date",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            _vm
-                                                              .project_push_array
-                                                              .end_date,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              _vm.project_push_array,
-                                                              "end_date",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
                                                     ]
                                                   ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                { staticClass: "col-12" },
-                                                [
+                                                  _vm._v(" "),
                                                   _c(
                                                     "div",
                                                     {
-                                                      staticClass: "form-group",
+                                                      staticClass:
+                                                        "col-12 col-md-6",
                                                     },
                                                     [
                                                       _c(
-                                                        "label",
+                                                        "div",
                                                         {
-                                                          attrs: {
-                                                            for: "description",
-                                                          },
+                                                          staticClass:
+                                                            "form-group",
                                                         },
-                                                        [_vm._v("Description")]
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "endingDate",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Ending Date"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  projectUpdate.end_date,
+                                                                expression:
+                                                                  "projectUpdate.end_date",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "endingDate[]",
+                                                              value: "",
+                                                              placeholder:
+                                                                "Please Select Ending Date",
+                                                              type: "date",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                projectUpdate.end_date,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  projectUpdate,
+                                                                  "end_date",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
                                                       ),
-                                                      _vm._v(" "),
-                                                      _c("textarea", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm
-                                                                .project_push_array
-                                                                .description,
-                                                            expression:
-                                                              "project_push_array.description",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          cols: "30",
-                                                          rows: "10",
-                                                          name: "description[]",
-                                                          placeholder:
-                                                            "Description",
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    { staticClass: "col-12" },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "form-group",
                                                         },
-                                                        domProps: {
-                                                          value:
-                                                            _vm
-                                                              .project_push_array
-                                                              .description,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              _vm.project_push_array,
-                                                              "description",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "description",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Description"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("textarea", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  projectUpdate.description,
+                                                                expression:
+                                                                  "projectUpdate.description",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              cols: "30",
+                                                              rows: "10",
+                                                              name: "description[]",
+                                                              placeholder:
+                                                                "Description",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                projectUpdate.description,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  projectUpdate,
+                                                                  "description",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
+                                                      ),
                                                     ]
                                                   ),
                                                 ]
                                               ),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            )
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row mt-3" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "col-lg-12 btn addNewButton",
-                              attrs: { id: "addProjectBtn" },
-                            },
-                            [
-                              this.addMoreDBProject
-                                ? _c(
-                                    "a",
-                                    {
-                                      on: {
-                                        click: function ($event) {
-                                          return _vm.addToProjectRecord()
-                                        },
-                                      },
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass: "fas fa-plus mr-1",
-                                      }),
-                                      _vm._v(
-                                        " Add another Project\n                                    "
-                                      ),
-                                    ]
-                                  )
-                                : _c(
-                                    "a",
-                                    {
-                                      on: {
-                                        click: function ($event) {
-                                          return _vm.addMoreProject()
-                                        },
-                                      },
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass: "fas fa-plus mr-1",
-                                      }),
-                                      _vm._v(
-                                        " Add another Project\n                                    "
+                                            ]
+                                          ),
+                                        ]
                                       ),
                                     ]
                                   ),
-                            ]
+                                ]
+                              )
+                            }
                           ),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row mt-4" }, [
-                          _c(
-                            "div",
-                            { staticClass: "col-lg-12 modelBtnContainer" },
-                            [
-                              _c(
-                                "button",
+                          _vm._v(" "),
+                          this.addMoreDBProject == true
+                            ? _c(
+                                "div",
                                 {
-                                  staticClass: "positiveBtn modelBtn mr-1",
-                                  on: {
-                                    click: function ($event) {
-                                      $event.preventDefault()
-                                      return _vm.updateProject()
+                                  staticClass: "row no-gutters",
+                                  attrs: { id: "ProjectFieldsContainer" },
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "col-12 ProjectSection" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "subForm",
+                                          attrs: { id: "subForm" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "float-right" },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  on: {
+                                                    click: function ($event) {
+                                                      return _vm.removeAddMoreArrayProject(
+                                                        _vm.index
+                                                      )
+                                                    },
+                                                  },
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass: "fas fa-times",
+                                                  }),
+                                                ]
+                                              ),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "subFormFields" },
+                                            [
+                                              _c(
+                                                "div",
+                                                { staticClass: "row" },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "col-12 col-md-6",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "form-group",
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "projectName",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Project Name"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm
+                                                                    .project_push_array
+                                                                    .name,
+                                                                expression:
+                                                                  "project_push_array.name",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "projectName[]",
+                                                              value: "",
+                                                              placeholder:
+                                                                "Enter Project Name",
+                                                              type: "text",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm
+                                                                  .project_push_array
+                                                                  .name,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.project_push_array,
+                                                                  "name",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
+                                                      ),
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "col-12 col-md-6",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "form-group",
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "projectLink",
+                                                              },
+                                                            },
+                                                            [_vm._v("Link")]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm
+                                                                    .project_push_array
+                                                                    .link,
+                                                                expression:
+                                                                  "project_push_array.link",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "projectLink[]",
+                                                              value: "",
+                                                              placeholder:
+                                                                "Enter Link",
+                                                              type: "text",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm
+                                                                  .project_push_array
+                                                                  .link,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.project_push_array,
+                                                                  "link",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
+                                                      ),
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "col-12 col-md-6",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "form-group",
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "startingDate",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Starting Date"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm
+                                                                    .project_push_array
+                                                                    .start_date,
+                                                                expression:
+                                                                  "project_push_array.start_date",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "startingDate[]",
+                                                              value: "",
+                                                              placeholder:
+                                                                "Please Select Starting Date",
+                                                              type: "date",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm
+                                                                  .project_push_array
+                                                                  .start_date,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.project_push_array,
+                                                                  "start_date",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
+                                                      ),
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "col-12 col-md-6",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "form-group",
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "endingDate",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Ending Date"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm
+                                                                    .project_push_array
+                                                                    .end_date,
+                                                                expression:
+                                                                  "project_push_array.end_date",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "endingDate[]",
+                                                              value: "",
+                                                              placeholder:
+                                                                "Please Select Ending Date",
+                                                              type: "date",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm
+                                                                  .project_push_array
+                                                                  .end_date,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.project_push_array,
+                                                                  "end_date",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
+                                                      ),
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    { staticClass: "col-12" },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "form-group",
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "description",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Description"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("textarea", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm
+                                                                    .project_push_array
+                                                                    .description,
+                                                                expression:
+                                                                  "project_push_array.description",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              cols: "30",
+                                                              rows: "10",
+                                                              name: "description[]",
+                                                              placeholder:
+                                                                "Description",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm
+                                                                  .project_push_array
+                                                                  .description,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.project_push_array,
+                                                                  "description",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
+                                                      ),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "row mt-3" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "col-lg-12 btn addNewButton",
+                                attrs: { id: "addProjectBtn" },
+                              },
+                              [
+                                this.addMoreDBProject
+                                  ? _c(
+                                      "a",
+                                      {
+                                        on: {
+                                          click: function ($event) {
+                                            return _vm.addToProjectRecord()
+                                          },
+                                        },
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "fas fa-plus mr-1",
+                                        }),
+                                        _vm._v(
+                                          " Add another Project\n                                    "
+                                        ),
+                                      ]
+                                    )
+                                  : _c(
+                                      "a",
+                                      {
+                                        on: {
+                                          click: function ($event) {
+                                            return _vm.addMoreProject()
+                                          },
+                                        },
+                                      },
+                                      [
+                                        _c("i", {
+                                          staticClass: "fas fa-plus mr-1",
+                                        }),
+                                        _vm._v(
+                                          " Add another Project\n                                    "
+                                        ),
+                                      ]
+                                    ),
+                              ]
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "row mt-4" }, [
+                            _c(
+                              "div",
+                              { staticClass: "col-lg-12 modelBtnContainer" },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "positiveBtn modelBtn mr-1",
+                                    on: {
+                                      click: function ($event) {
+                                        $event.preventDefault()
+                                        return _vm.updateProject()
+                                      },
                                     },
                                   },
-                                },
-                                [_vm._v("Update")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "negativeBtn modelBtn ml-1",
-                                  attrs: { "data-dismiss": "modal" },
-                                },
-                                [_vm._v("Cancel")]
-                              ),
-                            ]
-                          ),
-                        ]),
-                      ],
-                      2
-                    ),
+                                  [_vm._v("Update")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "negativeBtn modelBtn ml-1",
+                                    attrs: { "data-dismiss": "modal" },
+                                  },
+                                  [_vm._v("Cancel")]
+                                ),
+                              ]
+                            ),
+                          ]),
+                        ],
+                        2
+                      ),
+                    ]),
                   ]),
-                ]),
-              ]),
+                ]
+              ),
             ]
           ),
         ]
@@ -24152,6 +24671,8 @@ var render = function () {
       _vm._m(44),
       _vm._v(" "),
       _vm._m(45),
+      _vm._v(" "),
+      _vm._m(46),
     ],
     1
   )
@@ -24187,7 +24708,7 @@ var staticRenderFns = [
               staticClass: "nav-link active",
               attrs: { "data-toggle": "tab", href: "#basic-information" },
             },
-            [_vm._v("Basic information")]
+            [_vm._v("Basic\n                                    information")]
           ),
         ]),
         _vm._v(" "),
@@ -24656,7 +25177,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "profileLables" }, [
       _c("li", { staticClass: "profileLabel profileLabelBorder btr5" }, [
-        _c("span", [_vm._v("Institute Type")]),
+        _c("span", [
+          _vm._v(
+            "Institute\n                                                    Type"
+          ),
+        ]),
       ]),
       _vm._v(" "),
       _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
@@ -25683,7 +26208,7 @@ var staticRenderFns = [
     return _c(
       "div",
       {
-        staticClass: "modal fade DesireJobModal",
+        staticClass: "modal fade DesireJobModa",
         attrs: {
           tabindex: "-1",
           role: "dialog",
@@ -25832,6 +26357,260 @@ var staticRenderFns = [
                         ]),
                       ]),
                     ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row mt-4" }, [
+                    _c("div", { staticClass: "col-lg-12 modelBtnContainer" }, [
+                      _c(
+                        "button",
+                        { staticClass: "positiveBtn modelBtn mr-1" },
+                        [_vm._v("Update")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "negativeBtn modelBtn ml-1",
+                          attrs: { "data-dismiss": "modal" },
+                        },
+                        [_vm._v("Cancel")]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "modal fade DesireJobModal",
+        attrs: {
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "myLargeModalLabel",
+          "aria-hidden": "true",
+        },
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
+          [
+            _c("div", { staticClass: "modal-content p-0" }, [
+              _c("div", { staticClass: "container editModel pb-5" }, [
+                _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
+                _vm._v(" "),
+                _c("section", { staticClass: "modelForm" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "row no-gutters",
+                      attrs: { id: "subFormFieldsContainer" },
+                    },
+                    [
+                      _c("div", { staticClass: "col-12" }, [
+                        _c(
+                          "div",
+                          { staticClass: "subForm", attrs: { id: "subForm" } },
+                          [
+                            _c("div", { staticClass: "modelTitle my-3" }, [
+                              _c("div", { staticClass: "mr-2 titleEffect" }),
+                              _vm._v(" "),
+                              _c("h4", { staticClass: "m-0 modelTitleText" }, [
+                                _vm._v("Desired Job"),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "subFormFields" }, [
+                              _c("div", { staticClass: "row" }, [
+                                _c("div", { staticClass: "col-lg-6" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "modelLabel",
+                                      attrs: { for: "currentStatus" },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Looking for\n                                                    Job"
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "form-group m-0" }, [
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "currentStatus" } },
+                                      [_vm._v("Yes")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "mx-1",
+                                      attrs: {
+                                        name: "currentStatus",
+                                        type: "radio",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "currentStatus" } },
+                                      [_vm._v("No")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "mx-1",
+                                      attrs: {
+                                        name: "currentStatus",
+                                        type: "radio",
+                                      },
+                                    }),
+                                  ]),
+                                ]),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "row mt-3" }, [
+                                _c("div", { staticClass: "col-lg-6" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "location" } },
+                                      [_vm._v("Location")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "location",
+                                        placeholder: "Enter Location",
+                                      },
+                                    }),
+                                  ]),
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-lg-6" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", { attrs: { for: "area" } }, [
+                                      _vm._v("Area"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "area",
+                                        placeholder: "Enter Area",
+                                      },
+                                    }),
+                                  ]),
+                                ]),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "row mt-3" }, [
+                                _c("div", { staticClass: "col-lg-6" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "expectedSalary" } },
+                                      [_vm._v("Expected Salary")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "expectedSalary",
+                                        placeholder: "Enter Expected Salary",
+                                      },
+                                    }),
+                                  ]),
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-lg-6" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "joiningDate" } },
+                                      [_vm._v("Joining From")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "joiningDate",
+                                        placeholder: "Please Select",
+                                        type: "date",
+                                      },
+                                    }),
+                                  ]),
+                                ]),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "row mt-3" }, [
+                                _c("div", { staticClass: "col-lg-6" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "position" } },
+                                      [_vm._v("Position")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "position",
+                                        placeholder: "Enter Position",
+                                        type: "text",
+                                      },
+                                    }),
+                                  ]),
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-lg-6" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", { attrs: { for: "shift" } }, [
+                                      _vm._v("Shift"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "shift",
+                                        placeholder: "Enter Shift",
+                                        type: "text",
+                                      },
+                                    }),
+                                  ]),
+                                ]),
+                              ]),
+                            ]),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row mt-3" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-lg-12 btn addNewButton",
+                        attrs: { id: "addDesiredJobBtn" },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-plus mr-1" }),
+                        _vm._v(
+                          " Add Another Job\n                            "
+                        ),
+                      ]
+                    ),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "row mt-4" }, [
@@ -29210,7 +29989,10 @@ var staticRenderFns = [
           [
             _c(
               "form",
-              { attrs: { id: "educationform", action: "#", method: "POST" } },
+              {
+                staticClass: "w-100",
+                attrs: { id: "educationform", action: "#", method: "POST" },
+              },
               [
                 _c("div", { staticClass: "modal-content p-0" }, [
                   _c("div", { staticClass: "container editModel pb-5" }, [
@@ -30205,7 +30987,10 @@ var staticRenderFns = [
           [
             _c(
               "form",
-              { attrs: { id: "projectForm", action: "#", method: "POST" } },
+              {
+                staticClass: "w-100",
+                attrs: { id: "projectForm", action: "#", method: "POST" },
+              },
               [
                 _c("div", { staticClass: "modal-content p-0" }, [
                   _c("div", { staticClass: "container editModel pb-5" }, [
