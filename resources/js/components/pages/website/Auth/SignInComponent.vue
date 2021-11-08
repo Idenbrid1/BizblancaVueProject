@@ -1,5 +1,6 @@
 <template>
     <div>
+        <WebsiteNavbar/>
         <div class="container py-5">
             <div class="login-page-container container p-0">
                 <form method="POST" @submit.prevent="Login">
@@ -46,7 +47,7 @@
                                             <input type="checkbox" class="" name="" id="RememberPassword" />
                                             <label for="RememberPassword">Remember me</label>
                                         </div>
-                                        <a href="#">Forgot Password?</a>
+                                        <router-link :to="{name: 'CandidateResetPassword'}">Forgot Password?</router-link>
                                     </div>
                                     <div class="loginButton">
                                         <button>Login</button>
@@ -83,6 +84,8 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
+import WebsiteNavbar from '../partials/navbar.vue';
     export default {
         data() {
             return {
@@ -93,8 +96,8 @@
                 errors: [],
             };
         },
-        mounted() {
-
+        components: {
+            WebsiteNavbar,
         },
         methods: {
             Login(){

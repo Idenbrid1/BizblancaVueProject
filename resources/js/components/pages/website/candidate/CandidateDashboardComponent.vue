@@ -1,5 +1,6 @@
 <template>
     <div>
+        <WebsiteNavbar/>
         <div class="profile-wrapper mt-5">
             <div class="row m-0 container p-0">
                 <div class="col-12 tabs-section-container">
@@ -91,29 +92,29 @@
                                 <div class="row no-gutters modalTabConatiner">
                                     <div class="IconsModal">
                                         <ul class="mobileModalTabsIcons p-0">
-                                            <li><img class="IconsTab" src="/website/assets/img/details.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/details.svg"
                                                     alt="TabsIcon"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/mortarboard.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/mortarboard.svg"
                                                     alt="TabsIcon" style="height: 30px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/score.svg" alt="TabsIcon"
+                                            <li><img class="IconsTab" src="/website/assets/images/score.svg" alt="TabsIcon"
                                                     style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/language.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/language.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/trophy.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/trophy.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/leader.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/leader.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/work.svg" alt="TabsIcon"
+                                            <li><img class="IconsTab" src="/website/assets/images/work.svg" alt="TabsIcon"
                                                     style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/overtime.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/overtime.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/settings.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/settings.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/google-docs.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/google-docs.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/overtime.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/overtime.svg"
                                                     alt="TabsIcon" style="height: 27px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/img/overtime.svg"
+                                            <li><img class="IconsTab" src="/website/assets/images/overtime.svg"
                                                     alt="TabsIcon" style="height: 27px;"></li>
                                         </ul>
                                     </div>
@@ -170,7 +171,7 @@
                         <!-- tabs anker end -->
                         <div class="col-md-9 p-0 col-10 tabs-content-wrap">
                             <!--  -->
-                            <div class="tab-content">
+                            <div class="tab-content" >
                                 <div id="basic-information" class="tab-pane in active show">
                                     <h1 class="tabsHeading">Basic information</h1>
                                     <div class="row no-gutters BasicInfoTab">
@@ -188,39 +189,34 @@
                                             <ul class="profileInfoList">
                                                 <li class="h150 profileInfo profileInfoBorderBottom"
                                                     style="height: 150px;">
-                                                    <img src="/website/assets/images/avatart.jpeg"
+                                                    <img :src="'/storage/images/candidates/profile/'+this.profile.profile_image"
                                                         class="ProfileUserPic" alt="profileImg">
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Full Name</p>
+                                                        <p>{{this.profile.full_name}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Gender</p>
+                                                        <p>{{this.profile.gender}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>City</p>
+                                                        <p>{{this.profile.city}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Address</p>
+                                                        <p>{{this.profile.address}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder rb0">
                                                     <div class="line-text-1">
-                                                        <p>Phone</p>
+                                                        <p>{{this.profile.phone}}</p>
                                                     </div>
                                                 </li>
-                                                <!-- <li class="profileInfo profileInfoBorder rb0">
-                                            <div class="line-text-1">
-                                                <p>{{$candidate->date}}</p>
-                                            </div>
-                                        </li> -->
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
@@ -239,17 +235,17 @@
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo h150" style="height: 150px;">
                                                     <div class="line-text-5" style="height: 105px;">
-                                                        <p>Bio</p>
+                                                        <p>{{this.profile.bio}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p class="pr-5">Date of Birth</p>
+                                                        <p class="pr-5">{{this.profile.date_of_birth}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileLabelBorderTop">
                                                     <div class="line-text-1">
-                                                        <p>Zipcode</p>
+                                                        <p>{{this.profile.zipcode}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo">
@@ -268,37 +264,34 @@
                                 </div>
                                 <div id="education" class="tab-pane fade">
                                     <h1 class="tabsHeading">Education</h1>
-                                    <div class="row no-gutters EducationInfoTab">
+                                    <div class="row no-gutters EducationInfoTab" v-for="(item, index) in this.profile.candidate_education" :key="index">
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder btr5"><span>Institute
-                                                        Type</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Institute Name</span>
-                                                </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
-                                                </li>
+                                                <li class="profileLabel profileLabelBorder btr5"><span>Institute Type</span></li>
+                                                <li class="profileLabel profileLabelBorder"><span>Institute Name</span></li>
+                                                <li class="profileLabel profileLabelBorder"><span>Starting Date</span></li>
                                                 <li class="profileLabel profileLabelBorder"><span>Department</span></li>
                                                 <li class="profileLabel profileLabelBorder bbl5"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0">
                                                     <div class="line-text-1">
-                                                        <p>Institute type</p>
+                                                        <p>{{item.school_type}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Institute Name</p>
+                                                        <p>{{item.school_name}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Starting Date</p>
+                                                        <p>{{item.start_date}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Department</p>
+                                                        <p>{{item.department}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder rb0"></li>
@@ -318,7 +311,7 @@
                                                 <li class="profileInfo profileInfoBorder rt0"></li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>End Date</p>
+                                                        <p>{{item.end_date}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder rb0"></li>
@@ -404,10 +397,10 @@
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 bl5"><span>Language Name</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList">
+                                                    <ul class="profileInfoList" v-for="(language, index) in this.profile.candidate_language" :key="index">
                                                         <li class="profileInfo profileInfoBorder rt0">
                                                             <div class="line-text-1">
-                                                                <p class="SkillsTitle">Language Name</p>
+                                                                <p class="SkillsTitle">{{language.name}}</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -418,12 +411,11 @@
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 br5"><span>Language Level</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList">
+                                                    <ul class="profileInfoList" v-for="(language, index) in this.profile.candidate_language" :key="index">
                                                         <li class="profileInfo profileInfoBorder rt0">
-                                                            <ul class="uploadViewAnkerList">
+                                                            <ul class="uploadViewAnkerList" >
                                                                 <li>
-                                                                    <!-- <progress id="file" max="100" value="80"> 80% </progress> -->
-                                                                    <p>Language Level</p>
+                                                                    <p>{{language.level}}</p>
                                                                 </li>
                                                             </ul>
                                                         </li>
@@ -445,10 +437,10 @@
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 bl5"><span>Award Name</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList">
+                                                    <ul class="profileInfoList" v-for="(awardN, index) in this.profile.candidate_awards" :key="index">
                                                         <li class="profileInfo profileInfoBorder rt0">
                                                             <div class="line-text-1">
-                                                                <p class="awardsTitle">Award Name</p>
+                                                                <p class="awardsTitle">{{awardN.name}}</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -459,10 +451,10 @@
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 br5"><span>Year</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList">
+                                                    <ul class="profileInfoList" v-for="(awardD, index) in this.profile.candidate_awards" :key="index">
                                                         <li class="profileInfo profileInfoBorder rt0">
                                                             <div class="line-text-1">
-                                                                <p class="awardsYear">Year</p>
+                                                                <p class="awardsYear">{{awardD.date}}</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -498,39 +490,34 @@
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0">
                                                     <div class="line-text-1">
-                                                        <p>Is working currently</p>
+                                                        <p>{{this.profile.is_working_currently}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Job start date</p>
+                                                        <p>{{this.profile.job_start_date}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Job end date</p>
+                                                        <p>{{this.profile.job_end_date}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Current Position</p>
+                                                        <p>{{this.profile.current_position}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Current Status</p>
+                                                        <p>{{this.profile.current_status}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>No of persons managed</p>
+                                                        <p>{{this.profile.no_of_persons_managed}}</p>
                                                     </div>
                                                 </li>
-                                                <!-- <li class="profileInfo profileInfoBorder rb0">
-                                            <div class="line-text-2">
-                                                <p>{{$candidate->skills}}</p>
-                                            </div>
-                                        </li> -->
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
@@ -552,12 +539,12 @@
                                                 <li class="profileInfo profileInfoBorderBottom"></li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Current working company</p>
+                                                        <p>{{this.profile.current_working_company}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Current salary</p>
+                                                        <p>{{this.profile.current_salary}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorderTop"></li>
@@ -590,22 +577,22 @@
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0 justify-content-start">
                                                     <div class="line-text-1">
-                                                        <p>is_looking_for_job</p>
+                                                        <p>{{this.profile.is_looking_for_job}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
                                                     <div class="line-text-1">
-                                                        <p>looking_for_job_location</p>
+                                                        <p>{{this.profile.looking_for_job_location}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
                                                     <div class="line-text-1">
-                                                        <p>looking_for_job_location</p>
+                                                        <p>{{this.profile.looking_for_job_location}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
                                                     <div class="line-text-1">
-                                                        <p>looking_for_job_expected_salary</p>
+                                                        <p>{{this.profile.looking_for_job_expected_salary}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
@@ -615,7 +602,7 @@
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
                                                     <div class="line-text-1">
-                                                        <p>looking_for_job_position</p>
+                                                        <p>{{this.profile.looking_for_job_position}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder rb0 justify-content-start">
@@ -634,7 +621,7 @@
                                 </div>
                                 <div id="work-experience" class="tab-pane fade">
                                     <h1 class="tabsHeading">Work Experience</h1>
-                                    <div class="row no-gutters ExperienceInfoTab">
+                                    <div class="row no-gutters ExperienceInfoTab" v-for="(experience, index) in this.profile.candidate_experience" :key="index">
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
                                                 <li class="profileLabel profileLabelBorder rt0 btr5">
@@ -651,23 +638,23 @@
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0">
                                                     <div class="line-text-1">
-                                                        <p>company_name</p>
+                                                        <p>{{experience.company_name}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>designation</p>
+                                                        <p>{{experience.designation}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Date</p>
+                                                        <p>{{experience.start_date}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Yes</p>
-                                                        <p>No</p>
+                                                        <p v-if="experience.is_working_currently == 1">Yes</p>
+                                                        <p v-if="experience.is_working_currently == 0">No</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder rb0"></li>
@@ -689,7 +676,7 @@
                                                 <li class="profileInfo profileInfoBorder rt0"></li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
-                                                        <p>Date</p>
+                                                        <p>{{experience.end_date}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder rb0"></li>
@@ -709,10 +696,10 @@
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 bl5"><span>Skills</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList">
+                                                    <ul class="profileInfoList" v-for="(skillN, index) in this.profile.candidate_skills" :key="index">
                                                         <li class="profileInfo profileInfoBorder rt0">
                                                             <div class="line-text-1">
-                                                                <p class="SkillsTitle">skill name</p>
+                                                                <p class="SkillsTitle">{{skillN.name}}</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -723,15 +710,10 @@
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 br5"><span>Skill Level</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList">
+                                                    <ul class="profileInfoList" v-for="(skillL, index) in this.profile.candidate_skills" :key="index">
                                                         <li class="profileInfo profileInfoBorder rt0">
-                                                            <!-- <ul class="uploadViewAnkerList">
-                                                        <li>
-                                                            <progress id="file" max="100" value="95"> 95% </progress>
-                                                        </li>
-                                                    </ul> -->
                                                             <div class="line-text-1">
-                                                                <p class="SkillsTitle">Skill Level</p>
+                                                                <p class="SkillsTitle">{{skillL.level}}</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -779,10 +761,10 @@
                                                 <li>
                                                     <ul class="profileInfoList">
                                                         <li class="profileInfo profileInfoBorder rt0">
-                                                            <form enctype="multipart/form-data" id="uploadresume">
+                                                            <form id="uploadresume">
                                                                 <ul class="uploadViewAnkerList">
                                                                     <li>
-                                                                        <input type="file" hidden name="resume"
+                                                                        <input type="file" hidden name="resume" @change="saveResume()"
                                                                             id="resume-pdf-file">
                                                                         <label class="UploadAnker"
                                                                             for="resume-pdf-file">Upload</label>
@@ -829,7 +811,7 @@
                                 </div>
                                 <div id="projects" class="tab-pane fade">
                                     <h1 class="tabsHeading">Projects</h1>
-                                    <div class="row no-gutters DesireJobTab">
+                                    <div class="row no-gutters DesireJobTab" v-for="(project, index) in this.profile.candidate_projects" :key="index">
                                         <div class="col-12">
                                             <ul class="profileLables">
                                                 <li class="profileLabel profileLabelBorder rt0 btr5"><span>Name</span>
@@ -845,27 +827,27 @@
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0 justify-content-start">
                                                     <div class="line-text-1">
-                                                        <p>Project Name</p>
+                                                        <p>{{project.name}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
                                                     <div class="line-text-1">
-                                                        <p>Start Date</p>
+                                                        <p>{{project.start_date}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
                                                     <div class="line-text-1">
-                                                        <p>End Date</p>
+                                                        <p>{{project.end_date}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
                                                     <div class="line-text-3">
-                                                        <p>Description</p>
+                                                        <p>{{project.description}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
                                                     <div class="line-text-1 pl-2">
-                                                        <a class="" href="">project link</a>
+                                                        <a class="" href="">{{project.link}}</a>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -886,10 +868,10 @@
         </div>
         <!-- Modal BasicInfo  -->
         <!-- Large modal -->
-        <div class="modal fade basicInfoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        <div class="modal fade basicInfoModal" id="basicInfoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form id="basicinformationForm" action="#" method="POST" enctype="multipart/form-data">
+                <form id="basicinformationForm" enctype="multipart/form-data">
                     <div class="modal-content p-0">
                         <div class="container editModel pb-5">
                             <h3 class="my-4">Update</h3>
@@ -906,15 +888,14 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="profilePhoto">Profile Photo</label>
-                                                            <input name="companyLogo" id="profilePhoto"
-                                                                class="form-control" type="file" />
+                                                            <input name="profilePhoto" id="profilePhoto" class="form-control" type="file" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="candidateFullName">Full Name</label>
                                                             <input type="text" placeholder="Enter Full Name"
-                                                                name="full_name" class="form-control" value="" />
+                                                                name="full_name" class="form-control" v-model="basic_information_record.full_name"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -922,17 +903,17 @@
                                                         <div class="form-group m-0">
                                                             <label for="male">Male</label>
                                                             <input class="mx-1" id="male" name="gender" value="Male"
-                                                                type="radio" />
+                                                                type="radio" v-model="basic_information_record.gender"/>
                                                             <label for="female">Female</label>
                                                             <input class="mx-1" id="female" name="gender" value="Female"
-                                                                type="radio" />
+                                                                type="radio" v-model="basic_information_record.gender"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="city">City</label>
                                                             <input name="city" type="text" class="form-control"
-                                                                placeholder="Please City" value="" />
+                                                                placeholder="Please City" v-model="basic_information_record.city"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
@@ -940,21 +921,21 @@
                                                             <label for="address">Address</label>
                                                             <input name="address" id="address" type="text"
                                                                 class="form-control" value=""
-                                                                placeholder="Enter Address" />
+                                                                placeholder="Enter Address" v-model="basic_information_record.address"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="cinic">CNIC</label>
                                                             <input name="cnic" class="form-control"
-                                                                placeholder="Enter Cnic" value="">
+                                                                placeholder="Enter Cnic" value="" v-model="basic_information_record.cnic">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="Birthday">Date of Birth</label>
                                                             <input name="date_of_birth" id="Birthday" type="date"
-                                                                class="form-control" placeholder="Enter Date of Birth"
+                                                                class="form-control" placeholder="Enter Date of Birth" v-model="basic_information_record.date_of_birth"
                                                                 value="">
                                                         </div>
                                                     </div>
@@ -963,29 +944,29 @@
                                                             <label for="address">ZIP code</label>
                                                             <input name="zipcode" type="text" class="form-control"
                                                                 value=""
-                                                                placeholder="Enter ZIP code" />
+                                                                placeholder="Enter ZIP code" v-model="basic_information_record.zipcode"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="phone">Phone</label>
                                                             <input name="phone_no" id="phone" class="form-control"
-                                                                placeholder="Enter Phone" type="tel" value="" />
+                                                                placeholder="Enter Phone" type="tel" value="" v-model="basic_information_record.phone"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="email">Email</label>
                                                             <input name="email" id="email" disabled class="form-control"
-                                                                placeholder="Enter Email" type="email" value="" />
+                                                                placeholder="Enter Email" type="email" value="" v-model="basic_information_record.email"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="country">Country</label>
-                                                            <select name="country" id="country" class="form-control">
-                                                                <option value="">Lahore</option>
-                                                                <option value="">Islamabad</option>
+                                                            <select name="country" id="country" class="form-control" v-model="basic_information_record.country">
+                                                                <option value="lahore">Lahore</option>
+                                                                <option value="islamabad">Islamabad</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -994,7 +975,7 @@
                                                             <label for="companyDescription">Bio</label>
                                                             <textarea style="height:100px;" name="bio"
                                                                 class="form-control"
-                                                                placeholder="Description">Candidate bio</textarea>
+                                                                placeholder="Description" v-model="basic_information_record.bio"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1005,7 +986,7 @@
 
                                 <div class="row mt-4 ">
                                     <div class="col-lg-12 modelBtnContainer ">
-                                        <button class="positiveBtn modelBtn mr-1">Update</button>
+                                        <button class="positiveBtn modelBtn mr-1" @click.prevent="updateBasicInformation()">Update</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
@@ -1032,23 +1013,47 @@
                                                 <div class="mr-2 titleEffect"></div>
                                                 <h4 class="m-0 modelTitleText">Award</h4>
                                             </div>
-                                            <div class="subFormFields" id="AwardFieldsContainer">
+                                            <div class="subFormFields" id="AwardFieldsContainer" v-for="(awardUpdate, index) in this.profile.candidate_awards" :key="index">
                                                 <div class="row AwardSection">
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="award">Award Name</label>
-                                                            <input name="award_name[]" class="form-control" type="text"
+                                                            <input name="award_name[]" class="form-control" type="text" v-model="awardUpdate.name"
                                                                 placeholder="Award Name" value="award name" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label class="d-flex justify-content-between"
+                                                            <label class="d-flex justify-content-between" 
                                                                 for="awardYear">
-                                                                Year<a href="#">
+                                                                Year<a @click="deleteAwardArray(index)">
                                                                     <i class="fas fa-times"></i></a>
                                                             </label>
-                                                            <input id="awardYear" name="award_date[]"
+                                                            <input id="awardYear" name="award_date[]" v-model="awardUpdate.date"
+                                                                class="form-control" type="date"
+                                                                placeholder="Looking for job location"
+                                                                value="award date">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="subFormFields" id="AwardFieldsContainer" v-if="this.addMoreDBAward == true">
+                                                <div class="row AwardSection">
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="award">Award Name</label>
+                                                            <input name="award_name[]" class="form-control" type="text" v-model="award_push_array.name"
+                                                                placeholder="Award Name" value="award name" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="d-flex justify-content-between" 
+                                                                for="awardYear">
+                                                                Year<a @click="removeAddMoreArrayAward(index)">
+                                                                    <i class="fas fa-times"></i></a>
+                                                            </label>
+                                                            <input id="awardYear" name="award_date[]" v-model="award_push_array.date"
                                                                 class="form-control" type="date"
                                                                 placeholder="Looking for job location"
                                                                 value="award date">
@@ -1061,13 +1066,18 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div id='addAwardBtn' class="col-lg-12 btn addNewButton">
-                                        <i class="fas fa-plus mr-1"></i> Add Another Award
+                                        <a v-if="this.addMoreDBAward" @click="addToAwardRecord()" >
+                                            <i class="fas fa-plus mr-1"></i> Add another Award
+                                        </a>
+                                        <a v-else @click="addMoreAward()">
+                                            <i class="fas fa-plus mr-1"></i> Add another Award
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
-                                            onclick="UpdateCandidateAward()">Update</button>
+                                            @click.prevent="updateAward()">Update</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
@@ -1082,7 +1092,7 @@
         <div class="modal fade CurrentJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form id="currentJobForm" action="#" method="POST">
+                <form id="currentJobForm">
                     <div class="modal-content p-0">
                         <div class="container editModel pb-5">
                             <h3 class="my-4">Update</h3>
@@ -1100,63 +1110,63 @@
                                                         <label for="currentStatus">Current Working</label>
                                                         <div class="form-group m-0">
                                                             <label for="currentStatus">Yes</label>
-                                                            <input class="my-1" name="is_working_currently" value="1"
+                                                            <input class="my-1" @change="workingCurrentlyYes()" name="is_working_currently" value="1" v-model="profile.is_working_currently"
                                                                 type="radio">
                                                             <label for="currentStatus">No</label>
-                                                            <input type="radio" onclick="ChangeCurrentJobFields(0)"
+                                                            <input type="radio" @change="workingCurrentlyNo()" v-model="profile.is_working_currently"
                                                                 class="my-1" value="0" name="is_working_currently" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
+                                                    <div class="col-12 col-md-6" v-if="this.isWorkingCurrently">
                                                         <div class="form-group">
                                                             <label for="startingDate">Starting Date</label>
-                                                            <input name="job_start_date" value="" class="form-control"
+                                                            <input name="job_start_date" value="" class="form-control" v-model="profile.job_start_date"
                                                                 placeholder="Please Select Starting Date" type="date" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
+                                                    <div class="col-12 col-md-6" v-if="this.isWorkingCurrently">
                                                         <div class="form-group">
                                                             <label for="endingDate">Ending Date</label>
-                                                            <input name="job_end_date" value="" class="form-control"
+                                                            <input name="job_end_date" value="" class="form-control" v-model="profile.job_end_date"
                                                                 placeholder="Please Select Ending Date" type="date" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
+                                                    <div class="col-12 col-md-6" v-if="this.isWorkingCurrently">
+                                                        <div class="form-group" >
                                                             <label for="currentPosition">Current Position</label>
-                                                            <input name="currentPosition" class="form-control"
+                                                            <input name="currentPosition" class="form-control" v-model="profile.current_position"
                                                                 placeholder="Enter current position" type="text"
                                                                 value="" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
+                                                    <div class="col-12 col-md-6" v-if="this.isWorkingCurrently">
                                                         <div class="form-group">
                                                             <label for="currentPositionStatus">Current Status</label>
-                                                            <input name="currentPositionStatus" class="form-control"
+                                                            <input name="currentPositionStatus" class="form-control" v-model="profile.current_status"
                                                                 placeholder="Enter Current Status" type="text"
                                                                 value="" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
+                                                    <div class="col-12 col-md-6" v-if="this.isWorkingCurrently">
                                                         <div class="form-group">
                                                             <label for="personsManaged">No of Persons Managed</label>
-                                                            <input name="personsManaged" class="form-control"
+                                                            <input name="personsManaged" class="form-control" v-model="profile.no_of_persons_managed"
                                                                 placeholder="Enter No of Persons Managed" type="text"
                                                                 value="" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
+                                                    <div class="col-12 col-md-6" v-if="this.isWorkingCurrently">
                                                         <div class="form-group">
                                                             <label for="personsManaged">Current Company</label>
-                                                            <input name="currentCompany" class="form-control"
+                                                            <input name="currentCompany" class="form-control" v-model="profile.current_working_company"
                                                                 placeholder="Enter Current Company" type="text"
                                                                 value="" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
+                                                    <div class="col-12 col-md-6" v-if="this.isWorkingCurrently">
                                                         <div class="form-group">
                                                             <label for="skills">Current Salary</label>
-                                                            <input name="currentSalary" class="form-control"
+                                                            <input name="currentSalary" class="form-control" v-model="profile.current_salary"
                                                                 placeholder="Enter Current Salary" type="text" value="">
                                                         </div>
                                                     </div>
@@ -1172,7 +1182,7 @@
                         </div> -->
                                 <div class="row mt-4">
                                     <div class="col-lg-12 modelBtnContainer">
-                                        <button class="positiveBtn modelBtn mr-1">Update</button>
+                                        <button @click.prevent="updateCurrentJob()" class="positiveBtn modelBtn mr-1">Update</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
@@ -1187,7 +1197,7 @@
         <div class="modal fade EducationModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form id="educationform" action="#" method="POST">
+                <form id="educationform" >
                     <div class="modal-content p-0">
                         <div class="container editModel pb-5">
                             <h3 class="my-4">Update</h3>
@@ -1199,9 +1209,9 @@
                                                 <div class="mr-2 titleEffect"></div>
                                                 <h4 class="m-0 modelTitleText">Education</h4>
                                             </div>
-                                            <div class="subFormFields">
+                                            <div class="subFormFields" v-for="(educationUpdate, index) in this.profile.candidate_education" :key="index">
                                                 <div class="float-right">
-                                                    <a href="#">
+                                                    <a @click="deleteEducationArray(index)">
                                                         <i class="fas fa-times"></i>
                                                     </a>
                                                 </div>
@@ -1209,7 +1219,7 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="institute">Institute Type</label>
-                                                            <select name="school_type[]" class="form-control"
+                                                            <select name="school_type[]" class="form-control" v-model="educationUpdate.school_type"
                                                                 placeholder="Please Select">
                                                                 <option value="Metric">Metric</option>
                                                                 <option value="Intermediate">Intermediate</option>
@@ -1220,16 +1230,19 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="school_name">Institute name</label>
-                                                            <select name="school_name[]" class="form-control"
+                                                            <input name="school_name[]" v-model="educationUpdate.school_name"
+                                                                class="form-control" type="text"
+                                                                placeholder="Please Select" value="" />
+                                                            <!-- <select name="school_name[]" class="form-control" v-model="educationUpdate.school_name"
                                                                 placeholder="Enter Institute Name" id="school_name">
                                                                 <option value="$university">university</option>
-                                                            </select>
+                                                            </select> -->
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="startingDate">Starting Date</label>
-                                                            <input id="startingDate" name="start_date[]"
+                                                            <input name="start_date[]" v-model="educationUpdate.start_date"
                                                                 class="form-control" type="date"
                                                                 placeholder="Please Select" value="" />
                                                         </div>
@@ -1237,7 +1250,7 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="endingDate">Ending Date</label>
-                                                            <input name="end_date[]" id="endingDate"
+                                                            <input name="end_date[]" id="endingDate" v-model="educationUpdate.end_date"
                                                                 class="form-control" type="date"
                                                                 placeholder="Please Select" value="" />
                                                         </div>
@@ -1245,7 +1258,63 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="department">Department</label>
-                                                            <input name="department[]" id="department"
+                                                            <input name="department[]" id="department" v-model="educationUpdate.department"
+                                                                class="form-control" type="text" placeholder="Faculty"
+                                                                value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="subFormFields">
+                                                <div class="row" v-if="this.addMoreDBEducation == true">
+                                                    <div class="float-right">
+                                                        <a @click="removeAddMoreArrayEducation()">
+                                                            <i class="fas fa-times"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="institute">Institute Type</label>
+                                                            <select name="school_type" class="form-control" v-model="education_push_array.school_type"
+                                                                placeholder="Please Select">
+                                                                <option value="Metric">Metric</option>
+                                                                <option value="Intermediate">Intermediate</option>
+                                                                <option value="Bachelor">Bachelor</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="school_name">Institute name</label>
+                                                            <input name="school_name" v-model="education_push_array.school_name"
+                                                                class="form-control" type="text"
+                                                                placeholder="Please Select" value="" />
+                                                            <!-- <select name="school_name" class="form-control" v-model="educationUpdate.school_name"
+                                                                placeholder="Enter Institute Name" id="school_name">
+                                                                <option value="$university">university</option>
+                                                            </select> -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="startingDate">Starting Date</label>
+                                                            <input name="start_date" v-model="education_push_array.start_date"
+                                                                class="form-control" type="date"
+                                                                placeholder="Please Select" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="endingDate">Ending Date</label>
+                                                            <input name="end_date" id="endingDate" v-model="education_push_array.end_date"
+                                                                class="form-control" type="date"
+                                                                placeholder="Please Select" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="department">Department</label>
+                                                            <input name="department" id="department" v-model="education_push_array.department"
                                                                 class="form-control" type="text" placeholder="Faculty"
                                                                 value="" />
                                                         </div>
@@ -1257,12 +1326,17 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div id='addEducationBtn' class="col-lg-12 btn addNewButton">
-                                        <i class="fas fa-plus mr-1"></i> Add another education
+                                        <a v-if="this.addMoreDBEducation" @click="addToEducationRecord()" >
+                                            <i class="fas fa-plus mr-1"></i> Add another education
+                                        </a>
+                                        <a v-else @click="addMoreEducation()">
+                                            <i class="fas fa-plus mr-1"></i> Add another education
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-lg-12 modelBtnContainer">
-                                        <button class="positiveBtn modelBtn mr-1">Update</button>
+                                        <button class="positiveBtn modelBtn mr-1" @click.prevent="updateEducation()">Update</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
@@ -1282,7 +1356,7 @@
                         <div class="container editModel pb-5">
                             <h3 class="my-4">Update</h3>
                             <section class="modelForm">
-                                <div class="row no-gutters" id="WorkExperienceContainer">
+                                <div class="row no-gutters" id="WorkExperienceContainer" v-for="(experienceUpdate, index) in this.profile.candidate_experience" :key="index">
                                     <div class="col-12 WorkExperienceSection">
                                         <div id='subForm' class="subForm">
                                             <div class="modelTitle my-3">
@@ -1299,7 +1373,7 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="company">Company</label>
-                                                            <input name="company_name[]" id="company" type="text"
+                                                            <input name="company_name[]" id="company" type="text" v-model="experienceUpdate.company_name"
                                                                 class="form-control" placeholder="Enter Company"
                                                                 value="#" />
                                                         </div>
@@ -1307,7 +1381,7 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="position">Position</label>
-                                                            <input name="company_designation[]" type="text"
+                                                            <input name="designation[]" type="text" v-model="experienceUpdate.designation"
                                                                 class="form-control" placeholder="Enter Position"
                                                                 value="#" />
                                                         </div>
@@ -1315,7 +1389,7 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="startingDate">Starting Date</label>
-                                                            <input name="company_start_date[]" id="startingDate"
+                                                            <input name="company_start_date[]" id="startingDate" v-model="experienceUpdate.start_date"
                                                                 class="form-control" type="date"
                                                                 placeholder="Please Select" value="#" />
                                                         </div>
@@ -1327,7 +1401,7 @@
                                                                     <label
                                                                         for="experience_end_date">Ending
                                                                         Date</label>
-                                                                    <input name="company_end_date[]"
+                                                                    <input name="company_end_date[]" v-model="experienceUpdate.end_date"
                                                                         id="experience_end_date"
                                                                         class="form-control" type="date"
                                                                         placeholder="Please Select" value="#">
@@ -1337,7 +1411,7 @@
                                                                 <div
                                                                     class="form-group d-flex align-items-center justify-content-center m-0">
                                                                     <input class="mr-1" name="currentWorking"
-                                                                        id="experience_checkbox_end_date"
+                                                                        id="experience_checkbox_end_date"  v-model="experienceUpdate.is_working_currently"
                                                                         type="checkbox">
                                                                     <label class="m-0"
                                                                         for="experience_checkbox_end_date">Currently
@@ -1346,16 +1420,73 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters" id="WorkExperienceContainer" v-if="this.addMoreDBWorkExperience == true">
+                                    <div class="col-12 WorkExperienceSection">
+                                        <div id='subForm' class="subForm">
+                                            <div class="modelTitle my-3">
+                                                <div class="mr-2 titleEffect"></div>
+                                                <h4 class="m-0">Work Experience</h4>
+                                            </div>
+                                            <div class="subFormFields">
+                                                <div class="float-right">
+                                                    <a href="#">
+                                                        <i class="fas fa-times"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="row">
                                                     <div class="col-12 col-md-6">
-                                                        <span>Current Status</span>
                                                         <div class="form-group">
-                                                            <!-- <label for="currentStatus">Active</label> -->
-                                                            <select class="form-control"
-                                                                name="company_is_working_currently[]"
-                                                                id="company_is_working_currently">
-                                                                <option value="1">Active</option>
-                                                                <option value="0">Inactive</option>
-                                                            </select>
+                                                            <label for="company">Company</label>
+                                                            <input name="company_name[]" id="company" type="text" v-model="work_experience_push_array.company_name"
+                                                                class="form-control" placeholder="Enter Company"
+                                                                value="#" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="position">Position</label>
+                                                            <input name="designation[]" type="text" v-model="work_experience_push_array.designation"
+                                                                class="form-control" placeholder="Enter Position"
+                                                                value="#" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="startingDate">Starting Date</label>
+                                                            <input name="company_start_date[]" id="startingDate" v-model="work_experience_push_array.start_date"
+                                                                class="form-control" type="date"
+                                                                placeholder="Please Select" value="#" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="row no-gutters align-items-center">
+                                                            <div class="col-6">
+                                                                <div class="form-group">
+                                                                    <label
+                                                                        for="experience_end_date">Ending
+                                                                        Date</label>
+                                                                    <input name="company_end_date[]" v-model="work_experience_push_array.end_date"
+                                                                        id="experience_end_date"
+                                                                        class="form-control" type="date"
+                                                                        placeholder="Please Select" value="#">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div
+                                                                    class="form-group d-flex align-items-center justify-content-center m-0">
+                                                                    <input class="mr-1" name="currentWorking"
+                                                                        id="experience_checkbox_end_date"  v-model="work_experience_push_array.is_working_currently"
+                                                                        type="checkbox">
+                                                                    <label class="m-0"
+                                                                        for="experience_checkbox_end_date">Currently
+                                                                        Working</label>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1365,12 +1496,17 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div id='addExperiencesBtn' class="col-lg-12 btn addNewButton">
-                                        <i class="fas fa-plus mr-1"></i> Add another experience
+                                        <a v-if="this.addMoreDBWorkExperience" @click="addToWorkExperienceRecord()" >
+                                            <i class="fas fa-plus mr-1"></i> Add another Experience
+                                        </a>
+                                        <a v-else @click="addMoreWorkExperience()">
+                                            <i class="fas fa-plus mr-1"></i> Add another Experience
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-lg-12 modelBtnContainer">
-                                        <button class="positiveBtn modelBtn mr-1">Update</button>
+                                        <button class="positiveBtn modelBtn mr-1" @click.prevent="updateWorkExperience()">Update</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
@@ -1397,17 +1533,37 @@
                                                 <div class="mr-2 titleEffect"></div>
                                                 <h4 class="m-0 modelTitleText">Languages</h4>
                                             </div>
-                                            <div id='LanguagesFields' class="subFormFields row">
+                                            <div id="LanguagesFields" class="subFormFields row" v-for="(languageUpdate, index) in this.profile.candidate_language" :key="index">
                                                 <div class="col-md-4 LanguagesSection">
                                                     <div class="form-group">
                                                         <div class="float-right">
-                                                            <a href="#">
+                                                            <a @click="deleteLanguageArray(index)">
                                                                 <i class="fas fa-times"></i>
                                                             </a>
                                                         </div>
-                                                        <input name="language_name[]" class="form-control" value="#"
+                                                        <input name="language_name[]" class="form-control" v-model="languageUpdate.name"
                                                             for="english" style="margin-bottom: 10px;">
-                                                        <select name="language_level[]" class="form-control"
+                                                        <select name="language_level[]" class="form-control" v-model="languageUpdate.level"
+                                                            id="language">
+                                                            <option value="Beginner">Beginner</option>
+                                                            <option value="Native">Native</option>
+                                                            <option value="Intermediate">Intermediate</option>
+                                                            <option value="Expert">Expert</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="LanguagesFields" class="subFormFields row" v-if="this.addMoreDBLanguage == true">
+                                                <div class="col-md-4 LanguagesSection">
+                                                    <div class="form-group">
+                                                        <div class="float-right">
+                                                            <a @click="removeAddMoreArrayLanguage()">
+                                                                <i class="fas fa-times"></i>
+                                                            </a>
+                                                        </div>
+                                                        <input name="language_name[]" class="form-control" v-model="language_push_array.name"
+                                                            for="english" style="margin-bottom: 10px;">
+                                                        <select name="language_level[]" class="form-control" v-model="language_push_array.level"
                                                             id="language">
                                                             <option value="Beginner">Beginner</option>
                                                             <option value="Native">Native</option>
@@ -1422,12 +1578,17 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div id='addLanguageBtn' class="col-lg-12 btn addNewButton">
-                                        <i class="fas fa-plus mr-1"></i> Add Another Language
+                                        <a v-if="this.addMoreDBLanguage" @click="addToLanguageRecord()" >
+                                            <i class="fas fa-plus mr-1"></i> Add another language
+                                        </a>
+                                        <a v-else @click="addMoreLanguage()">
+                                            <i class="fas fa-plus mr-1"></i> Add another language
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-lg-12 modelBtnContainer">
-                                        <button class="positiveBtn modelBtn mr-1">Update</button>
+                                        <button class="positiveBtn modelBtn mr-1" @click.prevent="updateLanguage()">Update</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
@@ -1442,7 +1603,7 @@
         <div class="modal fade SkillsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form id="skillForm" action="#" method="POST">
+                <form id="skillForm">
                     <div class="modal-content p-0">
                         <div class="container editModel pb-5">
                             <h3 class="my-4">Update</h3>
@@ -1452,15 +1613,30 @@
                                         <div id="SkillsModal" class="subForm">
                                             <div class="modelTitle my-3">
                                                 <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Languages</h4>
+                                                <h4 class="m-0 modelTitleText">Skills</h4>
                                             </div>
-                                            <div id='SkillsFields' class="subFormFields row">
+                                            <div id="SkillsFields" class="subFormFields row" v-for="(skillUpdate, index) in this.profile.candidate_skills" :key="index">
                                                 <div class="col-12 col-md-4 SkillsSection">
                                                     <div class="form-group">
-                                                        <a class="float-right" href="#"><i class="fas fa-times"></i></a>
-                                                        <input name="skill_name[]" value=""
+                                                        <a class="float-right" @click="deleteSkillArray(index)"><i class="fas fa-times"></i></a>
+                                                        <input name="skill_name[]" value="" v-model="skillUpdate.name"
                                                             for="english" class="form-control">
-                                                        <select name="skill_level[]" id="language" class="form-control">
+                                                        <select name="skill_level[]" id="language" class="form-control" v-model="skillUpdate.level">
+                                                            <option value="Beginner">Beginner</option>
+                                                            <option value="Native">Native</option>
+                                                            <option value="Intermediate">Intermediate</option>
+                                                            <option value="Expert">Expert</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="SkillsFields" class="subFormFields row" v-if="this.addMoreDBSkill == true">
+                                                <div class="col-12 col-md-4 SkillsSection">
+                                                    <div class="form-group">
+                                                        <a class="float-right" @click="removeAddMoreArraySkill(index)"><i class="fas fa-times"></i></a>
+                                                        <input name="skill_name[]" value="" v-model="skill_push_array.name"
+                                                            for="english" class="form-control">
+                                                        <select name="skill_level[]" id="language" class="form-control" v-model="skill_push_array.level">
                                                             <option value="Beginner">Beginner</option>
                                                             <option value="Native">Native</option>
                                                             <option value="Intermediate">Intermediate</option>
@@ -1474,12 +1650,17 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div id='addSkillsBtn' class="col-lg-12 btn addNewButton">
-                                        <i class="fas fa-plus mr-1"></i> Add Another Language
+                                        <a v-if="this.addMoreDBSkill" @click="addToSkillRecord()" >
+                                            <i class="fas fa-plus mr-1"></i> Add another Skill
+                                        </a>
+                                        <a v-else @click="addMoreSkill()">
+                                            <i class="fas fa-plus mr-1"></i> Add another Skill
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-lg-12 modelBtnContainer">
-                                        <button class="positiveBtn modelBtn mr-1">Update</button>
+                                        <button class="positiveBtn modelBtn mr-1" @click.prevent="updateSkill()">Update</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
@@ -1494,64 +1675,108 @@
         <div class="modal fade ProjectsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form id="projectForm" action="#" method="POST">
+                <form id="projectForm">
                     <div class="modal-content p-0">
                         <div class="container editModel pb-5">
                             <h3 class="my-4">Update</h3>
                             <section class="modelForm">
-                                <div class="row no-gutters" id="ProjectFieldsContainer">
+                                <div class="row no-gutters" id="ProjectFieldsContainer" v-for="(projectUpdate, index) in this.profile.candidate_projects" :key="index">
                                     <div class="col-12 ProjectSection">
                                         <div id='subForm' class="subForm">
                                             <div class="float-right">
-                                                <a href="#">
+                                                <a @click="deleteProjectArray(index)">
                                                     <i class="fas fa-times"></i>
                                                 </a>
                                             </div>
                                             <div class="modelTitle my-3">
                                                 <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Projects</h4>
+                                                <h4 class="m-0 modelTitleText">Projects {{projectUpdate.name}}</h4>
                                             </div>
                                             <div class="subFormFields">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectName">Project Name</label>
-                                                            <input name="projectName[]" class="form-control" value=""
+                                                            <input name="projectName[]" class="form-control" value="" v-model="projectUpdate.name"
                                                                 placeholder="Enter Project Name" type="text" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectLink">Link</label>
-                                                            <input name="projectLink[]" class="form-control" value=""
+                                                            <input name="projectLink[]" class="form-control" value="" v-model="projectUpdate.link"
                                                                 placeholder="Enter Link" type="text" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="startingDate">Starting Date</label>
-                                                            <input name="startingDate[]" class="form-control" value=""
+                                                            <input name="startingDate[]" class="form-control" value="" v-model="projectUpdate.start_date"
                                                                 placeholder="Please Select Starting Date" type="date" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="endingDate">Ending Date</label>
-                                                            <input name="endingDate[]" class="form-control" value=""
-                                                                placeholder="Please Select Ending Date" type="date" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="endingDate">Ending Date</label>
-                                                            <input name="endingDate[]" class="form-control" value=""
+                                                            <input name="endingDate[]" class="form-control" value="" v-model="projectUpdate.end_date"
                                                                 placeholder="Please Select Ending Date" type="date" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="description">Description</label>
-                                                            <textarea cols="30" rows="10" name="description[]"
+                                                            <textarea cols="30" rows="10" name="description[]" v-model="projectUpdate.description"
+                                                                class="form-control"
+                                                                placeholder="Description"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-if="this.addMoreDBProject == true" class="row no-gutters" id="ProjectFieldsContainer">
+                                    <div class="col-12 ProjectSection">
+                                        <div id='subForm' class="subForm">
+                                            <div class="float-right">
+                                                <a @click="removeAddMoreArrayProject(index)">
+                                                    <i class="fas fa-times"></i>
+                                                </a>
+                                            </div>
+                                            <div class="subFormFields">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectName">Project Name</label>
+                                                            <input name="projectName[]" class="form-control" value="" v-model="project_push_array.name"
+                                                                placeholder="Enter Project Name" type="text" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectLink">Link</label>
+                                                            <input name="projectLink[]" class="form-control" value="" v-model="project_push_array.link"
+                                                                placeholder="Enter Link" type="text" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="startingDate">Starting Date</label>
+                                                            <input name="startingDate[]" class="form-control" value="" v-model="project_push_array.start_date"
+                                                                placeholder="Please Select Starting Date" type="date" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="endingDate">Ending Date</label>
+                                                            <input name="endingDate[]" class="form-control" value="" v-model="project_push_array.end_date"
+                                                                placeholder="Please Select Ending Date" type="date" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="description">Description</label>
+                                                            <textarea cols="30" rows="10" name="description[]" v-model="project_push_array.description"
                                                                 class="form-control"
                                                                 placeholder="Description"></textarea>
                                                         </div>
@@ -1563,12 +1788,17 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div id='addProjectBtn' class="col-lg-12 btn addNewButton">
-                                        <i class="fas fa-plus mr-1"></i> Add Another Project
+                                        <a v-if="this.addMoreDBProject" @click="addToProjectRecord()" >
+                                            <i class="fas fa-plus mr-1"></i> Add another Project
+                                        </a>
+                                        <a v-else @click="addMoreProject()">
+                                            <i class="fas fa-plus mr-1"></i> Add another Project
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-lg-12 modelBtnContainer">
-                                        <button class="positiveBtn modelBtn mr-1">Update</button>
+                                        <button @click.prevent="updateProject()" class="positiveBtn modelBtn mr-1">Update</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
@@ -1748,25 +1978,759 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
+import WebsiteNavbar from '../partials/navbar.vue';
     export default {
         data() {
             return {
-
+                profile: '',
+                basic_information_record: {
+                    full_name: '',
+                    gender: '',
+                    city: '',
+                    address: '',
+                    data_of_birth: '',
+                    cnic: '',
+                    zipcode: '',
+                    phone: '',
+                    email: '',
+                    country: '',
+                    bio: '',
+                },
+                education_record: [],
+                education_push_array: {
+                    school_type: '',
+                    school_name: '',
+                    start_date: '',
+                    end_date: '',
+                    department: '',
+                },
+                loadData: false,
+                addMoreDBEducation: false,
+                addMoreDBLanguage: false,
+                language_push_array: {
+                    name: '',
+                    level: '',
+                },
+                addMoreDBAward: false,
+                award_push_array: {
+                    name: '',
+                    date: '',
+                },
+                addMoreDBSkill: false,
+                skill_push_array: {
+                    name: '',
+                    date: '',
+                },
+                addMoreDBWorkExperience: false,
+                work_experience_push_array: {
+                    company_name: '',
+                    designation: '',
+                    end_date: '',
+                    is_working_currently: '',
+                    start_date: '',
+                },
+                addMoreDBProject: false,
+                project_push_array: {
+                    name: '',
+                    link: '',
+                    start_date: '',
+                    end_date: '',
+                    description: '',
+                },
+                isWorkingCurrently: true,
             }
+        },
+        components: {
+            WebsiteNavbar,
         },
         mounted() {
             this.openProfileTab()
             this.closeProfileTab()
         },
         created(){
-            this.registerCompany()  
+            this.getCandidateDashboardData()
         },
         methods: {
-            registerCompany(){
-                axios.get('/candidate/get-dashboard-profile')
+            getCandidateDashboardData(){
+                axios.get('get-dashboard-profile')
                 .then((response) => {
-                    this.profile = response.data
+                    this.profile = response.data.candidate
+                    this.basic_information_record.full_name = response.data.candidate.full_name   
+                    this.basic_information_record.gender = response.data.candidate.gender   
+                    this.basic_information_record.city = response.data.candidate.city   
+                    this.basic_information_record.address = response.data.candidate.address   
+                    this.basic_information_record.cnic = response.data.candidate.cnic   
+                    this.basic_information_record.date_of_birth = response.data.candidate.date_of_birth   
+                    this.basic_information_record.zipcode = response.data.candidate.zipcode   
+                    this.basic_information_record.phone = response.data.candidate.phone   
+                    this.basic_information_record.email = response.data.candidate.email   
+                    this.basic_information_record.country = response.data.candidate.country   
+                    this.basic_information_record.bio = response.data.candidate.bio   
                 });
+            },
+            updateBasicInformation() {
+                var $basicinformationForm = $('#basicinformationForm');
+	            var data = new FormData(basicinformationForm);
+                axios.post('/update/basicinformation', data)
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.errors = []
+                            this.getCandidateDashboardData()
+                            $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon:  'success',
+                                title: 'Updated',
+                                text:  'Candidate Updated Successfully',
+                            })
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
+            },
+            addMoreEducation()
+            {
+                this.addMoreDBEducation = true
+            },
+            updateEducation() {
+                if(this.education_push_array.school_name)
+                {
+                    this.profile.candidate_education.push({
+                        school_type: this.education_push_array.school_type,
+                        school_name: this.education_push_array.school_name,
+                        start_date: this.education_push_array.start_date,
+                        end_date: this.education_push_array.end_date,
+                        department: this.education_push_array.department,
+                    })
+                }
+                axios.post('/update/education', this.profile.candidate_education)
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.errors = []
+                            this.getCandidateDashboardData()
+                            $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon:  'success',
+                                title: 'Updated',
+                                text:  'Candidate Updated Successfully',
+                            })
+                            this.education_push_array = {
+                                school_type: '',
+                                school_name: '',
+                                start_date: '',
+                                end_date: '',
+                                department: '',
+                            }
+                            this.addMoreDBEducation = false
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
+            },
+            addToEducationRecord() {
+                if(this.education_push_array.school_name == '')
+                {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Fill!',
+                    })
+                    return false
+                }
+                else{
+                    if (this.existEducationArray() == true) {
+                        this.profile.candidate_education.push({
+                            school_type: this.education_push_array.school_type,
+                            school_name: this.education_push_array.school_name,
+                            start_date: this.education_push_array.start_date,
+                            end_date: this.education_push_array.end_date,
+                            department: this.education_push_array.department,
+                        })
+                        this.education_push_array = {
+                            school_type: '',
+                            school_name: '',
+                            start_date: '',
+                            end_date: '',
+                            department: '',
+                        }
+                    } 
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Education Already Exist!🥺',
+                        })   
+                    }
+                }
+            },
+            deleteEducationArray(index) {
+                this.$delete(this.profile.candidate_education, index);
+            },
+            existEducationArray() {
+                if (this.profile.candidate_education.find(item => item.school_type === this.education_push_array.school_type)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            removeAddMoreArrayEducation()
+            {
+                this.addMoreDBEducation = false
+                this.education_push_array = {
+                    school_type: '',
+                    school_name: '',
+                    start_date: '',
+                    end_date: '',
+                    department: '',
+                }
+            },
+            addMoreLanguage()
+            {
+                this.addMoreDBLanguage = true
+            },
+            updateLanguage() {
+                if(this.language_push_array.name)
+                {
+                    this.profile.candidate_language.push({
+                        name: this.language_push_array.name,
+                        level: this.language_push_array.level,
+                    })
+                }
+                axios.post('/update/language', this.profile.candidate_language)
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.errors = []
+                            this.getCandidateDashboardData()
+                            $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon:  'success',
+                                title: 'Updated',
+                                text:  'Candidate Updated Successfully',
+                            })
+                            this.language_push_array = {
+                                name: '',
+                                level: '',
+                            }
+                            this.addMoreDBLanguage = false
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
+            },
+            addToLanguageRecord() {
+                if(this.language_push_array.name == '')
+                {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Fill!',
+                    })
+                    return false
+                }
+                else{
+                    if (this.existLanguageArray() == true) {
+                        this.profile.candidate_language.push({
+                            name: this.language_push_array.name,
+                            level: this.language_push_array.level,
+                        })
+                        this.language_push_array = {
+                            name: '',
+                            level: '',
+                        }
+                    } 
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Language Already Exist!🥺',
+                        })   
+                    }
+                }
+            },
+            deleteLanguageArray(index) {
+                this.$delete(this.profile.candidate_language, index);
+            },
+            existLanguageArray() {
+                if (this.profile.candidate_language.find(item => item.name === this.language_push_array.name)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            removeAddMoreArrayLanguage()
+            {
+                this.addMoreDBLanguage = false
+                this.language_push_array = {
+                    name: '',
+                    level: '',
+                }
+            },
+            addMoreAward()
+            {
+                this.addMoreDBAward = true
+            },
+            updateAward() {
+                if(this.award_push_array.name)
+                {
+                    this.profile.candidate_awards.push({
+                        name: this.award_push_array.name,
+                        date: this.award_push_array.date,
+                    })
+                    this.addMoreDBAward = false
+                    this.award_push_array = {
+                        name: '',
+                        date: '',
+                    }
+                }
+                axios.post('/update/award', this.profile.candidate_awards)
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.errors = []
+                            this.getCandidateDashboardData()
+                            $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon:  'success',
+                                title: 'Updated',
+                                text:  'Candidate Updated Successfully',
+                            })
+                            this.award_push_array = {
+                                name: '',
+                                date: '',
+                            }
+                            this.addMoreDBAward = false
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
+            },
+            addToAwardRecord() {
+                if(this.award_push_array.name == '')
+                {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Fill!',
+                    })
+                    return false
+                }
+                else{
+                    if (this.existAwardArray() == true) {
+                        this.profile.candidate_awards.push({
+                            name: this.award_push_array.name,
+                            date: this.award_push_array.date,
+                        })
+                        this.award_push_array = {
+                            name: '',
+                            date: '',
+                        }
+                    } 
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Award Already Exist!🥺',
+                        })   
+                    }
+                }
+            },
+            deleteAwardArray(index) {
+                this.$delete(this.profile.candidate_awards, index);
+            },
+            existAwardArray() {
+                if (this.profile.candidate_awards.find(item => item.name === this.award_push_array.name)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            removeAddMoreArrayAward()
+            {
+                this.addMoreDBAward = false
+                this.award_push_array = {
+                    name: '',
+                    date: '',
+                }
+            },
+            addMoreSkill()
+            {
+                this.addMoreDBSkill = true
+            },
+            updateSkill() {
+                if(this.skill_push_array.name)
+                {
+                    this.profile.candidate_skills.push({
+                        name: this.skill_push_array.name,
+                        level: this.skill_push_array.level,
+                    })
+                    this.addMoreDBSkill = false
+                    this.skill_push_array = {
+                        name: '',
+                        level: '',
+                    }
+                }
+                axios.post('/update/skill', this.profile.candidate_skills)
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.errors = []
+                            this.getCandidateDashboardData()
+                            $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon:  'success',
+                                title: 'Updated',
+                                text:  'Candidate Updated Successfully',
+                            })
+                            this.skill_push_array = {
+                                name: '',
+                                level: '',
+                            }
+                            this.addMoreDBSkill = false
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
+            },
+            addToSkillRecord() {
+                if(this.skill_push_array.name == '')
+                {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Fill!',
+                    })
+                    return false
+                }
+                else{
+                    if (this.existSkillArray() == true) {
+                        this.profile.candidate_skills.push({
+                            name: this.award_push_array.name,
+                            level: this.award_push_array.level,
+                        })
+                        this.skill_push_array = {
+                            name: '',
+                            level: '',
+                        }
+                    } 
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Skill Already Exist!🥺',
+                        })   
+                    }
+                }
+            },
+            deleteSkillArray(index) {
+                this.$delete(this.profile.candidate_skills, index);
+            },
+            existSkillArray() {
+                if (this.profile.candidate_skills.find(item => item.name === this.skill_push_array.name)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            removeAddMoreArraySkill()
+            {
+                this.addMoreDBSkill = false
+                this.skill_push_array = {
+                    name: '',
+                    level: '',
+                }
+            },
+            workingCurrentlyYes()
+            {
+                this.isWorkingCurrently = false
+                this.profile.job_end_date = ''
+                this.profile.job_start_date = ''
+                this.profile.current_position = ''
+                this.profile.current_position = ''
+                this.profile.no_of_persons_managed = ''
+                this.profile.current_working_company = ''
+                this.profile.current_salary = ''
+
+            },
+            workingCurrentlyNo()
+            {
+                this.isWorkingCurrently = true
+            },
+            updateCurrentJob() {
+                axios.post('/update/current-job', {
+                    isWorkingCurrently: this.profile.is_working_currently,
+                    job_end_date: this.profile.job_end_date ,
+                    job_start_date: this.profile.job_start_date ,
+                    current_position: this.profile.current_position ,
+                    current_position: this.profile.current_position ,
+                    no_of_persons_managed: this.profile.no_of_persons_managed ,
+                    current_working_company: this.profile.current_working_company ,
+                    current_salary: this.profile.current_salary 
+                })
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.errors = []
+                            this.getCandidateDashboardData()
+                            $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon:  'success',
+                                title: 'Updated',
+                                text:  'Candidate Updated Successfully',
+                            })
+                            this.skill_push_array = {
+                                name: '',
+                                level: '',
+                            }
+                            this.addMoreDBSkill = false
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
+            },
+            addMoreWorkExperience()
+            {
+                this.addMoreDBWorkExperience = true
+            },
+            updateWorkExperience() {
+                if(this.work_experience_push_array.company_name)
+                {
+                    this.profile.candidate_experience.push({
+                        company_name: this.work_experience_push_array.company_name,
+                        designation: this.work_experience_push_array.designation,
+                        end_date: this.work_experience_push_array.end_date,
+                        is_working_currently: this.work_experience_push_array.is_working_currently,
+                        start_date: this.work_experience_push_array.start_date,
+                    })
+                    this.addMoreDBWorkExperience = false
+                    this.work_experience_push_array = {
+                        company_name: '',
+                        designation: '',
+                        end_date: '',
+                        is_working_currently: '',
+                        start_date: '',
+                    }
+                }
+                axios.post('/update/experience', this.profile.candidate_experience)
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.errors = []
+                            this.getCandidateDashboardData()
+                            $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon:  'success',
+                                title: 'Updated',
+                                text:  'Candidate Updated Successfully',
+                            })
+                            this.work_experience_push_array = {
+                                company_name: '',
+                                designation: '',
+                                end_date: '',
+                                is_working_currently: '',
+                                start_date: '',
+                            }
+                            this.addMoreDBWorkExperience = false
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
+            },
+            addToWorkExperienceRecord() {
+                if(this.work_experience_push_array.company_name == '')
+                {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Fill!',
+                    })
+                    return false
+                }
+                else{
+                    if (this.existWorkExperienceArray() == true) {
+                        this.profile.candidate_experience.push({
+                            company_name: this.work_experience_push_array.company_name,
+                            designation: this.work_experience_push_array.designation,
+                            end_date: this.work_experience_push_array.end_date,
+                            is_working_currently: this.work_experience_push_array.is_working_currently,
+                            start_date: this.work_experience_push_array.start_date,
+                        })
+                        this.work_experience_push_array = {
+                            company_name: '',
+                            designation: '',
+                            end_date: '',
+                            is_working_currently: '',
+                            start_date: '',
+                        }
+                    } 
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Work Experience Already Exist!🥺',
+                        })   
+                    }
+                }
+            },
+            deleteWorkExperienceArray(index) {
+                this.$delete(this.profile.candidate_experience, index);
+            },
+            existWorkExperienceArray() {
+                if (this.profile.candidate_experience.find(item => item.company_name === this.work_experience_push_array.company_name)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            removeAddMoreArrayWorkExperience()
+            {
+                this.addMoreDBWorkExperience = false
+                this.work_experience_push_array = {
+                    company_name: '',
+                    designation: '',
+                    end_date: '',
+                    is_working_currently: '',
+                    start_date: '',
+                }
+            },
+            addMoreProject()
+            {
+                this.addMoreDBProject = true
+            },
+            updateProject() {
+                if(this.project_push_array.name)
+                {
+                    this.profile.candidate_projects.push({
+                        name: this.project_push_array.name,
+                        link: this.project_push_array.link,
+                        start_date: this.project_push_array.start_date,
+                        end_date: this.project_push_array.end_date,
+                        description: this.project_push_array.description,
+                    })
+                    this.addMoreDBProject = false
+                    this.project_push_array = {
+                        name: '',
+                        link: '',
+                        start_date: '',
+                        end_date: '',
+                        description: '',
+                    }
+                }
+                axios.post('/update/project', this.profile.candidate_projects)
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.errors = []
+                            this.getCandidateDashboardData()
+                            $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon:  'success',
+                                title: 'Updated',
+                                text:  'Candidate Updated Successfully',
+                            })
+                            this.project_push_array = {
+                                name: '',
+                                link: '',
+                                start_date: '',
+                                end_date: '',
+                                description: '',
+                            }
+                            this.addMoreDBProject = false
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
+            },
+            addToProjectRecord() {
+                if(this.project_push_array.name == '')
+                {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Fill!',
+                    })
+                    return false
+                }
+                else{
+                    if (this.existProjectArray() == true) {
+                        this.profile.candidate_projects.push({
+                            name: this.project_push_array.name,
+                            link: this.project_push_array.link,
+                            start_date: this.project_push_array.start_date,
+                            end_date: this.project_push_array.end_date,
+                            description: this.project_push_array.description,
+                        })
+                        this.project_push_array = {
+                            name: '',
+                            link: '',
+                            start_date: '',
+                            end_date: '',
+                            description: '',
+                        }
+                    } 
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Project Already Exist!🥺',
+                        })   
+                    }
+                }
+            },
+            deleteProjectArray(index) {
+                this.$delete(this.profile.candidate_projects, index);
+            },
+            existProjectArray() {
+                if (this.profile.candidate_projects.find(item => item.name === this.project_push_array.name)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            removeAddMoreArrayProject()
+            {
+                this.addMoreDBProject = false
+                this.project_push_array = {
+                    name: '',
+                    link: '',
+                    start_date: '',
+                    end_date: '',
+                    description: '',
+                }
+            },
+            saveResume() {
+                var $uploadresume = $('#uploadresume');
+	            var data = new FormData(uploadresume);
+                axios.post('/update/resume-file', data)
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                                
+                        } else {
+                            this.errors = []
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
             },
             openProfileTab(){
                 document.getElementById("ProfileTabMobileNav").style.left = "0%"
@@ -1776,7 +2740,6 @@
             }
         },
     };
-
 </script>
 <style>
     @media (min-width: 1200px) {

@@ -19,8 +19,8 @@
     <script src="{{asset('website')}}/assets/js/swiper/swiper-bundle.min.js"></script>
     <script src="{{asset('website')}}/assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 
 </head>

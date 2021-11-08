@@ -3,14 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\EmailResetPassword;
 use App\Mail\MailUserRegisterVerification;
 use App\Models\User;
 use App\Models\Company;
+use App\Models\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Validator;
+use DB;
 
 class AuthenticationController extends Controller
 {
@@ -91,11 +94,11 @@ class AuthenticationController extends Controller
         if(isset($verifyUser)){
             $verifyUser->status = 'Active';
             $verifyUser->update();
-            return redirect('/signin')->with('success', 'Your Account Verified Successfully.Thanks');
+            return redirect('/#/signin')->with('success', 'Your Account Verified Successfully.Thanks');
         }
         else
         {
-            return redirect('/signin')->with('error', 'Sorry your email cannot be identified.');
+            return redirect('/#/signin')->with('error', 'Sorry your email cannot be identified.');
         }
         
     }
@@ -142,6 +145,7 @@ class AuthenticationController extends Controller
                 }
                 else
                 {
+                    // Auth::login($User, true);
                     return response()->json([
                         "message" =>"Login Successfully!",
                         'success' => true,
@@ -156,6 +160,209 @@ class AuthenticationController extends Controller
                     'errors' => 'Credentials Not Matched',
                 ]);
             }
+        }
+
+    }
+
+    public function resetPasswordPost(Request $request)
+    {
+        $rules = array(
+            'email' => 'required|max:100|email',
+        );
+
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()){
+            return response()->json([
+                'success'   => false,
+                'errors' => $validator->errors(),
+            ]);
+        }
+        else
+        {
+            $user = User::where('email', $request->email)->get();
+            if($user->count() > 0){
+                $userData = PasswordReset::where('email', $request->email)->get();
+                if($userData->count()){
+                    return response()->json([
+                        'success'   => 'sent',
+                        'message'   => 'Reset password email already sent!',
+                        'type'      => 'error',
+                    ]);
+                }
+                else
+                {
+                    $user = User::find($user->first()->id);
+		            $request->request->add([
+		                'user_id' 	=> $user->id,
+		                'email' 	=> $user->email,
+		                'token' 	=> Hash::make(uniqid()),
+		            ]);
+		            $request->request->add([
+		            	'token'		=> str_replace('/', '', $request->token),
+                    ]);
+                    
+                    try{
+                        $transaction = DB::transaction(function () use ($request, $user) {
+                            $PasswordReset = PasswordReset::create($request->all());
+
+                            Mail::to($user->email)->send(new EmailResetPassword($user, $PasswordReset));
+                        });
+
+                    }catch(Exception $e){
+                        throw new Exception('Error in transaction');
+                    }
+
+                    return response()->json([
+                        'success'   => true,
+                        'message'   => 'We sent you an reset password link! Check your email.',
+                        'type'      => 'success',
+                    ]);   
+                }
+            }
+            else
+            {
+                return response()->json([
+                    'success'   => 'notfount',
+                    'message'   => 'Email not Found!',
+                    'type'      => 'error',
+                ]);   
+            }
+        }
+    }
+
+    public function resetPasswordForm($user_id, $token)
+    {
+        if(!Auth::check()){
+            return redirect('/#/candidate-new-password')
+            ->with('user_id', $user_id)
+            ->with('token', $token);
+        }
+        else
+        {
+            return redirect(url('/'));
+        }
+    }
+
+    public function resetPasswordFormPost(Request $request)
+    {
+        $attributeNames = [
+            'password' => 'Password',
+            'confirm_password' => 'Confirm Password',
+            'token' => 'Token',
+        ];
+
+        $messages = [
+            'password' => 'Password',
+            'confirm_password' => 'Confirm Password',
+            'token' => 'Token',
+        ];
+
+        $rules = array(
+            'password'          => 'required|min:6',
+            'confirm_password'  => 'required|same:password',
+            'token'  => 'required',
+        );
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        $validator->setAttributeNames($attributeNames);
+
+        if ($validator->fails()){
+            return response()->json([
+                'errors' => $validator->errors()->all(),
+                "type" => "Allerrors",
+            ], 200);
+        }
+        else
+        {
+            $userExist = PasswordReset::where('token', $request->token)->first();
+            
+            if($userExist)
+            {
+                try{
+                    $transaction = DB::transaction(function () use ($request, $userExist) {
+                        $user = User::where('email', $userExist->email)->first();
+                        // $userExist->delete();
+
+                        $request->request->add([
+                            'password' => Hash::make($request->password),
+                        ]);
+                        $user->password = $request->password;
+                        $user->update();
+                    });
+
+                }catch(Exception $e){
+                    throw new Exception('Error in transaction');
+                }
+
+                return response()->json([
+                    'success' => true,
+                    "message" => "Password Reset Successfully!",
+                    "type"    => "success",
+                ]);
+            }
+            else
+            {
+                return response()->json([
+                    'success'   => true,
+                    'message'   => 'Invalid or expired activation code.!',
+                    'type'      => 'error',
+                ]);
+            }
+        }
+        
+    }
+
+    public function checkCandidateRole()
+    {
+        if(Auth::check())
+        { 
+            if(Auth::user()->type == 'candidate')
+            {
+                return response()->json([
+                    'success'   => true,
+                ]);   
+            }
+            else{
+                return response()->json([
+                    'success'   => false,
+                ]);
+            }
+        }
+        else{
+            return response()->json([
+                'success'   => false,
+            ]);
+        }
+    }
+
+    public function resetPassword($token)
+    {
+        return redirect('/#/candidate-new-password'.$token);
+    }
+
+    public function userLogout()
+    {
+        Auth::logout();
+        return response()->json([
+            'success'   => true,
+        ]);
+
+    }
+
+    public function checkAuth()
+    {
+        if(Auth::check())
+        {
+            return response()->json([
+                'isAuth'   => true,
+            ]);
+        }
+        else{
+            return response()->json([
+                'isAuth'   => false,
+            ]);
         }
 
     }

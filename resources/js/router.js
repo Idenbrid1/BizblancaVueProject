@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import axios from 'axios';
 import VueRouter from 'vue-router';
 
 import LandingPage from './components/pages/website/LandingPageComponent.vue';
@@ -8,13 +9,14 @@ import TestCandidateProfile from './components/pages/website/candidate/TestCandi
 import TestCompanyProfile from './components/pages/website/company/TestCompanyProfile.vue';
 import SignIn from './components/pages/website/Auth/SignInComponent.vue';
 import SignUp from './components/pages/website/Auth/SignUpComponent.vue';
+import CandidateResetPassword from './components/pages/website/Auth/CandidateResetPasswordComponent.vue';
+import CandidateNewPassword from './components/pages/website/Auth/CandidateNewPasswordComponent.vue';
 import CandidateDashboard from './components/pages/website/candidate/CandidateDashboardComponent.vue';
 import CompanyProfile from './components/pages/website/company/CompanyProfileComponent.vue';
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    mode: 'history',
     linkExactActiveClass: 'active',
     routes: [
         {
@@ -60,7 +62,27 @@ const router = new VueRouter({
         {
             path: '/candidate-dashboard',
             name: 'CandidateDashboard',
-            component: CandidateDashboard
+            component: CandidateDashboard,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-candidate-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
+        },
+        {
+            path: '/candidate-reset-password',
+            name: 'CandidateResetPassword',
+            component: CandidateResetPassword
+        },
+        {
+            path: '/candidate-new-password:token',
+            name: 'CandidateNewPassword',
+            component: CandidateNewPassword
         },
     ]
 });

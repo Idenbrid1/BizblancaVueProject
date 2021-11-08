@@ -1,19 +1,4 @@
 <?php
-
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LoginAdminController;
-use App\Http\Controllers\DashboardAdminController;
-use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\NewsController;
-use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\CandidateController;
-use App\Http\Controllers\Auth\RegisterController;
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,11 +9,14 @@ use App\Http\Controllers\Auth\RegisterController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/{any}', function () {
+//samad
+// Route::get('/{any}', function () {
+//     return view('welcome');
+// })->where('any', '.*');
+Route::get('/', function () {
     return view('welcome');
-})->where('any', '.*');
-
+});
+//samad
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -51,9 +39,18 @@ Route::get('/blog', function () {
 // Route::get('/register', function () {
 //     return view('website/pages/register');
 // })->name('register');
+//samad
 Route::post('/user-registration', [App\Http\Controllers\Admin\AuthenticationController::class, 'userRegistration']);
 Route::post('/user-login', [App\Http\Controllers\Admin\AuthenticationController::class, 'userLogin']);
+Route::get('user-logout', [App\Http\Controllers\Admin\AuthenticationController::class, 'userLogout']);
+Route::get('check-auth', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkAuth']);
+Route::get('get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'getData']);
+Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCandidateRole']);
 
+Route::post('/reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordPost']);
+Route::get('/reset-password/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPassword']);
+Route::post('/complete-reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordFormPost']);
+//samad 
 Route::get('/login', function () {
     return view('website/pages/login');
 })->name('login');
@@ -74,9 +71,9 @@ Route::get('/comming_soon', function () {
     return view('website/pages/comming_soon');
 })->name('comming_soon');
 
-Auth::routes(['verify'=>true]);
+// Auth::routes(['verify'=>true]);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //GOOGLE LOGIN ROUTES
 Route::get('oauth/{driver}', [RegisterController::class, 'redirectToProvider'])->name('social.oauth');
@@ -86,48 +83,49 @@ Route::get('oauth/{driver}/callback', [RegisterController::class, 'handleProvide
 
 Route::post('/search-jobs', [App\Http\Controllers\Website\Candidate\HomeController::class, 'searchJobs'])->name('home');
 
+//samad
+Route::middleware('auth')->group(function(){
+    // Route::get('/home', [App\Http\Controllers\Website\Candidate\HomeController::class, 'showDashboardPage'])->name('home');
+    // Route::get('/profile_edit/{tab}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'edit'])->name('profile.edit');
+
+    Route::post('/update/basicinformation', [App\Http\Controllers\Candidate\CandidateController::class, 'updateBasicInformation'])->name('profile.updateBasicInformation');
+    Route::post('/update/education', [App\Http\Controllers\Candidate\CandidateController::class, 'updateEducation'])->name('profile.updateEducation');
+    Route::post('/update/language', [App\Http\Controllers\Candidate\CandidateController::class, 'updateLanguage'])->name('profile.updateLanguage');
+    Route::post('/update/award', [App\Http\Controllers\Candidate\CandidateController::class, 'updateAward'])->name('profile.updateAward');
+    Route::post('/update/skill', [App\Http\Controllers\Candidate\CandidateController::class, 'updateSkill'])->name('profile.updateSkill');
+    Route::post('/update/current-job', [App\Http\Controllers\Candidate\CandidateController::class, 'updateCurrentJob'])->name('profile.updateCurrentJob');
+    Route::post('/update/experience', [App\Http\Controllers\Candidate\CandidateController::class, 'updateExperience'])->name('profile.updateExperience');
+    Route::post('/update/project', [App\Http\Controllers\Candidate\CandidateController::class, 'updateProject'])->name('profile.updateProject');
+    Route::post('/update/resume-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateFileResume'])->name('profile.updateFileResume');
+    // Route::post('/update/desire-job', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateDesireJob'])->name('profile.updateDesireJob');
+    // Route::post('/update/remark', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateRemark'])->name('profile.updateRemark');
+    // Route::post('/update/cnic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnic'])->name('profile.updateCnic');
+    // Route::post('/update/experience-letter', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateExperienceLetter'])->name('profile.updateExperienceLetter');
+    // // Route::post('/update/cnic-back', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnicBack'])->name('profile.updateCnicBack');
+    // Route::post('/update/profile-pic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfilePic'])->name('profile.updateProfilePic');
+    // Route::post('/update/profile-video', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfileVideo'])->name('profile.updateProfileVideo');
+    // Route::get('/delete-education/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteEducation'])->name('profile.deleteEducation');
+    // Route::get('/delete-language/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteLanguage'])->name('profile.deleteLanguage');
+    // Route::get('/delete-award/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteAward'])->name('profile.deleteAward');
+    // Route::get('/delete-experience/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteExperience'])->name('profile.deleteExperience');
+    // Route::get('/delete-skill/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteSkill'])->name('profile.deleteSkill');
+    // Route::get('/delete-project/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteProject'])->name('profile.deleteProject');
+    // Route::get('/create-cv', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'generateCVPDF'])->name('profile.generateCVPDF');
+
+    // Route::get('/jobpost_list', [App\Http\Controllers\Website\JobPostController::class, 'index'])->name('jobpost.index');
+    // Route::get('/message_list', [App\Http\Controllers\Website\MessageController::class, 'index'])->name('message.index');
+    // Route::get('/company_list', [App\Http\Controllers\Website\CompanyController::class, 'index'])->name('company.index');
+    // Route::any('/test-search', [App\Http\Controllers\Website\CompanyController::class, 'index2'])->name('test-search');
+
+});
+//samad
 
 
 //website routes//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Route::get('/get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'show'])->name('profile.show');
 
 Route::prefix('candidate')->name('candidate.')->group(function(){
     Route::get('/index', [App\Http\Controllers\Website\Candidate\HomeController::class, 'index'])->name('index');
 
-    Route::middleware('auth')->group(function(){
-		Route::get('/home', [App\Http\Controllers\Website\Candidate\HomeController::class, 'showDashboardPage'])->name('home');
-		Route::get('/profile_edit/{tab}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'edit'])->name('profile.edit');
-
-        Route::post('/update/basicinformation', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'update'])->name('profile.updateBasicInformation');
-		Route::post('/update/education', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateEducation'])->name('profile.updateEducation');
-		Route::post('/update/language', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateLanguage'])->name('profile.updateLanguage');
-		Route::post('/update/award', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateAward'])->name('profile.updateAward');
-		Route::post('/update/experience', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateExperience'])->name('profile.updateExperience');
-		Route::post('/update/skill', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateSkill'])->name('profile.updateSkill');
-		Route::post('/update/project', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProject'])->name('profile.updateProject');
-		Route::post('/update/desire-job', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateDesireJob'])->name('profile.updateDesireJob');
-		Route::post('/update/remark', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateRemark'])->name('profile.updateRemark');
-		Route::post('/update/current-job', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCurrentJob'])->name('profile.updateCurrentJob');
-		Route::post('/update/resume-file', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateFileResume'])->name('profile.updateFileResume');
-		Route::post('/update/cnic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnic'])->name('profile.updateCnic');
-		Route::post('/update/experience-letter', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateExperienceLetter'])->name('profile.updateExperienceLetter');
-		// Route::post('/update/cnic-back', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnicBack'])->name('profile.updateCnicBack');
-		Route::post('/update/profile-pic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfilePic'])->name('profile.updateProfilePic');
-		Route::post('/update/profile-video', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfileVideo'])->name('profile.updateProfileVideo');
-		Route::get('/delete-education/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteEducation'])->name('profile.deleteEducation');
-		Route::get('/delete-language/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteLanguage'])->name('profile.deleteLanguage');
-		Route::get('/delete-award/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteAward'])->name('profile.deleteAward');
-		Route::get('/delete-experience/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteExperience'])->name('profile.deleteExperience');
-		Route::get('/delete-skill/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteSkill'])->name('profile.deleteSkill');
-		Route::get('/delete-project/{id}', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'deleteProject'])->name('profile.deleteProject');
-		Route::get('/create-cv', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'generateCVPDF'])->name('profile.generateCVPDF');
-
-		Route::get('/jobpost_list', [App\Http\Controllers\Website\JobPostController::class, 'index'])->name('jobpost.index');
-		Route::get('/message_list', [App\Http\Controllers\Website\MessageController::class, 'index'])->name('message.index');
-		Route::get('/company_list', [App\Http\Controllers\Website\CompanyController::class, 'index'])->name('company.index');
-		Route::any('/test-search', [App\Http\Controllers\Website\CompanyController::class, 'index2'])->name('test-search');
-
-	});
 });
 Route::post('/update/newsletter', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'saveNewsLetter'])->name('saveNewsLetter');
 

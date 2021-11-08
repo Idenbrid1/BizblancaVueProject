@@ -1,5 +1,6 @@
 <template>
     <div>
+        <WebsiteNavbar/>
         <div class="register-container py-5 mt-5">
             <div class="container p-0">
                 <div class="login-wrapper row m-0">
@@ -212,6 +213,8 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
+import WebsiteNavbar from '../partials/navbar.vue';
     export default {
         data() {
             return {
@@ -235,8 +238,8 @@
                 errors: [],
             };
         },
-        mounted() {
-
+        components: {
+            WebsiteNavbar,
         },
         methods: {
             registerCandidate(){

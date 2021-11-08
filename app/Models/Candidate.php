@@ -71,7 +71,7 @@ class Candidate extends Model
     }
     public function CandidateLanguage()
     {
-        return $this->hasMany(CandidateLnaguage::class, 'candidate_id','id');
+        return $this->hasMany(CandidateLanguage::class, 'candidate_id','id');
     }
     public function Qualification()
     {

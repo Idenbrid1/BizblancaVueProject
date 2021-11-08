@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {   
     return $request->user();
 });
 
 
-Route::get('user/verify-test/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'verifyUser']);
+Route::get('user/verify/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'verifyUser']);
+Route::get('reset-password/{user_id}/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordForm']);
