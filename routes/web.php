@@ -97,10 +97,10 @@ Route::middleware('auth')->group(function(){
     Route::post('/update/experience', [App\Http\Controllers\Candidate\CandidateController::class, 'updateExperience'])->name('profile.updateExperience');
     Route::post('/update/project', [App\Http\Controllers\Candidate\CandidateController::class, 'updateProject'])->name('profile.updateProject');
     Route::post('/update/resume-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateFileResume'])->name('profile.updateFileResume');
+    Route::post('/update/cnic-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateFileCnic'])->name('profile.updateCnic');
+    Route::post('/update/experience-letter-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateExperienceLetterFile'])->name('profile.updateExperienceLetter');
     // Route::post('/update/desire-job', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateDesireJob'])->name('profile.updateDesireJob');
     // Route::post('/update/remark', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateRemark'])->name('profile.updateRemark');
-    // Route::post('/update/cnic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnic'])->name('profile.updateCnic');
-    // Route::post('/update/experience-letter', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateExperienceLetter'])->name('profile.updateExperienceLetter');
     // // Route::post('/update/cnic-back', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnicBack'])->name('profile.updateCnicBack');
     // Route::post('/update/profile-pic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfilePic'])->name('profile.updateProfilePic');
     // Route::post('/update/profile-video', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfileVideo'])->name('profile.updateProfileVideo');

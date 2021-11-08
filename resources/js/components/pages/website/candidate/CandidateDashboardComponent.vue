@@ -769,7 +769,7 @@
                                                                         <label class="UploadAnker"
                                                                             for="resume-pdf-file">Upload</label>
                                                                     </li>
-                                                                    <li><a class="ViewAnker" href="#/">View</a></li>
+                                                                    <li><a class="ViewAnker" :href="'/storage/images/candidates/resume/'+this.profile.cv_file" target="_blank">View</a></li>
                                                                     <div class="alert displaynone" id="responseMsg">
                                                                     </div>
                                                                     <div class='alert alert-danger mt-2 d-none text-danger'
@@ -778,26 +778,30 @@
                                                             </form>
                                                         </li>
                                                         <li class="profileInfo profileInfoBorder rt0">
-                                                            <ul class="uploadViewAnkerList">
-                                                                <li>
-                                                                    <input type="file" hidden name="uploadcnicfrontback"
-                                                                        id="uploadcnicfrontback">
-                                                                    <label class="UploadAnker"
-                                                                        for="uploadcnicfrontback">Upload</label>
-                                                                </li>
-                                                                <li><a class="ViewAnker" href="#/">View</a></li>
-                                                            </ul>
+                                                            <form id="uploadcnic">
+                                                                <ul class="uploadViewAnkerList">
+                                                                    <li>
+                                                                        <input type="file" hidden name="uploadcnicfrontback" @change="saveCNIC()"
+                                                                            id="uploadcnicfrontback">
+                                                                        <label class="UploadAnker"
+                                                                            for="uploadcnicfrontback">Upload</label>
+                                                                    </li>
+                                                                    <li><a class="ViewAnker" :href="'/storage/images/candidates/cnic/'+this.profile.cnic_image"  target="_blank">View</a></li>
+                                                                </ul>
+                                                            </form>
                                                         </li>
                                                         <li class="profileInfo profileInfoBorder rt0 rb0">
-                                                            <ul class="uploadViewAnkerList">
-                                                                <li>
-                                                                    <input type="file" hidden name="experiencelatter"
-                                                                        id="experiencelatter">
-                                                                    <label class="UploadAnker"
-                                                                        for="experiencelatter">Upload</label>
-                                                                </li>
-                                                                <li><a class="ViewAnker" href="#/">View</a></li>
-                                                            </ul>
+                                                            <form id="uploadexperienceletter">
+                                                                <ul class="uploadViewAnkerList">
+                                                                    <li>
+                                                                        <input type="file" hidden name="uploadexperienceletter" @change="saveExperienceLetter()"
+                                                                            id="experiencelatter">
+                                                                        <label class="UploadAnker"
+                                                                            for="experiencelatter">Upload</label>
+                                                                    </li>
+                                                                    <li><a class="ViewAnker" :href="'/storage/images/candidates/experience-letter/'+this.profile.experience_letter"  target="_blank">View</a></li>
+                                                                </ul>
+                                                            </form>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -2720,17 +2724,74 @@ import WebsiteNavbar from '../partials/navbar.vue';
                 var $uploadresume = $('#uploadresume');
 	            var data = new FormData(uploadresume);
                 axios.post('/update/resume-file', data)
-                    .then((res) => {
-                        if (res.data.success == false) {
-                            this.errors = res.data.errors
-                                
-                        } else {
-                            this.errors = []
-                        }
-                    })
-                    .catch((err) => {
+                .then((res) => {
+                    if (res.data.success == true) {
+                        Swal.fire({
+                            icon:  'success',
+                            title: 'Updated',
+                            text:  'Candidate Updated Successfully',
+                        })
+                        this.getCandidateDashboardData()
 
-                    })
+                        this.errors = []
+                            
+                    } 
+                    if(res.data.type == 'error') {
+                        Swal.fire({
+                            icon:  'error',
+                            title: 'Resume Not Uploaded',
+                            text:  'File must be pdf & maximum size must be less then 2mb',
+                        })
+                    }
+                })
+            },
+            saveCNIC() {
+                var $uploadcnic = $('#uploadcnic');
+	            var data = new FormData(uploadcnic);
+                axios.post('/update/cnic-file', data)
+                .then((res) => {
+                    if (res.data.success == true) {
+                        Swal.fire({
+                            icon:  'success',
+                            title: 'Updated',
+                            text:  'Candidate Updated Successfully',
+                        })
+                        this.getCandidateDashboardData()
+
+                        this.errors = []
+                            
+                    } 
+                    if(res.data.type == 'error') {
+                        Swal.fire({
+                            icon:  'error',
+                            title: 'Cnic Not Uploaded',
+                            text:  'File must be pdf with both front and back clear pics & maximum size must be less then 2mb',
+                        })
+                    }
+                })
+            },
+            saveExperienceLetter() {
+                var $uploadexperienceletter = $('#uploadexperienceletter');
+	            var data = new FormData(uploadexperienceletter);
+                axios.post('/update/experience-letter-file', data)
+                .then((res) => {
+                    if (res.data.success == true) {
+                        Swal.fire({
+                            icon:  'success',
+                            title: 'Updated',
+                            text:  'Candidate Updated Successfully',
+                        })
+                        this.getCandidateDashboardData()
+                        this.errors = []
+                    } 
+                    if(res.data.type == 'error') {
+                        Swal.fire({
+                            icon:  'error',
+                            title: 'Cnic Not Uploaded',
+                            text:  'File must be pdf and maximum size must be less then 2mb',
+                        })
+                    }
+                })
             },
             openProfileTab(){
                 document.getElementById("ProfileTabMobileNav").style.left = "0%"

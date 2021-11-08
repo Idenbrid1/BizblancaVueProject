@@ -215,7 +215,8 @@ class CandidateController extends Controller
             ], 200);
         }
         else{
-            if($request->file('resume')) {
+            if($request->file('resume')) 
+            {
                 $user = Auth::user();
                 $candidate = Candidate::where('user_id', $user->id)->first();
 
@@ -227,15 +228,77 @@ class CandidateController extends Controller
                 $candidate->cv_file = $filename;
                 $candidate->update();
                 $filepath = url('storage/images/candidates/'.$filename);
-                $data['success'] = 1;
+                $data['success'] = true;
                 $data['message'] = 'Uploaded Successfully!';
-                $data['filepath'] = $filepath;
-                $data['extension'] = $extension;
-            }else{
-                return response()->json([
-                    'message' => 'saved',
-                    'success' => true,
-                ], 200);
+                $data['filepath'] = $filename;
+            }
+        }
+        return response()->json($data);
+    }
+
+    public function updateFileCnic(Request $request)
+    {
+        $data = array();
+        $validator = Validator::make($request->all(), [
+           'uploadcnicfrontback' => 'required|mimes:pdf|max:2048'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'errors' => $validator->errors(),
+                "type" => "error",
+            ], 200);
+        }
+        else{
+            if($request->file('uploadcnicfrontback')) 
+            {
+                $user = Auth::user();
+                $candidate = Candidate::where('user_id', $user->id)->first();
+
+                $file = $request->file('uploadcnicfrontback');
+                $filename = $candidate->id.'-'.$candidate->full_name.'-'.'uploadcnicfrontback'.'-'.$file->getClientOriginalName();
+                $extension = $file->getClientOriginalExtension();
+                $location = 'storage/images/candidates/cnic/';
+                $file->move($location,$filename);
+                $candidate->cnic_image = $filename;
+                $candidate->update();
+                $data['success'] = true;
+                $data['message'] = 'Uploaded Successfully!';
+                $data['filepath'] = $filename;
+            }
+        }
+        return response()->json($data);
+    }
+
+    public function updateExperienceLetterFile(Request $request)
+    {
+        $data = array();
+        $validator = Validator::make($request->all(), [
+           'uploadexperienceletter' => 'required|mimes:pdf|max:2048'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'errors' => $validator->errors(),
+                "type" => "error",
+            ], 200);
+        }
+        else{
+            if($request->file('uploadexperienceletter')) 
+            {
+                $user = Auth::user();
+                $candidate = Candidate::where('user_id', $user->id)->first();
+
+                $file = $request->file('uploadexperienceletter');
+                $filename = $candidate->id.'-'.$candidate->full_name.'-'.'uploadexperienceletter'.'-'.$file->getClientOriginalName();
+                $extension = $file->getClientOriginalExtension();
+                $location = 'storage/images/candidates/experience-letter/';
+                $file->move($location,$filename);
+                $candidate->experience_letter = $filename;
+                $candidate->update();
+                $data['success'] = true;
+                $data['message'] = 'Uploaded Successfully!';
+                $data['filepath'] = $filename;
             }
         }
         return response()->json($data);

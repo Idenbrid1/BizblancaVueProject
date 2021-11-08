@@ -6427,6 +6427,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -7160,12 +7164,80 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var $uploadresume = $('#uploadresume');
       var data = new FormData(uploadresume);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/resume-file', data).then(function (res) {
-        if (res.data.success == false) {
-          _this16.errors = res.data.errors;
-        } else {
+        if (res.data.success == true) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Updated',
+            text: 'Candidate Updated Successfully'
+          });
+
+          _this16.getCandidateDashboardData();
+
           _this16.errors = [];
         }
-      })["catch"](function (err) {});
+
+        if (res.data.type == 'error') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Resume Not Uploaded',
+            text: 'File must be pdf & maximum size must be less then 2mb'
+          });
+        }
+      });
+    },
+    saveCNIC: function saveCNIC() {
+      var _this17 = this;
+
+      var $uploadcnic = $('#uploadcnic');
+      var data = new FormData(uploadcnic);
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/cnic-file', data).then(function (res) {
+        if (res.data.success == true) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Updated',
+            text: 'Candidate Updated Successfully'
+          });
+
+          _this17.getCandidateDashboardData();
+
+          _this17.errors = [];
+        }
+
+        if (res.data.type == 'error') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Cnic Not Uploaded',
+            text: 'File must be pdf with both front and back clear pics & maximum size must be less then 2mb'
+          });
+        }
+      });
+    },
+    saveExperienceLetter: function saveExperienceLetter() {
+      var _this18 = this;
+
+      var $uploadexperienceletter = $('#uploadexperienceletter');
+      var data = new FormData(uploadexperienceletter);
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/experience-letter-file', data).then(function (res) {
+        if (res.data.success == true) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Updated',
+            text: 'Candidate Updated Successfully'
+          });
+
+          _this18.getCandidateDashboardData();
+
+          _this18.errors = [];
+        }
+
+        if (res.data.type == 'error') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Cnic Not Uploaded',
+            text: 'File must be pdf and maximum size must be less then 2mb'
+          });
+        }
+      });
     },
     openProfileTab: function openProfileTab() {
       document.getElementById("ProfileTabMobileNav").style.left = "0%";
@@ -17720,7 +17792,21 @@ var render = function () {
                                                   ),
                                                 ]),
                                                 _vm._v(" "),
-                                                _vm._m(31),
+                                                _c("li", [
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      staticClass: "ViewAnker",
+                                                      attrs: {
+                                                        href:
+                                                          "/storage/images/candidates/resume/" +
+                                                          this.profile.cv_file,
+                                                        target: "_blank",
+                                                      },
+                                                    },
+                                                    [_vm._v("View")]
+                                                  ),
+                                                ]),
                                                 _vm._v(" "),
                                                 _c("div", {
                                                   staticClass:
@@ -17740,9 +17826,151 @@ var render = function () {
                                       ]
                                     ),
                                     _vm._v(" "),
-                                    _vm._m(32),
+                                    _c(
+                                      "li",
+                                      {
+                                        staticClass:
+                                          "profileInfo profileInfoBorder rt0",
+                                      },
+                                      [
+                                        _c(
+                                          "form",
+                                          { attrs: { id: "uploadcnic" } },
+                                          [
+                                            _c(
+                                              "ul",
+                                              {
+                                                staticClass:
+                                                  "uploadViewAnkerList",
+                                              },
+                                              [
+                                                _c("li", [
+                                                  _c("input", {
+                                                    attrs: {
+                                                      type: "file",
+                                                      hidden: "",
+                                                      name: "uploadcnicfrontback",
+                                                      id: "uploadcnicfrontback",
+                                                    },
+                                                    on: {
+                                                      change: function (
+                                                        $event
+                                                      ) {
+                                                        return _vm.saveCNIC()
+                                                      },
+                                                    },
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "label",
+                                                    {
+                                                      staticClass:
+                                                        "UploadAnker",
+                                                      attrs: {
+                                                        for: "uploadcnicfrontback",
+                                                      },
+                                                    },
+                                                    [_vm._v("Upload")]
+                                                  ),
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("li", [
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      staticClass: "ViewAnker",
+                                                      attrs: {
+                                                        href:
+                                                          "/storage/images/candidates/cnic/" +
+                                                          this.profile
+                                                            .cnic_image,
+                                                        target: "_blank",
+                                                      },
+                                                    },
+                                                    [_vm._v("View")]
+                                                  ),
+                                                ]),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
                                     _vm._v(" "),
-                                    _vm._m(33),
+                                    _c(
+                                      "li",
+                                      {
+                                        staticClass:
+                                          "profileInfo profileInfoBorder rt0 rb0",
+                                      },
+                                      [
+                                        _c(
+                                          "form",
+                                          {
+                                            attrs: {
+                                              id: "uploadexperienceletter",
+                                            },
+                                          },
+                                          [
+                                            _c(
+                                              "ul",
+                                              {
+                                                staticClass:
+                                                  "uploadViewAnkerList",
+                                              },
+                                              [
+                                                _c("li", [
+                                                  _c("input", {
+                                                    attrs: {
+                                                      type: "file",
+                                                      hidden: "",
+                                                      name: "uploadexperienceletter",
+                                                      id: "experiencelatter",
+                                                    },
+                                                    on: {
+                                                      change: function (
+                                                        $event
+                                                      ) {
+                                                        return _vm.saveExperienceLetter()
+                                                      },
+                                                    },
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "label",
+                                                    {
+                                                      staticClass:
+                                                        "UploadAnker",
+                                                      attrs: {
+                                                        for: "experiencelatter",
+                                                      },
+                                                    },
+                                                    [_vm._v("Upload")]
+                                                  ),
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("li", [
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      staticClass: "ViewAnker",
+                                                      attrs: {
+                                                        href:
+                                                          "/storage/images/candidates/experience-letter/" +
+                                                          this.profile
+                                                            .experience_letter,
+                                                        target: "_blank",
+                                                      },
+                                                    },
+                                                    [_vm._v("View")]
+                                                  ),
+                                                ]),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
                                   ]),
                                 ]),
                               ]),
@@ -17774,7 +18002,7 @@ var render = function () {
                               },
                               [
                                 _c("div", { staticClass: "col-12" }, [
-                                  _vm._m(34, true),
+                                  _vm._m(31, true),
                                   _vm._v(" "),
                                   _c("ul", { staticClass: "profileInfoList" }, [
                                     _c(
@@ -17882,7 +18110,7 @@ var render = function () {
                           }
                         ),
                         _vm._v(" "),
-                        _vm._m(35),
+                        _vm._m(32),
                       ],
                       2
                     ),
@@ -17940,11 +18168,11 @@ var render = function () {
                                   attrs: { id: "subForm" },
                                 },
                                 [
-                                  _vm._m(36),
+                                  _vm._m(33),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "subFormFields" }, [
                                     _c("div", { staticClass: "row" }, [
-                                      _vm._m(37),
+                                      _vm._m(34),
                                       _vm._v(" "),
                                       _c(
                                         "div",
@@ -18750,7 +18978,7 @@ var render = function () {
                               "div",
                               { staticClass: "subForm" },
                               [
-                                _vm._m(38),
+                                _vm._m(35),
                                 _vm._v(" "),
                                 _vm._l(
                                   this.profile.candidate_awards,
@@ -19244,7 +19472,7 @@ var render = function () {
                                   attrs: { id: "subForm" },
                                 },
                                 [
-                                  _vm._m(39),
+                                  _vm._m(36),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "subFormFields" }, [
                                     _c("div", { staticClass: "row" }, [
@@ -19916,7 +20144,7 @@ var render = function () {
                               "div",
                               { staticClass: "subForm" },
                               [
-                                _vm._m(40),
+                                _vm._m(37),
                                 _vm._v(" "),
                                 _vm._l(
                                   this.profile.candidate_education,
@@ -20844,13 +21072,13 @@ var render = function () {
                                           attrs: { id: "subForm" },
                                         },
                                         [
-                                          _vm._m(41, true),
+                                          _vm._m(38, true),
                                           _vm._v(" "),
                                           _c(
                                             "div",
                                             { staticClass: "subFormFields" },
                                             [
-                                              _vm._m(42, true),
+                                              _vm._m(39, true),
                                               _vm._v(" "),
                                               _c(
                                                 "div",
@@ -21351,13 +21579,13 @@ var render = function () {
                                           attrs: { id: "subForm" },
                                         },
                                         [
-                                          _vm._m(43),
+                                          _vm._m(40),
                                           _vm._v(" "),
                                           _c(
                                             "div",
                                             { staticClass: "subFormFields" },
                                             [
-                                              _vm._m(44),
+                                              _vm._m(41),
                                               _vm._v(" "),
                                               _c(
                                                 "div",
@@ -21989,7 +22217,7 @@ var render = function () {
                                 attrs: { id: "subForm" },
                               },
                               [
-                                _vm._m(45),
+                                _vm._m(42),
                                 _vm._v(" "),
                                 _vm._l(
                                   this.profile.candidate_language,
@@ -22491,7 +22719,7 @@ var render = function () {
                               attrs: { id: "SkillsModal" },
                             },
                             [
-                              _vm._m(46),
+                              _vm._m(43),
                               _vm._v(" "),
                               _vm._l(
                                 this.profile.candidate_skills,
@@ -23921,9 +24149,9 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _vm._m(47),
+      _vm._m(44),
       _vm._v(" "),
-      _vm._m(48),
+      _vm._m(45),
     ],
     1
   )
@@ -25043,81 +25271,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "profileLabel w-100 br5" }, [
       _c("span", [_vm._v("View")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { staticClass: "ViewAnker", attrs: { href: "#/" } }, [
-        _vm._v("View"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileInfo profileInfoBorder rt0" }, [
-      _c("ul", { staticClass: "uploadViewAnkerList" }, [
-        _c("li", [
-          _c("input", {
-            attrs: {
-              type: "file",
-              hidden: "",
-              name: "uploadcnicfrontback",
-              id: "uploadcnicfrontback",
-            },
-          }),
-          _vm._v(" "),
-          _c(
-            "label",
-            {
-              staticClass: "UploadAnker",
-              attrs: { for: "uploadcnicfrontback" },
-            },
-            [_vm._v("Upload")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { staticClass: "ViewAnker", attrs: { href: "#/" } }, [
-            _vm._v("View"),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileInfo profileInfoBorder rt0 rb0" }, [
-      _c("ul", { staticClass: "uploadViewAnkerList" }, [
-        _c("li", [
-          _c("input", {
-            attrs: {
-              type: "file",
-              hidden: "",
-              name: "experiencelatter",
-              id: "experiencelatter",
-            },
-          }),
-          _vm._v(" "),
-          _c(
-            "label",
-            { staticClass: "UploadAnker", attrs: { for: "experiencelatter" } },
-            [_vm._v("Upload")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { staticClass: "ViewAnker", attrs: { href: "#/" } }, [
-            _vm._v("View"),
-          ]),
-        ]),
-      ]),
     ])
   },
   function () {
