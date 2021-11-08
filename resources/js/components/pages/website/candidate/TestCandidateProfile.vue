@@ -1442,7 +1442,7 @@
         <div class="modal fade SkillsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form id="skillForm" action="#" method="POST">
+                <form id="skillForm" class="w-100" action="#" method="POST">
                     <div class="modal-content p-0">
                         <div class="container editModel pb-5">
                             <h3 class="my-4">Update</h3>

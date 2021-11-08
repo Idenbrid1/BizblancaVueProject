@@ -29867,7 +29867,10 @@ var staticRenderFns = [
           [
             _c(
               "form",
-              { attrs: { id: "skillForm", action: "#", method: "POST" } },
+              {
+                staticClass: "w-100",
+                attrs: { id: "skillForm", action: "#", method: "POST" },
+              },
               [
                 _c("div", { staticClass: "modal-content p-0" }, [
                   _c("div", { staticClass: "container editModel pb-5" }, [
