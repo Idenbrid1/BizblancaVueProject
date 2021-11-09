@@ -10670,6 +10670,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -37236,32 +37248,69 @@ var render = function () {
         "div",
         { staticClass: "mobile-button" },
         [
-          _c(
-            "router-link",
-            {
-              staticClass: "company-mbl-btn",
-              attrs: {
-                "data-toggle": "collapse",
-                to: { name: "ForCompanies" },
-              },
-            },
-            [
-              _c("i", { staticClass: "fas fa-building" }),
-              _vm._v(" For Companies"),
-            ]
-          ),
+          this.url == "for-companies"
+            ? _c(
+                "router-link",
+                {
+                  staticClass: "company-mbl-btn activeCompany",
+                  attrs: {
+                    title: "company",
+                    "data-toggle": "collapse",
+                    to: { name: "ForCompanies" },
+                  },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-building" }),
+                  _vm._v(" For Companies"),
+                ]
+              )
+            : _c(
+                "router-link",
+                {
+                  staticClass: "company-mbl-btn",
+                  attrs: {
+                    title: "company",
+                    "data-toggle": "collapse",
+                    to: { name: "ForCompanies" },
+                  },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-building" }),
+                  _vm._v(" For Companies"),
+                ]
+              ),
           _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "candidate-mbl-btn",
-              attrs: {
-                "data-toggle": "collapse",
-                to: { name: "ForCandidates" },
-              },
-            },
-            [_c("i", { staticClass: "fas fa-users" }), _vm._v(" For Candidate")]
-          ),
+          this.url == "for-candidates"
+            ? _c(
+                "router-link",
+                {
+                  staticClass: "company-mbl-btn activeCandidate",
+                  attrs: {
+                    title: "candidate",
+                    "data-toggle": "collapse",
+                    to: { name: "ForCandidates" },
+                  },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-users" }),
+                  _vm._v(" For Candidate"),
+                ]
+              )
+            : _c(
+                "router-link",
+                {
+                  staticClass: "company-mbl-btn",
+                  attrs: {
+                    title: "candidate",
+                    "data-toggle": "collapse",
+                    to: { name: "ForCandidates" },
+                  },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-users" }),
+                  _vm._v(" For Candidate"),
+                ]
+              ),
         ],
         1
       ),
