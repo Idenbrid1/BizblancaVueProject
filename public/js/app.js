@@ -10671,12 +10671,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      isAuth: false
+      isAuth: false,
+      url: ''
     };
+  },
+  mounted: function mounted() {
+    this.url = window.location.href.substr(24);
   },
   created: function created() {
     this.checkAuth();
@@ -37308,21 +37316,37 @@ var render = function () {
               "li",
               { staticClass: "header-block-link" },
               [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "menu-item",
-                    attrs: {
-                      title: "company",
-                      "data-toggle": "collapse",
-                      to: { name: "For Companies" },
-                    },
-                  },
-                  [
-                    _c("i", { staticClass: "fas fa-building" }),
-                    _vm._v(" For Companies"),
-                  ]
-                ),
+                this.url == "for-companies"
+                  ? _c(
+                      "router-link",
+                      {
+                        staticClass: "menu-item activeCompany",
+                        attrs: {
+                          title: "company",
+                          "data-toggle": "collapse",
+                          to: { name: "ForCompanies" },
+                        },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-building" }),
+                        _vm._v(" For Companies"),
+                      ]
+                    )
+                  : _c(
+                      "router-link",
+                      {
+                        staticClass: "menu-item",
+                        attrs: {
+                          title: "company",
+                          "data-toggle": "collapse",
+                          to: { name: "ForCompanies" },
+                        },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-building" }),
+                        _vm._v(" For Companies"),
+                      ]
+                    ),
               ],
               1
             ),
@@ -37331,21 +37355,37 @@ var render = function () {
               "li",
               { staticClass: "header-block-link pr-3 border-line" },
               [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "menu-item",
-                    attrs: {
-                      title: "candidate",
-                      "data-toggle": "collapse",
-                      to: { name: "For Candidates" },
-                    },
-                  },
-                  [
-                    _c("i", { staticClass: "fas fa-users" }),
-                    _vm._v(" For Candidate"),
-                  ]
-                ),
+                this.url == "for-candidates"
+                  ? _c(
+                      "router-link",
+                      {
+                        staticClass: "menu-item activeCandidate",
+                        attrs: {
+                          title: "candidate",
+                          "data-toggle": "collapse",
+                          to: { name: "ForCandidates" },
+                        },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-users" }),
+                        _vm._v(" For Candidate"),
+                      ]
+                    )
+                  : _c(
+                      "router-link",
+                      {
+                        staticClass: "menu-item",
+                        attrs: {
+                          title: "candidate",
+                          "data-toggle": "collapse",
+                          to: { name: "ForCandidates" },
+                        },
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-users" }),
+                        _vm._v(" For Candidate"),
+                      ]
+                    ),
               ],
               1
             ),

@@ -64,12 +64,16 @@
                     <img class="log-site" src="/website/assets/images/Logo.svg" alt="logo" /></router-link>
                 <ul class="main-navigation float-left py-2">
                     <li class="header-block-link">
-                        <router-link title="company" class="menu-item" data-toggle="collapse"
-                            :to="{ name: 'For Companies' }"><i class="fas fa-building"></i> For Companies</router-link>
+                        <router-link title="company" class="menu-item activeCompany" data-toggle="collapse" v-if="this.url == 'for-companies'"
+                            :to="{ name: 'ForCompanies' }"><i class="fas fa-building"></i> For Companies</router-link>
+                        <router-link title="company" class="menu-item" data-toggle="collapse" v-else
+                        :to="{ name: 'ForCompanies' }"><i class="fas fa-building"></i> For Companies</router-link>
                     </li>
                     <li class="header-block-link pr-3 border-line">
-                        <router-link title="candidate" class="menu-item" data-toggle="collapse"
-                            :to="{ name: 'For Candidates' }"><i class="fas fa-users"></i> For Candidate</router-link>
+                        <router-link title="candidate" class="menu-item activeCandidate" data-toggle="collapse" v-if="this.url == 'for-candidates'"
+                            :to="{ name: 'ForCandidates' }"><i class="fas fa-users"></i> For Candidate</router-link>
+                        <router-link title="candidate" class="menu-item" data-toggle="collapse" v-else
+                            :to="{ name: 'ForCandidates' }"><i class="fas fa-users"></i> For Candidate</router-link>
                     </li>
                 </ul>
 
@@ -132,7 +136,11 @@ import axios from 'axios';
         data() {
             return {
                 isAuth: false,
+                url: '',
             };
+        },
+        mounted(){
+            this.url = window.location.href.substr(24)
         },
         created() {
             this.checkAuth()
