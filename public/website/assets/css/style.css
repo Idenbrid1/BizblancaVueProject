@@ -6329,15 +6329,48 @@ progress {
     display: flex;
 }
 
-.companyContent>ul>li>div {
+.CompanyContent{
+    display: flex; 
+    flex-direction: column;                                              
+}
+.labelCompany{
+    width: 150px;
+    height: auto;
+    background-color: #000000; 
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.CompanyImages, .video_upload_tab{
     display: flex;
-    flex-wrap: wrap;
-    width: 280px;
 }
-
-.companyContent>ul>li>div>img {
-    width: 20px;
-    height: 25px;
+.videotag>video{
+    width: 214px;
+    height: 128px;
+    margin: 10px 20px;
 }
-
+.video_upload_tab{
+    color: #fff;
+}
+.videoLabelCompany{
+    width: 110px;
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.CompanyImage{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+height: fit-content;
+}
+.CompanyImage>img{
+width: 102px;
+height: 76px;
+border: 1px solid;
+display: block;
+margin-top: 10px;
+}
 /* company profile page css */

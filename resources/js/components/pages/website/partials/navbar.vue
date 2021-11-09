@@ -26,7 +26,9 @@
                     <!-- <li class="close"><span onclick="Hide()">×</span></li> -->
                     <div class="d-flex mobile-view-btns px-3">
                         <a href="#" class="register-mbl-btn mr-2">Register CV</a>
-                        <a href="#" class="signin-mbl-btn ml-2">Sign in</a>
+                        <router-link v-if="this.isAuth == false" class="signin-mbl-btn ml-2" data-toggle="collapse" :to="{ name: 'Signin' }">
+                            <i class="fas fa-users"></i> Sign In</router-link>
+                        <a v-if="this.isAuth == true" class="register-desktop-btn ml-2" @click="logoutUser()">SignOut</a>
                     </div>
                     <a href="#news">
                         <li><i class="fas fa-globe"></i> News</li>
@@ -86,14 +88,12 @@
                     <div class="dropdown">
                     </div>
                     <li class="header-block-link">
-                        <a href="#" class="register-desktop-btn ml-2"><i class="fas fa-address-book"
-                                aria-hidden="true"></i> Register
-                            CV</a>
+                        <router-link v-if="this.isAuth == false" class="register-desktop-btn ml-2" data-toggle="collapse" :to="{ name: 'Signin' }">
+                            <i class="fas fa-address-book" aria-hidden="true"></i>  Register CV</router-link>
                     </li>
                     <li class="header-block-link">
-                        <a href="#" class="postjob-desktop-btn mr-2"><i class="fal fa-briefcase" aria-hidden="true"></i>
-                            Posts a
-                            job</a>
+                            <router-link v-if="this.isAuth == false" class="postjob-desktop-btn mr-2" data-toggle="collapse" :to="{ name: 'Signin' }">
+                            <i class="fal fa-briefcase" aria-hidden="true"></i>Posts a job</router-link>
                     </li>
                 </ul>
             </div>

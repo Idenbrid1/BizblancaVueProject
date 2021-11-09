@@ -9894,11 +9894,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -33595,23 +33590,7 @@ var render = function () {
                           { staticClass: "row no-gutters EducationInfoTab" },
                           [
                             _c("div", { staticClass: "col-12 col-md-6" }, [
-                              _c("ul", { staticClass: "profileLables" }, [
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass:
-                                      "profileLabel profileLabelBorder btr5",
-                                  },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/storage/images/companies/",
-                                        alt: "",
-                                      },
-                                    }),
-                                  ]
-                                ),
-                              ]),
+                              _vm._m(6),
                               _vm._v(" "),
                               _c("ul", { staticClass: "profileInfoList" }, [
                                 _c(
@@ -33692,72 +33671,59 @@ var render = function () {
                             ]),
                             _vm._v(" "),
                             _c("div", { staticClass: "col-12 col-md-6" }, [
-                              _vm._m(6),
-                              _vm._v(" "),
-                              _c("ul", { staticClass: "profileInfoList" }, [
-                                _vm.profile.profile_gallery
-                                  ? _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder",
-                                      },
-                                      _vm._l(
-                                        _vm.profile.profile_gallery.split(","),
-                                        function (item, index) {
-                                          return _c("img", {
-                                            key: index,
-                                            attrs: {
-                                              src:
-                                                "/storage/images/companies/" +
-                                                item,
-                                              height: "50px",
-                                              width: "50px",
-                                              alt: "item",
-                                            },
-                                          })
-                                        }
-                                      ),
-                                      0
-                                    )
-                                  : _c("li", {
-                                      staticClass:
-                                        "profileInfo profileInfoBorder rt0",
-                                    }),
+                              _c("div", { staticClass: "CompanyContent" }, [
+                                _c("div", { staticClass: "CompanyImages" }, [
+                                  _c(
+                                    "div",
+                                    { staticClass: "labelCompany btr5" },
+                                    [_vm._v("Company Pics")]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm.profile.profile_gallery
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "CompanyImage" },
+                                        _vm._l(
+                                          _vm.profile.profile_gallery.split(
+                                            ","
+                                          ),
+                                          function (item, index) {
+                                            return _c("img", {
+                                              key: index,
+                                              attrs: {
+                                                src:
+                                                  "/storage/images/companies/" +
+                                                  item,
+                                                alt: "item",
+                                              },
+                                            })
+                                          }
+                                        ),
+                                        0
+                                      )
+                                    : _vm._e(),
+                                ]),
                                 _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass:
-                                      "profileInfo profileInfoBorder",
-                                  },
-                                  [
-                                    _vm.profile.profile_video
-                                      ? _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _c("video", {
-                                                attrs: {
-                                                  width: "150",
-                                                  controls: "",
-                                                  src:
-                                                    "/storage/images/companies/" +
-                                                    _vm.profile.profile_video,
-                                                },
-                                              }),
-                                            ]),
-                                          ]
-                                        )
-                                      : _c("div", [_c("p")]),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c("li", {
-                                  staticClass:
-                                    "profileInfo profileInfoBorder rb0",
-                                }),
+                                _c("div", { staticClass: "video_upload_tab" }, [
+                                  _c(
+                                    "div",
+                                    { staticClass: "videoLabelCompany" },
+                                    [_vm._v("Video")]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm.profile.profile_video
+                                    ? _c("div", { staticClass: "videotag" }, [
+                                        _c("video", {
+                                          attrs: {
+                                            controls: "",
+                                            src:
+                                              "/storage/images/companies/" +
+                                              _vm.profile.profile_video,
+                                          },
+                                        }),
+                                      ])
+                                    : _vm._e(),
+                                ]),
                               ]),
                             ]),
                           ]
@@ -35052,21 +35018,35 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "profileLables" }, [
-      _c(
-        "li",
-        { staticClass: "profileLabel profileLabelBorder rb0 btr5 h150" },
-        [_c("span")]
-      ),
+      _c("li", { staticClass: "profileLabel profileLabelBorder btr5" }, [
+        _c("img", {
+          attrs: { src: "/website/assets/images/whatsapp.svg", alt: "" },
+        }),
+      ]),
       _vm._v(" "),
       _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
-        _c("span"),
+        _c("img", {
+          attrs: { src: "/website/assets/images/facebook.svg", alt: "" },
+        }),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rb0" }, [
-        _c("span"),
+      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+        _c("img", {
+          attrs: { src: "/website/assets/images/linkedin.svg", alt: "" },
+        }),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel bbl5" }, [_c("span")]),
+      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+        _c("img", {
+          attrs: { src: "/website/assets/images/twitter.svg", alt: "" },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+        _c("img", {
+          attrs: { src: "/website/assets/images/github.svg", alt: "" },
+        }),
+      ]),
     ])
   },
   function () {
@@ -37286,7 +37266,68 @@ var render = function () {
         1
       ),
       _vm._v(" "),
-      _vm._m(1),
+      _c("div", { staticClass: "navbar" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("ul", { attrs: { id: "nav-lists" } }, [
+          _c(
+            "div",
+            { staticClass: "d-flex mobile-view-btns px-3" },
+            [
+              _c(
+                "a",
+                { staticClass: "register-mbl-btn mr-2", attrs: { href: "#" } },
+                [_vm._v("Register CV")]
+              ),
+              _vm._v(" "),
+              this.isAuth == false
+                ? _c(
+                    "router-link",
+                    {
+                      staticClass: "signin-mbl-btn ml-2",
+                      attrs: {
+                        "data-toggle": "collapse",
+                        to: { name: "Signin" },
+                      },
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-users" }),
+                      _vm._v(" Sign In"),
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              this.isAuth == true
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "register-desktop-btn ml-2",
+                      on: {
+                        click: function ($event) {
+                          return _vm.logoutUser()
+                        },
+                      },
+                    },
+                    [_vm._v("SignOut")]
+                  )
+                : _vm._e(),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3),
+          _vm._v(" "),
+          _vm._m(4),
+          _vm._v(" "),
+          _vm._m(5),
+          _vm._v(" "),
+          _vm._m(6),
+          _vm._v(" "),
+          _vm._m(7),
+        ]),
+      ]),
     ]),
     _vm._v(" "),
     _c("header", { staticClass: "top-header", attrs: { id: "main-header" } }, [
@@ -37439,9 +37480,59 @@ var render = function () {
               _vm._v(" "),
               _c("div", { staticClass: "dropdown" }),
               _vm._v(" "),
-              _vm._m(2),
+              _c(
+                "li",
+                { staticClass: "header-block-link" },
+                [
+                  this.isAuth == false
+                    ? _c(
+                        "router-link",
+                        {
+                          staticClass: "register-desktop-btn ml-2",
+                          attrs: {
+                            "data-toggle": "collapse",
+                            to: { name: "Signin" },
+                          },
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fas fa-address-book",
+                            attrs: { "aria-hidden": "true" },
+                          }),
+                          _vm._v("  Register CV"),
+                        ]
+                      )
+                    : _vm._e(),
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(3),
+              _c(
+                "li",
+                { staticClass: "header-block-link" },
+                [
+                  this.isAuth == false
+                    ? _c(
+                        "router-link",
+                        {
+                          staticClass: "postjob-desktop-btn mr-2",
+                          attrs: {
+                            "data-toggle": "collapse",
+                            to: { name: "Signin" },
+                          },
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fal fa-briefcase",
+                            attrs: { "aria-hidden": "true" },
+                          }),
+                          _vm._v("Posts a job"),
+                        ]
+                      )
+                    : _vm._e(),
+                ],
+                1
+              ),
             ]
           ),
         ],
@@ -37449,7 +37540,7 @@ var render = function () {
       ),
     ]),
     _vm._v(" "),
-    _vm._m(4),
+    _vm._m(8),
   ])
 }
 var staticRenderFns = [
@@ -37474,85 +37565,33 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "navbar" }, [
-      _c(
-        "div",
-        { staticClass: "icon-bar", attrs: { onclick: "ShowNavbar()" } },
-        [_c("i"), _vm._v(" "), _c("i"), _vm._v(" "), _c("i")]
-      ),
-      _vm._v(" "),
-      _c("ul", { attrs: { id: "nav-lists" } }, [
-        _c("div", { staticClass: "d-flex mobile-view-btns px-3" }, [
-          _c(
-            "a",
-            { staticClass: "register-mbl-btn mr-2", attrs: { href: "#" } },
-            [_vm._v("Register CV")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            { staticClass: "signin-mbl-btn ml-2", attrs: { href: "#" } },
-            [_vm._v("Sign in")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#news" } }, [
-          _c("li", [_c("i", { staticClass: "fas fa-globe" }), _vm._v(" News")]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#expertise" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fas fa-search",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(
-              " Looking for a\n                        job\n                    "
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#expertise" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fas fa-search",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(
-              " Looking for\n                        employees\n                    "
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#happening" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fa-building",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" FAQS"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#video" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fa-video",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" Videos"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#contact" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fa-envelope",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" Contact"),
-          ]),
-        ]),
+    return _c(
+      "div",
+      { staticClass: "icon-bar", attrs: { onclick: "ShowNavbar()" } },
+      [_c("i"), _vm._v(" "), _c("i"), _vm._v(" "), _c("i")]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#news" } }, [
+      _c("li", [_c("i", { staticClass: "fas fa-globe" }), _vm._v(" News")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#expertise" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fas fa-search",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(
+          " Looking for a\n                        job\n                    "
+        ),
       ]),
     ])
   },
@@ -37560,38 +37599,58 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "header-block-link" }, [
-      _c(
-        "a",
-        { staticClass: "register-desktop-btn ml-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fas fa-address-book",
-            attrs: { "aria-hidden": "true" },
-          }),
-          _vm._v(" Register\n                        CV"),
-        ]
-      ),
+    return _c("a", { attrs: { href: "#expertise" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fas fa-search",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(
+          " Looking for\n                        employees\n                    "
+        ),
+      ]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "header-block-link" }, [
-      _c(
-        "a",
-        { staticClass: "postjob-desktop-btn mr-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fal fa-briefcase",
-            attrs: { "aria-hidden": "true" },
-          }),
-          _vm._v(
-            "\n                        Posts a\n                        job"
-          ),
-        ]
-      ),
+    return _c("a", { attrs: { href: "#happening" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fa-building",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(" FAQS"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#video" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fa-video",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(" Videos"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#contact" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fa-envelope",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(" Contact"),
+      ]),
     ])
   },
   function () {
