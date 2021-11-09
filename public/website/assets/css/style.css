@@ -1366,7 +1366,7 @@
 
 .list__card-link {
     display: block;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5rem;
     border-radius: 5px;
     color: #fff;
@@ -1510,7 +1510,7 @@
 .videoview-list-anker {
     background-color: #fff;
     color: #081351;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5rem;
     letter-spacing: 0;
     font-family: Raisonne Pro, sans-serif;
@@ -1580,7 +1580,7 @@
     color: #fff;
     padding: 10px 40px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -3607,7 +3607,7 @@
 .videoview-list-anker {
     background-color: #fff;
     color: #081351;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5rem;
     letter-spacing: 0;
     font-family: Raisonne Pro, sans-serif;
