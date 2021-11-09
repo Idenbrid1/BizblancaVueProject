@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div>
         <WebsiteNavbar/>
         <div class="login-page-container container p-0">
             <form>

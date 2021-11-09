@@ -6640,7 +6640,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-<<<<<<< HEAD
 //
 //
 //
@@ -6695,9 +6694,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-=======
->>>>>>> 8a9b6582843138c0dacfa475a1ef53b6b0dc82dc
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -13040,7 +13036,6 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: " container py-5" },
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
@@ -13147,7 +13142,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "loginButton" }, [
-      _c("button", { attrs: { type: "submit" } }, [
+      _c("button", { staticClass: "w-auto", attrs: { type: "submit" } }, [
         _vm._v(
           "\n                                    Send Password Reset Link\n                                "
         ),

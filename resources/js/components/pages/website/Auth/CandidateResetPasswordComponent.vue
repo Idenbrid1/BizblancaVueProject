@@ -1,5 +1,5 @@
 <template>
-    <div class=" container py-5">
+    <div>
         <WebsiteNavbar/>
         <div class="login-page-container container p-0">
             <form method="POST" @submit.prevent="Reset">
@@ -23,7 +23,7 @@
                                     <br>
                                 </div>
                                 <div class="loginButton">
-                                    <button type="submit">
+                                    <button type="submit" class="w-auto">
                                         Send Password Reset Link
                                     </button>
                                 </div>
