@@ -37258,7 +37258,68 @@ var render = function () {
         1
       ),
       _vm._v(" "),
-      _vm._m(1),
+      _c("div", { staticClass: "navbar" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("ul", { attrs: { id: "nav-lists" } }, [
+          _c(
+            "div",
+            { staticClass: "d-flex mobile-view-btns px-3" },
+            [
+              _c(
+                "a",
+                { staticClass: "register-mbl-btn mr-2", attrs: { href: "#" } },
+                [_vm._v("Register CV")]
+              ),
+              _vm._v(" "),
+              this.isAuth == false
+                ? _c(
+                    "router-link",
+                    {
+                      staticClass: "signin-mbl-btn ml-2",
+                      attrs: {
+                        "data-toggle": "collapse",
+                        to: { name: "Signin" },
+                      },
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-users" }),
+                      _vm._v(" Sign In"),
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              this.isAuth == true
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "register-desktop-btn ml-2",
+                      on: {
+                        click: function ($event) {
+                          return _vm.logoutUser()
+                        },
+                      },
+                    },
+                    [_vm._v("SignOut")]
+                  )
+                : _vm._e(),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3),
+          _vm._v(" "),
+          _vm._m(4),
+          _vm._v(" "),
+          _vm._m(5),
+          _vm._v(" "),
+          _vm._m(6),
+          _vm._v(" "),
+          _vm._m(7),
+        ]),
+      ]),
     ]),
     _vm._v(" "),
     _c("header", { staticClass: "top-header", attrs: { id: "main-header" } }, [
@@ -37295,7 +37356,7 @@ var render = function () {
                     attrs: {
                       title: "company",
                       "data-toggle": "collapse",
-                      to: { name: "For Companies" },
+                      to: { name: "ForCompanies" },
                     },
                   },
                   [
@@ -37318,7 +37379,7 @@ var render = function () {
                     attrs: {
                       title: "candidate",
                       "data-toggle": "collapse",
-                      to: { name: "For Candidates" },
+                      to: { name: "ForCandidates" },
                     },
                   },
                   [
@@ -37379,9 +37440,59 @@ var render = function () {
               _vm._v(" "),
               _c("div", { staticClass: "dropdown" }),
               _vm._v(" "),
-              _vm._m(2),
+              _c(
+                "li",
+                { staticClass: "header-block-link" },
+                [
+                  this.isAuth == false
+                    ? _c(
+                        "router-link",
+                        {
+                          staticClass: "register-desktop-btn ml-2",
+                          attrs: {
+                            "data-toggle": "collapse",
+                            to: { name: "Signin" },
+                          },
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fas fa-address-book",
+                            attrs: { "aria-hidden": "true" },
+                          }),
+                          _vm._v("  Register CV"),
+                        ]
+                      )
+                    : _vm._e(),
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(3),
+              _c(
+                "li",
+                { staticClass: "header-block-link" },
+                [
+                  this.isAuth == false
+                    ? _c(
+                        "router-link",
+                        {
+                          staticClass: "postjob-desktop-btn mr-2",
+                          attrs: {
+                            "data-toggle": "collapse",
+                            to: { name: "Signin" },
+                          },
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fal fa-briefcase",
+                            attrs: { "aria-hidden": "true" },
+                          }),
+                          _vm._v("Posts a job"),
+                        ]
+                      )
+                    : _vm._e(),
+                ],
+                1
+              ),
             ]
           ),
         ],
@@ -37389,7 +37500,7 @@ var render = function () {
       ),
     ]),
     _vm._v(" "),
-    _vm._m(4),
+    _vm._m(8),
   ])
 }
 var staticRenderFns = [
@@ -37414,85 +37525,33 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "navbar" }, [
-      _c(
-        "div",
-        { staticClass: "icon-bar", attrs: { onclick: "ShowNavbar()" } },
-        [_c("i"), _vm._v(" "), _c("i"), _vm._v(" "), _c("i")]
-      ),
-      _vm._v(" "),
-      _c("ul", { attrs: { id: "nav-lists" } }, [
-        _c("div", { staticClass: "d-flex mobile-view-btns px-3" }, [
-          _c(
-            "a",
-            { staticClass: "register-mbl-btn mr-2", attrs: { href: "#" } },
-            [_vm._v("Register CV")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            { staticClass: "signin-mbl-btn ml-2", attrs: { href: "#" } },
-            [_vm._v("Sign in")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#news" } }, [
-          _c("li", [_c("i", { staticClass: "fas fa-globe" }), _vm._v(" News")]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#expertise" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fas fa-search",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(
-              " Looking for a\n                        job\n                    "
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#expertise" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fas fa-search",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(
-              " Looking for\n                        employees\n                    "
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#happening" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fa-building",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" FAQS"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#video" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fa-video",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" Videos"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "#contact" } }, [
-          _c("li", [
-            _c("i", {
-              staticClass: "fas fa-envelope",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" Contact"),
-          ]),
-        ]),
+    return _c(
+      "div",
+      { staticClass: "icon-bar", attrs: { onclick: "ShowNavbar()" } },
+      [_c("i"), _vm._v(" "), _c("i"), _vm._v(" "), _c("i")]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#news" } }, [
+      _c("li", [_c("i", { staticClass: "fas fa-globe" }), _vm._v(" News")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#expertise" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fas fa-search",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(
+          " Looking for a\n                        job\n                    "
+        ),
       ]),
     ])
   },
@@ -37500,38 +37559,58 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "header-block-link" }, [
-      _c(
-        "a",
-        { staticClass: "register-desktop-btn ml-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fas fa-address-book",
-            attrs: { "aria-hidden": "true" },
-          }),
-          _vm._v(" Register\n                        CV"),
-        ]
-      ),
+    return _c("a", { attrs: { href: "#expertise" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fas fa-search",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(
+          " Looking for\n                        employees\n                    "
+        ),
+      ]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "header-block-link" }, [
-      _c(
-        "a",
-        { staticClass: "postjob-desktop-btn mr-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fal fa-briefcase",
-            attrs: { "aria-hidden": "true" },
-          }),
-          _vm._v(
-            "\n                        Posts a\n                        job"
-          ),
-        ]
-      ),
+    return _c("a", { attrs: { href: "#happening" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fa-building",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(" FAQS"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#video" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fa-video",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(" Videos"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#contact" } }, [
+      _c("li", [
+        _c("i", {
+          staticClass: "fas fa-envelope",
+          attrs: { "aria-hidden": "true" },
+        }),
+        _vm._v(" Contact"),
+      ]),
     ])
   },
   function () {
