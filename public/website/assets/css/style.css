@@ -504,7 +504,7 @@
 
 .main-navigation .menu-item {
     color: #000000;
-    font-weight: 600;
+    font-size: 16px;
 }
 
 .activeCompany {
@@ -911,9 +911,9 @@
 
 .hero-banner-btn-job,
 .hero-banner-btn-employee {
-    font-size: 20px;
+    font-size: 14px;
     font-family: "Red Hat Text", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     background: #081351;
     color: #fff;
     transition: background-color .5s linear;
@@ -1062,7 +1062,7 @@
 }
 
 .blog-news-btn {
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Red Hat Text", sans-serif;
     font-weight: 600;
     background: #081351;
@@ -1334,7 +1334,7 @@
 /*bizblanca process section*/
 
 .process-btn {
-    font-size: 20px;
+    font-size: 14px;
     font-family: "Red Hat Text", sans-serif;
     font-weight: 600;
     background: #081351;
@@ -3364,7 +3364,6 @@
 .main-hero-banner h2 {
     font-size: 2rem;
     color: #fff;
-    font-family: Bitter-bold;
     margin-bottom: 0px;
 }
 
