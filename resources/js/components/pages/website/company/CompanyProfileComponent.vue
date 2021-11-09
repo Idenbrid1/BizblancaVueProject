@@ -227,7 +227,11 @@
                                     <div class="row no-gutters EducationInfoTab">
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder btr5"><img :src="'/storage/images/companies/'" alt=""></li>
+                                                <li class="profileLabel profileLabelBorder btr5"><img src="/website/assets/images/whatsapp.svg" alt=""></li>
+                                                <li class="profileLabel profileLabelBorder"><img src="/website/assets/images/facebook.svg" alt=""></li>
+                                                <li class="profileLabel profileLabelBorder"><img src="/website/assets/images/linkedin.svg" alt=""></li>
+                                                <li class="profileLabel profileLabelBorder"><img src="/website/assets/images/twitter.svg" alt=""></li>
+                                                <li class="profileLabel profileLabelBorder"><img src="/website/assets/images/github.svg" alt=""></li>
                                             </ul>
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0">
@@ -258,29 +262,20 @@
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rb0 btr5 h150"><span></span>
-                                                </li>
-                                                <li class="profileLabel profileLabelBorder"><span></span>
-                                                </li>
-                                                <li class="profileLabel profileLabelBorder rb0"><span></span></li>
-                                                <li class="profileLabel bbl5"><span></span></li>
-                                            </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder" v-if="profile.profile_gallery" >
-                                                    <img v-for="(item, index) in profile.profile_gallery.split(',')" :key="index" :src="'/storage/images/companies/'+item" height="50px" width="50px" alt="item">
-                                                </li>
-                                                <li class="profileInfo profileInfoBorder rt0" v-else></li>
-                                                <li class="profileInfo profileInfoBorder">
-                                                    <div class="line-text-1" v-if="profile.profile_video">
-                                                        <p><video width="150" controls :src="'/storage/images/companies/'+profile.profile_video"></video></p>
+                                            <div class="CompanyContent">
+                                                <div class="CompanyImages">
+                                                    <div class="labelCompany btr5">Company Pics</div>
+                                                    <div class="CompanyImage" v-if="profile.profile_gallery">
+                                                        <img v-for="(item, index) in profile.profile_gallery.split(',')" :key="index" :src="'/storage/images/companies/'+item" alt="item">
                                                     </div>
-                                                    <div v-else>
-                                                        <p></p>
+                                                </div>
+                                                <div class="video_upload_tab">
+                                                    <div class="videoLabelCompany">Video</div>
+                                                    <div class="videotag" v-if="profile.profile_video">
+                                                        <video controls :src="'/storage/images/companies/'+profile.profile_video"></video>
                                                     </div>
-                                                </li>
-                                                <li class="profileInfo profileInfoBorder rb0"></li>
-                                            </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
