@@ -1022,7 +1022,7 @@
                                     <div class="col-lg-12 modelBtnContainer ">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateBasicInformation()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" >Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1118,7 +1118,7 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateAward()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearAwardArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1399,7 +1399,7 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateEducation()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearEducationArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1580,7 +1580,7 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateWorkExperience()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearWorkExperienceArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1668,7 +1668,7 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateLanguage()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearLanguageArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1750,7 +1750,7 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateSkill()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearSkillArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1900,7 +1900,7 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button @click.prevent="updateProject()"
                                             class="positiveBtn modelBtn mr-1">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearProjectArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1993,7 +1993,7 @@
             </div>
         </div>
         <!-- Modal QualificationModal  -->
-        <!-- DesireJobModal modal -->
+        <!-- SocialMediaModal modal -->
         <div class="modal fade DesireJobModa" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -2075,7 +2075,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal DesireJobModal  -->
+        <!-- Modal SocialMediaModal  -->
         <!-- DesireJobModal modal -->
         <div class="modal fade DesireJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
@@ -2098,54 +2098,54 @@
                                                         Job</label>
                                                     <div class="form-group m-0">
                                                         <label for="currentStatus">Yes</label>
-                                                        <input class="mx-1" name="currentStatus" type="radio">
+                                                        <input class="mx-1" name="currentStatus" type="radio" value="1" v-model="profile.is_looking_for_job">
                                                         <label for="currentStatus">No</label>
-                                                        <input class="mx-1" name="currentStatus" type="radio">
+                                                        <input class="mx-1" name="currentStatus" type="radio" value="0" v-model="profile.is_looking_for_job">
                                                     </div>
                                                 </div>
 
                                             </div>
-                                            <div class="row mt-3">
+                                            <div class="row mt-3" v-if="profile.is_looking_for_job == 1">
                                                 <div class="col-lg-6">
                                                    <div class="form-group">
                                                         <label for="location">Location</label>
-                                                        <input name="location" class="form-control" placeholder="Enter Location"/>
+                                                        <input name="location" class="form-control" placeholder="Enter Location" v-model="profile.looking_for_job_location"/>
                                                    </div>
                                                 </div>
-                                                <div class="col-lg-6">
+                                                <!-- <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label for="area">Area</label>
-                                                        <input name="area" class="form-control" placeholder="Enter Area"/>
+                                                        <input name="area" class="form-control" placeholder="Enter Area" v-model="profile.looking_for_job_location"/>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
-                                            <div class="row mt-3">
+                                            <div class="row mt-3" v-if="profile.is_looking_for_job == 1">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label for="expectedSalary">Expected Salary</label>
-                                                        <input name="expectedSalary" class="form-control" placeholder="Enter Expected Salary"/>
+                                                        <input name="expectedSalary" class="form-control" placeholder="Enter Expected Salary" v-model="profile.looking_for_job_expected_salary"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label for="joiningDate">Joining From</label>
-                                                        <input name="joiningDate" class="form-control"
+                                                        <input name="joiningDate" class="form-control" v-model="profile.looking_for_job_when"
                                                         placeholder="Please Select" type="date"/>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row mt-3">
+                                            <div class="row mt-3" v-if="profile.is_looking_for_job == 1">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label for="position">Position</label>
-                                                        <input name="position" class="form-control"
-                                                        placeholder="Enter Position" type="text"/>
+                                                        <input name="department" class="form-control" v-model="profile.looking_for_job_position"
+                                                        placeholder="Enter Department" type="text"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="shift">Shift</label>
-                                                        <input name="shift" class="form-control" placeholder="Enter Shift"
+                                                        <label for="shift">Department</label>
+                                                        <input name="shift" class="form-control" placeholder="Enter Shift" v-model="profile.looking_for_job_department"
                                                         type="text"/>
                                                     </div>
                                                 </div>
@@ -2155,15 +2155,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-3">
+                            <!-- <div class="row mt-3">
                                 <div id='addDesiredJobBtn' class="col-lg-12 btn addNewButton">
                                     <i class="fas fa-plus mr-1"></i> Add Another Job
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="row mt-4">
                                 <div class="col-lg-12 modelBtnContainer">
-                                    <button class="positiveBtn modelBtn mr-1">Update</button>
-                                    <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
+                                    <button class="positiveBtn modelBtn mr-1" @click.prevent="updateDesireJob()">Update</button>
+                                    <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearDesireJob()">Cancel</button>
                                 </div>
                             </div>
                         </section>
@@ -2264,6 +2264,12 @@
                         this.basic_information_record.email = response.data.candidate.email
                         this.basic_information_record.country = response.data.candidate.country
                         this.basic_information_record.bio = response.data.candidate.bio
+                        this.basic_information_record.is_looking_for_job = response.data.candidate.is_looking_for_job
+                        this.basic_information_record.looking_for_job_department = response.data.candidate.looking_for_job_department
+                        this.basic_information_record.looking_for_job_expected_salary = response.data.candidate.looking_for_job_expected_salary
+                        this.basic_information_record.looking_for_job_location = response.data.candidate.looking_for_job_location
+                        this.basic_information_record.looking_for_job_position = response.data.candidate.looking_for_job_position
+                        this.basic_information_record.looking_for_job_when = response.data.candidate.looking_for_job_when
                     });
             },
             updateBasicInformation() {
@@ -2290,6 +2296,18 @@
             },
             addMoreEducation() {
                 this.addMoreDBEducation = true
+            },
+            clearEducationArray()
+            {
+                this.getCandidateDashboardData()
+                this.education_push_array = {
+                    school_type: '',
+                    school_name: '',
+                    start_date: '',
+                    end_date: '',
+                    department: '',
+                }
+                this.addMoreDBEducation = false
             },
             updateEducation() {
                 if (this.education_push_array.school_name) {
@@ -2385,6 +2403,15 @@
             addMoreLanguage() {
                 this.addMoreDBLanguage = true
             },
+            clearLanguageArray()
+            {
+                this.getCandidateDashboardData()
+                this.language_push_array = {
+                    name: '',
+                    level: '',
+                }
+                this.addMoreDBLanguage = false
+            },
             updateLanguage() {
                 if (this.language_push_array.name) {
                     this.profile.candidate_language.push({
@@ -2459,6 +2486,15 @@
                     name: '',
                     level: '',
                 }
+            },
+            clearAwardArray()
+            {
+                this.getCandidateDashboardData()
+                this.award_push_array = {
+                    name: '',
+                    date: '',
+                }
+                this.addMoreDBAward = false
             },
             addMoreAward() {
                 this.addMoreDBAward = true
@@ -2545,6 +2581,15 @@
             },
             addMoreSkill() {
                 this.addMoreDBSkill = true
+            },
+            clearSkillArray()
+            {
+                this.getCandidateDashboardData()
+                this.skill_push_array = {
+                    name: '',
+                    level: '',
+                }
+                this.addMoreDBSkill = false
             },
             updateSkill() {
                 if (this.skill_push_array.name) {
@@ -2677,6 +2722,18 @@
             addMoreWorkExperience() {
                 this.addMoreDBWorkExperience = true
             },
+            clearWorkExperienceArray()
+            {
+                this.getCandidateDashboardData()
+                this.work_experience_push_array = {
+                    company_name: '',
+                    designation: '',
+                    end_date: '',
+                    is_working_currently: '',
+                    start_date: '',
+                }
+                this.addMoreDBWorkExperience = false
+            },
             updateWorkExperience() {
                 if (this.work_experience_push_array.company_name) {
                     this.profile.candidate_experience.push({
@@ -2778,6 +2835,18 @@
             },
             addMoreProject() {
                 this.addMoreDBProject = true
+            },
+            clearProjectArray()
+            {
+                this.getCandidateDashboardData()
+                this.project_push_array = {
+                    name: '',
+                    link: '',
+                    start_date: '',
+                    end_date: '',
+                    description: '',
+                }
+                this.addMoreDBProject = false
             },
             updateProject() {
                 if (this.project_push_array.name) {
@@ -2949,6 +3018,38 @@
                         })
                     }
                 })
+            },
+            updateDesireJob() {
+                axios.post('/update/desire-job', {
+                        is_looking_for_job: this.profile.is_looking_for_job,
+                        looking_for_job_department: this.profile.looking_for_job_department,
+                        looking_for_job_expected_salary: this.profile.looking_for_job_expected_salary,
+                        looking_for_job_location: this.profile.looking_for_job_location,
+                        looking_for_job_position: this.profile.looking_for_job_position,
+                        looking_for_job_when: this.profile.looking_for_job_when,
+                    })
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.errors = []
+                            this.getCandidateDashboardData()
+                            $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Updated',
+                                text: 'Candidate Updated Successfully',
+                            })
+                            this.skill_push_array = {
+                                name: '',
+                                level: '',
+                            }
+                            this.addMoreDBSkill = false
+                        }
+                    })
+                    .catch((err) => {
+
+                    })
             },
             openProfileTab() {
                 document.getElementById("ProfileTabMobileNav").style.left = "0%"

@@ -303,4 +303,36 @@ class CandidateController extends Controller
         }
         return response()->json($data);
     }
+
+    public function updateDesireJob(Request $request)
+    {
+        $user = Auth::user();
+        $candidate = Candidate::where('user_id', $user->id)->first();
+        if($request->is_looking_for_job == 1)
+        {
+            $candidate->is_looking_for_job = $request->is_looking_for_job;
+            $candidate->looking_for_job_department = $request->looking_for_job_department;
+            $candidate->looking_for_job_expected_salary = $request->looking_for_job_expected_salary;
+            $candidate->looking_for_job_location = $request->looking_for_job_location;
+            $candidate->looking_for_job_position = $request->looking_for_job_position;
+            $candidate->looking_for_job_when = $request->looking_for_job_when;
+            // $candidate->looking_for_job_why = $request->looking_for_job_why;
+            // $candidate->looking_for_job_note = $request->looking_for_job_note;
+            $candidate->update();
+            return back();
+        }
+        else{
+            $candidate->is_looking_for_job = 0;
+            $candidate->looking_for_job_when = null;
+            // $candidate->looking_for_job_why = null;
+            $candidate->looking_for_job_expected_salary = null;
+            $candidate->looking_for_job_position = null;
+            $candidate->looking_for_job_department = null;
+            // $candidate->looking_for_job_note = null;
+            $candidate->looking_for_job_location = null;
+            $candidate->update();
+            return back();
+
+        }
+    }
 }

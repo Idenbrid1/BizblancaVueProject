@@ -72,7 +72,7 @@
                             :to="{ name: 'For Candidates' }"><i class="fas fa-users"></i> For Candidate</router-link>
                     </li>
                     <router-link class="candidate-mbl-btn" data-toggle="collapse"
-                        :to="{ name: 'Test Candidates Profile' }"><i class="fas fa-users"></i> Profile</router-link>
+                        :to="{ name: 'Test Company Profile' }"><i class="fas fa-users"></i> Profile</router-link>
                 </ul>
 
                 <ul class="main-navigation float-right d-flex align-items-center">

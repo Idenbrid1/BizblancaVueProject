@@ -22,7 +22,7 @@ class Company extends Model
         'industry',
         'description',
         'logo',
-        'profile_picture',
+        'profile_gallery',
         'profile_video',
         'whatsapp',
         'facebook',

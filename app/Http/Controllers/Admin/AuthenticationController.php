@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Mail\EmailResetPassword;
 use App\Mail\MailUserRegisterVerification;
+use App\Models\Candidate;
 use App\Models\User;
 use App\Models\Company;
 use App\Models\PasswordReset;
@@ -79,6 +80,15 @@ class AuthenticationController extends Controller
                 $company->phone = $request->phone;
                 $company->user_id = $User->id;
                 $company->save(); 
+            }
+            if($request->type == 'candidate')
+            {
+                $candidate = new Candidate;
+                $candidate->full_name = $User->name;
+                $candidate->email = $User->email;
+                $candidate->phone = $User->phone;
+                $candidate->user_id = $User->id;
+                $candidate->save(); 
             }
             Mail::to($User->email)->send(new MailUserRegisterVerification($User));
             return response()->json([
@@ -319,6 +329,29 @@ class AuthenticationController extends Controller
         if(Auth::check())
         { 
             if(Auth::user()->type == 'candidate')
+            {
+                return response()->json([
+                    'success'   => true,
+                ]);   
+            }
+            else{
+                return response()->json([
+                    'success'   => false,
+                ]);
+            }
+        }
+        else{
+            return response()->json([
+                'success'   => false,
+            ]);
+        }
+    }
+
+    public function checkCompanyRole()
+    {
+        if(Auth::check())
+        { 
+            if(Auth::user()->type == 'company')
             {
                 return response()->json([
                     'success'   => true,

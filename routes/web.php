@@ -46,6 +46,7 @@ Route::get('user-logout', [App\Http\Controllers\Admin\AuthenticationController::
 Route::get('check-auth', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkAuth']);
 Route::get('get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'getData']);
 Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCandidateRole']);
+Route::get('check-company-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCompanyRole']);
 
 Route::post('/reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordPost']);
 Route::get('/reset-password/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPassword']);
@@ -99,7 +100,7 @@ Route::middleware('auth')->group(function(){
     Route::post('/update/resume-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateFileResume'])->name('profile.updateFileResume');
     Route::post('/update/cnic-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateFileCnic'])->name('profile.updateCnic');
     Route::post('/update/experience-letter-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateExperienceLetterFile'])->name('profile.updateExperienceLetter');
-    // Route::post('/update/desire-job', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateDesireJob'])->name('profile.updateDesireJob');
+    Route::post('/update/desire-job', [App\Http\Controllers\Candidate\CandidateController::class, 'updateDesireJob'])->name('profile.updateDesireJob');
     // Route::post('/update/remark', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateRemark'])->name('profile.updateRemark');
     // // Route::post('/update/cnic-back', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnicBack'])->name('profile.updateCnicBack');
     // Route::post('/update/profile-pic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfilePic'])->name('profile.updateProfilePic');
@@ -128,24 +129,26 @@ Route::prefix('candidate')->name('candidate.')->group(function(){
 
 });
 Route::post('/update/newsletter', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'saveNewsLetter'])->name('saveNewsLetter');
-
-Route::prefix('company')->name('company.')->group(function(){
-    Route::get('/index', [App\Http\Controllers\Website\Company\HomeController::class, 'index'])->name('index');
+//samad
+// Route::prefix('company')->name('company.')->group(function(){
+    // Route::get('/index', [App\Http\Controllers\Website\Company\HomeController::class, 'index'])->name('index');
 
     Route::middleware('auth')->group(function(){
-		Route::get('/home', [App\Http\Controllers\Website\Company\HomeController::class, 'showDashboardPage'])->name('home');
-		Route::get('/profile', [App\Http\Controllers\Website\Company\ProfileController::class, 'show'])->name('profile.show');
-		Route::get('/profile_edit', [App\Http\Controllers\Website\Company\ProfileController::class, 'edit'])->name('profile.edit');
-        Route::post('/update/basicinformation', [App\Http\Controllers\Website\Company\ProfileController::class, 'update'])->name('profile.updateBasicInformation');
-        Route::post('/update/socialmedia', [App\Http\Controllers\Website\Company\ProfileController::class, 'socialmediaupdate'])->name('profile.updateSocialMedia');
+        Route::get('get-company-profile', [App\Http\Controllers\Company\CompanyController::class, 'getCompanyProfile']);
+        Route::post('/update/company-basicinformation', [App\Http\Controllers\Company\CompanyController::class, 'updateCompanyBasicInformation'])->name('profile.updateBasicInformationCompany');
+        Route::post('/update/socialmedia', [App\Http\Controllers\Company\CompanyController::class, 'socialmediaupdate'])->name('profile.updateSocialMedia');
+		// Route::get('/home', [App\Http\Controllers\Website\Company\HomeController::class, 'showDashboardPage'])->name('home');
+		// Route::get('/profile', [App\Http\Controllers\Website\Company\ProfileController::class, 'show'])->name('profile.show');
+		// Route::get('/profile_edit', [App\Http\Controllers\Website\Company\ProfileController::class, 'edit'])->name('profile.edit');
 
-        Route::get('/my_jobpost_list', [App\Http\Controllers\Website\JobPostController::class, 'index'])->name('jobpost.index');
-		Route::get('/message_list', [App\Http\Controllers\Website\MessageController::class, 'index'])->name('message.index');
-		Route::get('/candidate_list', [App\Http\Controllers\Website\CandidateController::class, 'index'])->name('candidate.index');
+        // Route::get('/my_jobpost_list', [App\Http\Controllers\Website\JobPostController::class, 'index'])->name('jobpost.index');
+		// Route::get('/message_list', [App\Http\Controllers\Website\MessageController::class, 'index'])->name('message.index');
+		// Route::get('/candidate_list', [App\Http\Controllers\Website\CandidateController::class, 'index'])->name('candidate.index');
 
 	});
 
-});
+// });
+//samad
 
 Route::prefix('faq')->name('faq.')->group(function(){
     Route::get('/index', [App\Http\Controllers\Website\FAQController::class, 'showFAQPage'])->name('index');

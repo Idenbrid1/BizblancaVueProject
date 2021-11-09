@@ -141,11 +141,11 @@ import WebsiteNavbar from '../partials/navbar.vue';
                         })
                         if(response.data.user.type == 'candidate')
                         {
-                            this.$router.push({ name: 'CandidateDashboard' })
+                            this.$router.push({ name: 'CandidateProfile' })
                         }
                         if(response.data.user.type == 'company')
                         {
-                            this.$router.push({ name: 'CompanyDashboard' })
+                            this.$router.push({ name: 'CompanyProfile' })
                         }
                     }
                 });

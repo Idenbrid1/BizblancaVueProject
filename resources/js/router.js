@@ -11,7 +11,7 @@ import SignIn from './components/pages/website/Auth/SignInComponent.vue';
 import SignUp from './components/pages/website/Auth/SignUpComponent.vue';
 import CandidateResetPassword from './components/pages/website/Auth/CandidateResetPasswordComponent.vue';
 import CandidateNewPassword from './components/pages/website/Auth/CandidateNewPasswordComponent.vue';
-import CandidateDashboard from './components/pages/website/candidate/CandidateDashboardComponent.vue';
+import CandidateProfile from './components/pages/website/candidate/CandidateProfileComponent.vue';
 import CompanyProfile from './components/pages/website/company/CompanyProfileComponent.vue';
 
 Vue.use(VueRouter);
@@ -44,11 +44,11 @@ const router = new VueRouter({
             name: 'Test Company Profile',
             component: TestCompanyProfile
         },
-        {
-            path: '/company-profile',
-            name: 'For Company Profile',
-            component: CompanyProfile
-        },
+        // {
+        //     path: '/company-profile',
+        //     name: 'For Company Profile',
+        //     component: CompanyProfile
+        // },
         {
             path: '/signin',
             name: 'Signin',
@@ -60,11 +60,26 @@ const router = new VueRouter({
             component: SignUp
         },
         {
-            path: '/candidate-dashboard',
-            name: 'CandidateDashboard',
-            component: CandidateDashboard,
+            path: '/candidate-profile',
+            name: 'CandidateProfile',
+            component: CandidateProfile,
             beforeEnter: (to, from, next) => { 
                 axios.get('check-candidate-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
+        },
+        {
+            path: '/company-profile',
+            name: 'CompanyProfile',
+            component: CompanyProfile,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
