@@ -54,7 +54,10 @@
           basis, BizBlanca offers a level of service which allows us to build a
           rapport with you and your organization. Even when we have found your
           new hire, our experts continue to support you after your chosen
-          candidate has joined your organization. Whether you’re searching for a
+          candidate has joined your organization.
+        </p>
+        <p>
+          Whether you’re searching for a
           scarce skillset, or are struggling with a high volume of applications,
           we can find you the right professional for your role, saving you time
           and money. When working with us to recruit permanently, you’ll receive

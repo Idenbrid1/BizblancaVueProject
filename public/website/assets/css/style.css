@@ -139,7 +139,7 @@
 }
 
 .loginFeilds {
-    width: 100%;
+    width: 450px;
 }
 
 .loginFeilds>.form-group {
@@ -252,7 +252,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 450px;
     padding: 10px 0px;
 }
 
@@ -537,7 +537,8 @@
 .main-navigation .register-desktop-btn:hover,
 .main-navigation .postjob-desktop-btn:hover {
     background-color: #081351;
-    color: #fff;
+    color: #fff !important;
+    cursor: pointer;
 }
 
 .main-navigation .register-desktop-btn i,
@@ -657,7 +658,10 @@
     #main-header {
         display: none;
     }
-
+    .rememberforgot, .loginFeilds{
+        width: 100%;
+    }
+    
     #secondary-header-nav {
         display: none;
         ;
@@ -4697,7 +4701,6 @@
     }
 }
 
-
 /* COMPANY-DETAIL-PAGE */
 
 .companyDescription>h4,
@@ -4709,14 +4712,17 @@
 }
 
 .companyDescription>p:nth-child(1) {
-    color: #081351;
+    color: #081351 !important;
     font-size: 16px;
     margin: 15px 0px;
     line-height: inherit;
 }
-
+.companyDescription{
+    color: #081351 !important;
+    font-size: 16px;
+}
 .companyDescription>p:nth-child(2) {
-    color: #081351;
+    color: #081351 !important;
     font-size: 24px;
     font-weight: 700;
     margin: 15px 0px;
@@ -5681,7 +5687,7 @@
     width: 100%;
     position: fixed;
     z-index: 20;
-    top: 0;
+    top: 60px;
     left: -100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow-x: hidden;

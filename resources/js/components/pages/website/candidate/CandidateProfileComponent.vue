@@ -23,8 +23,7 @@
                                 </li>
                                 <!-- <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#qualification">Qualification</a>
-                        </li> -->
-                                <li class="nav-item">
+                        </li> -->                                <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#languages">Languages</a>
                                 </li>
                                 <li class="nav-item">
@@ -2350,6 +2349,7 @@
                     })
             },
             addMoreEducation() {
+                
                 this.addMoreDBEducation = true
             },
             clearEducationArray()
