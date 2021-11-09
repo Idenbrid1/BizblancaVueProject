@@ -71,8 +71,6 @@
                         <router-link title="candidate" class="menu-item" data-toggle="collapse"
                             :to="{ name: 'For Candidates' }"><i class="fas fa-users"></i> For Candidate</router-link>
                     </li>
-                    <router-link class="candidate-mbl-btn" data-toggle="collapse"
-                        :to="{ name: 'Test Company Profile' }"><i class="fas fa-users"></i> Profile</router-link>
                 </ul>
 
                 <ul class="main-navigation float-right d-flex align-items-center">

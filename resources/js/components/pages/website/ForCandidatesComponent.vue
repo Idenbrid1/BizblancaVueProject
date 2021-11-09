@@ -1,5 +1,7 @@
 <template>
   <div>
+    <WebsiteNavbar />
+    
     <!-- Hero Banner Section -->
     <section class="candidateSection">
       <div class="row no-gutters">
@@ -547,9 +549,13 @@
 </template>
 <script src="/website/assets/js/swiper/swiper-bundle.min.js"></script>
 <script>
+  import WebsiteNavbar from './partials/navbar.vue';
 export default {
   data() {
     return {};
+  },
+  components: {
+    WebsiteNavbar,
   },
   mounted() {
     var swiper = new Swiper(".successStoriesSwiper", {

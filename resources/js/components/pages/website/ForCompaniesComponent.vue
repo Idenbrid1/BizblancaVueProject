@@ -1,5 +1,6 @@
 <template>
   <div>
+    <WebsiteNavbar />
     <div class="companyBanner w-100 row no-gutters" id="why-bizblanca">
       <div class="bannerSec2 col-12 col-lg-6 px-2">
         <div class="leftboxbanner">
@@ -355,9 +356,14 @@
 </template>
 <script src="/website/assets/js/swiper/swiper-bundle.min.js"></script>
 <script>
+  import WebsiteNavbar from './partials/navbar.vue';
+
 export default {
   data() {
     return {};
+  },
+  components: {
+    WebsiteNavbar,
   },
   mounted() {
     var swiper = new Swiper(".helpslider", {
