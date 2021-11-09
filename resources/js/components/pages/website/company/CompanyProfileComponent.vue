@@ -267,13 +267,16 @@
                                                 <li class="profileLabel bbl5"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder"  v-for="(item, index) in profile.profile_gallery.split(',')" :key="index">
-                                                    <img :src="'/storage/images/companies/'+item" height="50px" width="50px" alt="item">
+                                                <li class="profileInfo profileInfoBorder" v-if="profile.profile_gallery" >
+                                                    <img v-for="(item, index) in profile.profile_gallery.split(',')" :key="index" :src="'/storage/images/companies/'+item" height="50px" width="50px" alt="item">
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rt0"></li>
+                                                <li class="profileInfo profileInfoBorder rt0" v-else></li>
                                                 <li class="profileInfo profileInfoBorder">
-                                                    <div class="line-text-1">
+                                                    <div class="line-text-1" v-if="profile.profile_video">
                                                         <p><video width="150" controls :src="'/storage/images/companies/'+profile.profile_video"></video></p>
+                                                    </div>
+                                                    <div v-else>
+                                                        <p></p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder rb0"></li>
