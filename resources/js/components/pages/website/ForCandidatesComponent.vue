@@ -35,7 +35,7 @@
         <h1 class="MsgHeading">
           Be scouted and headhunted by the top IT companies of Pakistan
         </h1>
-        <section class="col-12 cardsInfoContainer container p-md-0 px-1">
+        <section class="col-12 cardsInfoContainer p-md-0 px-1">
           <div class="row no-gutters cardsInfoWrap container">
             <span
               >Upgrade and change your career with style Get scouted by the best
