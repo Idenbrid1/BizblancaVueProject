@@ -19,6 +19,9 @@ Vue.use(VueRouter);
 const router = new VueRouter({
     linkExactActiveClass: 'active',
     routes: [
+        {   path: "*", 
+            component: LandingPage 
+        },
         {
             path: '/',
             name: 'Landing Page',
@@ -26,24 +29,24 @@ const router = new VueRouter({
         },
         {
             path: '/for-companies',
-            name: 'For Companies',
+            name: 'ForCompanies',
             component: ForCompanies
         },
         {
             path: '/for-candidates',
-            name: 'For Candidates',
+            name: 'ForCandidates',
             component: ForCandidates
         },
-        {
-            path: '/test-candidates-profile',
-            name: 'Test Candidates Profile',
-            component: TestCandidateProfile
-        },
-        {
-            path: '/test-company-profile',
-            name: 'Test Company Profile',
-            component: TestCompanyProfile
-        },
+        // {
+        //     path: '/test-candidates-profile',
+        //     name: 'Test Candidates Profile',
+        //     component: TestCandidateProfile
+        // },
+        // {
+        //     path: '/test-company-profile',
+        //     name: 'Test Company Profile',
+        //     component: TestCompanyProfile
+        // },
         // {
         //     path: '/company-profile',
         //     name: 'For Company Profile',

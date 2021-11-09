@@ -2741,7 +2741,8 @@ __webpack_require__.r(__webpack_exports__);
         password: '',
         confirm_password: ''
       },
-      errors: []
+      errors: [],
+      errors_company: []
     };
   },
   components: {
@@ -2783,7 +2784,7 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/user-registration', this.company_record).then(function (response) {
         if (response.data.success == false) {
           Swal.close();
-          _this2.errors = response.data.errors;
+          _this2.errors = response.data.errors_company;
         } else {
           Swal.close();
           Swal.fire({
@@ -6637,6 +6638,60 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -6656,6 +6711,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         country: '',
         bio: ''
       },
+      errors_basic_information: [],
       education_record: [],
       education_push_array: {
         school_type: '',
@@ -6742,7 +6798,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var data = new FormData(basicinformationForm);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/basicinformation', data).then(function (res) {
         if (res.data.success == false) {
-          _this2.errors = res.data.errors;
+          _this2.errors_basic_information = res.data.errors;
         } else {
           _this2.errors = [];
 
@@ -10734,26 +10790,31 @@ vue__WEBPACK_IMPORTED_MODULE_12__["default"].use(vue_router__WEBPACK_IMPORTED_MO
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_13__["default"]({
   linkExactActiveClass: 'active',
   routes: [{
+    path: "*",
+    component: _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }, {
     path: '/',
     name: 'Landing Page',
     component: _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }, {
     path: '/for-companies',
-    name: 'For Companies',
+    name: 'ForCompanies',
     component: _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
     path: '/for-candidates',
-    name: 'For Candidates',
+    name: 'ForCandidates',
     component: _components_pages_website_ForCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }, {
-    path: '/test-candidates-profile',
-    name: 'Test Candidates Profile',
-    component: _components_pages_website_candidate_TestCandidateProfile_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }, {
-    path: '/test-company-profile',
-    name: 'Test Company Profile',
-    component: _components_pages_website_company_TestCompanyProfile_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, // {
+  //     path: '/test-candidates-profile',
+  //     name: 'Test Candidates Profile',
+  //     component: TestCandidateProfile
+  // },
+  // {
+  //     path: '/test-company-profile',
+  //     name: 'Test Company Profile',
+  //     component: TestCompanyProfile
+  // },
+  // {
   //     path: '/company-profile',
   //     name: 'For Company Profile',
   //     component: CompanyProfile
@@ -13856,7 +13917,7 @@ var render = function () {
                                     }),
                                     _vm._v(" "),
                                     _c("small", [
-                                      _vm.errors.name != null
+                                      _vm.errors_company.name != null
                                         ? _c(
                                             "span",
                                             {
@@ -13866,7 +13927,9 @@ var render = function () {
                                             [
                                               _vm._v(
                                                 "\n                                                                " +
-                                                  _vm._s(_vm.errors.name[0]) +
+                                                  _vm._s(
+                                                    _vm.errors_company.name[0]
+                                                  ) +
                                                   "\n                                                            "
                                               ),
                                             ]
@@ -13914,7 +13977,7 @@ var render = function () {
                                     }),
                                     _vm._v(" "),
                                     _c("small", [
-                                      _vm.errors.company_name != null
+                                      _vm.errors_company.company_name != null
                                         ? _c(
                                             "span",
                                             {
@@ -13925,7 +13988,8 @@ var render = function () {
                                               _vm._v(
                                                 "\n                                                                " +
                                                   _vm._s(
-                                                    _vm.errors.company_name[0]
+                                                    _vm.errors_company
+                                                      .company_name[0]
                                                   ) +
                                                   "\n                                                            "
                                               ),
@@ -13972,7 +14036,7 @@ var render = function () {
                                     }),
                                     _vm._v(" "),
                                     _c("small", [
-                                      _vm.errors.email != null
+                                      _vm.errors_company.email != null
                                         ? _c(
                                             "span",
                                             {
@@ -13982,7 +14046,9 @@ var render = function () {
                                             [
                                               _vm._v(
                                                 "\n                                                                " +
-                                                  _vm._s(_vm.errors.email[0]) +
+                                                  _vm._s(
+                                                    _vm.errors_company.email[0]
+                                                  ) +
                                                   "\n                                                            "
                                               ),
                                             ]
@@ -14028,7 +14094,7 @@ var render = function () {
                                     }),
                                     _vm._v(" "),
                                     _c("small", [
-                                      _vm.errors.phone != null
+                                      _vm.errors_company.phone != null
                                         ? _c(
                                             "span",
                                             {
@@ -14038,7 +14104,9 @@ var render = function () {
                                             [
                                               _vm._v(
                                                 "\n                                                                " +
-                                                  _vm._s(_vm.errors.phone[0]) +
+                                                  _vm._s(
+                                                    _vm.errors_company.phone[0]
+                                                  ) +
                                                   "\n                                                            "
                                               ),
                                             ]
@@ -14084,7 +14152,7 @@ var render = function () {
                                     }),
                                     _vm._v(" "),
                                     _c("small", [
-                                      _vm.errors.password != null
+                                      _vm.errors_company.password != null
                                         ? _c(
                                             "span",
                                             {
@@ -14095,7 +14163,8 @@ var render = function () {
                                               _vm._v(
                                                 "\n                                                                " +
                                                   _vm._s(
-                                                    _vm.errors.password[0]
+                                                    _vm.errors_company
+                                                      .password[0]
                                                   ) +
                                                   "\n                                                            "
                                               ),
@@ -14145,7 +14214,8 @@ var render = function () {
                                     }),
                                     _vm._v(" "),
                                     _c("small", [
-                                      _vm.errors.confirm_password != null
+                                      _vm.errors_company.confirm_password !=
+                                      null
                                         ? _c(
                                             "span",
                                             {
@@ -14156,7 +14226,7 @@ var render = function () {
                                               _vm._v(
                                                 "\n                                                                " +
                                                   _vm._s(
-                                                    _vm.errors
+                                                    _vm.errors_company
                                                       .confirm_password[0]
                                                   ) +
                                                   "\n                                                            "
@@ -19081,7 +19151,60 @@ var render = function () {
                                   _vm._v(" "),
                                   _c("div", { staticClass: "subFormFields" }, [
                                     _c("div", { staticClass: "row" }, [
-                                      _vm._m(34),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                {
+                                                  attrs: {
+                                                    for: "profilePhoto",
+                                                  },
+                                                },
+                                                [_vm._v("Profile Photo")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  name: "profilePhoto",
+                                                  id: "profilePhoto",
+                                                  type: "file",
+                                                },
+                                              }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors_basic_information
+                                                  .profilePhoto != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm
+                                                                .errors_basic_information
+                                                                .profilePhoto[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
                                       _vm._v(" "),
                                       _c(
                                         "div",
@@ -19141,6 +19264,30 @@ var render = function () {
                                                   },
                                                 },
                                               }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors_basic_information
+                                                  .full_name != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm
+                                                                .errors_basic_information
+                                                                .full_name[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
                                             ]
                                           ),
                                         ]
@@ -19247,6 +19394,30 @@ var render = function () {
                                                   },
                                                 },
                                               }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors_basic_information
+                                                  .gender != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm
+                                                                .errors_basic_information
+                                                                .gender[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
                                             ]
                                           ),
                                         ]
@@ -19305,6 +19476,30 @@ var render = function () {
                                                   },
                                                 },
                                               }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors_basic_information
+                                                  .city != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm
+                                                                .errors_basic_information
+                                                                .city[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
                                             ]
                                           ),
                                         ]
@@ -19359,6 +19554,30 @@ var render = function () {
                                                 },
                                               },
                                             }),
+                                            _vm._v(" "),
+                                            _c("small", [
+                                              _vm.errors_basic_information
+                                                .address != null
+                                                ? _c(
+                                                    "span",
+                                                    {
+                                                      staticClass:
+                                                        "text-danger",
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                                " +
+                                                          _vm._s(
+                                                            _vm
+                                                              .errors_basic_information
+                                                              .address[0]
+                                                          ) +
+                                                          "\n                                                            "
+                                                      ),
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                            ]),
                                           ]
                                         ),
                                       ]),
@@ -19416,6 +19635,30 @@ var render = function () {
                                                   },
                                                 },
                                               }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors_basic_information
+                                                  .cnic != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm
+                                                                .errors_basic_information
+                                                                .cnic[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
                                             ]
                                           ),
                                         ]
@@ -19477,6 +19720,30 @@ var render = function () {
                                                   },
                                                 },
                                               }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors_basic_information
+                                                  .date_of_birth != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm
+                                                                .errors_basic_information
+                                                                .date_of_birth[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
                                             ]
                                           ),
                                         ]
@@ -19536,6 +19803,30 @@ var render = function () {
                                                   },
                                                 },
                                               }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors_basic_information
+                                                  .zipcode != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm
+                                                                .errors_basic_information
+                                                                .zipcode[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
                                             ]
                                           ),
                                         ]
@@ -19596,6 +19887,30 @@ var render = function () {
                                                   },
                                                 },
                                               }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors_basic_information
+                                                  .phone != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm
+                                                                .errors_basic_information
+                                                                .phone[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
                                             ]
                                           ),
                                         ]
@@ -19746,6 +20061,30 @@ var render = function () {
                                                   ),
                                                 ]
                                               ),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors_basic_information
+                                                  .country != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm
+                                                                .errors_basic_information
+                                                                .country[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
                                             ]
                                           ),
                                         ]
@@ -19802,6 +20141,30 @@ var render = function () {
                                                 },
                                               },
                                             }),
+                                            _vm._v(" "),
+                                            _c("small", [
+                                              _vm.errors_basic_information
+                                                .bio != null
+                                                ? _c(
+                                                    "span",
+                                                    {
+                                                      staticClass:
+                                                        "text-danger",
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                                " +
+                                                          _vm._s(
+                                                            _vm
+                                                              .errors_basic_information
+                                                              .bio[0]
+                                                          ) +
+                                                          "\n                                                            "
+                                                      ),
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                            ]),
                                           ]
                                         ),
                                       ]),
@@ -19887,7 +20250,7 @@ var render = function () {
                               "div",
                               { staticClass: "subForm" },
                               [
-                                _vm._m(35),
+                                _vm._m(34),
                                 _vm._v(" "),
                                 _vm._l(
                                   this.profile.candidate_awards,
@@ -20390,7 +20753,7 @@ var render = function () {
                                     attrs: { id: "subForm" },
                                   },
                                   [
-                                    _vm._m(36),
+                                    _vm._m(35),
                                     _vm._v(" "),
                                     _c(
                                       "div",
@@ -21164,7 +21527,7 @@ var render = function () {
                                   "div",
                                   { staticClass: "subForm" },
                                   [
-                                    _vm._m(37),
+                                    _vm._m(36),
                                     _vm._v(" "),
                                     _vm._l(
                                       this.profile.candidate_education,
@@ -22264,13 +22627,13 @@ var render = function () {
                                           attrs: { id: "subForm" },
                                         },
                                         [
-                                          _vm._m(38, true),
+                                          _vm._m(37, true),
                                           _vm._v(" "),
                                           _c(
                                             "div",
                                             { staticClass: "subFormFields" },
                                             [
-                                              _vm._m(39, true),
+                                              _vm._m(38, true),
                                               _vm._v(" "),
                                               _c(
                                                 "div",
@@ -22771,13 +23134,13 @@ var render = function () {
                                           attrs: { id: "subForm" },
                                         },
                                         [
-                                          _vm._m(40),
+                                          _vm._m(39),
                                           _vm._v(" "),
                                           _c(
                                             "div",
                                             { staticClass: "subFormFields" },
                                             [
-                                              _vm._m(41),
+                                              _vm._m(40),
                                               _vm._v(" "),
                                               _c(
                                                 "div",
@@ -23415,7 +23778,7 @@ var render = function () {
                                 attrs: { id: "subForm" },
                               },
                               [
-                                _vm._m(42),
+                                _vm._m(41),
                                 _vm._v(" "),
                                 _vm._l(
                                   this.profile.candidate_language,
@@ -23923,7 +24286,7 @@ var render = function () {
                               attrs: { id: "SkillsModal" },
                             },
                             [
-                              _vm._m(43),
+                              _vm._m(42),
                               _vm._v(" "),
                               _vm._l(
                                 this.profile.candidate_skills,
@@ -25421,9 +25784,9 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _vm._m(44),
+      _vm._m(43),
       _vm._v(" "),
-      _vm._m(45),
+      _vm._m(44),
       _vm._v(" "),
       _c(
         "div",
@@ -25461,7 +25824,7 @@ var render = function () {
                               attrs: { id: "subForm" },
                             },
                             [
-                              _vm._m(46),
+                              _vm._m(45),
                               _vm._v(" "),
                               _c("div", { staticClass: "subFormFields" }, [
                                 _c("div", { staticClass: "row" }, [
@@ -27067,23 +27430,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("h4", { staticClass: "m-0 modelTitleText" }, [
         _vm._v("Basic Information"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 col-md-6" }, [
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "profilePhoto" } }, [
-          _vm._v("Profile Photo"),
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { name: "profilePhoto", id: "profilePhoto", type: "file" },
-        }),
       ]),
     ])
   },
@@ -36902,7 +37248,7 @@ var render = function () {
               staticClass: "company-mbl-btn",
               attrs: {
                 "data-toggle": "collapse",
-                to: { name: "For Companies" },
+                to: { name: "ForCompanies" },
               },
             },
             [
@@ -36917,7 +37263,7 @@ var render = function () {
               staticClass: "candidate-mbl-btn",
               attrs: {
                 "data-toggle": "collapse",
-                to: { name: "For Candidates" },
+                to: { name: "ForCandidates" },
               },
             },
             [_c("i", { staticClass: "fas fa-users" }), _vm._v(" For Candidate")]

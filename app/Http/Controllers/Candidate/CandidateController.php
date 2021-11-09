@@ -37,34 +37,71 @@ class CandidateController extends Controller
 
     public function updateBasicInformation(Request $request)
     {
-        $user = Auth::user();
-        $candidate = Candidate::where('user_id', $user->id)->first();
-        $candidate->full_name = $request->full_name;
-        $candidate->gender = $request->gender;
-        $candidate->address = $request->address;
-        $candidate->date_of_birth = $request->date_of_birth;
-        $candidate->city = $request->city;
-        $candidate->country = $request->country;
-        $candidate->cnic = $request->cnic;
-        $candidate->phone = $request->phone_no;
-        $candidate->bio = $request->bio;
-        $candidate->zipcode = $request->zipcode;
-        if($request->file('profilePhoto')) 
-        {
-            
-            $file = $request->file('profilePhoto');
-            $imagefilename = $file->getClientOriginalName();
-            $extension = $file->getClientOriginalExtension();
-            $location = 'storage/images/candidates/profile/';
-            $file->move($location,$imagefilename);
-            File::delete($location.$candidate->profile_image);
-            $candidate->profile_image = $imagefilename;
+        $attributeNames = [
+            // 'profilePhoto' => 'Profile Picture',
+            'full_name' => 'Title',
+            'gender' => 'Description',
+            'address' => 'Photos',
+            'date_of_birth' => 'Website',
+            'city' => 'Instagram',
+            'country' => 'Facebook',
+            'cnic' => 'Phone',
+            'bio' => 'Email',
+            'zipcode' => 'Whatsapp',
+        ];
+        $rules = array(
+            // 'profilePhoto' => 'required',
+            'full_name' => 'required',
+            'gender' => 'required',
+            'address' => 'required',
+            'date_of_birth' => 'required',
+            'city' => 'required',
+            'country' => 'required',
+            'cnic' => 'required',
+            'bio' => 'required',
+            'zipcode' => 'required',
+        );
+
+        $validator = Validator::make($request->all(), $rules);
+        $validator->setAttributeNames($attributeNames);
+
+        if ($validator->fails()){
+            return response()->json([
+                'errors' => $validator->errors(),
+                'success' => false,
+            ], 200);
         }
-        $candidate->update();
-        return response()->json([
-            'success' => true,
-            'message' => 'Candidate Updated',
-        ]);
+        else
+        {
+            $user = Auth::user();
+            $candidate = Candidate::where('user_id', $user->id)->first();
+            $candidate->full_name = $request->full_name;
+            $candidate->gender = $request->gender;
+            $candidate->address = $request->address;
+            $candidate->date_of_birth = $request->date_of_birth;
+            $candidate->city = $request->city;
+            $candidate->country = $request->country;
+            $candidate->cnic = $request->cnic;
+            $candidate->phone = $request->phone_no;
+            $candidate->bio = $request->bio;
+            $candidate->zipcode = $request->zipcode;
+            if($request->file('profilePhoto')) 
+            {
+                
+                $file = $request->file('profilePhoto');
+                $imagefilename = $file->getClientOriginalName();
+                $extension = $file->getClientOriginalExtension();
+                $location = 'storage/images/candidates/profile/';
+                $file->move($location,$imagefilename);
+                File::delete($location.$candidate->profile_image);
+                $candidate->profile_image = $imagefilename;
+            }
+            $candidate->update();
+            return response()->json([
+                'success' => true,
+                'message' => 'Candidate Updated',
+            ]);
+        }
     }
 
     public function updateEducation(Request $request)

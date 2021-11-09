@@ -911,16 +911,24 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="profilePhoto">Profile Photo</label>
-                                                            <input name="profilePhoto" id="profilePhoto"
-                                                                class="form-control" type="file" />
+                                                            <input name="profilePhoto" id="profilePhoto" class="form-control" type="file" />
+                                                            <small>
+                                                                <span v-if="errors_basic_information.profilePhoto != null" class="text-danger">
+                                                                    {{errors_basic_information.profilePhoto[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="candidateFullName">Full Name</label>
-                                                            <input type="text" placeholder="Enter Full Name"
-                                                                name="full_name" class="form-control"
+                                                            <input type="text" placeholder="Enter Full Name" name="full_name" class="form-control"
                                                                 v-model="basic_information_record.full_name" />
+                                                            <small>
+                                                                <span v-if="errors_basic_information.full_name != null" class="text-danger">
+                                                                    {{errors_basic_information.full_name[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -934,6 +942,11 @@
                                                             <input class="mx-1" id="female" name="gender" value="Female"
                                                                 type="radio"
                                                                 v-model="basic_information_record.gender" />
+                                                            <small>
+                                                                <span v-if="errors_basic_information.gender != null" class="text-danger">
+                                                                    {{errors_basic_information.gender[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -942,6 +955,11 @@
                                                             <input name="city" type="text" class="form-control"
                                                                 placeholder="Please City"
                                                                 v-model="basic_information_record.city" />
+                                                            <small>
+                                                                <span v-if="errors_basic_information.city != null" class="text-danger">
+                                                                    {{errors_basic_information.city[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
@@ -951,6 +969,11 @@
                                                                 class="form-control" value=""
                                                                 placeholder="Enter Address"
                                                                 v-model="basic_information_record.address" />
+                                                            <small>
+                                                                <span v-if="errors_basic_information.address != null" class="text-danger">
+                                                                    {{errors_basic_information.address[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -959,6 +982,11 @@
                                                             <input name="cnic" class="form-control"
                                                                 placeholder="Enter Cnic" value=""
                                                                 v-model="basic_information_record.cnic">
+                                                            <small>
+                                                                <span v-if="errors_basic_information.cnic != null" class="text-danger">
+                                                                    {{errors_basic_information.cnic[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -968,6 +996,11 @@
                                                                 class="form-control" placeholder="Enter Date of Birth"
                                                                 v-model="basic_information_record.date_of_birth"
                                                                 value="">
+                                                            <small>
+                                                                <span v-if="errors_basic_information.date_of_birth != null" class="text-danger">
+                                                                    {{errors_basic_information.date_of_birth[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -976,6 +1009,12 @@
                                                             <input name="zipcode" type="text" class="form-control"
                                                                 value="" placeholder="Enter ZIP code"
                                                                 v-model="basic_information_record.zipcode" />
+                                                            <small>
+                                                                <span v-if="errors_basic_information.zipcode != null" class="text-danger">
+                                                                    {{errors_basic_information.zipcode[0]}}
+                                                                </span>
+                                                            </small>
+
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -984,6 +1023,11 @@
                                                             <input name="phone_no" id="phone" class="form-control"
                                                                 placeholder="Enter Phone" type="tel" value=""
                                                                 v-model="basic_information_record.phone" />
+                                                            <small>
+                                                                <span v-if="errors_basic_information.phone != null" class="text-danger">
+                                                                    {{errors_basic_information.phone[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -1002,6 +1046,11 @@
                                                                 <option value="lahore">Lahore</option>
                                                                 <option value="islamabad">Islamabad</option>
                                                             </select>
+                                                            <small>
+                                                                <span v-if="errors_basic_information.country != null" class="text-danger">
+                                                                    {{errors_basic_information.country[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
@@ -1010,6 +1059,11 @@
                                                             <textarea style="height:100px;" name="bio"
                                                                 class="form-control" placeholder="Description"
                                                                 v-model="basic_information_record.bio"></textarea>
+                                                            <small>
+                                                                <span v-if="errors_basic_information.bio != null" class="text-danger">
+                                                                    {{errors_basic_information.bio[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2194,6 +2248,7 @@
                     country: '',
                     bio: '',
                 },
+                errors_basic_information: [],
                 education_record: [],
                 education_push_array: {
                     school_type: '',
@@ -2278,7 +2333,7 @@
                 axios.post('/update/basicinformation', data)
                     .then((res) => {
                         if (res.data.success == false) {
-                            this.errors = res.data.errors
+                            this.errors_basic_information = res.data.errors
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()

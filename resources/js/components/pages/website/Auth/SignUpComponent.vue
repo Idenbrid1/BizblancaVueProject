@@ -121,8 +121,8 @@
                                                         <div class="form-group">
                                                             <input class="is-invali" type="text" v-model="company_record.name" placeholder="Your Name" name="name" id="name-input" />
                                                             <small>
-                                                                <span v-if="errors.name != null" class="text-danger float-left">
-                                                                    {{errors.name[0]}}
+                                                                <span v-if="errors_company.name != null" class="text-danger float-left">
+                                                                    {{errors_company.name[0]}}
                                                                 </span>
                                                             </small>
                                                         </div>
@@ -130,8 +130,8 @@
                                                         <div class="form-group">
                                                             <input class="is-invali" type="text" v-model="company_record.company_name" placeholder="Company Name" name="company_name" id="company-name-input" />
                                                             <small>
-                                                                <span v-if="errors.company_name != null" class="text-danger float-left">
-                                                                    {{errors.company_name[0]}}
+                                                                <span v-if="errors_company.company_name != null" class="text-danger float-left">
+                                                                    {{errors_company.company_name[0]}}
                                                                 </span>
                                                             </small>
                                                         </div>
@@ -139,8 +139,8 @@
                                                         <div class="form-group">
                                                             <input class="is-invali" type="email" v-model="company_record.email" placeholder="Email" name="email" id="email-input" />
                                                             <small>
-                                                                <span v-if="errors.email != null" class="text-danger float-left">
-                                                                    {{errors.email[0]}}
+                                                                <span v-if="errors_company.email != null" class="text-danger float-left">
+                                                                    {{errors_company.email[0]}}
                                                                 </span>
                                                             </small>
                                                         </div>
@@ -148,8 +148,8 @@
                                                         <div class="form-group">
                                                             <input class="is-invali" type="number" name="phone" v-model="company_record.phone" placeholder="Phone Number" id="phone-no-input" />
                                                             <small>
-                                                                <span v-if="errors.phone != null" class="text-danger float-left">
-                                                                    {{errors.phone[0]}}
+                                                                <span v-if="errors_company.phone != null" class="text-danger float-left">
+                                                                    {{errors_company.phone[0]}}
                                                                 </span>
                                                             </small>
                                                         </div>
@@ -157,8 +157,8 @@
                                                         <div class="form-group">
                                                             <input class="is-invali" type="password" v-model="company_record.password" name="password" placeholder="Password" id="password-input" />
                                                             <small>
-                                                                <span v-if="errors.password != null" class="text-danger float-left">
-                                                                    {{errors.password[0]}}
+                                                                <span v-if="errors_company.password != null" class="text-danger float-left">
+                                                                    {{errors_company.password[0]}}
                                                                 </span>
                                                             </small>
                                                         </div>
@@ -166,8 +166,8 @@
                                                         <div class="form-group">
                                                             <input class="is-invali" type="password" v-model="company_record.confirm_password" placeholder="Confirm Password" name="password_confirmation" id="confirm-password-input" />
                                                             <small>
-                                                                <span v-if="errors.confirm_password != null" class="text-danger float-left">
-                                                                    {{errors.confirm_password[0]}}
+                                                                <span v-if="errors_company.confirm_password != null" class="text-danger float-left">
+                                                                    {{errors_company.confirm_password[0]}}
                                                                 </span>
                                                             </small>
                                                         </div>
@@ -236,6 +236,7 @@ import WebsiteNavbar from '../partials/navbar.vue';
                     confirm_password: '',
                 },
                 errors: [],
+                errors_company: [],
             };
         },
         components: {
@@ -278,7 +279,7 @@ import WebsiteNavbar from '../partials/navbar.vue';
                     if(response.data.success == false)
                     {
                         Swal.close()
-                        this.errors = response.data.errors
+                        this.errors = response.data.errors_company
                     }
                     else{
                         Swal.close()

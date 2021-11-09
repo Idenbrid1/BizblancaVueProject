@@ -11,9 +11,9 @@
                     <img src="/website/assets/images/Logo.svg" alt="logo" /></router-link>
             </div>
             <div class="mobile-button">
-                <router-link class="company-mbl-btn" data-toggle="collapse" :to="{ name: 'For Companies' }"><i
+                <router-link class="company-mbl-btn" data-toggle="collapse" :to="{ name: 'ForCompanies' }"><i
                         class="fas fa-building"></i> For Companies</router-link>
-                <router-link class="candidate-mbl-btn" data-toggle="collapse" :to="{ name: 'For Candidates' }"><i
+                <router-link class="candidate-mbl-btn" data-toggle="collapse" :to="{ name: 'ForCandidates' }"><i
                         class="fas fa-users"></i> For Candidate</router-link>
             </div>
             <div class="navbar">
