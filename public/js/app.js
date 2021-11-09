@@ -13039,7 +13039,6 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: " container py-5" },
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
@@ -13146,7 +13145,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "loginButton" }, [
-      _c("button", { attrs: { type: "submit" } }, [
+      _c("button", { staticClass: "w-auto", attrs: { type: "submit" } }, [
         _vm._v(
           "\n                                    Send Password Reset Link\n                                "
         ),
