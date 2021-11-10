@@ -2057,7 +2057,7 @@
     display: inline-flex;
     padding: 0px;
     color: #757575;
-    font-size: 14px;
+    font-size: 12px;
     padding-right: 10px;
     flex-direction: column;
     list-style: none;
@@ -4086,7 +4086,7 @@
     display: inline-flex;
     padding: 0px;
     color: #757575;
-    font-size: 14px;
+    font-size: 12px;
     padding-right: 10px;
     flex-direction: column;
     list-style: none;
@@ -4145,9 +4145,9 @@
     -webkit-box-orient: vertical;
 }
 
-.job-description {
+/* .job-description {
     font-size: 14px;
-}
+} */
 
 .candidate-description {
     font-size: 12px;
