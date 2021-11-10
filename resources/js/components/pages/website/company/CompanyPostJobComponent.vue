@@ -2,18 +2,24 @@
     <div>
         <WebsiteNavbar />
 
-        <div class="container cont-flex">
+        <div class="container cont-flex PostJobContainer">
             <div class="col-sm-12 col-md-8 col-lg-8 xs-padding pt-5">
-                <h1 class="post_new_job_title">Post New Job</h1>
-                <p class="post_new_job_descrp">
-                    To add more jobs in your company profile, Please click the Add more jobs button and after that form
-                    will appear in front of you and you have to fill this form with all the necessary requirements and
-                    then click on update, your job will be posted in your company dashboard.
-                </p>
+                <div class="px-2">
+                    <h1 class="post_new_job_title">Post New Job</h1>
+                    <p class="post_new_job_descrp">
+                        To add more jobs in your company profile, Please click the Add more jobs button and after that
+                        form
+                        will appear in front of you and you have to fill this form with all the necessary requirements
+                        and
+                        then click on update, your job will be posted in your company dashboard.
+                    </p>
+                </div>
                 <div class="post_new_job_anker">
-                    <a href=".PostNewJobModal" data-toggle="modal" data-target=".PostNewJobModal">+ Add More Jobs</a>
+                    <a href=".PostNewJobModal" data-toggle="modal" data-target=".PostNewJobModal">+ Add More
+                        Jobs</a>
                     <p>Showing 5 results of 123,456 jobs</p>
                 </div>
+
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">
                     <!-- Job List Start -->
@@ -293,7 +299,7 @@
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <br><br>
-                <div class="col">
+                <div class="col p-0 p-md-2">
                     <div class="side-card h-300 shadow-sm">
                         <div class="side-card-title text-center text-white">For Queries</div>
                         <div class="side-card-body">
@@ -546,55 +552,63 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Job Title</label>
-                                                            <input type="text" name="" placeholder="Enter Job Title" class="form-control" />
+                                                            <input type="text" name="" placeholder="Enter Job Title"
+                                                                class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Job Designation</label>
-                                                            <input type="text" name="" placeholder="Enter Job Designation" class="form-control" />
+                                                            <input type="text" name=""
+                                                                placeholder="Enter Job Designation"
+                                                                class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Salary Type</label>
                                                             <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
+                                                                <option value="Please Select" selected>Please Select
+                                                                </option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="" class="">Salary Range</label>
-                                                            <input type="text" placeholder="Enter Salary Range" name="" class="form-control" />
+                                                            <input type="text" placeholder="Enter Salary Range" name=""
+                                                                class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Shift</label>
                                                             <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
+                                                                <option value="Please Select" selected>Please Select
+                                                                </option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="" class="">Experience</label>
-                                                            <input type="text" placeholder="Enter Experience" name="" class="form-control" />
+                                                            <input type="text" placeholder="Enter Experience" name=""
+                                                                class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="" class="">Location</label>
-                                                            <input type="text" placeholder="Enter Location"
-                                                                name="" class="form-control" />
+                                                            <input type="text" placeholder="Enter Location" name=""
+                                                                class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="" class="">Job Type</label>
                                                             <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
+                                                                <option value="Please Select" selected>Please Select
+                                                                </option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -602,7 +616,8 @@
                                                         <div class="form-group">
                                                             <label for="" class="">Gender</label>
                                                             <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
+                                                                <option value="Please Select" selected>Please Select
+                                                                </option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -610,7 +625,8 @@
                                                         <div class="form-group">
                                                             <label for="" class="">Total Positions</label>
                                                             <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
+                                                                <option value="Please Select" selected>Please Select
+                                                                </option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -632,10 +648,11 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="" class="">Qualifications & Technicalities</label>
+                                                            <label for="" class="">Qualifications &
+                                                                Technicalities</label>
                                                             <textarea style="height: 100px;"
-                                                                placeholder="Enter Qualifications & Technicalities" name=""
-                                                                class="form-control"></textarea>
+                                                                placeholder="Enter Qualifications & Technicalities"
+                                                                name="" class="form-control"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
