@@ -1,6 +1,9 @@
 <template>
     <div>
-        <WebsiteNavbar/>
+        <WebsiteNavbar />
+        <span v-if="this.isRoleCompany">
+            <CompanyNavbar />
+        </span>
         <!-- Hero Banner Section -->
         <section class="main-hero-banner py-5">
             <div class="container">
@@ -512,13 +515,21 @@
 </template>
 <script src="/website/assets/js/swiper/swiper-bundle.min.js"></script>
 <script>
-import WebsiteNavbar from './partials/navbar.vue';
+    import axios from 'axios';
+    import WebsiteNavbar from './partials/navbar.vue';
+    import CompanyNavbar from './partials/CompanyNavbar.vue';
     export default {
         data() {
-            return {};
+            return {
+                isRoleCompany: false,
+            };
         },
         components: {
             WebsiteNavbar,
+            CompanyNavbar,
+        },
+        created(){
+            this.checkCompanyRole()
         },
         mounted() {
             var swiper = new Swiper(".BlogsSwiper", {
@@ -590,6 +601,14 @@ import WebsiteNavbar from './partials/navbar.vue';
                 },
             });
         },
+        methods:{
+            checkCompanyRole() {
+                axios.get('check-company-role')
+                .then((response) => {
+                    this.isRoleCompany = response.data.success
+                });
+            },
+        }
     };
 
 </script>
