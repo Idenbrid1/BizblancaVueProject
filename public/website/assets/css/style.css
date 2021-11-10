@@ -2057,7 +2057,7 @@
     display: inline-flex;
     padding: 0px;
     color: #757575;
-    font-size: 14px;
+    font-size: 12px;
     padding-right: 10px;
     flex-direction: column;
     list-style: none;
@@ -2182,11 +2182,10 @@
 
 .job-wishlist-btn {
     background-color: #081351;
-    padding: 0px 6px;
+    padding: 0px 5px;
     border-radius: 5px;
     margin-right: 4px;
     width: 100%;
-    height: 26px;
 }
 
 .candidate-wishlist-btn {
@@ -4086,8 +4085,8 @@
     display: inline-flex;
     padding: 0px;
     color: #757575;
-    font-size: 14px;
-    padding-right: 10px;
+    font-size: 12px;
+    padding:0px 10px;
     flex-direction: column;
     list-style: none;
 }
@@ -4145,9 +4144,9 @@
     -webkit-box-orient: vertical;
 }
 
-.job-description {
+/* .job-description {
     font-size: 14px;
-}
+} */
 
 .candidate-description {
     font-size: 12px;
@@ -4211,11 +4210,10 @@
 
 .job-wishlist-btn {
     background-color: #081351;
-    padding: 0px 6px;
+    padding: 0px 5px;
     border-radius: 5px;
     margin-right: 4px;
     width: 100%;
-    height: 26px;
 }
 
 .candidate-wishlist-btn {
@@ -6404,4 +6402,5 @@ font-weight: bold;
 font-size: 14px;
 margin: 0px;
 }
+
 /* post new job */

@@ -2,18 +2,24 @@
     <div>
         <WebsiteNavbar />
         <CompanyNavbar />
-        <div class="container cont-flex">
+        <div class="container cont-flex PostJobContainer">
             <div class="col-sm-12 col-md-8 col-lg-8 xs-padding pt-5">
-                <h1 class="post_new_job_title">Post New Job</h1>
-                <p class="post_new_job_descrp">
-                    To add more jobs in your company profile, Please click the Add more jobs button and after that form
-                    will appear in front of you and you have to fill this form with all the necessary requirements and
-                    then click on update, your job will be posted in your company dashboard.
-                </p>
+                <div class="px-2">
+                    <h1 class="post_new_job_title">Post New Job</h1>
+                    <p class="post_new_job_descrp">
+                        To add more jobs in your company profile, Please click the Add more jobs button and after that
+                        form
+                        will appear in front of you and you have to fill this form with all the necessary requirements
+                        and
+                        then click on update, your job will be posted in your company dashboard.
+                    </p>
+                </div>
                 <div class="post_new_job_anker">
-                    <a href=".PostNewJobModal" data-toggle="modal" data-target=".PostNewJobModal">+ Add More Jobs</a>
+                    <a href=".PostNewJobModal" data-toggle="modal" data-target=".PostNewJobModal">+ Add More
+                        Jobs</a>
                     <p>Showing 5 results of 123,456 jobs</p>
                 </div>
+
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">
                     <!-- Job List Start -->
@@ -293,7 +299,7 @@
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <br><br>
-                <div class="col">
+                <div class="col p-0 p-md-2">
                     <div class="side-card h-300 shadow-sm">
                         <div class="side-card-title text-center text-white">For Queries</div>
                         <div class="side-card-body">

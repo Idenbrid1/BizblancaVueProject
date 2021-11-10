@@ -10207,6 +10207,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -35737,19 +35743,21 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container cont-flex" }, [
+    return _c("div", { staticClass: "container cont-flex PostJobContainer" }, [
       _c(
         "div",
         { staticClass: "col-sm-12 col-md-8 col-lg-8 xs-padding pt-5" },
         [
-          _c("h1", { staticClass: "post_new_job_title" }, [
-            _vm._v("Post New Job"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "post_new_job_descrp" }, [
-            _vm._v(
-              "\n                To add more jobs in your company profile, Please click the Add more jobs button and after that form\n                will appear in front of you and you have to fill this form with all the necessary requirements and\n                then click on update, your job will be posted in your company dashboard.\n            "
-            ),
+          _c("div", { staticClass: "px-2" }, [
+            _c("h1", { staticClass: "post_new_job_title" }, [
+              _vm._v("Post New Job"),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "post_new_job_descrp" }, [
+              _vm._v(
+                "\n                    To add more jobs in your company profile, Please click the Add more jobs button and after that\n                    form\n                    will appear in front of you and you have to fill this form with all the necessary requirements\n                    and\n                    then click on update, your job will be posted in your company dashboard.\n                "
+              ),
+            ]),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "post_new_job_anker" }, [
@@ -35762,7 +35770,7 @@ var staticRenderFns = [
                   "data-target": ".PostNewJobModal",
                 },
               },
-              [_vm._v("+ Add More Jobs")]
+              [_vm._v("+ Add More\n                    Jobs")]
             ),
             _vm._v(" "),
             _c("p", [_vm._v("Showing 5 results of 123,456 jobs")]),
@@ -36706,7 +36714,7 @@ var staticRenderFns = [
         _c("br"),
         _c("br"),
         _vm._v(" "),
-        _c("div", { staticClass: "col" }, [
+        _c("div", { staticClass: "col p-0 p-md-2" }, [
           _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
             _c(
               "div",

@@ -1,4 +1,10 @@
 @media screen and (max-width:769px) {
+    .PostJobContainer{
+        padding:80px 0px;
+    }
+    .post_new_job_anker > a{
+        padding: 10px;
+    }
     .humburger{
         display: block;
     }
@@ -184,6 +190,9 @@
     #DesktopTabsIcons{
         display: block;
         height: 100%;
+    }
+    .PostJobContainer{
+        padding:40px 0px;
     }
     .image-banner {
         background-color: #484FE2;
