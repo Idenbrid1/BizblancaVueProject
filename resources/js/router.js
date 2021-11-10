@@ -13,6 +13,7 @@ import CandidateResetPassword from './components/pages/website/Auth/CandidateRes
 import CandidateNewPassword from './components/pages/website/Auth/CandidateNewPasswordComponent.vue';
 import CandidateProfile from './components/pages/website/candidate/CandidateProfileComponent.vue';
 import CompanyProfile from './components/pages/website/company/CompanyProfileComponent.vue';
+import CompanyPostJob from './components/pages/website/company/CompanyPostJobComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -68,6 +69,21 @@ const router = new VueRouter({
             component: CandidateProfile,
             beforeEnter: (to, from, next) => { 
                 axios.get('check-candidate-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
+        },
+        {
+            path: '/company-post-job',
+            name: 'CompanyPostJob',
+            component: CompanyPostJob,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
