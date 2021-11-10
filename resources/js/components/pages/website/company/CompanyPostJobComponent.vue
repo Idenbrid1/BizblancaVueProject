@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-
+        <CompanyNavbar />
         <div class="container cont-flex">
             <div class="col-sm-12 col-md-8 col-lg-8 xs-padding pt-5">
                 <h1 class="post_new_job_title">Post New Job</h1>
@@ -529,7 +529,7 @@
         <div class="modal fade PostNewJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form id="basicinformationForm">
+                <form id="formData">
                     <div class="modal-content p-0">
                         <div class="container editModel pb-5">
                             <h3 class="my-4">Update</h3>
@@ -541,109 +541,221 @@
                                                 <div class="mr-2 titleEffect"></div>
                                                 <h4 class="m-0 modelTitleText">Add more Jobs</h4>
                                             </div>
+                                            <div class="form-group">
+                                                <label for="bannar">Bannar</label>
+                                                <input name="bannar" id="bannar" ref="bannar" class="form-control" type="file" />
+                                                <small>
+                                                    <span v-if="errors.bannar != null" class="text-danger">
+                                                        {{errors.bannar[0]}}
+                                                    </span>
+                                                </small>
+                                            </div>
                                             <div class="subFormFields">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Job Title</label>
-                                                            <input type="text" name="" placeholder="Enter Job Title" class="form-control" />
+                                                            <input type="text" name="job_title" v-model="record.job_title"
+                                                                placeholder="Enter Job Title" class="form-control" />
+                                                            <small>
+                                                                <span v-if="errors.job_title != null" class="text-danger" >
+                                                                    {{errors.job_title[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Job Designation</label>
-                                                            <input type="text" name="" placeholder="Enter Job Designation" class="form-control" />
+                                                            <input type="text" name="job_designation" v-model="record.job_designation"
+                                                                placeholder="Enter Job Designation"
+                                                                class="form-control" />
+                                                            <small>
+                                                                <span v-if="errors.job_designation != null" class="text-danger">
+                                                                    {{errors.job_designation[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Salary Type</label>
-                                                            <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
+                                                            <select name="salary_type" v-model="record.salary_type" class="form-control">
+                                                                <option value="Yearly">Yearly</option>
+                                                                <option value="Monthly">Monthly</option>
+                                                                <option value="Weekly">Weekly</option>
+                                                                <option value="Hourly">Hourly</option>
                                                             </select>
+                                                            <small>
+                                                                <span v-if="errors.salary_type != null" class="text-danger">
+                                                                    {{errors.salary_type[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Salary Range</label>
-                                                            <input type="text" placeholder="Enter Salary Range" name="" class="form-control" />
+                                                            <label for="">Salary Range</label>
+                                                            <select name="salary_range" v-model="record.salary_range" class="form-control">
+                                                                <option value="10000-20000">10000 - 20000 </option>
+                                                                <option value="20000-30000">20000 - 30000</option>
+                                                                <option value="30000-40000">30000 - 40000</option>
+                                                                <option value="40000-50000">40000 - 50000</option>
+                                                                <option value="50000-60000">50000 - 60000</option>
+                                                                <option value="60000-70000">60000 - 70000</option>
+                                                                <option value="70000-80000">70000 - 80000</option>
+                                                                <option value="80000-90000">80000 - 90000</option>
+                                                                <option value="90000-100000">90000 - 100000</option>
+                                                                <option value="100000-150000">100000 - 150000</option>
+                                                            </select>
+                                                            <small>
+                                                                <span v-if="errors.salary_range != null" class="text-danger">
+                                                                    {{errors.salary_range[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Shift</label>
-                                                            <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
+                                                            <select name="shift" v-model="record.shift" class="form-control">
+                                                                <option value="Night">Night</option>
+                                                                <option value="Morning">Morning</option>
+                                                                <option value="Afternoon">Afternoon</option>
+                                                                <option value="Please Select">Please Select</option>
                                                             </select>
+                                                            <small>
+                                                                <span v-if="errors.shift != null" class="text-danger">
+                                                                    {{errors.shift[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Experience</label>
-                                                            <input type="text" placeholder="Enter Experience" name="" class="form-control" />
+                                                            <label for="">Experience<small>in years</small></label>
+                                                            <input type="text" v-model="record.experience" placeholder="Enter Experience"
+                                                                name="experience" class="form-control" />
+                                                            <small>
+                                                                <span v-if="errors.experience != null" class="text-danger">
+                                                                    {{errors.experience[0]}}
+                                                                </span>
+                                                            </small>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="">Location</label>
+                                                            <input type="text" placeholder="Enter Location" v-model="record.location"
+                                                                name="location" class="form-control" />
+                                                            <small>
+                                                                <span v-if="errors.location != null" class="text-danger">
+                                                                    {{errors.location[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Location</label>
-                                                            <input type="text" placeholder="Enter Location"
-                                                                name="" class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="" class="">Job Type</label>
-                                                            <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
+                                                            <label for="">Job Type</label>
+                                                            <select name="job_type" v-model="record.job_type" class="form-control">
+                                                                <option value="Full Time">Full Time</option>
+                                                                <option value="Part Time">Part Time</option>
+                                                                <option value="Internship">Internship</option>
+                                                                <option value="Permenent">Permenent</option>
+                                                                <option value="Contract">Contract</option>
+                                                                <option value="Freelance">Freelance</option>
                                                             </select>
+                                                            <small>
+                                                                <span v-if="errors.job_type != null" class="text-danger">
+                                                                    {{errors.job_type[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Gender</label>
-                                                            <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
+                                                            <label for="">Gender</label>
+                                                            <select name="gender" v-model="record.gender" class="form-control">
+                                                                <option value="Male">Male</option>
+                                                                <option value="Female">Female</option>
+                                                                <option value="Other">Other</option>
                                                             </select>
+                                                            <small>
+                                                                <span v-if="errors.gender != null" class="text-danger">
+                                                                    {{errors.gender[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Total Positions</label>
-                                                            <select name="" class="form-control">
-                                                                <option value="Please Select" selected>Please Select</option>
-                                                            </select>
+                                                            <label for="">Total Positions</label>
+                                                                <input type="number" placeholder="Total Positions" v-model="record.total_positions"
+                                                                    name="total_positions" class="form-control" />
+                                                            <small>
+                                                                <span v-if="errors.total_positions != null" class="text-danger">
+                                                                    {{errors.total_positions[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="" class="">Job Description</label>
-                                                            <textarea style="height: 100px;"
-                                                                placeholder="Enter Job Description" name=""
-                                                                class="form-control"></textarea>
+                                                            <label for="">Job Description</label> 
+                                                            <textarea style="height: 100px;" v-model="record.job_description"
+                                                                placeholder="Enter Job Description"
+                                                                name="job_description" class="form-control"></textarea>
+                                                            <small>
+                                                                <span v-if="errors.job_description != null" class="text-danger">
+                                                                    {{errors.job_description[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="" class="">Job Responsibilities</label>
-                                                            <textarea style="height: 100px;"
-                                                                placeholder="Enter Job Description" name=""
+                                                            <label for="">Job Responsibilities</label>
+                                                            <textarea style="height: 100px;" v-model="record.job_responsibilities"
+                                                                placeholder="Enter Job Description"
+                                                                name="job_responsibilities"
                                                                 class="form-control"></textarea>
+                                                            <small>
+                                                                <span v-if="errors.job_responsibilities != null" class="text-danger">
+                                                                    {{errors.job_responsibilities[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="" class="">Qualifications & Technicalities</label>
-                                                            <textarea style="height: 100px;"
-                                                                placeholder="Enter Qualifications & Technicalities" name=""
-                                                                class="form-control"></textarea>
+                                                            <label for="">Qualifications &
+                                                                Technicalities</label>
+                                                            <select name="qualification_level" v-model="record.qualification_level" class="form-control">
+                                                                <option value="Metric">Metric</option>
+                                                                <option value="Intermediate">Intermediate</option>
+                                                                <option value="Graduation">Graduation</option>
+                                                                <option value="Masters">Masters</option>
+                                                            </select>
+                                                            <small>
+                                                                <span v-if="errors.qualification_level != null" class="text-danger">
+                                                                    {{errors.qualification_level[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="" class="">Benefits</label>
-                                                            <textarea style="height: 100px;"
-                                                                placeholder="Enter Benefits" name=""
+                                                            <label for="">Benefits</label>
+                                                            <textarea style="height: 100px;" v-model="record.benefits"
+                                                                placeholder="Enter Benefits" name="benefits"
                                                                 class="form-control"></textarea>
+                                                            <small>
+                                                                <span v-if="errors.benefits != null" class="text-danger">
+                                                                    {{errors.benefits[0]}}
+                                                                </span>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -654,7 +766,8 @@
 
                                 <div class="row mt-4 ">
                                     <div class="col-lg-12 modelBtnContainer ">
-                                        <button class="positiveBtn modelBtn mr-1">Update</button>
+                                        <button class="positiveBtn modelBtn mr-1"
+                                            @click.prevent="postJob()">Post</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
@@ -669,14 +782,36 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
+    import CompanyNavbar from '../partials/CompanyNavbar.vue';
+
     export default {
         data() {
             return {
-                profile: '',
+                record: {
+                    bannar: '',
+                    title: '',
+                    job_designation: '',
+                    job_description: '',
+                    job_type: '',
+                    shift: '',
+                    industry: '',
+                    department: '',
+                    experience: '',
+                    salary_type: '',
+                    salary_range: '',
+                    gender: '',
+                    location: '',
+                    total_position: '',
+                    qualification_level: '',
+                    benefits: '',
+                    job_responsibilities: '',
+                },
+                errors: [],
             };
         },
         components: {
             WebsiteNavbar,
+            CompanyNavbar,
         },
         mounted() {
             var swiper = new Swiper(".bizer-ranking-slider", {
@@ -695,7 +830,61 @@
 
         },
         methods: {
+            postJob() {
+                Swal.fire({
+                    title: 'Are you sure to post this job?',
+                    text: "After Yes you your job will be live",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'No, keep Edit!',
+                    confirmButtonText: 'Yes, post it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        var $formData = $('#formData');
+                        var data = new FormData(formData);
+                        axios.post('/company/post-job', data)
+                        .then((res) => {
+                            if (res.data.success == false)
+                            {
+                                this.errors = res.data.errors
+                            } 
+                            else {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Posted!😎',
+                                    text: 'Your Job is Now Live',
+                                })
+                                this.errors = []
+                                this.record = {
+                                    bannar: '',
+                                    title: '',
+                                    job_designation: '',
+                                    job_description: '',
+                                    job_type: '',
+                                    shift: '',
+                                    industry: '',
+                                    department: '',
+                                    experience: '',
+                                    salary_type: '',
+                                    salary_range: '',
+                                    gender: '',
+                                    location: '',
+                                    total_position: '',
+                                    qualification_level: '',
+                                    benefits: '',
+                                    job_responsibilities: '',
+                                };
+                                this.$refs.bannar.value = null;
+                            }
+                        })
+                    }
+                })
 
+
+                
+            },
         },
     };
 

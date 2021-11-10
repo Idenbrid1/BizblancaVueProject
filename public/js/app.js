@@ -9425,6 +9425,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
 //
 //
 //
@@ -10093,16 +10094,150 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      profile: ''
+      record: {
+        bannar: '',
+        title: '',
+        job_designation: '',
+        job_description: '',
+        job_type: '',
+        shift: '',
+        industry: '',
+        department: '',
+        experience: '',
+        salary_type: '',
+        salary_range: '',
+        gender: '',
+        location: '',
+        total_position: '',
+        qualification_level: '',
+        benefits: '',
+        job_responsibilities: ''
+      },
+      errors: []
     };
   },
   components: {
-    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   mounted: function mounted() {
     var swiper = new Swiper(".bizer-ranking-slider", {
@@ -10118,7 +10253,59 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   created: function created() {},
-  methods: {}
+  methods: {
+    postJob: function postJob() {
+      var _this = this;
+
+      Swal.fire({
+        title: 'Are you sure to post this job?',
+        text: "After Yes you your job will be live",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'No, keep Edit!',
+        confirmButtonText: 'Yes, post it!'
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          var $formData = $('#formData');
+          var data = new FormData(formData);
+          axios__WEBPACK_IMPORTED_MODULE_0___default().post('/company/post-job', data).then(function (res) {
+            if (res.data.success == false) {
+              _this.errors = res.data.errors;
+            } else {
+              Swal.fire({
+                icon: 'success',
+                title: 'Posted!😎',
+                text: 'Your Job is Now Live'
+              });
+              _this.errors = [];
+              _this.record = {
+                bannar: '',
+                title: '',
+                job_designation: '',
+                job_description: '',
+                job_type: '',
+                shift: '',
+                industry: '',
+                department: '',
+                experience: '',
+                salary_type: '',
+                salary_range: '',
+                gender: '',
+                location: '',
+                total_position: '',
+                qualification_level: '',
+                benefits: '',
+                job_responsibilities: ''
+              };
+              _this.$refs.bannar.value = null;
+            }
+          });
+        }
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -33992,7 +34179,1556 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [_c("WebsiteNavbar"), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1)],
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      _c("CompanyNavbar"),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "modal fade PostNewJobModal",
+          attrs: {
+            tabindex: "-1",
+            role: "dialog",
+            "aria-labelledby": "myLargeModalLabel",
+            "aria-hidden": "true",
+          },
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
+            [
+              _c("form", { attrs: { id: "formData" } }, [
+                _c("div", { staticClass: "modal-content p-0" }, [
+                  _c("div", { staticClass: "container editModel pb-5" }, [
+                    _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
+                    _vm._v(" "),
+                    _c(
+                      "section",
+                      { staticClass: "modelForm container p-0 p-md-2" },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "row no-gutters",
+                            attrs: { id: "subFormFieldsContainer" },
+                          },
+                          [
+                            _c("div", { staticClass: "col-12" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "subForm",
+                                  attrs: { id: "subForm" },
+                                },
+                                [
+                                  _vm._m(1),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", { attrs: { for: "bannar" } }, [
+                                      _vm._v("Bannar"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      ref: "bannar",
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        name: "bannar",
+                                        id: "bannar",
+                                        type: "file",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c("small", [
+                                      _vm.errors.bannar != null
+                                        ? _c(
+                                            "span",
+                                            { staticClass: "text-danger" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                    " +
+                                                  _vm._s(_vm.errors.bannar[0]) +
+                                                  "\n                                                "
+                                              ),
+                                            ]
+                                          )
+                                        : _vm._e(),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "subFormFields" }, [
+                                    _c("div", { staticClass: "row" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [_vm._v("Job Title")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value: _vm.record.job_title,
+                                                    expression:
+                                                      "record.job_title",
+                                                  },
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  type: "text",
+                                                  name: "job_title",
+                                                  placeholder:
+                                                    "Enter Job Title",
+                                                },
+                                                domProps: {
+                                                  value: _vm.record.job_title,
+                                                },
+                                                on: {
+                                                  input: function ($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.record,
+                                                      "job_title",
+                                                      $event.target.value
+                                                    )
+                                                  },
+                                                },
+                                              }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.job_title != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .job_title[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [_vm._v("Job Designation")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value:
+                                                      _vm.record
+                                                        .job_designation,
+                                                    expression:
+                                                      "record.job_designation",
+                                                  },
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  type: "text",
+                                                  name: "job_designation",
+                                                  placeholder:
+                                                    "Enter Job Designation",
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.record.job_designation,
+                                                },
+                                                on: {
+                                                  input: function ($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.record,
+                                                      "job_designation",
+                                                      $event.target.value
+                                                    )
+                                                  },
+                                                },
+                                              }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.job_designation !=
+                                                null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .job_designation[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [_vm._v("Salary Type")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "select",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value:
+                                                        _vm.record.salary_type,
+                                                      expression:
+                                                        "record.salary_type",
+                                                    },
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  attrs: {
+                                                    name: "salary_type",
+                                                  },
+                                                  on: {
+                                                    change: function ($event) {
+                                                      var $$selectedVal =
+                                                        Array.prototype.filter
+                                                          .call(
+                                                            $event.target
+                                                              .options,
+                                                            function (o) {
+                                                              return o.selected
+                                                            }
+                                                          )
+                                                          .map(function (o) {
+                                                            var val =
+                                                              "_value" in o
+                                                                ? o._value
+                                                                : o.value
+                                                            return val
+                                                          })
+                                                      _vm.$set(
+                                                        _vm.record,
+                                                        "salary_type",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
+                                                      )
+                                                    },
+                                                  },
+                                                },
+                                                [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Yearly",
+                                                      },
+                                                    },
+                                                    [_vm._v("Yearly")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Monthly",
+                                                      },
+                                                    },
+                                                    [_vm._v("Monthly")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Weekly",
+                                                      },
+                                                    },
+                                                    [_vm._v("Weekly")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Hourly",
+                                                      },
+                                                    },
+                                                    [_vm._v("Hourly")]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.salary_type != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .salary_type[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [_vm._v("Salary Range")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "select",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value:
+                                                        _vm.record.salary_range,
+                                                      expression:
+                                                        "record.salary_range",
+                                                    },
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  attrs: {
+                                                    name: "salary_range",
+                                                  },
+                                                  on: {
+                                                    change: function ($event) {
+                                                      var $$selectedVal =
+                                                        Array.prototype.filter
+                                                          .call(
+                                                            $event.target
+                                                              .options,
+                                                            function (o) {
+                                                              return o.selected
+                                                            }
+                                                          )
+                                                          .map(function (o) {
+                                                            var val =
+                                                              "_value" in o
+                                                                ? o._value
+                                                                : o.value
+                                                            return val
+                                                          })
+                                                      _vm.$set(
+                                                        _vm.record,
+                                                        "salary_range",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
+                                                      )
+                                                    },
+                                                  },
+                                                },
+                                                [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "10000-20000",
+                                                      },
+                                                    },
+                                                    [_vm._v("10000 - 20000 ")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "20000-30000",
+                                                      },
+                                                    },
+                                                    [_vm._v("20000 - 30000")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "30000-40000",
+                                                      },
+                                                    },
+                                                    [_vm._v("30000 - 40000")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "40000-50000",
+                                                      },
+                                                    },
+                                                    [_vm._v("40000 - 50000")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "50000-60000",
+                                                      },
+                                                    },
+                                                    [_vm._v("50000 - 60000")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "60000-70000",
+                                                      },
+                                                    },
+                                                    [_vm._v("60000 - 70000")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "70000-80000",
+                                                      },
+                                                    },
+                                                    [_vm._v("70000 - 80000")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "80000-90000",
+                                                      },
+                                                    },
+                                                    [_vm._v("80000 - 90000")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "90000-100000",
+                                                      },
+                                                    },
+                                                    [_vm._v("90000 - 100000")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "100000-150000",
+                                                      },
+                                                    },
+                                                    [_vm._v("100000 - 150000")]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.salary_range != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .salary_range[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [_vm._v("Shift")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "select",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value: _vm.record.shift,
+                                                      expression:
+                                                        "record.shift",
+                                                    },
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  attrs: { name: "shift" },
+                                                  on: {
+                                                    change: function ($event) {
+                                                      var $$selectedVal =
+                                                        Array.prototype.filter
+                                                          .call(
+                                                            $event.target
+                                                              .options,
+                                                            function (o) {
+                                                              return o.selected
+                                                            }
+                                                          )
+                                                          .map(function (o) {
+                                                            var val =
+                                                              "_value" in o
+                                                                ? o._value
+                                                                : o.value
+                                                            return val
+                                                          })
+                                                      _vm.$set(
+                                                        _vm.record,
+                                                        "shift",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
+                                                      )
+                                                    },
+                                                  },
+                                                },
+                                                [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: { value: "Night" },
+                                                    },
+                                                    [_vm._v("Night")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Morning",
+                                                      },
+                                                    },
+                                                    [_vm._v("Morning")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Afternoon",
+                                                      },
+                                                    },
+                                                    [_vm._v("Afternoon")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Please Select",
+                                                      },
+                                                    },
+                                                    [_vm._v("Please Select")]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.shift != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .shift[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _vm._m(2),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value:
+                                                      _vm.record.experience,
+                                                    expression:
+                                                      "record.experience",
+                                                  },
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  type: "text",
+                                                  placeholder:
+                                                    "Enter Experience",
+                                                  name: "experience",
+                                                },
+                                                domProps: {
+                                                  value: _vm.record.experience,
+                                                },
+                                                on: {
+                                                  input: function ($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.record,
+                                                      "experience",
+                                                      $event.target.value
+                                                    )
+                                                  },
+                                                },
+                                              }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.experience != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .experience[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [_vm._v("Location")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value: _vm.record.location,
+                                                    expression:
+                                                      "record.location",
+                                                  },
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  type: "text",
+                                                  placeholder: "Enter Location",
+                                                  name: "location",
+                                                },
+                                                domProps: {
+                                                  value: _vm.record.location,
+                                                },
+                                                on: {
+                                                  input: function ($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.record,
+                                                      "location",
+                                                      $event.target.value
+                                                    )
+                                                  },
+                                                },
+                                              }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.location != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .location[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [_vm._v("Job Type")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "select",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value:
+                                                        _vm.record.job_type,
+                                                      expression:
+                                                        "record.job_type",
+                                                    },
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  attrs: { name: "job_type" },
+                                                  on: {
+                                                    change: function ($event) {
+                                                      var $$selectedVal =
+                                                        Array.prototype.filter
+                                                          .call(
+                                                            $event.target
+                                                              .options,
+                                                            function (o) {
+                                                              return o.selected
+                                                            }
+                                                          )
+                                                          .map(function (o) {
+                                                            var val =
+                                                              "_value" in o
+                                                                ? o._value
+                                                                : o.value
+                                                            return val
+                                                          })
+                                                      _vm.$set(
+                                                        _vm.record,
+                                                        "job_type",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
+                                                      )
+                                                    },
+                                                  },
+                                                },
+                                                [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Full Time",
+                                                      },
+                                                    },
+                                                    [_vm._v("Full Time")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Part Time",
+                                                      },
+                                                    },
+                                                    [_vm._v("Part Time")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Internship",
+                                                      },
+                                                    },
+                                                    [_vm._v("Internship")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Permenent",
+                                                      },
+                                                    },
+                                                    [_vm._v("Permenent")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Contract",
+                                                      },
+                                                    },
+                                                    [_vm._v("Contract")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Freelance",
+                                                      },
+                                                    },
+                                                    [_vm._v("Freelance")]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.job_type != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .job_type[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [_vm._v("Gender")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "select",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value: _vm.record.gender,
+                                                      expression:
+                                                        "record.gender",
+                                                    },
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  attrs: { name: "gender" },
+                                                  on: {
+                                                    change: function ($event) {
+                                                      var $$selectedVal =
+                                                        Array.prototype.filter
+                                                          .call(
+                                                            $event.target
+                                                              .options,
+                                                            function (o) {
+                                                              return o.selected
+                                                            }
+                                                          )
+                                                          .map(function (o) {
+                                                            var val =
+                                                              "_value" in o
+                                                                ? o._value
+                                                                : o.value
+                                                            return val
+                                                          })
+                                                      _vm.$set(
+                                                        _vm.record,
+                                                        "gender",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
+                                                      )
+                                                    },
+                                                  },
+                                                },
+                                                [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: { value: "Male" },
+                                                    },
+                                                    [_vm._v("Male")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Female",
+                                                      },
+                                                    },
+                                                    [_vm._v("Female")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: { value: "Other" },
+                                                    },
+                                                    [_vm._v("Other")]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.gender != null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .gender[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-12 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [_vm._v("Total Positions")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value:
+                                                      _vm.record
+                                                        .total_positions,
+                                                    expression:
+                                                      "record.total_positions",
+                                                  },
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  type: "number",
+                                                  placeholder:
+                                                    "Total Positions",
+                                                  name: "total_positions",
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.record.total_positions,
+                                                },
+                                                on: {
+                                                  input: function ($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.record,
+                                                      "total_positions",
+                                                      $event.target.value
+                                                    )
+                                                  },
+                                                },
+                                              }),
+                                              _vm._v(" "),
+                                              _c("small", [
+                                                _vm.errors.total_positions !=
+                                                null
+                                                  ? _c(
+                                                      "span",
+                                                      {
+                                                        staticClass:
+                                                          "text-danger",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                                " +
+                                                            _vm._s(
+                                                              _vm.errors
+                                                                .total_positions[0]
+                                                            ) +
+                                                            "\n                                                            "
+                                                        ),
+                                                      ]
+                                                    )
+                                                  : _vm._e(),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-12" }, [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Job Description")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("textarea", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value:
+                                                    _vm.record.job_description,
+                                                  expression:
+                                                    "record.job_description",
+                                                },
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: { height: "100px" },
+                                              attrs: {
+                                                placeholder:
+                                                  "Enter Job Description",
+                                                name: "job_description",
+                                              },
+                                              domProps: {
+                                                value:
+                                                  _vm.record.job_description,
+                                              },
+                                              on: {
+                                                input: function ($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    _vm.record,
+                                                    "job_description",
+                                                    $event.target.value
+                                                  )
+                                                },
+                                              },
+                                            }),
+                                            _vm._v(" "),
+                                            _c("small", [
+                                              _vm.errors.job_description != null
+                                                ? _c(
+                                                    "span",
+                                                    {
+                                                      staticClass:
+                                                        "text-danger",
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                                " +
+                                                          _vm._s(
+                                                            _vm.errors
+                                                              .job_description[0]
+                                                          ) +
+                                                          "\n                                                            "
+                                                      ),
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                            ]),
+                                          ]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-12" }, [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Job Responsibilities")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("textarea", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value:
+                                                    _vm.record
+                                                      .job_responsibilities,
+                                                  expression:
+                                                    "record.job_responsibilities",
+                                                },
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: { height: "100px" },
+                                              attrs: {
+                                                placeholder:
+                                                  "Enter Job Description",
+                                                name: "job_responsibilities",
+                                              },
+                                              domProps: {
+                                                value:
+                                                  _vm.record
+                                                    .job_responsibilities,
+                                              },
+                                              on: {
+                                                input: function ($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    _vm.record,
+                                                    "job_responsibilities",
+                                                    $event.target.value
+                                                  )
+                                                },
+                                              },
+                                            }),
+                                            _vm._v(" "),
+                                            _c("small", [
+                                              _vm.errors.job_responsibilities !=
+                                              null
+                                                ? _c(
+                                                    "span",
+                                                    {
+                                                      staticClass:
+                                                        "text-danger",
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                                " +
+                                                          _vm._s(
+                                                            _vm.errors
+                                                              .job_responsibilities[0]
+                                                          ) +
+                                                          "\n                                                            "
+                                                      ),
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                            ]),
+                                          ]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-12" }, [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [
+                                                _vm._v(
+                                                  "Qualifications &\n                                                            Technicalities"
+                                                ),
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "select",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value:
+                                                      _vm.record
+                                                        .qualification_level,
+                                                    expression:
+                                                      "record.qualification_level",
+                                                  },
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  name: "qualification_level",
+                                                },
+                                                on: {
+                                                  change: function ($event) {
+                                                    var $$selectedVal =
+                                                      Array.prototype.filter
+                                                        .call(
+                                                          $event.target.options,
+                                                          function (o) {
+                                                            return o.selected
+                                                          }
+                                                        )
+                                                        .map(function (o) {
+                                                          var val =
+                                                            "_value" in o
+                                                              ? o._value
+                                                              : o.value
+                                                          return val
+                                                        })
+                                                    _vm.$set(
+                                                      _vm.record,
+                                                      "qualification_level",
+                                                      $event.target.multiple
+                                                        ? $$selectedVal
+                                                        : $$selectedVal[0]
+                                                    )
+                                                  },
+                                                },
+                                              },
+                                              [
+                                                _c(
+                                                  "option",
+                                                  {
+                                                    attrs: { value: "Metric" },
+                                                  },
+                                                  [_vm._v("Metric")]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "option",
+                                                  {
+                                                    attrs: {
+                                                      value: "Intermediate",
+                                                    },
+                                                  },
+                                                  [_vm._v("Intermediate")]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "option",
+                                                  {
+                                                    attrs: {
+                                                      value: "Graduation",
+                                                    },
+                                                  },
+                                                  [_vm._v("Graduation")]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "option",
+                                                  {
+                                                    attrs: { value: "Masters" },
+                                                  },
+                                                  [_vm._v("Masters")]
+                                                ),
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("small", [
+                                              _vm.errors.qualification_level !=
+                                              null
+                                                ? _c(
+                                                    "span",
+                                                    {
+                                                      staticClass:
+                                                        "text-danger",
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                                " +
+                                                          _vm._s(
+                                                            _vm.errors
+                                                              .qualification_level[0]
+                                                          ) +
+                                                          "\n                                                            "
+                                                      ),
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                            ]),
+                                          ]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-12" }, [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Benefits")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("textarea", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.record.benefits,
+                                                  expression: "record.benefits",
+                                                },
+                                              ],
+                                              staticClass: "form-control",
+                                              staticStyle: { height: "100px" },
+                                              attrs: {
+                                                placeholder: "Enter Benefits",
+                                                name: "benefits",
+                                              },
+                                              domProps: {
+                                                value: _vm.record.benefits,
+                                              },
+                                              on: {
+                                                input: function ($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    _vm.record,
+                                                    "benefits",
+                                                    $event.target.value
+                                                  )
+                                                },
+                                              },
+                                            }),
+                                            _vm._v(" "),
+                                            _c("small", [
+                                              _vm.errors.benefits != null
+                                                ? _c(
+                                                    "span",
+                                                    {
+                                                      staticClass:
+                                                        "text-danger",
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                                " +
+                                                          _vm._s(
+                                                            _vm.errors
+                                                              .benefits[0]
+                                                          ) +
+                                                          "\n                                                            "
+                                                      ),
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                            ]),
+                                          ]
+                                        ),
+                                      ]),
+                                    ]),
+                                  ]),
+                                ]
+                              ),
+                            ]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "row mt-4 " }, [
+                          _c(
+                            "div",
+                            { staticClass: "col-lg-12 modelBtnContainer " },
+                            [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "positiveBtn modelBtn mr-1",
+                                  on: {
+                                    click: function ($event) {
+                                      $event.preventDefault()
+                                      return _vm.postJob()
+                                    },
+                                  },
+                                },
+                                [_vm._v("Post")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "negativeBtn modelBtn ml-1",
+                                  attrs: { "data-dismiss": "modal" },
+                                },
+                                [_vm._v("Cancel")]
+                              ),
+                            ]
+                          ),
+                        ]),
+                      ]
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+        ]
+      ),
+    ],
     1
   )
 }
@@ -35505,498 +37241,22 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "modal fade PostNewJobModal",
-        attrs: {
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "myLargeModalLabel",
-          "aria-hidden": "true",
-        },
-      },
-      [
-        _c(
-          "div",
-          { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
-          [
-            _c("form", { attrs: { id: "basicinformationForm" } }, [
-              _c("div", { staticClass: "modal-content p-0" }, [
-                _c("div", { staticClass: "container editModel pb-5" }, [
-                  _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
-                  _vm._v(" "),
-                  _c(
-                    "section",
-                    { staticClass: "modelForm container p-0 p-md-2" },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "row no-gutters",
-                          attrs: { id: "subFormFieldsContainer" },
-                        },
-                        [
-                          _c("div", { staticClass: "col-12" }, [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "subForm",
-                                attrs: { id: "subForm" },
-                              },
-                              [
-                                _c("div", { staticClass: "modelTitle my-3" }, [
-                                  _c("div", {
-                                    staticClass: "mr-2 titleEffect",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "h4",
-                                    { staticClass: "m-0 modelTitleText" },
-                                    [_vm._v("Add more Jobs")]
-                                  ),
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "subFormFields" }, [
-                                  _c("div", { staticClass: "row" }, [
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Job Title")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                type: "text",
-                                                name: "",
-                                                placeholder: "Enter Job Title",
-                                              },
-                                            }),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Job Designation")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                type: "text",
-                                                name: "",
-                                                placeholder:
-                                                  "Enter Job Designation",
-                                              },
-                                            }),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Salary Type")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "select",
-                                              {
-                                                staticClass: "form-control",
-                                                attrs: { name: "" },
-                                              },
-                                              [
-                                                _c(
-                                                  "option",
-                                                  {
-                                                    attrs: {
-                                                      value: "Please Select",
-                                                      selected: "",
-                                                    },
-                                                  },
-                                                  [_vm._v("Please Select")]
-                                                ),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Salary Range")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                type: "text",
-                                                placeholder:
-                                                  "Enter Salary Range",
-                                                name: "",
-                                              },
-                                            }),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Shift")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "select",
-                                              {
-                                                staticClass: "form-control",
-                                                attrs: { name: "" },
-                                              },
-                                              [
-                                                _c(
-                                                  "option",
-                                                  {
-                                                    attrs: {
-                                                      value: "Please Select",
-                                                      selected: "",
-                                                    },
-                                                  },
-                                                  [_vm._v("Please Select")]
-                                                ),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Experience")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                type: "text",
-                                                placeholder: "Enter Experience",
-                                                name: "",
-                                              },
-                                            }),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Location")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                type: "text",
-                                                placeholder: "Enter Location",
-                                                name: "",
-                                              },
-                                            }),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Job Type")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "select",
-                                              {
-                                                staticClass: "form-control",
-                                                attrs: { name: "" },
-                                              },
-                                              [
-                                                _c(
-                                                  "option",
-                                                  {
-                                                    attrs: {
-                                                      value: "Please Select",
-                                                      selected: "",
-                                                    },
-                                                  },
-                                                  [_vm._v("Please Select")]
-                                                ),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Gender")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "select",
-                                              {
-                                                staticClass: "form-control",
-                                                attrs: { name: "" },
-                                              },
-                                              [
-                                                _c(
-                                                  "option",
-                                                  {
-                                                    attrs: {
-                                                      value: "Please Select",
-                                                      selected: "",
-                                                    },
-                                                  },
-                                                  [_vm._v("Please Select")]
-                                                ),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-12 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Total Positions")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "select",
-                                              {
-                                                staticClass: "form-control",
-                                                attrs: { name: "" },
-                                              },
-                                              [
-                                                _c(
-                                                  "option",
-                                                  {
-                                                    attrs: {
-                                                      value: "Please Select",
-                                                      selected: "",
-                                                    },
-                                                  },
-                                                  [_vm._v("Please Select")]
-                                                ),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-12" }, [
-                                      _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Job Description"),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("textarea", {
-                                          staticClass: "form-control",
-                                          staticStyle: { height: "100px" },
-                                          attrs: {
-                                            placeholder:
-                                              "Enter Job Description",
-                                            name: "",
-                                          },
-                                        }),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-12" }, [
-                                      _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Job Responsibilities"),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("textarea", {
-                                          staticClass: "form-control",
-                                          staticStyle: { height: "100px" },
-                                          attrs: {
-                                            placeholder:
-                                              "Enter Job Description",
-                                            name: "",
-                                          },
-                                        }),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-12" }, [
-                                      _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v(
-                                            "Qualifications & Technicalities"
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("textarea", {
-                                          staticClass: "form-control",
-                                          staticStyle: { height: "100px" },
-                                          attrs: {
-                                            placeholder:
-                                              "Enter Qualifications & Technicalities",
-                                            name: "",
-                                          },
-                                        }),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "col-12" }, [
-                                      _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Benefits"),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("textarea", {
-                                          staticClass: "form-control",
-                                          staticStyle: { height: "100px" },
-                                          attrs: {
-                                            placeholder: "Enter Benefits",
-                                            name: "",
-                                          },
-                                        }),
-                                      ]),
-                                    ]),
-                                  ]),
-                                ]),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "row mt-4 " }, [
-                        _c(
-                          "div",
-                          { staticClass: "col-lg-12 modelBtnContainer " },
-                          [
-                            _c(
-                              "button",
-                              { staticClass: "positiveBtn modelBtn mr-1" },
-                              [_vm._v("Update")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "negativeBtn modelBtn ml-1",
-                                attrs: { "data-dismiss": "modal" },
-                              },
-                              [_vm._v("Cancel")]
-                            ),
-                          ]
-                        ),
-                      ]),
-                    ]
-                  ),
-                ]),
-              ]),
-            ]),
-          ]
-        ),
-      ]
-    )
+    return _c("div", { staticClass: "modelTitle my-3" }, [
+      _c("div", { staticClass: "mr-2 titleEffect" }),
+      _vm._v(" "),
+      _c("h4", { staticClass: "m-0 modelTitleText" }, [
+        _vm._v("Add more Jobs"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "" } }, [
+      _vm._v("Experience"),
+      _c("small", [_vm._v("in years")]),
+    ])
   },
 ]
 render._withStripped = true
@@ -39923,11 +41183,11 @@ var render = function () {
                   {
                     staticClass: "secondaymenu",
                     attrs: {
-                      to: { name: "CompanyProfile" },
+                      to: { name: "CompanyPostJob" },
                       id: "secondary-anker-4",
                     },
                   },
-                  [_vm._v("Search Companies")]
+                  [_vm._v("Job Management")]
                 ),
               ],
               1

@@ -137,6 +137,7 @@ Route::post('/update/newsletter', [App\Http\Controllers\Website\Candidate\Profil
         Route::get('get-company-profile', [App\Http\Controllers\Company\CompanyController::class, 'getCompanyProfile']);
         Route::post('/update/company-basicinformation', [App\Http\Controllers\Company\CompanyController::class, 'updateCompanyBasicInformation'])->name('profile.updateBasicInformationCompany');
         Route::post('/update/socialmedia', [App\Http\Controllers\Company\CompanyController::class, 'socialmediaupdate'])->name('profile.updateSocialMedia');
+        Route::post('/company/post-job', [App\Http\Controllers\Company\CompanyController::class, 'jobPost'])->name('profile.jobPost');
 		// Route::get('/home', [App\Http\Controllers\Website\Company\HomeController::class, 'showDashboardPage'])->name('home');
 		// Route::get('/profile', [App\Http\Controllers\Website\Company\ProfileController::class, 'show'])->name('profile.show');
 		// Route::get('/profile_edit', [App\Http\Controllers\Website\Company\ProfileController::class, 'edit'])->name('profile.edit');

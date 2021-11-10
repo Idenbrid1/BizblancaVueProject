@@ -10,9 +10,10 @@ class JobPost extends Model
     use HasFactory;
 
     protected $fillable = [
+        'bannar',
         'title',
         'designation',
-        'description',
+        'job_description',
         'skills',
         'job_type',
         'shift',
@@ -23,6 +24,7 @@ class JobPost extends Model
         'salary_type',
         'min_salary',
         'max_salary',
+        'salary_range',
         'specific_gender_required',
         'total_position',
         'hired_position',
@@ -33,6 +35,8 @@ class JobPost extends Model
         'degree_title',
         'salary_visibilty',
         'age',
+        'benefits',
+        'job_responsibilities',
         'restrict_applicants',
         'status',
     ];

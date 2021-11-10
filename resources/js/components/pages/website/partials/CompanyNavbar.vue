@@ -20,7 +20,7 @@
                             class="seprate-line"></span>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'CompanyProfile' }" class="secondaymenu" id="secondary-anker-4">Search Companies</router-link>
+                        <router-link :to="{ name: 'CompanyPostJob' }" class="secondaymenu" id="secondary-anker-4">Job Management</router-link>
                     </li>
                 </ul>
             </div>

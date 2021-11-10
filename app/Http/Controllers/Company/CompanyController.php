@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Company;
 use App\Http\Controllers\Controller;
 use App\Models\Candidate;
 use App\Models\Company;
+use App\Models\JobPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use File;
+use Validator;
 
 class CompanyController extends Controller
 {
@@ -85,5 +87,94 @@ class CompanyController extends Controller
         }
         $company->update();
         return back();
+    }
+
+    public function jobPost(Request $request)
+    {
+        // return $request;
+        $attributeNames = [
+            'bannar' => 'bannar',
+            'job_title' => 'Job Title',
+            'job_designation' => 'Job Designation',
+            'salary_type' => 'Salary Type',
+            'salary_range' => 'Salary Range',
+            'shift' => 'Shift',
+            'experience' => 'Experience',
+            'location' => 'Location',
+            'job_type' => 'Job Type',
+            'gender' => 'Gender',
+            'total_positions' => 'Total Positions',
+            'job_description' => 'Job Description',
+            'job_responsibilities' => 'Job Responsibilities',
+            'qualification_level' => 'qualification',
+            'benefits' => 'Benefits',
+        ];
+        $rules = array(
+            'bannar' => 'required',
+            'job_title' => 'required',
+            'job_designation' => 'required',
+            'salary_type' => 'required',
+            'salary_range' => 'required',
+            'shift' => 'required',
+            'experience' => 'required',
+            'location' => 'required',
+            'job_type' => 'required',
+            'gender' => 'required',
+            'total_positions' => 'required',
+            'job_description' => 'required',
+            'job_responsibilities' => 'required',
+            'qualification_level' => 'required',
+            'benefits' => 'required',
+        );
+
+        $validator = Validator::make($request->all(), $rules);
+        $validator->setAttributeNames($attributeNames);
+
+        if ($validator->fails()){
+            return response()->json([
+                'errors' => $validator->errors(),
+                'success' => false,
+            ], 200);
+        }
+        else
+        {
+            $user = Auth::user();
+            $company = Company::where('user_id', $user->id)->first();
+            $postjob = new JobPost;
+            $postjob->title = $request->job_title;
+            $postjob->designation = $request->job_designation;
+            $postjob->salary_type = $request->salary_type;
+            $range = str_replace("-", " ", $request->salary_range);
+            $sperateRange = explode(" ", $range);
+            $postjob->salary_range = $request->salary_range;
+            $postjob->min_salary = $sperateRange[0];
+            $postjob->max_salary = $sperateRange[1];
+            $postjob->shift = $request->shift;
+            $postjob->location = $request->location;
+            $postjob->experience = $request->experience;
+            $postjob->job_type = $request->job_type;
+            $postjob->gender = $request->gender;
+            $postjob->total_position = $request->total_positions;
+            $postjob->description = $request->job_description;
+            $postjob->job_responsibilities = $request->job_responsibilities;
+            $postjob->qualification_level = $request->qualification_level;
+            $postjob->benefits = $request->benefits;
+            $postjob->company_id = $company->id;
+            if($request->file('bannar')) 
+            {   
+                $file = $request->file('bannar');
+                $imagefilename = $file->getClientOriginalName();
+                $extension = $file->getClientOriginalExtension();
+                $location = '/storage/images/companies/';
+                $file->move($location,$imagefilename);
+                File::delete($location.$company->profile_video);
+                $company->bannar = $imagefilename;
+            }
+            $postjob->save();
+            return response()->json([
+                'success' => true,
+                'message' => 'Jobe Posted',
+            ]);
+        }
     }
 }
