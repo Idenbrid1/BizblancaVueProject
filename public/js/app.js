@@ -10073,6 +10073,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -33972,68 +33992,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [
-      _c("WebsiteNavbar"),
-      _vm._v(" "),
-      _c("div", { staticClass: "container cont-flex" }, [
-        _c("div", { staticClass: "col-sm-12 col-md-8 col-lg-8 xs-padding" }, [
-          _c("div", { staticClass: "product_accordion_container" }, [
-            _c("div", [
-              _c("input", {
-                staticClass: "product_accordion",
-                attrs: {
-                  type: "checkbox",
-                  name: "accordion",
-                  id: "first",
-                  checked: "",
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "label",
-                { staticClass: "search-box-h", attrs: { for: "first" } },
-                [
-                  _vm._v(
-                    "\n                        Condition Search\n                        "
-                  ),
-                  _c("span", { staticClass: "chevron" }, [
-                    _c(
-                      "svg",
-                      {
-                        attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          width: "24",
-                          height: "24",
-                          viewBox: "0 0 24 24",
-                          fill: "none",
-                          stroke: "currentColor",
-                          "stroke-width": "2",
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                        },
-                      },
-                      [_c("polyline", { attrs: { points: "6 9 12 15 18 9" } })]
-                    ),
-                  ]),
-                ]
-              ),
-              _vm._v(" "),
-              _vm._m(0),
-            ]),
-          ]),
-          _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _vm._m(2),
-          _vm._v(" "),
-          _vm._m(3),
-          _vm._v(" "),
-          _vm._m(4),
-        ]),
-        _vm._v(" "),
-        _vm._m(5),
-      ]),
-    ],
+    [_c("WebsiteNavbar"), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1)],
     1
   )
 }
@@ -34042,1762 +34001,2002 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "content" }, [
-      _c("div", { staticClass: "content-body" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("label", [_vm._v("Industory")]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "cusSelectbox",
-                attrs: { name: "", id: "cusSelectbox" },
-              },
-              [
-                _c("option", { attrs: { value: "Select" } }, [
-                  _vm._v("Please Select"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "India" } }, [_vm._v("India")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Nepal" } }, [_vm._v("Nepal")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Bangladesh" } }, [
-                  _vm._v("Bangladesh"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Sri Lanka" } }, [
-                  _vm._v("Sri Lanka"),
-                ]),
-              ]
-            ),
+    return _c("div", { staticClass: "container cont-flex" }, [
+      _c(
+        "div",
+        { staticClass: "col-sm-12 col-md-8 col-lg-8 xs-padding pt-5" },
+        [
+          _c("h1", { staticClass: "post_new_job_title" }, [
+            _vm._v("Post New Job"),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("label", [_vm._v("Salery Range")]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "cusSelectbox",
-                attrs: { name: "", id: "cusSelectbox" },
-              },
-              [
-                _c("option", { attrs: { value: "Select" } }, [
-                  _vm._v("Please Select"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "India" } }, [_vm._v("India")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Nepal" } }, [_vm._v("Nepal")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Bangladesh" } }, [
-                  _vm._v("Bangladesh"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Sri Lanka" } }, [
-                  _vm._v("Sri Lanka"),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("label", [_vm._v("Occupation")]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "cusSelectbox",
-                attrs: { name: "", id: "cusSelectbox" },
-              },
-              [
-                _c("option", { attrs: { value: "Select" } }, [
-                  _vm._v("Please Select"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "India" } }, [_vm._v("India")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Nepal" } }, [_vm._v("Nepal")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Bangladesh" } }, [
-                  _vm._v("Bangladesh"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Sri Lanka" } }, [
-                  _vm._v("Sri Lanka"),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("label", [_vm._v("Suboccupation")]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "cusSelectbox",
-                attrs: { name: "", id: "cusSelectbox" },
-              },
-              [
-                _c("option", { attrs: { value: "Select" } }, [
-                  _vm._v("Please Select"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "India" } }, [_vm._v("India")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Nepal" } }, [_vm._v("Nepal")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Bangladesh" } }, [
-                  _vm._v("Bangladesh"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Sri Lanka" } }, [
-                  _vm._v("Sri Lanka"),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("label", [_vm._v("Area")]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "cusSelectbox",
-                attrs: { name: "", id: "cusSelectbox" },
-              },
-              [
-                _c("option", { attrs: { value: "Select" } }, [_vm._v("Area")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "India" } }, [_vm._v("India")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Nepal" } }, [_vm._v("Nepal")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Bangladesh" } }, [
-                  _vm._v("Bangladesh"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Sri Lanka" } }, [
-                  _vm._v("Sri Lanka"),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("label", [_vm._v("Gender")]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "cusSelectbox",
-                attrs: { name: "", id: "cusSelectbox" },
-              },
-              [
-                _c("option", { attrs: { value: "Select" } }, [
-                  _vm._v("Please Select"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "India" } }, [_vm._v("India")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Nepal" } }, [_vm._v("Nepal")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Bangladesh" } }, [
-                  _vm._v("Bangladesh"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "Sri Lanka" } }, [
-                  _vm._v("Sri Lanka"),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 conditioncheck" }, [
-            _c("input", {
-              staticClass: "keeplogin-checkbox",
-              attrs: { type: "checkbox", id: "keeplogin-checkbox" },
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "keeplogin-checkbox" } }, [
-              _vm._v("Full time"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "keeplogin-checkbox",
-              attrs: { type: "checkbox", id: "keeplogin-checkbox" },
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "keeplogin-checkbox" } }, [
-              _vm._v("Part time"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "keeplogin-checkbox",
-              attrs: { type: "checkbox", id: "keeplogin-checkbox" },
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "keeplogin-checkbox" } }, [
-              _vm._v("All Jobs"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 job-condition" }, [
-            _c(
-              "button",
-              {
-                staticClass: "job-condition-clear-btn",
-                attrs: { type: "submit" },
-              },
-              [_vm._v("Clear")]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "job-condition-search-btn",
-                attrs: { type: "submit" },
-              },
-              [_vm._v("Search")]
-            ),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "product-search-box" }, [
-      _c("label", { staticClass: "search-box-h", attrs: { for: "first" } }, [
-        _vm._v("\n                    Keyword Search\n                "),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 search-container" }, [
-        _c("form", { attrs: { action: "/" } }, [
-          _c("div", [
-            _c("label", { staticClass: "keyword-input-title" }, [
-              _vm._v("Keyword Search"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            attrs: {
-              type: "text",
-              placeholder: "* Includes All Keywords",
-              name: "search",
-            },
-          }),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "keyword-search-btn", attrs: { type: "submit" } },
-            [_vm._v("Search")]
-          ),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list-toolbar mt-5" }, [
-      _c("ul", { staticClass: "job-pagination pagination-center " }, [
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _c("i", {
-              staticClass: "fa fa-angle-left",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" Previous 20"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item active" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _vm._v("1"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _vm._v("2"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _vm._v("3"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _vm._v("4"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _c("i", {
-              staticClass: "fa fa-angle-right",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" Next 20"),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-filter" }, [
-        _c("select", { staticClass: "job-select" }, [
-          _c("option", [_vm._v("Search order by")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Top Rated")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Most Popular")]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list-wrap" }, [
-      _c("div", { staticClass: "job-search-count mb-3" }, [
-        _vm._v("1 to 20 Results (out of 10,000 results in total)"),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
+          _c("p", { staticClass: "post_new_job_descrp" }, [
             _vm._v(
-              "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+              "\n                To add more jobs in your company profile, Please click the Add more jobs button and after that form\n                will appear in front of you and you have to fill this form with all the necessary requirements and\n                then click on update, your job will be posted in your company dashboard.\n            "
             ),
           ]),
           _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", { staticClass: "fa fa-calendar" }),
-              _vm._v(" Aug 23, 2021"),
-            ]),
+          _c("div", { staticClass: "post_new_job_anker" }, [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: ".PostNewJobModal",
+                  "data-toggle": "modal",
+                  "data-target": ".PostNewJobModal",
+                },
+              },
+              [_vm._v("+ Add More Jobs")]
+            ),
             _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fal fa-address-card" }),
-              _vm._v(" 2 Years"),
-            ]),
+            _c("p", [_vm._v("Showing 5 results of 123,456 jobs")]),
           ]),
           _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", { staticClass: "fal fa-money-bill-alt" }),
-              _vm._v(" 80K to 100K"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fa fa-map-marker" }),
-              _vm._v(" Lahore, Pakistan"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0" }, [
-            _c("li", [
-              _c("i", { staticClass: "fal fa-laptop-house" }),
-              _vm._v(" Night Shift"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fal fa-clock" }),
-              _vm._v(" Full Time"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [_c("i", { staticClass: "fa fa-heart" })]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
+          _c("div", { staticClass: "job-list-wrap" }, [
+            _c("div", { staticClass: "job-list" }, [
+              _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
+                    alt: "Company Logo",
+                  },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
               ]),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", { staticClass: "fa fa-calendar" }),
-              _vm._v(" Aug 23, 2021"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fal fa-address-card" }),
-              _vm._v(" 2 Years"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", { staticClass: "fal fa-money-bill-alt" }),
-              _vm._v(" 80K to 100K"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fa fa-map-marker" }),
-              _vm._v(" Lahore, Pakistan"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0" }, [
-            _c("li", [
-              _c("i", { staticClass: "fal fa-laptop-house" }),
-              _vm._v(" Night Shift"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fal fa-clock" }),
-              _vm._v(" Full Time"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [_c("i", { staticClass: "fa fa-heart" })]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fa fa-calendar",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Aug 23, 2021"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-address-card",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" 2 Years"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-money-bill-alt",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" 80K to 100K"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fa fa-map-marker",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Lahore, Pakistan"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-laptop-house",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Night Shift"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-clock",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Full Time"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [
+              _vm._v(" "),
+              _c("div", { staticClass: "job-list-content col" }, [
+                _c("div", { staticClass: "job-header" }, [
+                  _c("h6", { staticClass: "job-title mb-0" }, [
+                    _vm._v("Data Analyst"),
+                  ]),
+                  _vm._v(" "),
                   _c("i", {
-                    staticClass: "fa fa-heart",
+                    staticClass: "fa fa-star",
                     attrs: { "aria-hidden": "true" },
                   }),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fa fa-calendar",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Aug 23, 2021"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-address-card",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" 2 Years"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-money-bill-alt",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" 80K to 100K"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fa fa-map-marker",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Lahore, Pakistan"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-laptop-house",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Night Shift"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-clock",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Full Time"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [
+                  _vm._v(" "),
                   _c("i", {
-                    staticClass: "fa fa-heart",
+                    staticClass: "fa fa-star",
                     attrs: { "aria-hidden": "true" },
                   }),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fa fa-calendar",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Aug 23, 2021"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-address-card",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" 2 Years"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-money-bill-alt",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" 80K to 100K"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fa fa-map-marker",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Lahore, Pakistan"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-laptop-house",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Night Shift"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-clock",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Full Time"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [
+                  _vm._v(" "),
                   _c("i", {
-                    staticClass: "fa fa-heart",
+                    staticClass: "fa fa-star",
                     attrs: { "aria-hidden": "true" },
                   }),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fa fa-calendar",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Aug 23, 2021"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-address-card",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" 2 Years"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-money-bill-alt",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" 80K to 100K"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fa fa-map-marker",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Lahore, Pakistan"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0" }, [
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-laptop-house",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Night Shift"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", {
-                staticClass: "fal fa-clock",
-                attrs: { "aria-hidden": "true" },
-              }),
-              _vm._v(" Full Time"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [
+                  _vm._v(" "),
                   _c("i", {
-                    staticClass: "fa fa-heart",
+                    staticClass: "fa fa-star",
                     attrs: { "aria-hidden": "true" },
                   }),
-                ]
-              ),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "job-post-date" }, [
+                  _vm._v("20 hours ago"),
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "job-description" }, [
+                  _vm._v(
+                    "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", { staticClass: "fa fa-calendar" }),
+                    _vm._v(" Aug 23, 2021"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-address-card" }),
+                    _vm._v(" 2 Years"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-money-bill-alt" }),
+                    _vm._v(" 80K to 100K"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "fa fa-map-marker" }),
+                    _vm._v(" Lahore, Pakistan"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0" }, [
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-laptop-house" }),
+                    _vm._v(" Night Shift"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-clock" }),
+                    _vm._v(" Full Time"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-fav m-0" }, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
+                      [_c("i", { staticClass: "fa fa-heart" })]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-view-btn", attrs: { href: "#" } },
+                      [_vm._v("View")]
+                    ),
+                  ]),
+                ]),
+              ]),
             ]),
             _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
+            _c("div", { staticClass: "job-list" }, [
+              _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
+                    alt: "Company Logo",
+                  },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-list-content col" }, [
+                _c("div", { staticClass: "job-header" }, [
+                  _c("h6", { staticClass: "job-title mb-0" }, [
+                    _vm._v("Data Analyst"),
+                  ]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "job-post-date" }, [
+                  _vm._v("20 hours ago"),
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "job-description" }, [
+                  _vm._v(
+                    "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", { staticClass: "fa fa-calendar" }),
+                    _vm._v(" Aug 23, 2021"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-address-card" }),
+                    _vm._v(" 2 Years"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-money-bill-alt" }),
+                    _vm._v(" 80K to 100K"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "fa fa-map-marker" }),
+                    _vm._v(" Lahore, Pakistan"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0" }, [
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-laptop-house" }),
+                    _vm._v(" Night Shift"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-clock" }),
+                    _vm._v(" Full Time"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-fav m-0" }, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
+                      [_c("i", { staticClass: "fa fa-heart" })]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-view-btn", attrs: { href: "#" } },
+                      [_vm._v("View")]
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "job-list" }, [
+              _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
+                    alt: "Company Logo",
+                  },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-list-content col" }, [
+                _c("div", { staticClass: "job-header" }, [
+                  _c("h6", { staticClass: "job-title mb-0" }, [
+                    _vm._v("Data Analyst"),
+                  ]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "job-post-date" }, [
+                  _vm._v("20 hours ago"),
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "job-description" }, [
+                  _vm._v(
+                    "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fa fa-calendar",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Aug 23, 2021"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-address-card",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" 2 Years"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-money-bill-alt",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" 80K to 100K"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fa fa-map-marker",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Lahore, Pakistan"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-laptop-house",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Night Shift"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-clock",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Full Time"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-fav m-0" }, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
+                      [
+                        _c("i", {
+                          staticClass: "fa fa-heart",
+                          attrs: { "aria-hidden": "true" },
+                        }),
+                      ]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-view-btn", attrs: { href: "#" } },
+                      [_vm._v("View")]
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "job-list" }, [
+              _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
+                    alt: "Company Logo",
+                  },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-list-content col" }, [
+                _c("div", { staticClass: "job-header" }, [
+                  _c("h6", { staticClass: "job-title mb-0" }, [
+                    _vm._v("Data Analyst"),
+                  ]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "job-post-date" }, [
+                  _vm._v("20 hours ago"),
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "job-description" }, [
+                  _vm._v(
+                    "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fa fa-calendar",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Aug 23, 2021"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-address-card",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" 2 Years"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-money-bill-alt",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" 80K to 100K"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fa fa-map-marker",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Lahore, Pakistan"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-laptop-house",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Night Shift"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-clock",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Full Time"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-fav m-0" }, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
+                      [
+                        _c("i", {
+                          staticClass: "fa fa-heart",
+                          attrs: { "aria-hidden": "true" },
+                        }),
+                      ]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-view-btn", attrs: { href: "#" } },
+                      [_vm._v("View")]
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "job-list" }, [
+              _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
+                    alt: "Company Logo",
+                  },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-list-content col" }, [
+                _c("div", { staticClass: "job-header" }, [
+                  _c("h6", { staticClass: "job-title mb-0" }, [
+                    _vm._v("Data Analyst"),
+                  ]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "job-post-date" }, [
+                  _vm._v("20 hours ago"),
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "job-description" }, [
+                  _vm._v(
+                    "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fa fa-calendar",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Aug 23, 2021"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-address-card",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" 2 Years"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-money-bill-alt",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" 80K to 100K"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fa fa-map-marker",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Lahore, Pakistan"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-laptop-house",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Night Shift"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-clock",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Full Time"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-fav m-0" }, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
+                      [
+                        _c("i", {
+                          staticClass: "fa fa-heart",
+                          attrs: { "aria-hidden": "true" },
+                        }),
+                      ]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-view-btn", attrs: { href: "#" } },
+                      [_vm._v("View")]
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "job-list" }, [
+              _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
+                    alt: "Company Logo",
+                  },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-list-content col" }, [
+                _c("div", { staticClass: "job-header" }, [
+                  _c("h6", { staticClass: "job-title mb-0" }, [
+                    _vm._v("Data Analyst"),
+                  ]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "job-post-date" }, [
+                  _vm._v("20 hours ago"),
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "job-description" }, [
+                  _vm._v(
+                    "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fa fa-calendar",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Aug 23, 2021"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-address-card",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" 2 Years"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-money-bill-alt",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" 80K to 100K"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fa fa-map-marker",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Lahore, Pakistan"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0" }, [
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-laptop-house",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Night Shift"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", {
+                      staticClass: "fal fa-clock",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Full Time"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-fav m-0" }, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
+                      [
+                        _c("i", {
+                          staticClass: "fa fa-heart",
+                          attrs: { "aria-hidden": "true" },
+                        }),
+                      ]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-view-btn", attrs: { href: "#" } },
+                      [_vm._v("View")]
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "job-list" }, [
+              _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
+                    alt: "Company Logo",
+                  },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-list-content col" }, [
+                _c("div", { staticClass: "job-header" }, [
+                  _c("h6", { staticClass: "job-title mb-0" }, [
+                    _vm._v("Data Analyst"),
+                  ]),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
+                    staticClass: "fa fa-star",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "job-post-date" }, [
+                  _vm._v("20 hours ago"),
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "job-description" }, [
+                  _vm._v(
+                    "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", { staticClass: "fa fa-calendar" }),
+                    _vm._v(" Aug 23, 2021"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-address-card" }),
+                    _vm._v(" 2 Years"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-money-bill-alt" }),
+                    _vm._v(" 80K to 100K"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "fa fa-map-marker" }),
+                    _vm._v(" Lahore, Pakistan"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-meta m-0" }, [
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-laptop-house" }),
+                    _vm._v(" Night Shift"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "fal fa-clock" }),
+                    _vm._v(" Full Time"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "job-list-fav m-0" }, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
+                      [_c("i", { staticClass: "fa fa-heart" })]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      { staticClass: "job-view-btn", attrs: { href: "#" } },
+                      [_vm._v("View")]
+                    ),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
           _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("kashif ")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
+          _c("div", { staticClass: "bottom-pagination" }, [
+            _c("ul", { staticClass: "job-pagination pagination-center " }, [
+              _c("li", { staticClass: "job-page-item" }, [
+                _c(
+                  "a",
+                  { staticClass: "job-page-link", attrs: { href: "#" } },
+                  [
+                    _c("i", {
+                      staticClass: "fa fa-angle-left",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Previous 20"),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "job-page-item active" }, [
+                _c(
+                  "a",
+                  { staticClass: "job-page-link", attrs: { href: "#" } },
+                  [_vm._v("1")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "job-page-item" }, [
+                _c(
+                  "a",
+                  { staticClass: "job-page-link", attrs: { href: "#" } },
+                  [_vm._v("2")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "job-page-item" }, [
+                _c(
+                  "a",
+                  { staticClass: "job-page-link", attrs: { href: "#" } },
+                  [_vm._v("3")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "job-page-item" }, [
+                _c(
+                  "a",
+                  { staticClass: "job-page-link", attrs: { href: "#" } },
+                  [_vm._v("4")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "job-page-item" }, [
+                _c(
+                  "a",
+                  { staticClass: "job-page-link", attrs: { href: "#" } },
+                  [
+                    _c("i", {
+                      staticClass: "fa fa-angle-right",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                    _vm._v(" Next 20"),
+                  ]
+                ),
+              ]),
             ]),
             _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" "),
-            _c("i", {
-              staticClass: "fa fa-star",
-              attrs: { "aria-hidden": "true" },
-            }),
+            _c("div", { staticClass: "job-search-count mb-3" }, [
+              _vm._v("1 to 20 Results (out of 10,000 results in total)"),
+            ]),
           ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-sm-12 col-md-4 col-lg-4" }, [
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "col" }, [
+          _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+            _c(
+              "div",
+              { staticClass: "side-card-title text-center text-white" },
+              [_vm._v("For Queries")]
             ),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", { staticClass: "fa fa-calendar" }),
-              _vm._v(" Aug 23, 2021"),
-            ]),
             _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fal fa-address-card" }),
-              _vm._v(" 2 Years"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-            _c("li", [
-              _c("i", { staticClass: "fal fa-money-bill-alt" }),
-              _vm._v(" 80K to 100K"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fa fa-map-marker" }),
-              _vm._v(" Lahore, Pakistan"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-meta m-0" }, [
-            _c("li", [
-              _c("i", { staticClass: "fal fa-laptop-house" }),
-              _vm._v(" Night Shift"),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fal fa-clock" }),
-              _vm._v(" Full Time"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [_c("i", { staticClass: "fa fa-heart" })]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
+            _c("div", { staticClass: "side-card-body" }, [
+              _c("p", { staticClass: "card-title" }, [
+                _vm._v(
+                  "If you have any further queries, please contact us without any\n                            hesitation."
+                ),
+              ]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "social-btns center-block" }, [
+                _c("li", [
+                  _c("button", { staticClass: "btn btn-whatsapp" }, [
+                    _c("img", {
+                      attrs: { src: "assets/images/whatsapp-quaries.svg" },
+                    }),
+                    _c("span", [
+                      _vm._v(
+                        "+92 306 404\n                                        1221"
+                      ),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("button", { staticClass: "btn btn-facebook" }, [
+                    _c("img", {
+                      attrs: { src: "assets/images/facebook-quaries.svg" },
+                    }),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("button", { staticClass: "btn btn-linkedin" }, [
+                    _c("img", {
+                      attrs: { src: "assets/images/linkdine-quaries.svg" },
+                    }),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("button", { staticClass: "btn btn-google" }, [
+                    _c("img", {
+                      attrs: { src: "assets/images/gmail-quaries.svg" },
+                    }),
+                    _c("span", [_vm._v("bizer@bizblanca.com")]),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "bottom-pagination" }, [
-      _c("ul", { staticClass: "job-pagination pagination-center " }, [
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _c("i", {
-              staticClass: "fa fa-angle-left",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" Previous 20"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item active" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _vm._v("1"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _vm._v("2"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _vm._v("3"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _vm._v("4"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "job-page-item" }, [
-          _c("a", { staticClass: "job-page-link", attrs: { href: "#" } }, [
-            _c("i", {
-              staticClass: "fa fa-angle-right",
-              attrs: { "aria-hidden": "true" },
-            }),
-            _vm._v(" Next 20"),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-search-count mb-3" }, [
-        _vm._v("1 to 20 Results (out of 10,000 results in total)"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-12 col-md-4 col-lg-4" }, [
-      _c("br"),
-      _c("br"),
-      _vm._v(" "),
-      _c("div", { staticClass: "col" }, [
-        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-          _c("div", { staticClass: "side-card-title text-center text-white" }, [
-            _vm._v("For Queries"),
-          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "side-card-body" }, [
-            _c("p", { staticClass: "card-title" }, [
-              _vm._v(
-                "If you have any further queries, please contact us without any\n                            hesitation."
-              ),
-            ]),
+          _c("div", { staticClass: "divider" }, [_c("hr")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+            _c(
+              "div",
+              { staticClass: "side-card-title text-center text-white" },
+              [_vm._v("New Govt Jobs")]
+            ),
             _vm._v(" "),
-            _c("ul", { staticClass: "social-btns center-block" }, [
-              _c("li", [
-                _c("button", { staticClass: "btn btn-whatsapp" }, [
+            _c("div", { staticClass: "side-govtjobcard-body " }, [
+              _c("div", { staticClass: "gov-job-box" }, [
+                _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/whatsapp-quaries.svg" },
+                    attrs: {
+                      src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                    },
                   }),
-                  _c("span", [
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                  _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mb-2" }, [
                     _vm._v(
-                      "+92 306 404\n                                        1221"
+                      "If you have any further queries, please contact us without any\n                                    hesitation."
                     ),
                   ]),
                 ]),
               ]),
               _vm._v(" "),
-              _c("li", [
-                _c("button", { staticClass: "btn btn-facebook" }, [
+              _c("div", { staticClass: "gov-job-box" }, [
+                _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/facebook-quaries.svg" },
+                    attrs: {
+                      src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                    },
                   }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("button", { staticClass: "btn btn-linkedin" }, [
-                  _c("img", {
-                    attrs: { src: "assets/images/linkdine-quaries.svg" },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("button", { staticClass: "btn btn-google" }, [
-                  _c("img", {
-                    attrs: { src: "assets/images/gmail-quaries.svg" },
-                  }),
-                  _c("span", [_vm._v("bizer@bizblanca.com")]),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "divider" }, [_c("hr")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-          _c("div", { staticClass: "side-card-title text-center text-white" }, [
-            _vm._v("New Govt Jobs"),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "side-govtjobcard-body " }, [
-            _c("div", { staticClass: "gov-job-box" }, [
-              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
-                _c("img", {
-                  attrs: {
-                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
-                  },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
-                _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-2" }, [
-                  _vm._v(
-                    "If you have any further queries, please contact us without any\n                                    hesitation."
-                  ),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "gov-job-box" }, [
-              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
-                _c("img", {
-                  attrs: {
-                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
-                  },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
-                _c("h6", [_vm._v("Incharge Information Center")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-2" }, [
-                  _vm._v(
-                    "If you have any further queries, please contact us without any\n                                    hesitation."
-                  ),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "gov-job-box" }, [
-              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
-                _c("img", {
-                  attrs: {
-                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
-                  },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
-                _c("h6", [_vm._v("Education Department KPK")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-2" }, [
-                  _vm._v(
-                    "If you have any further queries, please contact us without any\n                                    hesitation."
-                  ),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "gov-job-box" }, [
-              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
-                _c("img", {
-                  attrs: {
-                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
-                  },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
-                _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-2" }, [
-                  _vm._v(
-                    "If you have any further queries, please contact us without any\n                                    hesitation."
-                  ),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "divider" }, [_c("hr")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-          _c("div", { staticClass: "side-card-title text-center text-white" }, [
-            _vm._v("Top Rizer's Ranking"),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "side-card-body" }, [
-            _c("div", { staticClass: "swiper bizer-ranking-slider" }, [
-              _c("div", { staticClass: "swiper-wrapper" }, [
-                _c("div", { staticClass: "swiper-slide" }, [
-                  _c("div", { staticClass: "wrapper" }, [
-                    _c("div", { staticClass: "profile" }, [
-                      _c("img", {
-                        staticClass: "thumbnail",
-                        attrs: {
-                          src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                        },
-                      }),
-                    ]),
-                    _vm._v(" "),
-                    _c("h3", { staticClass: "name" }, [
-                      _vm._v("Natasha Anjum"),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "title" }, [
-                      _vm._v("Laravel Developer"),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "position-box" }, [
-                      _c("img", {
-                        attrs: { src: "assets/images/position-crown.svg" },
-                      }),
-                      _vm._v(" "),
-                      _c("h3", { staticClass: "position-number" }, [
-                        _vm._v("1st"),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "description" }, [
-                      _vm._v(
-                        "I have learned a lot of things in my life but to be a\n                                            Laravel developer has changed my life."
-                      ),
-                    ]),
-                  ]),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "swiper-slide" }, [
-                  _c("div", { staticClass: "wrapper" }, [
-                    _c("div", { staticClass: "profile" }, [
-                      _c("img", {
-                        staticClass: "thumbnail",
-                        attrs: {
-                          src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                        },
-                      }),
-                    ]),
-                    _vm._v(" "),
-                    _c("h3", { staticClass: "name" }, [
-                      _vm._v("Natasha Anjum"),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "title" }, [
-                      _vm._v("Laravel Developer"),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "position-box" }, [
-                      _c("img", {
-                        attrs: { src: "assets/images/position-crown.svg" },
-                      }),
-                      _vm._v(" "),
-                      _c("h3", { staticClass: "position-number" }, [
-                        _vm._v("2nd"),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "description" }, [
-                      _vm._v(
-                        "I have learned a lot of things in my life but to be a\n                                            Laravel developer has changed my life."
-                      ),
-                    ]),
+                _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                  _c("h6", [_vm._v("Incharge Information Center")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mb-2" }, [
+                    _vm._v(
+                      "If you have any further queries, please contact us without any\n                                    hesitation."
+                    ),
                   ]),
                 ]),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "swiper-pagination" }),
+              _c("div", { staticClass: "gov-job-box" }, [
+                _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                  _c("h6", [_vm._v("Education Department KPK")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mb-2" }, [
+                    _vm._v(
+                      "If you have any further queries, please contact us without any\n                                    hesitation."
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "gov-job-box" }, [
+                _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                  _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mb-2" }, [
+                    _vm._v(
+                      "If you have any further queries, please contact us without any\n                                    hesitation."
+                    ),
+                  ]),
+                ]),
+              ]),
             ]),
           ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "divider" }, [_c("hr")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-          _c("div", { staticClass: "side-card-title text-center text-white" }, [
-            _vm._v("FAQS"),
-          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "side-card-body" }, [
+          _c("div", { staticClass: "divider" }, [_c("hr")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
             _c(
               "div",
-              {
-                staticClass: "accordion-faq",
-                attrs: { id: "accordionExample" },
-              },
-              [
-                _c("div", { staticClass: "faq-card" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "faq-card-header",
-                      attrs: { id: "headingOne" },
-                    },
-                    [
-                      _c("h5", { staticClass: "mb-0" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-block text-left faq-btn",
-                            attrs: {
-                              type: "button",
-                              "data-toggle": "collapse",
-                              "data-target": "#collapseOne",
-                              "aria-expanded": "true",
-                              "aria-controls": "collapseOne",
-                            },
-                          },
-                          [
-                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
-                            _vm._v("Q. What is BizBlanca?"),
-                          ]
-                        ),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "collapse fade",
-                      attrs: {
-                        id: "collapseOne",
-                        "aria-labelledby": "headingOne",
-                        "data-parent": "#accordionExample",
-                      },
-                    },
-                    [
-                      _c("div", { staticClass: "faq-card-body" }, [
-                        _vm._v(
-                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
-                        ),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "faq-card" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "faq-card-header",
-                      attrs: { id: "headingTwo" },
-                    },
-                    [
-                      _c("h5", { staticClass: "mb-0" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass:
-                              "btn  collapsed btn-block text-left faq-btn",
-                            attrs: {
-                              type: "button",
-                              "data-toggle": "collapse",
-                              "data-target": "#collapseTwo",
-                              "aria-expanded": "false",
-                              "aria-controls": "collapseTwo",
-                            },
-                          },
-                          [
-                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
-                            _vm._v(
-                              "Q. How BizBlanca works?\n                                        "
-                            ),
-                          ]
-                        ),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "collapse fade",
-                      attrs: {
-                        id: "collapseTwo",
-                        "aria-labelledby": "headingTwo",
-                        "data-parent": "#accordionExample",
-                      },
-                    },
-                    [
-                      _c("div", { staticClass: "faq-card-body" }, [
-                        _vm._v(
-                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
-                        ),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "faq-card" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "faq-card-header",
-                      attrs: { id: "headingTwo" },
-                    },
-                    [
-                      _c("h5", { staticClass: "mb-0" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass:
-                              "btn  collapsed btn-block text-left faq-btn",
-                            attrs: {
-                              type: "button",
-                              "data-toggle": "collapse",
-                              "data-target": "#collapseTwo",
-                              "aria-expanded": "false",
-                              "aria-controls": "collapseTwo",
-                            },
-                          },
-                          [
-                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
-                            _vm._v(
-                              "Q. What is BizBlanca mission?\n                                        "
-                            ),
-                          ]
-                        ),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "collapse fade",
-                      attrs: {
-                        id: "collapseTwo",
-                        "aria-labelledby": "headingTwo",
-                        "data-parent": "#accordionExample",
-                      },
-                    },
-                    [
-                      _c("div", { staticClass: "faq-card-body" }, [
-                        _vm._v(
-                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
-                        ),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "faq-card" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "faq-card-header",
-                      attrs: { id: "headingTwo" },
-                    },
-                    [
-                      _c("h5", { staticClass: "mb-0" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass:
-                              "btn  collapsed btn-block text-left faq-btn",
-                            attrs: {
-                              type: "button",
-                              "data-toggle": "collapse",
-                              "data-target": "#collapseTwo",
-                              "aria-expanded": "false",
-                              "aria-controls": "collapseTwo",
-                            },
-                          },
-                          [
-                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
-                            _vm._v(
-                              "Q. Why BizBlanca?\n                                        "
-                            ),
-                          ]
-                        ),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "collapse fade",
-                      attrs: {
-                        id: "collapseTwo",
-                        "aria-labelledby": "headingTwo",
-                        "data-parent": "#accordionExample",
-                      },
-                    },
-                    [
-                      _c("div", { staticClass: "faq-card-body" }, [
-                        _vm._v(
-                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
-                        ),
-                      ]),
-                    ]
-                  ),
-                ]),
-              ]
+              { staticClass: "side-card-title text-center text-white" },
+              [_vm._v("Top Rizer's Ranking")]
             ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "divider" }, [_c("hr")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-          _c("div", { staticClass: "side-card-title text-center text-white" }, [
-            _vm._v("Ads"),
+            _vm._v(" "),
+            _c("div", { staticClass: "side-card-body" }, [
+              _c("div", { staticClass: "swiper bizer-ranking-slider" }, [
+                _c("div", { staticClass: "swiper-wrapper" }, [
+                  _c("div", { staticClass: "swiper-slide" }, [
+                    _c("div", { staticClass: "wrapper" }, [
+                      _c("div", { staticClass: "profile" }, [
+                        _c("img", {
+                          staticClass: "thumbnail",
+                          attrs: {
+                            src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "name" }, [
+                        _vm._v("Natasha Anjum"),
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "title" }, [
+                        _vm._v("Laravel Developer"),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "position-box" }, [
+                        _c("img", {
+                          attrs: { src: "assets/images/position-crown.svg" },
+                        }),
+                        _vm._v(" "),
+                        _c("h3", { staticClass: "position-number" }, [
+                          _vm._v("1st"),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "description" }, [
+                        _vm._v(
+                          "I have learned a lot of things in my life but to be a\n                                            Laravel developer has changed my life."
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "swiper-slide" }, [
+                    _c("div", { staticClass: "wrapper" }, [
+                      _c("div", { staticClass: "profile" }, [
+                        _c("img", {
+                          staticClass: "thumbnail",
+                          attrs: {
+                            src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "name" }, [
+                        _vm._v("Natasha Anjum"),
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "title" }, [
+                        _vm._v("Laravel Developer"),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "position-box" }, [
+                        _c("img", {
+                          attrs: { src: "assets/images/position-crown.svg" },
+                        }),
+                        _vm._v(" "),
+                        _c("h3", { staticClass: "position-number" }, [
+                          _vm._v("2nd"),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "description" }, [
+                        _vm._v(
+                          "I have learned a lot of things in my life but to be a\n                                            Laravel developer has changed my life."
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "swiper-pagination" }),
+              ]),
+            ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "ads-side-card-body" }, [
-            _c("div", { staticClass: "swiper ads-slider" }, [
-              _c("div", { staticClass: "swiper-wrapper" }, [
-                _c("div", { staticClass: "swiper-slide" }, [
-                  _c("img", {
-                    staticClass: "ads-img",
-                    attrs: {
-                      src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                    },
-                  }),
+          _c("div", { staticClass: "divider" }, [_c("hr")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+            _c(
+              "div",
+              { staticClass: "side-card-title text-center text-white" },
+              [_vm._v("FAQS")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "side-card-body" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "accordion-faq",
+                  attrs: { id: "accordionExample" },
+                },
+                [
+                  _c("div", { staticClass: "faq-card" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "faq-card-header",
+                        attrs: { id: "headingOne" },
+                      },
+                      [
+                        _c("h5", { staticClass: "mb-0" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-block text-left faq-btn",
+                              attrs: {
+                                type: "button",
+                                "data-toggle": "collapse",
+                                "data-target": "#collapseOne",
+                                "aria-expanded": "true",
+                                "aria-controls": "collapseOne",
+                              },
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-caret-right mr-2",
+                              }),
+                              _vm._v("Q. What is BizBlanca?"),
+                            ]
+                          ),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "collapse fade",
+                        attrs: {
+                          id: "collapseOne",
+                          "aria-labelledby": "headingOne",
+                          "data-parent": "#accordionExample",
+                        },
+                      },
+                      [
+                        _c("div", { staticClass: "faq-card-body" }, [
+                          _vm._v(
+                            "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
+                          ),
+                        ]),
+                      ]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "faq-card" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "faq-card-header",
+                        attrs: { id: "headingTwo" },
+                      },
+                      [
+                        _c("h5", { staticClass: "mb-0" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "btn  collapsed btn-block text-left faq-btn",
+                              attrs: {
+                                type: "button",
+                                "data-toggle": "collapse",
+                                "data-target": "#collapseTwo",
+                                "aria-expanded": "false",
+                                "aria-controls": "collapseTwo",
+                              },
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-caret-right mr-2",
+                              }),
+                              _vm._v(
+                                "Q. How BizBlanca works?\n                                        "
+                              ),
+                            ]
+                          ),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "collapse fade",
+                        attrs: {
+                          id: "collapseTwo",
+                          "aria-labelledby": "headingTwo",
+                          "data-parent": "#accordionExample",
+                        },
+                      },
+                      [
+                        _c("div", { staticClass: "faq-card-body" }, [
+                          _vm._v(
+                            "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
+                          ),
+                        ]),
+                      ]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "faq-card" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "faq-card-header",
+                        attrs: { id: "headingTwo" },
+                      },
+                      [
+                        _c("h5", { staticClass: "mb-0" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "btn  collapsed btn-block text-left faq-btn",
+                              attrs: {
+                                type: "button",
+                                "data-toggle": "collapse",
+                                "data-target": "#collapseTwo",
+                                "aria-expanded": "false",
+                                "aria-controls": "collapseTwo",
+                              },
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-caret-right mr-2",
+                              }),
+                              _vm._v(
+                                "Q. What is BizBlanca mission?\n                                        "
+                              ),
+                            ]
+                          ),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "collapse fade",
+                        attrs: {
+                          id: "collapseTwo",
+                          "aria-labelledby": "headingTwo",
+                          "data-parent": "#accordionExample",
+                        },
+                      },
+                      [
+                        _c("div", { staticClass: "faq-card-body" }, [
+                          _vm._v(
+                            "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
+                          ),
+                        ]),
+                      ]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "faq-card" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "faq-card-header",
+                        attrs: { id: "headingTwo" },
+                      },
+                      [
+                        _c("h5", { staticClass: "mb-0" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "btn  collapsed btn-block text-left faq-btn",
+                              attrs: {
+                                type: "button",
+                                "data-toggle": "collapse",
+                                "data-target": "#collapseTwo",
+                                "aria-expanded": "false",
+                                "aria-controls": "collapseTwo",
+                              },
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-caret-right mr-2",
+                              }),
+                              _vm._v(
+                                "Q. Why BizBlanca?\n                                        "
+                              ),
+                            ]
+                          ),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "collapse fade",
+                        attrs: {
+                          id: "collapseTwo",
+                          "aria-labelledby": "headingTwo",
+                          "data-parent": "#accordionExample",
+                        },
+                      },
+                      [
+                        _c("div", { staticClass: "faq-card-body" }, [
+                          _vm._v(
+                            "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
+                          ),
+                        ]),
+                      ]
+                    ),
+                  ]),
+                ]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "divider" }, [_c("hr")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+            _c(
+              "div",
+              { staticClass: "side-card-title text-center text-white" },
+              [_vm._v("Ads")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "ads-side-card-body" }, [
+              _c("div", { staticClass: "swiper ads-slider" }, [
+                _c("div", { staticClass: "swiper-wrapper" }, [
+                  _c("div", { staticClass: "swiper-slide" }, [
+                    _c("img", {
+                      staticClass: "ads-img",
+                      attrs: {
+                        src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                      },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "swiper-slide" }, [
+                    _c("img", {
+                      staticClass: "ads-img",
+                      attrs: {
+                        src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                      },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "swiper-slide" }, [
+                    _c("img", {
+                      staticClass: "ads-img",
+                      attrs: {
+                        src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                      },
+                    }),
+                  ]),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "swiper-slide" }, [
-                  _c("img", {
-                    staticClass: "ads-img",
-                    attrs: {
-                      src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                    },
-                  }),
-                ]),
+                _c("div", { staticClass: "swiper-button-next" }),
                 _vm._v(" "),
-                _c("div", { staticClass: "swiper-slide" }, [
-                  _c("img", {
-                    staticClass: "ads-img",
-                    attrs: {
-                      src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                    },
-                  }),
-                ]),
+                _c("div", { staticClass: "swiper-button-prev" }),
               ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "swiper-button-next" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "swiper-button-prev" }),
             ]),
           ]),
         ]),
       ]),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "modal fade PostNewJobModal",
+        attrs: {
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "myLargeModalLabel",
+          "aria-hidden": "true",
+        },
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
+          [
+            _c("form", { attrs: { id: "basicinformationForm" } }, [
+              _c("div", { staticClass: "modal-content p-0" }, [
+                _c("div", { staticClass: "container editModel pb-5" }, [
+                  _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
+                  _vm._v(" "),
+                  _c(
+                    "section",
+                    { staticClass: "modelForm container p-0 p-md-2" },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row no-gutters",
+                          attrs: { id: "subFormFieldsContainer" },
+                        },
+                        [
+                          _c("div", { staticClass: "col-12" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "subForm",
+                                attrs: { id: "subForm" },
+                              },
+                              [
+                                _c("div", { staticClass: "modelTitle my-3" }, [
+                                  _c("div", {
+                                    staticClass: "mr-2 titleEffect",
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "h4",
+                                    { staticClass: "m-0 modelTitleText" },
+                                    [_vm._v("Add more Jobs")]
+                                  ),
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "subFormFields" }, [
+                                  _c("div", { staticClass: "row" }, [
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Job Title")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                type: "text",
+                                                name: "",
+                                                placeholder: "Enter Job Title",
+                                              },
+                                            }),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Job Designation")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                type: "text",
+                                                name: "",
+                                                placeholder:
+                                                  "Enter Job Designation",
+                                              },
+                                            }),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Salary Type")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "select",
+                                              {
+                                                staticClass: "form-control",
+                                                attrs: { name: "" },
+                                              },
+                                              [
+                                                _c(
+                                                  "option",
+                                                  {
+                                                    attrs: {
+                                                      value: "Please Select",
+                                                      selected: "",
+                                                    },
+                                                  },
+                                                  [_vm._v("Please Select")]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Salary Range")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                type: "text",
+                                                placeholder:
+                                                  "Enter Salary Range",
+                                                name: "",
+                                              },
+                                            }),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Shift")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "select",
+                                              {
+                                                staticClass: "form-control",
+                                                attrs: { name: "" },
+                                              },
+                                              [
+                                                _c(
+                                                  "option",
+                                                  {
+                                                    attrs: {
+                                                      value: "Please Select",
+                                                      selected: "",
+                                                    },
+                                                  },
+                                                  [_vm._v("Please Select")]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Experience")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Enter Experience",
+                                                name: "",
+                                              },
+                                            }),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Location")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Enter Location",
+                                                name: "",
+                                              },
+                                            }),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Job Type")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "select",
+                                              {
+                                                staticClass: "form-control",
+                                                attrs: { name: "" },
+                                              },
+                                              [
+                                                _c(
+                                                  "option",
+                                                  {
+                                                    attrs: {
+                                                      value: "Please Select",
+                                                      selected: "",
+                                                    },
+                                                  },
+                                                  [_vm._v("Please Select")]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Gender")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "select",
+                                              {
+                                                staticClass: "form-control",
+                                                attrs: { name: "" },
+                                              },
+                                              [
+                                                _c(
+                                                  "option",
+                                                  {
+                                                    attrs: {
+                                                      value: "Please Select",
+                                                      selected: "",
+                                                    },
+                                                  },
+                                                  [_vm._v("Please Select")]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 col-md-6" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "form-group" },
+                                          [
+                                            _c(
+                                              "label",
+                                              { attrs: { for: "" } },
+                                              [_vm._v("Total Positions")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "select",
+                                              {
+                                                staticClass: "form-control",
+                                                attrs: { name: "" },
+                                              },
+                                              [
+                                                _c(
+                                                  "option",
+                                                  {
+                                                    attrs: {
+                                                      value: "Please Select",
+                                                      selected: "",
+                                                    },
+                                                  },
+                                                  [_vm._v("Please Select")]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "col-12" }, [
+                                      _c("div", { staticClass: "form-group" }, [
+                                        _c("label", { attrs: { for: "" } }, [
+                                          _vm._v("Job Description"),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("textarea", {
+                                          staticClass: "form-control",
+                                          staticStyle: { height: "100px" },
+                                          attrs: {
+                                            placeholder:
+                                              "Enter Job Description",
+                                            name: "",
+                                          },
+                                        }),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "col-12" }, [
+                                      _c("div", { staticClass: "form-group" }, [
+                                        _c("label", { attrs: { for: "" } }, [
+                                          _vm._v("Job Responsibilities"),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("textarea", {
+                                          staticClass: "form-control",
+                                          staticStyle: { height: "100px" },
+                                          attrs: {
+                                            placeholder:
+                                              "Enter Job Description",
+                                            name: "",
+                                          },
+                                        }),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "col-12" }, [
+                                      _c("div", { staticClass: "form-group" }, [
+                                        _c("label", { attrs: { for: "" } }, [
+                                          _vm._v(
+                                            "Qualifications & Technicalities"
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("textarea", {
+                                          staticClass: "form-control",
+                                          staticStyle: { height: "100px" },
+                                          attrs: {
+                                            placeholder:
+                                              "Enter Qualifications & Technicalities",
+                                            name: "",
+                                          },
+                                        }),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "col-12" }, [
+                                      _c("div", { staticClass: "form-group" }, [
+                                        _c("label", { attrs: { for: "" } }, [
+                                          _vm._v("Benefits"),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("textarea", {
+                                          staticClass: "form-control",
+                                          staticStyle: { height: "100px" },
+                                          attrs: {
+                                            placeholder: "Enter Benefits",
+                                            name: "",
+                                          },
+                                        }),
+                                      ]),
+                                    ]),
+                                  ]),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row mt-4 " }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-lg-12 modelBtnContainer " },
+                          [
+                            _c(
+                              "button",
+                              { staticClass: "positiveBtn modelBtn mr-1" },
+                              [_vm._v("Update")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "negativeBtn modelBtn ml-1",
+                                attrs: { "data-dismiss": "modal" },
+                              },
+                              [_vm._v("Cancel")]
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+      ]
+    )
   },
 ]
 render._withStripped = true

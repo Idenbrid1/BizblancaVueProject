@@ -6369,8 +6369,39 @@ height: fit-content;
 .CompanyImage>img{
 width: 102px;
 height: 76px;
-border: 1px solid;
 display: block;
 margin-top: 10px;
 }
 /* company profile page css */
+/* post new job */
+.post_new_job_title{
+    font-size: 20px;
+    border-left: 5px solid #081351;
+    padding-left: 10px;
+    color: #081351;
+    font-weight: bold;
+}
+.post_new_job_descrp{
+    font-size: 14px;
+    color: #757575;
+}
+.post_new_job_anker{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 30px 10px;
+}
+.post_new_job_anker > a{
+    display: block;
+    font-size: 12px;
+    padding: 10px 20px;
+    color: #fff;
+    background: #081351 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+}
+.post_new_job_anker > p{
+font-weight: bold;
+font-size: 14px;
+margin: 0px;
+}
+/* post new job */

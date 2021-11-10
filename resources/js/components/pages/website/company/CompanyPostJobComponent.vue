@@ -3,137 +3,19 @@
         <WebsiteNavbar />
 
         <div class="container cont-flex">
-            <div class="col-sm-12 col-md-8 col-lg-8 xs-padding">
-                <div class="product_accordion_container">
-                    <div>
-                        <input class="product_accordion" type="checkbox" name="accordion" id="first" checked>
-                        <label class="search-box-h" for="first">
-                            Condition Search
-                            <span class="chevron">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"></polyline>
-                                </svg>
-                            </span>
-                        </label>
-                        <div class="content">
-                            <div class="content-body">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Industory</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
-                                            <option value="Select">Please Select</option>
-                                            <option value="India">India</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>Salery Range</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
-                                            <option value="Select">Please Select</option>
-                                            <option value="India">India</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>Occupation</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
-                                            <option value="Select">Please Select</option>
-                                            <option value="India">India</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>Suboccupation</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
-                                            <option value="Select">Please Select</option>
-                                            <option value="India">India</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>Area</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
-                                            <option value="Select">Area</option>
-                                            <option value="India">India</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>Gender</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
-                                            <option value="Select">Please Select</option>
-                                            <option value="India">India</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 conditioncheck">
-                                        <input type="checkbox" class="keeplogin-checkbox" id="keeplogin-checkbox">
-                                        <label for="keeplogin-checkbox">Full time</label>
-                                        <input type="checkbox" class="keeplogin-checkbox" id="keeplogin-checkbox">
-                                        <label for="keeplogin-checkbox">Part time</label>
-                                        <input type="checkbox" class="keeplogin-checkbox" id="keeplogin-checkbox">
-                                        <label for="keeplogin-checkbox">All Jobs</label>
-                                    </div>
-                                    <div class="col-12 job-condition">
-                                        <button type="submit" class="job-condition-clear-btn">Clear</button>
-                                        <button type="submit" class="job-condition-search-btn">Search</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-sm-12 col-md-8 col-lg-8 xs-padding pt-5">
+                <h1 class="post_new_job_title">Post New Job</h1>
+                <p class="post_new_job_descrp">
+                    To add more jobs in your company profile, Please click the Add more jobs button and after that form
+                    will appear in front of you and you have to fill this form with all the necessary requirements and
+                    then click on update, your job will be posted in your company dashboard.
+                </p>
+                <div class="post_new_job_anker">
+                    <a href=".PostNewJobModal" data-toggle="modal" data-target=".PostNewJobModal">+ Add More Jobs</a>
+                    <p>Showing 5 results of 123,456 jobs</p>
                 </div>
-                <!---- ------------------------------>
-                <div class="product-search-box">
-                    <label class="search-box-h" for="first">
-                        Keyword Search
-                    </label>
-                    <div class="col-md-12 search-container">
-                        <form action="/">
-                            <div> <label class="keyword-input-title">Keyword Search</label></div>
-                            <input type="text" placeholder="* Includes All Keywords" name="search">
-                            <button type="submit" class="keyword-search-btn">Search</button>
-                        </form>
-                    </div>
-                </div>
-                <!-- Job List Toolbar Start -->
-                <div class="job-list-toolbar mt-5">
-                    <ul class="job-pagination pagination-center ">
-                        <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                    aria-hidden="true"></i> Previous 20</a></li>
-                        <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                    aria-hidden="true"></i> Next 20</a></li>
-                    </ul>
-                    <div class="job-filter">
-                        <select class="job-select">
-                            <option>Search order by</option>
-                            <option>Top Rated</option>
-                            <option>Most Popular</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- Job List Toolbar End -->
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">
-                    <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div>
                     <!-- Job List Start -->
                     <div class="job-list">
                         <div class="company-logo col-auto py-2">
@@ -642,6 +524,144 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="modal fade PostNewJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <form id="basicinformationForm">
+                    <div class="modal-content p-0">
+                        <div class="container editModel pb-5">
+                            <h3 class="my-4">Update</h3>
+                            <section class="modelForm container p-0 p-md-2">
+                                <div class="row no-gutters" id="subFormFieldsContainer">
+                                    <div class="col-12">
+                                        <div id='subForm' class="subForm">
+                                            <div class="modelTitle my-3">
+                                                <div class="mr-2 titleEffect"></div>
+                                                <h4 class="m-0 modelTitleText">Add more Jobs</h4>
+                                            </div>
+                                            <div class="subFormFields">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="">Job Title</label>
+                                                            <input type="text" name="" placeholder="Enter Job Title" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="">Job Designation</label>
+                                                            <input type="text" name="" placeholder="Enter Job Designation" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="">Salary Type</label>
+                                                            <select name="" class="form-control">
+                                                                <option value="Please Select" selected>Please Select</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Salary Range</label>
+                                                            <input type="text" placeholder="Enter Salary Range" name="" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="">Shift</label>
+                                                            <select name="" class="form-control">
+                                                                <option value="Please Select" selected>Please Select</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Experience</label>
+                                                            <input type="text" placeholder="Enter Experience" name="" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Location</label>
+                                                            <input type="text" placeholder="Enter Location"
+                                                                name="" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Job Type</label>
+                                                            <select name="" class="form-control">
+                                                                <option value="Please Select" selected>Please Select</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Gender</label>
+                                                            <select name="" class="form-control">
+                                                                <option value="Please Select" selected>Please Select</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Total Positions</label>
+                                                            <select name="" class="form-control">
+                                                                <option value="Please Select" selected>Please Select</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Job Description</label>
+                                                            <textarea style="height: 100px;"
+                                                                placeholder="Enter Job Description" name=""
+                                                                class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Job Responsibilities</label>
+                                                            <textarea style="height: 100px;"
+                                                                placeholder="Enter Job Description" name=""
+                                                                class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Qualifications & Technicalities</label>
+                                                            <textarea style="height: 100px;"
+                                                                placeholder="Enter Qualifications & Technicalities" name=""
+                                                                class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="" class="">Benefits</label>
+                                                            <textarea style="height: 100px;"
+                                                                placeholder="Enter Benefits" name=""
+                                                                class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4 ">
+                                    <div class="col-lg-12 modelBtnContainer ">
+                                        <button class="positiveBtn modelBtn mr-1">Update</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
