@@ -35,42 +35,46 @@
                 @csrf
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Title</label>
-
                     <div class="col-sm-4">
-                            <input type="text" class="form-control" name="title" required>
-
+                        <input type="text" class="form-control" name="title" required>
                     </div>
                     <label class="col-sm-2 control-label">Amount</label>
-
                     <div class="col-sm-4">
                         <input type="number" class="form-control" name="amount" required>
                     </div>
-
                 </div>
-
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Image</label>
-
                     <div class="col-sm-4">
-                            <input type="file"   class="form-control" name="image"  required>
-
+                        <input type="file"   class="form-control" name="image"  required>
                     </div>
-
-
+                    <label class="col-sm-2 control-label">Job Post</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" name="job_post" required>
+                    </div>
                 </div>
-
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Scout/Connent</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" name="connect"  required>
+                    </div>
+                    <label class="col-sm-2 control-label">Phone/Email</label>
+                    <div class="col-sm-4">
+                        <select name="is_personal_show" >
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Description</label>
                     <div class="col-sm-4">
                         <textarea name="description" id="" cols="50" rows="5" required></textarea>
                     </div>
-
                 </div>
-
-
                 <div class="form-group">
                     <div class="col-sm-4 col-sm-offset-2">
-                        <button class="btn btn-primary" type="submit">Create News</button>
+                        <button class="btn btn-primary" type="submit">Create Pakage</button>
                     </div>
                 </div>
 
