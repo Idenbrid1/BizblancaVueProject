@@ -117,7 +117,7 @@
                         class="nav-label">Pakages</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li><a href="{{ route('admin.pakages.create') }}">Create</a></li>
-                    <li><a href="{{ route('admin.pakages.list') }}">List</a></li>
+                    <li><a href="{{ route('admin.pakages.index') }}">List</a></li>
                 </ul>
             </li>
 

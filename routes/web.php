@@ -251,9 +251,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
         });
         // ===================================PAKAGES ROUTES=======================================
         Route::prefix('pakages')->name('pakages.')->group(function(){
-            Route::get('/list', [App\Http\Controllers\Admin\FaqsController::class, 'index'])->name('list');
-            Route::get('/create', [App\Http\Controllers\Admin\FaqsController::class, 'create'])->name('create');
-            Route::post('/store', [App\Http\Controllers\Admin\FaqsController::class, 'store'])->name('store');
+            Route::get('/list', [App\Http\Controllers\Admin\PakagesController::class, 'index'])->name('index');
+            Route::get('/create', [App\Http\Controllers\Admin\PakagesController::class, 'create'])->name('create');
+            Route::post('/store', [App\Http\Controllers\Admin\PakagesController::class, 'store'])->name('store');
             // Route::get('/show/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'show'])->name('show');
             // Route::get('/edit/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'edit'])->name('edit');
             // Route::post('/update/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'update'])->name('update');
