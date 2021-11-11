@@ -14,6 +14,8 @@ import CandidateNewPassword from './components/pages/website/Auth/CandidateNewPa
 import CandidateProfile from './components/pages/website/candidate/CandidateProfileComponent.vue';
 import CompanyProfile from './components/pages/website/company/CompanyProfileComponent.vue';
 import CompanyPostJob from './components/pages/website/company/CompanyPostJobComponent.vue';
+import CompanyDetail from './components/pages/website/company/CompanyDetailComponent.vue';
+import CandidateDetail from './components/pages/website/candidate/CandidateDetailComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -107,6 +109,16 @@ const router = new VueRouter({
                     }
                 });
             }
+        },
+        {
+            path: '/candidate-detail',
+            name: 'CandidateDetail',
+            component: CandidateDetail
+        },
+        {
+            path: '/company-detail',
+            name: 'CompanyDetail',
+            component: CompanyDetail
         },
         {
             path: '/candidate-reset-password',

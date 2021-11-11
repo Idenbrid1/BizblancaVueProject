@@ -155,7 +155,10 @@ class AuthenticationController extends Controller
                 }
                 else
                 {
-                    // Auth::login($User, true);
+                    if($request->remember_me == true)
+                    {
+                        Auth::login($User, true);
+                    }
                     return response()->json([
                         "message" =>"Login Successfully!",
                         'success' => true,

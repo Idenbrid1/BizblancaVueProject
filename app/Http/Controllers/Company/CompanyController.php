@@ -160,15 +160,15 @@ class CompanyController extends Controller
             $postjob->qualification_level = $request->qualification_level;
             $postjob->benefits = $request->benefits;
             $postjob->company_id = $company->id;
-            if($request->file('bannar')) 
+            if($request->bannar) 
             {   
-                $file = $request->file('bannar');
+                $file = $request->bannar;
                 $imagefilename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
                 $location = 'storage/images/companies/';
                 $file->move($location,$imagefilename);
-                File::delete($location.$company->profile_video);
-                $company->bannar = $imagefilename;
+                File::delete($location.$postjob->bannar);
+                $postjob->bannar = $imagefilename;
             }
             $postjob->save();
             return response()->json([
@@ -176,5 +176,13 @@ class CompanyController extends Controller
                 'message' => 'Jobe Posted',
             ]);
         }
+    }
+    
+    public function companyJobs(Request $request)
+    {
+        $user = Auth::user();
+        $company = Company::where('user_id', $user->id)->first();
+        $jobs = JobPost::where('company_id', $company->id)->orderBy('created_at', 'desc')->paginate(2);
+        return response()->json($jobs);
     }
 }
