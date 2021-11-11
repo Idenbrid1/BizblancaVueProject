@@ -26,11 +26,11 @@
                     <div class="job-list">
                         <div class="company-logo col-auto py-2">
                             <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
+                            <span class="company-h">Ahmad </span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
+                                <h6 class="job-title mb-0">Data Sciences</h6>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -62,11 +62,11 @@
                     <div class="job-list">
                         <div class="company-logo col-auto py-2">
                             <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
+                            <span class="company-h">Ahmad </span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
+                                <h6 class="job-title mb-0">Data Sciences</h6>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -98,11 +98,11 @@
                     <div class="job-list">
                         <div class="company-logo col-auto py-2">
                             <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
+                            <span class="company-h">Ahmad </span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
+                                <h6 class="job-title mb-0">Data Sciences</h6>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -135,11 +135,11 @@
                     <div class="job-list">
                         <div class="company-logo col-auto py-2">
                             <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
+                            <span class="company-h">Ahmad </span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
+                                <h6 class="job-title mb-0">Data Sciences</h6>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -172,11 +172,11 @@
                     <div class="job-list">
                         <div class="company-logo col-auto py-2">
                             <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
+                            <span class="company-h">Ahmad </span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
+                                <h6 class="job-title mb-0">Data Sciences</h6>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -209,11 +209,11 @@
                     <div class="job-list">
                         <div class="company-logo col-auto py-2">
                             <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
+                            <span class="company-h">Ahmad </span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
+                                <h6 class="job-title mb-0">Data Sciences</h6>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -246,11 +246,11 @@
                     <div class="job-list">
                         <div class="company-logo col-auto py-2">
                             <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
+                            <span class="company-h">Ahmad </span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
+                                <h6 class="job-title mb-0">Data Sciences</h6>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>

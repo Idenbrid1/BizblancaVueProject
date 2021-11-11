@@ -165,7 +165,7 @@ class CompanyController extends Controller
                 $file = $request->file('bannar');
                 $imagefilename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
-                $location = '/storage/images/companies/';
+                $location = 'storage/images/companies/';
                 $file->move($location,$imagefilename);
                 File::delete($location.$company->profile_video);
                 $company->bannar = $imagefilename;
