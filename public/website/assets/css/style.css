@@ -6409,11 +6409,11 @@ margin: 0px;
 .company_images_detail{
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 7px;
 }
 .company_images_detail > img{
     width: 233px;
     height: 175px;
     display: block;
+    margin: 10px 7px;
 }
 /* post new job */
