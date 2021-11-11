@@ -1,6 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
+        <CompanyNavbar />
         <div class="container cont-flex PostJobContainer">
             <div class="col-sm-12 col-md-12 col-lg-12 xs-padding pt-5">
                 <div class="company_images_detail">
@@ -594,13 +595,19 @@
     </div>
 </template>
 <script>
-
+    import axios from 'axios';
+    import WebsiteNavbar from '../partials/navbar.vue';
+    import CompanyNavbar from '../partials/CompanyNavbar.vue';
     export default {
         data() {
             return {};
         },
         mounted() {
 
+        },
+        components: {
+            WebsiteNavbar,
+            CompanyNavbar,
         },
         methods: {
 
