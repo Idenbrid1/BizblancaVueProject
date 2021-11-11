@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="rememberforgot">
                                         <div>
-                                            <input type="checkbox" class="" name="" id="RememberPassword" />
+                                            <input type="checkbox" class="" name="" v-model="record.remember_me" id="RememberPassword" />
                                             <label for="RememberPassword">Remember me</label>
                                         </div>
                                         <router-link :to="{name: 'CandidateResetPassword'}">Forgot Password?</router-link>
@@ -92,6 +92,7 @@ import WebsiteNavbar from '../partials/navbar.vue';
                 record: {
                     email: '',
                     password: '',
+                    remember_me: false
                 },
                 errors: [],
             };

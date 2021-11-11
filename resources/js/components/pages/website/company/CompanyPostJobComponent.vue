@@ -23,14 +23,14 @@
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">
                     <!-- Job List Start -->
-                    <div class="job-list">
+                    <div class="job-list" v-for="(item, index) in jobs.data" :key="index">
                         <div class="company-logo col-auto py-2">
-                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
+                            <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo">
                             <span class="company-h">kashif </span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
+                                <h6 class="job-title mb-0">{{item.title}}</h6>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -38,240 +38,18 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
                             <span class="job-post-date">20 hours ago</span>
-                            <p class="job-description">As a Data Scientist, you will be in a central position as you
-                                will be evangelizing data and our methodologies to other functional analysts and other
-                                stakeholders in the company.</p>
+                            <p class="job-description">{{item.job_description}}</p>
                             <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i> Aug 23, 2021</li>
-                                <li><i class="fal fa-address-card"></i> 2 Years</li>
+                                <li><i class="fa fa-calendar"></i> {{ item.created_at | moment("YYYY-MM-DD")}}</li>
+                                <li><i class="fal fa-address-card"></i>{{item.experience}}</li>
                             </ul>
                             <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i> 80K to 100K</li>
-                                <li><i class="fa fa-map-marker"></i> Lahore, Pakistan</li>
+                                <li><i class="fal fa-money-bill-alt"></i>{{item.salary_range}}</li>
+                                <li><i class="fa fa-map-marker"></i> {{item.location}}</li>
                             </ul>
                             <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i> Night Shift</li>
-                                <li><i class="fal fa-clock"></i> Full Time</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="job-list">
-                        <div class="company-logo col-auto py-2">
-                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
-                        </div>
-                        <div class="job-list-content col">
-                            <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <span class="job-post-date">20 hours ago</span>
-                            <p class="job-description">As a Data Scientist, you will be in a central position as you
-                                will be evangelizing data and our methodologies to other functional analysts and other
-                                stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i> Aug 23, 2021</li>
-                                <li><i class="fal fa-address-card"></i> 2 Years</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i> 80K to 100K</li>
-                                <li><i class="fa fa-map-marker"></i> Lahore, Pakistan</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i> Night Shift</li>
-                                <li><i class="fal fa-clock"></i> Full Time</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="job-list">
-                        <div class="company-logo col-auto py-2">
-                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
-                        </div>
-                        <div class="job-list-content col">
-                            <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <span class="job-post-date">20 hours ago</span>
-                            <p class="job-description">As a Data Scientist, you will be in a central position as you
-                                will be evangelizing data and our methodologies to other functional analysts and other
-                                stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Aug 23, 2021</li>
-                                <li><i class="fal fa-address-card" aria-hidden="true"></i> 2 Years</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt" aria-hidden="true"></i> 80K to 100K</li>
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> Lahore, Pakistan</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house" aria-hidden="true"></i> Night Shift</li>
-                                <li><i class="fal fa-clock" aria-hidden="true"></i> Full Time</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"
-                                            aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="job-list">
-                        <div class="company-logo col-auto py-2">
-                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
-                        </div>
-                        <div class="job-list-content col">
-                            <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <span class="job-post-date">20 hours ago</span>
-                            <p class="job-description">As a Data Scientist, you will be in a central position as you
-                                will be evangelizing data and our methodologies to other functional analysts and other
-                                stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Aug 23, 2021</li>
-                                <li><i class="fal fa-address-card" aria-hidden="true"></i> 2 Years</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt" aria-hidden="true"></i> 80K to 100K</li>
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> Lahore, Pakistan</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house" aria-hidden="true"></i> Night Shift</li>
-                                <li><i class="fal fa-clock" aria-hidden="true"></i> Full Time</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"
-                                            aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="job-list">
-                        <div class="company-logo col-auto py-2">
-                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
-                        </div>
-                        <div class="job-list-content col">
-                            <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <span class="job-post-date">20 hours ago</span>
-                            <p class="job-description">As a Data Scientist, you will be in a central position as you
-                                will be evangelizing data and our methodologies to other functional analysts and other
-                                stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Aug 23, 2021</li>
-                                <li><i class="fal fa-address-card" aria-hidden="true"></i> 2 Years</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt" aria-hidden="true"></i> 80K to 100K</li>
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> Lahore, Pakistan</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house" aria-hidden="true"></i> Night Shift</li>
-                                <li><i class="fal fa-clock" aria-hidden="true"></i> Full Time</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"
-                                            aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="job-list">
-                        <div class="company-logo col-auto py-2">
-                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
-                        </div>
-                        <div class="job-list-content col">
-                            <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <span class="job-post-date">20 hours ago</span>
-                            <p class="job-description">As a Data Scientist, you will be in a central position as you
-                                will be evangelizing data and our methodologies to other functional analysts and other
-                                stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Aug 23, 2021</li>
-                                <li><i class="fal fa-address-card" aria-hidden="true"></i> 2 Years</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt" aria-hidden="true"></i> 80K to 100K</li>
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> Lahore, Pakistan</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house" aria-hidden="true"></i> Night Shift</li>
-                                <li><i class="fal fa-clock" aria-hidden="true"></i> Full Time</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"
-                                            aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="job-list">
-                        <div class="company-logo col-auto py-2">
-                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">kashif </span>
-                        </div>
-                        <div class="job-list-content col">
-                            <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <span class="job-post-date">20 hours ago</span>
-                            <p class="job-description">As a Data Scientist, you will be in a central position as you
-                                will be evangelizing data and our methodologies to other functional analysts and other
-                                stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i> Aug 23, 2021</li>
-                                <li><i class="fal fa-address-card"></i> 2 Years</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i> 80K to 100K</li>
-                                <li><i class="fa fa-map-marker"></i> Lahore, Pakistan</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i> Night Shift</li>
-                                <li><i class="fal fa-clock"></i> Full Time</li>
+                                <li><i class="fal fa-laptop-house"></i>{{item.shift}}</li>
+                                <li><i class="fal fa-clock"></i>{{item.job_type}}</li>
                             </ul>
                             <ul class="job-list-fav m-0">
                                 <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
@@ -283,17 +61,7 @@
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->
                 <div class="bottom-pagination">
-                    <ul class="job-pagination pagination-center ">
-                        <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                    aria-hidden="true"></i> Previous 20</a></li>
-                        <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                    aria-hidden="true"></i> Next 20</a></li>
-                    </ul>
-                    <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div>
+                    <pagination :data="jobs" @pagination-change-page="getCompanyJobs"></pagination>
                 </div>
                 <!-- Pagination End -->
             </div>
@@ -789,7 +557,7 @@
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CompanyNavbar from '../partials/CompanyNavbar.vue';
-
+    import pagination from 'laravel-vue-pagination'
     export default {
         data() {
             return {
@@ -813,11 +581,13 @@
                     job_responsibilities: '',
                 },
                 errors: [],
+                jobs: {},
             };
         },
         components: {
             WebsiteNavbar,
             CompanyNavbar,
+            pagination
         },
         mounted() {
             var swiper = new Swiper(".bizer-ranking-slider", {
@@ -833,9 +603,16 @@
             });
         },
         created() {
-
+            this.getCompanyJobs()
         },
         methods: {
+            getCompanyJobs(page=1)
+            {
+                axios.get('get-company-jobs?page='+page)
+                .then((response) => {
+                    this.jobs = response.data
+                });
+            },
             postJob() {
                 Swal.fire({
                     title: 'Are you sure to post this job?',
@@ -857,6 +634,7 @@
                                 this.errors = res.data.errors
                             } 
                             else {
+                                this.getCompanyJobs()
                                 Swal.fire({
                                     icon: 'success',
                                     title: 'Posted!😎',
@@ -895,6 +673,3 @@
     };
 
 </script>
-<style>
-
-</style>
