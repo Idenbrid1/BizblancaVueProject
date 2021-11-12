@@ -61,7 +61,7 @@
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->
                 <div class="bottom-pagination">
-                    <pagination :data="jobs" @pagination-change-page="getCompanyJobs"></pagination>
+                    <pagination :data="jobs" @pagination-change-page="getCompanyJobs" ></pagination>
                 </div>
                 <!-- Pagination End -->
             </div>
@@ -587,7 +587,7 @@
         components: {
             WebsiteNavbar,
             CompanyNavbar,
-            pagination
+            pagination,
         },
         mounted() {
             var swiper = new Swiper(".bizer-ranking-slider", {
@@ -665,9 +665,6 @@
                         })
                     }
                 })
-
-
-                
             },
         },
     };

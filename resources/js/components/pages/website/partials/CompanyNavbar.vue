@@ -16,7 +16,7 @@
                             class="seprate-line"></span>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'CompanyProfile' }" class="secondaymenu" id="secondary-anker-3">Job Search</router-link><span
+                        <router-link :to="{ name: 'CandidateSearch' }" class="secondaymenu" id="secondary-anker-3">Candidate Search</router-link><span
                             class="seprate-line"></span>
                     </li>
                     <li>
