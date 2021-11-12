@@ -4,12 +4,89 @@
         <CompanyNavbar />
         <div class="container cont-flex PostJobContainer">
             <div class="col-sm-12 col-md-12 col-lg-12 xs-padding pt-3">
-                <h1 class="post_new_job_title">Company Profile</h1>
-                <div class="company_detail_info">
-                    <div class="info_left">
-
+                <h1 class="post_new_job_title mx-2">Company Profile</h1>
+                <div class="company_detail_info px-2 row no-gutters">
+                    <div class="info_left col-12 col-md-4">
+                        <figure class="company_image" style="background-imgae:url('/website/assets/images/i2c.png')">
+                        </figure>
+                        <p class="company_name">Idenbrid</p>
                     </div>
-                    <div class="info_right"></div>
+                    <div class="info_right col-12 col-md-8">
+                        <ul>
+                            <li>
+                                <img width="20px" height="25px" src="/website/assets/images/founded-icon@2x.png" alt="img">
+                                <div>
+                                    <span class="info_title_label">Founded</span>
+                                    <span class="info_dynamic">1995</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img width="20px" height="20px" src="/website/assets/images/industry.svg" alt="img">
+                                <div>
+                                    <span class="info_title_label">Industry</span>
+                                    <span class="info_dynamic">Information Technology</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img width="20px" height="17px" src="/website/assets/images/multiple-users-silhouette.svg" alt="img">
+                                <div>
+                                    <span class="info_title_label">No of Employees</span>
+                                    <span class="info_dynamic">250 - 1000</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img width="20px" height="26px" src="/website/assets/images/ceo.svg" alt="img">
+                                <div>
+                                    <span class="info_title_label">CEO</span>
+                                    <span class="info_dynamic">Souga Nakamura</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img width="20px" height="20px" src="/website/assets/images/city.svg" alt="img">
+                                <div>
+                                    <span class="info_title_label">City</span>
+                                    <span class="info_dynamic">Lahore</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img width="20px" height="15px" src="/website/assets/images/email@2x.png" alt="img">
+                                <div>
+                                    <span class="info_title_label">Email</span>
+                                    <span class="info_dynamic">info@i2c.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img width="20px" height="20px" src="/website/assets/images/phone-call.svg" alt="img">
+                                <div>
+                                    <span class="info_title_label">Phone</span>
+                                    <span class="info_dynamic">+92 300 123 4567</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img width="20px" height="30px" src="/website/assets/images/pin.svg" alt="img">
+                                <div>
+                                    <span class="info_title_label">Address</span>
+                                    <span class="info_dynamic">04, Old FCC Rd، Ferozepur Rd, Gulberg III</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img width="20px" height="20px" src="/website/assets/images/world.svg" alt="img">
+                                <div>
+                                    <span class="info_title_label">Website </span>
+                                    <span class="info_dynamic">www.i2cinc.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="company_social_icons" src="/website/assets/images/whatsapp_icon.png" alt="img">
+                                <img class="company_social_icons" src="/website/assets/images/facebook_icon.png" alt="img">
+                                <img class="company_social_icons" src="/website/assets/images/linkedin_icon.png" alt="img">
+                                <img class="company_social_icons" src="/website/assets/images/twitter_icon.svg" alt="img">
+                                <img class="company_social_icons" src="/website/assets/images/github-logo_icon.png" alt="img">
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="company_images_detail">
                     <img src="/website/assets/images/i2c1.png" alt="img">

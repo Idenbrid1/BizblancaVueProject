@@ -8,19 +8,47 @@
         padding: 10px 7px;
         justify-content: space-between;
     }
+    .company_detail_info>.info_left {
+        height: 200px;
+        width: 200px;
+    }
+    .company_detail_info > .info_left .company_image{
+        width: 120px;
+        height: 120px;
+        background: white;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 150px;
+    }
+    .company_detail_info>.info_right {
+        justify-content: space-between;
+    }
+    
+    .company_detail_info>.info_right ul {
+        margin: 0px;
+    }
+    .company_detail_info > .info_left .company_name{
+        font-size: 11px;
+    }
     .company_images_detail >img{
         width: 87px;
         height: 65px;
         margin: 0px;
     }
+    .company_social_icons{
+        height: 20px;
+        width: 20px;
+    }
+    .info_title_label {
+        font-size: 14px;
+    }
+    .info_dynamic {
+        font-size: 12px;
+    }
     .company_detail_info{
         margin: 20px 0px;
     }
-    .company_detail_info > .info_left{
-        height: 120px;
-        width: 120px;
-        background-color: #081351;
-        border-radius: 5px;
+    .CompanyProfileVideo{
+        height: 183px;
     }
     .post_new_job_anker > a{
         padding: 10px;
