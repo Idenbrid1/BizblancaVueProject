@@ -14,6 +14,7 @@ class JobPost extends Model
         'title',
         'designation',
         'job_description',
+        'company_id',
         'skills',
         'job_type',
         'shift',
@@ -25,7 +26,7 @@ class JobPost extends Model
         'min_salary',
         'max_salary',
         'salary_range',
-        'specific_gender_required',
+        'gender',
         'total_position',
         'hired_position',
         'remaining_position',
@@ -43,4 +44,9 @@ class JobPost extends Model
     protected $casts = [
         'skills' => 'array'
     ];
+
+    public function Company()
+    {
+        return $this->belongsTo(Company::class, 'company_id','id') ;
+    }
 }

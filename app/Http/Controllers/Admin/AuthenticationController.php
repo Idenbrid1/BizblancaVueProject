@@ -373,6 +373,31 @@ class AuthenticationController extends Controller
         }
     }
 
+    public function navbarCheckRole()
+    {
+        if(Auth::check())
+        { 
+            if(Auth::user()->type == 'company')
+            {
+                return response()->json([
+                    'success'   => true,
+                    'role'   => 'company',
+                ]);   
+            }
+            if(Auth::user()->type == 'candidate'){
+                return response()->json([
+                    'success'   => true,
+                    'role'   => 'candidate',
+                ]);
+            }
+        }
+        else{
+            return response()->json([
+                'success'   => false,
+            ]);
+        }
+    }
+
     public function resetPassword($token)
     {
         return redirect('/#/candidate-new-password'.$token);

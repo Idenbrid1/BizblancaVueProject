@@ -3826,6 +3826,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
+/* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //
@@ -4344,21 +4345,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      isRoleCompany: false
+      isRole: ''
     };
   },
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   created: function created() {
-    this.checkCompanyRole();
+    this.checkRole();
   },
   mounted: function mounted() {
     var swiper = new Swiper(".BlogsSwiper", _defineProperty({
@@ -4430,11 +4436,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     });
   },
   methods: {
-    checkCompanyRole: function checkCompanyRole() {
+    checkRole: function checkRole() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
-        _this.isRoleCompany = response.data.success;
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+        if (response.data.success) {
+          _this.isRole = response.data.role;
+        }
       });
     }
   }
@@ -8333,6 +8341,532 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
+/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
+/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      record: {
+        experience: '',
+        salary_range: '',
+        shift: '',
+        job_type: '',
+        qualification_level: '',
+        gender: '',
+        location: ''
+      },
+      searchData: [],
+      totalJobs: 0,
+      jobToShow: 2
+    };
+  },
+  mounted: function mounted() {
+    var swiper = new Swiper(".bizer-ranking-slider", {
+      pagination: {
+        el: ".swiper-pagination"
+      }
+    });
+    var swiper = new Swiper(".ads-slider", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
+  },
+  components: {
+    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    pagination: (laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default())
+  },
+  methods: {
+    search: function search() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/job-search', this.record).then(function (response) {
+        _this.searchData = response.data;
+        _this.totalJobs = _this.searchData.length;
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyDetailComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyDetailComponent.vue?vue&type=script&lang=js& ***!
@@ -11329,10 +11863,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/website/LandingPageComponent.vue */ "./resources/js/components/pages/website/LandingPageComponent.vue");
 /* harmony import */ var _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/website/ForCompaniesComponent.vue */ "./resources/js/components/pages/website/ForCompaniesComponent.vue");
 /* harmony import */ var _components_pages_website_ForCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/website/ForCandidatesComponent.vue */ "./resources/js/components/pages/website/ForCandidatesComponent.vue");
@@ -11347,6 +11881,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_website_candidate_CandidateDetailComponent_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/pages/website/candidate/CandidateDetailComponent.vue */ "./resources/js/components/pages/website/candidate/CandidateDetailComponent.vue");
 /* harmony import */ var _components_pages_website_candidate_CandidateSearchComponent_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/pages/website/candidate/CandidateSearchComponent.vue */ "./resources/js/components/pages/website/candidate/CandidateSearchComponent.vue");
 /* harmony import */ var _components_pages_website_company_CompanySearchComponent_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/pages/website/company/CompanySearchComponent.vue */ "./resources/js/components/pages/website/company/CompanySearchComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/pages/website/candidate/JobSearchComponent.vue */ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue");
 
 
 
@@ -11364,8 +11899,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_15__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_16__["default"]);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_16__["default"]({
+
+vue__WEBPACK_IMPORTED_MODULE_16__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_17__["default"]);
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_17__["default"]({
   linkExactActiveClass: 'active',
   routes: [{
     path: "*",
@@ -11468,6 +12004,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_16__["default"]({
     path: '/company-search',
     name: 'CompanySearch',
     component: _components_pages_website_company_CompanySearchComponent_vue__WEBPACK_IMPORTED_MODULE_14__["default"]
+  }, {
+    path: '/job-search',
+    name: 'JobSearch',
+    component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
   }]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
@@ -13206,6 +13746,45 @@ component.options.__file = "resources/js/components/pages/website/candidate/Cand
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/JobSearchComponent.vue ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _JobSearchComponent_vue_vue_type_template_id_727ddb64___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./JobSearchComponent.vue?vue&type=template&id=727ddb64& */ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=template&id=727ddb64&");
+/* harmony import */ var _JobSearchComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./JobSearchComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _JobSearchComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _JobSearchComponent_vue_vue_type_template_id_727ddb64___WEBPACK_IMPORTED_MODULE_0__.render,
+  _JobSearchComponent_vue_vue_type_template_id_727ddb64___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/candidate/JobSearchComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/company/CompanyDetailComponent.vue":
 /*!**********************************************************************************!*\
   !*** ./resources/js/components/pages/website/company/CompanyDetailComponent.vue ***!
@@ -13710,6 +14289,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_JobSearchComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./JobSearchComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_JobSearchComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/company/CompanyDetailComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************!*\
   !*** ./resources/js/components/pages/website/company/CompanyDetailComponent.vue?vue&type=script&lang=js& ***!
@@ -14048,6 +14643,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateSearchComponent_vue_vue_type_template_id_2b521048___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateSearchComponent_vue_vue_type_template_id_2b521048___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateSearchComponent.vue?vue&type=template&id=2b521048& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateSearchComponent.vue?vue&type=template&id=2b521048&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=template&id=727ddb64&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=template&id=727ddb64& ***!
+  \***************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JobSearchComponent_vue_vue_type_template_id_727ddb64___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JobSearchComponent_vue_vue_type_template_id_727ddb64___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JobSearchComponent_vue_vue_type_template_id_727ddb64___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./JobSearchComponent.vue?vue&type=template&id=727ddb64& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=template&id=727ddb64&");
 
 
 /***/ }),
@@ -17477,7 +18089,13 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      this.isRoleCompany ? _c("span", [_c("CompanyNavbar")], 1) : _vm._e(),
+      this.isRole == "company"
+        ? _c("span", [_c("CompanyNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      this.isRole == "candidate"
+        ? _c("span", [_c("CandidateNavbar")], 1)
+        : _vm._e(),
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
@@ -30879,6 +31497,1271 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=template&id=727ddb64&":
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/JobSearchComponent.vue?vue&type=template&id=727ddb64& ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      _c("CandidateNavbar"),
+      _vm._v(" "),
+      _c("div", { staticClass: "container user-profile-container cont-flex" }, [
+        _c("div", { staticClass: "col-12 col-md-8 col-lg-8 xs-padding" }, [
+          _c("div", { staticClass: "product_accordion_container" }, [
+            _c("div", [
+              _c("input", {
+                staticClass: "product_accordion",
+                attrs: {
+                  type: "checkbox",
+                  name: "accordion",
+                  id: "first",
+                  checked: "",
+                },
+              }),
+              _vm._v(" "),
+              _c(
+                "label",
+                { staticClass: "search-box-h", attrs: { for: "first" } },
+                [
+                  _vm._v(
+                    "\n                        Condition Search\n                        "
+                  ),
+                  _c("span", { staticClass: "chevron" }, [
+                    _c(
+                      "svg",
+                      {
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          width: "24",
+                          height: "24",
+                          viewBox: "0 0 24 24",
+                          fill: "none",
+                          stroke: "currentColor",
+                          "stroke-width": "2",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                        },
+                      },
+                      [_c("polyline", { attrs: { points: "6 9 12 15 18 9" } })]
+                    ),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "content" }, [
+                _c("div", { staticClass: "content-body" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("label", [_vm._v("Experience")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.record.experience,
+                            expression: "record.experience",
+                          },
+                        ],
+                        staticClass: "cusSelectbox",
+                        attrs: { id: "cusSelectbox", type: "number" },
+                        domProps: { value: _vm.record.experience },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.record,
+                              "experience",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Salary Range"),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.record.salary_range,
+                              expression: "record.salary_range",
+                            },
+                          ],
+                          staticClass: "form-control",
+                          attrs: { name: "salary_range" },
+                          on: {
+                            change: function ($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function (o) {
+                                  return o.selected
+                                })
+                                .map(function (o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.record,
+                                "salary_range",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            },
+                          },
+                        },
+                        [
+                          _c("option", { attrs: { value: "10000-20000" } }, [
+                            _vm._v("10000 - 20000 "),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "20000-30000" } }, [
+                            _vm._v("20000 - 30000"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "30000-40000" } }, [
+                            _vm._v("30000 - 40000"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "40000-50000" } }, [
+                            _vm._v("40000 - 50000"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "50000-60000" } }, [
+                            _vm._v("50000 - 60000"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "60000-70000" } }, [
+                            _vm._v("60000 - 70000"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "70000-80000" } }, [
+                            _vm._v("70000 - 80000"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "80000-90000" } }, [
+                            _vm._v("80000 - 90000"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "90000-100000" } }, [
+                            _vm._v("90000 - 100000"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "100000-150000" } }, [
+                            _vm._v("100000 - 150000"),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("label", { attrs: { for: "" } }, [_vm._v("Shift")]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.record.shift,
+                              expression: "record.shift",
+                            },
+                          ],
+                          staticClass: "form-control",
+                          attrs: { name: "shift" },
+                          on: {
+                            change: function ($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function (o) {
+                                  return o.selected
+                                })
+                                .map(function (o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.record,
+                                "shift",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            },
+                          },
+                        },
+                        [
+                          _c("option", { attrs: { value: "Night" } }, [
+                            _vm._v("Night"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Morning" } }, [
+                            _vm._v("Morning"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Afternoon" } }, [
+                            _vm._v("Afternoon"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Please Select" } }, [
+                            _vm._v("Please Select"),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("label", { attrs: { for: "" } }, [_vm._v("Location")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.record.location,
+                            expression: "record.location",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: "Enter Location",
+                          name: "location",
+                        },
+                        domProps: { value: _vm.record.location },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.record,
+                              "location",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("label", { attrs: { for: "" } }, [_vm._v("Job Type")]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.record.job_type,
+                              expression: "record.job_type",
+                            },
+                          ],
+                          staticClass: "form-control",
+                          attrs: { name: "job_type" },
+                          on: {
+                            change: function ($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function (o) {
+                                  return o.selected
+                                })
+                                .map(function (o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.record,
+                                "job_type",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            },
+                          },
+                        },
+                        [
+                          _c("option", { attrs: { value: "Full Time" } }, [
+                            _vm._v("Full Time"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Part Time" } }, [
+                            _vm._v("Part Time"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Internship" } }, [
+                            _vm._v("Internship"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Permenent" } }, [
+                            _vm._v("Permenent"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Contract" } }, [
+                            _vm._v("Contract"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Freelance" } }, [
+                            _vm._v("Freelance"),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Qualifications & Technicalities"),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.record.qualification_level,
+                              expression: "record.qualification_level",
+                            },
+                          ],
+                          staticClass: "form-control",
+                          attrs: { name: "qualification_level" },
+                          on: {
+                            change: function ($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function (o) {
+                                  return o.selected
+                                })
+                                .map(function (o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.record,
+                                "qualification_level",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            },
+                          },
+                        },
+                        [
+                          _c("option", { attrs: { value: "Metric" } }, [
+                            _vm._v("Metric"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Intermediate" } }, [
+                            _vm._v("Intermediate"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Graduation" } }, [
+                            _vm._v("Graduation"),
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Masters" } }, [
+                            _vm._v("Masters"),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-12 conditioncheck" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.record.gender,
+                            expression: "record.gender",
+                          },
+                        ],
+                        staticClass: "keeplogin-checkbox",
+                        attrs: {
+                          name: "gender",
+                          value: "Male",
+                          type: "radio",
+                          id: "male",
+                        },
+                        domProps: {
+                          checked: _vm._q(_vm.record.gender, "Male"),
+                        },
+                        on: {
+                          change: function ($event) {
+                            return _vm.$set(_vm.record, "gender", "Male")
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("label", { attrs: { for: "male" } }, [_vm._v("Male")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.record.gender,
+                            expression: "record.gender",
+                          },
+                        ],
+                        staticClass: "keeplogin-checkbox",
+                        attrs: {
+                          name: "gender",
+                          value: "Female",
+                          type: "radio",
+                          id: "female",
+                        },
+                        domProps: {
+                          checked: _vm._q(_vm.record.gender, "Female"),
+                        },
+                        on: {
+                          change: function ($event) {
+                            return _vm.$set(_vm.record, "gender", "Female")
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("label", { attrs: { for: "female" } }, [
+                        _vm._v("Female"),
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.record.gender,
+                            expression: "record.gender",
+                          },
+                        ],
+                        staticClass: "keeplogin-checkbox",
+                        attrs: {
+                          name: "gender",
+                          value: "All",
+                          type: "radio",
+                          id: "all-genders",
+                        },
+                        domProps: { checked: _vm._q(_vm.record.gender, "All") },
+                        on: {
+                          change: function ($event) {
+                            return _vm.$set(_vm.record, "gender", "All")
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("label", { attrs: { for: "all-genders" } }, [
+                        _vm._v("All Genders"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-12 job-condition" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "job-condition-clear-btn",
+                          attrs: { type: "submit" },
+                        },
+                        [_vm._v("Clear")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "job-condition-search-btn",
+                          attrs: { type: "submit" },
+                          on: {
+                            click: function ($event) {
+                              return _vm.search()
+                            },
+                          },
+                        },
+                        [_vm._v("Search")]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "candidate my-2" }, [
+            _c("label", { staticClass: "candidate-tagline" }, [
+              _vm._v("\n                    Candidates\n                "),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                { staticClass: "job-list-wrap" },
+                _vm._l(_vm.jobToShow, function (item, index) {
+                  return index < _vm.searchData.length
+                    ? _c("div", { key: index, staticClass: "job-list" }, [
+                        _c(
+                          "div",
+                          { staticClass: "company-logo col-auto py-2" },
+                          [
+                            _c("img", {
+                              attrs: {
+                                src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
+                                alt: "Company Logo",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "company-h" }, [
+                              _vm._v(
+                                _vm._s(
+                                  _vm.searchData[index].company.company_name
+                                ) + " "
+                              ),
+                            ]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "job-list-content col" }, [
+                          _c("div", { staticClass: "job-header" }, [
+                            _c("h6", { staticClass: "job-title mb-0" }, [
+                              _vm._v(_vm._s(_vm.searchData[index].title)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "job-post-date" }, [
+                            _vm._v("20 hours ago"),
+                          ]),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "job-description" }, [
+                            _vm._v(_vm._s(_vm.searchData[index].description)),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "ul",
+                            { staticClass: "job-list-meta m-0 border-post" },
+                            [
+                              _c("li", [
+                                _c("i", { staticClass: "fa fa-calendar" }),
+                                _vm._v(
+                                  _vm._s(
+                                    _vm._f("moment")(
+                                      _vm.searchData[index].created_at,
+                                      "YYYY-MM-DD"
+                                    )
+                                  )
+                                ),
+                              ]),
+                              _vm._v(" "),
+                              _c("li", [
+                                _c("i", { staticClass: "fal fa-address-card" }),
+                                _vm._v(
+                                  _vm._s(_vm.searchData[index].experience)
+                                ),
+                              ]),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "ul",
+                            { staticClass: "job-list-meta m-0 border-post" },
+                            [
+                              _c("li", [
+                                _c("i", {
+                                  staticClass: "fal fa-money-bill-alt",
+                                }),
+                                _vm._v(
+                                  _vm._s(_vm.searchData[index].salary_range)
+                                ),
+                              ]),
+                              _vm._v(" "),
+                              _c("li", [
+                                _c("i", { staticClass: "fa fa-map-marker" }),
+                                _vm._v(_vm._s(_vm.searchData[index].location)),
+                              ]),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("ul", { staticClass: "job-list-meta m-0" }, [
+                            _c("li", [
+                              _c("i", { staticClass: "fal fa-laptop-house" }),
+                              _vm._v(_vm._s(_vm.searchData[index].shift)),
+                            ]),
+                            _vm._v(" "),
+                            _c("li", [
+                              _c("i", { staticClass: "fal fa-clock" }),
+                              _vm._v(_vm._s(_vm.searchData[index].job_type)),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _vm._m(1, true),
+                        ]),
+                      ])
+                    : _vm._e()
+                }),
+                0
+              ),
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                on: {
+                  click: function ($event) {
+                    _vm.jobToShow += 3
+                  },
+                },
+              },
+              [_vm._v("show more reviews")]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _vm._m(2),
+      ]),
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "product-search-box" }, [
+      _c("label", { staticClass: "search-box-h" }, [
+        _vm._v("\n                    Keyword Search\n                "),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-12 search-container" }, [
+        _c("form", { attrs: { action: "/" } }, [
+          _c("div", [
+            _c("label", { staticClass: "keyword-input-title" }, [
+              _vm._v("Keyword Search"),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            attrs: {
+              type: "text",
+              placeholder: "* Includes All Keywords",
+              name: "search",
+            },
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "keyword-search-btn", attrs: { type: "submit" } },
+            [_vm._v("Search")]
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "job-list-fav m-0" }, [
+      _c("li", [
+        _c("a", { staticClass: "job-wishlist-btn", attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fa fa-heart" }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
+          _vm._v("View"),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-sm-12 col-md-4 col-lg-4" }, [
+      _c("br"),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "col p-0" }, [
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("For Queries"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card-body" }, [
+            _c("p", { staticClass: "card-title" }, [
+              _vm._v(
+                "If you have any further queries, please contact us without any\n                            hesitation."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "social-btns center-block" }, [
+              _c("li", [
+                _c("button", { staticClass: "btn btn-whatsapp" }, [
+                  _c("img", {
+                    attrs: { src: "assets/images/whatsapp-quaries.svg" },
+                  }),
+                  _c("span", [
+                    _vm._v(
+                      "+92 306\n                                        404 1221"
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("button", { staticClass: "btn btn-facebook" }, [
+                  _c("img", {
+                    attrs: { src: "assets/images/facebook-quaries.svg" },
+                  }),
+                  _c("span", [_vm._v("@BizBlanca")]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("button", { staticClass: "btn btn-linkedin" }, [
+                  _c("img", {
+                    attrs: { src: "assets/images/linkdine-quaries.svg" },
+                  }),
+                  _c("span", [_vm._v("@BizBlanca")]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("button", { staticClass: "btn btn-google" }, [
+                  _c("img", {
+                    attrs: { src: "assets/images/gmail-quaries.svg" },
+                  }),
+                  _c("span", [_vm._v("bizer@bizblanca.com")]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }, [_c("hr")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("New Govt Jobs"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-govtjobcard-body " }, [
+            _c("div", { staticClass: "gov-job-box" }, [
+              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-2" }, [
+                  _vm._v(
+                    "If you have any further queries, please contact us without any\n                                    hesitation."
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "gov-job-box" }, [
+              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                _c("h6", [_vm._v("Incharge Information Center")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-2" }, [
+                  _vm._v(
+                    "If you have any further queries, please contact us without any\n                                    hesitation."
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "gov-job-box" }, [
+              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                _c("h6", [_vm._v("Education Department KPK")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-2" }, [
+                  _vm._v(
+                    "If you have any further queries, please contact us without any\n                                    hesitation."
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "gov-job-box" }, [
+              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-2" }, [
+                  _vm._v(
+                    "If you have any further queries, please contact us without any\n                                    hesitation."
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }, [_c("hr")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("Top Rizer's Ranking"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card-body" }, [
+            _c("div", { staticClass: "swiper bizer-ranking-slider" }, [
+              _c("div", { staticClass: "swiper-wrapper" }, [
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("div", { staticClass: "wrapper" }, [
+                    _c("div", { staticClass: "profile" }, [
+                      _c("img", {
+                        staticClass: "thumbnail",
+                        attrs: {
+                          src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("h3", { staticClass: "name" }, [
+                      _vm._v("Natasha Anjum"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "title" }, [
+                      _vm._v("Laravel Developer"),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "position-box" }, [
+                      _c("img", {
+                        attrs: { src: "assets/images/position-crown.svg" },
+                      }),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "position-number" }, [
+                        _vm._v("1st"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "description" }, [
+                      _vm._v(
+                        "I have learned a lot of things in my life but to be a\n                                            Laravel\n                                            developer has changed my life."
+                      ),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("div", { staticClass: "wrapper" }, [
+                    _c("div", { staticClass: "profile" }, [
+                      _c("img", {
+                        staticClass: "thumbnail",
+                        attrs: {
+                          src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("h3", { staticClass: "name" }, [
+                      _vm._v("Natasha Anjum"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "title" }, [
+                      _vm._v("Laravel Developer"),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "position-box" }, [
+                      _c("img", {
+                        attrs: { src: "assets/images/position-crown.svg" },
+                      }),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "position-number" }, [
+                        _vm._v("2nd"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "description" }, [
+                      _vm._v(
+                        "I have learned a lot of things in my life but to be a\n                                            Laravel\n                                            developer has changed my life."
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-pagination" }),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }, [_c("hr")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("Payment Plans"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan free-plan" }, [
+            _c("div", { staticClass: "plan-text h5 " }, [_vm._v("Free")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-fees h4 mt-0 mb-3" }, [
+              _vm._v("No Fees"),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-options" }, [
+              _c("div", { staticClass: "btn mr-1" }, [_vm._v("Select Plan")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "btn ml-1" }, [_vm._v("More Details")]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan paid-plan" }, [
+            _c("div", { staticClass: "plan-text h5 " }, [_vm._v("Basic")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-fees h4 mt-0 mb-3" }, [
+              _vm._v("12,000 / Year"),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-options" }, [
+              _c("div", { staticClass: "btn mr-1" }, [_vm._v("Select Plan")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "btn ml-1" }, [_vm._v("More Details")]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }, [_c("hr")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("FAQS"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card-body" }, [
+            _c(
+              "div",
+              {
+                staticClass: "accordion-faq",
+                attrs: { id: "accordionExample" },
+              },
+              [
+                _c("div", { staticClass: "faq-card" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "faq-card-header",
+                      attrs: { id: "headingOne" },
+                    },
+                    [
+                      _c("h5", { staticClass: "mb-0" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-block text-left faq-btn",
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "collapse",
+                              "data-target": "#collapseOne",
+                              "aria-expanded": "true",
+                              "aria-controls": "collapseOne",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
+                            _vm._v(
+                              "Q. What is BizBlanca?\n                                        "
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapse fade",
+                      attrs: {
+                        id: "collapseOne",
+                        "aria-labelledby": "headingOne",
+                        "data-parent": "#accordionExample",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "faq-card-body" }, [
+                        _vm._v(
+                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum\n                                        has been the industry's standard dummy text ever since the 1500s,\n                                    "
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "faq-card" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "faq-card-header",
+                      attrs: { id: "headingTwo" },
+                    },
+                    [
+                      _c("h5", { staticClass: "mb-0" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "btn  collapsed btn-block text-left faq-btn",
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "collapse",
+                              "data-target": "#collapseTwo",
+                              "aria-expanded": "false",
+                              "aria-controls": "collapseTwo",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
+                            _vm._v(
+                              "Q. How BizBlanca works?\n                                        "
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapse fade",
+                      attrs: {
+                        id: "collapseTwo",
+                        "aria-labelledby": "headingTwo",
+                        "data-parent": "#accordionExample",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "faq-card-body" }, [
+                        _vm._v(
+                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum\n                                        has been the industry's standard dummy text ever since the 1500s,\n                                    "
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "faq-card" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "faq-card-header",
+                      attrs: { id: "headingThree" },
+                    },
+                    [
+                      _c("h5", { staticClass: "mb-0" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "btn  collapsed btn-block text-left faq-btn",
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "collapse",
+                              "data-target": "#collapseThree",
+                              "aria-expanded": "false",
+                              "aria-controls": "collapseThree",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
+                            _vm._v(
+                              "Q. What is BizBlanca mission?\n                                        "
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapse fade",
+                      attrs: {
+                        id: "collapseThree",
+                        "aria-labelledby": "headingThree",
+                        "data-parent": "#accordionExample",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "faq-card-body" }, [
+                        _vm._v(
+                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum\n                                        has been the industry's standard dummy text ever since the 1500s,\n                                    "
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "faq-card" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "faq-card-header",
+                      attrs: { id: "headingFour" },
+                    },
+                    [
+                      _c("h5", { staticClass: "mb-0" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "btn  collapsed btn-block text-left faq-btn",
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "collapse",
+                              "data-target": "#collapseFour",
+                              "aria-expanded": "false",
+                              "aria-controls": "collapseFour",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
+                            _vm._v(
+                              "Q. Why BizBlanca?\n                                        "
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapse fade",
+                      attrs: {
+                        id: "collapseFour",
+                        "aria-labelledby": "headingFour",
+                        "data-parent": "#accordionExample",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "faq-card-body" }, [
+                        _vm._v(
+                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum\n                                        has been the industry's standard dummy text ever since the 1500s,\n                                    "
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }, [_c("hr")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("Ads"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "ads-side-card-body" }, [
+            _c("div", { staticClass: "swiper ads-slider" }, [
+              _c("div", { staticClass: "swiper-wrapper" }, [
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("img", {
+                    staticClass: "ads-img",
+                    attrs: {
+                      src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("img", {
+                    staticClass: "ads-img",
+                    attrs: {
+                      src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("img", {
+                    staticClass: "ads-img",
+                    attrs: {
+                      src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                    },
+                  }),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-button-next" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-button-prev" }),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyDetailComponent.vue?vue&type=template&id=321b686a&":
 /*!********************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyDetailComponent.vue?vue&type=template&id=321b686a& ***!
@@ -38886,7 +40769,7 @@ var render = function () {
                   {
                     staticClass: "secondaymenu",
                     attrs: {
-                      to: { name: "CompanyProfile" },
+                      to: { name: "CandidateProfile" },
                       id: "secondary-anker",
                     },
                   },
@@ -38906,7 +40789,7 @@ var render = function () {
                   {
                     staticClass: "secondaymenu",
                     attrs: {
-                      to: { name: "CompanyProfile" },
+                      to: { name: "CandidateProfile" },
                       id: "secondary-anker",
                     },
                   },
@@ -38925,7 +40808,7 @@ var render = function () {
                   {
                     staticClass: "secondaymenu",
                     attrs: {
-                      to: { name: "CompanyProfile" },
+                      to: { name: "CandidateProfile" },
                       id: "secondary-anker-2",
                     },
                   },
@@ -38951,24 +40834,6 @@ var render = function () {
                   [_vm._v("Job Search")]
                 ),
                 _c("span", { staticClass: "seprate-line" }),
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "secondaymenu",
-                    attrs: {
-                      to: { name: "CompanyPostJob" },
-                      id: "secondary-anker-4",
-                    },
-                  },
-                  [_vm._v("Companies Search")]
-                ),
               ],
               1
             ),

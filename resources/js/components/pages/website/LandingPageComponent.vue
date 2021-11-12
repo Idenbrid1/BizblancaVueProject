@@ -1,8 +1,11 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <span v-if="this.isRoleCompany">
+        <span v-if="this.isRole == 'company'">
             <CompanyNavbar />
+        </span>
+        <span v-if="this.isRole == 'candidate'">
+            <CandidateNavbar />
         </span>
         <!-- Hero Banner Section -->
         <section class="main-hero-banner py-5">
@@ -518,18 +521,20 @@
     import axios from 'axios';
     import WebsiteNavbar from './partials/navbar.vue';
     import CompanyNavbar from './partials/CompanyNavbar.vue';
+    import CandidateNavbar from './partials/CandidateNavbar.vue';
     export default {
         data() {
             return {
-                isRoleCompany: false,
+                isRole: '',
             };
         },
         components: {
             WebsiteNavbar,
             CompanyNavbar,
+            CandidateNavbar,
         },
         created(){
-            this.checkCompanyRole()
+            this.checkRole()
         },
         mounted() {
             var swiper = new Swiper(".BlogsSwiper", {
@@ -602,10 +607,13 @@
             });
         },
         methods:{
-            checkCompanyRole() {
-                axios.get('check-company-role')
+            checkRole() {
+                axios.get('navbar-check-roles')
                 .then((response) => {
-                    this.isRoleCompany = response.data.success
+                    if(response.data.success)
+                    {
+                        this.isRole = response.data.role
+                    }
                 });
             },
         }
