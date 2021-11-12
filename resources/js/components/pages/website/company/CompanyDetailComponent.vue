@@ -13,18 +13,38 @@
                 <div class="px-2">
                     <h1 class="post_new_job_title">Company Detail</h1>
                     <p class="post_new_job_descrp">
-                       i2c Inc. is an experienced and trusted payments solution provider that helps card issuers and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete control of their programs in real time. With its value-added services, rewards and loyalty options, cardholder communication tools, and extensive analytics, MCP empowers clients to increase revenues, improve efficiency, reduce costs, and build a loyal cardholder base. i2c enables clients to launch new products faster, tailor programs for specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005, CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City, California, and more than 350 employees and five sales and support offices worldwide. Its customer support provides 24x7x365 service to its clients, which include companies in North America, Latin America, the Middle East, Asia Pacific, and Europe.
+                        i2c Inc. is an experienced and trusted payments solution provider that helps card issuers and
+                        program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs flexible,
+                        feature-rich, Prepaid2.0-ready processing platform, clients have complete control of their
+                        programs in real time. With its value-added services, rewards and loyalty options, cardholder
+                        communication tools, and extensive analytics, MCP empowers clients to increase revenues, improve
+                        efficiency, reduce costs, and build a loyal cardholder base. i2c enables clients to launch new
+                        products faster, tailor programs for specific segments, and offer a variety of vertical
+                        solutions. i2c holds ISO 27001-2005, CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has
+                        headquarters in Redwood City, California, and more than 350 employees and five sales and support
+                        offices worldwide. Its customer support provides 24x7x365 service to its clients, which include
+                        companies in North America, Latin America, the Middle East, Asia Pacific, and Europe.
                     </p>
                 </div>
                 <div class="px-2">
                     <h1 class="post_new_job_title">About i2c</h1>
                     <p class="post_new_job_descrp">
-                        i2c’s mission is to empower our clients to create differentiated payment and banking experiences for consumers and businesses around the world. We build the payment technology and services global brands, financial institutions, corporations, and governments need to deliver high-impact, personalized payments and commerce solutions that build loyalty and engage today’s consumers in new ways, creating more profitable relationships. i2c’s highly-configurable, cloud-based Agile Processing payments platform provides unparalleled flexibility, agility, and reliability so companies can quickly and cost-effectively deploy differentiated, feature-rich credit, debit, and prepaid programs anywhere in the world. Our customers rely on us to support the highly-differentiated needs of cardholders in 216 countries and territories across 24 time zones.
+                        i2c’s mission is to empower our clients to create differentiated payment and banking experiences
+                        for consumers and businesses around the world. We build the payment technology and services
+                        global brands, financial institutions, corporations, and governments need to deliver
+                        high-impact, personalized payments and commerce solutions that build loyalty and engage today’s
+                        consumers in new ways, creating more profitable relationships. i2c’s highly-configurable,
+                        cloud-based Agile Processing payments platform provides unparalleled flexibility, agility, and
+                        reliability so companies can quickly and cost-effectively deploy differentiated, feature-rich
+                        credit, debit, and prepaid programs anywhere in the world. Our customers rely on us to support
+                        the highly-differentiated needs of cardholders in 216 countries and territories across 24 time
+                        zones.
                     </p>
                 </div>
                 <div class="px-2">
                     <h1 class="post_new_job_title">Profile Video</h1>
-                    <iframe src="https://www.youtube.com/embed/uqeGFoBt0mY" class="CompanyProfileVideo" frameborder="0"></iframe>
+                    <iframe src="https://www.youtube.com/embed/uqeGFoBt0mY" class="CompanyProfileVideo"
+                        frameborder="0"></iframe>
                 </div>
                 <div class="px-2">
                     <h1 class="post_new_job_title">Jobs by this Company</h1>
@@ -590,7 +610,6 @@
                 </div>
                 <!-- Pagination End -->
             </div>
-
         </div>
     </div>
 </template>
