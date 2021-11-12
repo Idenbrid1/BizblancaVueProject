@@ -5,8 +5,6 @@ import VueRouter from 'vue-router';
 import LandingPage from './components/pages/website/LandingPageComponent.vue';
 import ForCompanies from './components/pages/website/ForCompaniesComponent.vue';
 import ForCandidates from './components/pages/website/ForCandidatesComponent.vue';
-import TestCandidateProfile from './components/pages/website/candidate/TestCandidateProfile.vue';
-import TestCompanyProfile from './components/pages/website/company/TestCompanyProfile.vue';
 import SignIn from './components/pages/website/Auth/SignInComponent.vue';
 import SignUp from './components/pages/website/Auth/SignUpComponent.vue';
 import CandidateResetPassword from './components/pages/website/Auth/CandidateResetPasswordComponent.vue';
@@ -16,6 +14,8 @@ import CompanyProfile from './components/pages/website/company/CompanyProfileCom
 import CompanyPostJob from './components/pages/website/company/CompanyPostJobComponent.vue';
 import CompanyDetail from './components/pages/website/company/CompanyDetailComponent.vue';
 import CandidateDetail from './components/pages/website/candidate/CandidateDetailComponent.vue';
+import CandidateSearch from './components/pages/website/candidate/CandidateSearchComponent.vue';
+import CompanySearch from './components/pages/website/company/CompanySearchComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -129,6 +129,16 @@ const router = new VueRouter({
             path: '/candidate-new-password:token',
             name: 'CandidateNewPassword',
             component: CandidateNewPassword
+        },
+        {
+            path: '/candidate-search',
+            name: 'CandidateSearch',
+            component: CandidateSearch
+        },
+        {
+            path: '/company-search',
+            name: 'CompanySearch',
+            component: CompanySearch
         },
     ]
 });

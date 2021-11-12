@@ -586,7 +586,7 @@
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->
                 <div class="bottom-pagination">
-                    <pagination></pagination>
+                    <!-- <pagination></pagination> -->
                 </div>
                 <!-- Pagination End -->
             </div>
