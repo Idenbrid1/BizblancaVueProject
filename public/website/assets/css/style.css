@@ -1595,10 +1595,10 @@
 }
 
 /*-----------------home end style---------------------------------- */
-
+/* 
 .user-profile-container {
     min-width: 1050px;
-}
+} */
 
 
 /* USER-PROFILE */
@@ -3623,11 +3623,6 @@
     -webkit-transition: .3s;
     transition: .3s;
 }
-
-.user-profile-container {
-    min-width: 1050px;
-}
-
 
 /* USER-PROFILE */
 

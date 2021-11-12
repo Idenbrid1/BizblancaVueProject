@@ -8300,9 +8300,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -29358,7 +29355,7 @@ var render = function () {
       _c("WebsiteNavbar"),
       _vm._v(" "),
       _c("div", { staticClass: "container user-profile-container cont-flex" }, [
-        _c("div", { staticClass: "col-sm-12 col-md-8 col-lg-8 xs-padding" }, [
+        _c("div", { staticClass: "col-12 col-md-8 col-lg-8 xs-padding" }, [
           _c("div", { staticClass: "product_accordion_container" }, [
             _c("div", [
               _c("input", {
@@ -29755,7 +29752,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row m-0" }, [
-            _c("div", { staticClass: "col-lg-4 col-md-12 col-sm-6 px-1" }, [
+            _c("div", { staticClass: "col-sm-6 col-md-12 col-lg-4 px-1" }, [
               _c("div", { staticClass: "candidate-single" }, [
                 _c(
                   "div",
