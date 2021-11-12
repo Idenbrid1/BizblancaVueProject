@@ -11,13 +11,13 @@
                     <img src="/website/assets/images/Logo.svg" alt="logo" /></router-link>
             </div>
             <div class="mobile-button">
-                <router-link title="company" class="company-mbl-btn" data-toggle="collapse" v-if="this.$route.name == 'ForCompanies'"
+                <router-link title="company" class="company-mbl-btn activeCompany" data-toggle="collapse" v-if="this.$route.name == 'ForCompanies'"
                     :to="{ name: 'ForCompanies' }"><i class="fas fa-building"></i> For Companies</router-link>
-                <router-link title="company" class="company-mbl-btn activeCompany" data-toggle="collapse" v-else
+                <router-link title="company" class="company-mbl-btn " data-toggle="collapse" v-else
                     :to="{ name: 'ForCompanies' }"><i class="fas fa-building"></i> For Companies</router-link>
-                <router-link title="candidate" class="company-mbl-btn" data-toggle="collapse" v-if="this.$route.name == 'ForCandidates'"
+                <router-link title="candidate" class="company-mbl-btn activeCandidate" data-toggle="collapse" v-if="this.$route.name == 'ForCandidates'"
                     :to="{ name: 'ForCandidates' }"><i class="fas fa-users"></i> For Candidate</router-link>
-                <router-link title="candidate" class="company-mbl-btn activeCandidate" data-toggle="collapse" v-else
+                <router-link title="candidate" class="company-mbl-btn" data-toggle="collapse" v-else
                     :to="{ name: 'ForCandidates' }"><i class="fas fa-users"></i> For Candidate</router-link>
                 <!-- <li class="header-block-link">
                 </li>
