@@ -1595,10 +1595,10 @@
 }
 
 /*-----------------home end style---------------------------------- */
-
+/* 
 .user-profile-container {
     min-width: 1050px;
-}
+} */
 
 
 /* USER-PROFILE */
@@ -3108,11 +3108,6 @@
     .cont-flex {
         display: block;
     }
-
-    .plan-options>.btn {
-        font-size: 1.5vw !important;
-    }
-
     .content {
         max-height: 0px;
     }
@@ -3261,7 +3256,48 @@
     .job-page-link {
         padding: 0.6rem;
     }
+        /* -PAYMENT-PLAN- */
+        .plan {
+            text-align: center;
+            margin: 20px;
+            border-radius: 6px;
+            padding: 10px;
+        }
+    
+        .free-plan {
+            background-color: #468BCF;
+        }
+    
+        .paid-plan {
+            background-color: #3F79EB;
+        }
+    
+        .plan-text {
+            color: black;
+        }
+    
+        .plan-fees {
+            color: white;
+        }
+    
+        .plan-options {
+            display: flex;
+            justify-content: center;
+        }
+    
+        .plan-options>.btn {
+            color: white;
+            background-color: #081351;
+            border-radius: 6px;
+            font-size: 0.8vw;
+        }
+}
 
+.footer__links {
+    margin-top: 2.6rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
     /* -PAYMENT-PLAN- */
     .plan {
         text-align: center;
@@ -3297,14 +3333,6 @@
         border-radius: 6px;
         font-size: 0.8vw;
     }
-}
-
-.footer__links {
-    margin-top: 2.6rem;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
 /*----------------------           footer            -------------------------*/
 /* COMPANY-DETAIL-PAGE */
 
@@ -3623,11 +3651,6 @@
     -webkit-transition: .3s;
     transition: .3s;
 }
-
-.user-profile-container {
-    min-width: 1050px;
-}
-
 
 /* USER-PROFILE */
 
@@ -4507,10 +4530,6 @@
 @media only screen and (max-width: 758px) {
     .cont-flex {
         display: block;
-    }
-
-    .plan-options>.btn {
-        font-size: 1.5vw !important;
     }
 
     .content {
@@ -6428,5 +6447,16 @@ margin: 0px;
     width: 300px;
     background-color: #081351;
     border-radius: 5px;
+}
+.plan{
+    background: #4CA1F0 0% 0% no-repeat padding-box;
+    box-shadow: 5px 5px 6px #00000029;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
 }
 /* post new job */

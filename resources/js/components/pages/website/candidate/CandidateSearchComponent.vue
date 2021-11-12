@@ -3,7 +3,7 @@
         <WebsiteNavbar />
         <CompanyNavbar />
         <div class="container user-profile-container cont-flex">
-            <div class="col-sm-12 col-md-8 col-lg-8 xs-padding">
+            <div class="col-12 col-md-8 col-lg-8 xs-padding">
                 <div class="product_accordion_container">
                     <div>
                         <input class="product_accordion" type="checkbox" name="accordion" id="first" checked>
@@ -139,15 +139,12 @@
                             <!-- <div class="d-flex"> -->
 
                             <div class="row m-0">
-
-
-
-                                <div class="col-lg-4 col-md-12 col-sm-6 px-1">
+                                <div class="col-sm-6 col-md-12 col-lg-4 px-1">
                                     <div class="candidate-single">
                                         <!-- <div class="company-logo col-auto py-2">
-               <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-               <span class="company-h">kashif </span>
-            </div> -->
+                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
+                                            <span class="company-h">Ahmad </span>
+                                            </div> -->
                                         <div class="candidate-list-content w-100 py-1 px-2">
                                             <div class="d-flex align-items-center">
                                                 <div class="candidate-photo"></div>
