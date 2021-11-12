@@ -8279,6 +8279,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -9844,9 +9863,6 @@ __webpack_require__.r(__webpack_exports__);
       isAuth: false,
       url: ''
     };
-  },
-  mounted: function mounted() {
-    this.url = window.location.href.substr(24);
   },
   created: function created() {
     this.checkAuth();
@@ -28124,7 +28140,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "post_new_job_descrp" }, [
         _vm._v(
-          "\n                   i2c Inc. is an experienced and trusted payments solution provider that helps card issuers and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete control of their programs in real time. With its value-added services, rewards and loyalty options, cardholder communication tools, and extensive analytics, MCP empowers clients to increase revenues, improve efficiency, reduce costs, and build a loyal cardholder base. i2c enables clients to launch new products faster, tailor programs for specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005, CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City, California, and more than 350 employees and five sales and support offices worldwide. Its customer support provides 24x7x365 service to its clients, which include companies in North America, Latin America, the Middle East, Asia Pacific, and Europe.\n                "
+          "\n                    i2c Inc. is an experienced and trusted payments solution provider that helps card issuers and\n                    program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs flexible,\n                    feature-rich, Prepaid2.0-ready processing platform, clients have complete control of their\n                    programs in real time. With its value-added services, rewards and loyalty options, cardholder\n                    communication tools, and extensive analytics, MCP empowers clients to increase revenues, improve\n                    efficiency, reduce costs, and build a loyal cardholder base. i2c enables clients to launch new\n                    products faster, tailor programs for specific segments, and offer a variety of vertical\n                    solutions. i2c holds ISO 27001-2005, CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has\n                    headquarters in Redwood City, California, and more than 350 employees and five sales and support\n                    offices worldwide. Its customer support provides 24x7x365 service to its clients, which include\n                    companies in North America, Latin America, the Middle East, Asia Pacific, and Europe.\n                "
         ),
       ]),
     ])
@@ -28138,7 +28154,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "post_new_job_descrp" }, [
         _vm._v(
-          "\n                    i2c’s mission is to empower our clients to create differentiated payment and banking experiences for consumers and businesses around the world. We build the payment technology and services global brands, financial institutions, corporations, and governments need to deliver high-impact, personalized payments and commerce solutions that build loyalty and engage today’s consumers in new ways, creating more profitable relationships. i2c’s highly-configurable, cloud-based Agile Processing payments platform provides unparalleled flexibility, agility, and reliability so companies can quickly and cost-effectively deploy differentiated, feature-rich credit, debit, and prepaid programs anywhere in the world. Our customers rely on us to support the highly-differentiated needs of cardholders in 216 countries and territories across 24 time zones.\n                "
+          "\n                    i2c’s mission is to empower our clients to create differentiated payment and banking experiences\n                    for consumers and businesses around the world. We build the payment technology and services\n                    global brands, financial institutions, corporations, and governments need to deliver\n                    high-impact, personalized payments and commerce solutions that build loyalty and engage today’s\n                    consumers in new ways, creating more profitable relationships. i2c’s highly-configurable,\n                    cloud-based Agile Processing payments platform provides unparalleled flexibility, agility, and\n                    reliability so companies can quickly and cost-effectively deploy differentiated, feature-rich\n                    credit, debit, and prepaid programs anywhere in the world. Our customers rely on us to support\n                    the highly-differentiated needs of cardholders in 216 countries and territories across 24 time\n                    zones.\n                "
         ),
       ]),
     ])
@@ -34701,11 +34717,11 @@ var render = function () {
         "div",
         { staticClass: "mobile-button" },
         [
-          this.url == "for-companies"
+          this.$route.name == "ForCompanies"
             ? _c(
                 "router-link",
                 {
-                  staticClass: "company-mbl-btn activeCompany",
+                  staticClass: "company-mbl-btn",
                   attrs: {
                     title: "company",
                     "data-toggle": "collapse",
@@ -34720,7 +34736,7 @@ var render = function () {
             : _c(
                 "router-link",
                 {
-                  staticClass: "company-mbl-btn",
+                  staticClass: "company-mbl-btn activeCompany",
                   attrs: {
                     title: "company",
                     "data-toggle": "collapse",
@@ -34733,11 +34749,11 @@ var render = function () {
                 ]
               ),
           _vm._v(" "),
-          this.url == "for-candidates"
+          this.$route.name == "ForCandidates"
             ? _c(
                 "router-link",
                 {
-                  staticClass: "company-mbl-btn activeCandidate",
+                  staticClass: "company-mbl-btn",
                   attrs: {
                     title: "candidate",
                     "data-toggle": "collapse",
@@ -34752,7 +34768,7 @@ var render = function () {
             : _c(
                 "router-link",
                 {
-                  staticClass: "company-mbl-btn",
+                  staticClass: "company-mbl-btn activeCandidate",
                   attrs: {
                     title: "candidate",
                     "data-toggle": "collapse",
@@ -34859,7 +34875,7 @@ var render = function () {
               "li",
               { staticClass: "header-block-link" },
               [
-                this.url == "for-companies"
+                this.$route.name == "ForCompanies"
                   ? _c(
                       "router-link",
                       {
@@ -34898,7 +34914,7 @@ var render = function () {
               "li",
               { staticClass: "header-block-link pr-3 border-line" },
               [
-                this.url == "for-candidates"
+                this.$route.name == "ForCandidates"
                   ? _c(
                       "router-link",
                       {
@@ -55391,7 +55407,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
+module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 
