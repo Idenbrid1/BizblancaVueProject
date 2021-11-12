@@ -10023,6 +10023,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -35414,8 +35440,12 @@ var render = function () {
       _c("div", { staticClass: "container cont-flex PostJobContainer" }, [
         _c(
           "div",
-          { staticClass: "col-sm-12 col-md-12 col-lg-12 xs-padding pt-5" },
+          { staticClass: "col-sm-12 col-md-12 col-lg-12 xs-padding pt-3" },
           [
+            _c("h1", { staticClass: "post_new_job_title" }, [
+              _vm._v("Company Profile"),
+            ]),
+            _vm._v(" "),
             _vm._m(0),
             _vm._v(" "),
             _vm._m(1),
@@ -35426,9 +35456,9 @@ var render = function () {
             _vm._v(" "),
             _vm._m(4),
             _vm._v(" "),
+            _vm._m(5),
+            _vm._v(" "),
             _c("div", { staticClass: "job-list-wrap" }, [
-              _vm._m(5),
-              _vm._v(" "),
               _vm._m(6),
               _vm._v(" "),
               _vm._m(7),
@@ -35441,6 +35471,8 @@ var render = function () {
               _vm._v(" "),
               _vm._m(11),
               _vm._v(" "),
+              _vm._m(12),
+              _vm._v(" "),
               _c(
                 "div",
                 {
@@ -35448,9 +35480,9 @@ var render = function () {
                     "col-sm-12 col-md-12 col-lg-12 xs-padding p-0 pt-5",
                 },
                 [
-                  _vm._m(12),
-                  _vm._v(" "),
                   _vm._m(13),
+                  _vm._v(" "),
+                  _vm._m(14),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -35476,6 +35508,16 @@ var render = function () {
   )
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "company_detail_info" }, [
+      _c("div", { staticClass: "info_left" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "info_right" }),
+    ])
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -35509,7 +35551,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "post_new_job_descrp" }, [
         _vm._v(
-          "\n                   i2c Inc. is an experienced and trusted payments solution provider that helps card issuers and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete control of their programs in real time. With its value-added services, rewards and loyalty options, cardholder communication tools, and extensive analytics, MCP empowers clients to increase revenues, improve efficiency, reduce costs, and build a loyal cardholder base. i2c enables clients to launch new products faster, tailor programs for specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005, CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City, California, and more than 350 employees and five sales and support offices worldwide. Its customer support provides 24x7x365 service to its clients, which include companies in North America, Latin America, the Middle East, Asia Pacific, and Europe.\n                "
+          "\n                    i2c Inc. is an experienced and trusted payments solution provider that helps card issuers and\n                    program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs flexible,\n                    feature-rich, Prepaid2.0-ready processing platform, clients have complete control of their\n                    programs in real time. With its value-added services, rewards and loyalty options, cardholder\n                    communication tools, and extensive analytics, MCP empowers clients to increase revenues, improve\n                    efficiency, reduce costs, and build a loyal cardholder base. i2c enables clients to launch new\n                    products faster, tailor programs for specific segments, and offer a variety of vertical\n                    solutions. i2c holds ISO 27001-2005, CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has\n                    headquarters in Redwood City, California, and more than 350 employees and five sales and support\n                    offices worldwide. Its customer support provides 24x7x365 service to its clients, which include\n                    companies in North America, Latin America, the Middle East, Asia Pacific, and Europe.\n                "
         ),
       ]),
     ])
@@ -35523,7 +35565,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "post_new_job_descrp" }, [
         _vm._v(
-          "\n                    i2c’s mission is to empower our clients to create differentiated payment and banking experiences for consumers and businesses around the world. We build the payment technology and services global brands, financial institutions, corporations, and governments need to deliver high-impact, personalized payments and commerce solutions that build loyalty and engage today’s consumers in new ways, creating more profitable relationships. i2c’s highly-configurable, cloud-based Agile Processing payments platform provides unparalleled flexibility, agility, and reliability so companies can quickly and cost-effectively deploy differentiated, feature-rich credit, debit, and prepaid programs anywhere in the world. Our customers rely on us to support the highly-differentiated needs of cardholders in 216 countries and territories across 24 time zones.\n                "
+          "\n                    i2c’s mission is to empower our clients to create differentiated payment and banking experiences\n                    for consumers and businesses around the world. We build the payment technology and services\n                    global brands, financial institutions, corporations, and governments need to deliver\n                    high-impact, personalized payments and commerce solutions that build loyalty and engage today’s\n                    consumers in new ways, creating more profitable relationships. i2c’s highly-configurable,\n                    cloud-based Agile Processing payments platform provides unparalleled flexibility, agility, and\n                    reliability so companies can quickly and cost-effectively deploy differentiated, feature-rich\n                    credit, debit, and prepaid programs anywhere in the world. Our customers rely on us to support\n                    the highly-differentiated needs of cardholders in 216 countries and territories across 24 time\n                    zones.\n                "
         ),
       ]),
     ])
