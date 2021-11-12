@@ -6378,6 +6378,7 @@ margin-top: 10px;
     padding-left: 10px;
     color: #081351;
     font-weight: bold;
+    margin: 20px 0px;
 }
 .post_new_job_descrp{
     font-size: 14px;
@@ -6415,5 +6416,17 @@ margin: 0px;
     height: 175px;
     display: block;
     margin: 10px 7px;
+}
+.company_detail_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+.company_detail_info > .info_left{
+    height: 300px;
+    width: 300px;
+    background-color: #081351;
+    border-radius: 5px;
 }
 /* post new job */

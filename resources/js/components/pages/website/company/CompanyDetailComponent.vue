@@ -3,7 +3,14 @@
         <WebsiteNavbar />
         <CompanyNavbar />
         <div class="container cont-flex PostJobContainer">
-            <div class="col-sm-12 col-md-12 col-lg-12 xs-padding pt-5">
+            <div class="col-sm-12 col-md-12 col-lg-12 xs-padding pt-3">
+                <h1 class="post_new_job_title">Company Profile</h1>
+                <div class="company_detail_info">
+                    <div class="info_left">
+
+                    </div>
+                    <div class="info_right"></div>
+                </div>
                 <div class="company_images_detail">
                     <img src="/website/assets/images/i2c1.png" alt="img">
                     <img src="/website/assets/images/i2c1.png" alt="img">
