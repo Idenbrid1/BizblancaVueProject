@@ -1,6 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
+        <CompanyNavbar />
         <div class="container user-profile-container cont-flex">
             <div class="col-sm-12 col-md-8 col-lg-8 xs-padding">
                 <div class="product_accordion_container">
@@ -21,13 +22,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Experience</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
-                                            <option value="Select">Please Select</option>
-                                            <option value="India">India</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                        </select>
+                                        <input class="cusSelectbox" id="cusSelectbox" type="number">
                                     </div>
                                     <div class="col-md-6">
                                         <label>Education</label>
@@ -622,6 +617,8 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
+    import CompanyNavbar from '../partials/CompanyNavbar.vue';
+    import pagination from 'laravel-vue-pagination'
     export default {
         data() {
             return {
@@ -643,6 +640,8 @@
         },
         components: {
             WebsiteNavbar,
+            CompanyNavbar,
+            pagination,
         },
         methods: {
 

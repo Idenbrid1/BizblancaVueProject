@@ -1,6 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
+        <CandidateNavbar />
         <div class="profile-wrapper mt-5">
             <div class="row m-0 container p-0">
                 <div class="col-12 tabs-section-container">
@@ -2230,6 +2231,7 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
+    import CandidateNavbar from '../partials/CandidateNavbar.vue';
     export default {
         data() {
             return {
@@ -2294,6 +2296,7 @@
         },
         components: {
             WebsiteNavbar,
+            CandidateNavbar,
         },
         mounted() {
             this.openProfileTab()
