@@ -9504,6 +9504,83 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -32790,7 +32867,7 @@ var render = function () {
           "div",
           { staticClass: "col-sm-12 col-md-12 col-lg-12 xs-padding pt-3" },
           [
-            _c("h1", { staticClass: "post_new_job_title" }, [
+            _c("h1", { staticClass: "post_new_job_title mx-2" }, [
               _vm._v("Company Profile"),
             ]),
             _vm._v(" "),
@@ -32855,11 +32932,255 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "company_detail_info" }, [
-      _c("div", { staticClass: "info_left" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "info_right" }),
-    ])
+    return _c(
+      "div",
+      { staticClass: "company_detail_info px-2 row no-gutters" },
+      [
+        _c("div", { staticClass: "info_left col-12 col-md-4" }, [
+          _c("figure", {
+            staticClass: "company_image",
+            staticStyle: {
+              "background-imgae": "url('/website/assets/images/i2c.png')",
+            },
+          }),
+          _vm._v(" "),
+          _c("p", { staticClass: "company_name" }, [_vm._v("Idenbrid")]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "info_right col-12 col-md-8" }, [
+          _c("ul", [
+            _c("li", [
+              _c("img", {
+                attrs: {
+                  width: "20px",
+                  height: "25px",
+                  src: "/website/assets/images/founded-icon@2x.png",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "info_title_label" }, [
+                  _vm._v("Founded"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "info_dynamic" }, [_vm._v("1995")]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("img", {
+                attrs: {
+                  width: "20px",
+                  height: "20px",
+                  src: "/website/assets/images/industry.svg",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "info_title_label" }, [
+                  _vm._v("Industry"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "info_dynamic" }, [
+                  _vm._v("Information Technology"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("img", {
+                attrs: {
+                  width: "20px",
+                  height: "17px",
+                  src: "/website/assets/images/multiple-users-silhouette.svg",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "info_title_label" }, [
+                  _vm._v("No of Employees"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "info_dynamic" }, [
+                  _vm._v("250 - 1000"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("img", {
+                attrs: {
+                  width: "20px",
+                  height: "26px",
+                  src: "/website/assets/images/ceo.svg",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "info_title_label" }, [
+                  _vm._v("CEO"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "info_dynamic" }, [
+                  _vm._v("Souga Nakamura"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("img", {
+                attrs: {
+                  width: "20px",
+                  height: "20px",
+                  src: "/website/assets/images/city.svg",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "info_title_label" }, [
+                  _vm._v("City"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "info_dynamic" }, [_vm._v("Lahore")]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _c("img", {
+                attrs: {
+                  width: "20px",
+                  height: "15px",
+                  src: "/website/assets/images/email@2x.png",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "info_title_label" }, [
+                  _vm._v("Email"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "info_dynamic" }, [
+                  _vm._v("info@i2c.com"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("img", {
+                attrs: {
+                  width: "20px",
+                  height: "20px",
+                  src: "/website/assets/images/phone-call.svg",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "info_title_label" }, [
+                  _vm._v("Phone"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "info_dynamic" }, [
+                  _vm._v("+92 300 123 4567"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("img", {
+                attrs: {
+                  width: "20px",
+                  height: "30px",
+                  src: "/website/assets/images/pin.svg",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "info_title_label" }, [
+                  _vm._v("Address"),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "info_dynamic" }, [
+                  _vm._v("04, Old FCC Rd، Ferozepur Rd, Gulberg III"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("img", {
+                attrs: {
+                  width: "20px",
+                  height: "20px",
+                  src: "/website/assets/images/world.svg",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "info_title_label" }, [
+                  _vm._v("Website "),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "info_dynamic" }, [
+                  _vm._v("www.i2cinc.com"),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("img", {
+                staticClass: "company_social_icons",
+                attrs: {
+                  src: "/website/assets/images/whatsapp_icon.png",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "company_social_icons",
+                attrs: {
+                  src: "/website/assets/images/facebook_icon.png",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "company_social_icons",
+                attrs: {
+                  src: "/website/assets/images/linkedin_icon.png",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "company_social_icons",
+                attrs: {
+                  src: "/website/assets/images/twitter_icon.svg",
+                  alt: "img",
+                },
+              }),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "company_social_icons",
+                attrs: {
+                  src: "/website/assets/images/github-logo_icon.png",
+                  alt: "img",
+                },
+              }),
+            ]),
+          ]),
+        ]),
+      ]
+    )
   },
   function () {
     var _vm = this
