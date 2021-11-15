@@ -314,77 +314,77 @@
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Logo</label>
-                                                            <input type="file" name="companyLogo" class="form-control" />
+                                                            <label for="companyLogo">Logo</label>
+                                                            <input type="file" id="companyLogo" name="companyLogo" class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">No of Employees</label>
-                                                            <input type="text" name="no_of_employees" class="form-control" v-model="profile.no_of_employees"/>
+                                                            <label for="no_of_employees">No of Employees</label>
+                                                            <input type="number" id="no_of_employees" name="no_of_employees" class="form-control" v-model="profile.no_of_employees"/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Founded</label>
-                                                            <input type="date" placeholder="Enter Founded" name="establish_at" v-model="profile.establish_at"
+                                                            <label for="establish_at">Founded</label>
+                                                            <input type="date" placeholder="Enter Founded" id="establish_at" name="establish_at" v-model="profile.establish_at"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">CEO</label>
-                                                            <input type="text" placeholder="Enter CEO" name="ceo" v-model="profile.ceo"
+                                                            <label for="ceo">CEO</label>
+                                                            <input type="text" placeholder="Enter CEO" id="ceo" name="ceo" v-model="profile.ceo"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Industry</label>
-                                                            <input type="text" placeholder="Enter Industry" name="industry" v-model="profile.industry"
+                                                            <label for="industry">Industry</label>
+                                                            <input type="text" placeholder="Enter Industry" id="industry" name="industry" v-model="profile.industry"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">City</label>
-                                                            <input type="text" placeholder="Enter City" name="city" v-model="profile.city"
+                                                            <label for="city">City</label>
+                                                            <input type="text" placeholder="Enter City" id="city" name="city" v-model="profile.city"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Address</label>
+                                                            <label for="address">Address</label>
                                                             <input type="text" placeholder="Enter Address" name="address" v-model="profile.address"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Phone</label>
-                                                            <input type="number" placeholder="Enter Phone" name="phone" v-model="profile.phone"
+                                                            <label for="phone">Phone</label>
+                                                            <input type="number" placeholder="Enter Phone" id="phone" name="phone" v-model="profile.phone"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Email</label>
-                                                            <input type="email" placeholder="Enter Phone" name="email" v-model="profile.email" disabled
+                                                            <label for="email">Email</label>
+                                                            <input type="email" placeholder="Enter Phone" id="email" name="email" v-model="profile.email" disabled
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Weblink</label>
-                                                            <input type="text" placeholder="Enter Phone" name="web_link" v-model="profile.web_link"
+                                                            <label for="web_link">Weblink</label>
+                                                            <input type="url" placeholder="Enter Phone" id="web_link" name="web_link" v-model="profile.web_link"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="" class="">Description</label>
+                                                            <label for="description">Description</label>
                                                             <textarea style="height: 100px;"
-                                                                placeholder="Enter Description" name="description" v-model="profile.description"
+                                                                placeholder="Enter Description" id="description" maxlength="255" name="description" v-model="profile.description"
                                                                 class="form-control"></textarea>
                                                         </div>
                                                     </div>
@@ -426,50 +426,50 @@
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Whatsapp</label>
-                                                            <input type="text" name="whatsapp" v-model="profile.whatsapp"
+                                                            <label for="whatsapp_link">Whatsapp</label>
+                                                            <input type="url" id="whatsapp_link" name="whatsapp" v-model="profile.whatsapp"
                                                                 placeholder="Enter Whatsapp" class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Facebook</label>
-                                                            <input type="text" name="facebook" v-model="profile.facebook"
+                                                            <label for="facebook_link">Facebook</label>
+                                                            <input type="url" id="facebook_link" name="facebook" v-model="profile.facebook"
                                                                 placeholder="Paste Facebook Link"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Linkedin</label>
-                                                            <input type="text" placeholder="Paste LinkedIn Link" name="linkedin" v-model="profile.linkedin"
+                                                            <label for="linkedin_link">Linkedin</label>
+                                                            <input type="url" id="linkedin_link" placeholder="Paste LinkedIn Link" name="linkedin" v-model="profile.linkedin"
                                                                 class="form-control" /> 
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Twitter</label>
-                                                            <input type="text" placeholder="Paste Twitter Link" name="twitter" v-model="profile.twitter"
+                                                            <label for="twitter_link">Twitter</label>
+                                                            <input type="url" id="twitter_link" placeholder="Paste Twitter Link" name="twitter" v-model="profile.twitter"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Github</label>
-                                                            <input type="text" placeholder="Paste GitHub Link" name="github"  v-model="profile.github"
+                                                            <label for="github_link">Github</label>
+                                                            <input type="url" id="github_link" placeholder="Paste GitHub Link" name="github"  v-model="profile.github"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="" class="">Company Pics <small>(Max upload4)</small></label>
+                                                            <label for="companyGallery">Company Pics <small>(Max upload4)</small></label>
                                                             <input name="companyGallery[]" type="file" multiple="multiple" id="companyGallery" class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="" class="">Video</label>
-                                                            <input type="file" value="" name="companyVideo" class="form-control" />
+                                                            <label for="companyVideo">Video</label>
+                                                            <input type="file" value="" id="companyVideo" name="companyVideo" class="form-control" />
                                                         </div>
                                                     </div>
                                                 </div>

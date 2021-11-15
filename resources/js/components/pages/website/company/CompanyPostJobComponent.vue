@@ -355,7 +355,7 @@
                                                         <div class="form-group">
                                                             <label for="salary_type"><span class="required_feild">*</span> Salary Type</label>
                                                             <select name="salary_type" id="salary_type" v-model="record.salary_type" class="form-control">
-                                                                <option value="Please Select" selected disabled>Please Select</option>
+                                                                <option value="Please Select" default="true" selected="true" disabled="disabled">Please Select</option>
                                                                 <option value="Yearly">Yearly</option>
                                                                 <option value="Monthly">Monthly</option>
                                                                 <option value="Weekly">Weekly</option>
@@ -411,7 +411,7 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="experience"><span class="required_feild">*</span> Experience<small>in years</small></label>
-                                                            <input type="text" id="experience" v-model="record.experience" placeholder="Enter Experience"
+                                                            <input type="number" id="experience" v-model="record.experience" placeholder="Enter Experience"
                                                                 name="experience" class="form-control" />
                                                             <small>
                                                                 <span v-if="errors.experience != null" class="text-danger">

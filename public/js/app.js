@@ -35201,8 +35201,9 @@ var render = function () {
                                                     {
                                                       attrs: {
                                                         value: "Please Select",
-                                                        selected: "",
-                                                        disabled: "",
+                                                        default: "true",
+                                                        selected: "true",
+                                                        disabled: "disabled",
                                                       },
                                                     },
                                                     [_vm._v("Please Select")]
@@ -35630,7 +35631,7 @@ var render = function () {
                                                 ],
                                                 staticClass: "form-control",
                                                 attrs: {
-                                                  type: "text",
+                                                  type: "number",
                                                   id: "experience",
                                                   placeholder:
                                                     "Enter Experience",
@@ -37993,7 +37994,11 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                {
+                                                  attrs: {
+                                                    for: "no_of_employees",
+                                                  },
+                                                },
                                                 [_vm._v("No of Employees")]
                                               ),
                                               _vm._v(" "),
@@ -38011,7 +38016,8 @@ var render = function () {
                                                 ],
                                                 staticClass: "form-control",
                                                 attrs: {
-                                                  type: "text",
+                                                  type: "number",
+                                                  id: "no_of_employees",
                                                   name: "no_of_employees",
                                                 },
                                                 domProps: {
@@ -38048,7 +38054,11 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                {
+                                                  attrs: {
+                                                    for: "establish_at",
+                                                  },
+                                                },
                                                 [_vm._v("Founded")]
                                               ),
                                               _vm._v(" "),
@@ -38067,6 +38077,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "date",
                                                   placeholder: "Enter Founded",
+                                                  id: "establish_at",
                                                   name: "establish_at",
                                                 },
                                                 domProps: {
@@ -38103,7 +38114,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "ceo" } },
                                                 [_vm._v("CEO")]
                                               ),
                                               _vm._v(" "),
@@ -38120,6 +38131,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "text",
                                                   placeholder: "Enter CEO",
+                                                  id: "ceo",
                                                   name: "ceo",
                                                 },
                                                 domProps: {
@@ -38155,7 +38167,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "industry" } },
                                                 [_vm._v("Industry")]
                                               ),
                                               _vm._v(" "),
@@ -38173,6 +38185,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "text",
                                                   placeholder: "Enter Industry",
+                                                  id: "industry",
                                                   name: "industry",
                                                 },
                                                 domProps: {
@@ -38208,7 +38221,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "city" } },
                                                 [_vm._v("City")]
                                               ),
                                               _vm._v(" "),
@@ -38225,6 +38238,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "text",
                                                   placeholder: "Enter City",
+                                                  id: "city",
                                                   name: "city",
                                                 },
                                                 domProps: {
@@ -38260,7 +38274,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "address" } },
                                                 [_vm._v("Address")]
                                               ),
                                               _vm._v(" "),
@@ -38313,7 +38327,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "phone" } },
                                                 [_vm._v("Phone")]
                                               ),
                                               _vm._v(" "),
@@ -38330,6 +38344,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "number",
                                                   placeholder: "Enter Phone",
+                                                  id: "phone",
                                                   name: "phone",
                                                 },
                                                 domProps: {
@@ -38365,7 +38380,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "email" } },
                                                 [_vm._v("Email")]
                                               ),
                                               _vm._v(" "),
@@ -38382,6 +38397,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "email",
                                                   placeholder: "Enter Phone",
+                                                  id: "email",
                                                   name: "email",
                                                   disabled: "",
                                                 },
@@ -38418,7 +38434,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "web_link" } },
                                                 [_vm._v("Weblink")]
                                               ),
                                               _vm._v(" "),
@@ -38434,8 +38450,9 @@ var render = function () {
                                                 ],
                                                 staticClass: "form-control",
                                                 attrs: {
-                                                  type: "text",
+                                                  type: "url",
                                                   placeholder: "Enter Phone",
+                                                  id: "web_link",
                                                   name: "web_link",
                                                 },
                                                 domProps: {
@@ -38468,7 +38485,7 @@ var render = function () {
                                           [
                                             _c(
                                               "label",
-                                              { attrs: { for: "" } },
+                                              { attrs: { for: "description" } },
                                               [_vm._v("Description")]
                                             ),
                                             _vm._v(" "),
@@ -38488,6 +38505,8 @@ var render = function () {
                                               attrs: {
                                                 placeholder:
                                                   "Enter Description",
+                                                id: "description",
+                                                maxlength: "255",
                                                 name: "description",
                                               },
                                               domProps: {
@@ -38603,9 +38622,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Whatsapp"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "whatsapp_link" } },
+                                          [_vm._v("Whatsapp")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38618,7 +38639,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "whatsapp_link",
                                             name: "whatsapp",
                                             placeholder: "Enter Whatsapp",
                                           },
@@ -38647,9 +38669,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Facebook"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "facebook_link" } },
+                                          [_vm._v("Facebook")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38662,7 +38686,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "facebook_link",
                                             name: "facebook",
                                             placeholder: "Paste Facebook Link",
                                           },
@@ -38691,9 +38716,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Linkedin"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "linkedin_link" } },
+                                          [_vm._v("Linkedin")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38706,7 +38733,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "linkedin_link",
                                             placeholder: "Paste LinkedIn Link",
                                             name: "linkedin",
                                           },
@@ -38735,9 +38763,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Twitter"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "twitter_link" } },
+                                          [_vm._v("Twitter")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38750,7 +38780,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "twitter_link",
                                             placeholder: "Paste Twitter Link",
                                             name: "twitter",
                                           },
@@ -38779,9 +38810,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Github"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "github_link" } },
+                                          [_vm._v("Github")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38794,7 +38827,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "github_link",
                                             placeholder: "Paste GitHub Link",
                                             name: "github",
                                           },
@@ -39285,11 +39319,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 col-md-6" }, [
       _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "" } }, [_vm._v("Logo")]),
+        _c("label", { attrs: { for: "companyLogo" } }, [_vm._v("Logo")]),
         _vm._v(" "),
         _c("input", {
           staticClass: "form-control",
-          attrs: { type: "file", name: "companyLogo" },
+          attrs: { type: "file", id: "companyLogo", name: "companyLogo" },
         }),
       ]),
     ])
@@ -39310,7 +39344,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 col-md-6" }, [
       _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "" } }, [
+        _c("label", { attrs: { for: "companyGallery" } }, [
           _vm._v("Company Pics "),
           _c("small", [_vm._v("(Max upload4)")]),
         ]),
@@ -39333,11 +39367,16 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12" }, [
       _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "" } }, [_vm._v("Video")]),
+        _c("label", { attrs: { for: "companyVideo" } }, [_vm._v("Video")]),
         _vm._v(" "),
         _c("input", {
           staticClass: "form-control",
-          attrs: { type: "file", value: "", name: "companyVideo" },
+          attrs: {
+            type: "file",
+            value: "",
+            id: "companyVideo",
+            name: "companyVideo",
+          },
         }),
       ]),
     ])
