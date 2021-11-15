@@ -6543,5 +6543,8 @@ progress {
     padding: 10px;
     margin: 10px;
 }
+.required_feild{
+    color: red;
+}
 
 /* post new job */
