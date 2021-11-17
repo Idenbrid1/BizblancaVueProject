@@ -369,14 +369,14 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="email">Email</label>
-                                                            <input type="email" placeholder="Enter Phone" id="email" name="email" v-model="profile.email" disabled
+                                                            <input type="email" placeholder="Enter Email" id="email" name="email" v-model="profile.email" disabled
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="web_link">Weblink</label>
-                                                            <input type="url" placeholder="Enter Phone" id="web_link" name="web_link" v-model="profile.web_link"
+                                                            <input type="url" placeholder="Enter Weblink" id="web_link" name="web_link" v-model="profile.web_link"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
