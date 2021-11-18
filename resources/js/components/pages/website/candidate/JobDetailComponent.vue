@@ -134,6 +134,7 @@
                                 Its customer support provides 24x7x365 service to its clients, which include companies
                                 in North America, Latin America, the Middle East, Asia Pacific, and Europe.</p>
                         </div>
+                        <a class="more-detail-anker" href="">More Details</a>
                     </div>
                 </div>
                 <div class="px-2">
@@ -142,7 +143,6 @@
                         This section is other jobs section offered by other companies of same position you are looking
                         for and may or may not better option then this job post and also you can check these jobs.
                     </p>
-                    <a class="more-detail-anker" href=""></a>
                 </div>
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">

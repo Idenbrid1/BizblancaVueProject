@@ -31886,6 +31886,10 @@ var staticRenderFns = [
             ),
           ]),
         ]),
+        _vm._v(" "),
+        _c("a", { staticClass: "more-detail-anker", attrs: { href: "" } }, [
+          _vm._v("More Details"),
+        ]),
       ]),
     ])
   },
@@ -31901,8 +31905,6 @@ var staticRenderFns = [
           "\n                    This section is other jobs section offered by other companies of same position you are looking\n                    for and may or may not better option then this job post and also you can check these jobs.\n                "
         ),
       ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "more-detail-anker", attrs: { href: "" } }),
     ])
   },
   function () {
