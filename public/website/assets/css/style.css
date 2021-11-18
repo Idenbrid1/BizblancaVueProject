@@ -6582,9 +6582,11 @@ progress {
 .job-info-img {
     width: 120px;
     height: 120px;
-    background: #FFFFFF url('images/i2c.png') 0% 0% no-repeat padding-box;
+    background: #FFFFFF url('/website/assets/images/i2c@2x.png') 0% 0% no-repeat padding-box;
     border-radius: 75px;
+    background-size: 100% 100%;
 }
+
 
 .job-apply-ankers {
     display: flex;
@@ -6633,8 +6635,41 @@ progress {
 .job-dynamic-values>ul {
     padding: 0px;
     margin: 0px;
+    padding-right: 32px;
     margin-right: 10px;
-    border-right: 1px solid #081351;
+    border-right: 1px solid #757575;
 }
-
+.job-dynamic-values>ul>li>span{
+    font-size: 12px;
+    letter-spacing: 0px;
+    padding-left: 13px;
+    color: #757575;
+}
+.job-detail-section>div>h3{
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 22px;
+}
+.job-detail-section>div>ul{
+    margin: 0px;
+    padding: 0px;
+}
+.job-detail-section>div>ul>li{
+    color: #757575;
+    font-size: 14px;
+}
+.job-detail-section>div>p{
+    color: #757575;
+    font-size: 14px;
+}
+.company-detail-title{
+    font-size: 20px;
+    border-left: 5px solid #081351;
+    padding-left: 10px;
+    color: #081351;
+    font-weight: bold;
+    margin: 20px 0px;
+}
 /* job-detail-info */

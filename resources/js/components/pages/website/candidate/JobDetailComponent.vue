@@ -20,34 +20,86 @@
                     <div class="job-dynamic-values">
                         <ul>
                             <li>
-                                <img src="" alt="">
+                                <img src="/website/assets/images/calendar-job.svg" alt="img">
                                 <span>Aug 23, 2021</span>
                             </li>
                             <li>
-                                <img src="" alt="">
+                                <img src="/website/assets/images/experience-job.svg" alt="">
                                 <span>3 Years</span>
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                <img src="" alt="">
+                                <img src="/website/assets/images/money-job.svg" alt="">
                                 <span>80K to 100K</span>
                             </li>
                             <li>
-                                <img src="" alt="">
+                                <img height="16px" width="10px" src="/website/assets/images/pin.svg" alt="img">
                                 <span>Lahore, Pakistan</span>
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                <img src="" alt="">
+                                <img src="/website/assets/images/suitcase-job.svg" alt="">
                                 <span>Morning Shift</span>
                             </li>
                             <li>
-                                <img src="" alt="">
+                                <img src="/website/assets/images/switch-job.svg" alt="">
                                 <span>Full Time</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="job-detail-section">
+                        <div>
+                            <h3>Job Description:</h3>
+                            <p>We are looking for a highly capable Database Administrator (DBA) who is highly motivated, responsible and a detail-oriented team player. Under close supervision, provides general direction, design, maintenance, and control of databases</p>
+                        </div>
+                        <div>
+                            <h3>Job Responsibilities:</h3>
+                            <ul> 
+                                <li>- Lead role in troubleshooting and solving problems relative to current environment and architecture using a wide range of techniques and resources to detect, identify and eliminate database system problems</li> 
+                                <li>- Build database systems of high availability and quality depending on each end user’s specialized role.</li>
+                                <li>- Documents the established procedures used to perform repetitive but complex DBA tasks.</li> 
+                                <li>- Design and implement database in accordance to end user’s information needs and views.</li>
+                                <li>- Define users and enable data distribution to the right user, in appropriate format and in a timely manner.</li> 
+                                <li>- Use high-speed transaction recovery techniques and backup data.</li> 
+                                <li>- Minimize database downtime and manage parameters to provide fast query responses.</li> 
+                                <li>- Provide proactive and reactive data management support and training to users.</li> 
+                                <li>- Determine, enforce and document database policies, procedures and standards.</li> 
+                                <li>- Perform tests and evaluations regularly to ensure data security, privacy and integrity.</li> 
+                                <li>- Monitor database performance, implement changes and apply new patches and versions when required.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Qualification and Technicalities:</h3>
+                            <ul>
+                                <li>- Bachelor's degree in computer science, or related field. - At least years of experience as a database administrator.</li> 
+                                <li>- Hands-on experience with database standards and end user applications.</li> 
+                                <li>- Excellent knowledge of administrating SQL and NoSQL databases.</li> 
+                                <li>- Excellent knowledge of data backup, recovery, security, integrity and SQL.</li> 
+                                <li>- Familiarity with database design, documentation and coding.</li> 
+                                <li>- Previous experience with DBA case tools (frontend/backend) and third-party tools.</li> 
+                                <li>- Familiarity with programming languages API.</li> 
+                                <li>- Problem solving skills and ability to think algorithmically</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Benefits:</h3>
+                            <ul>
+                                <li>- Market competitive salary</li> 
+                                <li>- Medical Benefits (Self & Immediate family)</li> 
+                                <li>- Paid Leaves (Casual, Sick & Annual leaves)</li> 
+                                <li>- Annual Performance based increments</li> 
+                                <li>- Bi-Annual Bonus</li> 
+                                <li>- Learning & development</li> 
+                                <li>- Friendly environment</li> 
+                                <li>- Sat & Sun off</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h1 class="company-detail-title">Company Detail</h1>
+                            <p>i2c Inc. is an experienced and trusted payments solution provider that helps card issuers and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete control of their programs in real time. With its value-added services, rewards and loyalty options, cardholder communication tools, and extensive analytics, MCP empowers clients to increase revenues, improve efficiency, reduce costs, and build a loyal cardholder base. i2c enables clients to launch new products faster, tailor programs for specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005, CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City, California, and more than 350 employees and five sales and support offices worldwide. Its customer support provides 24x7x365 service to its clients, which include companies in North America, Latin America, the Middle East, Asia Pacific, and Europe.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="px-2">

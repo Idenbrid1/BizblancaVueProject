@@ -8704,6 +8704,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -31522,13 +31574,23 @@ var staticRenderFns = [
       _c("div", { staticClass: "job-dynamic-values" }, [
         _c("ul", [
           _c("li", [
-            _c("img", { attrs: { src: "", alt: "" } }),
+            _c("img", {
+              attrs: {
+                src: "/website/assets/images/calendar-job.svg",
+                alt: "img",
+              },
+            }),
             _vm._v(" "),
             _c("span", [_vm._v("Aug 23, 2021")]),
           ]),
           _vm._v(" "),
           _c("li", [
-            _c("img", { attrs: { src: "", alt: "" } }),
+            _c("img", {
+              attrs: {
+                src: "/website/assets/images/experience-job.svg",
+                alt: "",
+              },
+            }),
             _vm._v(" "),
             _c("span", [_vm._v("3 Years")]),
           ]),
@@ -31536,13 +31598,22 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("ul", [
           _c("li", [
-            _c("img", { attrs: { src: "", alt: "" } }),
+            _c("img", {
+              attrs: { src: "/website/assets/images/money-job.svg", alt: "" },
+            }),
             _vm._v(" "),
             _c("span", [_vm._v("80K to 100K")]),
           ]),
           _vm._v(" "),
           _c("li", [
-            _c("img", { attrs: { src: "", alt: "" } }),
+            _c("img", {
+              attrs: {
+                height: "16px",
+                width: "10px",
+                src: "/website/assets/images/pin.svg",
+                alt: "img",
+              },
+            }),
             _vm._v(" "),
             _c("span", [_vm._v("Lahore, Pakistan")]),
           ]),
@@ -31550,15 +31621,190 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("ul", [
           _c("li", [
-            _c("img", { attrs: { src: "", alt: "" } }),
+            _c("img", {
+              attrs: {
+                src: "/website/assets/images/suitcase-job.svg",
+                alt: "",
+              },
+            }),
             _vm._v(" "),
             _c("span", [_vm._v("Morning Shift")]),
           ]),
           _vm._v(" "),
           _c("li", [
-            _c("img", { attrs: { src: "", alt: "" } }),
+            _c("img", {
+              attrs: { src: "/website/assets/images/switch-job.svg", alt: "" },
+            }),
             _vm._v(" "),
             _c("span", [_vm._v("Full Time")]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "job-detail-section" }, [
+        _c("div", [
+          _c("h3", [_vm._v("Job Description:")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "We are looking for a highly capable Database Administrator (DBA) who is highly motivated, responsible and a detail-oriented team player. Under close supervision, provides general direction, design, maintenance, and control of databases"
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("h3", [_vm._v("Job Responsibilities:")]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _vm._v(
+                "- Lead role in troubleshooting and solving problems relative to current environment and architecture using a wide range of techniques and resources to detect, identify and eliminate database system problems"
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Build database systems of high availability and quality depending on each end user’s specialized role."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Documents the established procedures used to perform repetitive but complex DBA tasks."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Design and implement database in accordance to end user’s information needs and views."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Define users and enable data distribution to the right user, in appropriate format and in a timely manner."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Use high-speed transaction recovery techniques and backup data."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Minimize database downtime and manage parameters to provide fast query responses."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Provide proactive and reactive data management support and training to users."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Determine, enforce and document database policies, procedures and standards."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Perform tests and evaluations regularly to ensure data security, privacy and integrity."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Monitor database performance, implement changes and apply new patches and versions when required."
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("h3", [_vm._v("Qualification and Technicalities:")]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _vm._v(
+                "- Bachelor's degree in computer science, or related field. - At least years of experience as a database administrator."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Hands-on experience with database standards and end user applications."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Excellent knowledge of administrating SQL and NoSQL databases."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Excellent knowledge of data backup, recovery, security, integrity and SQL."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Familiarity with database design, documentation and coding."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Previous experience with DBA case tools (frontend/backend) and third-party tools."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", [_vm._v("- Familiarity with programming languages API.")]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "- Problem solving skills and ability to think algorithmically"
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("h3", [_vm._v("Benefits:")]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [_vm._v("- Market competitive salary")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("- Medical Benefits (Self & Immediate family)")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("- Paid Leaves (Casual, Sick & Annual leaves)")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("- Annual Performance based increments")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("- Bi-Annual Bonus")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("- Learning & development")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("- Friendly environment")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("- Sat & Sun off")]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("h1", { staticClass: "company-detail-title" }, [
+            _vm._v("Company Detail"),
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "i2c Inc. is an experienced and trusted payments solution provider that helps card issuers and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete control of their programs in real time. With its value-added services, rewards and loyalty options, cardholder communication tools, and extensive analytics, MCP empowers clients to increase revenues, improve efficiency, reduce costs, and build a loyal cardholder base. i2c enables clients to launch new products faster, tailor programs for specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005, CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City, California, and more than 350 employees and five sales and support offices worldwide. Its customer support provides 24x7x365 service to its clients, which include companies in North America, Latin America, the Middle East, Asia Pacific, and Europe."
+            ),
           ]),
         ]),
       ]),
