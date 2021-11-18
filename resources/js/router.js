@@ -42,21 +42,6 @@ const router = new VueRouter({
             name: 'ForCandidates',
             component: ForCandidates
         },
-        // {
-        //     path: '/test-candidates-profile',
-        //     name: 'Test Candidates Profile',
-        //     component: TestCandidateProfile
-        // },
-        // {
-        //     path: '/test-company-profile',
-        //     name: 'Test Company Profile',
-        //     component: TestCompanyProfile
-        // },
-        // {
-        //     path: '/company-profile',
-        //     name: 'For Company Profile',
-        //     component: CompanyProfile
-        // },
         {
             path: '/signin',
             name: 'Signin',
