@@ -55,24 +55,23 @@ class CommonController extends Controller
     }
     public function candidateSearch(Request $request)
     { 
-        foreach($request->skills as $skill)
+        if($request->skills)
         {
-            $skills_array[] =  $skill['name'];
-        }
-        $candidate_skills_lists = CandidateSkill::whereIn('name', $skills_array)->get();
-        foreach($candidate_skills_lists as $break_skill)
-        {
-            $final_skills_array[] =  $break_skill->candidate_id;
-        }
-        $candidate_skills_lists = Candidate::whereIn('id', $final_skills_array)->get();
-        if($candidate_skills_lists)
-        {
-            $candidates = $candidate_skills_lists; 
-        }
+            foreach($request->skills as $skill)
+            {
+                $skills_array[] =  $skill['name'];
+            }
+            $candidate_skills_lists = CandidateSkill::whereIn('name', $skills_array)->get();
+            foreach($candidate_skills_lists as $break_skill)
+            {
+                $final_skills_array[] =  $break_skill->candidate_id;
+            }
+            $candidate_skills_lists = Candidate::whereIn('id', $final_skills_array)->get();
+                
+            }
         else{
             $candidate_skills_lists = Candidate::all();
         }
-        // return $candidates;
         $fields = ['working_experience', 'city', 'gender'];
         foreach($fields as $field){
             if(!empty($request->$field)){
