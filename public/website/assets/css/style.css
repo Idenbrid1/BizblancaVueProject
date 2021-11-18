@@ -1997,9 +1997,12 @@
 }
 
 .company-logo {
+    width: 150px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #081351;
     border-radius: 5px;
 }
@@ -2007,11 +2010,15 @@
 .company-h {
     color: #fff;
     margin-top: 8px;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
+    width: 100px;
+    font-weight: 600;
 }
 
 .company-logo img {
     width: 80px;
+    height: 80px;
     background-color: #fff;
     border-radius: 50%;
     padding: 5px;
@@ -2026,8 +2033,8 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+   
 }
-
 .candidate-photo {
     height: 50px;
     width: 50px;
@@ -2109,17 +2116,13 @@
 .job-description,
 .candidate-description {
     color: #757575;
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 0px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-}
-
-.job-description {
-    font-size: 14px;
 }
 
 .candidate-description {
@@ -2142,14 +2145,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.job-view-btn {
-    background-color: #081351;
-    color: #fff;
-    font-size: 12px;
-    padding: 5px 20px;
-    border-radius: 5px;
 }
 
 .candidate-view-btn {
@@ -2182,14 +2177,6 @@
     align-items: center;
 }
 
-.job-wishlist-btn {
-    background-color: #081351;
-    padding: 0px 5px;
-    border-radius: 5px;
-    margin-right: 4px;
-    width: 100%;
-}
-
 .candidate-wishlist-btn {
     background-color: #081351;
     border-radius: 5px;
@@ -2201,11 +2188,6 @@
     justify-content: center;
     padding: 10px 20px;
 }
-
-.job-wishlist-btn i {
-    color: #fff;
-}
-
 .job-header i,
 .candidate-header i {
     font-size: 12px;
@@ -2219,7 +2201,8 @@
 
 .job-post-date {
     float: right;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .job-condition {
@@ -3122,12 +3105,6 @@
     .product_accordion+.search-box-h span {
         display: block;
     }
-
-    .job-description,
-    .candidate-description {
-        -webkit-line-clamp: 1;
-    }
-
     .job-list-fav,
     .candidate-list-fav {
         padding: 0px;
@@ -3139,16 +3116,6 @@
         font-size: 7px;
         padding-right: 5px;
     }
-
-    .company-h {
-        font-size: 8px;
-        margin-top: 5px;
-    }
-
-    .job-title {
-        font-size: 9px;
-    }
-
     .job-header,
     .candidate-header {
         margin-bottom: 5px;
@@ -3157,10 +3124,6 @@
 
     .job-header i {
         font-size: 7px;
-    }
-
-    .job-description {
-        font-size: 9px;
     }
 
     .candidate-description {
@@ -3182,35 +3145,10 @@
         margin-top: 10px;
     }
 
-    .job-view-btn {
-        font-size: 6px;
-        padding: 5px 20px;
-    }
-
-    .job-wishlist-btn {
-        font-size: 7px;
-        padding: 5px;
-        height: 19px;
-    }
-
-    .company-logo {
-        padding: 14px;
-    }
-
-    .company-logo img {
-        width: 45px;
-    }
-
     .job-list-content,
     .candidate-list-content {
         padding: 0px 10px !important;
     }
-
-    .job-post-date {
-        font-size: 7px;
-        color: #757575;
-    }
-
     .xs-padding {
         padding: 0px !important;
     }
@@ -3247,15 +3185,6 @@
     .job-list-content {
         padding: 0px 4px !important;
     }
-
-    .company-logo {
-        padding: 5px !important;
-    }
-
-    .job-view-btn {
-        padding: 5px 8px;
-    }
-
     .job-page-link {
         padding: 0.6rem;
     }
@@ -4051,31 +3980,11 @@
     font-weight: 500;
 }
 
-.company-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #081351;
-    border-radius: 5px;
-}
-
-.company-h {
-    color: #fff;
-    margin-top: 8px;
-    font-size: 14px;
-}
-
-.company-logo img {
-    width: 80px;
-    background-color: #fff;
-    border-radius: 50%;
-    padding: 5px;
-}
 
 .job-title,
 .candidate-name {
     color: #000000;
-    font-size: 14px;
+    font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -4160,23 +4069,6 @@
     border-left: 5px solid;
     font-weight: 500;
 }
-
-.job-description,
-.candidate-description {
-    color: #757575;
-    font-size: 12px;
-    margin-bottom: 0px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-/* .job-description {
-    font-size: 14px;
-} */
-
 .candidate-description {
     font-size: 12px;
 }
@@ -4202,8 +4094,13 @@
 .job-view-btn {
     background-color: #081351;
     color: #fff;
-    font-size: 12px;
-    padding: 5px 20px;
+    font-size: 16px;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
     border-radius: 5px;
 }
 
@@ -4239,10 +4136,13 @@
 
 .job-wishlist-btn {
     background-color: #081351;
-    padding: 0px 5px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     margin-right: 4px;
-    width: 100%;
 }
 
 .candidate-wishlist-btn {
@@ -4270,11 +4170,6 @@
 .job-header,
 .candidate-header {
     display: inline-block;
-}
-
-.job-post-date {
-    float: right;
-    font-size: 12px;
 }
 
 .job-condition {
@@ -4549,12 +4444,6 @@
     .product_accordion+.search-box-h span {
         display: block;
     }
-
-    .job-description,
-    .candidate-description {
-        -webkit-line-clamp: 1;
-    }
-
     .job-list-fav,
     .candidate-list-fav {
         padding: 0px;
@@ -4566,16 +4455,6 @@
         font-size: 7px;
         padding-right: 5px;
     }
-
-    .company-h {
-        font-size: 8px;
-        margin-top: 5px;
-    }
-
-    .job-title {
-        font-size: 9px;
-    }
-
     .job-header,
     .candidate-header {
         margin-bottom: 5px;
@@ -4584,10 +4463,6 @@
 
     .job-header i {
         font-size: 7px;
-    }
-
-    .job-description {
-        font-size: 9px;
     }
 
     .candidate-description {
@@ -4608,34 +4483,9 @@
     .job-list-fav li {
         margin-top: 10px;
     }
-
-    .job-view-btn {
-        font-size: 6px;
-        padding: 5px 20px;
-    }
-
-    .job-wishlist-btn {
-        font-size: 7px;
-        padding: 5px;
-        height: 19px;
-    }
-
-    .company-logo {
-        padding: 14px;
-    }
-
-    .company-logo img {
-        width: 45px;
-    }
-
     .job-list-content,
     .candidate-list-content {
         padding: 0px 10px !important;
-    }
-
-    .job-post-date {
-        font-size: 7px;
-        color: #757575;
     }
 
     .xs-padding {
@@ -4674,15 +4524,6 @@
     .job-list-content {
         padding: 0px 4px !important;
     }
-
-    .company-logo {
-        padding: 5px !important;
-    }
-
-    .job-view-btn {
-        padding: 5px 8px;
-    }
-
     .job-page-link {
         padding: 0.6rem;
     }
@@ -6671,7 +6512,7 @@ progress {
     border-right: 1px solid #757575;
 }
 .job-dynamic-values>ul>li>span{
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0px;
     padding-left: 13px;
     color: #757575;
@@ -6710,8 +6551,38 @@ progress {
     border-radius: 5px;
     letter-spacing: 0px;
     color: #081351;
+    padding: 9px 13px;
 }
 .job-apply-anker{
     padding: 10px 42px !important;
 }
+.job-content-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.job-list-content,
+    .candidate-list-content {
+        padding: 12px !important;
+    }
 /* job-detail-info */
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

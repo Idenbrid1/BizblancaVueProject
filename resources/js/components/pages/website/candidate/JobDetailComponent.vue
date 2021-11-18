@@ -134,6 +134,7 @@
                                 Its customer support provides 24x7x365 service to its clients, which include companies
                                 in North America, Latin America, the Middle East, Asia Pacific, and Europe.</p>
                         </div>
+                        <a class="more-detail-anker" href="">More Details</a>
                     </div>
                 </div>
                 <div class="px-2">
@@ -142,7 +143,6 @@
                         This section is other jobs section offered by other companies of same position you are looking
                         for and may or may not better option then this job post and also you can check these jobs.
                     </p>
-                    <a class="more-detail-anker" href=""></a>
                 </div>
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">
@@ -155,32 +155,56 @@
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">Data Analyst</h6>
+                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                             </div>
                             <span class="job-post-date">20 hours ago</span>
                             <p class="job-description">As a Data Scientist, you will be in a central position as you
                                 will be evangelizing data and our methodologies to other functional analysts and other
                                 stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i></li>
-                                <li><i class="fal fa-address-card"></i>experience</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                <li><i class="fa fa-map-marker"></i>location</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>shift</li>
-                                <li><i class="fal fa-clock"></i>job_type</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
+                            <div class="job-content-wrap">
+                                <div class="job-dynamic-values">
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                            <span>Aug 23, 2021</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/experience-job.svg" alt="">
+                                            <span>3 Years</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/money-job.svg" alt="">
+                                            <span>80K to 100K</span>
+                                        </li>
+                                        <li>
+                                            <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                alt="img">
+                                            <span>Lahore, Pakistan</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                            <span>Morning Shift</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/switch-job.svg" alt="">
+                                            <span>Full Time</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="job-list-fav m-0">
+                                    <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#" class="job-view-btn">View</a></li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                     <div class="job-list">
@@ -191,32 +215,56 @@
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">Data Analyst</h6>
+                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                             </div>
                             <span class="job-post-date">20 hours ago</span>
                             <p class="job-description">As a Data Scientist, you will be in a central position as you
                                 will be evangelizing data and our methodologies to other functional analysts and other
                                 stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i></li>
-                                <li><i class="fal fa-address-card"></i>experience</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                <li><i class="fa fa-map-marker"></i>location</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>shift</li>
-                                <li><i class="fal fa-clock"></i>job_type</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
+                            <div class="job-content-wrap">
+                                <div class="job-dynamic-values">
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                            <span>Aug 23, 2021</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/experience-job.svg" alt="">
+                                            <span>3 Years</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/money-job.svg" alt="">
+                                            <span>80K to 100K</span>
+                                        </li>
+                                        <li>
+                                            <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                alt="img">
+                                            <span>Lahore, Pakistan</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                            <span>Morning Shift</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/switch-job.svg" alt="">
+                                            <span>Full Time</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="job-list-fav m-0">
+                                    <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#" class="job-view-btn">View</a></li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                     <div class="job-list">
@@ -227,32 +275,56 @@
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">Data Analyst</h6>
+                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                             </div>
                             <span class="job-post-date">20 hours ago</span>
                             <p class="job-description">As a Data Scientist, you will be in a central position as you
                                 will be evangelizing data and our methodologies to other functional analysts and other
                                 stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i></li>
-                                <li><i class="fal fa-address-card"></i>experience</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                <li><i class="fa fa-map-marker"></i>location</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>shift</li>
-                                <li><i class="fal fa-clock"></i>job_type</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
+                            <div class="job-content-wrap">
+                                <div class="job-dynamic-values">
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                            <span>Aug 23, 2021</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/experience-job.svg" alt="">
+                                            <span>3 Years</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/money-job.svg" alt="">
+                                            <span>80K to 100K</span>
+                                        </li>
+                                        <li>
+                                            <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                alt="img">
+                                            <span>Lahore, Pakistan</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                            <span>Morning Shift</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/switch-job.svg" alt="">
+                                            <span>Full Time</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="job-list-fav m-0">
+                                    <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#" class="job-view-btn">View</a></li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                     <div class="job-list">
@@ -263,32 +335,56 @@
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">Data Analyst</h6>
+                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                             </div>
                             <span class="job-post-date">20 hours ago</span>
                             <p class="job-description">As a Data Scientist, you will be in a central position as you
                                 will be evangelizing data and our methodologies to other functional analysts and other
                                 stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i></li>
-                                <li><i class="fal fa-address-card"></i>experience</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                <li><i class="fa fa-map-marker"></i>location</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>shift</li>
-                                <li><i class="fal fa-clock"></i>job_type</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
+                            <div class="job-content-wrap">
+                                <div class="job-dynamic-values">
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                            <span>Aug 23, 2021</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/experience-job.svg" alt="">
+                                            <span>3 Years</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/money-job.svg" alt="">
+                                            <span>80K to 100K</span>
+                                        </li>
+                                        <li>
+                                            <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                alt="img">
+                                            <span>Lahore, Pakistan</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                            <span>Morning Shift</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/switch-job.svg" alt="">
+                                            <span>Full Time</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="job-list-fav m-0">
+                                    <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#" class="job-view-btn">View</a></li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                     <div class="job-list">
@@ -299,32 +395,56 @@
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">Data Analyst</h6>
+                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                             </div>
                             <span class="job-post-date">20 hours ago</span>
                             <p class="job-description">As a Data Scientist, you will be in a central position as you
                                 will be evangelizing data and our methodologies to other functional analysts and other
                                 stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i></li>
-                                <li><i class="fal fa-address-card"></i>experience</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                <li><i class="fa fa-map-marker"></i>location</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>shift</li>
-                                <li><i class="fal fa-clock"></i>job_type</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
+                            <div class="job-content-wrap">
+                                <div class="job-dynamic-values">
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                            <span>Aug 23, 2021</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/experience-job.svg" alt="">
+                                            <span>3 Years</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/money-job.svg" alt="">
+                                            <span>80K to 100K</span>
+                                        </li>
+                                        <li>
+                                            <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                alt="img">
+                                            <span>Lahore, Pakistan</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                            <span>Morning Shift</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/switch-job.svg" alt="">
+                                            <span>Full Time</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="job-list-fav m-0">
+                                    <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#" class="job-view-btn">View</a></li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                     <div class="job-list">
@@ -335,68 +455,56 @@
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">Data Analyst</h6>
+                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                             </div>
                             <span class="job-post-date">20 hours ago</span>
                             <p class="job-description">As a Data Scientist, you will be in a central position as you
                                 will be evangelizing data and our methodologies to other functional analysts and other
                                 stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i></li>
-                                <li><i class="fal fa-address-card"></i>experience</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                <li><i class="fa fa-map-marker"></i>location</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>shift</li>
-                                <li><i class="fal fa-clock"></i>job_type</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="job-list">
-                        <div class="company-logo col-auto py-2">
-                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">Ahmad</span>
-                        </div>
-                        <div class="job-list-content col">
-                            <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                            <div class="job-content-wrap">
+                                <div class="job-dynamic-values">
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                            <span>Aug 23, 2021</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/experience-job.svg" alt="">
+                                            <span>3 Years</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/money-job.svg" alt="">
+                                            <span>80K to 100K</span>
+                                        </li>
+                                        <li>
+                                            <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                alt="img">
+                                            <span>Lahore, Pakistan</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                            <span>Morning Shift</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/switch-job.svg" alt="">
+                                            <span>Full Time</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="job-list-fav m-0">
+                                    <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#" class="job-view-btn">View</a></li>
+                                </ul>
                             </div>
-                            <span class="job-post-date">20 hours ago</span>
-                            <p class="job-description">As a Data Scientist, you will be in a central position as you
-                                will be evangelizing data and our methodologies to other functional analysts and other
-                                stakeholders in the company.</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i></li>
-                                <li><i class="fal fa-address-card"></i>experience</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                <li><i class="fa fa-map-marker"></i>location</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>shift</li>
-                                <li><i class="fal fa-clock"></i>job_type</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
+
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12 xs-padding p-0 pt-2">
@@ -411,7 +519,7 @@
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap">
                             <!-- Job List Start -->
-                            <div class="job-list">
+                            <!-- <div class="job-list">
                                 <div class="company-logo col-auto py-2">
                                     <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png"
                                         alt="Company Logo">
@@ -448,6 +556,70 @@
                                         <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#" class="job-view-btn">View</a></li>
                                     </ul>
+                                </div>
+                            </div> -->
+                            <div class="job-list">
+                                <div class="company-logo col-auto py-2">
+                                    <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png"
+                                        alt="Company Logo">
+                                    <span class="company-h">Ahmad</span>
+                                </div>
+                                <div class="job-list-content col">
+                                    <div class="job-header">
+                                        <h6 class="job-title mb-0">Data Analyst</h6>
+                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
+                                    </div>
+                                    <span class="job-post-date">20 hours ago</span>
+                                    <p class="job-description">As a Data Scientist, you will be in a central position as
+                                        you
+                                        will be evangelizing data and our methodologies to other functional analysts and
+                                        other
+                                        stakeholders in the company.</p>
+                                    <div class="job-content-wrap">
+                                        <div class="job-dynamic-values">
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                                    <span>Aug 23, 2021</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/experience-job.svg" alt="">
+                                                    <span>3 Years</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/money-job.svg" alt="">
+                                                    <span>80K to 100K</span>
+                                                </li>
+                                                <li>
+                                                    <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                        alt="img">
+                                                    <span>Lahore, Pakistan</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                                    <span>Morning Shift</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/switch-job.svg" alt="">
+                                                    <span>Full Time</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="job-list-fav m-0">
+                                            <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" class="job-view-btn">View</a></li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="job-list">
@@ -459,11 +631,11 @@
                                 <div class="job-list-content col">
                                     <div class="job-header">
                                         <h6 class="job-title mb-0">Data Analyst</h6>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                                     </div>
                                     <span class="job-post-date">20 hours ago</span>
                                     <p class="job-description">As a Data Scientist, you will be in a central position as
@@ -471,22 +643,47 @@
                                         will be evangelizing data and our methodologies to other functional analysts and
                                         other
                                         stakeholders in the company.</p>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fa fa-calendar"></i></li>
-                                        <li><i class="fal fa-address-card"></i>experience</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                        <li><i class="fa fa-map-marker"></i>location</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0">
-                                        <li><i class="fal fa-laptop-house"></i>shift</li>
-                                        <li><i class="fal fa-clock"></i>job_type</li>
-                                    </ul>
-                                    <ul class="job-list-fav m-0">
-                                        <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#" class="job-view-btn">View</a></li>
-                                    </ul>
+                                    <div class="job-content-wrap">
+                                        <div class="job-dynamic-values">
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                                    <span>Aug 23, 2021</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/experience-job.svg" alt="">
+                                                    <span>3 Years</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/money-job.svg" alt="">
+                                                    <span>80K to 100K</span>
+                                                </li>
+                                                <li>
+                                                    <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                        alt="img">
+                                                    <span>Lahore, Pakistan</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                                    <span>Morning Shift</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/switch-job.svg" alt="">
+                                                    <span>Full Time</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="job-list-fav m-0">
+                                            <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" class="job-view-btn">View</a></li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="job-list">
@@ -498,11 +695,11 @@
                                 <div class="job-list-content col">
                                     <div class="job-header">
                                         <h6 class="job-title mb-0">Data Analyst</h6>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                                     </div>
                                     <span class="job-post-date">20 hours ago</span>
                                     <p class="job-description">As a Data Scientist, you will be in a central position as
@@ -510,22 +707,47 @@
                                         will be evangelizing data and our methodologies to other functional analysts and
                                         other
                                         stakeholders in the company.</p>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fa fa-calendar"></i></li>
-                                        <li><i class="fal fa-address-card"></i>experience</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                        <li><i class="fa fa-map-marker"></i>location</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0">
-                                        <li><i class="fal fa-laptop-house"></i>shift</li>
-                                        <li><i class="fal fa-clock"></i>job_type</li>
-                                    </ul>
-                                    <ul class="job-list-fav m-0">
-                                        <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#" class="job-view-btn">View</a></li>
-                                    </ul>
+                                    <div class="job-content-wrap">
+                                        <div class="job-dynamic-values">
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                                    <span>Aug 23, 2021</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/experience-job.svg" alt="">
+                                                    <span>3 Years</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/money-job.svg" alt="">
+                                                    <span>80K to 100K</span>
+                                                </li>
+                                                <li>
+                                                    <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                        alt="img">
+                                                    <span>Lahore, Pakistan</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                                    <span>Morning Shift</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/switch-job.svg" alt="">
+                                                    <span>Full Time</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="job-list-fav m-0">
+                                            <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" class="job-view-btn">View</a></li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="job-list">
@@ -537,11 +759,11 @@
                                 <div class="job-list-content col">
                                     <div class="job-header">
                                         <h6 class="job-title mb-0">Data Analyst</h6>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                                     </div>
                                     <span class="job-post-date">20 hours ago</span>
                                     <p class="job-description">As a Data Scientist, you will be in a central position as
@@ -549,22 +771,47 @@
                                         will be evangelizing data and our methodologies to other functional analysts and
                                         other
                                         stakeholders in the company.</p>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fa fa-calendar"></i></li>
-                                        <li><i class="fal fa-address-card"></i>experience</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                        <li><i class="fa fa-map-marker"></i>location</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0">
-                                        <li><i class="fal fa-laptop-house"></i>shift</li>
-                                        <li><i class="fal fa-clock"></i>job_type</li>
-                                    </ul>
-                                    <ul class="job-list-fav m-0">
-                                        <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#" class="job-view-btn">View</a></li>
-                                    </ul>
+                                    <div class="job-content-wrap">
+                                        <div class="job-dynamic-values">
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                                    <span>Aug 23, 2021</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/experience-job.svg" alt="">
+                                                    <span>3 Years</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/money-job.svg" alt="">
+                                                    <span>80K to 100K</span>
+                                                </li>
+                                                <li>
+                                                    <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                        alt="img">
+                                                    <span>Lahore, Pakistan</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                                    <span>Morning Shift</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/switch-job.svg" alt="">
+                                                    <span>Full Time</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="job-list-fav m-0">
+                                            <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" class="job-view-btn">View</a></li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="job-list">
@@ -576,11 +823,11 @@
                                 <div class="job-list-content col">
                                     <div class="job-header">
                                         <h6 class="job-title mb-0">Data Analyst</h6>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                                     </div>
                                     <span class="job-post-date">20 hours ago</span>
                                     <p class="job-description">As a Data Scientist, you will be in a central position as
@@ -588,100 +835,47 @@
                                         will be evangelizing data and our methodologies to other functional analysts and
                                         other
                                         stakeholders in the company.</p>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fa fa-calendar"></i></li>
-                                        <li><i class="fal fa-address-card"></i>experience</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                        <li><i class="fa fa-map-marker"></i>location</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0">
-                                        <li><i class="fal fa-laptop-house"></i>shift</li>
-                                        <li><i class="fal fa-clock"></i>job_type</li>
-                                    </ul>
-                                    <ul class="job-list-fav m-0">
-                                        <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#" class="job-view-btn">View</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="job-list">
-                                <div class="company-logo col-auto py-2">
-                                    <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png"
-                                        alt="Company Logo">
-                                    <span class="company-h">Ahmad</span>
-                                </div>
-                                <div class="job-list-content col">
-                                    <div class="job-header">
-                                        <h6 class="job-title mb-0">Data Analyst</h6>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    <div class="job-content-wrap">
+                                        <div class="job-dynamic-values">
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                                    <span>Aug 23, 2021</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/experience-job.svg" alt="">
+                                                    <span>3 Years</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/money-job.svg" alt="">
+                                                    <span>80K to 100K</span>
+                                                </li>
+                                                <li>
+                                                    <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                        alt="img">
+                                                    <span>Lahore, Pakistan</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                                    <span>Morning Shift</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/switch-job.svg" alt="">
+                                                    <span>Full Time</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="job-list-fav m-0">
+                                            <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" class="job-view-btn">View</a></li>
+                                        </ul>
                                     </div>
-                                    <span class="job-post-date">20 hours ago</span>
-                                    <p class="job-description">As a Data Scientist, you will be in a central position as
-                                        you
-                                        will be evangelizing data and our methodologies to other functional analysts and
-                                        other
-                                        stakeholders in the company.</p>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fa fa-calendar"></i></li>
-                                        <li><i class="fal fa-address-card"></i>experience</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                        <li><i class="fa fa-map-marker"></i>location</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0">
-                                        <li><i class="fal fa-laptop-house"></i>shift</li>
-                                        <li><i class="fal fa-clock"></i>job_type</li>
-                                    </ul>
-                                    <ul class="job-list-fav m-0">
-                                        <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#" class="job-view-btn">View</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="job-list">
-                                <div class="company-logo col-auto py-2">
-                                    <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png"
-                                        alt="Company Logo">
-                                    <span class="company-h">Ahmad</span>
-                                </div>
-                                <div class="job-list-content col">
-                                    <div class="job-header">
-                                        <h6 class="job-title mb-0">Data Analyst</h6>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </div>
-                                    <span class="job-post-date">20 hours ago</span>
-                                    <p class="job-description">As a Data Scientist, you will be in a central position as
-                                        you
-                                        will be evangelizing data and our methodologies to other functional analysts and
-                                        other
-                                        stakeholders in the company.</p>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fa fa-calendar"></i></li>
-                                        <li><i class="fal fa-address-card"></i>experience</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                        <li><i class="fa fa-map-marker"></i>location</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0">
-                                        <li><i class="fal fa-laptop-house"></i>shift</li>
-                                        <li><i class="fal fa-clock"></i>job_type</li>
-                                    </ul>
-                                    <ul class="job-list-fav m-0">
-                                        <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#" class="job-view-btn">View</a></li>
-                                    </ul>
+
                                 </div>
                             </div>
                         </div>
