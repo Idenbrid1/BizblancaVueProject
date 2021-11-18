@@ -1,10 +1,46 @@
 @media screen and (max-width:769px) {
+    .company-logo{
+        width: 100%;
+    }
+    .job-view-btn{
+        height: 30px;
+        width: 70px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+    .job-wishlist-btn{
+        height: 30px;
+        width: 30px;
+        font-size: 14px;
+        border-radius: 3px;
+    }
+    .company-logo img{
+        height: 100px;
+        width: 100px;
+    }
+    .company-h{
+        font-size: 14px;
+    }
+    .job-title{
+        font-size: 16px;
+    }
+    .job-post-date{
+        font-size: 10px;
+    }
     .job-detail-info{
         padding: 0px 0px 19px 9px;
     }
     .job-info-visual{
         height: 100px;
         width: 100px;
+    }
+    .job-description,
+    .candidate-description{
+        font-size: 12px;
+    }
+    .job-content-wrap{
+        flex-direction: column;
+        align-items: flex-start;
     }
     .job-info-img{
         height: 60px;
@@ -30,10 +66,12 @@
     }
     .job-dynamic-values>ul>li>span{
         padding-left: 3px;
+        font-size: 10px;
     }
     .job-dynamic-values>ul{
         padding-right: 9px;
-        margin-right: 9px;
+        margin-right: 18px;
+        border-right: none;
     }
     .job-apply-anker{
         padding: 10px 20px !important;
