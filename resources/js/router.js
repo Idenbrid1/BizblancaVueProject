@@ -17,6 +17,7 @@ import CandidateDetail from './components/pages/website/candidate/CandidateDetai
 import CandidateSearch from './components/pages/website/company/CandidateSearchComponent.vue';
 import CompanySearch from './components/pages/website/candidate/CompanySearchComponent.vue';
 import JobSearch from './components/pages/website/candidate/JobSearchComponent.vue';
+import JobDetail from './components/pages/website/candidate/JobDetailComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -145,6 +146,11 @@ const router = new VueRouter({
             path: '/job-search',
             name: 'JobSearch',
             component: JobSearch
+        },
+        {
+            path: '/job-detail',
+            name: 'JobDetail',
+            component: JobDetail
         },
     ]
 });

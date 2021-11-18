@@ -179,7 +179,7 @@
                                     </ul>
                                     <ul class="job-list-fav m-0">
                                         <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#" class="job-view-btn">View</a></li>
+                                        <li><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'JobDetail' }">View</router-link></li>
                                     </ul>
                                 </div>
                             </div>

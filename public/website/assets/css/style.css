@@ -6510,9 +6510,11 @@ progress {
     display: flex;
     margin: 9px 0px;
 }
+
 .company_detail_info>.info_right ul li img {
     margin: 0px 20px;
 }
+
 .info_title_label {
     display: block;
     letter-spacing: 0px;
@@ -6520,12 +6522,14 @@ progress {
     font-size: 16px;
     font-weight: 600;
 }
+
 .info_dynamic {
     display: block;
     font-size: 14px;
     color: #757575;
 }
-.company_social_icons{
+
+.company_social_icons {
     height: 30px;
     width: 30px;
     margin: 20px 5px !important;
@@ -6543,8 +6547,94 @@ progress {
     padding: 10px;
     margin: 10px;
 }
-.required_feild{
+
+.required_feild {
     color: red;
 }
 
 /* post new job */
+/* job-detail-info */
+.job-detail-info {
+    display: flex;
+    padding: 0px 0px 30px 0px;
+}
+
+.job-info-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background: #081351 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+}
+
+.job-info-title {
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.job-info-img {
+    width: 120px;
+    height: 120px;
+    background: #FFFFFF url('images/i2c.png') 0% 0% no-repeat padding-box;
+    border-radius: 75px;
+}
+
+.job-apply-ankers {
+    display: flex;
+    align-items: center;
+}
+
+.job-info-static {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1px 20px;
+}
+
+.job-title-view {
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+}
+
+.job-apply-ankers>a {
+    display: block;
+    padding: 10px 30px;
+    margin-right: 10px;
+    background: #FFDE59 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.job-apply-ankers>.job-apply-anker {
+    background: #081351 0% 0% no-repeat padding-box;
+}
+
+.job-detail-container {
+    padding: 19px;
+    border: 1px solid #707070;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.job-dynamic-values {
+    display: flex;
+}
+
+.job-dynamic-values>ul {
+    padding: 0px;
+    margin: 0px;
+    margin-right: 10px;
+    border-right: 1px solid #081351;
+}
+
+/* job-detail-info */
