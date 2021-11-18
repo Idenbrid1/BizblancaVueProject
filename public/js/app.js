@@ -8756,6 +8756,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -31647,7 +31675,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "We are looking for a highly capable Database Administrator (DBA) who is highly motivated, responsible and a detail-oriented team player. Under close supervision, provides general direction, design, maintenance, and control of databases"
+              "We are looking for a highly capable Database Administrator (DBA) who is highly motivated,\n                            responsible and a detail-oriented team player. Under close supervision, provides general\n                            direction, design, maintenance, and control of databases"
             ),
           ]),
         ]),
@@ -31658,31 +31686,31 @@ var staticRenderFns = [
           _c("ul", [
             _c("li", [
               _vm._v(
-                "- Lead role in troubleshooting and solving problems relative to current environment and architecture using a wide range of techniques and resources to detect, identify and eliminate database system problems"
+                "- Lead role in troubleshooting and solving problems relative to current environment\n                                and architecture using a wide range of techniques and resources to detect, identify\n                                and eliminate database system problems"
               ),
             ]),
             _vm._v(" "),
             _c("li", [
               _vm._v(
-                "- Build database systems of high availability and quality depending on each end user’s specialized role."
+                "- Build database systems of high availability and quality depending on each end\n                                user’s specialized role."
               ),
             ]),
             _vm._v(" "),
             _c("li", [
               _vm._v(
-                "- Documents the established procedures used to perform repetitive but complex DBA tasks."
+                "- Documents the established procedures used to perform repetitive but complex DBA\n                                tasks."
               ),
             ]),
             _vm._v(" "),
             _c("li", [
               _vm._v(
-                "- Design and implement database in accordance to end user’s information needs and views."
+                "- Design and implement database in accordance to end user’s information needs and\n                                views."
               ),
             ]),
             _vm._v(" "),
             _c("li", [
               _vm._v(
-                "- Define users and enable data distribution to the right user, in appropriate format and in a timely manner."
+                "- Define users and enable data distribution to the right user, in appropriate format\n                                and in a timely manner."
               ),
             ]),
             _vm._v(" "),
@@ -31694,7 +31722,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("li", [
               _vm._v(
-                "- Minimize database downtime and manage parameters to provide fast query responses."
+                "- Minimize database downtime and manage parameters to provide fast query responses.\n                            "
               ),
             ]),
             _vm._v(" "),
@@ -31712,13 +31740,13 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("li", [
               _vm._v(
-                "- Perform tests and evaluations regularly to ensure data security, privacy and integrity."
+                "- Perform tests and evaluations regularly to ensure data security, privacy and\n                                integrity."
               ),
             ]),
             _vm._v(" "),
             _c("li", [
               _vm._v(
-                "- Monitor database performance, implement changes and apply new patches and versions when required."
+                "- Monitor database performance, implement changes and apply new patches and versions\n                                when required."
               ),
             ]),
           ]),
@@ -31730,7 +31758,7 @@ var staticRenderFns = [
           _c("ul", [
             _c("li", [
               _vm._v(
-                "- Bachelor's degree in computer science, or related field. - At least years of experience as a database administrator."
+                "- Bachelor's degree in computer science, or related field. - At least years of\n                                experience as a database administrator."
               ),
             ]),
             _vm._v(" "),
@@ -31760,7 +31788,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("li", [
               _vm._v(
-                "- Previous experience with DBA case tools (frontend/backend) and third-party tools."
+                "- Previous experience with DBA case tools (frontend/backend) and third-party tools.\n                            "
               ),
             ]),
             _vm._v(" "),
@@ -31796,6 +31824,12 @@ var staticRenderFns = [
           ]),
         ]),
         _vm._v(" "),
+        _c("div", { staticClass: "job-info-visual" }, [
+          _c("div", { staticClass: "job-info-img" }),
+          _vm._v(" "),
+          _c("p", { staticClass: "job-info-title" }, [_vm._v("idenbrid")]),
+        ]),
+        _vm._v(" "),
         _c("div", [
           _c("h1", { staticClass: "company-detail-title" }, [
             _vm._v("Company Detail"),
@@ -31803,7 +31837,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "i2c Inc. is an experienced and trusted payments solution provider that helps card issuers and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete control of their programs in real time. With its value-added services, rewards and loyalty options, cardholder communication tools, and extensive analytics, MCP empowers clients to increase revenues, improve efficiency, reduce costs, and build a loyal cardholder base. i2c enables clients to launch new products faster, tailor programs for specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005, CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City, California, and more than 350 employees and five sales and support offices worldwide. Its customer support provides 24x7x365 service to its clients, which include companies in North America, Latin America, the Middle East, Asia Pacific, and Europe."
+              "i2c Inc. is an experienced and trusted payments solution provider that helps card issuers\n                            and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs\n                            flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete\n                            control of their programs in real time. With its value-added services, rewards and\n                            loyalty options, cardholder communication tools, and extensive analytics, MCP empowers\n                            clients to increase revenues, improve efficiency, reduce costs, and build a loyal\n                            cardholder base. i2c enables clients to launch new products faster, tailor programs for\n                            specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005,\n                            CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City,\n                            California, and more than 350 employees and five sales and support offices worldwide.\n                            Its customer support provides 24x7x365 service to its clients, which include companies\n                            in North America, Latin America, the Middle East, Asia Pacific, and Europe."
             ),
           ]),
         ]),
