@@ -22,39 +22,23 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Experience</label>
-                                        <input class="cusSelectbox" id="cusSelectbox" type="number">
+                                        <input class="cusSelectbox" v-model="record.working_experience" id="cusSelectbox" type="number">
                                     </div>
-                                    <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <label>Education</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
+                                        <select name="" class="cusSelectbox" v-model="record.education" id="cusSelectbox">
                                             <option value="Select">Please Select</option>
                                             <option value="India">India</option>
                                             <option value="Nepal">Nepal</option>
                                             <option value="Bangladesh">Bangladesh</option>
                                             <option value="Sri Lanka">Sri Lanka</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                     <div class="col-md-6">
                                         <label>City</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
-                                            <option value="Select">Please Select</option>
-                                            <option value="India">India</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                        </select>
+                                        <input class="cusSelectbox" v-model="record.city" id="cusSelectbox" type="text">
                                     </div>
-                                    <div class="col-md-6">
-                                        <label>Skills</label>
-                                        <select name="" class="cusSelectbox" id="cusSelectbox">
-                                            <option value="Select">Please Select</option>
-                                            <option value="India">India</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <label>Area</label>
                                         <select name="" class="cusSelectbox" id="cusSelectbox">
                                             <option value="Select">Area</option>
@@ -73,19 +57,33 @@
                                             <option value="Bangladesh">Bangladesh</option>
                                             <option value="Sri Lanka">Sri Lanka</option>
                                         </select>
+                                    </div> -->
+                                    <div class="col-md-6">
+                                        <label for="">Skills</label>
+                                        <multiselect 
+                                            v-model="record.skills"
+                                            placeholder="Select one"
+                                            label="name"
+                                            track-by="name"
+                                            :options="options"
+                                            :searchable="true"
+                                            :multiple="true" 
+                                            :taggable="true"
+                                            @tag="addSkill">
+                                        </multiselect>
                                     </div>
                                     <div class="col-12 conditioncheck">
-                                        <input name='gender' type="checkbox" class="keeplogin-checkbox" id="male">
+                                        <input name='gender' v-model="record.gender" value="Male" type="radio" class="keeplogin-checkbox" id="male">
                                         <label for="male">Male</label>
-                                        <input name='gender' type="checkbox" class="keeplogin-checkbox" id="female">
+                                        <input name='gender' v-model="record.gender" value="Female" type="radio" class="keeplogin-checkbox" id="female">
                                         <label for="female">Female</label>
-                                        <input name='gender' type="checkbox" class="keeplogin-checkbox"
+                                        <!-- <input name='gender' v-model="record.gender" value="All" type="radio" class="keeplogin-checkbox"
                                             id="all-genders">
-                                        <label for="all-genders">All Genders</label>
+                                        <label for="all-genders">All Genders</label> -->
                                     </div>
                                     <div class="col-12 job-condition">
-                                        <button type="submit" class="job-condition-clear-btn">Clear</button>
-                                        <button type="submit" class="job-condition-search-btn">Search</button>
+                                        <button type="submit" @click="search()" class="job-condition-search-btn">Search</button>
+                                        <button type="submit" @click="clearSearch()" class="job-condition-clear-btn">Clear</button>
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +99,8 @@
                         <form action="/">
                             <div> <label class="keyword-input-title">Keyword Search</label></div>
                             <input type="text" placeholder="* Includes All Keywords" name="search">
-                            <button type="submit" class="keyword-search-btn">Search</button>
+                            <button type="submit" @click.prevent="keywordSearch()" class="keyword-search-btn">Search</button>
+                            <button type="submit" @click.prevent="clearSearch()" class="keyword-search-btn">Clear</button>
                         </form>
                     </div>
                 </div>
@@ -111,7 +110,7 @@
                     </label>
                     <!-- Job List Toolbar Start -->
                     <div class="px-3">
-                        <div class="job-list-toolbar">
+                        <!-- <div class="job-list-toolbar">
                             <ul class="job-pagination pagination-center ">
                                 <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
                                             aria-hidden="true"></i> Previous 20</a></li>
@@ -129,55 +128,48 @@
                                     <option>Most Popular</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Job List Toolbar End -->
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap">
-                            <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)
-                            </div>
+                            <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
                             <!-- <div class="d-flex"> -->
 
                             <div class="row m-0">
-                                <div class="col-sm-6 col-md-12 col-lg-4 px-1">
+                                <div class="col-sm-6 col-md-12 col-lg-4 px-1" v-for="(item, index) in searchData.data" :key="index">
                                     <div class="candidate-single">
-                                        <!-- <div class="company-logo col-auto py-2">
-                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                                            <span class="company-h">Ahmad </span>
-                                            </div> -->
                                         <div class="candidate-list-content w-100 py-1 px-2">
                                             <div class="d-flex align-items-center">
                                                 <div class="candidate-photo"></div>
                                                 <div class="candidate-header mt-2 ml-2">
-                                                    <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                    <div class="my-1">
+                                                    <h6 class="candidate-name mb-0">{{item.full_name}}</h6>
+                                                    <!-- <div class="my-1">
                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                         <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                             <!-- <span class="job-post-date">20 hours ago</span> -->
-                                            <p class="candidate-description my-1">My name is Sameena Khan and I am
-                                                graduated from
-                                                Punjab University Lahore</p>
+                                            <p class="candidate-description my-1">{{item.bio}}</p>
                                             <ul class="candidate-list-meta m-0 w-100">
                                                 <li><i class="fas fa-venus-mars"></i>
-                                                    <div class="ml-1 hide-line-1">Female</div>
+                                                    <div class="ml-1 hide-line-1">{{item.gender}}</div>
                                                 </li>
-                                                <li class="mt-1"><i class="fas fa-graduation-cap"></i>
+                                                <!-- <li class="mt-1"><i class="fas fa-graduation-cap"></i>
                                                     <div class="ml-1 hide-line-1">BSSE</div>
-                                                </li>
+                                                </li> -->
                                                 <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                    <div class="ml-1 hide-line-1">2 Years</div>
+                                                    <div class="ml-1 hide-line-1">{{item.experience}} Years</div>
                                                 </li>
-                                                <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                    <div class="ml-1 hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
-                                                </li>
+                                                <!-- <li class="mt-1"><i class="fas fa-user-cog"></i>
+                                                    <div class="ml-1 hide-line-1">{{HTML,Bootstrap,CSS,Node JS}}</div>
+                                                </li> -->
                                                 <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                    <div class="ml-1 hide-line-1">Lahore,Pakistan</div>
+                                                    <div class="ml-1 hide-line-1">{{item.city}}</div>
                                                 </li>
 
                                             </ul>
@@ -190,158 +182,17 @@
                                                 </li>
                                             </ul>
                                         </div>
-
-
-
                                     </div>
                                 </div>
-
-                                <div class="col-lg-4 col-md-12 col-sm-6 px-1">
-                                    <div class="candidate-single">
-                                        <!-- <div class="company-logo col-auto py-2">
-               <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-               <span class="company-h">kashif </span>
-            </div> -->
-                                        <div class="candidate-list-content w-100 py-1 px-2">
-                                            <div class="d-flex align-items-center">
-                                                <div class="candidate-photo"></div>
-                                                <div class="candidate-header mt-2 ml-2">
-                                                    <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                    <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- <span class="job-post-date">20 hours ago</span> -->
-                                            <p class="candidate-description my-1">My name is Sameena Khan and I am
-                                                graduated from
-                                                Punjab University Lahore</p>
-                                            <ul class="candidate-list-meta m-0 w-100">
-                                                <li><i class="fas fa-venus-mars"></i>
-                                                    <div class="ml-1 hide-line-1">Female</div>
-                                                </li>
-                                                <li class="mt-1"><i class="fas fa-graduation-cap"></i>
-                                                    <div class="ml-1 hide-line-1">BSSE</div>
-                                                </li>
-                                                <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                    <div class="ml-1 hide-line-1">2 Years</div>
-                                                </li>
-                                                <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                    <div class="ml-1 hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
-                                                </li>
-                                                <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                    <div class="ml-1 hide-line-1">Lahore,Pakistan</div>
-                                                </li>
-
-                                            </ul>
-
-                                            <ul class="candidate-list-fav col-lg-12 m-0 my-2 px-0 ">
-                                                <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                        Profile</a></li>
-                                                <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                            class="far fa-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-
-
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-12 col-sm-6 px-1">
-                                    <div class="candidate-single">
-                                        <!-- <div class="company-logo col-auto py-2">
-               <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-               <span class="company-h">kashif </span>
-            </div> -->
-                                        <div class="candidate-list-content w-100 py-1 px-2">
-                                            <div class="d-flex align-items-center">
-                                                <div class="candidate-photo"></div>
-                                                <div class="candidate-header mt-2 ml-2">
-                                                    <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                    <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- <span class="job-post-date">20 hours ago</span> -->
-                                            <p class="candidate-description my-1">My name is Sameena Khan and I am
-                                                graduated from
-                                                Punjab University Lahore</p>
-                                            <ul class="candidate-list-meta m-0 w-100">
-                                                <li><i class="fas fa-venus-mars"></i>
-                                                    <div class="ml-1 hide-line-1">Female</div>
-                                                </li>
-                                                <li class="mt-1"><i class="fas fa-graduation-cap"></i>
-                                                    <div class="ml-1 hide-line-1">BSSE</div>
-                                                </li>
-                                                <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                    <div class="ml-1 hide-line-1">2 Years</div>
-                                                </li>
-                                                <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                    <div class="ml-1 hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
-                                                </li>
-                                                <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                    <div class="ml-1 hide-line-1">Lahore,Pakistan</div>
-                                                </li>
-
-                                            </ul>
-
-                                            <ul class="candidate-list-fav col-lg-12 m-0 my-2 px-0 ">
-                                                <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                        Profile</a></li>
-                                                <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                            class="far fa-heart"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-
-
-                                    </div>
-                                </div>
-
-
-
-
-
-
-
-
-
-
                             </div>
-
-
-
                             <!-- </div> -->
-
                         </div>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->
                 <div class="bottom-pagination">
-                    <ul class="job-pagination pagination-center ">
-                        <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                    aria-hidden="true"></i> Previous 20</a></li>
-                        <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                    aria-hidden="true"></i> Next 20</a></li>
-                    </ul>
-                    <div class="job-search-count my-3">1 to 20 Results (out of 10,000 results in total)</div>
+                    <pagination :data="searchData" @pagination-change-page="getCandidate" ></pagination>
                 </div>
                 <!-- Pagination End -->
             </div>
@@ -611,15 +462,32 @@
         </div>
     </div>
 </template>
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CompanyNavbar from '../partials/CompanyNavbar.vue';
-    import pagination from 'laravel-vue-pagination'
+    import pagination from 'laravel-vue-pagination';
+    import Multiselect from 'vue-multiselect'
     export default {
         data() {
             return {
-
+                options: [
+                    { name: 'Javascript', language: 'JavaScript' },
+                    { name: 'Adonis', language: 'Adonis' },
+                    { name: 'Rails', language: 'Ruby' },
+                    { name: 'Sinatra', language: 'Ruby' },
+                    { name: 'Laravel', language: 'PHP' },
+                    { name: 'Phoenix', language: 'Elixir' }
+                ],
+                record: {
+                    working_experience: '',
+                    city: '',
+                    gender: '',
+                    keyword: '',
+                    skills: [],
+                },
+                searchData: {},
             }
         },
         mounted() {
@@ -635,13 +503,42 @@
                 },
             });
         },
+        created(){
+            this.getCandidate()
+        },
         components: {
             WebsiteNavbar,
             CompanyNavbar,
+            Multiselect,
             pagination,
         },
         methods: {
-
+            addSkill (newTag) {
+                const tag = {
+                    name: newTag,
+                    code: newTag
+                }
+                this.options.push(tag)
+                this.record.skills.push(tag)
+            },
+            getCandidate(page=1){
+                axios.get('/get-candidates-search?page='+page)
+                .then((response) => {
+                    this.searchData = response.data
+                });
+            },
+            search() {
+                axios.post('/candidate-search', this.record)
+                .then((response) => {
+                    this.searchData = response
+                });
+            },
+            keywordSearch() {
+                axios.get('/candidate-keyword-search/'+this.record.keyword)
+                .then((response) => {
+                    this.searchData = response.data
+                });
+            },
         },
     };
 

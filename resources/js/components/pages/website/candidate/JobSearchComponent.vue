@@ -73,6 +73,22 @@
                                             <option value="Masters">Masters</option>
                                         </select>
                                     </div>
+                                    <!-- <div class="col-md-6">
+                                        <label for="">Skills</label>
+                                        <multiselect 
+                                            v-model="record.skills"
+                                            track-by="name"
+                                            label="name"
+                                            placeholder="Select one"
+                                            :options="options"
+                                            :searchable="true"
+                                            :allow-empty="false"
+                                            @tag="addSkill"
+                                            :multiple="true" 
+                                            :taggable="true">
+                                            
+                                        </multiselect>
+                                    </div> -->
                                     <div class="col-12 conditioncheck">
                                         <input name='gender' value="Male" v-model="record.gender" type="radio" class="keeplogin-checkbox" id="male">
                                         <label for="male">Male</label>
@@ -83,7 +99,7 @@
                                         <label for="all-genders">All Genders</label>
                                     </div>
                                     <div class="col-12 job-condition">
-                                        <button type="submit" class="job-condition-clear-btn">Clear</button>
+                                        <button type="submit" @click="clearSearch()" class="job-condition-clear-btn">Clear</button>
                                         <button type="submit" @click="search()" class="job-condition-search-btn">Search</button>
                                     </div>
                                 </div>
@@ -97,10 +113,11 @@
                         Keyword Search
                     </label>
                     <div class="col-md-12 search-container">
-                        <form action="/">
+                        <form>
                             <div> <label class="keyword-input-title">Keyword Search</label></div>
-                            <input type="text" placeholder="* Includes All Keywords" name="search">
-                            <button type="submit"  class="keyword-search-btn">Search</button>
+                            <input type="text" placeholder="* Includes All Keywords" name="search" v-model="record.keyword">
+                            <button type="submit" @click.prevent="keywordSearch()" class="keyword-search-btn">Search</button>
+                            <button type="submit" @click.prevent="clearSearch()" class="keyword-search-btn">Clear</button>
                         </form>
                     </div>
                 </div>
@@ -134,7 +151,7 @@
                         <div class="job-list-wrap">
                             <div class="job-list" v-if="index < searchData.length" v-for="(item, index) in jobToShow" :key="index">
                                 <div class="company-logo col-auto py-2">
-                                    <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
+                                    <img :src="'/storage/images/companies/'+searchData[index].company.logo" alt="Company Logo">
                                     <span class="company-h">{{searchData[index].company.company_name}} </span>
                                 </div>
                                 <div class="job-list-content col">
@@ -146,7 +163,7 @@
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i> -->
                                     </div>
-                                    <span class="job-post-date">20 hours ago</span>
+                                    <!-- <span class="job-post-date">{{(new Date() | moment("YYYY-MM-DD"))}}</span> -->
                                     <p class="job-description">{{searchData[index].description}}</p>
                                     <ul class="job-list-meta m-0 border-post">
                                         <li><i class="fa fa-calendar"></i>{{searchData[index].created_at | moment("YYYY-MM-DD")}}</li>
@@ -169,7 +186,7 @@
                             <!-- </div> -->
                         </div>
                     </div>
-                    <button @click="jobToShow += 3">show more reviews</button>
+                    <button class="job-view-btn text-center" @click="jobToShow += 2">load more</button>
                 </div>
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->
@@ -454,11 +471,13 @@
         </div>
     </div>
 </template>
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CandidateNavbar from '../partials/CandidateNavbar.vue';
     import pagination from 'laravel-vue-pagination'
+    import Multiselect from 'vue-multiselect'
     export default {
         data() {
             return {
@@ -470,7 +489,17 @@
                     qualification_level: '',
                     gender: '',
                     location: '',
+                    keyword: '',
+                    // skills: '',
                 },
+                // options: [
+                //     { name: 'Javascript', language: 'JavaScript' },
+                //     { name: 'Adonis', language: 'Adonis' },
+                //     { name: 'Rails', language: 'Ruby' },
+                //     { name: 'Sinatra', language: 'Ruby' },
+                //     { name: 'Laravel', language: 'PHP' },
+                //     { name: 'Phoenix', language: 'Elixir' }
+                // ],
                 searchData: [],
                 totalJobs: 0,
                 jobToShow: 2
@@ -492,6 +521,7 @@
         components: {
             WebsiteNavbar,
             CandidateNavbar,
+            Multiselect,
             pagination,
         },
         methods: {
@@ -502,6 +532,37 @@
                     this.totalJobs = this.searchData.length
                 });
             },
+            keywordSearch() {
+                axios.get('/job-keyword-search/'+this.record.keyword)
+                .then((response) => {
+                    this.searchData = response.data
+                    this.totalJobs = this.searchData.length
+                });
+            },
+            // addSkill (newTag) {
+            //     const tag = {
+            //         name: newTag,
+            //         code: newTag
+            //     }
+            //     this.options.push(tag)
+            //     this.record.skills.push(tag)
+            // },
+            clearSearch(){
+                this.record = {
+                    experience: '',
+                    salary_range: '',
+                    shift: '',
+                    job_type: '',
+                    qualification_level: '',
+                    gender: '',
+                    location: '',
+                    keyword: '',
+                    skills: '',
+                };
+                this.searchData = [],
+                this.totalJobs = 0,
+                this.jobToShow = 2
+            }
         },
     };
 

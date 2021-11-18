@@ -408,7 +408,7 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Experience<small>in years</small></label>
-                                                            <input type="text" v-model="record.experience" placeholder="Enter Experience"
+                                                            <input type="number" v-model="record.experience" placeholder="Enter Experience"
                                                                 name="experience" class="form-control" />
                                                             <small>
                                                                 <span v-if="errors.experience != null" class="text-danger">
@@ -452,7 +452,8 @@
                                                         <div class="form-group">
                                                             <label for="">Gender</label>
                                                             <select name="gender" v-model="record.gender" class="form-control">
-                                                                <option value="Male">Male</option>
+                                                                <option value="" disabled>select please</option>
+                                                                <option selected value="Male">Male</option>
                                                                 <option value="Female">Female</option>
                                                                 <option value="Other">Other</option>
                                                             </select>

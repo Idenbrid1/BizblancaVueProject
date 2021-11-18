@@ -11,8 +11,9 @@ import router from './router';
 import App from './components/pages/website/MainApp.vue';
 
 Vue.use(require('vue-moment'));
-// Vue.component('pagination', require('laravel-vue-pagination'));
+import Multiselect from 'vue-multiselect'
 
+Vue.component('multiselect', Multiselect)
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

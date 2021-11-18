@@ -135,11 +135,6 @@ import WebsiteNavbar from '../partials/navbar.vue';
                     }
                     else{
                         Swal.close()
-                        Swal.fire({
-                            icon:  'success',
-                            title: 'Signin Successfully',
-                            text:  'WellCome Back',
-                        })
                         if(response.data.user.type == 'candidate')
                         {
                             this.$router.push({ name: 'CandidateProfile' })

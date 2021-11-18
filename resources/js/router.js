@@ -14,8 +14,8 @@ import CompanyProfile from './components/pages/website/company/CompanyProfileCom
 import CompanyPostJob from './components/pages/website/company/CompanyPostJobComponent.vue';
 import CompanyDetail from './components/pages/website/company/CompanyDetailComponent.vue';
 import CandidateDetail from './components/pages/website/candidate/CandidateDetailComponent.vue';
-import CandidateSearch from './components/pages/website/candidate/CandidateSearchComponent.vue';
-import CompanySearch from './components/pages/website/company/CompanySearchComponent.vue';
+import CandidateSearch from './components/pages/website/company/CandidateSearchComponent.vue';
+import CompanySearch from './components/pages/website/candidate/CompanySearchComponent.vue';
 import JobSearch from './components/pages/website/candidate/JobSearchComponent.vue';
 
 Vue.use(VueRouter);

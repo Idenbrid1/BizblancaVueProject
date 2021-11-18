@@ -22,9 +22,9 @@ Route::get('/', function () {
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/job-search', function () {
-    return view('website/pages/job-search');
-})->name('job-search');
+// Route::get('/job-search', function () {
+//     return view('website/pages/job-search');
+// })->name('job-search');
 
 // Route::get('/', [WelcomeController::class, 'index'])->name('index');
 Route::get('/send-message', [App\Http\Controllers\Website\Candidate\HomeController::class, 'sendMessage']);
@@ -49,6 +49,10 @@ Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationCon
 Route::get('check-company-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCompanyRole']);
 Route::get('navbar-check-roles', [App\Http\Controllers\Admin\AuthenticationController::class, 'navbarCheckRole']);
 Route::post('/job-search', [App\Http\Controllers\CommonController::class, 'jobSearch']);
+Route::post('/candidate-search', [App\Http\Controllers\CommonController::class, 'candidateSearch']);
+Route::get('/job-keyword-search/{keyword}', [App\Http\Controllers\CommonController::class, 'jobKeywordSearch']);
+Route::get('/companies-keyword-search/{keyword}', [App\Http\Controllers\CommonController::class, 'companyKeywordSearch']);
+Route::get('get-candidates-search', [App\Http\Controllers\CommonController::class, 'getCandidateSearch']);
 
 Route::post('/reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordPost']);
 Route::get('/reset-password/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPassword']);
@@ -84,7 +88,7 @@ Route::get('oauth/{driver}/callback', [RegisterController::class, 'handleProvide
 
 
 
-Route::post('/search-jobs', [App\Http\Controllers\Website\Candidate\HomeController::class, 'searchJobs'])->name('home');
+Route::post('/search-jobs', [App\Http\Controllers\Website\Candidate\HomeController::class, 'searchJobs']);
 
 //samad
 Route::middleware('auth')->group(function(){
@@ -256,9 +260,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
             Route::get('/list', [App\Http\Controllers\Admin\PakagesController::class, 'index'])->name('index');
             Route::get('/create', [App\Http\Controllers\Admin\PakagesController::class, 'create'])->name('create');
             Route::post('/store', [App\Http\Controllers\Admin\PakagesController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [App\Http\Controllers\Admin\PakagesController::class, 'edit'])->name('edit');
+            Route::post('/update/{id}', [App\Http\Controllers\Admin\PakagesController::class, 'update'])->name('update');
             // Route::get('/show/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'show'])->name('show');
-            // Route::get('/edit/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'edit'])->name('edit');
-            // Route::post('/update/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'update'])->name('update');
             // Route::get('/destroy/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'destroy'])->name('destroy');
         });
     });
