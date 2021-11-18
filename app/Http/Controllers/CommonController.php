@@ -92,4 +92,9 @@ class CommonController extends Controller
     {
         return Candidate::latest()->paginate(10); 
     }
+
+    public function getCompanyDetail($id)
+    {
+        return Company::with('Jobs')->find($id);
+    }
 }

@@ -53,6 +53,7 @@ Route::post('/candidate-search', [App\Http\Controllers\CommonController::class, 
 Route::get('/job-keyword-search/{keyword}', [App\Http\Controllers\CommonController::class, 'jobKeywordSearch']);
 Route::get('/companies-keyword-search/{keyword}', [App\Http\Controllers\CommonController::class, 'companyKeywordSearch']);
 Route::get('get-candidates-search', [App\Http\Controllers\CommonController::class, 'getCandidateSearch']);
+Route::get('/get-single-company-detail/{id}', [App\Http\Controllers\CommonController::class, 'getCompanyDetail']);
 
 Route::post('/reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordPost']);
 Route::get('/reset-password/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPassword']);

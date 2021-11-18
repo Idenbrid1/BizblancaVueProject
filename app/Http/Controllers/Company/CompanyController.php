@@ -52,8 +52,7 @@ class CompanyController extends Controller
     }
 
     public function socialmediaupdate(Request $request)
-    {
-        // return $request;
+    {     
         $user = Auth::user();
         $company = Company::where('user_id', $user->id)->first();
         $company->whatsapp = $request->whatsapp;

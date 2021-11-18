@@ -31,4 +31,9 @@ class Company extends Model
         'github',
         'user_id',
     ];
+
+    public function Jobs()
+    {
+        return $this->hasMany(JobPost::class, 'company_id','id') ;
+    }
 }

@@ -103,7 +103,7 @@ const router = new VueRouter({
             component: CandidateDetail
         },
         {
-            path: '/company-detail',
+            path: '/company-detail:id',
             name: 'CompanyDetail',
             component: CompanyDetail
         },
