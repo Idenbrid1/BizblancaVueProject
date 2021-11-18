@@ -38396,7 +38396,7 @@ var render = function () {
                                                 staticClass: "form-control",
                                                 attrs: {
                                                   type: "email",
-                                                  placeholder: "Enter Phone",
+                                                  placeholder: "Enter Email",
                                                   id: "email",
                                                   name: "email",
                                                   disabled: "",
@@ -38451,7 +38451,7 @@ var render = function () {
                                                 staticClass: "form-control",
                                                 attrs: {
                                                   type: "url",
-                                                  placeholder: "Enter Phone",
+                                                  placeholder: "Enter Weblink",
                                                   id: "web_link",
                                                   name: "web_link",
                                                 },
