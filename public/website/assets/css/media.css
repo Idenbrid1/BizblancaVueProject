@@ -35,6 +35,9 @@
         padding-right: 9px;
         margin-right: 9px;
     }
+    .job-apply-anker{
+        padding: 10px 20px !important;
+    }
     .PostJobContainer{
         padding:80px 0px;
     }
