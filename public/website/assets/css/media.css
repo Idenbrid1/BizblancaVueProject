@@ -1,4 +1,43 @@
 @media screen and (max-width:769px) {
+    .job-detail-info{
+        padding: 0px 0px 19px 9px;
+    }
+    .job-info-visual{
+        height: 100px;
+        width: 100px;
+    }
+    .job-info-img{
+        height: 60px;
+        width: 60px;
+    }
+    .job-info-title{
+        padding-top: 3px;
+        font-size: 13px;
+    }
+    .job-title-view{
+        font-size: 17px;
+    }
+    .job-info-static{
+        padding: 0px 11px;
+    }
+    .job-apply-ankers>a{
+        font-size: 12px;
+        margin-right: 10px;
+        padding: 10px 8px;
+    }
+    .job-detail-container{
+        padding: 10px;
+    }
+    .job-dynamic-values>ul>li>span{
+        padding-left: 3px;
+    }
+    .job-dynamic-values>ul{
+        padding-right: 9px;
+        margin-right: 9px;
+    }
+    .job-apply-anker{
+        padding: 10px 20px !important;
+    }
     .PostJobContainer{
         padding:80px 0px;
     }
@@ -283,6 +322,11 @@
     .heading-ankers > li > h6 {
         margin: 0px;
         width: auto;
+    }
+}
+@media screen and (max-width:320px) {
+    .job-dynamic-values>ul>li>span{
+        font-size: 10px;
     }
 }
 @media screen and (max-width:1466px) {
