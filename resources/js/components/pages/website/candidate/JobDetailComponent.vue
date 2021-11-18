@@ -142,6 +142,7 @@
                         This section is other jobs section offered by other companies of same position you are looking
                         for and may or may not better option then this job post and also you can check these jobs.
                     </p>
+                    <a class="more-detail-anker" href=""></a>
                 </div>
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">

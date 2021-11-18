@@ -8790,6 +8790,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -31900,6 +31901,8 @@ var staticRenderFns = [
           "\n                    This section is other jobs section offered by other companies of same position you are looking\n                    for and may or may not better option then this job post and also you can check these jobs.\n                "
         ),
       ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "more-detail-anker", attrs: { href: "" } }),
     ])
   },
   function () {
