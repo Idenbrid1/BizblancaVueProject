@@ -113,6 +113,12 @@
                             <div class="job-info-img"></div>
                             <p class="job-info-title">idenbrid</p>
                         </div>
+                        <div class="job-social-icons">
+                            <a href=""><img src="/website/assets/images/whatsapp_icon.png" alt="img"></a>
+                            <a href=""><img src="/website/assets/images/facebook_icon.png" alt="img"></a>
+                            <a href=""><img src="/website/assets/images/linkedin_icon.png" alt="img"></a>
+                            <a href=""><img src="/website/assets/images/github-logo_icon.png" alt="img"></a>
+                        </div>
                         <div>
                             <h1 class="company-detail-title">Company Detail</h1>
                             <p>i2c Inc. is an experienced and trusted payments solution provider that helps card issuers

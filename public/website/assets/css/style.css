@@ -6616,7 +6616,14 @@ progress {
     display: flex;
     align-items: center;
 }
-
+.job-social-icons{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+.job-social-icons>a{
+    margin-right: 15px;
+}
 .job-info-static {
     display: flex;
     flex-direction: column;

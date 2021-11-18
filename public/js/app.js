@@ -8784,6 +8784,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -31828,6 +31834,44 @@ var staticRenderFns = [
           _c("div", { staticClass: "job-info-img" }),
           _vm._v(" "),
           _c("p", { staticClass: "job-info-title" }, [_vm._v("idenbrid")]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "job-social-icons" }, [
+          _c("a", { attrs: { href: "" } }, [
+            _c("img", {
+              attrs: {
+                src: "/website/assets/images/whatsapp_icon.png",
+                alt: "img",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "" } }, [
+            _c("img", {
+              attrs: {
+                src: "/website/assets/images/facebook_icon.png",
+                alt: "img",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "" } }, [
+            _c("img", {
+              attrs: {
+                src: "/website/assets/images/linkedin_icon.png",
+                alt: "img",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "" } }, [
+            _c("img", {
+              attrs: {
+                src: "/website/assets/images/github-logo_icon.png",
+                alt: "img",
+              },
+            }),
+          ]),
         ]),
         _vm._v(" "),
         _c("div", [
