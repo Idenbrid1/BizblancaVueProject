@@ -84,7 +84,7 @@
                             <td class="center">{{$pakage->is_personal_show}}</td>
 
                             <td>
-                                <a href="{{ route('admin.news.edit', $pakage->id) }}">
+                                <a href="{{ route('admin.pakages.edit', $pakage->id) }}">
                                     <small class="label label-primary"><i class="fa"></i>Edit</small>
                                 </a>
                                 <!-- <a onclick="DeleteNews({{ $pakage->id }})">

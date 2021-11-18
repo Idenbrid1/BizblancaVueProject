@@ -410,8 +410,8 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="experience"><span class="required_feild">*</span> Experience<small>in years</small></label>
-                                                            <input type="number" id="experience" v-model="record.experience" placeholder="Enter Experience"
+                                                            <label for="">Experience<small> in years</small></label>
+                                                            <input type="number" v-model="record.experience" placeholder="Enter Experience"
                                                                 name="experience" class="form-control" />
                                                             <small>
                                                                 <span v-if="errors.experience != null" class="text-danger">
@@ -454,9 +454,10 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="gender"><span class="required_feild">*</span> Gender</label>
-                                                            <select name="gender" id="gender" v-model="record.gender" class="form-control">
-                                                                <option value="Male">Male</option>
+                                                            <label for="">Gender</label>
+                                                            <select name="gender" v-model="record.gender" class="form-control">
+                                                                <option value="" disabled>select please</option>
+                                                                <option selected value="Male">Male</option>
                                                                 <option value="Female">Female</option>
                                                                 <option value="Other">Other</option>
                                                             </select>

@@ -19,9 +19,9 @@
                         <router-link :to="{ name: 'JobSearch' }" class="secondaymenu" id="secondary-anker-3">Job Search</router-link><span
                             class="seprate-line"></span>
                     </li>
-                    <!-- <li>
-                        <router-link :to="{ name: 'CompanyPostJob' }" class="secondaymenu" id="secondary-anker-4">Companies Search</router-link>
-                    </li> -->
+                    <li>
+                        <router-link :to="{ name: 'CompanySearch' }" class="secondaymenu" id="secondary-anker-4">Companies Search</router-link>
+                    </li>
                 </ul>
             </div>
         </header>

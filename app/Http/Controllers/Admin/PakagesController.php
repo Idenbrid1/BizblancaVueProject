@@ -56,4 +56,32 @@ class PakagesController extends Controller
             return redirect()->route('admin.login');
         }
     }
+
+    public function edit($id)
+    {
+        $pakage = Pakage::find($id);
+
+        $view = View::make('adminpanel/pages/pakage_edit', compact('pakage'));
+        $view->nest('sidebar','adminpanel/partials/sidebar');
+        $view->nest('header','adminpanel/partials/header');
+        return $view;
+    }
+
+    public function update(Request $request, $id)
+    {
+        $pakage = Pakage::find($id);
+
+        $inputs = $request->all();
+        if($request->hasfile('image'))
+        {
+            $image = $request->image;
+            $name=time() . '_'. $request->name . '.'. $image->getClientOriginalExtension();
+            $image->move(public_path().'/storage/images/pakage/', $name);
+            $inputs['image'] = $name;
+        }
+
+        $inputs['updated_by'] = Auth::id();
+        $pakage->update($inputs);
+        return redirect()->route('admin.pakages.index');
+    }
 }
