@@ -10543,6 +10543,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -35143,13 +35148,15 @@ var render = function () {
                                   _vm._m(4),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "form-group" }, [
-                                    _c("label", { attrs: { for: "bannar" } }, [
-                                      _vm._v("Bannar"),
-                                    ]),
+                                    _vm._m(5),
                                     _vm._v(" "),
                                     _c("input", {
                                       ref: "bannar",
                                       staticClass: "form-control",
+                                      staticStyle: {
+                                        padding: "4px !important",
+                                        height: "40px",
+                                      },
                                       attrs: {
                                         name: "bannar",
                                         id: "bannar",
@@ -35184,11 +35191,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Job Title")]
-                                              ),
+                                              _vm._m(6),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -35203,6 +35206,7 @@ var render = function () {
                                                 staticClass: "form-control",
                                                 attrs: {
                                                   type: "text",
+                                                  id: "job-title",
                                                   name: "job_title",
                                                   placeholder:
                                                     "Enter Job Title",
@@ -35260,11 +35264,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Job Designation")]
-                                              ),
+                                              _vm._m(7),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -35281,6 +35281,7 @@ var render = function () {
                                                 staticClass: "form-control",
                                                 attrs: {
                                                   type: "text",
+                                                  id: "job_designation",
                                                   name: "job_designation",
                                                   placeholder:
                                                     "Enter Job Designation",
@@ -35340,11 +35341,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Salary Type")]
-                                              ),
+                                              _vm._m(8),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -35362,6 +35359,7 @@ var render = function () {
                                                   staticClass: "form-control",
                                                   attrs: {
                                                     name: "salary_type",
+                                                    id: "salary_type",
                                                   },
                                                   on: {
                                                     change: function ($event) {
@@ -35392,6 +35390,19 @@ var render = function () {
                                                   },
                                                 },
                                                 [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Please Select",
+                                                        default: "true",
+                                                        selected: "true",
+                                                        disabled: "disabled",
+                                                      },
+                                                    },
+                                                    [_vm._v("Please Select")]
+                                                  ),
+                                                  _vm._v(" "),
                                                   _c(
                                                     "option",
                                                     {
@@ -35468,11 +35479,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Salary Range")]
-                                              ),
+                                              _vm._m(9),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -35490,6 +35497,7 @@ var render = function () {
                                                   staticClass: "form-control",
                                                   attrs: {
                                                     name: "salary_range",
+                                                    id: "salary_range",
                                                   },
                                                   on: {
                                                     change: function ($event) {
@@ -35520,6 +35528,18 @@ var render = function () {
                                                   },
                                                 },
                                                 [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Please Select",
+                                                        selected: "",
+                                                        disabled: "",
+                                                      },
+                                                    },
+                                                    [_vm._v("Please Select")]
+                                                  ),
+                                                  _vm._v(" "),
                                                   _c(
                                                     "option",
                                                     {
@@ -35656,11 +35676,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Shift")]
-                                              ),
+                                              _vm._m(10),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -35675,7 +35691,10 @@ var render = function () {
                                                     },
                                                   ],
                                                   staticClass: "form-control",
-                                                  attrs: { name: "shift" },
+                                                  attrs: {
+                                                    name: "shift",
+                                                    id: "shift",
+                                                  },
                                                   on: {
                                                     change: function ($event) {
                                                       var $$selectedVal =
@@ -35705,6 +35724,18 @@ var render = function () {
                                                   },
                                                 },
                                                 [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Please Select",
+                                                        selected: "",
+                                                        disabled: "",
+                                                      },
+                                                    },
+                                                    [_vm._v("Please Select")]
+                                                  ),
+                                                  _vm._v(" "),
                                                   _c(
                                                     "option",
                                                     {
@@ -35779,7 +35810,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(5),
+                                              _vm._m(11),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -35852,11 +35883,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Location")]
-                                              ),
+                                              _vm._m(12),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -35871,6 +35898,7 @@ var render = function () {
                                                 staticClass: "form-control",
                                                 attrs: {
                                                   type: "text",
+                                                  id: "location",
                                                   placeholder: "Enter Location",
                                                   name: "location",
                                                 },
@@ -35927,11 +35955,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Job Type")]
-                                              ),
+                                              _vm._m(13),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -35947,7 +35971,10 @@ var render = function () {
                                                     },
                                                   ],
                                                   staticClass: "form-control",
-                                                  attrs: { name: "job_type" },
+                                                  attrs: {
+                                                    name: "job_type",
+                                                    id: "job_type",
+                                                  },
                                                   on: {
                                                     change: function ($event) {
                                                       var $$selectedVal =
@@ -35977,6 +36004,18 @@ var render = function () {
                                                   },
                                                 },
                                                 [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Please Select",
+                                                        selected: "",
+                                                        disabled: "",
+                                                      },
+                                                    },
+                                                    [_vm._v("Please Select")]
+                                                  ),
+                                                  _vm._v(" "),
                                                   _c(
                                                     "option",
                                                     {
@@ -36198,11 +36237,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Total Positions")]
-                                              ),
+                                              _vm._m(14),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -36219,6 +36254,7 @@ var render = function () {
                                                 staticClass: "form-control",
                                                 attrs: {
                                                   type: "number",
+                                                  id: "total_positions",
                                                   placeholder:
                                                     "Total Positions",
                                                   name: "total_positions",
@@ -36275,11 +36311,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Job Description")]
-                                            ),
+                                            _vm._m(15),
                                             _vm._v(" "),
                                             _c("textarea", {
                                               directives: [
@@ -36298,6 +36330,8 @@ var render = function () {
                                                 placeholder:
                                                   "Enter Job Description",
                                                 name: "job_description",
+                                                id: "job_description",
+                                                maxlength: "255",
                                               },
                                               domProps: {
                                                 value:
@@ -36347,11 +36381,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Job Responsibilities")]
-                                            ),
+                                            _vm._m(16),
                                             _vm._v(" "),
                                             _c("textarea", {
                                               directives: [
@@ -36368,9 +36398,11 @@ var render = function () {
                                               staticClass: "form-control",
                                               staticStyle: { height: "100px" },
                                               attrs: {
+                                                maxlength: "255",
                                                 placeholder:
                                                   "Enter Job Description",
                                                 name: "job_responsibilities",
+                                                id: "job_responsibilities",
                                               },
                                               domProps: {
                                                 value:
@@ -36422,15 +36454,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [
-                                                _vm._v(
-                                                  "Qualifications &\n                                                            Technicalities"
-                                                ),
-                                              ]
-                                            ),
+                                            _vm._m(17),
                                             _vm._v(" "),
                                             _c(
                                               "select",
@@ -36448,6 +36472,7 @@ var render = function () {
                                                 ],
                                                 staticClass: "form-control",
                                                 attrs: {
+                                                  id: "qualification_level",
                                                   name: "qualification_level",
                                                 },
                                                 on: {
@@ -36547,11 +36572,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _c(
-                                              "label",
-                                              { attrs: { for: "" } },
-                                              [_vm._v("Benefits")]
-                                            ),
+                                            _vm._m(18),
                                             _vm._v(" "),
                                             _c("textarea", {
                                               directives: [
@@ -36565,7 +36586,9 @@ var render = function () {
                                               staticClass: "form-control",
                                               staticStyle: { height: "100px" },
                                               attrs: {
+                                                maxlength: "255",
                                                 placeholder: "Enter Benefits",
+                                                id: "benefits",
                                                 name: "benefits",
                                               },
                                               domProps: {
@@ -37249,9 +37272,128 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "bannar" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Banner"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "job-title" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Job Title"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "job_designation" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Job Designation"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "salary_type" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Salary Type"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "salary_range" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Salary Range"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "shift" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Shift"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("label", { attrs: { for: "" } }, [
       _vm._v("Experience"),
-      _c("small", [_vm._v("in years")]),
+      _c("small", [_vm._v(" in years")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "location" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Location"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "job_type" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Job Type"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "total_positions" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Total Positions"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "job_description" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Job Description"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "job_responsibilities" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Job Responsibilities"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "qualification_level" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(
+        " Qualifications &\n                                                            Technicalities"
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "benefits" } }, [
+      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
+      _vm._v(" Benefits"),
     ])
   },
 ]
@@ -38050,7 +38192,11 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                {
+                                                  attrs: {
+                                                    for: "no_of_employees",
+                                                  },
+                                                },
                                                 [_vm._v("No of Employees")]
                                               ),
                                               _vm._v(" "),
@@ -38068,7 +38214,8 @@ var render = function () {
                                                 ],
                                                 staticClass: "form-control",
                                                 attrs: {
-                                                  type: "text",
+                                                  type: "number",
+                                                  id: "no_of_employees",
                                                   name: "no_of_employees",
                                                 },
                                                 domProps: {
@@ -38105,7 +38252,11 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                {
+                                                  attrs: {
+                                                    for: "establish_at",
+                                                  },
+                                                },
                                                 [_vm._v("Founded")]
                                               ),
                                               _vm._v(" "),
@@ -38124,6 +38275,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "date",
                                                   placeholder: "Enter Founded",
+                                                  id: "establish_at",
                                                   name: "establish_at",
                                                 },
                                                 domProps: {
@@ -38160,7 +38312,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "ceo" } },
                                                 [_vm._v("CEO")]
                                               ),
                                               _vm._v(" "),
@@ -38177,6 +38329,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "text",
                                                   placeholder: "Enter CEO",
+                                                  id: "ceo",
                                                   name: "ceo",
                                                 },
                                                 domProps: {
@@ -38212,7 +38365,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "industry" } },
                                                 [_vm._v("Industry")]
                                               ),
                                               _vm._v(" "),
@@ -38230,6 +38383,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "text",
                                                   placeholder: "Enter Industry",
+                                                  id: "industry",
                                                   name: "industry",
                                                 },
                                                 domProps: {
@@ -38265,7 +38419,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "city" } },
                                                 [_vm._v("City")]
                                               ),
                                               _vm._v(" "),
@@ -38282,6 +38436,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "text",
                                                   placeholder: "Enter City",
+                                                  id: "city",
                                                   name: "city",
                                                 },
                                                 domProps: {
@@ -38317,7 +38472,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "address" } },
                                                 [_vm._v("Address")]
                                               ),
                                               _vm._v(" "),
@@ -38370,7 +38525,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "phone" } },
                                                 [_vm._v("Phone")]
                                               ),
                                               _vm._v(" "),
@@ -38387,6 +38542,7 @@ var render = function () {
                                                 attrs: {
                                                   type: "number",
                                                   placeholder: "Enter Phone",
+                                                  id: "phone",
                                                   name: "phone",
                                                 },
                                                 domProps: {
@@ -38422,7 +38578,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "email" } },
                                                 [_vm._v("Email")]
                                               ),
                                               _vm._v(" "),
@@ -38438,7 +38594,8 @@ var render = function () {
                                                 staticClass: "form-control",
                                                 attrs: {
                                                   type: "email",
-                                                  placeholder: "Enter Phone",
+                                                  placeholder: "Enter Email",
+                                                  id: "email",
                                                   name: "email",
                                                   disabled: "",
                                                 },
@@ -38475,7 +38632,7 @@ var render = function () {
                                             [
                                               _c(
                                                 "label",
-                                                { attrs: { for: "" } },
+                                                { attrs: { for: "web_link" } },
                                                 [_vm._v("Weblink")]
                                               ),
                                               _vm._v(" "),
@@ -38491,8 +38648,9 @@ var render = function () {
                                                 ],
                                                 staticClass: "form-control",
                                                 attrs: {
-                                                  type: "text",
-                                                  placeholder: "Enter Phone",
+                                                  type: "url",
+                                                  placeholder: "Enter Weblink",
+                                                  id: "web_link",
                                                   name: "web_link",
                                                 },
                                                 domProps: {
@@ -38525,7 +38683,7 @@ var render = function () {
                                           [
                                             _c(
                                               "label",
-                                              { attrs: { for: "" } },
+                                              { attrs: { for: "description" } },
                                               [_vm._v("Description")]
                                             ),
                                             _vm._v(" "),
@@ -38545,6 +38703,8 @@ var render = function () {
                                               attrs: {
                                                 placeholder:
                                                   "Enter Description",
+                                                id: "description",
+                                                maxlength: "255",
                                                 name: "description",
                                               },
                                               domProps: {
@@ -38660,9 +38820,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Whatsapp"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "whatsapp_link" } },
+                                          [_vm._v("Whatsapp")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38675,7 +38837,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "whatsapp_link",
                                             name: "whatsapp",
                                             placeholder: "Enter Whatsapp",
                                           },
@@ -38704,9 +38867,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Facebook"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "facebook_link" } },
+                                          [_vm._v("Facebook")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38719,7 +38884,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "facebook_link",
                                             name: "facebook",
                                             placeholder: "Paste Facebook Link",
                                           },
@@ -38748,9 +38914,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Linkedin"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "linkedin_link" } },
+                                          [_vm._v("Linkedin")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38763,7 +38931,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "linkedin_link",
                                             placeholder: "Paste LinkedIn Link",
                                             name: "linkedin",
                                           },
@@ -38792,9 +38961,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Twitter"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "twitter_link" } },
+                                          [_vm._v("Twitter")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38807,7 +38978,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "twitter_link",
                                             placeholder: "Paste Twitter Link",
                                             name: "twitter",
                                           },
@@ -38836,9 +39008,11 @@ var render = function () {
                                     { staticClass: "col-12 col-md-6" },
                                     [
                                       _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Github"),
-                                        ]),
+                                        _c(
+                                          "label",
+                                          { attrs: { for: "github_link" } },
+                                          [_vm._v("Github")]
+                                        ),
                                         _vm._v(" "),
                                         _c("input", {
                                           directives: [
@@ -38851,7 +39025,8 @@ var render = function () {
                                           ],
                                           staticClass: "form-control",
                                           attrs: {
-                                            type: "text",
+                                            type: "url",
+                                            id: "github_link",
                                             placeholder: "Paste GitHub Link",
                                             name: "github",
                                           },
@@ -39342,11 +39517,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 col-md-6" }, [
       _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "" } }, [_vm._v("Logo")]),
+        _c("label", { attrs: { for: "companyLogo" } }, [_vm._v("Logo")]),
         _vm._v(" "),
         _c("input", {
           staticClass: "form-control",
-          attrs: { type: "file", name: "companyLogo" },
+          attrs: { type: "file", id: "companyLogo", name: "companyLogo" },
         }),
       ]),
     ])
@@ -39367,7 +39542,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 col-md-6" }, [
       _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "" } }, [
+        _c("label", { attrs: { for: "companyGallery" } }, [
           _vm._v("Company Pics "),
           _c("small", [_vm._v("(Max upload4)")]),
         ]),
@@ -39390,11 +39565,16 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12" }, [
       _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "" } }, [_vm._v("Video")]),
+        _c("label", { attrs: { for: "companyVideo" } }, [_vm._v("Video")]),
         _vm._v(" "),
         _c("input", {
           staticClass: "form-control",
-          attrs: { type: "file", value: "", name: "companyVideo" },
+          attrs: {
+            type: "file",
+            value: "",
+            id: "companyVideo",
+            name: "companyVideo",
+          },
         }),
       ]),
     ])
@@ -40104,7 +40284,7 @@ var render = function () {
             ? _c(
                 "router-link",
                 {
-                  staticClass: "company-mbl-btn",
+                  staticClass: "company-mbl-btn activeCompany",
                   attrs: {
                     title: "company",
                     "data-toggle": "collapse",
@@ -40119,7 +40299,7 @@ var render = function () {
             : _c(
                 "router-link",
                 {
-                  staticClass: "company-mbl-btn activeCompany",
+                  staticClass: "company-mbl-btn ",
                   attrs: {
                     title: "company",
                     "data-toggle": "collapse",
@@ -40136,7 +40316,7 @@ var render = function () {
             ? _c(
                 "router-link",
                 {
-                  staticClass: "company-mbl-btn",
+                  staticClass: "company-mbl-btn activeCandidate",
                   attrs: {
                     title: "candidate",
                     "data-toggle": "collapse",
@@ -40151,7 +40331,7 @@ var render = function () {
             : _c(
                 "router-link",
                 {
-                  staticClass: "company-mbl-btn activeCandidate",
+                  staticClass: "company-mbl-btn",
                   attrs: {
                     title: "candidate",
                     "data-toggle": "collapse",

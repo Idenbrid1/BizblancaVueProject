@@ -316,8 +316,8 @@
                                                 <h4 class="m-0 modelTitleText">Add more Jobs</h4>
                                             </div>
                                             <div class="form-group">
-                                                <label for="bannar">Bannar</label>
-                                                <input name="bannar" id="bannar" ref="bannar" class="form-control" type="file" />
+                                                <label for="bannar"><span class="required_feild">*</span> Banner</label>
+                                                <input class="form-control" style="padding:4px !important;height:40px;" name="bannar" id="bannar" ref="bannar" type="file" />
                                                 <small>
                                                     <span v-if="errors.bannar != null" class="text-danger">
                                                         {{errors.bannar[0]}}
@@ -328,8 +328,8 @@
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="">Job Title</label>
-                                                            <input type="text" name="job_title" v-model="record.job_title"
+                                                            <label for="job-title"><span class="required_feild">*</span> Job Title</label>
+                                                            <input type="text" id="job-title" name="job_title" v-model="record.job_title"
                                                                 placeholder="Enter Job Title" class="form-control" />
                                                             <small>
                                                                 <span v-if="errors.job_title != null" class="text-danger" >
@@ -340,8 +340,8 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="">Job Designation</label>
-                                                            <input type="text" name="job_designation" v-model="record.job_designation"
+                                                            <label for="job_designation"><span class="required_feild">*</span> Job Designation</label>
+                                                            <input type="text" id="job_designation" name="job_designation" v-model="record.job_designation"
                                                                 placeholder="Enter Job Designation"
                                                                 class="form-control" />
                                                             <small>
@@ -353,8 +353,9 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="">Salary Type</label>
-                                                            <select name="salary_type" v-model="record.salary_type" class="form-control">
+                                                            <label for="salary_type"><span class="required_feild">*</span> Salary Type</label>
+                                                            <select name="salary_type" id="salary_type" v-model="record.salary_type" class="form-control">
+                                                                <option value="Please Select" default="true" selected="true" disabled="disabled">Please Select</option>
                                                                 <option value="Yearly">Yearly</option>
                                                                 <option value="Monthly">Monthly</option>
                                                                 <option value="Weekly">Weekly</option>
@@ -369,8 +370,9 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="">Salary Range</label>
-                                                            <select name="salary_range" v-model="record.salary_range" class="form-control">
+                                                            <label for="salary_range"><span class="required_feild">*</span> Salary Range</label>
+                                                            <select name="salary_range" id="salary_range" v-model="record.salary_range" class="form-control">
+                                                                <option value="Please Select" selected disabled>Please Select</option>
                                                                 <option value="10000-20000">10000 - 20000 </option>
                                                                 <option value="20000-30000">20000 - 30000</option>
                                                                 <option value="30000-40000">30000 - 40000</option>
@@ -391,8 +393,9 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="">Shift</label>
-                                                            <select name="shift" v-model="record.shift" class="form-control">
+                                                            <label for="shift"><span class="required_feild">*</span> Shift</label>
+                                                            <select name="shift" id="shift" v-model="record.shift" class="form-control">
+                                                                <option value="Please Select" selected disabled>Please Select</option>
                                                                 <option value="Night">Night</option>
                                                                 <option value="Morning">Morning</option>
                                                                 <option value="Afternoon">Afternoon</option>
@@ -407,7 +410,7 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="">Experience<small>in years</small></label>
+                                                            <label for="">Experience<small> in years</small></label>
                                                             <input type="number" v-model="record.experience" placeholder="Enter Experience"
                                                                 name="experience" class="form-control" />
                                                             <small>
@@ -420,8 +423,8 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="">Location</label>
-                                                            <input type="text" placeholder="Enter Location" v-model="record.location"
+                                                            <label for="location"><span class="required_feild">*</span> Location</label>
+                                                            <input type="text" id="location" placeholder="Enter Location" v-model="record.location"
                                                                 name="location" class="form-control" />
                                                             <small>
                                                                 <span v-if="errors.location != null" class="text-danger">
@@ -432,8 +435,9 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="">Job Type</label>
-                                                            <select name="job_type" v-model="record.job_type" class="form-control">
+                                                            <label for="job_type"><span class="required_feild">*</span> Job Type</label>
+                                                            <select name="job_type" id="job_type" v-model="record.job_type" class="form-control">
+                                                                <option value="Please Select" selected disabled>Please Select</option>
                                                                 <option value="Full Time">Full Time</option>
                                                                 <option value="Part Time">Part Time</option>
                                                                 <option value="Internship">Internship</option>
@@ -466,8 +470,8 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="">Total Positions</label>
-                                                                <input type="number" placeholder="Total Positions" v-model="record.total_positions"
+                                                            <label for="total_positions"><span class="required_feild">*</span> Total Positions</label>
+                                                                <input type="number" id="total_positions" placeholder="Total Positions" v-model="record.total_positions"
                                                                     name="total_positions" class="form-control" />
                                                             <small>
                                                                 <span v-if="errors.total_positions != null" class="text-danger">
@@ -478,10 +482,10 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="">Job Description</label> 
+                                                            <label for="job_description"><span class="required_feild">*</span> Job Description</label> 
                                                             <textarea style="height: 100px;" v-model="record.job_description"
                                                                 placeholder="Enter Job Description"
-                                                                name="job_description" class="form-control"></textarea>
+                                                                name="job_description" id="job_description" maxlength="255" class="form-control"></textarea>
                                                             <small>
                                                                 <span v-if="errors.job_description != null" class="text-danger">
                                                                     {{errors.job_description[0]}}
@@ -491,10 +495,11 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="">Job Responsibilities</label>
-                                                            <textarea style="height: 100px;" v-model="record.job_responsibilities"
+                                                            <label for="job_responsibilities"><span class="required_feild">*</span> Job Responsibilities</label>
+                                                            <textarea style="height: 100px;" maxlength="255" v-model="record.job_responsibilities"
                                                                 placeholder="Enter Job Description"
                                                                 name="job_responsibilities"
+                                                                id="job_responsibilities"
                                                                 class="form-control"></textarea>
                                                             <small>
                                                                 <span v-if="errors.job_responsibilities != null" class="text-danger">
@@ -505,9 +510,9 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="">Qualifications &
+                                                            <label for="qualification_level"><span class="required_feild">*</span> Qualifications &
                                                                 Technicalities</label>
-                                                            <select name="qualification_level" v-model="record.qualification_level" class="form-control">
+                                                            <select id="qualification_level" name="qualification_level" v-model="record.qualification_level" class="form-control">
                                                                 <option value="Metric">Metric</option>
                                                                 <option value="Intermediate">Intermediate</option>
                                                                 <option value="Graduation">Graduation</option>
@@ -522,9 +527,9 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="">Benefits</label>
-                                                            <textarea style="height: 100px;" v-model="record.benefits"
-                                                                placeholder="Enter Benefits" name="benefits"
+                                                            <label for="benefits"><span class="required_feild">*</span> Benefits</label>
+                                                            <textarea style="height: 100px;" maxlength="255" v-model="record.benefits"
+                                                                placeholder="Enter Benefits" id="benefits" name="benefits"
                                                                 class="form-control"></textarea>
                                                             <small>
                                                                 <span v-if="errors.benefits != null" class="text-danger">
