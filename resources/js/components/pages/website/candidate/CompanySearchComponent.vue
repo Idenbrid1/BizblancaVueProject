@@ -52,7 +52,7 @@
                             <div class="job-header">
                                 <h6 class="job-title mb-0">{{searchData[index].company_name}}</h6>
                             </div>
-                            <!-- <span class="job-post-date">20 hours ago</span> -->
+                            <span class="job-post-date">20 hours ago</span>
                             <p class="job-description">{{searchData[index].description}}</p>
                             <ul class="job-list-meta m-0 border-post">
                                 <li><i class="fa fa-calendar"></i>{{searchData[index].created_at | moment("YYYY-MM-DD")}}</li>

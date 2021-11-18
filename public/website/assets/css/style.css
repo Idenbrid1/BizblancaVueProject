@@ -2164,6 +2164,7 @@
 .candidate-list-fav {
     display: inline-flex;
     float: right;
+    padding: 0px;
 }
 
 .job-list-fav>li {
