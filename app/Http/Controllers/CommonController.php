@@ -97,4 +97,18 @@ class CommonController extends Controller
     {
         return Company::with('Jobs')->find($id);
     }
+    
+    public function getJobDetail($id)
+    {
+        $job = JobPost::with('Company')->find($id);
+        $retatedCompanyJob = JobPost::where('company_id', $job->id)->with('Company')->get();
+        if(isset($retatedCompanyJob))
+        {
+            $retatedCompanyJob = JobPost::with('Company')->orderBy('created_at', 'desc')->get();
+        }
+        return response()->json([
+            'job' => $job,
+            'related_job' => $retatedCompanyJob
+        ]);
+    }
 }

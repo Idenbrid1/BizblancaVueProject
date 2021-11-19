@@ -8362,568 +8362,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      data: '',
+      related_job: ''
+    };
   },
-  mounted: function mounted() {},
+  created: function created() {
+    this.getSingleJobDetail();
+  },
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
-  methods: {}
+  methods: {
+    getSingleJobDetail: function getSingleJobDetail() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-single-job-detail/' + this.$route.params.id).then(function (response) {
+        _this.data = response.data.job;
+        _this.related_job = response.data.related_job;
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -9477,6 +8940,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/job-search', this.record).then(function (response) {
+        _this.searchData = [];
         _this.searchData = response.data;
         _this.totalJobs = _this.searchData.length;
       });
@@ -9485,6 +8949,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/job-keyword-search/' + this.record.keyword).then(function (response) {
+        _this2.searchData = [];
         _this2.searchData = response.data;
         _this2.totalJobs = _this2.searchData.length;
       });
@@ -10890,6 +10355,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -10916,6 +10382,7 @@ __webpack_require__.r(__webpack_exports__);
         benefits: '',
         job_responsibilities: ''
       },
+      max: 36,
       errors: [],
       jobs: {}
     };
@@ -11920,6 +11387,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_website_MainApp_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/website/MainApp.vue */ "./resources/js/components/pages/website/MainApp.vue");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vue_timeago__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-timeago */ "./node_modules/vue-timeago/dist/vue-timeago.es.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -11931,7 +11399,19 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"
 
 Vue.use(__webpack_require__(/*! vue-moment */ "./node_modules/vue-moment/dist/vue-moment.js"));
 
-Vue.component('multiselect', (vue_multiselect__WEBPACK_IMPORTED_MODULE_2___default()));
+Vue.component('multiselect', (vue_multiselect__WEBPACK_IMPORTED_MODULE_2___default())); // https://www.npmjs.com/package/vue-timeago
+
+
+Vue.use(vue_timeago__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  name: 'Timeago',
+  // Component name, `Timeago` by default
+  locale: 'en',
+  // Default locale
+  locales: {
+    'zh-CN': __webpack_require__(/*! date-fns/locale/zh_cn */ "./node_modules/date-fns/locale/zh_cn/index.js"),
+    ja: __webpack_require__(/*! date-fns/locale/ja */ "./node_modules/date-fns/locale/ja/index.js")
+  }
+});
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -12103,7 +11583,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_18__["default"]({
     name: 'JobSearch',
     component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
   }, {
-    path: '/job-detail',
+    path: '/job-detail:id',
     name: 'JobDetail',
     component: _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_16__["default"]
   }]
@@ -12257,6 +11737,1700 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js ***!
+  \*****************************************************************************/
+/***/ ((module) => {
+
+var MILLISECONDS_IN_MINUTE = 60000
+
+/**
+ * Google Chrome as of 67.0.3396.87 introduced timezones with offset that includes seconds.
+ * They usually appear for dates that denote time before the timezones were introduced
+ * (e.g. for 'Europe/Prague' timezone the offset is GMT+00:57:44 before 1 October 1891
+ * and GMT+01:00:00 after that date)
+ *
+ * Date#getTimezoneOffset returns the offset in minutes and would return 57 for the example above,
+ * which would lead to incorrect calculations.
+ *
+ * This function returns the timezone offset in milliseconds that takes seconds in account.
+ */
+module.exports = function getTimezoneOffsetInMilliseconds (dirtyDate) {
+  var date = new Date(dirtyDate.getTime())
+  var baseTimezoneOffset = date.getTimezoneOffset()
+  date.setSeconds(0, 0)
+  var millisecondsPartOfTimezoneOffset = date.getTime() % MILLISECONDS_IN_MINUTE
+
+  return baseTimezoneOffset * MILLISECONDS_IN_MINUTE + millisecondsPartOfTimezoneOffset
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/compare_asc/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/date-fns/compare_asc/index.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
+
+/**
+ * @category Common Helpers
+ * @summary Compare the two dates and return -1, 0 or 1.
+ *
+ * @description
+ * Compare the two dates and return 1 if the first date is after the second,
+ * -1 if the first date is before the second or 0 if dates are equal.
+ *
+ * @param {Date|String|Number} dateLeft - the first date to compare
+ * @param {Date|String|Number} dateRight - the second date to compare
+ * @returns {Number} the result of the comparison
+ *
+ * @example
+ * // Compare 11 February 1987 and 10 July 1989:
+ * var result = compareAsc(
+ *   new Date(1987, 1, 11),
+ *   new Date(1989, 6, 10)
+ * )
+ * //=> -1
+ *
+ * @example
+ * // Sort the array of dates:
+ * var result = [
+ *   new Date(1995, 6, 2),
+ *   new Date(1987, 1, 11),
+ *   new Date(1989, 6, 10)
+ * ].sort(compareAsc)
+ * //=> [
+ * //   Wed Feb 11 1987 00:00:00,
+ * //   Mon Jul 10 1989 00:00:00,
+ * //   Sun Jul 02 1995 00:00:00
+ * // ]
+ */
+function compareAsc (dirtyDateLeft, dirtyDateRight) {
+  var dateLeft = parse(dirtyDateLeft)
+  var timeLeft = dateLeft.getTime()
+  var dateRight = parse(dirtyDateRight)
+  var timeRight = dateRight.getTime()
+
+  if (timeLeft < timeRight) {
+    return -1
+  } else if (timeLeft > timeRight) {
+    return 1
+  } else {
+    return 0
+  }
+}
+
+module.exports = compareAsc
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/compare_desc/index.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/date-fns/compare_desc/index.js ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
+
+/**
+ * @category Common Helpers
+ * @summary Compare the two dates reverse chronologically and return -1, 0 or 1.
+ *
+ * @description
+ * Compare the two dates and return -1 if the first date is after the second,
+ * 1 if the first date is before the second or 0 if dates are equal.
+ *
+ * @param {Date|String|Number} dateLeft - the first date to compare
+ * @param {Date|String|Number} dateRight - the second date to compare
+ * @returns {Number} the result of the comparison
+ *
+ * @example
+ * // Compare 11 February 1987 and 10 July 1989 reverse chronologically:
+ * var result = compareDesc(
+ *   new Date(1987, 1, 11),
+ *   new Date(1989, 6, 10)
+ * )
+ * //=> 1
+ *
+ * @example
+ * // Sort the array of dates in reverse chronological order:
+ * var result = [
+ *   new Date(1995, 6, 2),
+ *   new Date(1987, 1, 11),
+ *   new Date(1989, 6, 10)
+ * ].sort(compareDesc)
+ * //=> [
+ * //   Sun Jul 02 1995 00:00:00,
+ * //   Mon Jul 10 1989 00:00:00,
+ * //   Wed Feb 11 1987 00:00:00
+ * // ]
+ */
+function compareDesc (dirtyDateLeft, dirtyDateRight) {
+  var dateLeft = parse(dirtyDateLeft)
+  var timeLeft = dateLeft.getTime()
+  var dateRight = parse(dirtyDateRight)
+  var timeRight = dateRight.getTime()
+
+  if (timeLeft > timeRight) {
+    return -1
+  } else if (timeLeft < timeRight) {
+    return 1
+  } else {
+    return 0
+  }
+}
+
+module.exports = compareDesc
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/difference_in_calendar_months/index.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/date-fns/difference_in_calendar_months/index.js ***!
+  \**********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
+
+/**
+ * @category Month Helpers
+ * @summary Get the number of calendar months between the given dates.
+ *
+ * @description
+ * Get the number of calendar months between the given dates.
+ *
+ * @param {Date|String|Number} dateLeft - the later date
+ * @param {Date|String|Number} dateRight - the earlier date
+ * @returns {Number} the number of calendar months
+ *
+ * @example
+ * // How many calendar months are between 31 January 2014 and 1 September 2014?
+ * var result = differenceInCalendarMonths(
+ *   new Date(2014, 8, 1),
+ *   new Date(2014, 0, 31)
+ * )
+ * //=> 8
+ */
+function differenceInCalendarMonths (dirtyDateLeft, dirtyDateRight) {
+  var dateLeft = parse(dirtyDateLeft)
+  var dateRight = parse(dirtyDateRight)
+
+  var yearDiff = dateLeft.getFullYear() - dateRight.getFullYear()
+  var monthDiff = dateLeft.getMonth() - dateRight.getMonth()
+
+  return yearDiff * 12 + monthDiff
+}
+
+module.exports = differenceInCalendarMonths
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/difference_in_milliseconds/index.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/date-fns/difference_in_milliseconds/index.js ***!
+  \*******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
+
+/**
+ * @category Millisecond Helpers
+ * @summary Get the number of milliseconds between the given dates.
+ *
+ * @description
+ * Get the number of milliseconds between the given dates.
+ *
+ * @param {Date|String|Number} dateLeft - the later date
+ * @param {Date|String|Number} dateRight - the earlier date
+ * @returns {Number} the number of milliseconds
+ *
+ * @example
+ * // How many milliseconds are between
+ * // 2 July 2014 12:30:20.600 and 2 July 2014 12:30:21.700?
+ * var result = differenceInMilliseconds(
+ *   new Date(2014, 6, 2, 12, 30, 21, 700),
+ *   new Date(2014, 6, 2, 12, 30, 20, 600)
+ * )
+ * //=> 1100
+ */
+function differenceInMilliseconds (dirtyDateLeft, dirtyDateRight) {
+  var dateLeft = parse(dirtyDateLeft)
+  var dateRight = parse(dirtyDateRight)
+  return dateLeft.getTime() - dateRight.getTime()
+}
+
+module.exports = differenceInMilliseconds
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/difference_in_months/index.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/date-fns/difference_in_months/index.js ***!
+  \*************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
+var differenceInCalendarMonths = __webpack_require__(/*! ../difference_in_calendar_months/index.js */ "./node_modules/date-fns/difference_in_calendar_months/index.js")
+var compareAsc = __webpack_require__(/*! ../compare_asc/index.js */ "./node_modules/date-fns/compare_asc/index.js")
+
+/**
+ * @category Month Helpers
+ * @summary Get the number of full months between the given dates.
+ *
+ * @description
+ * Get the number of full months between the given dates.
+ *
+ * @param {Date|String|Number} dateLeft - the later date
+ * @param {Date|String|Number} dateRight - the earlier date
+ * @returns {Number} the number of full months
+ *
+ * @example
+ * // How many full months are between 31 January 2014 and 1 September 2014?
+ * var result = differenceInMonths(
+ *   new Date(2014, 8, 1),
+ *   new Date(2014, 0, 31)
+ * )
+ * //=> 7
+ */
+function differenceInMonths (dirtyDateLeft, dirtyDateRight) {
+  var dateLeft = parse(dirtyDateLeft)
+  var dateRight = parse(dirtyDateRight)
+
+  var sign = compareAsc(dateLeft, dateRight)
+  var difference = Math.abs(differenceInCalendarMonths(dateLeft, dateRight))
+  dateLeft.setMonth(dateLeft.getMonth() - sign * difference)
+
+  // Math.abs(diff in full months - diff in calendar months) === 1 if last calendar month is not full
+  // If so, result must be decreased by 1 in absolute value
+  var isLastMonthNotFull = compareAsc(dateLeft, dateRight) === -sign
+  return sign * (difference - isLastMonthNotFull)
+}
+
+module.exports = differenceInMonths
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/difference_in_seconds/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/date-fns/difference_in_seconds/index.js ***!
+  \**************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var differenceInMilliseconds = __webpack_require__(/*! ../difference_in_milliseconds/index.js */ "./node_modules/date-fns/difference_in_milliseconds/index.js")
+
+/**
+ * @category Second Helpers
+ * @summary Get the number of seconds between the given dates.
+ *
+ * @description
+ * Get the number of seconds between the given dates.
+ *
+ * @param {Date|String|Number} dateLeft - the later date
+ * @param {Date|String|Number} dateRight - the earlier date
+ * @returns {Number} the number of seconds
+ *
+ * @example
+ * // How many seconds are between
+ * // 2 July 2014 12:30:07.999 and 2 July 2014 12:30:20.000?
+ * var result = differenceInSeconds(
+ *   new Date(2014, 6, 2, 12, 30, 20, 0),
+ *   new Date(2014, 6, 2, 12, 30, 7, 999)
+ * )
+ * //=> 12
+ */
+function differenceInSeconds (dirtyDateLeft, dirtyDateRight) {
+  var diff = differenceInMilliseconds(dirtyDateLeft, dirtyDateRight) / 1000
+  return diff > 0 ? Math.floor(diff) : Math.ceil(diff)
+}
+
+module.exports = differenceInSeconds
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/distance_in_words/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/date-fns/distance_in_words/index.js ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var compareDesc = __webpack_require__(/*! ../compare_desc/index.js */ "./node_modules/date-fns/compare_desc/index.js")
+var parse = __webpack_require__(/*! ../parse/index.js */ "./node_modules/date-fns/parse/index.js")
+var differenceInSeconds = __webpack_require__(/*! ../difference_in_seconds/index.js */ "./node_modules/date-fns/difference_in_seconds/index.js")
+var differenceInMonths = __webpack_require__(/*! ../difference_in_months/index.js */ "./node_modules/date-fns/difference_in_months/index.js")
+var enLocale = __webpack_require__(/*! ../locale/en/index.js */ "./node_modules/date-fns/locale/en/index.js")
+
+var MINUTES_IN_DAY = 1440
+var MINUTES_IN_ALMOST_TWO_DAYS = 2520
+var MINUTES_IN_MONTH = 43200
+var MINUTES_IN_TWO_MONTHS = 86400
+
+/**
+ * @category Common Helpers
+ * @summary Return the distance between the given dates in words.
+ *
+ * @description
+ * Return the distance between the given dates in words.
+ *
+ * | Distance between dates                                            | Result              |
+ * |-------------------------------------------------------------------|---------------------|
+ * | 0 ... 30 secs                                                     | less than a minute  |
+ * | 30 secs ... 1 min 30 secs                                         | 1 minute            |
+ * | 1 min 30 secs ... 44 mins 30 secs                                 | [2..44] minutes     |
+ * | 44 mins ... 30 secs ... 89 mins 30 secs                           | about 1 hour        |
+ * | 89 mins 30 secs ... 23 hrs 59 mins 30 secs                        | about [2..24] hours |
+ * | 23 hrs 59 mins 30 secs ... 41 hrs 59 mins 30 secs                 | 1 day               |
+ * | 41 hrs 59 mins 30 secs ... 29 days 23 hrs 59 mins 30 secs         | [2..30] days        |
+ * | 29 days 23 hrs 59 mins 30 secs ... 44 days 23 hrs 59 mins 30 secs | about 1 month       |
+ * | 44 days 23 hrs 59 mins 30 secs ... 59 days 23 hrs 59 mins 30 secs | about 2 months      |
+ * | 59 days 23 hrs 59 mins 30 secs ... 1 yr                           | [2..12] months      |
+ * | 1 yr ... 1 yr 3 months                                            | about 1 year        |
+ * | 1 yr 3 months ... 1 yr 9 month s                                  | over 1 year         |
+ * | 1 yr 9 months ... 2 yrs                                           | almost 2 years      |
+ * | N yrs ... N yrs 3 months                                          | about N years       |
+ * | N yrs 3 months ... N yrs 9 months                                 | over N years        |
+ * | N yrs 9 months ... N+1 yrs                                        | almost N+1 years    |
+ *
+ * With `options.includeSeconds == true`:
+ * | Distance between dates | Result               |
+ * |------------------------|----------------------|
+ * | 0 secs ... 5 secs      | less than 5 seconds  |
+ * | 5 secs ... 10 secs     | less than 10 seconds |
+ * | 10 secs ... 20 secs    | less than 20 seconds |
+ * | 20 secs ... 40 secs    | half a minute        |
+ * | 40 secs ... 60 secs    | less than a minute   |
+ * | 60 secs ... 90 secs    | 1 minute             |
+ *
+ * @param {Date|String|Number} dateToCompare - the date to compare with
+ * @param {Date|String|Number} date - the other date
+ * @param {Object} [options] - the object with options
+ * @param {Boolean} [options.includeSeconds=false] - distances less than a minute are more detailed
+ * @param {Boolean} [options.addSuffix=false] - result indicates if the second date is earlier or later than the first
+ * @param {Object} [options.locale=enLocale] - the locale object
+ * @returns {String} the distance in words
+ *
+ * @example
+ * // What is the distance between 2 July 2014 and 1 January 2015?
+ * var result = distanceInWords(
+ *   new Date(2014, 6, 2),
+ *   new Date(2015, 0, 1)
+ * )
+ * //=> '6 months'
+ *
+ * @example
+ * // What is the distance between 1 January 2015 00:00:15
+ * // and 1 January 2015 00:00:00, including seconds?
+ * var result = distanceInWords(
+ *   new Date(2015, 0, 1, 0, 0, 15),
+ *   new Date(2015, 0, 1, 0, 0, 0),
+ *   {includeSeconds: true}
+ * )
+ * //=> 'less than 20 seconds'
+ *
+ * @example
+ * // What is the distance from 1 January 2016
+ * // to 1 January 2015, with a suffix?
+ * var result = distanceInWords(
+ *   new Date(2016, 0, 1),
+ *   new Date(2015, 0, 1),
+ *   {addSuffix: true}
+ * )
+ * //=> 'about 1 year ago'
+ *
+ * @example
+ * // What is the distance between 1 August 2016 and 1 January 2015 in Esperanto?
+ * var eoLocale = require('date-fns/locale/eo')
+ * var result = distanceInWords(
+ *   new Date(2016, 7, 1),
+ *   new Date(2015, 0, 1),
+ *   {locale: eoLocale}
+ * )
+ * //=> 'pli ol 1 jaro'
+ */
+function distanceInWords (dirtyDateToCompare, dirtyDate, dirtyOptions) {
+  var options = dirtyOptions || {}
+
+  var comparison = compareDesc(dirtyDateToCompare, dirtyDate)
+
+  var locale = options.locale
+  var localize = enLocale.distanceInWords.localize
+  if (locale && locale.distanceInWords && locale.distanceInWords.localize) {
+    localize = locale.distanceInWords.localize
+  }
+
+  var localizeOptions = {
+    addSuffix: Boolean(options.addSuffix),
+    comparison: comparison
+  }
+
+  var dateLeft, dateRight
+  if (comparison > 0) {
+    dateLeft = parse(dirtyDateToCompare)
+    dateRight = parse(dirtyDate)
+  } else {
+    dateLeft = parse(dirtyDate)
+    dateRight = parse(dirtyDateToCompare)
+  }
+
+  var seconds = differenceInSeconds(dateRight, dateLeft)
+  var offset = dateRight.getTimezoneOffset() - dateLeft.getTimezoneOffset()
+  var minutes = Math.round(seconds / 60) - offset
+  var months
+
+  // 0 up to 2 mins
+  if (minutes < 2) {
+    if (options.includeSeconds) {
+      if (seconds < 5) {
+        return localize('lessThanXSeconds', 5, localizeOptions)
+      } else if (seconds < 10) {
+        return localize('lessThanXSeconds', 10, localizeOptions)
+      } else if (seconds < 20) {
+        return localize('lessThanXSeconds', 20, localizeOptions)
+      } else if (seconds < 40) {
+        return localize('halfAMinute', null, localizeOptions)
+      } else if (seconds < 60) {
+        return localize('lessThanXMinutes', 1, localizeOptions)
+      } else {
+        return localize('xMinutes', 1, localizeOptions)
+      }
+    } else {
+      if (minutes === 0) {
+        return localize('lessThanXMinutes', 1, localizeOptions)
+      } else {
+        return localize('xMinutes', minutes, localizeOptions)
+      }
+    }
+
+  // 2 mins up to 0.75 hrs
+  } else if (minutes < 45) {
+    return localize('xMinutes', minutes, localizeOptions)
+
+  // 0.75 hrs up to 1.5 hrs
+  } else if (minutes < 90) {
+    return localize('aboutXHours', 1, localizeOptions)
+
+  // 1.5 hrs up to 24 hrs
+  } else if (minutes < MINUTES_IN_DAY) {
+    var hours = Math.round(minutes / 60)
+    return localize('aboutXHours', hours, localizeOptions)
+
+  // 1 day up to 1.75 days
+  } else if (minutes < MINUTES_IN_ALMOST_TWO_DAYS) {
+    return localize('xDays', 1, localizeOptions)
+
+  // 1.75 days up to 30 days
+  } else if (minutes < MINUTES_IN_MONTH) {
+    var days = Math.round(minutes / MINUTES_IN_DAY)
+    return localize('xDays', days, localizeOptions)
+
+  // 1 month up to 2 months
+  } else if (minutes < MINUTES_IN_TWO_MONTHS) {
+    months = Math.round(minutes / MINUTES_IN_MONTH)
+    return localize('aboutXMonths', months, localizeOptions)
+  }
+
+  months = differenceInMonths(dateRight, dateLeft)
+
+  // 2 months up to 12 months
+  if (months < 12) {
+    var nearestMonth = Math.round(minutes / MINUTES_IN_MONTH)
+    return localize('xMonths', nearestMonth, localizeOptions)
+
+  // 1 year up to max Date
+  } else {
+    var monthsSinceStartOfYear = months % 12
+    var years = Math.floor(months / 12)
+
+    // N years up to 1 years 3 months
+    if (monthsSinceStartOfYear < 3) {
+      return localize('aboutXYears', years, localizeOptions)
+
+    // N years 3 months up to N years 9 months
+    } else if (monthsSinceStartOfYear < 9) {
+      return localize('overXYears', years, localizeOptions)
+
+    // N years 9 months up to N year 12 months
+    } else {
+      return localize('almostXYears', years + 1, localizeOptions)
+    }
+  }
+}
+
+module.exports = distanceInWords
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/distance_in_words_to_now/index.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/date-fns/distance_in_words_to_now/index.js ***!
+  \*****************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var distanceInWords = __webpack_require__(/*! ../distance_in_words/index.js */ "./node_modules/date-fns/distance_in_words/index.js")
+
+/**
+ * @category Common Helpers
+ * @summary Return the distance between the given date and now in words.
+ *
+ * @description
+ * Return the distance between the given date and now in words.
+ *
+ * | Distance to now                                                   | Result              |
+ * |-------------------------------------------------------------------|---------------------|
+ * | 0 ... 30 secs                                                     | less than a minute  |
+ * | 30 secs ... 1 min 30 secs                                         | 1 minute            |
+ * | 1 min 30 secs ... 44 mins 30 secs                                 | [2..44] minutes     |
+ * | 44 mins ... 30 secs ... 89 mins 30 secs                           | about 1 hour        |
+ * | 89 mins 30 secs ... 23 hrs 59 mins 30 secs                        | about [2..24] hours |
+ * | 23 hrs 59 mins 30 secs ... 41 hrs 59 mins 30 secs                 | 1 day               |
+ * | 41 hrs 59 mins 30 secs ... 29 days 23 hrs 59 mins 30 secs         | [2..30] days        |
+ * | 29 days 23 hrs 59 mins 30 secs ... 44 days 23 hrs 59 mins 30 secs | about 1 month       |
+ * | 44 days 23 hrs 59 mins 30 secs ... 59 days 23 hrs 59 mins 30 secs | about 2 months      |
+ * | 59 days 23 hrs 59 mins 30 secs ... 1 yr                           | [2..12] months      |
+ * | 1 yr ... 1 yr 3 months                                            | about 1 year        |
+ * | 1 yr 3 months ... 1 yr 9 month s                                  | over 1 year         |
+ * | 1 yr 9 months ... 2 yrs                                           | almost 2 years      |
+ * | N yrs ... N yrs 3 months                                          | about N years       |
+ * | N yrs 3 months ... N yrs 9 months                                 | over N years        |
+ * | N yrs 9 months ... N+1 yrs                                        | almost N+1 years    |
+ *
+ * With `options.includeSeconds == true`:
+ * | Distance to now     | Result               |
+ * |---------------------|----------------------|
+ * | 0 secs ... 5 secs   | less than 5 seconds  |
+ * | 5 secs ... 10 secs  | less than 10 seconds |
+ * | 10 secs ... 20 secs | less than 20 seconds |
+ * | 20 secs ... 40 secs | half a minute        |
+ * | 40 secs ... 60 secs | less than a minute   |
+ * | 60 secs ... 90 secs | 1 minute             |
+ *
+ * @param {Date|String|Number} date - the given date
+ * @param {Object} [options] - the object with options
+ * @param {Boolean} [options.includeSeconds=false] - distances less than a minute are more detailed
+ * @param {Boolean} [options.addSuffix=false] - result specifies if the second date is earlier or later than the first
+ * @param {Object} [options.locale=enLocale] - the locale object
+ * @returns {String} the distance in words
+ *
+ * @example
+ * // If today is 1 January 2015, what is the distance to 2 July 2014?
+ * var result = distanceInWordsToNow(
+ *   new Date(2014, 6, 2)
+ * )
+ * //=> '6 months'
+ *
+ * @example
+ * // If now is 1 January 2015 00:00:00,
+ * // what is the distance to 1 January 2015 00:00:15, including seconds?
+ * var result = distanceInWordsToNow(
+ *   new Date(2015, 0, 1, 0, 0, 15),
+ *   {includeSeconds: true}
+ * )
+ * //=> 'less than 20 seconds'
+ *
+ * @example
+ * // If today is 1 January 2015,
+ * // what is the distance to 1 January 2016, with a suffix?
+ * var result = distanceInWordsToNow(
+ *   new Date(2016, 0, 1),
+ *   {addSuffix: true}
+ * )
+ * //=> 'in about 1 year'
+ *
+ * @example
+ * // If today is 1 January 2015,
+ * // what is the distance to 1 August 2016 in Esperanto?
+ * var eoLocale = require('date-fns/locale/eo')
+ * var result = distanceInWordsToNow(
+ *   new Date(2016, 7, 1),
+ *   {locale: eoLocale}
+ * )
+ * //=> 'pli ol 1 jaro'
+ */
+function distanceInWordsToNow (dirtyDate, dirtyOptions) {
+  return distanceInWords(Date.now(), dirtyDate, dirtyOptions)
+}
+
+module.exports = distanceInWordsToNow
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/is_date/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/date-fns/is_date/index.js ***!
+  \************************************************/
+/***/ ((module) => {
+
+/**
+ * @category Common Helpers
+ * @summary Is the given argument an instance of Date?
+ *
+ * @description
+ * Is the given argument an instance of Date?
+ *
+ * @param {*} argument - the argument to check
+ * @returns {Boolean} the given argument is an instance of Date
+ *
+ * @example
+ * // Is 'mayonnaise' a Date?
+ * var result = isDate('mayonnaise')
+ * //=> false
+ */
+function isDate (argument) {
+  return argument instanceof Date
+}
+
+module.exports = isDate
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/_lib/build_formatting_tokens_reg_exp/index.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/date-fns/locale/_lib/build_formatting_tokens_reg_exp/index.js ***!
+  \************************************************************************************/
+/***/ ((module) => {
+
+var commonFormatterKeys = [
+  'M', 'MM', 'Q', 'D', 'DD', 'DDD', 'DDDD', 'd',
+  'E', 'W', 'WW', 'YY', 'YYYY', 'GG', 'GGGG',
+  'H', 'HH', 'h', 'hh', 'm', 'mm',
+  's', 'ss', 'S', 'SS', 'SSS',
+  'Z', 'ZZ', 'X', 'x'
+]
+
+function buildFormattingTokensRegExp (formatters) {
+  var formatterKeys = []
+  for (var key in formatters) {
+    if (formatters.hasOwnProperty(key)) {
+      formatterKeys.push(key)
+    }
+  }
+
+  var formattingTokens = commonFormatterKeys
+    .concat(formatterKeys)
+    .sort()
+    .reverse()
+  var formattingTokensRegExp = new RegExp(
+    '(\\[[^\\[]*\\])|(\\\\)?' + '(' + formattingTokens.join('|') + '|.)', 'g'
+  )
+
+  return formattingTokensRegExp
+}
+
+module.exports = buildFormattingTokensRegExp
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/en/build_distance_in_words_locale/index.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/date-fns/locale/en/build_distance_in_words_locale/index.js ***!
+  \*********************************************************************************/
+/***/ ((module) => {
+
+function buildDistanceInWordsLocale () {
+  var distanceInWordsLocale = {
+    lessThanXSeconds: {
+      one: 'less than a second',
+      other: 'less than {{count}} seconds'
+    },
+
+    xSeconds: {
+      one: '1 second',
+      other: '{{count}} seconds'
+    },
+
+    halfAMinute: 'half a minute',
+
+    lessThanXMinutes: {
+      one: 'less than a minute',
+      other: 'less than {{count}} minutes'
+    },
+
+    xMinutes: {
+      one: '1 minute',
+      other: '{{count}} minutes'
+    },
+
+    aboutXHours: {
+      one: 'about 1 hour',
+      other: 'about {{count}} hours'
+    },
+
+    xHours: {
+      one: '1 hour',
+      other: '{{count}} hours'
+    },
+
+    xDays: {
+      one: '1 day',
+      other: '{{count}} days'
+    },
+
+    aboutXMonths: {
+      one: 'about 1 month',
+      other: 'about {{count}} months'
+    },
+
+    xMonths: {
+      one: '1 month',
+      other: '{{count}} months'
+    },
+
+    aboutXYears: {
+      one: 'about 1 year',
+      other: 'about {{count}} years'
+    },
+
+    xYears: {
+      one: '1 year',
+      other: '{{count}} years'
+    },
+
+    overXYears: {
+      one: 'over 1 year',
+      other: 'over {{count}} years'
+    },
+
+    almostXYears: {
+      one: 'almost 1 year',
+      other: 'almost {{count}} years'
+    }
+  }
+
+  function localize (token, count, options) {
+    options = options || {}
+
+    var result
+    if (typeof distanceInWordsLocale[token] === 'string') {
+      result = distanceInWordsLocale[token]
+    } else if (count === 1) {
+      result = distanceInWordsLocale[token].one
+    } else {
+      result = distanceInWordsLocale[token].other.replace('{{count}}', count)
+    }
+
+    if (options.addSuffix) {
+      if (options.comparison > 0) {
+        return 'in ' + result
+      } else {
+        return result + ' ago'
+      }
+    }
+
+    return result
+  }
+
+  return {
+    localize: localize
+  }
+}
+
+module.exports = buildDistanceInWordsLocale
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/en/build_format_locale/index.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/date-fns/locale/en/build_format_locale/index.js ***!
+  \**********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var buildFormattingTokensRegExp = __webpack_require__(/*! ../../_lib/build_formatting_tokens_reg_exp/index.js */ "./node_modules/date-fns/locale/_lib/build_formatting_tokens_reg_exp/index.js")
+
+function buildFormatLocale () {
+  // Note: in English, the names of days of the week and months are capitalized.
+  // If you are making a new locale based on this one, check if the same is true for the language you're working on.
+  // Generally, formatted dates should look like they are in the middle of a sentence,
+  // e.g. in Spanish language the weekdays and months should be in the lowercase.
+  var months3char = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  var monthsFull = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  var weekdays2char = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
+  var weekdays3char = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  var weekdaysFull = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  var meridiemUppercase = ['AM', 'PM']
+  var meridiemLowercase = ['am', 'pm']
+  var meridiemFull = ['a.m.', 'p.m.']
+
+  var formatters = {
+    // Month: Jan, Feb, ..., Dec
+    'MMM': function (date) {
+      return months3char[date.getMonth()]
+    },
+
+    // Month: January, February, ..., December
+    'MMMM': function (date) {
+      return monthsFull[date.getMonth()]
+    },
+
+    // Day of week: Su, Mo, ..., Sa
+    'dd': function (date) {
+      return weekdays2char[date.getDay()]
+    },
+
+    // Day of week: Sun, Mon, ..., Sat
+    'ddd': function (date) {
+      return weekdays3char[date.getDay()]
+    },
+
+    // Day of week: Sunday, Monday, ..., Saturday
+    'dddd': function (date) {
+      return weekdaysFull[date.getDay()]
+    },
+
+    // AM, PM
+    'A': function (date) {
+      return (date.getHours() / 12) >= 1 ? meridiemUppercase[1] : meridiemUppercase[0]
+    },
+
+    // am, pm
+    'a': function (date) {
+      return (date.getHours() / 12) >= 1 ? meridiemLowercase[1] : meridiemLowercase[0]
+    },
+
+    // a.m., p.m.
+    'aa': function (date) {
+      return (date.getHours() / 12) >= 1 ? meridiemFull[1] : meridiemFull[0]
+    }
+  }
+
+  // Generate ordinal version of formatters: M -> Mo, D -> Do, etc.
+  var ordinalFormatters = ['M', 'D', 'DDD', 'd', 'Q', 'W']
+  ordinalFormatters.forEach(function (formatterToken) {
+    formatters[formatterToken + 'o'] = function (date, formatters) {
+      return ordinal(formatters[formatterToken](date))
+    }
+  })
+
+  return {
+    formatters: formatters,
+    formattingTokensRegExp: buildFormattingTokensRegExp(formatters)
+  }
+}
+
+function ordinal (number) {
+  var rem100 = number % 100
+  if (rem100 > 20 || rem100 < 10) {
+    switch (rem100 % 10) {
+      case 1:
+        return number + 'st'
+      case 2:
+        return number + 'nd'
+      case 3:
+        return number + 'rd'
+    }
+  }
+  return number + 'th'
+}
+
+module.exports = buildFormatLocale
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/en/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/date-fns/locale/en/index.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var buildDistanceInWordsLocale = __webpack_require__(/*! ./build_distance_in_words_locale/index.js */ "./node_modules/date-fns/locale/en/build_distance_in_words_locale/index.js")
+var buildFormatLocale = __webpack_require__(/*! ./build_format_locale/index.js */ "./node_modules/date-fns/locale/en/build_format_locale/index.js")
+
+/**
+ * @category Locales
+ * @summary English locale.
+ */
+module.exports = {
+  distanceInWords: buildDistanceInWordsLocale(),
+  format: buildFormatLocale()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/ja/build_distance_in_words_locale/index.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/date-fns/locale/ja/build_distance_in_words_locale/index.js ***!
+  \*********************************************************************************/
+/***/ ((module) => {
+
+function buildDistanceInWordsLocale () {
+  var distanceInWordsLocale = {
+    lessThanXSeconds: {
+      one: '1秒以下',
+      other: '{{count}}秒以下'
+    },
+
+    xSeconds: {
+      one: '1秒',
+      other: '{{count}}秒'
+    },
+
+    halfAMinute: '30秒ぐらい',
+
+    lessThanXMinutes: {
+      one: '1分以下',
+      other: '{{count}}分以下'
+    },
+
+    xMinutes: {
+      one: '1分',
+      other: '{{count}}分'
+    },
+
+    aboutXHours: {
+      one: '1時間ぐらい',
+      other: '{{count}}時間ぐらい'
+    },
+
+    xHours: {
+      one: '1時間',
+      other: '{{count}}時間'
+    },
+
+    xDays: {
+      one: '1日',
+      other: '{{count}}日'
+    },
+
+    aboutXMonths: {
+      one: '1ヶ月ぐらい',
+      other: '{{count}}ヶ月ぐらい'
+    },
+
+    xMonths: {
+      one: '1ヶ月',
+      other: '{{count}}ヶ月'
+    },
+
+    aboutXYears: {
+      one: '1年ぐらい',
+      other: '{{count}}年ぐらい'
+    },
+
+    xYears: {
+      one: '1年',
+      other: '{{count}}年'
+    },
+
+    overXYears: {
+      one: '1年以上',
+      other: '{{count}}年以上'
+    },
+
+    almostXYears: {
+      one: '1年以下',
+      other: '{{count}}年以下',
+      oneWithSuffix: '1年ぐらい',
+      otherWithSuffix: '{{count}}年ぐらい'
+    }
+  }
+
+  function localize (token, count, options) {
+    options = options || {}
+
+    var result
+    if (typeof distanceInWordsLocale[token] === 'string') {
+      result = distanceInWordsLocale[token]
+    } else if (count === 1) {
+      if (options.addSuffix && distanceInWordsLocale[token].oneWithSuffix) {
+        result = distanceInWordsLocale[token].oneWithSuffix
+      } else {
+        result = distanceInWordsLocale[token].one
+      }
+    } else {
+      if (options.addSuffix && distanceInWordsLocale[token].otherWithSuffix) {
+        result = distanceInWordsLocale[token].otherWithSuffix.replace('{{count}}', count)
+      } else {
+        result = distanceInWordsLocale[token].other.replace('{{count}}', count)
+      }
+    }
+
+    if (options.addSuffix) {
+      if (options.comparison > 0) {
+        return result + '後'
+      } else {
+        return result + '前'
+      }
+    }
+
+    return result
+  }
+
+  return {
+    localize: localize
+  }
+}
+
+module.exports = buildDistanceInWordsLocale
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/ja/build_format_locale/index.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/date-fns/locale/ja/build_format_locale/index.js ***!
+  \**********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var buildFormattingTokensRegExp = __webpack_require__(/*! ../../_lib/build_formatting_tokens_reg_exp/index.js */ "./node_modules/date-fns/locale/_lib/build_formatting_tokens_reg_exp/index.js")
+
+function buildFormatLocale () {
+  var months3char = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+  var monthsFull = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+  var weekdays2char = ['日', '月', '火', '水', '木', '金', '土']
+  var weekdays3char = ['日曜', '月曜', '火曜', '水曜', '木曜', '金曜', '土曜']
+  var weekdaysFull = ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日']
+  var meridiemUppercase = ['午前', '午後']
+  var meridiemLowercase = ['午前', '午後']
+  var meridiemFull = ['午前', '午後']
+
+  var formatters = {
+    // Month: Jan, Feb, ..., Dec
+    'MMM': function (date) {
+      return months3char[date.getMonth()]
+    },
+
+    // Month: January, February, ..., December
+    'MMMM': function (date) {
+      return monthsFull[date.getMonth()]
+    },
+
+    // Day of week: Su, Mo, ..., Sa
+    'dd': function (date) {
+      return weekdays2char[date.getDay()]
+    },
+
+    // Day of week: Sun, Mon, ..., Sat
+    'ddd': function (date) {
+      return weekdays3char[date.getDay()]
+    },
+
+    // Day of week: Sunday, Monday, ..., Saturday
+    'dddd': function (date) {
+      return weekdaysFull[date.getDay()]
+    },
+
+    // AM, PM
+    'A': function (date) {
+      return (date.getHours() / 12) >= 1 ? meridiemUppercase[1] : meridiemUppercase[0]
+    },
+
+    // am, pm
+    'a': function (date) {
+      return (date.getHours() / 12) >= 1 ? meridiemLowercase[1] : meridiemLowercase[0]
+    },
+
+    // a.m., p.m.
+    'aa': function (date) {
+      return (date.getHours() / 12) >= 1 ? meridiemFull[1] : meridiemFull[0]
+    }
+  }
+
+  // Generate ordinal version of formatters: M -> Mo, D -> Do, etc.
+  var ordinalFormatters = ['M', 'D', 'DDD', 'd', 'Q', 'W']
+  ordinalFormatters.forEach(function (formatterToken) {
+    formatters[formatterToken + 'o'] = function (date, formatters) {
+      return ordinal(formatters[formatterToken](date))
+    }
+  })
+
+  return {
+    formatters: formatters,
+    formattingTokensRegExp: buildFormattingTokensRegExp(formatters)
+  }
+}
+
+function ordinal (number) {
+  return number + '日'
+}
+
+module.exports = buildFormatLocale
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/ja/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/date-fns/locale/ja/index.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var buildDistanceInWordsLocale = __webpack_require__(/*! ./build_distance_in_words_locale/index.js */ "./node_modules/date-fns/locale/ja/build_distance_in_words_locale/index.js")
+var buildFormatLocale = __webpack_require__(/*! ./build_format_locale/index.js */ "./node_modules/date-fns/locale/ja/build_format_locale/index.js")
+
+/**
+ * @category Locales
+ * @summary Japanese locale.
+ * @author Thomas Eilmsteiner [@DeMuu]{@link https://github.com/DeMuu}
+ * @author Yamagishi Kazutoshi [@ykzts]{@link https://github.com/ykzts}
+ */
+module.exports = {
+  distanceInWords: buildDistanceInWordsLocale(),
+  format: buildFormatLocale()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/zh_cn/build_distance_in_words_locale/index.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/date-fns/locale/zh_cn/build_distance_in_words_locale/index.js ***!
+  \************************************************************************************/
+/***/ ((module) => {
+
+function buildDistanceInWordsLocale () {
+  var distanceInWordsLocale = {
+    lessThanXSeconds: {
+      one: '不到 1 秒',
+      other: '不到 {{count}} 秒'
+    },
+
+    xSeconds: {
+      one: '1 秒',
+      other: '{{count}} 秒'
+    },
+
+    halfAMinute: '半分钟',
+
+    lessThanXMinutes: {
+      one: '不到 1 分钟',
+      other: '不到 {{count}} 分钟'
+    },
+
+    xMinutes: {
+      one: '1 分钟',
+      other: '{{count}} 分钟'
+    },
+
+    xHours: {
+      one: '1 小时',
+      other: '{{count}} 小时'
+    },
+
+    aboutXHours: {
+      one: '大约 1 小时',
+      other: '大约 {{count}} 小时'
+    },
+
+    xDays: {
+      one: '1 天',
+      other: '{{count}} 天'
+    },
+
+    aboutXMonths: {
+      one: '大约 1 个月',
+      other: '大约 {{count}} 个月'
+    },
+
+    xMonths: {
+      one: '1 个月',
+      other: '{{count}} 个月'
+    },
+
+    aboutXYears: {
+      one: '大约 1 年',
+      other: '大约 {{count}} 年'
+    },
+
+    xYears: {
+      one: '1 年',
+      other: '{{count}} 年'
+    },
+
+    overXYears: {
+      one: '超过 1 年',
+      other: '超过 {{count}} 年'
+    },
+
+    almostXYears: {
+      one: '将近 1 年',
+      other: '将近 {{count}} 年'
+    }
+  }
+
+  function localize (token, count, options) {
+    options = options || {}
+
+    var result
+    if (typeof distanceInWordsLocale[token] === 'string') {
+      result = distanceInWordsLocale[token]
+    } else if (count === 1) {
+      result = distanceInWordsLocale[token].one
+    } else {
+      result = distanceInWordsLocale[token].other.replace('{{count}}', count)
+    }
+
+    if (options.addSuffix) {
+      if (options.comparison > 0) {
+        return result + '内'
+      } else {
+        return result + '前'
+      }
+    }
+
+    return result
+  }
+
+  return {
+    localize: localize
+  }
+}
+
+module.exports = buildDistanceInWordsLocale
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/zh_cn/build_format_locale/index.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/date-fns/locale/zh_cn/build_format_locale/index.js ***!
+  \*************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var buildFormattingTokensRegExp = __webpack_require__(/*! ../../_lib/build_formatting_tokens_reg_exp/index.js */ "./node_modules/date-fns/locale/_lib/build_formatting_tokens_reg_exp/index.js")
+
+function buildFormatLocale () {
+  var months3char = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+  var monthsFull = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+  var weekdays2char = ['日', '一', '二', '三', '四', '五', '六']
+  var weekdays3char = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
+  var weekdaysFull = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+  var meridiemFull = ['上午', '下午']
+
+  var formatters = {
+    // Month: Jan, Feb, ..., Dec
+    'MMM': function (date) {
+      return months3char[date.getMonth()]
+    },
+
+    // Month: January, February, ..., December
+    'MMMM': function (date) {
+      return monthsFull[date.getMonth()]
+    },
+
+    // Day of week: Su, Mo, ..., Sa
+    'dd': function (date) {
+      return weekdays2char[date.getDay()]
+    },
+
+    // Day of week: Sun, Mon, ..., Sat
+    'ddd': function (date) {
+      return weekdays3char[date.getDay()]
+    },
+
+    // Day of week: Sunday, Monday, ..., Saturday
+    'dddd': function (date) {
+      return weekdaysFull[date.getDay()]
+    }
+  }
+
+  // AM, PM / am, pm / a.m., p.m. all translates to 上午, 下午
+  formatters.a = formatters.aa = formatters.A = function (date) {
+    return (date.getHours() / 12) >= 1 ? meridiemFull[1] : meridiemFull[0]
+  }
+
+  // Generate ordinal version of formatters: M -> Mo, D -> Do, etc.
+  var ordinalFormatters = ['M', 'D', 'DDD', 'd', 'Q', 'W']
+  ordinalFormatters.forEach(function (formatterToken) {
+    formatters[formatterToken + 'o'] = function (date, formatters) {
+      return ordinal(formatters[formatterToken](date))
+    }
+  })
+
+  return {
+    formatters: formatters,
+    formattingTokensRegExp: buildFormattingTokensRegExp(formatters)
+  }
+}
+
+function ordinal (number) {
+  return number.toString()
+}
+
+module.exports = buildFormatLocale
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/locale/zh_cn/index.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/date-fns/locale/zh_cn/index.js ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var buildDistanceInWordsLocale = __webpack_require__(/*! ./build_distance_in_words_locale/index.js */ "./node_modules/date-fns/locale/zh_cn/build_distance_in_words_locale/index.js")
+var buildFormatLocale = __webpack_require__(/*! ./build_format_locale/index.js */ "./node_modules/date-fns/locale/zh_cn/build_format_locale/index.js")
+
+/**
+ * @category Locales
+ * @summary Chinese Simplified locale.
+ * @author Changyu Geng [@KingMario]{@link https://github.com/KingMario}
+ * @author Song Shuoyun [@fnlctrl]{@link https://github.com/fnlctrl}
+ */
+module.exports = {
+  distanceInWords: buildDistanceInWordsLocale(),
+  format: buildFormatLocale()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/parse/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/date-fns/parse/index.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var getTimezoneOffsetInMilliseconds = __webpack_require__(/*! ../_lib/getTimezoneOffsetInMilliseconds/index.js */ "./node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js")
+var isDate = __webpack_require__(/*! ../is_date/index.js */ "./node_modules/date-fns/is_date/index.js")
+
+var MILLISECONDS_IN_HOUR = 3600000
+var MILLISECONDS_IN_MINUTE = 60000
+var DEFAULT_ADDITIONAL_DIGITS = 2
+
+var parseTokenDateTimeDelimeter = /[T ]/
+var parseTokenPlainTime = /:/
+
+// year tokens
+var parseTokenYY = /^(\d{2})$/
+var parseTokensYYY = [
+  /^([+-]\d{2})$/, // 0 additional digits
+  /^([+-]\d{3})$/, // 1 additional digit
+  /^([+-]\d{4})$/ // 2 additional digits
+]
+
+var parseTokenYYYY = /^(\d{4})/
+var parseTokensYYYYY = [
+  /^([+-]\d{4})/, // 0 additional digits
+  /^([+-]\d{5})/, // 1 additional digit
+  /^([+-]\d{6})/ // 2 additional digits
+]
+
+// date tokens
+var parseTokenMM = /^-(\d{2})$/
+var parseTokenDDD = /^-?(\d{3})$/
+var parseTokenMMDD = /^-?(\d{2})-?(\d{2})$/
+var parseTokenWww = /^-?W(\d{2})$/
+var parseTokenWwwD = /^-?W(\d{2})-?(\d{1})$/
+
+// time tokens
+var parseTokenHH = /^(\d{2}([.,]\d*)?)$/
+var parseTokenHHMM = /^(\d{2}):?(\d{2}([.,]\d*)?)$/
+var parseTokenHHMMSS = /^(\d{2}):?(\d{2}):?(\d{2}([.,]\d*)?)$/
+
+// timezone tokens
+var parseTokenTimezone = /([Z+-].*)$/
+var parseTokenTimezoneZ = /^(Z)$/
+var parseTokenTimezoneHH = /^([+-])(\d{2})$/
+var parseTokenTimezoneHHMM = /^([+-])(\d{2}):?(\d{2})$/
+
+/**
+ * @category Common Helpers
+ * @summary Convert the given argument to an instance of Date.
+ *
+ * @description
+ * Convert the given argument to an instance of Date.
+ *
+ * If the argument is an instance of Date, the function returns its clone.
+ *
+ * If the argument is a number, it is treated as a timestamp.
+ *
+ * If an argument is a string, the function tries to parse it.
+ * Function accepts complete ISO 8601 formats as well as partial implementations.
+ * ISO 8601: http://en.wikipedia.org/wiki/ISO_8601
+ *
+ * If all above fails, the function passes the given argument to Date constructor.
+ *
+ * @param {Date|String|Number} argument - the value to convert
+ * @param {Object} [options] - the object with options
+ * @param {0 | 1 | 2} [options.additionalDigits=2] - the additional number of digits in the extended year format
+ * @returns {Date} the parsed date in the local time zone
+ *
+ * @example
+ * // Convert string '2014-02-11T11:30:30' to date:
+ * var result = parse('2014-02-11T11:30:30')
+ * //=> Tue Feb 11 2014 11:30:30
+ *
+ * @example
+ * // Parse string '+02014101',
+ * // if the additional number of digits in the extended year format is 1:
+ * var result = parse('+02014101', {additionalDigits: 1})
+ * //=> Fri Apr 11 2014 00:00:00
+ */
+function parse (argument, dirtyOptions) {
+  if (isDate(argument)) {
+    // Prevent the date to lose the milliseconds when passed to new Date() in IE10
+    return new Date(argument.getTime())
+  } else if (typeof argument !== 'string') {
+    return new Date(argument)
+  }
+
+  var options = dirtyOptions || {}
+  var additionalDigits = options.additionalDigits
+  if (additionalDigits == null) {
+    additionalDigits = DEFAULT_ADDITIONAL_DIGITS
+  } else {
+    additionalDigits = Number(additionalDigits)
+  }
+
+  var dateStrings = splitDateString(argument)
+
+  var parseYearResult = parseYear(dateStrings.date, additionalDigits)
+  var year = parseYearResult.year
+  var restDateString = parseYearResult.restDateString
+
+  var date = parseDate(restDateString, year)
+
+  if (date) {
+    var timestamp = date.getTime()
+    var time = 0
+    var offset
+
+    if (dateStrings.time) {
+      time = parseTime(dateStrings.time)
+    }
+
+    if (dateStrings.timezone) {
+      offset = parseTimezone(dateStrings.timezone) * MILLISECONDS_IN_MINUTE
+    } else {
+      var fullTime = timestamp + time
+      var fullTimeDate = new Date(fullTime)
+
+      offset = getTimezoneOffsetInMilliseconds(fullTimeDate)
+
+      // Adjust time when it's coming from DST
+      var fullTimeDateNextDay = new Date(fullTime)
+      fullTimeDateNextDay.setDate(fullTimeDate.getDate() + 1)
+      var offsetDiff =
+        getTimezoneOffsetInMilliseconds(fullTimeDateNextDay) -
+        getTimezoneOffsetInMilliseconds(fullTimeDate)
+      if (offsetDiff > 0) {
+        offset += offsetDiff
+      }
+    }
+
+    return new Date(timestamp + time + offset)
+  } else {
+    return new Date(argument)
+  }
+}
+
+function splitDateString (dateString) {
+  var dateStrings = {}
+  var array = dateString.split(parseTokenDateTimeDelimeter)
+  var timeString
+
+  if (parseTokenPlainTime.test(array[0])) {
+    dateStrings.date = null
+    timeString = array[0]
+  } else {
+    dateStrings.date = array[0]
+    timeString = array[1]
+  }
+
+  if (timeString) {
+    var token = parseTokenTimezone.exec(timeString)
+    if (token) {
+      dateStrings.time = timeString.replace(token[1], '')
+      dateStrings.timezone = token[1]
+    } else {
+      dateStrings.time = timeString
+    }
+  }
+
+  return dateStrings
+}
+
+function parseYear (dateString, additionalDigits) {
+  var parseTokenYYY = parseTokensYYY[additionalDigits]
+  var parseTokenYYYYY = parseTokensYYYYY[additionalDigits]
+
+  var token
+
+  // YYYY or ±YYYYY
+  token = parseTokenYYYY.exec(dateString) || parseTokenYYYYY.exec(dateString)
+  if (token) {
+    var yearString = token[1]
+    return {
+      year: parseInt(yearString, 10),
+      restDateString: dateString.slice(yearString.length)
+    }
+  }
+
+  // YY or ±YYY
+  token = parseTokenYY.exec(dateString) || parseTokenYYY.exec(dateString)
+  if (token) {
+    var centuryString = token[1]
+    return {
+      year: parseInt(centuryString, 10) * 100,
+      restDateString: dateString.slice(centuryString.length)
+    }
+  }
+
+  // Invalid ISO-formatted year
+  return {
+    year: null
+  }
+}
+
+function parseDate (dateString, year) {
+  // Invalid ISO-formatted year
+  if (year === null) {
+    return null
+  }
+
+  var token
+  var date
+  var month
+  var week
+
+  // YYYY
+  if (dateString.length === 0) {
+    date = new Date(0)
+    date.setUTCFullYear(year)
+    return date
+  }
+
+  // YYYY-MM
+  token = parseTokenMM.exec(dateString)
+  if (token) {
+    date = new Date(0)
+    month = parseInt(token[1], 10) - 1
+    date.setUTCFullYear(year, month)
+    return date
+  }
+
+  // YYYY-DDD or YYYYDDD
+  token = parseTokenDDD.exec(dateString)
+  if (token) {
+    date = new Date(0)
+    var dayOfYear = parseInt(token[1], 10)
+    date.setUTCFullYear(year, 0, dayOfYear)
+    return date
+  }
+
+  // YYYY-MM-DD or YYYYMMDD
+  token = parseTokenMMDD.exec(dateString)
+  if (token) {
+    date = new Date(0)
+    month = parseInt(token[1], 10) - 1
+    var day = parseInt(token[2], 10)
+    date.setUTCFullYear(year, month, day)
+    return date
+  }
+
+  // YYYY-Www or YYYYWww
+  token = parseTokenWww.exec(dateString)
+  if (token) {
+    week = parseInt(token[1], 10) - 1
+    return dayOfISOYear(year, week)
+  }
+
+  // YYYY-Www-D or YYYYWwwD
+  token = parseTokenWwwD.exec(dateString)
+  if (token) {
+    week = parseInt(token[1], 10) - 1
+    var dayOfWeek = parseInt(token[2], 10) - 1
+    return dayOfISOYear(year, week, dayOfWeek)
+  }
+
+  // Invalid ISO-formatted date
+  return null
+}
+
+function parseTime (timeString) {
+  var token
+  var hours
+  var minutes
+
+  // hh
+  token = parseTokenHH.exec(timeString)
+  if (token) {
+    hours = parseFloat(token[1].replace(',', '.'))
+    return (hours % 24) * MILLISECONDS_IN_HOUR
+  }
+
+  // hh:mm or hhmm
+  token = parseTokenHHMM.exec(timeString)
+  if (token) {
+    hours = parseInt(token[1], 10)
+    minutes = parseFloat(token[2].replace(',', '.'))
+    return (hours % 24) * MILLISECONDS_IN_HOUR +
+      minutes * MILLISECONDS_IN_MINUTE
+  }
+
+  // hh:mm:ss or hhmmss
+  token = parseTokenHHMMSS.exec(timeString)
+  if (token) {
+    hours = parseInt(token[1], 10)
+    minutes = parseInt(token[2], 10)
+    var seconds = parseFloat(token[3].replace(',', '.'))
+    return (hours % 24) * MILLISECONDS_IN_HOUR +
+      minutes * MILLISECONDS_IN_MINUTE +
+      seconds * 1000
+  }
+
+  // Invalid ISO-formatted time
+  return null
+}
+
+function parseTimezone (timezoneString) {
+  var token
+  var absoluteOffset
+
+  // Z
+  token = parseTokenTimezoneZ.exec(timezoneString)
+  if (token) {
+    return 0
+  }
+
+  // ±hh
+  token = parseTokenTimezoneHH.exec(timezoneString)
+  if (token) {
+    absoluteOffset = parseInt(token[2], 10) * 60
+    return (token[1] === '+') ? -absoluteOffset : absoluteOffset
+  }
+
+  // ±hh:mm or ±hhmm
+  token = parseTokenTimezoneHHMM.exec(timezoneString)
+  if (token) {
+    absoluteOffset = parseInt(token[2], 10) * 60 + parseInt(token[3], 10)
+    return (token[1] === '+') ? -absoluteOffset : absoluteOffset
+  }
+
+  return 0
+}
+
+function dayOfISOYear (isoYear, week, day) {
+  week = week || 0
+  day = day || 0
+  var date = new Date(0)
+  date.setUTCFullYear(isoYear, 0, 4)
+  var fourthOfJanuaryDay = date.getUTCDay() || 7
+  var diff = week * 7 + day + 1 - fourthOfJanuaryDay
+  date.setUTCDate(date.getUTCDate() + diff)
+  return date
+}
+
+module.exports = parse
+
 
 /***/ }),
 
@@ -31160,1198 +32334,47 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("WebsiteNavbar"),
-      _vm._v(" "),
-      _c("div", { staticClass: "container cont-flex PostJobContainer" }, [
-        _c(
-          "div",
-          { staticClass: "col-sm-12 col-md-12 col-lg-12 xs-padding pt-3" },
-          [
-            _vm._m(0),
-            _vm._v(" "),
-            _vm._m(1),
-            _vm._v(" "),
-            _vm._m(2),
-            _vm._v(" "),
-            _c("div", { staticClass: "job-list-wrap" }, [
-              _vm._m(3),
-              _vm._v(" "),
-              _vm._m(4),
-              _vm._v(" "),
-              _vm._m(5),
-              _vm._v(" "),
-              _vm._m(6),
-              _vm._v(" "),
-              _vm._m(7),
-              _vm._v(" "),
-              _vm._m(8),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-sm-12 col-md-12 col-lg-12 xs-padding p-0 pt-2",
-                },
-                [
-                  _vm._m(9),
-                  _vm._v(" "),
-                  _vm._m(10),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "bottom-pagination" },
-                    [_c("pagination")],
-                    1
-                  ),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "bottom-pagination" }),
-          ]
-        ),
-      ]),
-    ],
-    1
-  )
+  return _c("div", [_c("WebsiteNavbar"), _vm._v(" "), _vm._m(0)], 1)
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-detail-info" }, [
-      _c("div", { staticClass: "job-info-visual" }, [
-        _c("div", { staticClass: "job-info-img" }),
-        _vm._v(" "),
-        _c("p", { staticClass: "job-info-title" }, [_vm._v("idenbrid")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-info-static" }, [
-        _c("h1", { staticClass: "job-title-view" }, [_vm._v("DATA ANALYST")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-apply-ankers" }, [
-          _c("a", { staticClass: "add-wishlist-anker", attrs: { href: "" } }, [
-            _vm._v("Add to Wishlist"),
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "job-apply-anker", attrs: { href: "" } }, [
-            _vm._v("Apply Now"),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-detail-container" }, [
-      _c("div", { staticClass: "job-dynamic-values" }, [
-        _c("ul", [
-          _c("li", [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/calendar-job.svg",
-                alt: "img",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Aug 23, 2021")]),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/experience-job.svg",
-                alt: "",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("3 Years")]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("img", {
-              attrs: { src: "/website/assets/images/money-job.svg", alt: "" },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("80K to 100K")]),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              attrs: {
-                height: "16px",
-                width: "10px",
-                src: "/website/assets/images/pin.svg",
-                alt: "img",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Lahore, Pakistan")]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/suitcase-job.svg",
-                alt: "",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Morning Shift")]),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              attrs: { src: "/website/assets/images/switch-job.svg", alt: "" },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Full Time")]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-detail-section" }, [
-        _c("div", [
-          _c("h3", [_vm._v("Job Description:")]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "We are looking for a highly capable Database Administrator (DBA) who is highly motivated,\n                            responsible and a detail-oriented team player. Under close supervision, provides general\n                            direction, design, maintenance, and control of databases"
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("h3", [_vm._v("Job Responsibilities:")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _vm._v(
-                "- Lead role in troubleshooting and solving problems relative to current environment\n                                and architecture using a wide range of techniques and resources to detect, identify\n                                and eliminate database system problems"
-              ),
+    return _c("div", { staticClass: "container cont-flex PostJobContainer" }, [
+      _c(
+        "div",
+        { staticClass: "col-sm-12 col-md-12 col-lg-12 xs-padding pt-3" },
+        [
+          _c("div", { staticClass: "job-detail-info" }, [
+            _c("div", { staticClass: "job-info-visual" }, [
+              _c("div", { staticClass: "job-info-img" }),
+              _vm._v(" "),
+              _c("p", { staticClass: "job-info-title" }, [_vm._v("idenbrid")]),
             ]),
             _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Build database systems of high availability and quality depending on each end\n                                user’s specialized role."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Documents the established procedures used to perform repetitive but complex DBA\n                                tasks."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Design and implement database in accordance to end user’s information needs and\n                                views."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Define users and enable data distribution to the right user, in appropriate format\n                                and in a timely manner."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Use high-speed transaction recovery techniques and backup data."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Minimize database downtime and manage parameters to provide fast query responses.\n                            "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Provide proactive and reactive data management support and training to users."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Determine, enforce and document database policies, procedures and standards."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Perform tests and evaluations regularly to ensure data security, privacy and\n                                integrity."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Monitor database performance, implement changes and apply new patches and versions\n                                when required."
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("h3", [_vm._v("Qualification and Technicalities:")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _vm._v(
-                "- Bachelor's degree in computer science, or related field. - At least years of\n                                experience as a database administrator."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Hands-on experience with database standards and end user applications."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Excellent knowledge of administrating SQL and NoSQL databases."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Excellent knowledge of data backup, recovery, security, integrity and SQL."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Familiarity with database design, documentation and coding."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Previous experience with DBA case tools (frontend/backend) and third-party tools.\n                            "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Familiarity with programming languages API.")]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Problem solving skills and ability to think algorithmically"
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("h3", [_vm._v("Benefits:")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [_vm._v("- Market competitive salary")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Medical Benefits (Self & Immediate family)")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Paid Leaves (Casual, Sick & Annual leaves)")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Annual Performance based increments")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Bi-Annual Bonus")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Learning & development")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Friendly environment")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Sat & Sun off")]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-info-visual" }, [
-          _c("div", { staticClass: "job-info-img" }),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-info-title" }, [_vm._v("idenbrid")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-social-icons" }, [
-          _c("a", { attrs: { href: "" } }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/whatsapp_icon.png",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "" } }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/facebook_icon.png",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "" } }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/linkedin_icon.png",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "" } }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/github-logo_icon.png",
-                alt: "img",
-              },
-            }),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("h1", { staticClass: "company-detail-title" }, [
-            _vm._v("Company Detail"),
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "i2c Inc. is an experienced and trusted payments solution provider that helps card issuers\n                            and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs\n                            flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete\n                            control of their programs in real time. With its value-added services, rewards and\n                            loyalty options, cardholder communication tools, and extensive analytics, MCP empowers\n                            clients to increase revenues, improve efficiency, reduce costs, and build a loyal\n                            cardholder base. i2c enables clients to launch new products faster, tailor programs for\n                            specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005,\n                            CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City,\n                            California, and more than 350 employees and five sales and support offices worldwide.\n                            Its customer support provides 24x7x365 service to its clients, which include companies\n                            in North America, Latin America, the Middle East, Asia Pacific, and Europe."
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { staticClass: "more-detail-anker", attrs: { href: "" } }, [
-          _vm._v("More Details"),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "px-2" }, [
-      _c("h1", { staticClass: "post_new_job_title" }, [_vm._v("Other Jobs")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "post_new_job_descrp" }, [
-        _vm._v(
-          "\n                    This section is other jobs section offered by other companies of same position you are looking\n                    for and may or may not better option then this job post and also you can check these jobs.\n                "
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list" }, [
-      _c("div", { staticClass: "company-logo col-auto py-2" }, [
-        _c("img", {
-          attrs: {
-            src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-            alt: "Company Logo",
-          },
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list-content col" }, [
-        _c("div", { staticClass: "job-header" }, [
-          _c("h6", { staticClass: "job-title mb-0" }, [_vm._v("Data Analyst")]),
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "job-description" }, [
-          _vm._v(
-            "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-content-wrap" }, [
-          _c("div", { staticClass: "job-dynamic-values" }, [
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/calendar-job.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Aug 23, 2021")]),
+            _c("div", { staticClass: "job-info-static" }, [
+              _c("h1", { staticClass: "job-title-view" }, [
+                _vm._v("DATA ANALYST"),
               ]),
               _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/experience-job.svg",
-                    alt: "",
-                  },
-                }),
+              _c("div", { staticClass: "job-apply-ankers" }, [
+                _c(
+                  "a",
+                  { staticClass: "add-wishlist-anker", attrs: { href: "" } },
+                  [_vm._v("Add to Wishlist")]
+                ),
                 _vm._v(" "),
-                _c("span", [_vm._v("3 Years")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/money-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("80K to 100K")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    height: "16px",
-                    width: "10px",
-                    src: "/website/assets/images/pin.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Lahore, Pakistan")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/suitcase-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Morning Shift")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/switch-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Full Time")]),
+                _c(
+                  "a",
+                  { staticClass: "job-apply-anker", attrs: { href: "" } },
+                  [_vm._v("Apply Now")]
+                ),
               ]),
             ]),
           ]),
           _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [_c("i", { staticClass: "fa fa-heart" })]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list" }, [
-      _c("div", { staticClass: "company-logo col-auto py-2" }, [
-        _c("img", {
-          attrs: {
-            src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-            alt: "Company Logo",
-          },
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list-content col" }, [
-        _c("div", { staticClass: "job-header" }, [
-          _c("h6", { staticClass: "job-title mb-0" }, [_vm._v("Data Analyst")]),
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "job-description" }, [
-          _vm._v(
-            "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-content-wrap" }, [
-          _c("div", { staticClass: "job-dynamic-values" }, [
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/calendar-job.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Aug 23, 2021")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/experience-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("3 Years")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/money-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("80K to 100K")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    height: "16px",
-                    width: "10px",
-                    src: "/website/assets/images/pin.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Lahore, Pakistan")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/suitcase-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Morning Shift")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/switch-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Full Time")]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [_c("i", { staticClass: "fa fa-heart" })]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list" }, [
-      _c("div", { staticClass: "company-logo col-auto py-2" }, [
-        _c("img", {
-          attrs: {
-            src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-            alt: "Company Logo",
-          },
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list-content col" }, [
-        _c("div", { staticClass: "job-header" }, [
-          _c("h6", { staticClass: "job-title mb-0" }, [_vm._v("Data Analyst")]),
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "job-description" }, [
-          _vm._v(
-            "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-content-wrap" }, [
-          _c("div", { staticClass: "job-dynamic-values" }, [
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/calendar-job.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Aug 23, 2021")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/experience-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("3 Years")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/money-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("80K to 100K")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    height: "16px",
-                    width: "10px",
-                    src: "/website/assets/images/pin.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Lahore, Pakistan")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/suitcase-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Morning Shift")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/switch-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Full Time")]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [_c("i", { staticClass: "fa fa-heart" })]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list" }, [
-      _c("div", { staticClass: "company-logo col-auto py-2" }, [
-        _c("img", {
-          attrs: {
-            src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-            alt: "Company Logo",
-          },
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list-content col" }, [
-        _c("div", { staticClass: "job-header" }, [
-          _c("h6", { staticClass: "job-title mb-0" }, [_vm._v("Data Analyst")]),
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "job-description" }, [
-          _vm._v(
-            "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-content-wrap" }, [
-          _c("div", { staticClass: "job-dynamic-values" }, [
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/calendar-job.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Aug 23, 2021")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/experience-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("3 Years")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/money-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("80K to 100K")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    height: "16px",
-                    width: "10px",
-                    src: "/website/assets/images/pin.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Lahore, Pakistan")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/suitcase-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Morning Shift")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/switch-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Full Time")]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [_c("i", { staticClass: "fa fa-heart" })]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list" }, [
-      _c("div", { staticClass: "company-logo col-auto py-2" }, [
-        _c("img", {
-          attrs: {
-            src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-            alt: "Company Logo",
-          },
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list-content col" }, [
-        _c("div", { staticClass: "job-header" }, [
-          _c("h6", { staticClass: "job-title mb-0" }, [_vm._v("Data Analyst")]),
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "job-description" }, [
-          _vm._v(
-            "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-content-wrap" }, [
-          _c("div", { staticClass: "job-dynamic-values" }, [
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/calendar-job.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Aug 23, 2021")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/experience-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("3 Years")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/money-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("80K to 100K")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    height: "16px",
-                    width: "10px",
-                    src: "/website/assets/images/pin.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Lahore, Pakistan")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/suitcase-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Morning Shift")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/switch-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Full Time")]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [_c("i", { staticClass: "fa fa-heart" })]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list" }, [
-      _c("div", { staticClass: "company-logo col-auto py-2" }, [
-        _c("img", {
-          attrs: {
-            src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-            alt: "Company Logo",
-          },
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list-content col" }, [
-        _c("div", { staticClass: "job-header" }, [
-          _c("h6", { staticClass: "job-title mb-0" }, [_vm._v("Data Analyst")]),
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "job-description" }, [
-          _vm._v(
-            "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-content-wrap" }, [
-          _c("div", { staticClass: "job-dynamic-values" }, [
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/calendar-job.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Aug 23, 2021")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/experience-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("3 Years")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/money-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("80K to 100K")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    height: "16px",
-                    width: "10px",
-                    src: "/website/assets/images/pin.svg",
-                    alt: "img",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Lahore, Pakistan")]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/suitcase-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Morning Shift")]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/switch-job.svg",
-                    alt: "",
-                  },
-                }),
-                _vm._v(" "),
-                _c("span", [_vm._v("Full Time")]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "job-list-fav m-0" }, [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                [_c("i", { staticClass: "fa fa-heart" })]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                _vm._v("View"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "px-2" }, [
-      _c("h1", { staticClass: "post_new_job_title" }, [
-        _vm._v("Same Job offered by different Companies"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "post_new_job_descrp" }, [
-        _vm._v(
-          "\n                            This section is same position jobs section offered by other companies of same position\n                            you are looking for and may or may not better option then this job post and also you can\n                            check these jobs.\n                        "
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list-wrap" }, [
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as\n                                    you\n                                    will be evangelizing data and our methodologies to other functional analysts and\n                                    other\n                                    stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "job-content-wrap" }, [
+          _c("div", { staticClass: "job-detail-container" }, [
             _c("div", { staticClass: "job-dynamic-values" }, [
               _c("ul", [
                 _c("li", [
@@ -32428,274 +32451,380 @@ var staticRenderFns = [
               ]),
             ]),
             _vm._v(" "),
-            _c("ul", { staticClass: "job-list-fav m-0" }, [
-              _c("li", [
-                _c(
-                  "a",
-                  { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                  [_c("i", { staticClass: "fa fa-heart" })]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                  _vm._v("View"),
+            _c("div", { staticClass: "job-detail-section" }, [
+              _c("div", [
+                _c("h3", [_vm._v("Job Description:")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "We are looking for a highly capable Database Administrator (DBA) who is highly motivated,\n                            responsible and a detail-oriented team player. Under close supervision, provides general\n                            direction, design, maintenance, and control of databases"
+                  ),
                 ]),
               ]),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as\n                                    you\n                                    will be evangelizing data and our methodologies to other functional analysts and\n                                    other\n                                    stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "job-content-wrap" }, [
-            _c("div", { staticClass: "job-dynamic-values" }, [
-              _c("ul", [
-                _c("li", [
+              _vm._v(" "),
+              _c("div", [
+                _c("h3", [_vm._v("Job Responsibilities:")]),
+                _vm._v(" "),
+                _c("ul", [
+                  _c("li", [
+                    _vm._v(
+                      "- Lead role in troubleshooting and solving problems relative to current environment\n                                and architecture using a wide range of techniques and resources to detect, identify\n                                and eliminate database system problems"
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Build database systems of high availability and quality depending on each end\n                                user’s specialized role."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Documents the established procedures used to perform repetitive but complex DBA\n                                tasks."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Design and implement database in accordance to end user’s information needs and\n                                views."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Define users and enable data distribution to the right user, in appropriate format\n                                and in a timely manner."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Use high-speed transaction recovery techniques and backup data."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Minimize database downtime and manage parameters to provide fast query responses.\n                            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Provide proactive and reactive data management support and training to users."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Determine, enforce and document database policies, procedures and standards."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Perform tests and evaluations regularly to ensure data security, privacy and\n                                integrity."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Monitor database performance, implement changes and apply new patches and versions\n                                when required."
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("h3", [_vm._v("Qualification and Technicalities:")]),
+                _vm._v(" "),
+                _c("ul", [
+                  _c("li", [
+                    _vm._v(
+                      "- Bachelor's degree in computer science, or related field. - At least years of\n                                experience as a database administrator."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Hands-on experience with database standards and end user applications."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Excellent knowledge of administrating SQL and NoSQL databases."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Excellent knowledge of data backup, recovery, security, integrity and SQL."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Familiarity with database design, documentation and coding."
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Previous experience with DBA case tools (frontend/backend) and third-party tools.\n                            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v("- Familiarity with programming languages API."),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "- Problem solving skills and ability to think algorithmically"
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("h3", [_vm._v("Benefits:")]),
+                _vm._v(" "),
+                _c("ul", [
+                  _c("li", [_vm._v("- Market competitive salary")]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v("- Medical Benefits (Self & Immediate family)"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v("- Paid Leaves (Casual, Sick & Annual leaves)"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("- Annual Performance based increments")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("- Bi-Annual Bonus")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("- Learning & development")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("- Friendly environment")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("- Sat & Sun off")]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-info-visual" }, [
+                _c("div", { staticClass: "job-info-img" }),
+                _vm._v(" "),
+                _c("p", { staticClass: "job-info-title" }, [
+                  _vm._v("idenbrid"),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-social-icons" }, [
+                _c("a", { attrs: { href: "" } }, [
                   _c("img", {
                     attrs: {
-                      src: "/website/assets/images/calendar-job.svg",
+                      src: "/website/assets/images/whatsapp_icon.png",
                       alt: "img",
                     },
                   }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Aug 23, 2021")]),
                 ]),
                 _vm._v(" "),
-                _c("li", [
+                _c("a", { attrs: { href: "" } }, [
                   _c("img", {
                     attrs: {
-                      src: "/website/assets/images/experience-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("3 Years")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/money-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("80K to 100K")]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      height: "16px",
-                      width: "10px",
-                      src: "/website/assets/images/pin.svg",
+                      src: "/website/assets/images/facebook_icon.png",
                       alt: "img",
                     },
                   }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Lahore, Pakistan")]),
+                ]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/website/assets/images/linkedin_icon.png",
+                      alt: "img",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/website/assets/images/github-logo_icon.png",
+                      alt: "img",
+                    },
+                  }),
                 ]),
               ]),
               _vm._v(" "),
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/suitcase-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Morning Shift")]),
+              _c("div", [
+                _c("h1", { staticClass: "company-detail-title" }, [
+                  _vm._v("Company Detail"),
                 ]),
                 _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/switch-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Full Time")]),
+                _c("p", [
+                  _vm._v(
+                    "i2c Inc. is an experienced and trusted payments solution provider that helps card issuers\n                            and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs\n                            flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete\n                            control of their programs in real time. With its value-added services, rewards and\n                            loyalty options, cardholder communication tools, and extensive analytics, MCP empowers\n                            clients to increase revenues, improve efficiency, reduce costs, and build a loyal\n                            cardholder base. i2c enables clients to launch new products faster, tailor programs for\n                            specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005,\n                            CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City,\n                            California, and more than 350 employees and five sales and support offices worldwide.\n                            Its customer support provides 24x7x365 service to its clients, which include companies\n                            in North America, Latin America, the Middle East, Asia Pacific, and Europe."
+                  ),
                 ]),
               ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                { staticClass: "more-detail-anker", attrs: { href: "" } },
+                [_vm._v("More Details")]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "px-2" }, [
+            _c("h1", { staticClass: "post_new_job_title" }, [
+              _vm._v("Other Jobs"),
             ]),
             _vm._v(" "),
-            _c("ul", { staticClass: "job-list-fav m-0" }, [
-              _c("li", [
-                _c(
-                  "a",
-                  { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                  [_c("i", { staticClass: "fa fa-heart" })]
-                ),
+            _c("p", { staticClass: "post_new_job_descrp" }, [
+              _vm._v(
+                "\n                    This section is other jobs section offered by other companies of same position you are looking\n                    for and may or may not better option then this job post and also you can check these jobs.\n                "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "job-list-wrap" }, [
+            _c("div", { staticClass: "job-list" }, [
+              _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
+                    alt: "Company Logo",
+                  },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
               ]),
               _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                  _vm._v("View"),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "job-post-date" }, [
-            _vm._v("20 hours ago"),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as\n                                    you\n                                    will be evangelizing data and our methodologies to other functional analysts and\n                                    other\n                                    stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "job-content-wrap" }, [
-            _c("div", { staticClass: "job-dynamic-values" }, [
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/calendar-job.svg",
-                      alt: "img",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Aug 23, 2021")]),
+              _c("div", { staticClass: "job-list-content col" }, [
+                _c("div", { staticClass: "job-header" }, [
+                  _c("h6", { staticClass: "job-title mb-0" }, [
+                    _vm._v("Data Analyst"),
+                  ]),
                 ]),
                 _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/experience-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("3 Years")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/money-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("80K to 100K")]),
+                _c("span", { staticClass: "job-post-date" }, [
+                  _vm._v("20 hours ago"),
                 ]),
                 _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      height: "16px",
-                      width: "10px",
-                      src: "/website/assets/images/pin.svg",
-                      alt: "img",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Lahore, Pakistan")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/suitcase-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Morning Shift")]),
+                _c("p", { staticClass: "job-description" }, [
+                  _vm._v(
+                    "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
+                  ),
                 ]),
                 _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/switch-job.svg",
-                      alt: "",
-                    },
-                  }),
+                _c("div", { staticClass: "job-content-wrap" }, [
+                  _c("div", { staticClass: "job-dynamic-values" }, [
+                    _c("ul", [
+                      _c("li", [
+                        _c("img", {
+                          attrs: {
+                            src: "/website/assets/images/calendar-job.svg",
+                            alt: "img",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", [_vm._v("Aug 23, 2021")]),
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("img", {
+                          attrs: {
+                            src: "/website/assets/images/experience-job.svg",
+                            alt: "",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", [_vm._v("3 Years")]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c("li", [
+                        _c("img", {
+                          attrs: {
+                            src: "/website/assets/images/money-job.svg",
+                            alt: "",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", [_vm._v("80K to 100K")]),
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("img", {
+                          attrs: {
+                            height: "16px",
+                            width: "10px",
+                            src: "/website/assets/images/pin.svg",
+                            alt: "img",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", [_vm._v("Lahore, Pakistan")]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c("li", [
+                        _c("img", {
+                          attrs: {
+                            src: "/website/assets/images/suitcase-job.svg",
+                            alt: "",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", [_vm._v("Morning Shift")]),
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("img", {
+                          attrs: {
+                            src: "/website/assets/images/switch-job.svg",
+                            alt: "",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", [_vm._v("Full Time")]),
+                      ]),
+                    ]),
+                  ]),
                   _vm._v(" "),
-                  _c("span", [_vm._v("Full Time")]),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "job-list-fav m-0" }, [
-              _c("li", [
-                _c(
-                  "a",
-                  { staticClass: "job-wishlist-btn", attrs: { href: "#" } },
-                  [_c("i", { staticClass: "fa fa-heart" })]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                  _vm._v("View"),
+                  _c("ul", { staticClass: "job-list-fav m-0" }, [
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "job-wishlist-btn",
+                          attrs: { href: "#" },
+                        },
+                        [_c("i", { staticClass: "fa fa-heart" })]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        { staticClass: "job-view-btn", attrs: { href: "#" } },
+                        [_vm._v("View")]
+                      ),
+                    ]),
+                  ]),
                 ]),
               ]),
             ]),
           ]),
-        ]),
-      ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "bottom-pagination" }),
+        ]
+      ),
     ])
   },
 ]
@@ -33330,6 +33459,19 @@ var render = function () {
                             ]),
                           ]),
                           _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "job-post-date" },
+                            [
+                              _c("timeago", {
+                                attrs: {
+                                  datetime: _vm.searchData[index].created_at,
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
                           _c("p", { staticClass: "job-description" }, [
                             _vm._v(_vm._s(_vm.searchData[index].description)),
                           ]),
@@ -33403,7 +33545,12 @@ var render = function () {
                                     staticClass: "job-view-btn",
                                     attrs: {
                                       "data-toggle": "collapse",
-                                      to: { name: "JobDetail" },
+                                      to: {
+                                        name: "JobDetail",
+                                        params: {
+                                          id: _vm.searchData[index].id,
+                                        },
+                                      },
                                     },
                                   },
                                   [_vm._v("View")]
@@ -35575,9 +35722,12 @@ var render = function () {
                       }),
                     ]),
                     _vm._v(" "),
-                    _c("span", { staticClass: "job-post-date" }, [
-                      _vm._v("20 hours ago"),
-                    ]),
+                    _c(
+                      "span",
+                      { staticClass: "job-post-date" },
+                      [_c("timeago", { attrs: { datetime: item.created_at } })],
+                      1
+                    ),
                     _vm._v(" "),
                     _c("p", { staticClass: "job-description" }, [
                       _vm._v(_vm._s(item.job_description)),
@@ -36874,7 +37024,7 @@ var render = function () {
                                                   "Enter Job Description",
                                                 name: "job_description",
                                                 id: "job_description",
-                                                maxlength: "255",
+                                                maxlength: _vm.max,
                                               },
                                               domProps: {
                                                 value:
@@ -36891,6 +37041,16 @@ var render = function () {
                                                     $event.target.value
                                                   )
                                                 },
+                                              },
+                                            }),
+                                            _vm._v(" "),
+                                            _c("div", {
+                                              domProps: {
+                                                textContent: _vm._s(
+                                                  _vm.max -
+                                                    _vm.record.job_description
+                                                      .length
+                                                ),
                                               },
                                             }),
                                             _vm._v(" "),
@@ -49468,6 +49628,178 @@ if (inBrowser && window.Vue) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VueRouter);
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-timeago/dist/vue-timeago.es.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/vue-timeago/dist/vue-timeago.es.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "createTimeago": () => (/* binding */ createTimeago),
+/* harmony export */   "install": () => (/* binding */ install),
+/* harmony export */   "converter": () => (/* binding */ converter)
+/* harmony export */ });
+/* harmony import */ var date_fns_distance_in_words_to_now__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! date-fns/distance_in_words_to_now */ "./node_modules/date-fns/distance_in_words_to_now/index.js");
+/* harmony import */ var date_fns_distance_in_words_to_now__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(date_fns_distance_in_words_to_now__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var defaultConverter = (function (date, locale, converterOptions) {
+  var includeSeconds = converterOptions.includeSeconds;
+  var addSuffix = converterOptions.addSuffix; if ( addSuffix === void 0 ) addSuffix = true;
+  return date_fns_distance_in_words_to_now__WEBPACK_IMPORTED_MODULE_0___default()(date, {
+    locale: locale,
+    includeSeconds: includeSeconds,
+    addSuffix: addSuffix
+  });
+});
+
+var createTimeago = function (opts) {
+  if ( opts === void 0 ) opts = {};
+
+  var locales = opts.locales || {};
+  var name = opts.name || 'Timeago';
+  return {
+    name: name,
+    props: {
+      datetime: {
+        required: true
+      },
+      title: {
+        type: [String, Boolean]
+      },
+      locale: {
+        type: String
+      },
+      autoUpdate: {
+        type: [Number, Boolean]
+      },
+      converter: {
+        type: Function
+      },
+      converterOptions: {
+        type: Object
+      }
+    },
+
+    data: function data() {
+      return {
+        timeago: this.getTimeago()
+      };
+    },
+
+    computed: {
+      localeName: function localeName() {
+        return this.locale || this.$timeago.locale;
+      }
+
+    },
+
+    mounted: function mounted() {
+      this.startUpdater();
+    },
+
+    beforeDestroy: function beforeDestroy() {
+      this.stopUpdater();
+    },
+
+    render: function render(h) {
+      return h('time', {
+        attrs: {
+          datetime: new Date(this.datetime).toISOString(),
+          title: typeof this.title === 'string' ? this.title : this.title === false ? null : this.timeago
+        }
+      }, [this.timeago]);
+    },
+
+    methods: {
+      getTimeago: function getTimeago(datetime) {
+        var converter = this.converter || opts.converter || defaultConverter;
+        return converter(datetime || this.datetime, locales[this.locale || this.$timeago.locale], this.converterOptions || {});
+      },
+
+      convert: function convert(datetime) {
+        this.timeago = this.getTimeago(datetime);
+      },
+
+      startUpdater: function startUpdater() {
+        var this$1 = this;
+
+        if (this.autoUpdate) {
+          var autoUpdaye = this.autoUpdate === true ? 60 : this.autoUpdate;
+          this.updater = setInterval(function () {
+            this$1.convert();
+          }, autoUpdaye * 1000);
+        }
+      },
+
+      stopUpdater: function stopUpdater() {
+        if (this.updater) {
+          clearInterval(this.updater);
+          this.updater = null;
+        }
+      }
+
+    },
+    watch: {
+      autoUpdate: function autoUpdate(newValue) {
+        this.stopUpdater();
+
+        if (newValue) {
+          this.startUpdater();
+        }
+      },
+
+      datetime: function datetime() {
+        this.convert();
+      },
+
+      localeName: function localeName() {
+        this.convert();
+      },
+
+      converter: function converter() {
+        this.convert();
+      },
+
+      converterOptions: {
+        handler: function handler() {
+          this.convert();
+        },
+
+        deep: true
+      }
+    }
+  };
+};
+var install = function (Vue, opts) {
+  if (Vue.prototype.$timeago) {
+    return;
+  }
+
+  if ( true && !Vue.observable) {
+    console.warn("[vue-timeago] Vue 2.6 or above is recommended.");
+  }
+
+  var $timeago = {
+    locale: opts.locale
+  };
+  Vue.prototype.$timeago = Vue.observable ? Vue.observable($timeago) : new Vue({
+    data: $timeago
+  });
+  var Component = createTimeago(opts);
+  Vue.component(Component.name, Component);
+};
+var converter = defaultConverter;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (install);
+
 
 
 /***/ }),

@@ -163,7 +163,7 @@
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i> -->
                                     </div>
-                                    <!-- <span class="job-post-date">{{(new Date() | moment("YYYY-MM-DD"))}}</span> -->
+                                    <span class="job-post-date"><timeago :datetime="searchData[index].created_at"></timeago></span>
                                     <p class="job-description">{{searchData[index].description}}</p>
                                     <ul class="job-list-meta m-0 border-post">
                                         <li><i class="fa fa-calendar"></i>{{searchData[index].created_at | moment("YYYY-MM-DD")}}</li>
@@ -179,7 +179,7 @@
                                     </ul>
                                     <ul class="job-list-fav m-0">
                                         <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                        <li><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'JobDetail' }">View</router-link></li>
+                                        <li><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'JobDetail', params: { id: searchData[index].id } }">View</router-link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -528,6 +528,7 @@
             search() {
                 axios.post('/job-search', this.record)
                 .then((response) => {
+                    this.searchData = []
                     this.searchData = response.data
                     this.totalJobs = this.searchData.length
                 });
@@ -535,6 +536,7 @@
             keywordSearch() {
                 axios.get('/job-keyword-search/'+this.record.keyword)
                 .then((response) => {
+                    this.searchData = []
                     this.searchData = response.data
                     this.totalJobs = this.searchData.length
                 });
