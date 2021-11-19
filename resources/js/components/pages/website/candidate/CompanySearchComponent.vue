@@ -116,7 +116,7 @@
                     </div>
 
                    <div class="text-center">
-                        <button class="load-more-btn mx-auto" @click="jobToShow += 2">Load more</button>
+                        <button class="load-more-btn mx-auto" @click="companiesToShow += 2">Load more</button>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
