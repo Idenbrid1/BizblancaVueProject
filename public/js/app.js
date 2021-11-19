@@ -30554,7 +30554,9 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-whatsapp" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/whatsapp-quaries.svg" },
+                    attrs: {
+                      src: "/website/assets/images/whatsapp-quaries.svg",
+                    },
                   }),
                   _c("span", [
                     _vm._v(
@@ -30567,7 +30569,9 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-facebook" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/facebook-quaries.svg" },
+                    attrs: {
+                      src: "/website/assets/images/facebook-quaries.svg",
+                    },
                   }),
                   _c("span", [_vm._v("@BizBlanca")]),
                 ]),
@@ -30576,7 +30580,9 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-linkedin" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/linkdine-quaries.svg" },
+                    attrs: {
+                      src: "/website/assets/images/linkdine-quaries.svg",
+                    },
                   }),
                   _c("span", [_vm._v("@BizBlanca")]),
                 ]),
@@ -30585,7 +30591,7 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-google" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/gmail-quaries.svg" },
+                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
                   }),
                   _c("span", [_vm._v("bizer@bizblanca.com")]),
                 ]),
@@ -30715,7 +30721,9 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "position-box" }, [
                       _c("img", {
-                        attrs: { src: "assets/images/position-crown.svg" },
+                        attrs: {
+                          src: "/website/assets/images/position-crown.svg",
+                        },
                       }),
                       _vm._v(" "),
                       _c("h3", { staticClass: "position-number" }, [
@@ -30752,7 +30760,9 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "position-box" }, [
                       _c("img", {
-                        attrs: { src: "assets/images/position-crown.svg" },
+                        attrs: {
+                          src: "/website/assets/images/position-crown.svg",
+                        },
                       }),
                       _vm._v(" "),
                       _c("h3", { staticClass: "position-number" }, [
@@ -34443,7 +34453,9 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-whatsapp" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/whatsapp-quaries.svg" },
+                    attrs: {
+                      src: "/website/assets/images/whatsapp-quaries.svg",
+                    },
                   }),
                   _c("span", [
                     _vm._v(
@@ -34456,7 +34468,9 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-facebook" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/facebook-quaries.svg" },
+                    attrs: {
+                      src: "/website/assets/images/facebook-quaries.svg",
+                    },
                   }),
                   _c("span", [_vm._v("@BizBlanca")]),
                 ]),
@@ -34465,7 +34479,9 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-linkedin" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/linkdine-quaries.svg" },
+                    attrs: {
+                      src: "/website/assets/images/linkdine-quaries.svg",
+                    },
                   }),
                   _c("span", [_vm._v("@BizBlanca")]),
                 ]),
@@ -34474,7 +34490,7 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-google" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/gmail-quaries.svg" },
+                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
                   }),
                   _c("span", [_vm._v("bizer@bizblanca.com")]),
                 ]),
@@ -34604,7 +34620,9 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "position-box" }, [
                       _c("img", {
-                        attrs: { src: "assets/images/position-crown.svg" },
+                        attrs: {
+                          src: "/website//website/assets/images/position-crown.svg",
+                        },
                       }),
                       _vm._v(" "),
                       _c("h3", { staticClass: "position-number" }, [
@@ -34641,7 +34659,9 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "position-box" }, [
                       _c("img", {
-                        attrs: { src: "assets/images/position-crown.svg" },
+                        attrs: {
+                          src: "/website/assets/images/position-crown.svg",
+                        },
                       }),
                       _vm._v(" "),
                       _c("h3", { staticClass: "position-number" }, [
