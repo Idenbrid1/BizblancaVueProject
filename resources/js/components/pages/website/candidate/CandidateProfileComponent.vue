@@ -3,6 +3,7 @@
         <WebsiteNavbar />
         <CandidateNavbar />
         <div class="profile-wrapper mt-5">
+            <div class="color-danger" v-if="this.skills_exist == false">Please Fill skill section to apply job and get good results! THANKS</div>
             <div class="row m-0 container p-0">
                 <div class="col-12 tabs-section-container">
                     <div class="row no-gutters tabs-section-wrap">
@@ -2292,6 +2293,7 @@
                     description: '',
                 },
                 isWorkingCurrently: true,
+                skills_exist: false,
             }
         },
         components: {
@@ -2322,11 +2324,12 @@
                         this.basic_information_record.country = response.data.candidate.country
                         this.basic_information_record.bio = response.data.candidate.bio
                         this.basic_information_record.is_looking_for_job = response.data.candidate.is_looking_for_job
-                        this.basic_information_record.looking_for_job_department = response.data.candidate.looking_for_job_department
+                        this.basic_information_record.looking_for_job_department = response.data.candidate.looking_for_job_departmentx
                         this.basic_information_record.looking_for_job_expected_salary = response.data.candidate.looking_for_job_expected_salary
                         this.basic_information_record.looking_for_job_location = response.data.candidate.looking_for_job_location
                         this.basic_information_record.looking_for_job_position = response.data.candidate.looking_for_job_position
                         this.basic_information_record.looking_for_job_when = response.data.candidate.looking_for_job_when
+                        this.skills_exist = response.data.skill_exist
                     });
             },
             updateBasicInformation() {

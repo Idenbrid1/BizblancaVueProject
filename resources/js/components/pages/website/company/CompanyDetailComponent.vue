@@ -88,7 +88,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="company_images_detail">
+                <div v-if="data.profile_gallery" class="company_images_detail">
                     <img v-for="(item, index) in data.profile_gallery.split(',')" :key="index" :src="'/storage/images/companies/'+item" alt="img">
                 </div>
                 <div class="px-2">
@@ -112,7 +112,7 @@
                         zones.
                     </p>
                 </div> -->
-                <div class="px-2">
+                <div class="px-2" v-if="data.profile_video">
                     <h1 class="post_new_job_title">Profile Video</h1>
                     <video controls :src="'/storage/images/companies/'+data.profile_video" class="CompanyProfileVideo"></video>
                 </div>
@@ -127,38 +127,36 @@
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">
                     <!-- Job List Start -->
-                    <div class="job-list">
+                    <div class="job-list" v-for="(item, index) in data.jobs" :key="index">
                         <div class="company-logo col-auto py-2">
-                            <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Company Logo">
-                            <span class="company-h">Ahmad</span>
+                            <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo">
+                            <span class="company-h">{{item.title}}</span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">Data Analyst</h6>
+                                <h6 class="job-title mb-0">{{item.title}}</h6>
+                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i> -->
                             </div>
-                            <span class="job-post-date">20 hours ago</span>
-                            <p class="job-description">As a Data Scientist, you will be in a central position as you
-                                will be evangelizing data and our methodologies to other functional analysts and other
-                                stakeholders in the company.</p>
+                            <!-- <span class="job-post-date">20 hours ago</span> -->
+                            <p class="job-description">{{item.description}}</p>
                             <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i></li>
-                                <li><i class="fal fa-address-card"></i>experience</li>
+                                <li><i class="fa fa-calendar"></i>{{item.created_at | moment("YYYY-MM-DD")}}</li>
+                                <li><i class="fal fa-address-card"></i>{{item.experience}}</li>
                             </ul>
                             <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>salary_range</li>
-                                <li><i class="fa fa-map-marker"></i>location</li>
+                                <li><i class="fal fa-money-bill-alt"></i>{{item.salary_range}}</li>
+                                <li><i class="fa fa-map-marker"></i>{{item.location}}</li>
                             </ul>
                             <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>shift</li>
-                                <li><i class="fal fa-clock"></i>job_type</li>
+                                <li><i class="fal fa-laptop-house"></i>{{item.shift}}</li>
+                                <li><i class="fal fa-clock"></i>{{item.salary_type}}</li>
                             </ul>
                             <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
+                                <!-- <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li> -->
                                 <li><a href="#" class="job-view-btn">View</a></li>
                             </ul>
                         </div>
