@@ -2193,6 +2193,7 @@ body{
     font-size: 20px;
     color: #081351;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 .job-header,
@@ -2395,23 +2396,6 @@ body{
     color: #ffffff;
     background-color: #044a75;
 }
-
-.social-btns .btn-google {
-    background-color: #df270b;
-    border-color: #a01b03;
-    color: #ffffff;
-    min-width: 100%;
-    border-radius: 20px;
-    flex-direction: column;
-    padding: 2px;
-}
-
-.social-btns .btn-google:hover {
-    color: #ffffff;
-    background-color: #a01b03;
-}
-
-
 /* candidate style */
 
 .CandidateLandingSection {

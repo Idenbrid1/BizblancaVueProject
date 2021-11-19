@@ -22,7 +22,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Experience</label>
-                                        <input class="cusSelectbox" v-model="record.working_experience" id="cusSelectbox" type="number">
+                                        <input class="form-control" v-model="record.working_experience" id="cusSelectbox" type="number">
                                     </div>
                                     <!-- <div class="col-md-6">
                                         <label>Education</label>
@@ -36,7 +36,7 @@
                                     </div> -->
                                     <div class="col-md-6">
                                         <label>City</label>
-                                        <input class="cusSelectbox" v-model="record.city" id="cusSelectbox" type="text">
+                                        <input class="form-control" v-model="record.city" id="cusSelectbox" type="text">
                                     </div>
                                     <!-- <div class="col-md-6">
                                         <label>Area</label>
