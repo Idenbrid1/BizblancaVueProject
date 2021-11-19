@@ -8361,91 +8361,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -11691,7 +11606,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_18__["default"]({
     name: 'JobSearch',
     component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
   }, {
-    path: '/job-detail/:id',
+    path: '/job-detail:id',
     name: 'JobDetail',
     component: _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_16__["default"]
   }]
@@ -32716,13 +32631,6 @@ var render = function () {
                       _c("div", { staticClass: "job-dynamic-values" }, [
                         _c("ul", [
                           _c("li", [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/calendar-job.svg",
-                                alt: "img",
-                              },
-                            }),
-                            _vm._v(" "),
                             _c("span", [
                               _vm._v(
                                 _vm._s(
@@ -32829,26 +32737,6 @@ var render = function () {
               }),
               0
             ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "col-sm-12 col-md-12 col-lg-12 xs-padding p-0 pt-2",
-              },
-              [
-                _vm._m(5),
-                _vm._v(" "),
-                _vm._m(6),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "bottom-pagination" },
-                  [_c("pagination")],
-                  1
-                ),
-              ]
-            ),
           ]
         ),
         _vm._v(" "),
@@ -32942,150 +32830,6 @@ var staticRenderFns = [
     return _c("li", [
       _c("a", { staticClass: "job-wishlist-btn", attrs: { href: "#" } }, [
         _c("i", { staticClass: "fa fa-heart" }),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "px-2" }, [
-      _c("h1", { staticClass: "post_new_job_title" }, [
-        _vm._v("Same Job offered by different Companies"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "post_new_job_descrp" }, [
-        _vm._v(
-          "\n                        This section is same position jobs section offered by other companies of same position\n                        you are looking for and may or may not better option then this job post and also you can\n                        check these jobs.\n                    "
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list-wrap" }, [
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "d-flex align-items-center" }, [
-              _c("span", { staticClass: "job-post-date" }, [
-                _vm._v("20 hours ago "),
-              ]),
-              _vm._v(" "),
-              _c("i", { staticClass: "far fa-heart" }),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as you\n                                will be evangelizing data and our methodologies to other functional analysts and\n                                other\n                                stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "job-content-wrap" }, [
-            _c("div", { staticClass: "job-dynamic-values" }, [
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/calendar-job.svg",
-                      alt: "img",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Aug 23, 2021")]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/experience-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("3 Years")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/money-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("80K to 100K")]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    staticStyle: { margin: "0px 3px" },
-                    attrs: {
-                      height: "16px",
-                      width: "10px",
-                      src: "/website/assets/images/pin.svg",
-                      alt: "img",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Lahore, Pakistan")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/suitcase-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Morning Shift")]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/switch-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Full Time")]),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "job-list-fav m-0" }, [
-              _c("li", [
-                _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                  _vm._v("View"),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
       ]),
     ])
   },
@@ -33845,7 +33589,12 @@ var render = function () {
                                       staticClass: "job-view-btn",
                                       attrs: {
                                         "data-toggle": "collapse",
-                                        to: { name: "JobDetail" },
+                                        to: {
+                                          name: "JobDetail",
+                                          params: {
+                                            id: _vm.searchData[index].id,
+                                          },
+                                        },
                                       },
                                     },
                                     [_vm._v("View")]
