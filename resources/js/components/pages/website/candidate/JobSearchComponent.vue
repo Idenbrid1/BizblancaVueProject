@@ -3,7 +3,7 @@
         <WebsiteNavbar />
         <CandidateNavbar />
         <div class="container user-profile-container cont-flex">
-            <div class="col-12 col-md-8 col-lg-8 xs-padding">
+            <div class="condition-search-feilds">
                 <div class="product_accordion_container">
                     <div>
                         <input class="product_accordion" type="checkbox" name="accordion" id="first" checked>
@@ -22,7 +22,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Experience</label>
-                                        <input class="cusSelectbox" v-model="record.experience" id="cusSelectbox" type="number">
+                                        <input class="form-control" v-model="record.experience" id="cusSelectbox" type="number">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Salary Range</label>
@@ -115,37 +115,17 @@
                     <div class="col-md-12 search-container">
                         <form>
                             <div> <label class="keyword-input-title">Keyword Search</label></div>
-                            <input type="text" placeholder="* Includes All Keywords" name="search" v-model="record.keyword">
-                            <button type="submit" @click.prevent="keywordSearch()" class="keyword-search-btn">Search</button>
-                            <button type="submit" @click.prevent="clearSearch()" class="keyword-search-btn">Clear</button>
+                            <input class="form-control" type="text" placeholder="* Includes All Keywords" name="search" v-model="record.keyword">
+                            <div class="keyword-search-ankers">
+                                <button type="submit" @click.prevent="keywordSearch()" class="keyword-search-btn">Search</button>
+                                <button type="submit" @click.prevent="clearSearch()" class="keyword-clear-btn">Clear</button>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <div class="candidate my-2">
-                    <label class="candidate-tagline">
-                        Candidates
-                    </label>
+                <div class="candidate">
                     <!-- Job List Toolbar Start -->
-                    <div class="px-3">
-                        <!-- <div class="job-list-toolbar">
-                            <ul class="job-pagination pagination-center ">
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                            aria-hidden="true"></i> Previous 20</a></li>
-                                <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                            aria-hidden="true"></i> Next 20</a></li>
-                            </ul>
-                            <div class="job-filter">
-                                <select class="job-select">
-                                    <option>Search order by</option>
-                                    <option>Top Rated</option>
-                                    <option>Most Popular</option>
-                                </select>
-                            </div>
-                        </div> -->
+                    <div>
                         <!-- Job List Toolbar End -->
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap">
@@ -186,7 +166,9 @@
                             <!-- </div> -->
                         </div>
                     </div>
-                    <button class="job-view-btn text-center" @click="jobToShow += 2">load more</button>
+                    <div class="text-center">
+                        <button class="load-more-btn mx-auto" @click="jobToShow += 2">Load more</button>
+                    </div>
                 </div>
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->
@@ -205,7 +187,7 @@
                 </div> -->
                 <!-- Pagination End -->
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="common-sidebar">
                 <br><br>
                 <div class="col p-0">
                     <div class="side-card h-300 shadow-sm">

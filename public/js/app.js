@@ -8866,24 +8866,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -32858,7 +32840,7 @@ var render = function () {
       _c("CandidateNavbar"),
       _vm._v(" "),
       _c("div", { staticClass: "container user-profile-container cont-flex" }, [
-        _c("div", { staticClass: "col-12 col-md-8 col-lg-8 xs-padding" }, [
+        _c("div", { staticClass: "condition-search-feilds" }, [
           _c("div", { staticClass: "product_accordion_container" }, [
             _c("div", [
               _c("input", {
@@ -32915,7 +32897,7 @@ var render = function () {
                             expression: "record.experience",
                           },
                         ],
-                        staticClass: "cusSelectbox",
+                        staticClass: "form-control",
                         attrs: { id: "cusSelectbox", type: "number" },
                         domProps: { value: _vm.record.experience },
                         on: {
@@ -33368,6 +33350,7 @@ var render = function () {
                       expression: "record.keyword",
                     },
                   ],
+                  staticClass: "form-control",
                   attrs: {
                     type: "text",
                     placeholder: "* Includes All Keywords",
@@ -33384,45 +33367,43 @@ var render = function () {
                   },
                 }),
                 _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "keyword-search-btn",
-                    attrs: { type: "submit" },
-                    on: {
-                      click: function ($event) {
-                        $event.preventDefault()
-                        return _vm.keywordSearch()
+                _c("div", { staticClass: "keyword-search-ankers" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "keyword-search-btn",
+                      attrs: { type: "submit" },
+                      on: {
+                        click: function ($event) {
+                          $event.preventDefault()
+                          return _vm.keywordSearch()
+                        },
                       },
                     },
-                  },
-                  [_vm._v("Search")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "keyword-search-btn",
-                    attrs: { type: "submit" },
-                    on: {
-                      click: function ($event) {
-                        $event.preventDefault()
-                        return _vm.clearSearch()
+                    [_vm._v("Search")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "keyword-clear-btn",
+                      attrs: { type: "submit" },
+                      on: {
+                        click: function ($event) {
+                          $event.preventDefault()
+                          return _vm.clearSearch()
+                        },
                       },
                     },
-                  },
-                  [_vm._v("Clear")]
-                ),
+                    [_vm._v("Clear")]
+                  ),
+                ]),
               ]),
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "candidate my-2" }, [
-            _c("label", { staticClass: "candidate-tagline" }, [
-              _vm._v("\n                    Candidates\n                "),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
+          _c("div", { staticClass: "candidate" }, [
+            _c("div", [
               _c(
                 "div",
                 { staticClass: "job-list-wrap" },
@@ -33567,18 +33548,20 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "job-view-btn text-center",
-                on: {
-                  click: function ($event) {
-                    _vm.jobToShow += 2
+            _c("div", { staticClass: "text-center" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "load-more-btn mx-auto",
+                  on: {
+                    click: function ($event) {
+                      _vm.jobToShow += 2
+                    },
                   },
                 },
-              },
-              [_vm._v("load more")]
-            ),
+                [_vm._v("Load more")]
+              ),
+            ]),
           ]),
         ]),
         _vm._v(" "),
@@ -33613,7 +33596,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-12 col-md-4 col-lg-4" }, [
+    return _c("div", { staticClass: "common-sidebar" }, [
       _c("br"),
       _c("br"),
       _vm._v(" "),
