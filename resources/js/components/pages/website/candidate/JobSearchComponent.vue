@@ -22,7 +22,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Experience</label>
-                                        <input class="form-control" v-model="record.experience" id="cusSelectbox" type="number">
+                                        <input class="form-control" v-model="record.experience" id="cusSelectbox"
+                                            type="number">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Salary Range</label>
@@ -66,7 +67,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Qualifications & Technicalities</label>
-                                        <select name="qualification_level" v-model="record.qualification_level" class="form-control">
+                                        <select name="qualification_level" v-model="record.qualification_level"
+                                            class="form-control">
                                             <option value="Metric">Metric</option>
                                             <option value="Intermediate">Intermediate</option>
                                             <option value="Graduation">Graduation</option>
@@ -90,17 +92,21 @@
                                         </multiselect>
                                     </div> -->
                                     <div class="col-12 conditioncheck">
-                                        <input name='gender' value="Male" v-model="record.gender" type="radio" class="keeplogin-checkbox" id="male">
+                                        <input name='gender' value="Male" v-model="record.gender" type="radio"
+                                            class="keeplogin-checkbox" id="male">
                                         <label for="male">Male</label>
-                                        <input name='gender' value="Female" v-model="record.gender" type="radio" class="keeplogin-checkbox" id="female">
+                                        <input name='gender' value="Female" v-model="record.gender" type="radio"
+                                            class="keeplogin-checkbox" id="female">
                                         <label for="female">Female</label>
-                                        <input name='gender' value="All" v-model="record.gender" type="radio" class="keeplogin-checkbox"
-                                            id="all-genders">
+                                        <input name='gender' value="All" v-model="record.gender" type="radio"
+                                            class="keeplogin-checkbox" id="all-genders">
                                         <label for="all-genders">All Genders</label>
                                     </div>
                                     <div class="col-12 job-condition">
-                                        <button type="submit" @click="clearSearch()" class="job-condition-clear-btn">Clear</button>
-                                        <button type="submit" @click="search()" class="job-condition-search-btn">Search</button>
+                                        <button type="submit" @click="clearSearch()"
+                                            class="job-condition-clear-btn">Clear</button>
+                                        <button type="submit" @click="search()"
+                                            class="job-condition-search-btn">Search</button>
                                     </div>
                                 </div>
                             </div>
@@ -115,10 +121,13 @@
                     <div class="col-md-12 search-container">
                         <form>
                             <div> <label class="keyword-input-title">Keyword Search</label></div>
-                            <input class="form-control" type="text" placeholder="* Includes All Keywords" name="search" v-model="record.keyword">
+                            <input class="form-control" type="text" placeholder="* Includes All Keywords" name="search"
+                                v-model="record.keyword">
                             <div class="keyword-search-ankers">
-                                <button type="submit" @click.prevent="keywordSearch()" class="keyword-search-btn">Search</button>
-                                <button type="submit" @click.prevent="clearSearch()" class="keyword-clear-btn">Clear</button>
+                                <button type="submit" @click.prevent="keywordSearch()"
+                                    class="keyword-search-btn">Search</button>
+                                <button type="submit" @click.prevent="clearSearch()"
+                                    class="keyword-clear-btn">Clear</button>
                             </div>
                         </form>
                     </div>
@@ -129,38 +138,71 @@
                         <!-- Job List Toolbar End -->
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap">
-                            <div class="job-list" v-if="index < searchData.length" v-for="(item, index) in jobToShow" :key="index">
+                            <div class="job-list" v-if="index < searchData.length" v-for="(item, index) in jobToShow"
+                                :key="index">
                                 <div class="company-logo col-auto py-2">
-                                    <img :src="'/storage/images/companies/'+searchData[index].company.logo" alt="Company Logo">
-                                    <span class="company-h">{{searchData[index].company.company_name}} </span>
+                                    <img :src="'/storage/images/companies/'+searchData[index].company.logo"
+                                        alt="Company Logo">
+                                    <span class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
                                 </div>
                                 <div class="job-list-content col">
                                     <div class="job-header">
                                         <h6 class="job-title mb-0">{{searchData[index].title}}</h6>
                                         <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i> -->
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i> -->
+
+                                        <div class="d-flex align-items-center">
+                                            <span class="job-post-date">20 hours ago </span>
+                                            <i class="far fa-heart"></i>
+                                        </div>
                                     </div>
-                                    <!-- <span class="job-post-date">{{(new Date() | moment("YYYY-MM-DD"))}}</span> -->
+
                                     <p class="job-description">{{searchData[index].description}}</p>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fa fa-calendar"></i>{{searchData[index].created_at | moment("YYYY-MM-DD")}}</li>
-                                        <li><i class="fal fa-address-card"></i>{{searchData[index].experience}}</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0 border-post">
-                                        <li><i class="fal fa-money-bill-alt"></i>{{searchData[index].salary_range}}</li>
-                                        <li><i class="fa fa-map-marker"></i>{{searchData[index].location}}</li>
-                                    </ul>
-                                    <ul class="job-list-meta m-0">
-                                        <li><i class="fal fa-laptop-house"></i>{{searchData[index].shift}}</li>
-                                        <li><i class="fal fa-clock"></i>{{searchData[index].job_type}}</li>
-                                    </ul>
-                                    <ul class="job-list-fav m-0">
-                                        <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                        <li><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'JobDetail' }">View</router-link></li>
-                                    </ul>
+                                    <div class="job-content-wrap">
+                                        <div class="job-dynamic-values">
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                                    <span>{{searchData[index].created_at | moment("YYYY-MM-DD")}}</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/experience-job.svg" alt="">
+                                                    <span>{{searchData[index].experience}}</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/money-job.svg" alt="">
+                                                    <span>{{searchData[index].salary_range}}</span>
+                                                </li>
+                                                <li>
+                                                    <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                        alt="img">
+                                                    <span>{{searchData[index].location}}</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                                    <span>{{searchData[index].shift}}</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/switch-job.svg" alt="">
+                                                    <span>{{searchData[index].job_type}}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="job-list-fav m-0">
+                                            <li>
+                                                <router-link class="job-view-btn" data-toggle="collapse"
+                                                    :to="{ name: 'JobDetail' }">View</router-link>
+                                            </li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
                             <!-- </div> -->
@@ -509,17 +551,17 @@
         methods: {
             search() {
                 axios.post('/job-search', this.record)
-                .then((response) => {
-                    this.searchData = response.data
-                    this.totalJobs = this.searchData.length
-                });
+                    .then((response) => {
+                        this.searchData = response.data
+                        this.totalJobs = this.searchData.length
+                    });
             },
             keywordSearch() {
-                axios.get('/job-keyword-search/'+this.record.keyword)
-                .then((response) => {
-                    this.searchData = response.data
-                    this.totalJobs = this.searchData.length
-                });
+                axios.get('/job-keyword-search/' + this.record.keyword)
+                    .then((response) => {
+                        this.searchData = response.data
+                        this.totalJobs = this.searchData.length
+                    });
             },
             // addSkill (newTag) {
             //     const tag = {
@@ -529,7 +571,7 @@
             //     this.options.push(tag)
             //     this.record.skills.push(tag)
             // },
-            clearSearch(){
+            clearSearch() {
                 this.record = {
                     experience: '',
                     salary_range: '',
@@ -542,8 +584,8 @@
                     skills: '',
                 };
                 this.searchData = [],
-                this.totalJobs = 0,
-                this.jobToShow = 2
+                    this.totalJobs = 0,
+                    this.jobToShow = 2
             }
         },
     };

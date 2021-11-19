@@ -1,9 +1,17 @@
+
 @media screen and (max-width:769px) {
     .company-logo{
         width: 100%;
     }
     .condition-search-feilds{
         width: 100%;
+    }
+    .job-list-content{
+        padding: 0px 10px!important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
     }
     .common-sidebar{
         width: 100%;
