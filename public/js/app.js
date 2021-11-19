@@ -6759,6 +6759,59 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -19503,15 +19556,30 @@ var render = function () {
       _c("CandidateNavbar"),
       _vm._v(" "),
       _c("div", { staticClass: "profile-wrapper mt-5" }, [
-        this.skills_exist == false
-          ? _c("div", { staticClass: "color-danger" }, [
-              _vm._v(
-                "Please Fill skill section to apply job and get good results! THANKS"
-              ),
-            ])
-          : _vm._e(),
-        _vm._v(" "),
         _c("div", { staticClass: "row m-0 container p-0" }, [
+          _c("div", { staticClass: "col-12 p-0" }, [
+            this.skills_exist == false
+              ? _c(
+                  "div",
+                  {
+                    staticClass:
+                      "alert-message-resume resume-attention-alert col-12",
+                  },
+                  [
+                    _c("h2", [
+                      _vm._v("Please correct any deficiencies in your profile"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                        Since [personal information] such as name and contact information is\n                        described in the registered work history, the examination is\n                        suspended. Please check your registration information and update\n                        your resume.\n                    "
+                      ),
+                    ]),
+                  ]
+                )
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
           _c("div", { staticClass: "col-12 tabs-section-container" }, [
             _c("div", { staticClass: "row no-gutters tabs-section-wrap" }, [
               _c("div", { staticClass: "tabs-ankers col-md-3 col-2" }, [
@@ -33419,7 +33487,9 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-whatsapp" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/whatsapp-quaries.svg" },
+                    attrs: {
+                      src: "/website/assets/images/whatsapp-quaries.svg",
+                    },
                   }),
                   _c("span", [
                     _vm._v(
@@ -33432,7 +33502,9 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-facebook" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/facebook-quaries.svg" },
+                    attrs: {
+                      src: "/website/assets/images/facebook-quaries.svg",
+                    },
                   }),
                   _c("span", [_vm._v("@BizBlanca")]),
                 ]),
@@ -33441,7 +33513,9 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-linkedin" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/linkdine-quaries.svg" },
+                    attrs: {
+                      src: "/website/assets/images/linkdine-quaries.svg",
+                    },
                   }),
                   _c("span", [_vm._v("@BizBlanca")]),
                 ]),
@@ -33450,7 +33524,7 @@ var staticRenderFns = [
               _c("li", [
                 _c("button", { staticClass: "btn btn-google" }, [
                   _c("img", {
-                    attrs: { src: "assets/images/gmail-quaries.svg" },
+                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
                   }),
                   _c("span", [_vm._v("bizer@bizblanca.com")]),
                 ]),
@@ -33580,7 +33654,9 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "position-box" }, [
                       _c("img", {
-                        attrs: { src: "assets/images/position-crown.svg" },
+                        attrs: {
+                          src: "/website/assets/images/position-crown.svg",
+                        },
                       }),
                       _vm._v(" "),
                       _c("h3", { staticClass: "position-number" }, [
@@ -33617,7 +33693,9 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "position-box" }, [
                       _c("img", {
-                        attrs: { src: "assets/images/position-crown.svg" },
+                        attrs: {
+                          src: "/website/assets/images/position-crown.svg",
+                        },
                       }),
                       _vm._v(" "),
                       _c("h3", { staticClass: "position-number" }, [
