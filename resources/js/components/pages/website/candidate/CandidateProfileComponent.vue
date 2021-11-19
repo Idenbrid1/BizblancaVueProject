@@ -3,8 +3,18 @@
         <WebsiteNavbar />
         <CandidateNavbar />
         <div class="profile-wrapper mt-5">
-            <div class="color-danger" v-if="this.skills_exist == false">Please Fill skill section to apply job and get good results! THANKS</div>
             <div class="row m-0 container p-0">
+                <div class="col-12 p-0">
+                    <div v-if="this.skills_exist == false" class="alert-message-resume resume-attention-alert col-12">
+                        <h2>Please correct any deficiencies in your profile</h2>
+                        <p>
+                            Since [personal information] such as name and contact information is
+                            described in the registered work history, the examination is
+                            suspended. Please check your registration information and update
+                            your resume.
+                        </p>
+                    </div>
+                </div>
                 <div class="col-12 tabs-section-container">
                     <div class="row no-gutters tabs-section-wrap">
                         <!-- tabs ankers -->
@@ -25,7 +35,8 @@
                                 </li>
                                 <!-- <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#qualification">Qualification</a>
-                        </li> -->                                <li class="nav-item">
+                        </li> -->
+                                <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#languages">Languages</a>
                                 </li>
                                 <li class="nav-item">
@@ -788,7 +799,9 @@
                                                                         <label class="UploadAnker"
                                                                             for="resume-pdf-file">Upload</label>
                                                                     </li>
-                                                                    <li><a class="ViewAnker" :href="'/storage/images/candidates/resume/'+this.profile.cv_file" target="_blank">View</a></li>
+                                                                    <li><a class="ViewAnker"
+                                                                            :href="'/storage/images/candidates/resume/'+this.profile.cv_file"
+                                                                            target="_blank">View</a></li>
                                                                     <div class="alert displaynone" id="responseMsg">
                                                                     </div>
                                                                     <div class='alert alert-danger mt-2 d-none text-danger'
@@ -800,12 +813,16 @@
                                                             <form id="uploadcnic">
                                                                 <ul class="uploadViewAnkerList">
                                                                     <li>
-                                                                        <input type="file" hidden name="uploadcnicfrontback" @change="saveCNIC()"
+                                                                        <input type="file" hidden
+                                                                            name="uploadcnicfrontback"
+                                                                            @change="saveCNIC()"
                                                                             id="uploadcnicfrontback">
                                                                         <label class="UploadAnker"
                                                                             for="uploadcnicfrontback">Upload</label>
                                                                     </li>
-                                                                    <li><a class="ViewAnker" :href="'/storage/images/candidates/cnic/'+this.profile.cnic_image"  target="_blank">View</a></li>
+                                                                    <li><a class="ViewAnker"
+                                                                            :href="'/storage/images/candidates/cnic/'+this.profile.cnic_image"
+                                                                            target="_blank">View</a></li>
                                                                 </ul>
                                                             </form>
                                                         </li>
@@ -813,12 +830,16 @@
                                                             <form id="uploadexperienceletter">
                                                                 <ul class="uploadViewAnkerList">
                                                                     <li>
-                                                                        <input type="file" hidden name="uploadexperienceletter" @change="saveExperienceLetter()"
+                                                                        <input type="file" hidden
+                                                                            name="uploadexperienceletter"
+                                                                            @change="saveExperienceLetter()"
                                                                             id="experiencelatter">
                                                                         <label class="UploadAnker"
                                                                             for="experiencelatter">Upload</label>
                                                                     </li>
-                                                                    <li><a class="ViewAnker" :href="'/storage/images/candidates/experience-letter/'+this.profile.experience_letter"  target="_blank">View</a></li>
+                                                                    <li><a class="ViewAnker"
+                                                                            :href="'/storage/images/candidates/experience-letter/'+this.profile.experience_letter"
+                                                                            target="_blank">View</a></li>
                                                                 </ul>
                                                             </form>
                                                         </li>
@@ -912,9 +933,12 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="profilePhoto">Profile Photo</label>
-                                                            <input name="profilePhoto" id="profilePhoto" class="form-control" type="file" />
+                                                            <input name="profilePhoto" id="profilePhoto"
+                                                                class="form-control" type="file" />
                                                             <small>
-                                                                <span v-if="errors_basic_information.profilePhoto != null" class="text-danger">
+                                                                <span
+                                                                    v-if="errors_basic_information.profilePhoto != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.profilePhoto[0]}}
                                                                 </span>
                                                             </small>
@@ -923,10 +947,12 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="candidateFullName">Full Name</label>
-                                                            <input type="text" placeholder="Enter Full Name" name="full_name" class="form-control"
+                                                            <input type="text" placeholder="Enter Full Name"
+                                                                name="full_name" class="form-control"
                                                                 v-model="basic_information_record.full_name" />
                                                             <small>
-                                                                <span v-if="errors_basic_information.full_name != null" class="text-danger">
+                                                                <span v-if="errors_basic_information.full_name != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.full_name[0]}}
                                                                 </span>
                                                             </small>
@@ -944,7 +970,8 @@
                                                                 type="radio"
                                                                 v-model="basic_information_record.gender" />
                                                             <small>
-                                                                <span v-if="errors_basic_information.gender != null" class="text-danger">
+                                                                <span v-if="errors_basic_information.gender != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.gender[0]}}
                                                                 </span>
                                                             </small>
@@ -957,7 +984,8 @@
                                                                 placeholder="Please City"
                                                                 v-model="basic_information_record.city" />
                                                             <small>
-                                                                <span v-if="errors_basic_information.city != null" class="text-danger">
+                                                                <span v-if="errors_basic_information.city != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.city[0]}}
                                                                 </span>
                                                             </small>
@@ -971,7 +999,8 @@
                                                                 placeholder="Enter Address"
                                                                 v-model="basic_information_record.address" />
                                                             <small>
-                                                                <span v-if="errors_basic_information.address != null" class="text-danger">
+                                                                <span v-if="errors_basic_information.address != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.address[0]}}
                                                                 </span>
                                                             </small>
@@ -984,7 +1013,8 @@
                                                                 placeholder="Enter Cnic" value=""
                                                                 v-model="basic_information_record.cnic">
                                                             <small>
-                                                                <span v-if="errors_basic_information.cnic != null" class="text-danger">
+                                                                <span v-if="errors_basic_information.cnic != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.cnic[0]}}
                                                                 </span>
                                                             </small>
@@ -998,7 +1028,9 @@
                                                                 v-model="basic_information_record.date_of_birth"
                                                                 value="">
                                                             <small>
-                                                                <span v-if="errors_basic_information.date_of_birth != null" class="text-danger">
+                                                                <span
+                                                                    v-if="errors_basic_information.date_of_birth != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.date_of_birth[0]}}
                                                                 </span>
                                                             </small>
@@ -1011,7 +1043,8 @@
                                                                 value="" placeholder="Enter ZIP code"
                                                                 v-model="basic_information_record.zipcode" />
                                                             <small>
-                                                                <span v-if="errors_basic_information.zipcode != null" class="text-danger">
+                                                                <span v-if="errors_basic_information.zipcode != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.zipcode[0]}}
                                                                 </span>
                                                             </small>
@@ -1025,7 +1058,8 @@
                                                                 placeholder="Enter Phone" type="tel" value=""
                                                                 v-model="basic_information_record.phone" />
                                                             <small>
-                                                                <span v-if="errors_basic_information.phone != null" class="text-danger">
+                                                                <span v-if="errors_basic_information.phone != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.phone[0]}}
                                                                 </span>
                                                             </small>
@@ -1048,7 +1082,8 @@
                                                                 <option value="islamabad">Islamabad</option>
                                                             </select>
                                                             <small>
-                                                                <span v-if="errors_basic_information.country != null" class="text-danger">
+                                                                <span v-if="errors_basic_information.country != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.country[0]}}
                                                                 </span>
                                                             </small>
@@ -1061,7 +1096,8 @@
                                                                 class="form-control" placeholder="Description"
                                                                 v-model="basic_information_record.bio"></textarea>
                                                             <small>
-                                                                <span v-if="errors_basic_information.bio != null" class="text-danger">
+                                                                <span v-if="errors_basic_information.bio != null"
+                                                                    class="text-danger">
                                                                     {{errors_basic_information.bio[0]}}
                                                                 </span>
                                                             </small>
@@ -1077,7 +1113,7 @@
                                     <div class="col-lg-12 modelBtnContainer ">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateBasicInformation()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" >Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1173,7 +1209,8 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateAward()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearAwardArray()">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                            @click.prevent="clearAwardArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1454,7 +1491,8 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateEducation()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearEducationArray()">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                            @click.prevent="clearEducationArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1635,7 +1673,8 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateWorkExperience()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearWorkExperienceArray()">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                            @click.prevent="clearWorkExperienceArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1723,7 +1762,8 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateLanguage()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearLanguageArray()">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                            @click.prevent="clearLanguageArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1805,7 +1845,8 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button class="positiveBtn modelBtn mr-1"
                                             @click.prevent="updateSkill()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearSkillArray()">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                            @click.prevent="clearSkillArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -1955,7 +1996,8 @@
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button @click.prevent="updateProject()"
                                             class="positiveBtn modelBtn mr-1">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearProjectArray()">Cancel</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                            @click.prevent="clearProjectArray()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -2153,19 +2195,23 @@
                                                         Job</label>
                                                     <div class="form-group m-0">
                                                         <label for="currentStatus">Yes</label>
-                                                        <input class="mx-1" name="currentStatus" type="radio" value="1" v-model="profile.is_looking_for_job">
+                                                        <input class="mx-1" name="currentStatus" type="radio" value="1"
+                                                            v-model="profile.is_looking_for_job">
                                                         <label for="currentStatus">No</label>
-                                                        <input class="mx-1" name="currentStatus" type="radio" value="0" v-model="profile.is_looking_for_job">
+                                                        <input class="mx-1" name="currentStatus" type="radio" value="0"
+                                                            v-model="profile.is_looking_for_job">
                                                     </div>
                                                 </div>
 
                                             </div>
                                             <div class="row mt-3" v-if="profile.is_looking_for_job == 1">
                                                 <div class="col-lg-6">
-                                                   <div class="form-group">
+                                                    <div class="form-group">
                                                         <label for="location">Location</label>
-                                                        <input name="location" class="form-control" placeholder="Enter Location" v-model="profile.looking_for_job_location"/>
-                                                   </div>
+                                                        <input name="location" class="form-control"
+                                                            placeholder="Enter Location"
+                                                            v-model="profile.looking_for_job_location" />
+                                                    </div>
                                                 </div>
                                                 <!-- <div class="col-lg-6">
                                                     <div class="form-group">
@@ -2178,14 +2224,17 @@
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label for="expectedSalary">Expected Salary</label>
-                                                        <input name="expectedSalary" class="form-control" placeholder="Enter Expected Salary" v-model="profile.looking_for_job_expected_salary"/>
+                                                        <input name="expectedSalary" class="form-control"
+                                                            placeholder="Enter Expected Salary"
+                                                            v-model="profile.looking_for_job_expected_salary" />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label for="joiningDate">Joining From</label>
-                                                        <input name="joiningDate" class="form-control" v-model="profile.looking_for_job_when"
-                                                        placeholder="Please Select" type="date"/>
+                                                        <input name="joiningDate" class="form-control"
+                                                            v-model="profile.looking_for_job_when"
+                                                            placeholder="Please Select" type="date" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -2193,15 +2242,17 @@
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label for="position">Position</label>
-                                                        <input name="department" class="form-control" v-model="profile.looking_for_job_position"
-                                                        placeholder="Enter Department" type="text"/>
+                                                        <input name="department" class="form-control"
+                                                            v-model="profile.looking_for_job_position"
+                                                            placeholder="Enter Department" type="text" />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label for="shift">Department</label>
-                                                        <input name="shift" class="form-control" placeholder="Enter Shift" v-model="profile.looking_for_job_department"
-                                                        type="text"/>
+                                                        <input name="shift" class="form-control"
+                                                            placeholder="Enter Shift"
+                                                            v-model="profile.looking_for_job_department" type="text" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -2217,8 +2268,10 @@
                             </div> -->
                             <div class="row mt-4">
                                 <div class="col-lg-12 modelBtnContainer">
-                                    <button class="positiveBtn modelBtn mr-1" @click.prevent="updateDesireJob()">Update</button>
-                                    <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="clearDesireJob()">Cancel</button>
+                                    <button class="positiveBtn modelBtn mr-1"
+                                        @click.prevent="updateDesireJob()">Update</button>
+                                    <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                        @click.prevent="clearDesireJob()">Cancel</button>
                                 </div>
                             </div>
                         </section>
@@ -2323,12 +2376,18 @@
                         this.basic_information_record.email = response.data.candidate.email
                         this.basic_information_record.country = response.data.candidate.country
                         this.basic_information_record.bio = response.data.candidate.bio
-                        this.basic_information_record.is_looking_for_job = response.data.candidate.is_looking_for_job
-                        this.basic_information_record.looking_for_job_department = response.data.candidate.looking_for_job_departmentx
-                        this.basic_information_record.looking_for_job_expected_salary = response.data.candidate.looking_for_job_expected_salary
-                        this.basic_information_record.looking_for_job_location = response.data.candidate.looking_for_job_location
-                        this.basic_information_record.looking_for_job_position = response.data.candidate.looking_for_job_position
-                        this.basic_information_record.looking_for_job_when = response.data.candidate.looking_for_job_when
+                        this.basic_information_record.is_looking_for_job = response.data.candidate
+                            .is_looking_for_job
+                        this.basic_information_record.looking_for_job_department = response.data.candidate
+                            .looking_for_job_departmentx
+                        this.basic_information_record.looking_for_job_expected_salary = response.data.candidate
+                            .looking_for_job_expected_salary
+                        this.basic_information_record.looking_for_job_location = response.data.candidate
+                            .looking_for_job_location
+                        this.basic_information_record.looking_for_job_position = response.data.candidate
+                            .looking_for_job_position
+                        this.basic_information_record.looking_for_job_when = response.data.candidate
+                            .looking_for_job_when
                         this.skills_exist = response.data.skill_exist
                     });
             },
@@ -2355,11 +2414,10 @@
                     })
             },
             addMoreEducation() {
-                
+
                 this.addMoreDBEducation = true
             },
-            clearEducationArray()
-            {
+            clearEducationArray() {
                 this.getCandidateDashboardData()
                 this.education_push_array = {
                     school_type: '',
@@ -2464,8 +2522,7 @@
             addMoreLanguage() {
                 this.addMoreDBLanguage = true
             },
-            clearLanguageArray()
-            {
+            clearLanguageArray() {
                 this.getCandidateDashboardData()
                 this.language_push_array = {
                     name: '',
@@ -2548,8 +2605,7 @@
                     level: '',
                 }
             },
-            clearAwardArray()
-            {
+            clearAwardArray() {
                 this.getCandidateDashboardData()
                 this.award_push_array = {
                     name: '',
@@ -2643,8 +2699,7 @@
             addMoreSkill() {
                 this.addMoreDBSkill = true
             },
-            clearSkillArray()
-            {
+            clearSkillArray() {
                 this.getCandidateDashboardData()
                 this.skill_push_array = {
                     name: '',
@@ -2783,8 +2838,7 @@
             addMoreWorkExperience() {
                 this.addMoreDBWorkExperience = true
             },
-            clearWorkExperienceArray()
-            {
+            clearWorkExperienceArray() {
                 this.getCandidateDashboardData()
                 this.work_experience_push_array = {
                     company_name: '',
@@ -2897,8 +2951,7 @@
             addMoreProject() {
                 this.addMoreDBProject = true
             },
-            clearProjectArray()
-            {
+            clearProjectArray() {
                 this.getCandidateDashboardData()
                 this.project_push_array = {
                     name: '',
@@ -3011,74 +3064,74 @@
                 var $uploadresume = $('#uploadresume');
                 var data = new FormData(uploadresume);
                 axios.post('/update/resume-file', data)
-                .then((res) => {
-                    if (res.data.success == true) {
-                        Swal.fire({
-                            icon:  'success',
-                            title: 'Updated',
-                            text:  'Candidate Updated Successfully',
-                        })
-                        this.getCandidateDashboardData()
+                    .then((res) => {
+                        if (res.data.success == true) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Updated',
+                                text: 'Candidate Updated Successfully',
+                            })
+                            this.getCandidateDashboardData()
 
-                        this.errors = []
-                            
-                    } 
-                    if(res.data.type == 'error') {
-                        Swal.fire({
-                            icon:  'error',
-                            title: 'Resume Not Uploaded',
-                            text:  'File must be pdf & maximum size must be less then 2mb',
-                        })
-                    }
-                })
+                            this.errors = []
+
+                        }
+                        if (res.data.type == 'error') {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Resume Not Uploaded',
+                                text: 'File must be pdf & maximum size must be less then 2mb',
+                            })
+                        }
+                    })
             },
             saveCNIC() {
                 var $uploadcnic = $('#uploadcnic');
-	            var data = new FormData(uploadcnic);
+                var data = new FormData(uploadcnic);
                 axios.post('/update/cnic-file', data)
-                .then((res) => {
-                    if (res.data.success == true) {
-                        Swal.fire({
-                            icon:  'success',
-                            title: 'Updated',
-                            text:  'Candidate Updated Successfully',
-                        })
-                        this.getCandidateDashboardData()
+                    .then((res) => {
+                        if (res.data.success == true) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Updated',
+                                text: 'Candidate Updated Successfully',
+                            })
+                            this.getCandidateDashboardData()
 
-                        this.errors = []
-                            
-                    } 
-                    if(res.data.type == 'error') {
-                        Swal.fire({
-                            icon:  'error',
-                            title: 'Cnic Not Uploaded',
-                            text:  'File must be pdf with both front and back clear pics & maximum size must be less then 2mb',
-                        })
-                    }
-                })
+                            this.errors = []
+
+                        }
+                        if (res.data.type == 'error') {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Cnic Not Uploaded',
+                                text: 'File must be pdf with both front and back clear pics & maximum size must be less then 2mb',
+                            })
+                        }
+                    })
             },
             saveExperienceLetter() {
                 var $uploadexperienceletter = $('#uploadexperienceletter');
-	            var data = new FormData(uploadexperienceletter);
+                var data = new FormData(uploadexperienceletter);
                 axios.post('/update/experience-letter-file', data)
-                .then((res) => {
-                    if (res.data.success == true) {
-                        Swal.fire({
-                            icon:  'success',
-                            title: 'Updated',
-                            text:  'Candidate Updated Successfully',
-                        })
-                        this.getCandidateDashboardData()
-                        this.errors = []
-                    } 
-                    if(res.data.type == 'error') {
-                        Swal.fire({
-                            icon:  'error',
-                            title: 'Cnic Not Uploaded',
-                            text:  'File must be pdf and maximum size must be less then 2mb',
-                        })
-                    }
-                })
+                    .then((res) => {
+                        if (res.data.success == true) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Updated',
+                                text: 'Candidate Updated Successfully',
+                            })
+                            this.getCandidateDashboardData()
+                            this.errors = []
+                        }
+                        if (res.data.type == 'error') {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Cnic Not Uploaded',
+                                text: 'File must be pdf and maximum size must be less then 2mb',
+                            })
+                        }
+                    })
             },
             updateDesireJob() {
                 axios.post('/update/desire-job', {
