@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <!---- ------------------------------>
-                <div class="product-search-box">
+                <!-- <div class="product-search-box">
                     <label class="search-box-h">
                         Keyword Search
                     </label>
@@ -103,7 +103,7 @@
                             <button type="submit" @click.prevent="clearSearch()" class="keyword-search-btn">Clear</button>
                         </form>
                     </div>
-                </div>
+                </div> -->
                 <div class="candidate my-2">
                     <label class="candidate-tagline">
                         Candidates
@@ -141,7 +141,7 @@
                                     <div class="candidate-single">
                                         <div class="candidate-list-content w-100 py-1 px-2">
                                             <div class="d-flex align-items-center">
-                                                <div class="candidate-photo"></div>
+                                                <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+item.profile_image+')'}"></div>
                                                 <div class="candidate-header mt-2 ml-2">
                                                     <h6 class="candidate-name mb-0">{{item.full_name}}</h6>
                                                     <!-- <div class="my-1">
@@ -177,8 +177,7 @@
                                             <ul class="candidate-list-fav col-lg-12 m-0 my-2 px-0 ">
                                                 <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
                                                         Profile</a></li>
-                                                <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                            class="far fa-heart"></i></a>
+                                                <li><a href="#" class="candidate-wishlist-btn ml-2 "><i class="far fa-heart"></i></a>
                                                 </li>
                                             </ul>
                                         </div>

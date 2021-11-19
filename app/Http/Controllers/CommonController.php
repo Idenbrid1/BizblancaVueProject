@@ -90,7 +90,7 @@ class CommonController extends Controller
 
     public function getCandidateSearch()
     {
-        return Candidate::latest()->paginate(10); 
+        return Candidate::latest()->paginate(12); 
     }
 
     public function getCompanyDetail($id)
