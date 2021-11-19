@@ -31729,6 +31729,7 @@ var render = function () {
                               _vm._v(" "),
                               _c("li", [
                                 _c("img", {
+                                  staticStyle: { margin: "0px 3px" },
                                   attrs: {
                                     height: "16px",
                                     width: "10px",
@@ -33530,6 +33531,7 @@ var render = function () {
                                 _vm._v(" "),
                                 _c("li", [
                                   _c("img", {
+                                    staticStyle: { margin: "0px 3px" },
                                     attrs: {
                                       height: "16px",
                                       width: "10px",
