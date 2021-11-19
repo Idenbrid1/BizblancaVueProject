@@ -52,7 +52,7 @@
                             <div class="job-header">
                                 <h6 class="job-title mb-0">{{searchData[index].company_name}}</h6>
                             </div>
-                            <!-- <span class="job-post-date">20 hours ago</span> -->
+                            <span class="job-post-date">20 hours ago</span>
                             <p class="job-description">{{searchData[index].description}}</p>
                             <ul class="job-list-meta m-0 border-post">
                                 <li><i class="fa fa-calendar"></i>{{searchData[index].created_at | moment("YYYY-MM-DD")}}</li>
@@ -101,16 +101,16 @@
                                 hesitation.</p>
                             <ul class="social-btns center-block">
                                 <li><button class="btn btn-whatsapp"><img
-                                            src="assets/images/whatsapp-quaries.svg"><span>+92 306 404
+                                            src="/website/assets/images/whatsapp-quaries.svg"><span>+92 306 404
                                             1221</span></button></li>
                                 <li><button class="btn btn-facebook"><img
-                                            src="assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
+                                            src="/website/assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
                                 </li>
                                 <li><button class="btn btn-linkedin"><img
-                                            src="assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
+                                            src="/website/assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
                                 </li>
                                 <li><button class="btn btn-google"><img
-                                            src="assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
+                                            src="/website/assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
                                 </li>
                             </ul>
                         </div>
@@ -184,7 +184,7 @@
                                             <h3 class="name">Natasha Anjum</h3>
                                             <p class="title">Laravel Developer</p>
                                             <div class="position-box">
-                                                <img src="assets/images/position-crown.svg">
+                                                <img src="/website/assets/images/position-crown.svg">
                                                 <h3 class="position-number">1st</h3>
                                             </div>
                                             <p class="description">I have learned a lot of things in my life but to be a
@@ -200,7 +200,7 @@
                                             <h3 class="name">Natasha Anjum</h3>
                                             <p class="title">Laravel Developer</p>
                                             <div class="position-box">
-                                                <img src="assets/images/position-crown.svg">
+                                                <img src="/website/assets/images/position-crown.svg">
                                                 <h3 class="position-number">2nd</h3>
                                             </div>
                                             <p class="description">I have learned a lot of things in my life but to be a

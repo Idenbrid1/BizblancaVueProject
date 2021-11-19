@@ -630,11 +630,21 @@
     background-color: #081351;
 }
 
-@media only screen and (max-width: 962px) and (min-width: 772px) {
+@media only screen and (max-width: 991px) and (min-width: 772px) {
     #main-header .bizblanca-logo {
         margin-right: 0px;
     }
 
+    .job-dynamic-values>ul{
+        padding-right: 9px !important;
+        margin-right: 7px !important;
+    }
+    .job-dynamic-values>ul>li>span{
+        padding-left: 0px !important;
+    }
+    .job-view-btn{
+        width: 80px !important;
+    }
     .log-site {
         width: 132px;
     }
@@ -2164,6 +2174,7 @@
 .candidate-list-fav {
     display: inline-flex;
     float: right;
+    padding: 0px;
 }
 
 .job-list-fav>li {
