@@ -3,6 +3,10 @@
 * {
     font-family: 'Red Hat Display', sans-serif;
     list-style: none;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 /* login */
@@ -630,39 +634,8 @@
     background-color: #081351;
 }
 
-@media only screen and (max-width: 991px) and (min-width: 772px) {
-    #main-header .bizblanca-logo {
-        margin-right: 0px;
-    }
 
-    .job-dynamic-values>ul{
-        padding-right: 9px !important;
-        margin-right: 7px !important;
-    }
-    .job-dynamic-values>ul>li>span{
-        padding-left: 0px !important;
-    }
-    .job-view-btn{
-        width: 80px !important;
-    }
-    .log-site {
-        width: 132px;
-    }
 
-    .main-navigation .menu-item {
-        font-size: 12px;
-    }
-
-    .main-navigation .register-desktop-btn,
-    .main-navigation .postjob-desktop-btn {
-        font-size: 12px;
-    }
-
-    .account-menu {
-        font-size: 12px;
-    }
-
-}
 
 @media (max-width: 768px) {
     #main-header {
@@ -1611,8 +1584,63 @@
 .user-profile-container {
     min-width: 1050px;
 } */
+.user-profile-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.condition-search-feilds{
+    width: 750px;
+}
+.common-sidebar{
+    width: 280px;
+}
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+    .condition-search-feilds{
+        width: 650px;
+    }
+    .common-sidebar{
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 772px) {
+    #main-header .bizblanca-logo {
+        margin-right: 0px;
+    }
+    .condition-search-feilds{
+        width: 100%;
+    }
+    .common-sidebar{
+        width: 100%;
+    }
+    .job-dynamic-values>ul{
+        padding-right: 9px !important;
+        margin-right: 7px !important;
+    }
+    .job-dynamic-values>ul>li>span{
+        padding-left: 0px !important;
+    }
+    .job-view-btn{
+        width: 80px !important;
+    }
+    .log-site {
+        width: 132px;
+    }
 
+    .main-navigation .menu-item {
+        font-size: 12px;
+    }
 
+    .main-navigation .register-desktop-btn,
+    .main-navigation .postjob-desktop-btn {
+        font-size: 12px;
+    }
+
+    .account-menu {
+        font-size: 12px;
+    }
+
+}
 /* USER-PROFILE */
 
 .product_accordion_container {
@@ -1623,14 +1651,14 @@
 }
 
 .product_accordion_container .search-box-h {
-    padding: 10px;
+    padding: 11.5px;
     display: block;
     font-size: 16px;
     line-height: 16px;
     color: #081351;
     border-bottom: solid 1px #212b36;
     border-left: 5px solid;
-    font-weight: 500;
+    font-weight: bold;
     margin: 0px;
 }
 
@@ -1652,7 +1680,9 @@
 .product_accordion_container .chevron {
     float: right;
 }
-
+.product_accordion_container .content label{
+    padding-top: 15px;
+}
 .product_accordion {
     display: none;
 }
@@ -1673,7 +1703,7 @@
 }
 
 .side-card-body {
-    padding: 15px;
+    padding: 10px;
 }
 
 .ads-side-card-body {
@@ -1704,12 +1734,13 @@
 .cusSelectbox {
     position: relative;
     width: 100%;
-    background: #fff;
-    border: solid 1px #000000;
+    height: 40px;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    border: 0.1px solid #000000;
+    border-radius: 5px;
     padding: 6px 15px 6px 15px;
     margin-bottom: 15px;
     transition: all 500ms ease;
-    border-radius: 5px;
     font-size: 12px;
 }
 
@@ -1917,28 +1948,6 @@
     border-radius: 5px;
 }
 
-.job-list {
-    margin-inline: 10px;
-    position: relative;
-    z-index: 1;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    background: #F9F9F9 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 5px;
-    opacity: 1;
-}
-
 .candidate-single {
     position: relative;
     z-index: 1;
@@ -2106,23 +2115,9 @@
 
 .candidate {
     width: 100%;
-    border: 1px solid #081351;
     margin: 50px auto 0;
     border-radius: 5px;
-    padding-bottom: 20px;
 }
-
-.candidate-tagline {
-    padding: 10px;
-    display: block;
-    font-size: 16px;
-    line-height: 16px;
-    color: #081351;
-    border-bottom: solid 1px #212b36;
-    border-left: 5px solid;
-    font-weight: 500;
-}
-
 .job-description,
 .candidate-description {
     color: #757575;
@@ -2221,19 +2216,8 @@
     justify-content: center;
 }
 
-.job-condition-clear-btn {
-    color: #fff;
-    border-radius: 3px;
-    border: 2px solid #414141;
-    margin: 5px 0px;
-    width: 150px;
-    padding: 5px;
-    font-weight: 500;
-    background: #414141;
-    margin-right: 10px;
-}
 
-.job-condition-search-btn {
+.job-condition-search-btn, .keyword-search-btn, .load-more-btn {
     color: #fff;
     border-radius: 3px;
     border: 2px solid #081351;
@@ -2258,11 +2242,10 @@
     border: 1px solid #081351;
     margin: 50px auto 0;
     border-radius: 5px;
-    padding-bottom: 20px;
 }
 
 .product-search-box .search-box-h {
-    padding: 8px;
+    padding: 12px 15px;
     display: block;
     font-size: 16px;
     line-height: 16px;
@@ -2270,17 +2253,16 @@
     border-bottom: solid 1px #212b36;
     border-left: 5px solid;
     font-weight: 500;
+    margin: 0px;
+    height: 40px;
 }
 
 .search-container input[type=text] {
     width: 85%;
 }
-
-.keyword-search-btn {
-    background: #081351;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 5px
+.keyword-search-ankers{
+    text-align: center;
+    padding-top: 15px;
 }
 
 .keyword-input-title {
@@ -3164,12 +3146,6 @@
         padding: 0px !important;
     }
 
-    .keyword-search-btn {
-        margin: 10px auto;
-        display: block;
-        padding: 5px 30px;
-    }
-
     .search-container input[type=text] {
         width: 100%;
     }
@@ -3685,19 +3661,6 @@
     left: -5px;
     bottom: 18px;
 }
-
-.cusSelectbox {
-    position: relative;
-    width: 100%;
-    background: #fff;
-    border: solid 1px #000000;
-    padding: 6px 15px 6px 15px;
-    margin-bottom: 15px;
-    transition: all 500ms ease;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
 .side-card {
     position: relative;
     display: -ms-flexbox;
@@ -3903,7 +3866,6 @@
 }
 
 .job-list {
-    margin-inline: 10px;
     position: relative;
     z-index: 1;
     display: -webkit-box;
@@ -4062,14 +4024,6 @@
     align-items: center;
 }
 
-.candidate {
-    width: 100%;
-    border: 1px solid #081351;
-    margin: 50px auto 0;
-    border-radius: 5px;
-    padding-bottom: 20px;
-}
-
 .candidate-tagline {
     padding: 10px;
     display: block;
@@ -4079,6 +4033,7 @@
     border-bottom: solid 1px #212b36;
     border-left: 5px solid;
     font-weight: 500;
+    margin: 0px;
 }
 .candidate-description {
     font-size: 12px;
@@ -4188,7 +4143,7 @@
     justify-content: center;
 }
 
-.job-condition-clear-btn {
+.job-condition-clear-btn, .keyword-clear-btn {
     color: #fff;
     border-radius: 3px;
     border: 2px solid #414141;
@@ -4200,18 +4155,6 @@
     margin-right: 10px;
 }
 
-.job-condition-search-btn {
-    color: #fff;
-    border-radius: 3px;
-    border: 2px solid #081351;
-    margin: 5px 0px;
-    width: 150px;
-    padding: 5px;
-    font-weight: 500;
-    background: #081351;
-    margin-right: 10px;
-}
-
 .border-post {
     border-right: 1px solid;
 }
@@ -4220,34 +4163,11 @@
     box-shadow: inherit !important;
 }
 
-.product-search-box {
-    width: 100%;
-    border: 1px solid #081351;
-    margin: 50px auto 0;
-    border-radius: 5px;
-    padding-bottom: 20px;
+.search-container{
+    padding: 15px;
 }
-
-.product-search-box .search-box-h {
-    padding: 8px;
-    display: block;
-    font-size: 16px;
-    line-height: 16px;
-    color: #081351;
-    border-bottom: solid 1px #212b36;
-    border-left: 5px solid;
-    font-weight: 500;
-}
-
 .search-container input[type=text] {
-    width: 85%;
-}
-
-.keyword-search-btn {
-    background: #081351;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 5px
+    width: 100%;
 }
 
 .keyword-input-title {
@@ -4502,13 +4422,6 @@
     .xs-padding {
         padding: 0px !important;
     }
-
-    .keyword-search-btn {
-        margin: 10px auto;
-        display: block;
-        padding: 5px 30px;
-    }
-
     .search-container input[type=text] {
         width: 100%;
     }
@@ -6101,22 +6014,23 @@ progress {
 .subFormFields .form-group .form-control {
     height: 40px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #CCCCCC;
+    /* border: 1px solid #CCCCCC; */
     border-radius: 5px;
     font-size: 12px;
     color: #757575;
 }
-
+.form-control{
+    height: 40px;
+    font-size: 14px;
+}
 .subFormFields .form-group label {
     font-weight: 500;
     font-size: 14px;
     color: #000000;
 }
-
 .subFormFields .form-group .form-control::placeholder {
     color: #757575;
 }
-
 .fileInput {
     padding: 7px;
 }

@@ -2,6 +2,16 @@
     .company-logo{
         width: 100%;
     }
+    .condition-search-feilds{
+        width: 100%;
+    }
+    .common-sidebar{
+        width: 100%;
+    }
+    .form-control{
+        height: 30px;
+        font-size: 14px;
+    }
     .job-view-btn{
         height: 30px;
         width: 70px;
