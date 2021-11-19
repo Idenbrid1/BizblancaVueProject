@@ -179,7 +179,7 @@
                                                     <span>{{searchData[index].salary_range}}</span>
                                                 </li>
                                                 <li>
-                                                    <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                                    <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
                                                         alt="img">
                                                     <span>{{searchData[index].location}}</span>
                                                 </li>

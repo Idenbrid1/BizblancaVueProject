@@ -88,7 +88,7 @@
                                             <span>{{searchData[index].salary_range}}</span>
                                         </li>
                                         <li>
-                                            <img height="16px" width="10px" src="/website/assets/images/pin.svg"
+                                            <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
                                                 alt="img">
                                             <span>{{searchData[index].location}}</span>
                                         </li>
@@ -116,7 +116,7 @@
                     </div>
 
                    <div class="text-center">
-                        <button class="load-more-btn mx-auto" @click="jobToShow += 2">Load more</button>
+                        <button class="load-more-btn mx-auto" @click="companiesToShow += 2">Load more</button>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->

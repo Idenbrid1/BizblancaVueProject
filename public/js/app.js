@@ -31863,6 +31863,7 @@ var render = function () {
                               _vm._v(" "),
                               _c("li", [
                                 _c("img", {
+                                  staticStyle: { margin: "0px 3px" },
                                   attrs: {
                                     height: "16px",
                                     width: "10px",
@@ -31942,7 +31943,7 @@ var render = function () {
                     staticClass: "load-more-btn mx-auto",
                     on: {
                       click: function ($event) {
-                        _vm.jobToShow += 2
+                        _vm.companiesToShow += 2
                       },
                     },
                   },
@@ -33885,6 +33886,7 @@ var render = function () {
                                 _vm._v(" "),
                                 _c("li", [
                                   _c("img", {
+                                    staticStyle: { margin: "0px 3px" },
                                     attrs: {
                                       height: "16px",
                                       width: "10px",
