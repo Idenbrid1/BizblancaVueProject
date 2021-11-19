@@ -37,7 +37,7 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                            <span class="job-post-date">20 hours ago</span>
+                            <span class="job-post-date"><timeago :datetime="item.created_at"></timeago></span>
                             <p class="job-description">{{item.job_description}}</p>
                             <ul class="job-list-meta m-0 border-post">
                                 <li><i class="fa fa-calendar"></i> {{ item.created_at | moment("YYYY-MM-DD")}}</li>
@@ -342,7 +342,7 @@
                                                         <div class="form-group">
                                                             <label for="job_designation"><span class="required_feild">*</span> Job Designation</label>
                                                             <input type="text" id="job_designation" name="job_designation" v-model="record.job_designation"
-                                                                placeholder="Enter Job Designation"
+                                                                placeholder="Enter Job Designation" 
                                                                 class="form-control" />
                                                             <small>
                                                                 <span v-if="errors.job_designation != null" class="text-danger">
@@ -483,9 +483,10 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="job_description"><span class="required_feild">*</span> Job Description</label> 
-                                                            <textarea style="height: 100px;" v-model="record.job_description"
+                                                            <textarea style="height: 100px;" v-model="record.job_description" 
                                                                 placeholder="Enter Job Description"
-                                                                name="job_description" id="job_description" maxlength="255" class="form-control"></textarea>
+                                                                name="job_description" id="job_description" :maxlength="max" class="form-control"></textarea>
+                                                                <div v-text="(max - record.job_description.length)"></div>
                                                             <small>
                                                                 <span v-if="errors.job_description != null" class="text-danger">
                                                                     {{errors.job_description[0]}}
@@ -586,6 +587,7 @@
                     benefits: '',
                     job_responsibilities: '',
                 },
+                max: 36,
                 errors: [],
                 jobs: {},
             };

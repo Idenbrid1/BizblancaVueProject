@@ -8454,13 +8454,27 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      data: '',
+      related_job: ''
+    };
   },
-  mounted: function mounted() {},
+  created: function created() {
+    this.getSingleJobDetail();
+  },
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
-  methods: {}
+  methods: {
+    getSingleJobDetail: function getSingleJobDetail() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-single-job-detail/' + this.$route.params.id).then(function (response) {
+        _this.data = response.data.job;
+        _this.related_job = response.data.related_job;
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -9038,6 +9052,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/job-search', this.record).then(function (response) {
+        _this.searchData = [];
         _this.searchData = response.data;
         _this.totalJobs = _this.searchData.length;
       });
@@ -9046,6 +9061,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/job-keyword-search/' + this.record.keyword).then(function (response) {
+        _this2.searchData = [];
         _this2.searchData = response.data;
         _this2.totalJobs = _this2.searchData.length;
       });
@@ -10451,6 +10467,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -10477,6 +10494,7 @@ __webpack_require__.r(__webpack_exports__);
         benefits: '',
         job_responsibilities: ''
       },
+      max: 36,
       errors: [],
       jobs: {}
     };
@@ -11481,6 +11499,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_website_MainApp_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/website/MainApp.vue */ "./resources/js/components/pages/website/MainApp.vue");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_2__);
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-timeago'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -11492,7 +11511,19 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"
 
 Vue.use(__webpack_require__(/*! vue-moment */ "./node_modules/vue-moment/dist/vue-moment.js"));
 
-Vue.component('multiselect', (vue_multiselect__WEBPACK_IMPORTED_MODULE_2___default()));
+Vue.component('multiselect', (vue_multiselect__WEBPACK_IMPORTED_MODULE_2___default())); // https://www.npmjs.com/package/vue-timeago
+
+
+Vue.use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-timeago'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
+  name: 'Timeago',
+  // Component name, `Timeago` by default
+  locale: 'en',
+  // Default locale
+  locales: {
+    'zh-CN': __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'date-fns/locale/zh_cn'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+    ja: __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'date-fns/locale/ja'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+  }
+});
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -11664,7 +11695,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_18__["default"]({
     name: 'JobSearch',
     component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
   }, {
-    path: '/job-detail',
+    path: '/job-detail:id',
     name: 'JobDetail',
     component: _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_16__["default"]
   }]
@@ -34302,9 +34333,12 @@ var render = function () {
                       }),
                     ]),
                     _vm._v(" "),
-                    _c("span", { staticClass: "job-post-date" }, [
-                      _vm._v("20 hours ago"),
-                    ]),
+                    _c(
+                      "span",
+                      { staticClass: "job-post-date" },
+                      [_c("timeago", { attrs: { datetime: item.created_at } })],
+                      1
+                    ),
                     _vm._v(" "),
                     _c("p", { staticClass: "job-description" }, [
                       _vm._v(_vm._s(item.job_description)),
@@ -35601,7 +35635,7 @@ var render = function () {
                                                   "Enter Job Description",
                                                 name: "job_description",
                                                 id: "job_description",
-                                                maxlength: "255",
+                                                maxlength: _vm.max,
                                               },
                                               domProps: {
                                                 value:
@@ -35618,6 +35652,16 @@ var render = function () {
                                                     $event.target.value
                                                   )
                                                 },
+                                              },
+                                            }),
+                                            _vm._v(" "),
+                                            _c("div", {
+                                              domProps: {
+                                                textContent: _vm._s(
+                                                  _vm.max -
+                                                    _vm.record.job_description
+                                                      .length
+                                                ),
                                               },
                                             }),
                                             _vm._v(" "),

@@ -551,17 +551,19 @@
         methods: {
             search() {
                 axios.post('/job-search', this.record)
-                    .then((response) => {
-                        this.searchData = response.data
-                        this.totalJobs = this.searchData.length
-                    });
+                .then((response) => {
+                    this.searchData = []
+                    this.searchData = response.data
+                    this.totalJobs = this.searchData.length
+                });
             },
             keywordSearch() {
-                axios.get('/job-keyword-search/' + this.record.keyword)
-                    .then((response) => {
-                        this.searchData = response.data
-                        this.totalJobs = this.searchData.length
-                    });
+                axios.get('/job-keyword-search/'+this.record.keyword)
+                .then((response) => {
+                    this.searchData = []
+                    this.searchData = response.data
+                    this.totalJobs = this.searchData.length
+                });
             },
             // addSkill (newTag) {
             //     const tag = {

@@ -312,17 +312,24 @@
     export default {
         data() {
             return {
-
+                data: '',
+                related_job: '',
             }
         },
-        mounted() {
-
+        created() {
+            this.getSingleJobDetail()
         },
         components: {
             WebsiteNavbar,
         },
         methods: {
-
+            getSingleJobDetail() {
+                axios.get('/get-single-job-detail/'+this.$route.params.id)
+                .then((response) => {
+                    this.data = response.data.job
+                    this.related_job = response.data.related_job
+                });
+            },
         },
     };
 

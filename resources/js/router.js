@@ -133,7 +133,7 @@ const router = new VueRouter({
             component: JobSearch
         },
         {
-            path: '/job-detail',
+            path: '/job-detail:id',
             name: 'JobDetail',
             component: JobDetail
         },
