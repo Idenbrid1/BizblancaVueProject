@@ -8446,55 +8446,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -11740,7 +11691,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_18__["default"]({
     name: 'JobSearch',
     component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
   }, {
-    path: '/job-detail:id',
+    path: '/job-detail/:id',
     name: 'JobDetail',
     component: _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_16__["default"]
   }]
@@ -32547,13 +32498,337 @@ var render = function () {
           "div",
           { staticClass: "col-sm-12 col-md-12 col-lg-12 xs-padding pt-3" },
           [
-            _vm._m(0),
+            _c("div", { staticClass: "job-detail-info" }, [
+              _c("div", { staticClass: "job-info-visual" }, [
+                _c("div", {
+                  staticClass: "job-info-img",
+                  style: {
+                    "background-image":
+                      "url(/storage/images/companies/" +
+                      _vm.data.company.logo +
+                      ")",
+                  },
+                }),
+                _vm._v(" "),
+                _c("p", { staticClass: "job-info-title" }, [
+                  _vm._v(_vm._s(_vm.data.company.comapny_name)),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-info-static" }, [
+                _c("h1", { staticClass: "job-title-view" }, [
+                  _vm._v(_vm._s(_vm.data.title)),
+                ]),
+                _vm._v(" "),
+                _vm._m(0),
+              ]),
+            ]),
             _vm._v(" "),
-            _vm._m(1),
+            _c("div", { staticClass: "job-detail-container" }, [
+              _c("div", { staticClass: "job-dynamic-values" }, [
+                _c("ul", [
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/calendar-job.svg",
+                        alt: "img",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [
+                      _vm._v(
+                        _vm._s(
+                          _vm._f("moment")(_vm.data.created_at, "YYYY-MM-DD")
+                        )
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/experience-job.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [
+                      _vm._v(_vm._s(_vm.data.experience) + " Years"),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", [
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/money-job.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(_vm.data.salary_range))]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        height: "16px",
+                        width: "10px",
+                        src: "/website/assets/images/pin.svg",
+                        alt: "img",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(_vm.data.location))]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("ul", [
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/suitcase-job.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(_vm.data.shift))]),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/switch-job.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(_vm.data.job_type))]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "job-detail-section" }, [
+                _c("div", [
+                  _c("h3", [_vm._v("Job Description:")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(_vm.data.description))]),
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h3", [_vm._v("Job Responsibilities:")]),
+                  _vm._v(" "),
+                  _c("ul", [
+                    _c("li", [_vm._v(_vm._s(_vm.data.job_responsibilities))]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h3", [_vm._v("Qualification and Technicalities:")]),
+                  _vm._v(" "),
+                  _c("ul", [
+                    _c("li", [_vm._v(_vm._s(_vm.data.qualification_level))]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h3", [_vm._v("Benefits:")]),
+                  _vm._v(" "),
+                  _c("ul", [_c("li", [_vm._v(_vm._s(_vm.data.benefits))])]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "job-info-visual" }, [
+                  _c("div", {
+                    staticClass: "job-info-img",
+                    style: {
+                      "background-image":
+                        "url(/storage/images/companies/" +
+                        _vm.data.company.logo +
+                        ")",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "job-info-title" }, [
+                    _vm._v(_vm._s(_vm.data.company.comapny_name)),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h1", { staticClass: "company-detail-title" }, [
+                    _vm._v("Company Detail"),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(_vm.data.company.description))]),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { staticClass: "more-detail-anker", attrs: { href: "" } },
+                  [_vm._v("More Details")]
+                ),
+              ]),
+            ]),
             _vm._v(" "),
             _vm._m(2),
             _vm._v(" "),
-            _vm._m(3),
+            _c(
+              "div",
+              { staticClass: "job-list-wrap" },
+              _vm._l(_vm.related_job, function (item, index) {
+                return _c("div", { key: index, staticClass: "job-list" }, [
+                  _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/storage/images/companies/" + item.company.logo,
+                        alt: "Company Logo",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "company-h" }, [
+                      _vm._v(_vm._s(item.company.comapny_name)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "job-list-content col" }, [
+                    _c("div", { staticClass: "job-header" }, [
+                      _c("h6", { staticClass: "job-title mb-0" }, [
+                        _vm._v(_vm._s(item.title)),
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(3, true),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "job-post-date" },
+                      [_c("timeago", { attrs: { datetime: item.created_at } })],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "job-description" }, [
+                      _vm._v(_vm._s(item.description)),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "job-content-wrap" }, [
+                      _c("div", { staticClass: "job-dynamic-values" }, [
+                        _c("ul", [
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/calendar-job.svg",
+                                alt: "img",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("moment")(
+                                    item.created_at,
+                                    "YYYY-MM-DD"
+                                  )
+                                )
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/experience-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.experience))]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("ul", [
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/money-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.salary_range))]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("img", {
+                              staticStyle: { margin: "0px 3px" },
+                              attrs: {
+                                height: "16px",
+                                width: "10px",
+                                src: "/website/assets/images/pin.svg",
+                                alt: "img",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.location))]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("ul", [
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/suitcase-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.shift))]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/switch-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.salary_type))]),
+                          ]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "job-list-fav m-0" }, [
+                        _vm._m(4, true),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "job-view-btn",
+                                attrs: {
+                                  "data-toggle": "collapse",
+                                  to: {
+                                    name: "JobDetail",
+                                    params: { id: item.id },
+                                  },
+                                },
+                              },
+                              [_vm._v("View")]
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ])
+              }),
+              0
+            ),
             _vm._v(" "),
             _c(
               "div",
@@ -32562,9 +32837,9 @@ var render = function () {
                   "col-sm-12 col-md-12 col-lg-12 xs-padding p-0 pt-2",
               },
               [
-                _vm._m(4),
-                _vm._v(" "),
                 _vm._m(5),
+                _vm._v(" "),
+                _vm._m(6),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -32588,25 +32863,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-detail-info" }, [
-      _c("div", { staticClass: "job-info-visual" }, [
-        _c("div", { staticClass: "job-info-img" }),
-        _vm._v(" "),
-        _c("p", { staticClass: "job-info-title" }, [_vm._v("idenbrid")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "job-info-static" }, [
-        _c("h1", { staticClass: "job-title-view" }, [_vm._v("DATA ANALYST")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-apply-ankers" }, [
-          _c("a", { staticClass: "add-wishlist-anker", attrs: { href: "" } }, [
-            _vm._v("Add to Wishlist"),
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "job-apply-anker", attrs: { href: "" } }, [
-            _vm._v("Apply Now"),
-          ]),
-        ]),
+    return _c("div", { staticClass: "job-apply-ankers" }, [
+      _c("a", { staticClass: "job-apply-anker", attrs: { href: "" } }, [
+        _vm._v("Apply Now"),
       ]),
     ])
   },
@@ -32614,291 +32873,41 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-detail-container" }, [
-      _c("div", { staticClass: "job-dynamic-values" }, [
-        _c("ul", [
-          _c("li", [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/calendar-job.svg",
-                alt: "img",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Aug 23, 2021")]),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/experience-job.svg",
-                alt: "",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("3 Years")]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("img", {
-              attrs: { src: "/website/assets/images/money-job.svg", alt: "" },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("80K to 100K")]),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              attrs: {
-                height: "16px",
-                width: "10px",
-                src: "/website/assets/images/pin.svg",
-                alt: "img",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Lahore, Pakistan")]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/suitcase-job.svg",
-                alt: "",
-              },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Morning Shift")]),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              attrs: { src: "/website/assets/images/switch-job.svg", alt: "" },
-            }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Full Time")]),
-          ]),
-        ]),
+    return _c("div", { staticClass: "job-social-icons" }, [
+      _c("a", { attrs: { href: "" } }, [
+        _c("img", {
+          attrs: {
+            src: "/website/assets/images/whatsapp_icon.png",
+            alt: "img",
+          },
+        }),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "job-detail-section" }, [
-        _c("div", [
-          _c("h3", [_vm._v("Job Description:")]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "We are looking for a highly capable Database Administrator (DBA) who is highly motivated,\n                            responsible and a detail-oriented team player. Under close supervision, provides general\n                            direction, design, maintenance, and control of databases"
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("h3", [_vm._v("Job Responsibilities:")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _vm._v(
-                "- Lead role in troubleshooting and solving problems relative to current environment\n                                and architecture using a wide range of techniques and resources to detect, identify\n                                and eliminate database system problems"
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Build database systems of high availability and quality depending on each end\n                                user’s specialized role."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Documents the established procedures used to perform repetitive but complex DBA\n                                tasks."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Design and implement database in accordance to end user’s information needs and\n                                views."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Define users and enable data distribution to the right user, in appropriate format\n                                and in a timely manner."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Use high-speed transaction recovery techniques and backup data."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Minimize database downtime and manage parameters to provide fast query responses.\n                            "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Provide proactive and reactive data management support and training to users."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Determine, enforce and document database policies, procedures and standards."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Perform tests and evaluations regularly to ensure data security, privacy and\n                                integrity."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Monitor database performance, implement changes and apply new patches and versions\n                                when required."
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("h3", [_vm._v("Qualification and Technicalities:")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _vm._v(
-                "- Bachelor's degree in computer science, or related field. - At least years of\n                                experience as a database administrator."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Hands-on experience with database standards and end user applications."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Excellent knowledge of administrating SQL and NoSQL databases."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Excellent knowledge of data backup, recovery, security, integrity and SQL."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Familiarity with database design, documentation and coding."
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Previous experience with DBA case tools (frontend/backend) and third-party tools.\n                            "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Familiarity with programming languages API.")]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v(
-                "- Problem solving skills and ability to think algorithmically"
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("h3", [_vm._v("Benefits:")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [_vm._v("- Market competitive salary")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Medical Benefits (Self & Immediate family)")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Paid Leaves (Casual, Sick & Annual leaves)")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Annual Performance based increments")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Bi-Annual Bonus")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Learning & development")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Friendly environment")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("- Sat & Sun off")]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-info-visual" }, [
-          _c("div", { staticClass: "job-info-img" }),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-info-title" }, [_vm._v("idenbrid")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-social-icons" }, [
-          _c("a", { attrs: { href: "" } }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/whatsapp_icon.png",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "" } }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/facebook_icon.png",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "" } }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/linkedin_icon.png",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "" } }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/github-logo_icon.png",
-                alt: "img",
-              },
-            }),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("h1", { staticClass: "company-detail-title" }, [
-            _vm._v("Company Detail"),
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "i2c Inc. is an experienced and trusted payments solution provider that helps card issuers\n                            and program managers deliver profitable prepaid programs. With MCP (My Card Place), i2cs\n                            flexible, feature-rich, Prepaid2.0-ready processing platform, clients have complete\n                            control of their programs in real time. With its value-added services, rewards and\n                            loyalty options, cardholder communication tools, and extensive analytics, MCP empowers\n                            clients to increase revenues, improve efficiency, reduce costs, and build a loyal\n                            cardholder base. i2c enables clients to launch new products faster, tailor programs for\n                            specific segments, and offer a variety of vertical solutions. i2c holds ISO 27001-2005,\n                            CMMI, ISO 9001, PCI-DSS, and SAS70 certifications. i2c has headquarters in Redwood City,\n                            California, and more than 350 employees and five sales and support offices worldwide.\n                            Its customer support provides 24x7x365 service to its clients, which include companies\n                            in North America, Latin America, the Middle East, Asia Pacific, and Europe."
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("a", { staticClass: "more-detail-anker", attrs: { href: "" } }, [
-          _vm._v("More Details"),
-        ]),
+      _c("a", { attrs: { href: "" } }, [
+        _c("img", {
+          attrs: {
+            src: "/website/assets/images/facebook_icon.png",
+            alt: "img",
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "" } }, [
+        _c("img", {
+          attrs: {
+            src: "/website/assets/images/linkedin_icon.png",
+            alt: "img",
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "" } }, [
+        _c("img", {
+          attrs: {
+            src: "/website/assets/images/github-logo_icon.png",
+            alt: "img",
+          },
+        }),
       ]),
     ])
   },
@@ -32920,127 +32929,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-list-wrap" }, [
-      _c("div", { staticClass: "job-list" }, [
-        _c("div", { staticClass: "company-logo col-auto py-2" }, [
-          _c("img", {
-            attrs: {
-              src: "https://www.bootdey.com/img/Content/avatar/avatar7.png",
-              alt: "Company Logo",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "company-h" }, [_vm._v("Ahmad")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "job-list-content col" }, [
-          _c("div", { staticClass: "job-header" }, [
-            _c("h6", { staticClass: "job-title mb-0" }, [
-              _vm._v("Data Analyst"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "d-flex align-items-center" }, [
-              _c("span", { staticClass: "job-post-date" }, [
-                _vm._v("20 hours ago "),
-              ]),
-              _vm._v(" "),
-              _c("i", { staticClass: "far fa-heart" }),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "job-description" }, [
-            _vm._v(
-              "As a Data Scientist, you will be in a central position as you\n                            will be evangelizing data and our methodologies to other functional analysts and other\n                            stakeholders in the company."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "job-content-wrap" }, [
-            _c("div", { staticClass: "job-dynamic-values" }, [
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/calendar-job.svg",
-                      alt: "img",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Aug 23, 2021")]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/experience-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("3 Years")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/money-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("80K to 100K")]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    staticStyle: { margin: "0px 3px" },
-                    attrs: {
-                      height: "16px",
-                      width: "10px",
-                      src: "/website/assets/images/pin.svg",
-                      alt: "img",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Lahore, Pakistan")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", [
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/suitcase-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Morning Shift")]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("img", {
-                    attrs: {
-                      src: "/website/assets/images/switch-job.svg",
-                      alt: "",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Full Time")]),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "job-list-fav m-0" }, [
-              _c("li", [
-                _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-                  _vm._v("View"),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
+    return _c("div", { staticClass: "d-flex align-items-center" }, [
+      _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
+      _vm._v(" "),
+      _c("i", { staticClass: "far fa-heart" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { staticClass: "job-wishlist-btn", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-heart" }),
       ]),
     ])
   },
@@ -62252,7 +62153,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
+module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 
