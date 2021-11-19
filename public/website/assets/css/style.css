@@ -1613,13 +1613,6 @@ body{
     .common-sidebar{
         width: 100%;
     }
-    .job-dynamic-values>ul{
-        padding-right: 9px !important;
-        margin-right: 7px !important;
-    }
-    .job-dynamic-values>ul>li>span{
-        padding-left: 0px !important;
-    }
     .job-view-btn{
         width: 80px !important;
     }
@@ -2016,8 +2009,8 @@ body{
 }
 
 .company-logo {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2031,7 +2024,7 @@ body{
     margin-top: 8px;
     font-size: 16px;
     text-align: center;
-    width: 100px;
+    width: 133px;
     font-weight: 600;
 }
 
@@ -2196,19 +2189,26 @@ body{
 }
 .job-header i,
 .candidate-header i {
-    font-size: 12px;
-    color: #F6C500;
+    font-size: 20px;
+    color: #081351;
+    padding-left: 10px;
 }
 
 .job-header,
 .candidate-header {
     display: inline-block;
 }
+.job-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .job-post-date {
     float: right;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
+    color: #757575;
 }
 
 .job-condition {
@@ -2281,22 +2281,6 @@ body{
     overflow-y: scroll;
 }
 
-.gov-job-box {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -webkit-align-items: start;
-    -ms-flex-align: center;
-    align-items: flex-start;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-    border-bottom: 1px solid;
-}
-
 .govt-job-img {
     display: flex;
     flex-direction: column;
@@ -2314,7 +2298,8 @@ body{
 }
 
 .govt-job-img img {
-    width: 50px;
+    width: 90px;
+    height: 90px;
 }
 
 .divider hr {
@@ -2340,6 +2325,7 @@ body{
 
 .conditioncheck {
     text-align: center;
+    margin: 13px 0px;
 }
 
 .social-btns li {
@@ -3136,11 +3122,6 @@ body{
 
     .job-list-fav li {
         margin-top: 10px;
-    }
-
-    .job-list-content,
-    .candidate-list-content {
-        padding: 0px 10px !important;
     }
     .xs-padding {
         padding: 0px !important;
@@ -3957,7 +3938,7 @@ body{
 .job-title,
 .candidate-name {
     color: #000000;
-    font-size: 18px;
+    font-size: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -4127,17 +4108,6 @@ body{
     color: #fff;
 }
 
-.job-header i,
-.candidate-header i {
-    font-size: 12px;
-    color: #F6C500;
-}
-
-.job-header,
-.candidate-header {
-    display: inline-block;
-}
-
 .job-condition {
     display: flex;
     justify-content: center;
@@ -4198,7 +4168,7 @@ body{
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid;
 }
 
@@ -4217,11 +4187,6 @@ body{
 .govt-job-list-content p {
     font-size: 8px;
 }
-
-.govt-job-img img {
-    width: 50px;
-}
-
 .divider hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -4416,9 +4381,8 @@ body{
     }
     .job-list-content,
     .candidate-list-content {
-        padding: 0px 10px !important;
+        padding: 0px 10px!important;
     }
-
     .xs-padding {
         padding: 0px !important;
     }
@@ -4443,7 +4407,13 @@ body{
         text-align: center;
     }
 }
-
+.job-list-content{
+    padding:10px!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+}
 @media only screen and (max-width: 360px) and (min-width: 320px) {
     .job-list-content {
         padding: 0px 4px !important;
@@ -6432,7 +6402,7 @@ progress {
 .job-dynamic-values>ul {
     padding: 0px;
     margin: 0px;
-    padding-right: 32px;
+    padding-right: 20px;
     margin-right: 10px;
     border-right: 1px solid #757575;
 }
@@ -6441,6 +6411,16 @@ progress {
     letter-spacing: 0px;
     padding-left: 13px;
     color: #757575;
+    width: 77px;
+}
+@media only screen and (max-width: 1200px) and (min-width: 772px) {
+    .job-dynamic-values>ul{
+        padding-right: 15px !important;
+        margin-right: 12px !important;
+    }
+    .job-dynamic-values>ul>li>span{
+        padding-left: 0px !important;
+    }
 }
 .job-detail-section>div>h3{
     color: #000000;
@@ -6486,10 +6466,6 @@ progress {
     align-items: center;
     justify-content: space-between;
 }
-.job-list-content,
-    .candidate-list-content {
-        padding: 12px !important;
-    }
 /* job-detail-info */
 .line-clamp-1 {
     display: -webkit-box;
