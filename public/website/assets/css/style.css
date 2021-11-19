@@ -6348,7 +6348,7 @@ progress {
 .job-info-img {
     width: 120px;
     height: 120px;
-    background: #FFFFFF url('/website/assets/images/i2c@2x.png') 0% 0% no-repeat padding-box;
+    /* background: #FFFFFF url('/website/assets/images/i2c@2x.png') 0% 0% no-repeat padding-box; */
     border-radius: 75px;
     background-size: 100% 100%;
 }
