@@ -1710,6 +1710,7 @@ body{
 .position-number {
     text-align: center;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .position-box {
@@ -1851,8 +1852,8 @@ body{
 
 .name {
     color: #2D354A;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
     text-align: center;
     margin: 0px;
 }
@@ -1868,8 +1869,8 @@ body{
 
 .description {
     color: #080911;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 1.3em;
 }
@@ -2192,6 +2193,7 @@ body{
     font-size: 20px;
     color: #081351;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 .job-header,
@@ -2290,12 +2292,21 @@ body{
 }
 
 .govt-job-list-content h6 {
+    font-size: 14px;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.govt-job-list-content p {
     font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
-.govt-job-list-content p {
-    font-size: 8px;
-}
 
 .govt-job-img img {
     width: 90px;
@@ -2338,7 +2349,7 @@ body{
 
 .social-btns span {
     padding: 4px 0px 0px 10px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .social-btns .btn-whatsapp {
@@ -2385,23 +2396,6 @@ body{
     color: #ffffff;
     background-color: #044a75;
 }
-
-.social-btns .btn-google {
-    background-color: #df270b;
-    border-color: #a01b03;
-    color: #ffffff;
-    min-width: 100%;
-    border-radius: 20px;
-    flex-direction: column;
-    padding: 2px;
-}
-
-.social-btns .btn-google:hover {
-    color: #ffffff;
-    background-color: #a01b03;
-}
-
-
 /* candidate style */
 
 .CandidateLandingSection {
@@ -3186,12 +3180,7 @@ body{
         justify-content: center;
     }
 
-    .plan-options>.btn {
-        color: white;
-        background-color: #081351;
-        border-radius: 6px;
-        font-size: 0.8vw;
-    }
+ 
 }
 
 .footer__links {
@@ -3233,9 +3222,11 @@ body{
     color: white;
     background-color: #081351;
     border-radius: 6px;
-    font-size: 0.8vw;
+    font-size: 14px;
 }
-
+.card-title{
+    font-size: 14px;
+}
 /*----------------------           footer            -------------------------*/
 /* COMPANY-DETAIL-PAGE */
 
@@ -3734,14 +3725,14 @@ body{
 }
 
 .profile .thumbnail {
-    width: 124px;
-    height: 124px;
+    width: 100px;
+    height: 100px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1.5em;
+    margin-bottom: 10px;
     border-radius: 100%;
-    box-shadow: shadow;
+    box-shadow: 5px 5px 6px #00000029;
 }
 
 .bizer-ranking-slider>.swiper-pagination-bullets,
@@ -3764,8 +3755,8 @@ body{
 
 .title {
     color: #7C8097;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
     text-align: center;
     letter-spacing: 1.5px;
     text-align: center;
@@ -4168,7 +4159,7 @@ body{
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin-bottom: 10px;
     border-bottom: 1px solid;
 }
@@ -4181,13 +4172,6 @@ body{
     border-radius: 5px;
 }
 
-.govt-job-list-content h6 {
-    font-size: 12px;
-}
-
-.govt-job-list-content p {
-    font-size: 8px;
-}
 .divider hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -4219,11 +4203,6 @@ body{
 
 .social-btns li i {
     font-size: 22px;
-}
-
-.social-btns span {
-    padding: 4px 0px 0px 10px;
-    font-size: 12px;
 }
 
 .social-btns .btn-whatsapp {
@@ -4452,12 +4431,6 @@ body{
         justify-content: center;
     }
 
-    .plan-options>.btn {
-        color: white;
-        background-color: #081351;
-        border-radius: 6px;
-        font-size: 0.8vw;
-    }
 }
 
 /* COMPANY-DETAIL-PAGE */

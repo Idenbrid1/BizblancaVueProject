@@ -2,8 +2,8 @@
     <div>
         <WebsiteNavbar />
         <CompanyNavbar />
-        <div class="container cont-flex PostJobContainer">
-            <div class="col-sm-12 col-md-8 col-lg-8 xs-padding pt-5">
+        <div class="container cont-flex user-profile-container PostJobContainer">
+            <div class="condition-search-feilds">
                 <div class="px-2">
                     <h1 class="post_new_job_title">Post New Job</h1>
                     <p class="post_new_job_descrp">
@@ -25,47 +25,80 @@
                     <!-- Job List Start -->
                     <div class="job-list" v-for="(item, index) in jobs.data" :key="index">
                         <div class="company-logo col-auto py-2">
-                            <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo">
-                            <span class="company-h">kashif </span>
+                            <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo" />
+                            <span class="company-h line-clamp-1">Ahmad</span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">{{item.title}}</h6>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i> -->
+
+                                <div class="d-flex align-items-center">
+                                    <span class="job-post-date"><timeago :datetime="item.created_at"></timeago></span>
+                                    <i class="far fa-heart"></i>
+                                </div>
                             </div>
-                            <span class="job-post-date"><timeago :datetime="item.created_at"></timeago></span>
+
                             <p class="job-description">{{item.job_description}}</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i> {{ item.created_at | moment("YYYY-MM-DD")}}</li>
-                                <li><i class="fal fa-address-card"></i>{{item.experience}}</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>{{item.salary_range}}</li>
-                                <li><i class="fa fa-map-marker"></i> {{item.location}}</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>{{item.shift}}</li>
-                                <li><i class="fal fa-clock"></i>{{item.job_type}}</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
+                            <div class="job-content-wrap">
+                                <div class="job-dynamic-values">
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                            <span>{{ item.created_at | moment("YYYY-MM-DD")}}</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/experience-job.svg" alt="">
+                                            <span>{{item.experience}}</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/money-job.svg" alt="">
+                                            <span>{{item.salary_range}}</span>
+                                        </li>
+                                        <li>
+                                            <img height="16px" width="10px" style="margin:0px 3px;"
+                                                src="/website/assets/images/pin.svg" alt="img">
+                                            <span>{{item.location}}</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                            <span>{{item.shift}}</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/switch-job.svg" alt="">
+                                            <span>{{item.job_type}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="job-list-fav m-0">
+                                    <li>
+                                        <router-link class="job-view-btn" data-toggle="collapse"
+                                            :to="{ name: 'JobDetail' }">View
+                                        </router-link>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->
                 <div class="bottom-pagination">
-                    <pagination :data="jobs" @pagination-change-page="getCompanyJobs" ></pagination>
+                    <pagination :data="jobs" @pagination-change-page="getCompanyJobs"></pagination>
                 </div>
                 <!-- Pagination End -->
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="common-sidebar">
                 <br><br>
                 <div class="col p-0 p-md-2">
                     <div class="side-card h-300 shadow-sm">
@@ -75,16 +108,16 @@
                                 hesitation.</p>
                             <ul class="social-btns center-block">
                                 <li><button class="btn btn-whatsapp"><img
-                                            src="assets/images/whatsapp-quaries.svg"><span>+92 306 404
+                                            src="/website/assets/images/whatsapp-quaries.svg"><span>+92 306 404
                                             1221</span></button></li>
                                 <li><button class="btn btn-facebook"><img
-                                            src="assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
+                                            src="/website/assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
                                 </li>
                                 <li><button class="btn btn-linkedin"><img
-                                            src="assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
+                                            src="/website/assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
                                 </li>
                                 <li><button class="btn btn-google"><img
-                                            src="assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
+                                            src="/website/assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
                                 </li>
                             </ul>
                         </div>
@@ -158,7 +191,7 @@
                                             <h3 class="name">Natasha Anjum</h3>
                                             <p class="title">Laravel Developer</p>
                                             <div class="position-box">
-                                                <img src="assets/images/position-crown.svg">
+                                                <img src="/website/assets/images/position-crown.svg">
                                                 <h3 class="position-number">1st</h3>
                                             </div>
                                             <p class="description">I have learned a lot of things in my life but to be a
@@ -174,7 +207,7 @@
                                             <h3 class="name">Natasha Anjum</h3>
                                             <p class="title">Laravel Developer</p>
                                             <div class="position-box">
-                                                <img src="assets/images/position-crown.svg">
+                                                <img src="/website/assets/images/position-crown.svg">
                                                 <h3 class="position-number">2nd</h3>
                                             </div>
                                             <p class="description">I have learned a lot of things in my life but to be a
@@ -317,7 +350,8 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="bannar"><span class="required_feild">*</span> Banner</label>
-                                                <input class="form-control" style="padding:4px !important;height:40px;" name="bannar" id="bannar" ref="bannar" type="file" />
+                                                <input class="form-control" style="padding:4px !important;height:40px;"
+                                                    name="bannar" id="bannar" ref="bannar" type="file" />
                                                 <small>
                                                     <span v-if="errors.bannar != null" class="text-danger">
                                                         {{errors.bannar[0]}}
@@ -328,11 +362,14 @@
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="job-title"><span class="required_feild">*</span> Job Title</label>
-                                                            <input type="text" id="job-title" name="job_title" v-model="record.job_title"
-                                                                placeholder="Enter Job Title" class="form-control" />
+                                                            <label for="job-title"><span class="required_feild">*</span>
+                                                                Job Title</label>
+                                                            <input type="text" id="job-title" name="job_title"
+                                                                v-model="record.job_title" placeholder="Enter Job Title"
+                                                                class="form-control" />
                                                             <small>
-                                                                <span v-if="errors.job_title != null" class="text-danger" >
+                                                                <span v-if="errors.job_title != null"
+                                                                    class="text-danger">
                                                                     {{errors.job_title[0]}}
                                                                 </span>
                                                             </small>
@@ -340,12 +377,16 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="job_designation"><span class="required_feild">*</span> Job Designation</label>
-                                                            <input type="text" id="job_designation" name="job_designation" v-model="record.job_designation"
-                                                                placeholder="Enter Job Designation" 
+                                                            <label for="job_designation"><span
+                                                                    class="required_feild">*</span> Job
+                                                                Designation</label>
+                                                            <input type="text" id="job_designation"
+                                                                name="job_designation" v-model="record.job_designation"
+                                                                placeholder="Enter Job Designation"
                                                                 class="form-control" />
                                                             <small>
-                                                                <span v-if="errors.job_designation != null" class="text-danger">
+                                                                <span v-if="errors.job_designation != null"
+                                                                    class="text-danger">
                                                                     {{errors.job_designation[0]}}
                                                                 </span>
                                                             </small>
@@ -353,16 +394,21 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="salary_type"><span class="required_feild">*</span> Salary Type</label>
-                                                            <select name="salary_type" id="salary_type" v-model="record.salary_type" class="form-control">
-                                                                <option value="Please Select" default="true" selected="true" disabled="disabled">Please Select</option>
+                                                            <label for="salary_type"><span
+                                                                    class="required_feild">*</span> Salary Type</label>
+                                                            <select name="salary_type" id="salary_type"
+                                                                v-model="record.salary_type" class="form-control">
+                                                                <option value="Please Select" default="true"
+                                                                    selected="true" disabled="disabled">Please Select
+                                                                </option>
                                                                 <option value="Yearly">Yearly</option>
                                                                 <option value="Monthly">Monthly</option>
                                                                 <option value="Weekly">Weekly</option>
                                                                 <option value="Hourly">Hourly</option>
                                                             </select>
                                                             <small>
-                                                                <span v-if="errors.salary_type != null" class="text-danger">
+                                                                <span v-if="errors.salary_type != null"
+                                                                    class="text-danger">
                                                                     {{errors.salary_type[0]}}
                                                                 </span>
                                                             </small>
@@ -370,9 +416,12 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="salary_range"><span class="required_feild">*</span> Salary Range</label>
-                                                            <select name="salary_range" id="salary_range" v-model="record.salary_range" class="form-control">
-                                                                <option value="Please Select" selected disabled>Please Select</option>
+                                                            <label for="salary_range"><span
+                                                                    class="required_feild">*</span> Salary Range</label>
+                                                            <select name="salary_range" id="salary_range"
+                                                                v-model="record.salary_range" class="form-control">
+                                                                <option value="Please Select" selected disabled>Please
+                                                                    Select</option>
                                                                 <option value="10000-20000">10000 - 20000 </option>
                                                                 <option value="20000-30000">20000 - 30000</option>
                                                                 <option value="30000-40000">30000 - 40000</option>
@@ -385,7 +434,8 @@
                                                                 <option value="100000-150000">100000 - 150000</option>
                                                             </select>
                                                             <small>
-                                                                <span v-if="errors.salary_range != null" class="text-danger">
+                                                                <span v-if="errors.salary_range != null"
+                                                                    class="text-danger">
                                                                     {{errors.salary_range[0]}}
                                                                 </span>
                                                             </small>
@@ -393,9 +443,12 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="shift"><span class="required_feild">*</span> Shift</label>
-                                                            <select name="shift" id="shift" v-model="record.shift" class="form-control">
-                                                                <option value="Please Select" selected disabled>Please Select</option>
+                                                            <label for="shift"><span class="required_feild">*</span>
+                                                                Shift</label>
+                                                            <select name="shift" id="shift" v-model="record.shift"
+                                                                class="form-control">
+                                                                <option value="Please Select" selected disabled>Please
+                                                                    Select</option>
                                                                 <option value="Night">Night</option>
                                                                 <option value="Morning">Morning</option>
                                                                 <option value="Afternoon">Afternoon</option>
@@ -411,23 +464,28 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Experience<small> in years</small></label>
-                                                            <input type="number" v-model="record.experience" placeholder="Enter Experience"
-                                                                name="experience" class="form-control" />
+                                                            <input type="number" v-model="record.experience"
+                                                                placeholder="Enter Experience" name="experience"
+                                                                class="form-control" />
                                                             <small>
-                                                                <span v-if="errors.experience != null" class="text-danger">
+                                                                <span v-if="errors.experience != null"
+                                                                    class="text-danger">
                                                                     {{errors.experience[0]}}
                                                                 </span>
                                                             </small>
                                                         </div>
-                                                        
+
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="location"><span class="required_feild">*</span> Location</label>
-                                                            <input type="text" id="location" placeholder="Enter Location" v-model="record.location"
+                                                            <label for="location"><span class="required_feild">*</span>
+                                                                Location</label>
+                                                            <input type="text" id="location"
+                                                                placeholder="Enter Location" v-model="record.location"
                                                                 name="location" class="form-control" />
                                                             <small>
-                                                                <span v-if="errors.location != null" class="text-danger">
+                                                                <span v-if="errors.location != null"
+                                                                    class="text-danger">
                                                                     {{errors.location[0]}}
                                                                 </span>
                                                             </small>
@@ -435,9 +493,12 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="job_type"><span class="required_feild">*</span> Job Type</label>
-                                                            <select name="job_type" id="job_type" v-model="record.job_type" class="form-control">
-                                                                <option value="Please Select" selected disabled>Please Select</option>
+                                                            <label for="job_type"><span class="required_feild">*</span>
+                                                                Job Type</label>
+                                                            <select name="job_type" id="job_type"
+                                                                v-model="record.job_type" class="form-control">
+                                                                <option value="Please Select" selected disabled>Please
+                                                                    Select</option>
                                                                 <option value="Full Time">Full Time</option>
                                                                 <option value="Part Time">Part Time</option>
                                                                 <option value="Internship">Internship</option>
@@ -446,7 +507,8 @@
                                                                 <option value="Freelance">Freelance</option>
                                                             </select>
                                                             <small>
-                                                                <span v-if="errors.job_type != null" class="text-danger">
+                                                                <span v-if="errors.job_type != null"
+                                                                    class="text-danger">
                                                                     {{errors.job_type[0]}}
                                                                 </span>
                                                             </small>
@@ -455,7 +517,8 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="">Gender</label>
-                                                            <select name="gender" v-model="record.gender" class="form-control">
+                                                            <select name="gender" v-model="record.gender"
+                                                                class="form-control">
                                                                 <option value="" disabled>select please</option>
                                                                 <option selected value="Male">Male</option>
                                                                 <option value="Female">Female</option>
@@ -470,11 +533,16 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="total_positions"><span class="required_feild">*</span> Total Positions</label>
-                                                                <input type="number" id="total_positions" placeholder="Total Positions" v-model="record.total_positions"
-                                                                    name="total_positions" class="form-control" />
+                                                            <label for="total_positions"><span
+                                                                    class="required_feild">*</span> Total
+                                                                Positions</label>
+                                                            <input type="number" id="total_positions"
+                                                                placeholder="Total Positions"
+                                                                v-model="record.total_positions" name="total_positions"
+                                                                class="form-control" />
                                                             <small>
-                                                                <span v-if="errors.total_positions != null" class="text-danger">
+                                                                <span v-if="errors.total_positions != null"
+                                                                    class="text-danger">
                                                                     {{errors.total_positions[0]}}
                                                                 </span>
                                                             </small>
@@ -482,13 +550,18 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="job_description"><span class="required_feild">*</span> Job Description</label> 
-                                                            <textarea style="height: 100px;" v-model="record.job_description" 
+                                                            <label for="job_description"><span
+                                                                    class="required_feild">*</span> Job
+                                                                Description</label>
+                                                            <textarea style="height: 100px;"
+                                                                v-model="record.job_description"
                                                                 placeholder="Enter Job Description"
-                                                                name="job_description" id="job_description" :maxlength="max" class="form-control"></textarea>
-                                                                <div v-text="(max - record.job_description.length)"></div>
+                                                                name="job_description" id="job_description"
+                                                                :maxlength="max" class="form-control"></textarea>
+                                                            <div v-text="(max - record.job_description.length)"></div>
                                                             <small>
-                                                                <span v-if="errors.job_description != null" class="text-danger">
+                                                                <span v-if="errors.job_description != null"
+                                                                    class="text-danger">
                                                                     {{errors.job_description[0]}}
                                                                 </span>
                                                             </small>
@@ -496,14 +569,17 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="job_responsibilities"><span class="required_feild">*</span> Job Responsibilities</label>
-                                                            <textarea style="height: 100px;" maxlength="255" v-model="record.job_responsibilities"
+                                                            <label for="job_responsibilities"><span
+                                                                    class="required_feild">*</span> Job
+                                                                Responsibilities</label>
+                                                            <textarea style="height: 100px;" maxlength="255"
+                                                                v-model="record.job_responsibilities"
                                                                 placeholder="Enter Job Description"
-                                                                name="job_responsibilities"
-                                                                id="job_responsibilities"
+                                                                name="job_responsibilities" id="job_responsibilities"
                                                                 class="form-control"></textarea>
                                                             <small>
-                                                                <span v-if="errors.job_responsibilities != null" class="text-danger">
+                                                                <span v-if="errors.job_responsibilities != null"
+                                                                    class="text-danger">
                                                                     {{errors.job_responsibilities[0]}}
                                                                 </span>
                                                             </small>
@@ -511,16 +587,20 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="qualification_level"><span class="required_feild">*</span> Qualifications &
+                                                            <label for="qualification_level"><span
+                                                                    class="required_feild">*</span> Qualifications &
                                                                 Technicalities</label>
-                                                            <select id="qualification_level" name="qualification_level" v-model="record.qualification_level" class="form-control">
+                                                            <select id="qualification_level" name="qualification_level"
+                                                                v-model="record.qualification_level"
+                                                                class="form-control">
                                                                 <option value="Metric">Metric</option>
                                                                 <option value="Intermediate">Intermediate</option>
                                                                 <option value="Graduation">Graduation</option>
                                                                 <option value="Masters">Masters</option>
                                                             </select>
                                                             <small>
-                                                                <span v-if="errors.qualification_level != null" class="text-danger">
+                                                                <span v-if="errors.qualification_level != null"
+                                                                    class="text-danger">
                                                                     {{errors.qualification_level[0]}}
                                                                 </span>
                                                             </small>
@@ -528,12 +608,15 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="benefits"><span class="required_feild">*</span> Benefits</label>
-                                                            <textarea style="height: 100px;" maxlength="255" v-model="record.benefits"
-                                                                placeholder="Enter Benefits" id="benefits" name="benefits"
+                                                            <label for="benefits"><span class="required_feild">*</span>
+                                                                Benefits</label>
+                                                            <textarea style="height: 100px;" maxlength="255"
+                                                                v-model="record.benefits" placeholder="Enter Benefits"
+                                                                id="benefits" name="benefits"
                                                                 class="form-control"></textarea>
                                                             <small>
-                                                                <span v-if="errors.benefits != null" class="text-danger">
+                                                                <span v-if="errors.benefits != null"
+                                                                    class="text-danger">
                                                                     {{errors.benefits[0]}}
                                                                 </span>
                                                             </small>
@@ -614,12 +697,11 @@
             this.getCompanyJobs()
         },
         methods: {
-            getCompanyJobs(page=1)
-            {
-                axios.get('get-company-jobs?page='+page)
-                .then((response) => {
-                    this.jobs = response.data
-                });
+            getCompanyJobs(page = 1) {
+                axios.get('get-company-jobs?page=' + page)
+                    .then((response) => {
+                        this.jobs = response.data
+                    });
             },
             postJob() {
                 Swal.fire({
@@ -636,41 +718,39 @@
                         var $formData = $('#formData');
                         var data = new FormData(formData);
                         axios.post('/company/post-job', data)
-                        .then((res) => {
-                            if (res.data.success == false)
-                            {
-                                this.errors = res.data.errors
-                            } 
-                            else {
-                                this.getCompanyJobs()
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'Posted!😎',
-                                    text: 'Your Job is Now Live',
-                                })
-                                this.errors = []
-                                this.record = {
-                                    bannar: '',
-                                    title: '',
-                                    job_designation: '',
-                                    job_description: '',
-                                    job_type: '',
-                                    shift: '',
-                                    industry: '',
-                                    department: '',
-                                    experience: '',
-                                    salary_type: '',
-                                    salary_range: '',
-                                    gender: '',
-                                    location: '',
-                                    total_position: '',
-                                    qualification_level: '',
-                                    benefits: '',
-                                    job_responsibilities: '',
-                                };
-                                this.$refs.bannar.value = null;
-                            }
-                        })
+                            .then((res) => {
+                                if (res.data.success == false) {
+                                    this.errors = res.data.errors
+                                } else {
+                                    this.getCompanyJobs()
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Posted!😎',
+                                        text: 'Your Job is Now Live',
+                                    })
+                                    this.errors = []
+                                    this.record = {
+                                        bannar: '',
+                                        title: '',
+                                        job_designation: '',
+                                        job_description: '',
+                                        job_type: '',
+                                        shift: '',
+                                        industry: '',
+                                        department: '',
+                                        experience: '',
+                                        salary_type: '',
+                                        salary_range: '',
+                                        gender: '',
+                                        location: '',
+                                        total_position: '',
+                                        qualification_level: '',
+                                        benefits: '',
+                                        job_responsibilities: '',
+                                    };
+                                    this.$refs.bannar.value = null;
+                                }
+                            })
                     }
                 })
             },
