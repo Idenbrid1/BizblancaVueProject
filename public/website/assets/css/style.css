@@ -2194,7 +2194,14 @@ body{
     font-weight: 500;
     color: #757575;
 }
-
+.job-post-ions{
+    display: block;
+}
+.job-post-ions>i{
+        color: #757575;
+        margin: 0px 5px;
+        padding-top: 15px;
+}
 .job-condition {
     display: flex;
     justify-content: center;
@@ -6395,7 +6402,7 @@ progress {
 }
 .job-content-wrap{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 /* job-detail-info */
