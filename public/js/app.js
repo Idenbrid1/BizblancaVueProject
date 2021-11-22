@@ -34352,7 +34352,7 @@ var render = function () {
       _c("CompanyNavbar"),
       _vm._v(" "),
       _c("div", { staticClass: "container user-profile-container cont-flex" }, [
-        _c("div", { staticClass: "col-12 col-md-8 col-lg-8 xs-padding" }, [
+        _c("div", { staticClass: "condition-search-feilds" }, [
           _c("div", { staticClass: "product_accordion_container" }, [
             _c("div", [
               _c("input", {
@@ -34757,7 +34757,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-12 col-md-4 col-lg-4" }, [
+    return _c("div", { staticClass: "common-sidebar" }, [
       _c("br"),
       _c("br"),
       _vm._v(" "),

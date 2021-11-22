@@ -3,7 +3,7 @@
         <WebsiteNavbar />
         <CompanyNavbar />
         <div class="container user-profile-container cont-flex">
-            <div class="col-12 col-md-8 col-lg-8 xs-padding">
+            <div class="condition-search-feilds">
                 <div class="product_accordion_container">
                     <div>
                         <input class="product_accordion" type="checkbox" name="accordion" id="first" checked>
@@ -195,7 +195,7 @@
                 </div>
                 <!-- Pagination End -->
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="common-sidebar">
                 <br><br>
                 <div class="col p-0">
                     <div class="side-card h-300 shadow-sm">
