@@ -6,7 +6,9 @@
             <div class="col-sm-12 col-md-12 col-lg-12 xs-padding pt-3">
                 <div class="job-detail-info">
                     <div class="job-info-visual">
-                        <div class="job-info-img" :style="{ 'background-image': 'url(/storage/images/companies/' + data.company.logo + ')' }"></div>
+                        <div class="job-info-img"
+                            :style="{ 'background-image': 'url(/storage/images/companies/' + data.company.logo + ')' }">
+                        </div>
                         <p class="job-info-title">{{data.company.comapny_name}}</p>
                     </div>
                     <div class="job-info-static">
@@ -75,7 +77,9 @@
                             </ul>
                         </div>
                         <div class="job-info-visual">
-                            <div class="job-info-img" :style="{ 'background-image': 'url(/storage/images/companies/' + data.company.logo + ')' }"></div>
+                            <div class="job-info-img"
+                                :style="{ 'background-image': 'url(/storage/images/companies/' + data.company.logo + ')' }">
+                            </div>
                             <p class="job-info-title">{{data.company.comapny_name}}</p>
                         </div>
                         <div class="job-social-icons">
@@ -119,7 +123,9 @@
                                     <i class="far fa-heart"></i>
                                 </div>
                             </div>
-                            <span class="job-post-date"><timeago :datetime="item.created_at"></timeago></span>
+                            <span class="job-post-date">
+                                <timeago :datetime="item.created_at"></timeago>
+                            </span>
                             <p class="job-description">{{item.description}}</p>
                             <div class="job-content-wrap">
                                 <div class="job-dynamic-values">
@@ -138,8 +144,8 @@
                                             <span>{{item.salary_range}}</span>
                                         </li>
                                         <li>
-                                            <img height="16px" width="10px" style="margin:0px 3px" src="/website/assets/images/pin.svg"
-                                                alt="img">
+                                            <img height="16px" width="10px" style="margin:0px 3px"
+                                                src="/website/assets/images/pin.svg" alt="img">
                                             <span>{{item.location}}</span>
                                         </li>
                                     </ul>
@@ -172,7 +178,6 @@
             <!-- Pagination End -->
         </div>
     </div>
-    </div>
 </template>
 <script>
     import axios from 'axios';
@@ -197,7 +202,7 @@
 
         },
         watch: {
-            '$route.path': function(val, oldVal){
+            '$route.path': function (val, oldVal) {
                 this.init_component();
             }
         },
@@ -224,11 +229,11 @@
                 this.getSingleJobDetail();
             },
             getSingleJobDetail() {
-                axios.get('/get-single-job-detail/'+this.$route.params.id)
-                .then((response) => {
-                    this.data = response.data.job
-                    this.related_job = response.data.related_job
-                });
+                axios.get('/get-single-job-detail/' + this.$route.params.id)
+                    .then((response) => {
+                        this.data = response.data.job
+                        this.related_job = response.data.related_job
+                    });
             },
             applyJob(){
                 axios.get('/apply-job/'+this.data.id)

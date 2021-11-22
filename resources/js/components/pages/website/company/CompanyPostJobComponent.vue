@@ -79,9 +79,12 @@
                                     </ul>
                                 </div>
                                 <ul class="job-list-fav m-0">
+                                    <li><a href="" class="job-post-ions"><i class="fas fa-trash-alt"></i></a></li>
+                                    <li><a href="" class="job-post-ions"><i class="fas fa-edit"></i></a></li>
                                     <li>
-                                        <router-link class="job-view-btn" data-toggle="collapse"
-                                            :to="{ name: 'JobDetail', params: { id: item.id } }">View</router-link>
+                                        <router-link :to="{ name: 'JobDetail', params: { id: item.id } }" data-toggle="collapse" class="job-post-ions">
+                                        <i class="fas fa-eye"></i>
+                                        </router-link>
                                     </li>
                                 </ul>
                             </div>
