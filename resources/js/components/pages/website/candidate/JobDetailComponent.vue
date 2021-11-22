@@ -1,6 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
+        <CandidateNavbar />
         <div class="container cont-flex PostJobContainer">
             <div class="col-sm-12 col-md-12 col-lg-12 xs-padding pt-3">
                 <div class="job-detail-info">
@@ -175,6 +176,8 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
+    import CandidateNavbar from '../partials/CandidateNavbar.vue';
+
     export default {
         data() {
             return {
@@ -183,12 +186,22 @@
             }
         },
         created() {
-            this.getSingleJobDetail()
+            this.init_component();
         },
         components: {
             WebsiteNavbar,
+            CandidateNavbar,
+
+        },
+        watch: {
+            '$route.path': function(val, oldVal){
+                this.init_component();
+            }
         },
         methods: {
+            init_component: function(){
+                this.getSingleJobDetail();
+            },
             getSingleJobDetail() {
                 axios.get('/get-single-job-detail/'+this.$route.params.id)
                 .then((response) => {
