@@ -11606,7 +11606,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_18__["default"]({
     name: 'JobSearch',
     component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
   }, {
-    path: '/job-detail:id',
+    path: '/job-detail/:id',
     name: 'JobDetail',
     component: _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_16__["default"]
   }]
