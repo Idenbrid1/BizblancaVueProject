@@ -8363,6 +8363,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -9830,7 +9838,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
 /* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
 /* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__);
-//
 //
 //
 //
@@ -35942,7 +35949,29 @@ var render = function () {
                         ]),
                       ]),
                       _vm._v(" "),
-                      _vm._m(2, true),
+                      _c("ul", { staticClass: "job-list-fav m-0" }, [
+                        _vm._m(2, true),
+                        _vm._v(" "),
+                        _vm._m(3, true),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "job-post-ions",
+                                attrs: {
+                                  to: { name: "JobDetail" },
+                                  "data-toggle": "collapse",
+                                },
+                              },
+                              [_c("i", { staticClass: "fas fa-eye" })]
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
                     ]),
                   ]),
                 ])
@@ -35963,7 +35992,7 @@ var render = function () {
             ),
           ]),
           _vm._v(" "),
-          _vm._m(3),
+          _vm._m(4),
         ]
       ),
       _vm._v(" "),
@@ -36007,10 +36036,10 @@ var render = function () {
                                   attrs: { id: "subForm" },
                                 },
                                 [
-                                  _vm._m(4),
+                                  _vm._m(5),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "form-group" }, [
-                                    _vm._m(5),
+                                    _vm._m(6),
                                     _vm._v(" "),
                                     _c("input", {
                                       ref: "bannar",
@@ -36053,7 +36082,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(6),
+                                              _vm._m(7),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -36126,7 +36155,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(7),
+                                              _vm._m(8),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -36203,7 +36232,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(8),
+                                              _vm._m(9),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -36345,7 +36374,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(9),
+                                              _vm._m(10),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -36546,7 +36575,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(10),
+                                              _vm._m(11),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -36684,7 +36713,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(11),
+                                              _vm._m(12),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -36757,7 +36786,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(12),
+                                              _vm._m(13),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -36829,7 +36858,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(13),
+                                              _vm._m(14),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -37115,7 +37144,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(14),
+                                              _vm._m(15),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -37189,7 +37218,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _vm._m(15),
+                                            _vm._m(16),
                                             _vm._v(" "),
                                             _c("textarea", {
                                               directives: [
@@ -37269,7 +37298,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _vm._m(16),
+                                            _vm._m(17),
                                             _vm._v(" "),
                                             _c("textarea", {
                                               directives: [
@@ -37342,7 +37371,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _vm._m(17),
+                                            _vm._m(18),
                                             _vm._v(" "),
                                             _c(
                                               "select",
@@ -37460,7 +37489,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _vm._m(18),
+                                            _vm._m(19),
                                             _vm._v(" "),
                                             _c("textarea", {
                                               directives: [
@@ -37610,23 +37639,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "job-list-fav m-0" }, [
-      _c("li", [
-        _c("a", { staticClass: "job-post-ions", attrs: { href: "" } }, [
-          _c("i", { staticClass: "fas fa-trash-alt" }),
-        ]),
+    return _c("li", [
+      _c("a", { staticClass: "job-post-ions", attrs: { href: "" } }, [
+        _c("i", { staticClass: "fas fa-trash-alt" }),
       ]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { staticClass: "job-post-ions", attrs: { href: "" } }, [
-          _c("i", { staticClass: "fas fa-edit" }),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { staticClass: "job-post-ions", attrs: { href: "" } }, [
-          _c("i", { staticClass: "fas fa-eye" }),
-        ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { staticClass: "job-post-ions", attrs: { href: "" } }, [
+        _c("i", { staticClass: "fas fa-edit" }),
       ]),
     ])
   },
