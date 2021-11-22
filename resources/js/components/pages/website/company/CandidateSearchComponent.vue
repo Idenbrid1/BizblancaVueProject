@@ -2,6 +2,7 @@
     <div>
         <WebsiteNavbar />
         <CompanyNavbar />
+        
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
