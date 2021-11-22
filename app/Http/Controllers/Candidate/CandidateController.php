@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Candidate;
 
 use App\Http\Controllers\Controller;
 use App\Models\Candidate;
+use App\Models\CandidateAppliedJob;
 use App\Models\CandidateAward;
 use App\Models\CandidateEducation;
 use App\Models\CandidateExperience;
 use App\Models\CandidateLanguage;
 use App\Models\CandidateProjects;
 use App\Models\CandidateSkill;
+use App\Models\JobPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use File;
@@ -379,6 +381,33 @@ class CandidateController extends Controller
             $candidate->update();
             return back();
 
+        }
+    }
+
+    public function applyJob($job_id)
+    {
+        if($job_post = JobPost::where(['id' => $job_id, 'status' => 'Active'])->first()){
+            // $apply_candidate = new CandidateAppliedJob();
+            // $apply_candidate->job_id = $job_post->id;
+            // $apply_candidate->company_id = $job_post->company_id;
+            // $apply_candidate->user_id = Auth::user()->id;
+            // $apply_candidate->create();
+            CandidateAppliedJob::create([
+                'job_id' => $job_post->id,
+                'company_id' => $job_post->company_id,
+                'user_id' => Auth::user()->id
+            ]);
+            
+            return response()->json([
+                'success' => true,
+                'message' => 'Applied SuccessfullyD',
+            ]);
+        }
+        else{
+            return response()->json([
+                'success' => false,
+                'message' => 'notfound',
+            ]);
         }
     }
 }

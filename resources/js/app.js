@@ -9,11 +9,11 @@
 window.Vue = require('vue').default;
 import router from './router';
 import App from './components/pages/website/MainApp.vue';
-
 Vue.use(require('vue-moment'));
-import Multiselect from 'vue-multiselect'
 
+import Multiselect from 'vue-multiselect'
 Vue.component('multiselect', Multiselect)
+
 // https://www.npmjs.com/package/vue-timeago
 import VueTimeago from 'vue-timeago'
 Vue.use(VueTimeago, {

@@ -81,8 +81,7 @@
                                 <ul class="job-list-fav m-0">
                                     <li>
                                         <router-link class="job-view-btn" data-toggle="collapse"
-                                            :to="{ name: 'JobDetail' }">View
-                                        </router-link>
+                                            :to="{ name: 'JobDetail', params: { id: item.id } }">View</router-link>
                                     </li>
                                 </ul>
                             </div>

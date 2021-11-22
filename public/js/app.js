@@ -8363,6 +8363,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -8370,11 +8371,13 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       data: '',
-      related_job: ''
+      related_job: '',
+      is_auth: ''
     };
   },
   created: function created() {
     this.init_component();
+    this.checkAuth();
   },
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -8386,15 +8389,45 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    showAlert: function showAlert() {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...🧐',
+        confirmButtonText: 'Understood!',
+        text: 'Please login before apply to any job!',
+        footer: '<a href="/#/signin">Login?</a>'
+      });
+    },
+    checkAuth: function checkAuth() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-auth').then(function (response) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-already-applied').then(function (response) {
+          _this.is_auth = response.data.isAuth;
+        });
+      });
+    },
     init_component: function init_component() {
       this.getSingleJobDetail();
     },
     getSingleJobDetail: function getSingleJobDetail() {
-      var _this = this;
+      var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-single-job-detail/' + this.$route.params.id).then(function (response) {
-        _this.data = response.data.job;
-        _this.related_job = response.data.related_job;
+        _this2.data = response.data.job;
+        _this2.related_job = response.data.related_job;
+      });
+    },
+    applyJob: function applyJob() {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/apply-job/' + this.data.id).then(function (response) {
+        if (response.data.success == true) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Applied Successfully',
+            confirmButtonText: '<i class="fa fa-thumbs-up"></i> Understood!',
+            text: 'Please be patients we will contact you as soon as possible!'
+          });
+        }
       });
     }
   }
@@ -10473,7 +10506,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -11677,7 +11709,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_18__["default"]({
     name: 'CandidateDetail',
     component: _components_pages_website_candidate_CandidateDetailComponent_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
   }, {
-    path: '/company-detail:id',
+    path: '/company-detail/:id',
     name: 'CompanyDetail',
     component: _components_pages_website_company_CompanyDetailComponent_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
   }, {
@@ -31882,7 +31914,12 @@ var render = function () {
                                     staticClass: "job-view-btn",
                                     attrs: {
                                       "data-toggle": "collapse",
-                                      to: { name: "JobDetail" },
+                                      to: {
+                                        name: "CompanyDetail",
+                                        params: {
+                                          id: _vm.searchData[index].id,
+                                        },
+                                      },
                                     },
                                   },
                                   [_vm._v("View")]
@@ -32532,7 +32569,37 @@ var render = function () {
                   _vm._v(_vm._s(_vm.data.title)),
                 ]),
                 _vm._v(" "),
-                _vm._m(0),
+                _c("div", { staticClass: "job-apply-ankers" }, [
+                  _vm.is_auth == true
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "job-apply-anker",
+                          on: {
+                            click: function ($event) {
+                              return _vm.applyJob()
+                            },
+                          },
+                        },
+                        [_vm._v("Apply Now")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.is_auth == false
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "job-apply-anker",
+                          on: {
+                            click: function ($event) {
+                              return _vm.showAlert()
+                            },
+                          },
+                        },
+                        [_vm._v("Apply Now")]
+                      )
+                    : _vm._e(),
+                ]),
               ]),
             ]),
             _vm._v(" "),
@@ -32666,7 +32733,7 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(1),
+                _vm._m(0),
                 _vm._v(" "),
                 _c("div", [
                   _c("h1", { staticClass: "company-detail-title" }, [
@@ -32684,7 +32751,7 @@ var render = function () {
               ]),
             ]),
             _vm._v(" "),
-            _vm._m(2),
+            _vm._m(1),
             _vm._v(" "),
             _c(
               "div",
@@ -32710,7 +32777,7 @@ var render = function () {
                         _vm._v(_vm._s(item.title)),
                       ]),
                       _vm._v(" "),
-                      _vm._m(3, true),
+                      _vm._m(2, true),
                     ]),
                     _vm._v(" "),
                     _c(
@@ -32805,8 +32872,6 @@ var render = function () {
                       ]),
                       _vm._v(" "),
                       _c("ul", { staticClass: "job-list-fav m-0" }, [
-                        _vm._m(4, true),
-                        _vm._v(" "),
                         _c(
                           "li",
                           [
@@ -32844,16 +32909,6 @@ var render = function () {
   )
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-apply-ankers" }, [
-      _c("a", { staticClass: "job-apply-anker", attrs: { href: "" } }, [
-        _vm._v("Apply Now"),
-      ]),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -32918,16 +32973,6 @@ var staticRenderFns = [
       _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
       _vm._v(" "),
       _c("i", { staticClass: "far fa-heart" }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { staticClass: "job-wishlist-btn", attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fa fa-heart" }),
-      ]),
     ])
   },
 ]
@@ -35960,14 +36005,13 @@ var render = function () {
                                 staticClass: "job-view-btn",
                                 attrs: {
                                   "data-toggle": "collapse",
-                                  to: { name: "JobDetail" },
+                                  to: {
+                                    name: "JobDetail",
+                                    params: { id: item.id },
+                                  },
                                 },
                               },
-                              [
-                                _vm._v(
-                                  "View\n                                    "
-                                ),
-                              ]
+                              [_vm._v("View")]
                             ),
                           ],
                           1

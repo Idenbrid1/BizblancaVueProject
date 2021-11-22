@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Mail\EmailResetPassword;
 use App\Mail\MailUserRegisterVerification;
 use App\Models\Candidate;
+use App\Models\CandidateAppliedJob;
 use App\Models\User;
 use App\Models\Company;
 use App\Models\PasswordReset;
@@ -421,6 +422,24 @@ class AuthenticationController extends Controller
             ]);
         }
         else{
+            return response()->json([
+                'isAuth'   => false,
+            ]);
+        }
+    }
+    public function checkAuthAndJobApplied()
+    {
+        if(Auth::check()){
+            if(CandidateAppliedJob::where('user_id', Auth::user()->id)->first()){
+                return response()->json([
+                    'applied'   => false,
+                ]); 
+            }else{
+                return response()->json([
+                    'applied'   => true,
+                ]); 
+            }
+        }else{
             return response()->json([
                 'isAuth'   => false,
             ]);

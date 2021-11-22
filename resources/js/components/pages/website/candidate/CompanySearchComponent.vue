@@ -4,7 +4,7 @@
         <CandidateNavbar />
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
-                <!---- ------------------------------>
+                <!---------------------------------->
                 <div class="product-search-box mb-2">
                     <label class="search-box-h">
                         Keyword Search
@@ -48,7 +48,7 @@
                 <div class="job-list-wrap mt-3">
                     <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
-                    <div class="job-list" v-if="index < searchData.length" v-for="(item, index) in companiesToShow"
+                    <div class="job-list"  v-if="index < searchData.length" v-for="(item, index) in companiesToShow"
                         :key="index">
                         <div class="company-logo col-auto py-2">
                             <img :src="'/storage/images/companies/'+searchData[index].logo" alt="Company Logo"/>
@@ -107,7 +107,7 @@
                                 <ul class="job-list-fav m-0">
                                     <li>
                                         <router-link class="job-view-btn" data-toggle="collapse"
-                                            :to="{ name: 'JobDetail' }">View</router-link>
+                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].id } }">View</router-link>
                                     </li>
                                 </ul>
                             </div>

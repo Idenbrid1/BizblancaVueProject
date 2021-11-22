@@ -44,7 +44,9 @@ Route::post('/user-registration', [App\Http\Controllers\Admin\AuthenticationCont
 Route::post('/user-login', [App\Http\Controllers\Admin\AuthenticationController::class, 'userLogin']);
 Route::get('user-logout', [App\Http\Controllers\Admin\AuthenticationController::class, 'userLogout']);
 Route::get('check-auth', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkAuth']);
+Route::get('check-auth-and-already-applied', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkAuthAndJobApplied']);
 Route::get('get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'getData']);
+Route::get('check-already-applied', [App\Http\Controllers\Candidate\CandidateController::class, 'checkAlreadyApplied']);
 Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCandidateRole']);
 Route::get('check-company-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCompanyRole']);
 Route::get('navbar-check-roles', [App\Http\Controllers\Admin\AuthenticationController::class, 'navbarCheckRole']);
@@ -108,6 +110,7 @@ Route::middleware('auth')->group(function(){
     Route::post('/update/cnic-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateFileCnic'])->name('profile.updateCnic');
     Route::post('/update/experience-letter-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateExperienceLetterFile'])->name('profile.updateExperienceLetter');
     Route::post('/update/desire-job', [App\Http\Controllers\Candidate\CandidateController::class, 'updateDesireJob'])->name('profile.updateDesireJob');
+    Route::get('/apply-job/{job_id}', [App\Http\Controllers\Candidate\CandidateController::class, 'applyJob']);
     // Route::post('/update/remark', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateRemark'])->name('profile.updateRemark');
     // // Route::post('/update/cnic-back', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnicBack'])->name('profile.updateCnicBack');
     // Route::post('/update/profile-pic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfilePic'])->name('profile.updateProfilePic');

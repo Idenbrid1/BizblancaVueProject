@@ -13,7 +13,8 @@
                         <h1 class="job-title-view">{{data.title}}</h1>
                         <div class="job-apply-ankers">
                             <!-- <a href="" class="add-wishlist-anker">Add to Wishlist</a> -->
-                            <a href="" class="job-apply-anker">Apply Now</a>
+                            <a v-if="is_auth == true" @click="applyJob()" class="job-apply-anker">Apply Now</a>
+                            <a v-if="is_auth == false" @click="showAlert()" class="job-apply-anker">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -154,7 +155,7 @@
                                     </ul>
                                 </div>
                                 <ul class="job-list-fav m-0">
-                                    <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li>
+                                    <!-- <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li> -->
                                     <li><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'JobDetail', params: { id: item.id } }">View</router-link></li>
                                 </ul>
                             </div>
@@ -183,10 +184,12 @@
             return {
                 data: '',
                 related_job: '',
+                is_auth: '',
             }
         },
         created() {
             this.init_component();
+            this.checkAuth()
         },
         components: {
             WebsiteNavbar,
@@ -199,6 +202,24 @@
             }
         },
         methods: {
+            showAlert(){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...🧐',
+                    confirmButtonText: 'Understood!',
+                    text: 'Please login before apply to any job!',
+                    footer: '<a href="/#/signin">Login?</a>'
+                })
+            },
+            checkAuth(){
+                axios.get('check-auth')
+                .then((response) => {
+                    axios.get('check-already-applied')
+                    .then((response) => {
+                        this.is_auth = response.data.isAuth
+                    });
+                });
+            },
             init_component: function(){
                 this.getSingleJobDetail();
             },
@@ -209,6 +230,20 @@
                     this.related_job = response.data.related_job
                 });
             },
+            applyJob(){
+                axios.get('/apply-job/'+this.data.id)
+                .then((response) => {
+                    if(response.data.success == true)
+                    {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Applied Successfully',
+                            confirmButtonText:'<i class="fa fa-thumbs-up"></i> Understood!',
+                            text: 'Please be patients we will contact you as soon as possible!',
+                        })
+                    }
+                });
+            }
         },
     };
 
