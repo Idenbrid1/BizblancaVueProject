@@ -6288,6 +6288,7 @@ progress {
 
 .job-apply-ankers>.job-apply-anker {
     background: #081351 0% 0% no-repeat padding-box;
+    color: #fff !important;
 }
 
 .job-detail-container {
@@ -6361,6 +6362,7 @@ progress {
 }
 .job-apply-anker{
     padding: 10px 42px !important;
+    color: #fff;
 }
 .job-content-wrap{
     display: flex;
