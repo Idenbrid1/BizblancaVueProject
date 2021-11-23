@@ -90,8 +90,7 @@
                             </div>
                         </div>
                     </div>
-
-                </div>jskdfhsdjfh
+                </div>
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->
                 <div class="bottom-pagination">
