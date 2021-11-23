@@ -1679,11 +1679,6 @@ body{
 .side-card-body {
     padding: 10px;
 }
-
-.ads-side-card-body {
-    padding: 15px 10px;
-}
-
 .ads-img {
     width: 100%;
 }
@@ -1733,11 +1728,6 @@ body{
     border-radius: 5px;
 }
 
-.side-card-title {
-    padding: 0.6rem;
-    background-color: #081351;
-}
-
 #accordion-style-1 h1,
 #accordion-style-1 a {
     color: #007b5e;
@@ -1753,12 +1743,6 @@ body{
     padding-left: 0px;
 }
 
-.faq-btn {
-    padding: 0px !important;
-    color: #081351;
-    font-size: 12px !important;
-}
-
 .faq-card {
     position: relative;
     display: -ms-flexbox;
@@ -1770,35 +1754,6 @@ body{
     background-color: #fff;
     border-radius: .25rem;
     margin-bottom: 10px;
-}
-
-.faq-card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: rgba(0, 0, 0, .03);
-    border-bottom: 1px solid rgba(0, 0, 0, .125);
-}
-
-.faq-card-header:first-child {
-    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
-}
-
-#accordion-style-1 .faq-card-header .btn.collapsed .fa.main {
-    display: none;
-}
-
-#accordion-style-1 .faq-card-header .btn .fa.main {
-    background: #007b5e;
-    padding: 13px 11px;
-    color: #ffffff;
-    width: 35px;
-    height: 41px;
-    position: absolute;
-    left: -1px;
-    top: 10px;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
-    display: block;
 }
 
 .cont-flex {
@@ -1846,14 +1801,6 @@ body{
     text-align: center;
     letter-spacing: 1.5px;
     text-align: center;
-}
-
-.description {
-    color: #080911;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 1.3em;
 }
 
 .job-list-toolbar {
@@ -2223,11 +2170,6 @@ body{
 .border-post {
     border-right: 1px solid;
 }
-
-.faq-btn:focus {
-    box-shadow: inherit !important;
-}
-
 .product-search-box {
     width: 100%;
     border: 1px solid #081351;
@@ -3226,6 +3168,7 @@ body{
     background-color: #081351;
     padding: 2rem 0px 0rem;
     color: #fff;
+    margin-top: 50px;
 }
 
 .footer nav {
@@ -3602,7 +3545,21 @@ body{
 .ads-side-card-body {
     padding: 15px 10px;
 }
-
+/* .ads-side-card-body .swiper-button-next, .ads-side-card-body .swiper-button-prev{
+    font-size: 12px;
+} */
+.ads-side-card-body .swiper-button-next:after, .ads-side-card-body .swiper-button-prev:after{
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    background: #081351;
+    color: #fff !important;
+    border-radius: 100px;
+}
 .ads-img {
     width: 100%;
 }
@@ -3638,8 +3595,12 @@ body{
 }
 
 .side-card-title {
-    padding: 0.6rem;
     background-color: #081351;
+    height: 35px;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
 }
 
 #accordion-style-1 h1,
@@ -3660,7 +3621,7 @@ body{
 .faq-btn {
     padding: 0px !important;
     color: #081351;
-    font-size: 12px !important;
+    font-size: 14px;
 }
 
 .faq-card {
@@ -3754,8 +3715,9 @@ body{
 
 .description {
     color: #080911;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
+    width: 200px;
     text-align: center;
     margin-bottom: 1.3em;
 }

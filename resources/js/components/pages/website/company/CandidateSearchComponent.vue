@@ -2,7 +2,7 @@
     <div>
         <WebsiteNavbar />
         <CompanyNavbar />
-        
+
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
@@ -294,7 +294,7 @@
                                                 <img src="/website//website/assets/images/position-crown.svg">
                                                 <h3 class="position-number">1st</h3>
                                             </div>
-                                            <p class="description">I have learned a lot of things in my life but to be a
+                                            <p class="description line-clamp-3">I have learned a lot of things in my life but to be a
                                                 Laravel
                                                 developer has changed my life.</p>
                                         </div>
