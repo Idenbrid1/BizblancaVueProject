@@ -1,3 +1,4 @@
+/public/js/app.js
 /node_modules
 /public/hot
 /public/storage
@@ -16,4 +17,3 @@ yarn-error.log
 /.vscode
 package-lock.json
 composer.lock
-/public/js/app.js
