@@ -1,7 +1,46 @@
 
 @media screen and (max-width:769px) {
+    .candidate-detail-img{
+        height: 120px;
+        width: 120px;
+    }
+    .candidate-send-msg{
+        height: 30px;
+        width: 120px;
+        font-size: 12px;
+        display: block;
+        text-align: center;
+        line-height: 30px;
+    }
+    .ionic-send-msg {
+        padding-right: 5px;
+        height: 10px;
+    }
+    .candidate-profile-container{
+        margin-top: 55px;
+    }
+    .candidate-detail-list>li>p{
+        margin-top: 0px;
+        font-size: 16px;
+    }
+    .candidate-detail-list-m>li{
+        font-size: 12px;
+        margin: 10px 0px;
+     }
+     .candidate-designation, .detail-label{
+         font-size: 14px;
+     }
     .company-logo{
         width: 100%;
+    }
+    .job-condition-clear-btn, .keyword-clear-btn{
+        width: 110px;
+        border-radius: 3px;
+    }
+    .job-condition-search-btn, .keyword-search-btn, .load-more-btn
+    {
+        width: 110px;
+        border-radius: 3px;
     }
     .condition-search-feilds{
         width: 100%;

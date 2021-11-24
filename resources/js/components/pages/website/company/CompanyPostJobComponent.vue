@@ -88,10 +88,8 @@
                                     </li>
                                 </ul>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->

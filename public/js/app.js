@@ -4589,6 +4589,136 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -8464,6 +8594,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -9979,8 +10110,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
 /* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
 /* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__);
-//
-//
 //
 //
 //
@@ -21319,13 +21448,378 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [_c("WebsiteNavbar"), _vm._v(" "), _c("h1", [_vm._v("candidate details")])],
-    1
-  )
+  return _c("div", [_c("WebsiteNavbar"), _vm._v(" "), _vm._m(0)], 1)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "candidate-profile-container container" }, [
+      _c("div", { staticClass: "row no-gutters" }, [
+        _c("div", { staticClass: "col-5 col-md-3" }, [
+          _c("div", { staticClass: "candidate-pic-detail" }, [
+            _c("div", {
+              staticClass: "candidate-detail-img",
+              staticStyle: {
+                "background-image":
+                  "url('/website/assets/images/Profile-detail-pic.png')",
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "a",
+              { staticClass: "candidate-send-msg", attrs: { href: "" } },
+              [
+                _c("img", {
+                  staticClass: "ionic-send-msg",
+                  attrs: {
+                    src: "/website/assets/images/Icon ionic-ios-send.svg",
+                    alt: "",
+                  },
+                }),
+                _vm._v(
+                  "\n                        Send Message\n                    "
+                ),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-7 col-md-9 candidate-detail-wrap" }, [
+          _c("div", [
+            _c("ul", { staticClass: "candidate-detail-list" }, [
+              _c("li", [_c("p", [_vm._v("Muhammad Ahmad")])]),
+              _vm._v(" "),
+              _c("li", { staticClass: "v-on-d" }, [
+                _c("img", {
+                  attrs: { src: "/website/assets/images/pin-job.svg", alt: "" },
+                }),
+                _vm._v(" Lahore, Pakistan"),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "v-on-d" }, [
+                _c("i", { staticClass: "far fa-heart" }),
+                _vm._v(" Add to Wishlist"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "candidate-designation" }, [
+              _vm._v("Web Developer"),
+            ]),
+            _vm._v(" "),
+            _c(
+              "ul",
+              { staticClass: "v-on-m m-0 p-0 pt-2 candidate-detail-list-m" },
+              [
+                _c("li", [
+                  _c("img", {
+                    attrs: {
+                      src: "/website/assets/images/pin-job.svg",
+                      alt: "",
+                    },
+                  }),
+                  _vm._v(" Lahore, Pakistan"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "far fa-heart" }),
+                  _vm._v(" Add to Wishlist"),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "detail-label" }, [
+            _c("i", { staticClass: "fas fa-user pr-2" }),
+            _vm._v(" Detailed Information"),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "candidate-profile-detail-wrap" }, [
+        _c("ul", { staticClass: "row no-gutters candidate-profile-detail" }, [
+          _c("li", { staticClass: "col-12 col-md-3 candidate-detail-label" }, [
+            _vm._v("CONTACT INFORMATION:"),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+            _c("ul", { staticClass: "candidate-info" }, [
+              _c("li", [
+                _c("span", [_vm._v("Phone:")]),
+                _vm._v("+92 300 123 4567"),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("span", [_vm._v("Address:")]),
+                _vm._v("178B - Lalazar Garden, Phase 2, Lahore"),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("span", [_vm._v("Email:")]),
+                _c("u", [_vm._v("abdullah.idenbrid@gmail.com")]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters basic-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("BASIC INFORMATION:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c("li", [
+                  _c("span", [_vm._v("Date of Birth:")]),
+                  _vm._v("25 May, 1993"),
+                ]),
+                _vm._v(" "),
+                _c("li", [_c("span", [_vm._v("Gender:")]), _vm._v("Male")]),
+                _vm._v(" "),
+                _c("li", [_c("span", [_vm._v("City:")]), _vm._v("Lahore")]),
+                _vm._v(" "),
+                _c("li", [_c("span", [_vm._v("Zip Code:")]), _vm._v("54000")]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("CNIC:")]),
+                  _vm._v("35202-0008766-0"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("Bio:")]),
+                  _vm._v(
+                    "I am Graduated from University of South Asia, I have done BS Computer\n                            Science. My expertise are UI/UX Designing, Product Designing, Graphic Designing, HTML,\n                            CSS."
+                  ),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters education-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("EDUCATION:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c("li", [
+                  _c("span", [_vm._v("Matriculation:")]),
+                  _vm._v("2012 to 2014 - Lahore Children High School"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("Intermediate:")]),
+                  _vm._v("2014 to 2016 - Punjab Group of Colleges"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("Bachelors:")]),
+                  _vm._v(
+                    "2016 to 2020 - BS (Computer Science) - University of South Asia,\n                            Cantt Campus"
+                  ),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters work-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("WORK EXPERIENCE:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c("li", [
+                  _c("span", [_vm._v("WORK EXPERIENCE:")]),
+                  _vm._v("UI/UX Designer - 6 months"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("Powerstar Group Limited:")]),
+                  _vm._v("Graphic Designer - 2 months"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("IDENBRID:")]),
+                  _vm._v("UI/UX Designer - Working"),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters awards-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("SKILLS:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c("li", { staticClass: "skills-candidate" }, [
+                  _c("div", [_vm._v("Product Designing")]),
+                  _vm._v(" "),
+                  _c("div", [_vm._v("UI/UX Designing")]),
+                  _vm._v(" "),
+                  _c("div", [_vm._v("Graphic Designing")]),
+                  _vm._v(" "),
+                  _c("div", [_vm._v("HTML")]),
+                  _vm._v(" "),
+                  _c("div", [_vm._v("CSS")]),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters awards-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("AWARDS:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c("li", [
+                  _c("span", [_vm._v("Best Entrepreneurship Gala Seller:")]),
+                  _vm._v("2020"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("Best Photographer of the Year:")]),
+                  _vm._v("2019"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("Brainstorming Champion:")]),
+                  _vm._v("2019"),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters language-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("LANGUAGES:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c("li", { staticClass: "skills-candidate" }, [
+                  _c("div", [_vm._v("English")]),
+                  _vm._v(" "),
+                  _c("div", [_vm._v("Urdu")]),
+                  _vm._v(" "),
+                  _c("div", [_vm._v("Punjabi")]),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters portfolio-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("PORTFOLIO:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c("li", [
+                  _c("a", { attrs: { href: "", target: "_blank" } }, [
+                    _vm._v("https://www.behance.net/abdullahnasir8"),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters projects-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("PROJECTS:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c("li", [
+                  _c("a", { attrs: { href: "", target: "_blank" } }, [
+                    _vm._v("https://github.com/abdulla20963"),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -33286,6 +33780,13 @@ var render = function () {
                       _c("div", { staticClass: "job-dynamic-values" }, [
                         _c("ul", [
                           _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/calendar-job.svg",
+                                alt: "img",
+                              },
+                            }),
+                            _vm._v(" "),
                             _c("span", [
                               _vm._v(
                                 _vm._s(
@@ -35493,7 +35994,7 @@ var staticRenderFns = [
                       ]),
                     ]),
                     _vm._v(" "),
-                    _c("p", { staticClass: "description" }, [
+                    _c("p", { staticClass: "description line-clamp-3" }, [
                       _vm._v(
                         "I have learned a lot of things in my life but to be a\n                                            Laravel\n                                            developer has changed my life."
                       ),

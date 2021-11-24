@@ -132,6 +132,7 @@
                                 <div class="job-dynamic-values">
                                     <ul>
                                         <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
                                             <span>{{item.created_at | moment("YYYY-MM-DD")}}</span>
                                         </li>
                                         <li>
