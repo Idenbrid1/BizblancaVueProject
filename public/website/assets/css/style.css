@@ -6390,3 +6390,125 @@ progress {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.candidate-profile-container{
+    margin-top: 35px;
+}
+.candidate-pic-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.candidate-detail-img{
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
+    border-radius: 5px;
+}
+.candidate-send-msg{
+    margin-top: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background: #081351 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.ionic-send-msg{
+    padding-right: 13px;
+}
+.candidate-detail-list{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.candidate-detail-list>li .candidate-detail-list>li{
+    font-size: 16px;
+    font-weight: 500;
+    color: #757575;
+    line-height: 0px;
+ }
+.candidate-detail-list>li>p{
+    color: #000000;
+    font-size: 35px;
+    margin: 0px;
+    margin-top: -11px;
+    font-weight: bold;
+}
+.candidate-detail-list>li>img, .candidate-detail-list>li>i{
+   padding-right: 10px;
+}
+.candidate-designation{
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 500
+}
+.candidate-detail-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.detail-label{
+   margin: 0px;
+   font-size: 16px;
+   font-weight: bold; 
+}
+.candidate-profile-detail-wrap{
+    border-top: 1px solid #707070;
+    margin-top: 5px;
+    padding-top: 18px;
+}
+.candidate-profile-detail{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.candidate-detail-label{
+    color: #081351;
+    font-size: 16px;
+    height: 19px;
+    padding-left: 8px !important;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+    border-left: 3px solid #081351;
+}
+.candidate-info{
+    margin: 0px;
+    padding: 0px;
+}
+.candidate-detail-info > .candidate-info > li{
+    font-size: 16px;
+    color: #757575;
+}
+.candidate-detail-info > .candidate-info > li > span{
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+    padding-right: 5px;
+}
+.candidate-detail-info > .candidate-info > li > a{
+    text-decoration: underline;
+    color: #0645AD !important;
+}
+.candidate-detail-info > .candidate-info > .skills-candidate > div{
+    background: #757575 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 400;
+    padding: 5px 7px;
+    width: fit-content;
+    margin: 5px;
+}
+.candidate-detail-info > .candidate-info > .skills-candidate {
+    display: flex;
+    flex-wrap: wrap;
+}
+.basic-detail-title, .education-detail-title, .language-detail-title, .work-detail-title, .awards-detail-title, .portfolio-detail-title, .projects-detail-title{
+    margin-top: 30px;
+}
