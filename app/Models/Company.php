@@ -36,4 +36,14 @@ class Company extends Model
     {
         return $this->hasMany(JobPost::class, 'company_id','id') ;
     }
+
+    public function Pakage()
+    {
+        return $this->belongsTo(Pakage::class, 'pakage_id', 'id');
+    }
+
+    public function Order()
+    {
+        return $this->belongsTo(Order::class, 'order_id', 'id');
+    }
 }

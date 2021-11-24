@@ -46,7 +46,8 @@ Route::get('user-logout', [App\Http\Controllers\Admin\AuthenticationController::
 Route::get('check-auth', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkAuth']);
 Route::get('check-auth-and-already-applied', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkAuthAndJobApplied']);
 Route::get('get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'getData']);
-Route::get('check-already-applied', [App\Http\Controllers\Candidate\CandidateController::class, 'checkAlreadyApplied']);
+Route::get('/check-already-applied/{id}', [App\Http\Controllers\Candidate\CandidateController::class, 'checkAlreadyApplied']);
+Route::get('/get-pakage-plans', [App\Http\Controllers\CommonController::class, 'getPakagePlansList']);
 Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCandidateRole']);
 Route::get('check-company-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCompanyRole']);
 Route::get('navbar-check-roles', [App\Http\Controllers\Admin\AuthenticationController::class, 'navbarCheckRole']);
@@ -149,6 +150,10 @@ Route::post('/update/newsletter', [App\Http\Controllers\Website\Candidate\Profil
         Route::post('/update/socialmedia', [App\Http\Controllers\Company\CompanyController::class, 'socialmediaupdate'])->name('profile.updateSocialMedia');
         Route::post('/company/post-job', [App\Http\Controllers\Company\CompanyController::class, 'jobPost'])->name('profile.jobPost');
         Route::get('/get-company-jobs', [App\Http\Controllers\Company\CompanyController::class, 'companyJobs'])->name('profile.companyJobs');
+        Route::get('/delete-job-post/{id}', [App\Http\Controllers\Company\CompanyController::class, 'deleteJobPost'])->name('profile.deleteCompanyJobs');
+        Route::get('/edit-job-post/{id}', [App\Http\Controllers\Company\CompanyController::class, 'editJobPost'])->name('profile.editCompanyJobs');
+        Route::get('/buy-pakage-plan/{pakage_id}', [App\Http\Controllers\Company\CompanyController::class, 'buyPakage'])->name('profile.buyPakage');
+        Route::get('/check-job-post-limit', [App\Http\Controllers\Company\CompanyController::class, 'checkPostJobLimit']);
 		// Route::get('/home', [App\Http\Controllers\Website\Company\HomeController::class, 'showDashboardPage'])->name('home');
 		// Route::get('/profile', [App\Http\Controllers\Website\Company\ProfileController::class, 'show'])->name('profile.show');
 		// Route::get('/profile_edit', [App\Http\Controllers\Website\Company\ProfileController::class, 'edit'])->name('profile.edit');
@@ -220,6 +225,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
         Route::prefix('company')->name('company.')->group(function(){
             Route::get('index', [App\Http\Controllers\Admin\CompanyController::class, 'index'])->name('index');
+            Route::get('pakage-companies', [App\Http\Controllers\Admin\CompanyController::class, 'pakageCompanies'])->name('pakageCompanies');
         });
 
         Route::prefix('contact-us')->name('contact_us.')->group(function(){

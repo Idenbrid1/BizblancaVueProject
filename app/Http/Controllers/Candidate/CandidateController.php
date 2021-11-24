@@ -410,4 +410,17 @@ class CandidateController extends Controller
             ]);
         }
     }
+
+    public function checkAlreadyApplied($id)
+    {
+        if(CandidateAppliedJob::where(['user_id'=> Auth::user()->id, 'job_id' => $id])->first()){
+            return response()->json([
+                'already_applied'   => true,
+            ]); 
+        }else{
+            return response()->json([
+                'already_applied'   => false,
+            ]); 
+        }
+    }
 }

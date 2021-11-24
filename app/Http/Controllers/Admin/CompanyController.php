@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Company;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use View;
 
@@ -89,4 +90,14 @@ class CompanyController extends Controller
     {
         //
     }
+    public function pakageCompanies()
+    {
+        $orders = Order::all();
+        foreach($orders as $order)
+        {
+            $companies[] = Company::where('id', $order->company_id)->with(['Pakage', 'Order'])->first();
+        }
+        return view('adminpanel/pages/order_companies', compact('companies'));
+    }
+
 }

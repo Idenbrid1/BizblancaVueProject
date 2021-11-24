@@ -16,6 +16,7 @@ class Pakage extends Model
         'job_post',
         'connect',
         'is_personal_show',
+        'duration',
         'description',
     ];
 }

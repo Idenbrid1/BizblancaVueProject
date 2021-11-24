@@ -15,8 +15,9 @@
                         <h1 class="job-title-view">{{data.title}}</h1>
                         <div class="job-apply-ankers">
                             <!-- <a href="" class="add-wishlist-anker">Add to Wishlist</a> -->
-                            <a v-if="is_auth == true" @click="applyJob()" class="job-apply-anker">Apply Now</a>
+                            <a v-if="is_auth == true && already_applied == false" @click="applyJob()" class="job-apply-anker">Apply Now</a>
                             <a v-if="is_auth == false" @click="showAlert()" class="job-apply-anker">Apply Now</a>
+                            <a v-if="already_applied == true" @click="alreadyAppliedAlert()" class="job-apply-anker">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -187,9 +188,10 @@
     export default {
         data() {
             return {
-                data: '',
+                data: {},
                 related_job: '',
                 is_auth: '',
+                already_applied: ''
             }
         },
         created() {
@@ -219,14 +221,18 @@
             checkAuth(){
                 axios.get('check-auth')
                 .then((response) => {
-                    axios.get('check-already-applied')
-                    .then((response) => {
+                    if(response.data.isAuth == true){
                         this.is_auth = response.data.isAuth
-                    });
+                        axios.get('/check-already-applied/'+this.data.id)
+                        .then((response) => {
+                            this.already_applied = response.data.already_applied
+                        });
+                    }
                 });
             },
-            init_component: function(){
+            init_component(){
                 this.getSingleJobDetail();
+                this.checkAuth()
             },
             getSingleJobDetail() {
                 axios.get('/get-single-job-detail/' + this.$route.params.id)
@@ -238,6 +244,7 @@
             applyJob(){
                 axios.get('/apply-job/'+this.data.id)
                 .then((response) => {
+                    this.already_applied =  true
                     if(response.data.success == true)
                     {
                         Swal.fire({
@@ -248,6 +255,14 @@
                         })
                     }
                 });
+            },
+            alreadyAppliedAlert(){
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Already Applied!',
+                    confirmButtonText:'<i class="fa fa-thumbs-up"></i> Understood!',
+                    text: 'You have already applied for this job wait for response!',
+                })
             }
         },
     };

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use App\Mail\EmailResetPassword;
 use App\Mail\MailUserRegisterVerification;
 use App\Models\Candidate;
@@ -376,6 +377,7 @@ class AuthenticationController extends Controller
 
     public function navbarCheckRole()
     {
+        // return UserResource::collection(User::all());
         if(Auth::check())
         { 
             if(Auth::user()->type == 'company')
@@ -427,23 +429,5 @@ class AuthenticationController extends Controller
             ]);
         }
     }
-    public function checkAuthAndJobApplied()
-    {
-        if(Auth::check()){
-            if(CandidateAppliedJob::where('user_id', Auth::user()->id)->first()){
-                return response()->json([
-                    'applied'   => false,
-                ]); 
-            }else{
-                return response()->json([
-                    'applied'   => true,
-                ]); 
-            }
-        }else{
-            return response()->json([
-                'isAuth'   => false,
-            ]);
-        }
-
-    }
+   
 }

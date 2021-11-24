@@ -6,6 +6,7 @@ use App\Models\Candidate;
 use App\Models\CandidateSkill;
 use App\Models\Company;
 use App\Models\JobPost;
+use App\Models\Pakage;
 use Illuminate\Http\Request;
 
 class CommonController extends Controller
@@ -110,5 +111,10 @@ class CommonController extends Controller
             'job' => $job,
             'related_job' => $retatedCompanyJob
         ]);
+    }
+
+    public function getPakagePlansList()
+    {
+        return Pakage::all();
     }
 }

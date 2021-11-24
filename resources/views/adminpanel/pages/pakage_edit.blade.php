@@ -65,6 +65,10 @@
                             <option value="0">No</option>
                         </select>
                     </div>
+                    <label class="col-sm-2 control-label">Duration in days</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" value="{{$pakage->duration}}" name="duration"  required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Description</label>

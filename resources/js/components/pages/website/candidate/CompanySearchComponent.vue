@@ -379,10 +379,12 @@
     import WebsiteNavbar from '../partials/navbar.vue';
     import CandidateNavbar from '../partials/CandidateNavbar.vue';
     export default {
+        props: ['userdetail'],
         data() {
             return {
                 record: {
                     keyword: ''
+
                 },
                 searchData: '',
                 companiesToShow: 2,

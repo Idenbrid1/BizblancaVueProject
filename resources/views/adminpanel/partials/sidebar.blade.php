@@ -54,6 +54,7 @@
                 <ul class="nav nav-second-level collapse">
                     <li><a href="{{ route('admin.company.index') }}">List</a></li>
                     <li><a href="">Create</a></li>
+                    <li><a href="{{ route('admin.company.pakageCompanies') }}">Pakage Plan</a></li>
                 </ul>
             </li>
 

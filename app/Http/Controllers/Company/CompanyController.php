@@ -3,23 +3,55 @@
 namespace App\Http\Controllers\Company;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendInvoiceMail;
 use App\Models\Candidate;
 use App\Models\Company;
 use App\Models\JobPost;
+use App\Models\Order;
+use App\Models\Pakage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use File;
 use Validator;
+use Carbon\Carbon;
+use Mail;
+
 
 class CompanyController extends Controller
 {
     public function getCompanyProfile()
     {
         $user_id = Auth::user()->id;
-        $company = Company::where('user_id', $user_id)->first();
-        return response()->json([
-            'company' => $company,
-        ]);
+        $company = Company::where('user_id', $user_id)->with(['Order', 'Pakage'])->first();
+        if($company->order['status'] == 'active')
+        {
+            if($company->order['job_post'] == $company->post_job_count)
+            {
+                return response()->json([
+                    'success' => false,
+                    'company' => $company,
+                    'response' => 'exceeded'
+                ]);
+            }
+            else{
+                return response()->json([
+                    'success' => true,
+                    'company' => $company,
+                ]);
+            }
+        }else if($company->order['status'] == 'expire'){
+            return response()->json([
+                'company' => $company,
+                'response' => 'expire'
+            ]);
+        }
+        else
+        {
+            return response()->json([
+                'company' => $company,
+                'response' => 'pending'
+            ]);
+        }
     }
 
     public function updateCompanyBasicInformation(Request $request)
@@ -169,6 +201,8 @@ class CompanyController extends Controller
                 $postjob->bannar = $imagefilename;
             }
             $postjob->save();
+            $company->post_job_count = $company->post_job_count + 1;
+            $company->update();
             return response()->json([
                 'success' => true,
                 'message' => 'Jobe Posted',
@@ -182,5 +216,95 @@ class CompanyController extends Controller
         $company = Company::where('user_id', $user->id)->first();
         $jobs = JobPost::where('company_id', $company->id)->orderBy('created_at', 'desc')->paginate(2);
         return response()->json($jobs);
+    }
+
+    public function deleteJobPost($id)
+    {
+        if(JobPost::find($id)){
+            JobPost::where('id', $id)->delete();
+            return response()->json([
+                'success' => true
+            ]);
+        }else{
+            return response()->json([
+                'success' => false
+            ]);
+        }
+    }
+
+    public function editJobPost($id)
+    {
+        if(JobPost::find($id)){
+            $jobpost = JobPost::find($id);
+            return response()->json([
+                'success'   => true,
+                'data'      => $jobpost,
+            ]);
+        }else{
+            return response()->json([
+                'success' => false
+            ]);
+        }
+    }
+
+    public function buyPakage($pakage_id)
+    {
+        if(Auth::check()){
+            $user_id = Auth::user()->id;
+            $company = Company::where('user_id', $user_id)->first();
+            $pakage = Pakage::find($pakage_id);
+            $create_Order = Order::create([
+                'pakage_id' => $pakage->id,
+                'company_id' => $company->id,
+                'user_id' => Auth::user()->id,
+                'start_date' => Carbon::now(),
+                'end_date' => Carbon::now()->addDay($pakage->duration),
+                'status' => 'pending',
+            ]);
+            $company->pakage_id = $pakage->id;
+            $company->order_id = $create_Order->id;
+            $company->update();
+            Mail::to($company->email)->send(new SendInvoiceMail($company));
+        }
+        else{
+            return response()->json([
+                'success' => false,
+                'response' => 'login'
+            ]);
+        }
+    }
+
+    public function checkPostJobLimit()
+    {
+        $user_id = Auth::user()->id;
+        $company = Company::where('user_id', $user_id)->with('Order')->first();
+        $pakage = Pakage::find($company->pakage_id);
+        if($company->order['status'] == 'active')
+        {
+            if($pakage->job_post == $company->post_job_count)
+            {
+                return response()->json([
+                    'success' => false,
+                    'limit' => 'exceeded'
+                ]);
+            }
+            else{
+                return response()->json([
+                    'success' => true,
+                ]);
+            }
+        }else if($company->order['status'] == 'expire'){
+            return response()->json([
+                'success' => false,
+                'response' => 'expire'
+            ]);
+        }
+        else
+        {
+            return response()->json([
+                'success' => false,
+                'response' => 'pending'
+            ]);
+        }
     }
 }

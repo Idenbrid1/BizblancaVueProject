@@ -153,7 +153,6 @@
                                              <i class="fa fa-star" aria-hidden="true"></i>
                                              <i class="fa fa-star" aria-hidden="true"></i>
                                              <i class="fa fa-star" aria-hidden="true"></i> -->
-
                                         <div class="d-flex align-items-center">
                                             <span class="job-post-date">20 hours ago </span>
                                             <i class="far fa-heart"></i>
@@ -208,7 +207,7 @@
                             <!-- </div> -->
                         </div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center" v-if="searchData.length">
                         <button class="load-more-btn mx-auto" @click="jobToShow += 2">Load more</button>
                     </div>
                 </div>
