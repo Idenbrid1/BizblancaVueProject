@@ -238,7 +238,7 @@
             <thead>
                 <tr>
                     <th class="no">#</th>
-                    <th class="desc">PAKAGE NAME</th>
+                    <th class="desc">PAcKAGE NAME</th>
                     <th class="unit">PRICE</th>
                     <th class="unit">Start Data</th>
                     <th class="unit">End Data</th>
@@ -250,19 +250,19 @@
                 <tr>
                     <td class="no">01</td>
                     <td class="desc">
-                        <h3>{{$company->pakage->title}}</h3>{{$company->pakage->description}}
+                        <h3>{{$company->package->title}}</h3>{{$company->package->description}}
                     </td>
-                    <td class="unit">{{$company->pakage->amount}}</td>
+                    <td class="unit">{{$company->package->amount}}</td>
                     <td class="unit">{{date('d-m-Y', strtotime($company->order->start_date))}}</td>
                     <td class="unit">{{date('d-m-Y', strtotime($company->order->end_date))}}</td>
-                    <td class="total">{{$company->pakage->amount}}</td>
+                    <td class="total">{{$company->package->amount}}</td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
                     <td colspan="2"></td>
                     <td colspan="2">GRAND TOTAL</td>
-                    <td>{{$company->pakage->amount}}</td>
+                    <td>{{$company->package->amount}}</td>
                 </tr>
             </tfoot>
         </table>

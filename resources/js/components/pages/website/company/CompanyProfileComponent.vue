@@ -5,7 +5,7 @@
         <div class="profile-wrapper mt-5">
             <div class="row m-0 container p-0">
                 <div class="col-12 p-0">
-                    <div v-if="this.profile.pakage_id == 0" class="alert-message-resume resume-attention-alert col-12">
+                    <div v-if="this.profile.package_id == 0" class="alert-message-resume resume-attention-alert col-12">
                         <h2>Please upgrade you plan for better experience</h2>
                         <p>
                             Since [personal information] such as name and contact information is
@@ -13,7 +13,7 @@
                             suspended. Please check your registration information and update
                             your resume.
                             <router-link class="job-view-btn" data-toggle="collapse"
-                                :to="{ name: 'PakagePlans' }">UPGRADE</router-link>
+                                :to="{ name: 'PackagePlans' }">UPGRADE</router-link>
                         </p>
                     </div>
                     <div v-if="this.order_status == 'pending'" class="alert-message-resume resume-attention-alert col-12">

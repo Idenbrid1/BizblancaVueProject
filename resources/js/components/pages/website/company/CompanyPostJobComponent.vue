@@ -918,23 +918,23 @@
                         if(response.data.response == 'expire'){
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Pakage Expire',
-                                text: 'Your Pakage Expire and you not able to post more jobs ',
-                                footer: '<a href="/#/pakage-plans">Upgrade Plan</a> ',
+                                title: 'Package Expire',
+                                text: 'Your Package Expire and you not able to post more jobs ',
+                                footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
                             })
                         }else if(response.data.response == 'pending'){
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Please Wait',
                                 text: 'Please pay your dues to post jobs! Thanks',
-                                footer: '<a href="/#/pakage-plans">Upgrade Plan</a> ',
+                                footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
                             })
                         }else{
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Limit Exceeded',
                                 text: 'Your Post Job Limit Exceeded',
-                                footer: '<a href="/#/pakage-plans">Upgrade Plan</a> ',
+                                footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
                             })
                         }
                     }

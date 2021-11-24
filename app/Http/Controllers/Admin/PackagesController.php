@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Pakage;
+use App\Models\Package;
 use View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-class PakagesController extends Controller
+class PackagesController extends Controller
 {
     public function index()
     {
-        $pakages = Pakage::orderby('created_at', 'DESC')->get();
+        $packages = Package::orderby('created_at', 'DESC')->get();
 
-        $view = View::make('adminpanel/pages/pakage_index', compact('pakages'));
+        $view = View::make('adminpanel/pages/package_index', compact('packages'));
         $view->nest('sidebar','adminpanel/partials/sidebar');
         $view->nest('header','adminpanel/partials/header');
         return $view;
@@ -26,7 +26,7 @@ class PakagesController extends Controller
      */
     public function create()
     {
-        $view = View::make('adminpanel/pages/pakages_create');
+        $view = View::make('adminpanel/pages/packages_create');
         $view->nest('sidebar','adminpanel/partials/sidebar');
         $view->nest('header','adminpanel/partials/header');
         return $view;
@@ -40,7 +40,7 @@ class PakagesController extends Controller
             {
                 $image = $request->image;
                 $name=time() . '_'. $request->title . '.'. $image->getClientOriginalExtension();
-                $image->move(public_path().'/storage/images/pakage/', $name);
+                $image->move(public_path().'/storage/images/package/', $name);
                 $inputs['image'] = $name;
             }
             else{
@@ -49,9 +49,9 @@ class PakagesController extends Controller
 
             $inputs['created_by'] = $inputs['updated_by'] = Auth::id();
 
-            $pakage = Pakage::create($inputs);
+            $package = Package::create($inputs);
             // Notification::send(Auth::guard('admin')->user(), new NewNewsNotification("NEWS Created"));
-            return redirect()->route('admin.pakages.index');
+            return redirect()->route('admin.packages.index');
         }else{
             return redirect()->route('admin.login');
         }
@@ -59,9 +59,9 @@ class PakagesController extends Controller
 
     public function edit($id)
     {
-        $pakage = Pakage::find($id);
+        $package = Package::find($id);
 
-        $view = View::make('adminpanel/pages/pakage_edit', compact('pakage'));
+        $view = View::make('adminpanel/pages/package_edit', compact('package'));
         $view->nest('sidebar','adminpanel/partials/sidebar');
         $view->nest('header','adminpanel/partials/header');
         return $view;
@@ -69,19 +69,19 @@ class PakagesController extends Controller
 
     public function update(Request $request, $id)
     {
-        $pakage = Pakage::find($id);
+        $package = Package::find($id);
 
         $inputs = $request->all();
         if($request->hasfile('image'))
         {
             $image = $request->image;
             $name=time() . '_'. $request->name . '.'. $image->getClientOriginalExtension();
-            $image->move(public_path().'/storage/images/pakage/', $name);
+            $image->move(public_path().'/storage/images/package/', $name);
             $inputs['image'] = $name;
         }
 
         $inputs['updated_by'] = Auth::id();
-        $pakage->update($inputs);
-        return redirect()->route('admin.pakages.index');
+        $package->update($inputs);
+        return redirect()->route('admin.packages.index');
     }
 }

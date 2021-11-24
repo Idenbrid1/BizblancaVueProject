@@ -1,7 +1,7 @@
 @extends('adminpanel.layout.master')
 <!-- ================================== EXTEND TITLE AND META TAGS ============================= -->
 @section('title-meta')
-<title>Bizblanca | Pakages Companies</title>
+<title>Bizblanca | Packages Companies</title>
 <meta name="description" content="this is description">
 @endsection
 <!-- ====================================== EXTRA CSS LINKS ==================================== -->
@@ -59,7 +59,7 @@
                                 <th>Address</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>Pakage</th>
+                                <th>Package</th>
                                 <th>Payment Status</th>
                                 <th>Action</th>
                             </tr>
@@ -75,9 +75,9 @@
                                     <td class="center">{{$company->address}}</td>
                                     <td class="center">{{$company->email}}</td>
                                     <td class="center">{{$company->phone}}</td>
-                                    <td class="center">{{$company->Pakage->title}}</td>
+                                    <td class="center">{{$company->Package->title}}</td>
                                     <td>
-                                        @if($company->Pakage->status == 'pending')
+                                        @if($company->Package->status == 'pending')
                                         <a>
                                             <small id="" class="label label-primary">Paid</small>
                                         </a>

@@ -47,7 +47,7 @@ Route::get('check-auth', [App\Http\Controllers\Admin\AuthenticationController::c
 Route::get('check-auth-and-already-applied', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkAuthAndJobApplied']);
 Route::get('get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'getData']);
 Route::get('/check-already-applied/{id}', [App\Http\Controllers\Candidate\CandidateController::class, 'checkAlreadyApplied']);
-Route::get('/get-pakage-plans', [App\Http\Controllers\CommonController::class, 'getPakagePlansList']);
+Route::get('/get-package-plans', [App\Http\Controllers\CommonController::class, 'getPackagePlansList']);
 Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCandidateRole']);
 Route::get('check-company-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCompanyRole']);
 Route::get('navbar-check-roles', [App\Http\Controllers\Admin\AuthenticationController::class, 'navbarCheckRole']);
@@ -152,7 +152,7 @@ Route::post('/update/newsletter', [App\Http\Controllers\Website\Candidate\Profil
         Route::get('/get-company-jobs', [App\Http\Controllers\Company\CompanyController::class, 'companyJobs'])->name('profile.companyJobs');
         Route::get('/delete-job-post/{id}', [App\Http\Controllers\Company\CompanyController::class, 'deleteJobPost'])->name('profile.deleteCompanyJobs');
         Route::get('/edit-job-post/{id}', [App\Http\Controllers\Company\CompanyController::class, 'editJobPost'])->name('profile.editCompanyJobs');
-        Route::get('/buy-pakage-plan/{pakage_id}', [App\Http\Controllers\Company\CompanyController::class, 'buyPakage'])->name('profile.buyPakage');
+        Route::get('/buy-package-plan/{package_id}', [App\Http\Controllers\Company\CompanyController::class, 'buyPackage'])->name('profile.buyPackage');
         Route::get('/check-job-post-limit', [App\Http\Controllers\Company\CompanyController::class, 'checkPostJobLimit']);
 		// Route::get('/home', [App\Http\Controllers\Website\Company\HomeController::class, 'showDashboardPage'])->name('home');
 		// Route::get('/profile', [App\Http\Controllers\Website\Company\ProfileController::class, 'show'])->name('profile.show');
@@ -225,7 +225,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
         Route::prefix('company')->name('company.')->group(function(){
             Route::get('index', [App\Http\Controllers\Admin\CompanyController::class, 'index'])->name('index');
-            Route::get('pakage-companies', [App\Http\Controllers\Admin\CompanyController::class, 'pakageCompanies'])->name('pakageCompanies');
+            Route::get('package-companies', [App\Http\Controllers\Admin\CompanyController::class, 'packageCompanies'])->name('packageCompanies');
         });
 
         Route::prefix('contact-us')->name('contact_us.')->group(function(){
@@ -265,13 +265,13 @@ Route::prefix('admin')->name('admin.')->group(function(){
             Route::post('/update/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'update'])->name('update');
             Route::get('/destroy/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'destroy'])->name('destroy');
         });
-        // ===================================PAKAGES ROUTES=======================================
-        Route::prefix('pakages')->name('pakages.')->group(function(){
-            Route::get('/list', [App\Http\Controllers\Admin\PakagesController::class, 'index'])->name('index');
-            Route::get('/create', [App\Http\Controllers\Admin\PakagesController::class, 'create'])->name('create');
-            Route::post('/store', [App\Http\Controllers\Admin\PakagesController::class, 'store'])->name('store');
-            Route::get('/edit/{id}', [App\Http\Controllers\Admin\PakagesController::class, 'edit'])->name('edit');
-            Route::post('/update/{id}', [App\Http\Controllers\Admin\PakagesController::class, 'update'])->name('update');
+        // ===================================PAcKAGES ROUTES=======================================
+        Route::prefix('packages')->name('packages.')->group(function(){
+            Route::get('/list', [App\Http\Controllers\Admin\PackagesController::class, 'index'])->name('index');
+            Route::get('/create', [App\Http\Controllers\Admin\PackagesController::class, 'create'])->name('create');
+            Route::post('/store', [App\Http\Controllers\Admin\PackagesController::class, 'store'])->name('store');
+            Route::get('/edit/{id}', [App\Http\Controllers\Admin\PackagesController::class, 'edit'])->name('edit');
+            Route::post('/update/{id}', [App\Http\Controllers\Admin\PackagesController::class, 'update'])->name('update');
             // Route::get('/show/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'show'])->name('show');
             // Route::get('/destroy/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'destroy'])->name('destroy');
         });

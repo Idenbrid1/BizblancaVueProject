@@ -18,7 +18,7 @@ import CandidateSearch from './components/pages/website/company/CandidateSearchC
 import CompanySearch from './components/pages/website/candidate/CompanySearchComponent.vue';
 import JobSearch from './components/pages/website/candidate/JobSearchComponent.vue';
 import JobDetail from './components/pages/website/candidate/JobDetailComponent.vue';
-import PakagePlans from './components/pages/admin/PakagePlansComponent.vue';
+import PackagePlans from './components/pages/admin/PackagePlansComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -139,9 +139,9 @@ const router = new VueRouter({
             component: JobDetail
         },
         {
-            path: '/pakage-plans',
-            name: 'PakagePlans',
-            component: PakagePlans
+            path: '/package-plans',
+            name: 'PackagePlans',
+            component: PackagePlans
         },
     ]
 });

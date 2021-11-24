@@ -90,12 +90,12 @@ class CompanyController extends Controller
     {
         //
     }
-    public function pakageCompanies()
+    public function packageCompanies()
     {
         $orders = Order::all();
         foreach($orders as $order)
         {
-            $companies[] = Company::where('id', $order->company_id)->with(['Pakage', 'Order'])->first();
+            $companies[] = Company::where('id', $order->company_id)->with(['Package', 'Order'])->first();
         }
         return view('adminpanel/pages/order_companies', compact('companies'));
     }

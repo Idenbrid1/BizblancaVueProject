@@ -11,13 +11,13 @@
 @section('content')
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>List of Pakages</h2>
+        <h2>List of Packages</h2>
         <ol class="breadcrumb">
             <li>
                 <a href="index.html">Home</a>
             </li>
             <li>
-                <a>Pakages</a>
+                <a>Packages</a>
             </li>
             <li class="active">
                 <strong>List</strong>
@@ -33,7 +33,7 @@
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>All Pakages are listed here..</h5>
+                    <h5>All Packages are listed here..</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -73,21 +73,21 @@
                         $counter = 1;
                     @endphp
 
-                    @foreach($pakages as $pakage)
-                        <tr class="gradeX" id="row{{$pakage->id}}">
+                    @foreach($packages as $package)
+                        <tr class="gradeX" id="row{{$package->id}}">
                             <td>{{$counter}}</td>
-                            <td class="center">{{$pakage->title}}</td>
-                            <td class="center">{{$pakage->description}}</td>
-                            <td class="center">{{$pakage->amount}}</td>
-                            <td class="center">{{$pakage->job_post}}</td>
-                            <td class="center">{{$pakage->connect}}</td>
-                            <td class="center">{{$pakage->is_personal_show}}</td>
+                            <td class="center">{{$package->title}}</td>
+                            <td class="center">{{$package->description}}</td>
+                            <td class="center">{{$package->amount}}</td>
+                            <td class="center">{{$package->job_post}}</td>
+                            <td class="center">{{$package->connect}}</td>
+                            <td class="center">{{$package->is_personal_show}}</td>
 
                             <td>
-                                <a href="{{ route('admin.pakages.edit', $pakage->id) }}">
+                                <a href="{{ route('admin.packages.edit', $package->id) }}">
                                     <small class="label label-primary"><i class="fa"></i>Edit</small>
                                 </a>
-                                <!-- <a onclick="DeleteNews({{ $pakage->id }})">
+                                <!-- <a onclick="DeleteNews({{ $package->id }})">
                                     <small class="label label-danger"><i class="fa"></i>Delete</small>
                                 </a> -->
                             </td>

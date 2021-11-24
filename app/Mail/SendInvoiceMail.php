@@ -31,7 +31,7 @@ class SendInvoiceMail extends Mailable
     public function build()
     {
         $company = $this->company;
-        $companyinfo = Company::where('id', $company->id)->with(['Pakage', 'Order'])->first();
+        $companyinfo = Company::where('id', $company->id)->with(['Package', 'Order'])->first();
 
         return $this->from('info@bizblanca.com')
                     ->subject('Bizblanca Plan Invoice')

@@ -54,7 +54,7 @@
                 <ul class="nav nav-second-level collapse">
                     <li><a href="{{ route('admin.company.index') }}">List</a></li>
                     <li><a href="">Create</a></li>
-                    <li><a href="{{ route('admin.company.pakageCompanies') }}">Pakage Plan</a></li>
+                    <li><a href="{{ route('admin.company.packageCompanies') }}">Package Plan</a></li>
                 </ul>
             </li>
 
@@ -115,10 +115,10 @@
 
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o"></i> <span
-                        class="nav-label">Pakages</span><span class="fa arrow"></span></a>
+                        class="nav-label">Packages</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
-                    <li><a href="{{ route('admin.pakages.create') }}">Create</a></li>
-                    <li><a href="{{ route('admin.pakages.index') }}">List</a></li>
+                    <li><a href="{{ route('admin.packages.create') }}">Create</a></li>
+                    <li><a href="{{ route('admin.packages.index') }}">List</a></li>
                 </ul>
             </li>
 

@@ -8,7 +8,7 @@ use App\Models\Candidate;
 use App\Models\Company;
 use App\Models\JobPost;
 use App\Models\Order;
-use App\Models\Pakage;
+use App\Models\Package;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use File;
@@ -22,7 +22,7 @@ class CompanyController extends Controller
     public function getCompanyProfile()
     {
         $user_id = Auth::user()->id;
-        $company = Company::where('user_id', $user_id)->with(['Order', 'Pakage'])->first();
+        $company = Company::where('user_id', $user_id)->with(['Order', 'Package'])->first();
         if($company->order['status'] == 'active')
         {
             if($company->order['job_post'] == $company->post_job_count)
@@ -247,21 +247,21 @@ class CompanyController extends Controller
         }
     }
 
-    public function buyPakage($pakage_id)
+    public function buyPackage($package_id)
     {
         if(Auth::check()){
             $user_id = Auth::user()->id;
             $company = Company::where('user_id', $user_id)->first();
-            $pakage = Pakage::find($pakage_id);
+            $package = Package::find($package_id);
             $create_Order = Order::create([
-                'pakage_id' => $pakage->id,
+                'package_id' => $package->id,
                 'company_id' => $company->id,
                 'user_id' => Auth::user()->id,
                 'start_date' => Carbon::now(),
-                'end_date' => Carbon::now()->addDay($pakage->duration),
+                'end_date' => Carbon::now()->addDay($package->duration),
                 'status' => 'pending',
             ]);
-            $company->pakage_id = $pakage->id;
+            $company->package_id = $package->id;
             $company->order_id = $create_Order->id;
             $company->update();
             Mail::to($company->email)->send(new SendInvoiceMail($company));
@@ -278,10 +278,10 @@ class CompanyController extends Controller
     {
         $user_id = Auth::user()->id;
         $company = Company::where('user_id', $user_id)->with('Order')->first();
-        $pakage = Pakage::find($company->pakage_id);
+        $package = Package::find($company->package_id);
         if($company->order['status'] == 'active')
         {
-            if($pakage->job_post == $company->post_job_count)
+            if($package->job_post == $company->post_job_count)
             {
                 return response()->json([
                     'success' => false,

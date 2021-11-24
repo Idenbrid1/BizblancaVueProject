@@ -1,7 +1,7 @@
 @extends('adminpanel.layout.master')
 <!-- ================================== EXTEND TITLE AND META TAGS ============================= -->
 @section('title-meta')
-<title>Bizblanca | Pakages</title>
+<title>Bizblanca | Packages</title>
 <meta name="description" content="this is description">
 @endsection
 <!-- ====================================== EXTRA CSS LINKS ==================================== -->
@@ -11,13 +11,13 @@
 @section('content')
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>Create Pakages</h2>
+        <h2>Create Packages</h2>
         <ol class="breadcrumb">
             <li>
                 <a href="index.html">Home</a>
             </li>
             <li>
-                <a>Pakages</a>
+                <a>Packages</a>
             </li>
             <li class="active">
                 <strong>Create</strong>
@@ -31,7 +31,7 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         <div class="ibox-content">
-            <form method="post" class="form-horizontal" action="{{route('admin.pakages.store')}}" enctype="multipart/form-data">
+            <form method="post" class="form-horizontal" action="{{route('admin.packages.store')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Title</label>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-4 col-sm-offset-2">
-                        <button class="btn btn-primary" type="submit">Create Pakage</button>
+                        <button class="btn btn-primary" type="submit">Create Package</button>
                     </div>
                 </div>
 
