@@ -45,7 +45,7 @@
                 </div> -->
                 <!-- Job List Toolbar End -->
                 <!-- Job List Wrap Start -->
-                <div class="job-list-wrap mt-3">
+                <div class="job-list-wrap mt-3 p-0">
                     <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
                     <div class="job-list"  v-if="index < searchData.length" v-for="(item, index) in companiesToShow"

@@ -10,8 +10,8 @@
                     ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum
                     dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
             </div>
-            <div class="row m-0 no-gutters">
-                <div class="col-12 col-md-4 package-box"  v-for="(item, index) in plans" :key="index">
+            <div class="row m-0">
+                <div class="package-box"  v-for="(item, index) in plans" :key="index">
                     <div class="pricing-detail-box">
                         <div class="about-pricing">
                             <p class="package-plan-title">{{item.title}}</p>

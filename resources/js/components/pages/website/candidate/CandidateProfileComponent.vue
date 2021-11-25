@@ -1521,7 +1521,7 @@
                                             </div>
                                             <div class="subFormFields">
                                                 <div class="float-right">
-                                                    <a href="#">
+                                                    <a @click="deleteWorkExperienceArray(index)">
                                                         <i class="fas fa-times"></i>
                                                     </a>
                                                 </div>
@@ -1595,7 +1595,7 @@
                                             </div>
                                             <div class="subFormFields">
                                                 <div class="float-right">
-                                                    <a href="#">
+                                                    <a @click="removeAddMoreArrayWorkExperience()">
                                                         <i class="fas fa-times"></i>
                                                     </a>
                                                 </div>
@@ -1700,10 +1700,10 @@
                                                 <div class="mr-2 titleEffect"></div>
                                                 <h4 class="m-0 modelTitleText">Languages</h4>
                                             </div>
-                                            <div id="LanguagesFields" class="subFormFields row"
-                                                v-for="(languageUpdate, index) in this.profile.candidate_language"
-                                                :key="index">
-                                                <div class="col-md-4 LanguagesSection">
+                                            <div id="LanguagesFields" class="subFormFields row">
+                                                <div class="col-md-4 LanguagesSection"
+                                                    v-for="(languageUpdate, index) in this.profile.candidate_language"
+                                                    :key="index">
                                                     <div class="form-group">
                                                         <div class="float-right">
                                                             <a @click="deleteLanguageArray(index)">
@@ -1722,10 +1722,8 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div id="LanguagesFields" class="subFormFields row"
-                                                v-if="this.addMoreDBLanguage == true">
-                                                <div class="col-md-4 LanguagesSection">
+                                                <div class="col-md-4 LanguagesSection"
+                                                    v-if="this.addMoreDBLanguage == true">
                                                     <div class="form-group">
                                                         <div class="float-right">
                                                             <a @click="removeAddMoreArrayLanguage()">
@@ -1789,15 +1787,15 @@
                                                 <div class="mr-2 titleEffect"></div>
                                                 <h4 class="m-0 modelTitleText">Skills</h4>
                                             </div>
-                                            <div id="SkillsFields" class="subFormFields row"
-                                                v-for="(skillUpdate, index) in this.profile.candidate_skills"
-                                                :key="index">
-                                                <div class="col-12 col-md-4 SkillsSection">
+                                            <div id="SkillsFields" class="subFormFields row">
+                                                <div class="col-12 col-md-4 SkillsSection"
+                                                    v-for="(skillUpdate, index) in this.profile.candidate_skills"
+                                                    :key="index">
                                                     <div class="form-group">
                                                         <a class="float-right" @click="deleteSkillArray(index)"><i
                                                                 class="fas fa-times"></i></a>
                                                         <input name="skill_name[]" value="" v-model="skillUpdate.name"
-                                                            for="english" class="form-control">
+                                                            for="english" class="form-control" style="margin-bottom:10px;">
                                                         <select name="skill_level[]" id="language" class="form-control"
                                                             v-model="skillUpdate.level">
                                                             <option value="Beginner">Beginner</option>
@@ -1807,17 +1805,15 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div id="SkillsFields" class="subFormFields row"
-                                                v-if="this.addMoreDBSkill == true">
-                                                <div class="col-12 col-md-4 SkillsSection">
+                                                <div class="col-12 col-md-4 SkillsSection"
+                                                    v-if="this.addMoreDBSkill == true">
                                                     <div class="form-group">
                                                         <a class="float-right"
                                                             @click="removeAddMoreArraySkill(index)"><i
                                                                 class="fas fa-times"></i></a>
                                                         <input name="skill_name[]" value=""
                                                             v-model="skill_push_array.name" for="english"
-                                                            class="form-control">
+                                                            class="form-control" style="margin-bottom:10px;">
                                                         <select name="skill_level[]" id="language" class="form-control"
                                                             v-model="skill_push_array.level">
                                                             <option value="Beginner">Beginner</option>
@@ -1828,6 +1824,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>

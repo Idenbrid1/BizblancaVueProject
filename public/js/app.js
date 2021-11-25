@@ -7147,9 +7147,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
 
 
 
@@ -17855,68 +17852,60 @@ var render = function () {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "row m-0 no-gutters" },
+          { staticClass: "row m-0" },
           _vm._l(_vm.plans, function (item, index) {
-            return _c(
-              "div",
-              { key: index, staticClass: "col-12 col-md-4 package-box" },
-              [
-                _c("div", { staticClass: "pricing-detail-box" }, [
-                  _c("div", { staticClass: "about-pricing" }, [
-                    _c("p", { staticClass: "package-plan-title" }, [
-                      _vm._v(_vm._s(item.title)),
+            return _c("div", { key: index, staticClass: "package-box" }, [
+              _c("div", { staticClass: "pricing-detail-box" }, [
+                _c("div", { staticClass: "about-pricing" }, [
+                  _c("p", { staticClass: "package-plan-title" }, [
+                    _vm._v(_vm._s(item.title)),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("span", [_vm._v("RS " + _vm._s(item.amount))]),
+                    _vm._v("  / MONTH"),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "plan-description" }, [
+                    _vm._v(_vm._s(item.description) + "."),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "package-benefits" }, [
+                  _c("ul", { staticClass: "package-benefits-list" }, [
+                    _c("li", { staticClass: "mt-0" }, [
+                      _c("i", { staticClass: "fas tick fa-check-circle" }),
+                      _vm._v("Post Jobs: " + _vm._s(item.job_post)),
                     ]),
                     _vm._v(" "),
-                    _c("p", [
-                      _c("span", [_vm._v("RS " + _vm._s(item.amount))]),
-                      _vm._v("  / MONTH"),
+                    _c("li", [
+                      _c("i", { staticClass: "fas tick fa-check-circle" }),
+                      _vm._v("Connect: " + _vm._s(item.connect)),
                     ]),
                     _vm._v(" "),
-                    _c("p", { staticClass: "plan-description" }, [
-                      _vm._v(_vm._s(item.description) + "."),
+                    _c("li", [
+                      item.is_personal_show == 1
+                        ? _c("i", { staticClass: "far cross fa-times-circle" })
+                        : _c("i", { staticClass: "fas tick fa-check-circle" }),
+                      _vm._v("Show Full Info"),
                     ]),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "package-benefits" }, [
-                    _c("ul", { staticClass: "package-benefits-list" }, [
-                      _c("li", { staticClass: "mt-0" }, [
-                        _c("i", { staticClass: "fas tick fa-check-circle" }),
-                        _vm._v("Post Jobs: " + _vm._s(item.job_post)),
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("i", { staticClass: "fas tick fa-check-circle" }),
-                        _vm._v("Connect: " + _vm._s(item.connect)),
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        item.is_personal_show == 1
-                          ? _c("i", {
-                              staticClass: "far cross fa-times-circle",
-                            })
-                          : _c("i", {
-                              staticClass: "fas tick fa-check-circle",
-                            }),
-                        _vm._v("Show Full Info"),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "buy-plan-anker",
-                        on: {
-                          click: function ($event) {
-                            return _vm.buyPackage(item.id)
-                          },
+                  _c(
+                    "a",
+                    {
+                      staticClass: "buy-plan-anker",
+                      on: {
+                        click: function ($event) {
+                          return _vm.buyPackage(item.id)
                         },
                       },
-                      [_vm._v("Buy Now")]
-                    ),
-                  ]),
+                    },
+                    [_vm._v("Buy Now")]
+                  ),
                 ]),
-              ]
-            )
+              ]),
+            ])
           }),
           0
         ),
@@ -28357,7 +28346,32 @@ var render = function () {
                                             "div",
                                             { staticClass: "subFormFields" },
                                             [
-                                              _vm._m(38, true),
+                                              _c(
+                                                "div",
+                                                { staticClass: "float-right" },
+                                                [
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      on: {
+                                                        click: function (
+                                                          $event
+                                                        ) {
+                                                          return _vm.deleteWorkExperienceArray(
+                                                            index
+                                                          )
+                                                        },
+                                                      },
+                                                    },
+                                                    [
+                                                      _c("i", {
+                                                        staticClass:
+                                                          "fas fa-times",
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
                                               _vm._v(" "),
                                               _c(
                                                 "div",
@@ -28858,13 +28872,36 @@ var render = function () {
                                           attrs: { id: "subForm" },
                                         },
                                         [
-                                          _vm._m(39),
+                                          _vm._m(38),
                                           _vm._v(" "),
                                           _c(
                                             "div",
                                             { staticClass: "subFormFields" },
                                             [
-                                              _vm._m(40),
+                                              _c(
+                                                "div",
+                                                { staticClass: "float-right" },
+                                                [
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      on: {
+                                                        click: function (
+                                                          $event
+                                                        ) {
+                                                          return _vm.removeAddMoreArrayWorkExperience()
+                                                        },
+                                                      },
+                                                    },
+                                                    [
+                                                      _c("i", {
+                                                        staticClass:
+                                                          "fas fa-times",
+                                                      }),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
                                               _vm._v(" "),
                                               _c(
                                                 "div",
@@ -29502,22 +29539,22 @@ var render = function () {
                                 attrs: { id: "subForm" },
                               },
                               [
-                                _vm._m(41),
+                                _vm._m(39),
                                 _vm._v(" "),
-                                _vm._l(
-                                  this.profile.candidate_language,
-                                  function (languageUpdate, index) {
-                                    return _c(
-                                      "div",
-                                      {
-                                        key: index,
-                                        staticClass: "subFormFields row",
-                                        attrs: { id: "LanguagesFields" },
-                                      },
-                                      [
-                                        _c(
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "subFormFields row",
+                                    attrs: { id: "LanguagesFields" },
+                                  },
+                                  [
+                                    _vm._l(
+                                      this.profile.candidate_language,
+                                      function (languageUpdate, index) {
+                                        return _c(
                                           "div",
                                           {
+                                            key: index,
                                             staticClass:
                                               "col-md-4 LanguagesSection",
                                           },
@@ -29686,21 +29723,12 @@ var render = function () {
                                               ]
                                             ),
                                           ]
-                                        ),
-                                      ]
-                                    )
-                                  }
-                                ),
-                                _vm._v(" "),
-                                this.addMoreDBLanguage == true
-                                  ? _c(
-                                      "div",
-                                      {
-                                        staticClass: "subFormFields row",
-                                        attrs: { id: "LanguagesFields" },
-                                      },
-                                      [
-                                        _c(
+                                        )
+                                      }
+                                    ),
+                                    _vm._v(" "),
+                                    this.addMoreDBLanguage == true
+                                      ? _c(
                                           "div",
                                           {
                                             staticClass:
@@ -29874,12 +29902,12 @@ var render = function () {
                                               ]
                                             ),
                                           ]
-                                        ),
-                                      ]
-                                    )
-                                  : _vm._e(),
-                              ],
-                              2
+                                        )
+                                      : _vm._e(),
+                                  ],
+                                  2
+                                ),
+                              ]
                             ),
                           ]),
                         ]),
@@ -30010,22 +30038,22 @@ var render = function () {
                               attrs: { id: "SkillsModal" },
                             },
                             [
-                              _vm._m(42),
+                              _vm._m(40),
                               _vm._v(" "),
-                              _vm._l(
-                                this.profile.candidate_skills,
-                                function (skillUpdate, index) {
-                                  return _c(
-                                    "div",
-                                    {
-                                      key: index,
-                                      staticClass: "subFormFields row",
-                                      attrs: { id: "SkillsFields" },
-                                    },
-                                    [
-                                      _c(
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "subFormFields row",
+                                  attrs: { id: "SkillsFields" },
+                                },
+                                [
+                                  _vm._l(
+                                    this.profile.candidate_skills,
+                                    function (skillUpdate, index) {
+                                      return _c(
                                         "div",
                                         {
+                                          key: index,
                                           staticClass:
                                             "col-12 col-md-4 SkillsSection",
                                         },
@@ -30064,6 +30092,9 @@ var render = function () {
                                                   },
                                                 ],
                                                 staticClass: "form-control",
+                                                staticStyle: {
+                                                  "margin-bottom": "10px",
+                                                },
                                                 attrs: {
                                                   name: "skill_name[]",
                                                   value: "",
@@ -30178,21 +30209,12 @@ var render = function () {
                                             ]
                                           ),
                                         ]
-                                      ),
-                                    ]
-                                  )
-                                }
-                              ),
-                              _vm._v(" "),
-                              this.addMoreDBSkill == true
-                                ? _c(
-                                    "div",
-                                    {
-                                      staticClass: "subFormFields row",
-                                      attrs: { id: "SkillsFields" },
-                                    },
-                                    [
-                                      _c(
+                                      )
+                                    }
+                                  ),
+                                  _vm._v(" "),
+                                  this.addMoreDBSkill == true
+                                    ? _c(
                                         "div",
                                         {
                                           staticClass:
@@ -30234,6 +30256,9 @@ var render = function () {
                                                   },
                                                 ],
                                                 staticClass: "form-control",
+                                                staticStyle: {
+                                                  "margin-bottom": "10px",
+                                                },
                                                 attrs: {
                                                   name: "skill_name[]",
                                                   value: "",
@@ -30351,12 +30376,12 @@ var render = function () {
                                             ]
                                           ),
                                         ]
-                                      ),
-                                    ]
-                                  )
-                                : _vm._e(),
-                            ],
-                            2
+                                      )
+                                    : _vm._e(),
+                                ],
+                                2
+                              ),
+                            ]
                           ),
                         ]),
                       ]),
@@ -31508,9 +31533,9 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _vm._m(43),
+      _vm._m(41),
       _vm._v(" "),
-      _vm._m(44),
+      _vm._m(42),
       _vm._v(" "),
       _c(
         "div",
@@ -31548,7 +31573,7 @@ var render = function () {
                               attrs: { id: "subForm" },
                             },
                             [
-                              _vm._m(45),
+                              _vm._m(43),
                               _vm._v(" "),
                               _c("div", { staticClass: "subFormFields" }, [
                                 _c("div", { staticClass: "row" }, [
@@ -33201,30 +33226,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "float-right" }, [
-      _c("a", { attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fas fa-times" }),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modelTitle my-3" }, [
       _c("div", { staticClass: "mr-2 titleEffect" }),
       _vm._v(" "),
       _c("h4", { staticClass: "m-0" }, [_vm._v("Work Experience")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "float-right" }, [
-      _c("a", { attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fas fa-times" }),
-      ]),
     ])
   },
   function () {
@@ -33782,7 +33787,7 @@ var render = function () {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "job-list-wrap mt-3" },
+            { staticClass: "job-list-wrap mt-3 p-0" },
             [
               _vm._l(_vm.companiesToShow, function (item, index) {
                 return index < _vm.searchData.length
@@ -65527,7 +65532,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 

@@ -6616,8 +6616,8 @@ progress {
 
 .package-box:hover .buy-plan-anker {
     cursor: pointer;
-    background: #FFFFFF !important;
-    color: #081351;
+    background: #FFFFFF;
+    color: #081351 !important;
 }
 
 .pricing-detail-box {
