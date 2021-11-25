@@ -13,9 +13,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use File;
 use Validator;
+use App;
 use Carbon\Carbon;
 use Mail;
-
 
 class CompanyController extends Controller
 {
@@ -54,7 +54,7 @@ class CompanyController extends Controller
         else{
             return response()->json([
                 'company' => $company,
-                'response' => 'pending'
+                'response' => 0
             ]);
         }
     }
@@ -270,6 +270,10 @@ class CompanyController extends Controller
             $company->order_id = $create_Order->id;
             $company->update();
             Mail::to($company->email)->send(new SendInvoiceMail($company));
+            return response()->json([
+                'success' => true,
+                'order_id' => $create_Order->id
+            ]);
         }
         else{
             return response()->json([
@@ -311,5 +315,17 @@ class CompanyController extends Controller
                 'response' => 'pending'
             ]);
         }
+    }
+
+    public function downloadInvoice($id)
+    {
+        $order = Order::find($id);
+        $company = Company::where('id', $order->company_id)->first();
+        
+        // $view = view('pdf.unpaidInvoicePDF', compact($company))->render();
+        $pdf = PDF::loadView('pdf.invoice', $company); 
+        return $pdf->stream('medium.pdf');
+        // $pdf = PDF::loadView($view);
+        // return $pdf->download('test.pdf');
     }
 }

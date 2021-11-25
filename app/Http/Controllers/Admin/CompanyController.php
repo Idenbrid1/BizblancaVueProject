@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\PaymentApprovalInvoice;
 use App\Models\Company;
 use App\Models\Order;
+use App\Models\Package;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use View;
+use Mail;
 
 class CompanyController extends Controller
 {
@@ -104,10 +108,15 @@ class CompanyController extends Controller
     {
         $order = Order::find($id);
         $order->status = 'active';
+        $order->start_date = Carbon::now();
+        $package = Package::find($order->package_id);
+        $order->end_date = Carbon::now()->addDay($package->duration);
         $order->update();
-        $company = Company::find($order->id);
+        $order->touch();
+        $company = Company::find($order->company_id);
         $company->post_job_count = 0;
         $company->update();
+        Mail::to($company->email)->send(new PaymentApprovalInvoice($company));
         return back();
     }
 }

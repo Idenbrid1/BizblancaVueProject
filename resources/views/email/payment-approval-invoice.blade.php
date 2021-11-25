@@ -226,12 +226,12 @@
                 <div class="to">INVOICE TO:</div>
                 <h2 class="name">{{$company->company_name}}</h2>
                 <div class="address">{{$company->address}}</div>
-                <div class="email"><a href="mailto:{{$company->main}}">{{$company->email}}</a></div>
+                <div class="email"><a href="mailto:{{$company->main}}">{{$company->main}}</a></div>
             </div>
             <div id="invoice">
                 <h1>INVOICE {{date('d-m-Y', strtotime(Carbon\Carbon::now()))}}-{{$company->id}}</h1>
-                <div class="date">Date of Invoice: {{$company->created_at}}4</div>
-                <!-- <div class="date">Due Date: 30/06/2014</div> -->
+                <div class="date">Date of Invoice: {{$company->created_at}}</div>
+                <div class="date">Pay Date: {{$company->updated_at}}</div>
             </div>
         </div>
         <table border="0" cellspacing="0" cellpadding="0">
@@ -240,6 +240,9 @@
                     <th class="no">#</th>
                     <th class="desc">PACKAGE NAME</th>
                     <th class="unit">PRICE</th>
+                    <th class="unit">Start Data</th>
+                    <th class="unit">End Data</th>
+                    <!-- <th class="qty">QUANTITY</th> -->
                     <th class="total">TOTAL</th>
                 </tr>
             </thead>
@@ -247,10 +250,12 @@
                 <tr>
                     <td class="no">01</td>
                     <td class="desc">
-                        <h3>{{$company->package->title}}</h3>{{$company->package->description}}
+                        <h3>{{$company->Package->title}}</h3>{{$company->Package->description}}
                     </td>
                     <td class="unit">{{$company->package->amount}}</td>
-                    <td class="total">{{$company->package->amount}}</td>
+                    <td class="unit">{{date('d-m-Y', strtotime($company->order->start_date))}}</td>
+                    <td class="unit">{{date('d-m-Y', strtotime($company->order->end_date))}}</td>
+                    <td class="total">{{$company->Package->amount}}</td>
                 </tr>
             </tbody>
             <tfoot>
