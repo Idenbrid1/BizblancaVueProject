@@ -15,6 +15,10 @@
     .help-queries-wrap{
         padding: 0px;
     }
+    .help-queries{
+        padding-left: 0px;
+        border: none;
+    }
     .need-help-title{
         font-size: 20px;
     }
@@ -43,6 +47,7 @@
         font-size: 12px;
         height: 30px;
     }
+
     .about-pricing>.plan-description{
         margin: 0px;
     }
@@ -64,6 +69,7 @@
     }
     .package-box{
         margin: 4px 2px;
+        width: 100%;
     }
     .pacakges-plan-container {
         padding: 0px 11px;
@@ -437,6 +443,13 @@
 }
 
 @media screen and (min-width:769px) {
+    .help-queries-wrap{
+        padding: 0px 45px 25px 0px;
+    }
+    .help-queries{
+        padding-left: 45px;
+        border-left: 3px solid #081351;
+    }
     #DesktopTabsIcons{
         display: block;
         height: 100%;

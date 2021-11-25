@@ -1009,9 +1009,9 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="cinic">CNIC</label>
-                                                            <input name="cnic" class="form-control"
+                                                            <input name="cnic" type="number" class="form-control"
                                                                 placeholder="Enter Cnic" value=""
-                                                                v-model="basic_information_record.cnic">
+                                                                v-model="basic_information_record.cnic"/>
                                                             <small>
                                                                 <span v-if="errors_basic_information.cnic != null"
                                                                     class="text-danger">
@@ -1039,7 +1039,7 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="address">ZIP code</label>
-                                                            <input name="zipcode" type="text" class="form-control"
+                                                            <input name="zipcode" type="number" class="form-control"
                                                                 value="" placeholder="Enter ZIP code"
                                                                 v-model="basic_information_record.zipcode" />
                                                             <small>
@@ -1244,7 +1244,7 @@
                                                             <label for="currentStatus">Yes</label>
                                                             <input class="my-1" @change="workingCurrentlyYes()"
                                                                 name="is_working_currently" value="1"
-                                                                v-model="profile.is_working_currently" type="radio">
+                                                                v-model="profile.is_working_currently" type="radio"/>
                                                             <label for="currentStatus">No</label>
                                                             <input type="radio" @change="workingCurrentlyNo()"
                                                                 v-model="profile.is_working_currently" class="my-1"
@@ -1290,7 +1290,7 @@
                                                             <label for="personsManaged">No of Persons Managed</label>
                                                             <input name="personsManaged" class="form-control"
                                                                 v-model="profile.no_of_persons_managed"
-                                                                placeholder="Enter No of Persons Managed" type="text"
+                                                                placeholder="Enter No of Persons Managed" type="number"
                                                                 value="" />
                                                         </div>
                                                     </div>
@@ -1308,7 +1308,7 @@
                                                             <label for="skills">Current Salary</label>
                                                             <input name="currentSalary" class="form-control"
                                                                 v-model="profile.current_salary"
-                                                                placeholder="Enter Current Salary" type="text" value="">
+                                                                placeholder="Enter Current Salary" type="number" value="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1890,7 +1890,7 @@
                                                             <label for="projectLink">Link</label>
                                                             <input name="projectLink[]" class="form-control" value=""
                                                                 v-model="projectUpdate.link" placeholder="Enter Link"
-                                                                type="text" />
+                                                                type="url" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
@@ -2221,7 +2221,7 @@
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label for="expectedSalary">Expected Salary</label>
-                                                        <input name="expectedSalary" class="form-control"
+                                                        <input type="number" name="expectedSalary" class="form-control"
                                                             placeholder="Enter Expected Salary"
                                                             v-model="profile.looking_for_job_expected_salary" />
                                                     </div>

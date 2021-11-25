@@ -60,7 +60,7 @@
                                             <option value="Sri Lanka">Sri Lanka</option>
                                         </select>
                                     </div> -->
-                                    <div class="col-md-6">
+                                    <div class="col-12 col-md-12">
                                         <label for="">Skills</label>
                                         <multiselect v-model="record.skills" placeholder="Select one" label="name"
                                             track-by="name" :options="options" :searchable="true" :multiple="true"
