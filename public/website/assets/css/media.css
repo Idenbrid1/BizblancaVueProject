@@ -4,6 +4,9 @@
         height: 120px;
         width: 120px;
     }
+    .candidate-single{
+        width: 100%;
+    }
     .pricing-plan-title{
         margin-top: 48px;
         height: 50px;

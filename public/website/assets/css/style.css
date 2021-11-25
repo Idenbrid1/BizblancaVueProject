@@ -1617,7 +1617,6 @@ body {
     .condition-search-feilds {
         width: 100%;
     }
-
     .common-sidebar {
         width: 100%;
     }
@@ -1686,7 +1685,7 @@ body {
 
 .content-body {
     height: fit-content;
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .side-card-body {
@@ -1816,7 +1815,9 @@ body {
     letter-spacing: 1.5px;
     text-align: center;
 }
-
+.job-list-wrap{
+    padding: 20px;
+}
 .job-list-toolbar {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1898,16 +1899,22 @@ body {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     background: #F9F9F9 0% 0% no-repeat padding-box;
-    box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
-    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
-    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
     border-radius: 5px;
+    padding: 10px;
     opacity: 1;
-    height: 300px;
+    width: 225px;
+    margin: 5px;
+    box-shadow: 5px 5px 6px #00000029;
 }
-
+.candidate-list-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .job-list-toolbar .job-filter {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1990,18 +1997,6 @@ body {
     -webkit-box-orient: vertical;
 
 }
-
-.candidate-photo {
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    /* background-image: url('https://thecinetalk.com/wp-content/uploads/2021/09/ruby-matthews-mimi-keene.jpeg'); */
-    background-size: 100% 100%;
-    box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
-    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
-    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
-}
-
 .candidate-header>div {
     display: flex;
     justify-content: space-between;
@@ -2022,25 +2017,27 @@ body {
     display: inline-flex;
     padding: 0px;
     color: #757575;
-    font-size: 12px;
-    padding-right: 10px;
+    font-size: 14px;
+    padding: 0px;
     flex-direction: column;
     list-style: none;
 }
 
+.candidate-list-meta {
+    height: 120px;
+}
 .candidate-list-meta>li {
     display: flex;
     align-items: center;
 }
 
 .candidate-list-meta>li>i {
-    min-width: 30px;
+    min-width: 26px;
     display: flex;
-    justify-content: center;
 }
 
 .candidate-list-meta>li {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .heart-icon-container {
@@ -2069,10 +2066,6 @@ body {
     -webkit-box-orient: vertical;
 }
 
-.candidate-description {
-    font-size: 12px;
-}
-
 .hide-line-1 {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2091,24 +2084,11 @@ body {
     align-items: center;
 }
 
-.candidate-view-btn {
-    background-color: #081351;
-    color: #fff;
-    font-size: 12px;
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    font-size: 10px;
-    padding: 10px 20px;
-}
-
 .job-list-fav,
 .candidate-list-fav {
-    display: inline-flex;
-    float: right;
+    display:flex;
     padding: 0px;
+    margin: 0px;
 }
 
 .job-list-fav>li {
@@ -2121,19 +2101,6 @@ body {
     display: flex;
     align-items: center;
 }
-
-.candidate-wishlist-btn {
-    background-color: #081351;
-    border-radius: 5px;
-    color: white;
-    font-size: 10px;
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-}
-
 .job-header i,
 .candidate-header i {
     font-size: 20px;
@@ -3901,6 +3868,9 @@ body {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
+.candidate-name{
+    font-weight: bold;
+}
 
 .candidate-photo {
     height: 50px;
@@ -3908,9 +3878,12 @@ body {
     border-radius: 100%;
     background-image: url('https://thecinetalk.com/wp-content/uploads/2021/09/ruby-matthews-mimi-keene.jpeg');
     background-size: 100% 100%;
-    box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
-    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
-    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
+    box-shadow: 5px 5px 6px #00000029;
+}
+.candidate-image{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .candidate-header>div {
@@ -3927,33 +3900,6 @@ body {
 .job-list-meta li i {
     color: #757575;
 }
-
-.job-list-meta,
-.candidate-list-meta {
-    display: inline-flex;
-    padding: 0px;
-    color: #757575;
-    font-size: 12px;
-    padding: 0px 10px;
-    flex-direction: column;
-    list-style: none;
-}
-
-.candidate-list-meta>li {
-    display: flex;
-    align-items: center;
-}
-
-.candidate-list-meta>li>i {
-    min-width: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.candidate-list-meta>li {
-    font-size: 12px;
-}
-
 .heart-icon-container {
     height: 100%;
     width: 100%;
@@ -3974,7 +3920,7 @@ body {
 }
 
 .candidate-description {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .hide-line-1 {
@@ -4011,22 +3957,12 @@ body {
 .candidate-view-btn {
     background-color: #081351;
     color: #fff;
-    font-size: 12px;
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
     border-radius: 5px;
-    font-size: 10px;
     padding: 10px 20px;
+    text-align: center;
 }
-
-.job-list-fav,
-.candidate-list-fav {
-    display: inline-flex;
-    float: right;
-}
-
 .job-list-fav>li {
     display: flex;
     align-items: center;
@@ -4053,12 +3989,12 @@ body {
     background-color: #081351;
     border-radius: 5px;
     color: white;
-    font-size: 10px;
+    font-size: 14px;
     min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 4px 13px;
 }
 
 .job-wishlist-btn i {
@@ -4268,8 +4204,10 @@ body {
         padding: 16px;
     }
 }
-
-
+.job-list-content {
+    padding: 10px 10px;
+    height: 100%;
+}
 /* candidate style */
 
 @media only screen and (max-width: 758px) {
@@ -4330,9 +4268,8 @@ body {
         margin-top: 10px;
     }
 
-    .job-list-content,
-    .candidate-list-content {
-        padding: 0px 10px !important;
+    .job-list-content {
+        padding: 0px 10px;
     }
 
     .xs-padding {
@@ -6123,7 +6060,7 @@ progress {
     display: block;
     font-size: 12px;
     padding: 10px 20px;
-    color: #fff;
+    color: #fff !important;
     background: #081351 0% 0% no-repeat padding-box;
     border-radius: 5px;
 }
@@ -6385,6 +6322,9 @@ progress {
 
     .job-dynamic-values>ul>li>span {
         padding-left: 0px !important;
+    }
+    .candidate-single{
+        width: 48%;
     }
 }
 
