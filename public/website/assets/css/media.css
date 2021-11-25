@@ -9,14 +9,65 @@
         height: 50px;
         font-size: 20px;
     }
+    .help-queries-wrap{
+        padding: 0px;
+    }
+    .need-help-title{
+        font-size: 20px;
+    }
+    .package-plan-title{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .about-pricing>p{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .about-pricing>p>span{
+        font-size: 20px;
+    }
+    .package-benefits{
+        padding: 15px;
+    }
+    .about-pricing>.plan-description, .package-benefits-list>li{
+        font-size: 12px;
+    }
+    .pricing-detail-box{
+        height: auto;
+    }
+    .buy-plan-anker{
+        border-radius: 3px;
+        font-size: 12px;
+        height: 30px;
+    }
+    .about-pricing>.plan-description{
+        margin: 0px;
+    }
+    .help-queries>h4{
+        font-size: 14px
+    }
+    .help-queries>p{
+        font-size: 12px;
+    }
+    .read-more-descrp{
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .get-free-trial{
+        margin:15px 0px;
+    }
     .get-free-trial>h2{
         font-size: 20px;
+    }
+    .package-box{
+        margin: 4px 2px;
     }
     .pacakges-plan-container {
         padding: 0px 11px;
     }
     .get-free-trial>p{
-        font-size: 14px;
+        font-size: 12px;
+        margin-bottom: 0px;
     }
     .candidate-send-msg{
         height: 30px;
@@ -436,6 +487,9 @@
 @media screen and (max-width:320px) {
     .job-dynamic-values>ul>li>span{
         font-size: 10px;
+    }
+    .pacakges-plan-container{
+        padding: 0px;
     }
 }
 @media screen and (max-width:1466px) {

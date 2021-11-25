@@ -2201,6 +2201,82 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -17064,13 +17140,13 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum\n                dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
           ),
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row m-0 no-gutters" }, [
-        _c("div", { staticClass: "col-12 col-md-4 package-box" }, [
+      _c("div", { staticClass: "row m-0 justify-content-between" }, [
+        _c("div", { staticClass: "package-box" }, [
           _c("div", { staticClass: "pricing-detail-box" }, [
             _c("div", { staticClass: "about-pricing" }, [
               _c("p", { staticClass: "package-plan-title" }, [_vm._v("BASIC")]),
@@ -17079,7 +17155,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "plan-description" }, [
                 _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula."
+                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean\n                            commodo ligula."
                 ),
               ]),
             ]),
@@ -17144,7 +17220,7 @@ var staticRenderFns = [
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-12 col-md-4 package-box" }, [
+        _c("div", { staticClass: "package-box" }, [
           _c("div", { staticClass: "pricing-detail-box" }, [
             _c("div", { staticClass: "about-pricing" }, [
               _c("p", { staticClass: "package-plan-title" }, [
@@ -17155,7 +17231,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "plan-description" }, [
                 _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula."
+                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean\n                            commodo ligula."
                 ),
               ]),
             ]),
@@ -17220,7 +17296,7 @@ var staticRenderFns = [
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-12 col-md-4 package-box" }, [
+        _c("div", { staticClass: "package-box" }, [
           _c("div", { staticClass: "pricing-detail-box" }, [
             _c("div", { staticClass: "about-pricing" }, [
               _c("p", { staticClass: "package-plan-title" }, [
@@ -17231,7 +17307,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "plan-description" }, [
                 _vm._v(
-                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula."
+                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean\n                            commodo ligula."
                 ),
               ]),
             ]),
@@ -17292,6 +17368,137 @@ var staticRenderFns = [
               _c("a", { staticClass: "buy-plan-anker", attrs: { href: "" } }, [
                 _vm._v("Choose Plan"),
               ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "need-help-section" }, [
+        _c("h1", { staticClass: "need-help-title" }, [_vm._v("Need Help?")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "help-queries-wrap" }, [
+          _c("div", { staticClass: "help-queries" }, [
+            _c("h4", [
+              _vm._v(
+                "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has\n                        been\n                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a\n                        galley\n                        of type and scrambled it to make a type specimen book. It has survived not only five\n                        centuries.\n                    "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c(
+                "a",
+                { staticClass: "read-more-descrp", attrs: { href: "" } },
+                [
+                  _vm._v("Read More  "),
+                  _c("i", { staticClass: "fas fa-angle-down" }),
+                ]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "help-queries" }, [
+            _c("h4", [
+              _vm._v(
+                "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has\n                        been\n                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a\n                        galley\n                        of type and scrambled it to make a type specimen book. It has survived not only five\n                        centuries.\n                    "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c(
+                "a",
+                { staticClass: "read-more-descrp", attrs: { href: "" } },
+                [
+                  _vm._v("Read More  "),
+                  _c("i", { staticClass: "fas fa-angle-down" }),
+                ]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "help-queries" }, [
+            _c("h4", [
+              _vm._v(
+                "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has\n                        been\n                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a\n                        galley\n                        of type and scrambled it to make a type specimen book. It has survived not only five\n                        centuries.\n                    "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c(
+                "a",
+                { staticClass: "read-more-descrp", attrs: { href: "" } },
+                [
+                  _vm._v("Read More  "),
+                  _c("i", { staticClass: "fas fa-angle-down" }),
+                ]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "help-queries" }, [
+            _c("h4", [
+              _vm._v(
+                "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has\n                        been\n                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a\n                        galley\n                        of type and scrambled it to make a type specimen book. It has survived not only five\n                        centuries.\n                    "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c(
+                "a",
+                { staticClass: "read-more-descrp", attrs: { href: "" } },
+                [
+                  _vm._v("Read More  "),
+                  _c("i", { staticClass: "fas fa-angle-down" }),
+                ]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "help-queries" }, [
+            _c("h4", [
+              _vm._v(
+                "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has\n                        been\n                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a\n                        galley\n                        of type and scrambled it to make a type specimen book. It has survived not only five\n                        centuries.\n                    "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c(
+                "a",
+                { staticClass: "read-more-descrp", attrs: { href: "" } },
+                [
+                  _vm._v("Read More  "),
+                  _c("i", { staticClass: "fas fa-angle-down" }),
+                ]
+              ),
             ]),
           ]),
         ]),
