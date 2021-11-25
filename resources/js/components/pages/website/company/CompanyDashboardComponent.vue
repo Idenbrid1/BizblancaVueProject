@@ -138,11 +138,11 @@
                             <!-- <div class="d-flex"> -->
 
                             <div class="row m-0">
-                                <div class="col-sm-6 col-md-12 col-lg-4 px-1" v-for="(item, index) in searchData.data" :key="index">
+                                <div class="col-sm-6 col-md-12 col-lg-4 px-1">
                                     <div class="candidate-single">
                                         <div class="candidate-list-content w-100 py-1 px-2">
                                             <div class="d-flex align-items-center">
-                                                <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+item.profile_image+')'}"></div>
+                                                <div class="candidate-photo" style="{ backgroundImage:url('')}"></div>
                                                 <div class="candidate-header mt-2 ml-2">
                                                     <h6 class="candidate-name mb-0">{{item.full_name}}</h6>
                                                     <!-- <div class="my-1">

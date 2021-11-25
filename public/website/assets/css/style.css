@@ -1905,7 +1905,7 @@ body {
     -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.17);
     border-radius: 5px;
     opacity: 1;
-    height: 290px;
+    height: 300px;
 }
 
 .job-list-toolbar .job-filter {
@@ -6676,7 +6676,7 @@ progress {
 
 .package-box:hover .buy-plan-anker {
     cursor: pointer;
-    background: #FFFFFF;
+    background: #FFFFFF !important;
     color: #081351;
 }
 

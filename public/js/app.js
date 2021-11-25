@@ -37776,118 +37776,101 @@ var render = function () {
             _vm._v(" "),
             _c("div", { staticClass: "px-3" }, [
               _c("div", { staticClass: "job-list-wrap" }, [
-                _c(
-                  "div",
-                  { staticClass: "row m-0" },
-                  _vm._l(_vm.searchData.data, function (item, index) {
-                    return _c(
-                      "div",
-                      {
-                        key: index,
-                        staticClass: "col-sm-6 col-md-12 col-lg-4 px-1",
-                      },
-                      [
-                        _c("div", { staticClass: "candidate-single" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "candidate-list-content w-100 py-1 px-2",
-                            },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "d-flex align-items-center" },
-                                [
-                                  _c("div", {
-                                    staticClass: "candidate-photo",
-                                    style: {
-                                      backgroundImage:
-                                        "url(/storage/images/candidates/" +
-                                        item.profile_image +
-                                        ")",
-                                    },
+                _c("div", { staticClass: "row m-0" }, [
+                  _c(
+                    "div",
+                    { staticClass: "col-sm-6 col-md-12 col-lg-4 px-1" },
+                    [
+                      _c("div", { staticClass: "candidate-single" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "candidate-list-content w-100 py-1 px-2",
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "d-flex align-items-center" },
+                              [
+                                _c("div", {
+                                  staticClass: "candidate-photo",
+                                  staticStyle: {
+                                    "{ backgroundImage": "url('')}",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "candidate-header mt-2 ml-2" },
+                                  [
+                                    _c(
+                                      "h6",
+                                      { staticClass: "candidate-name mb-0" },
+                                      [_vm._v(_vm._s(_vm.item.full_name))]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "p",
+                              { staticClass: "candidate-description my-1" },
+                              [_vm._v(_vm._s(_vm.item.bio))]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "ul",
+                              { staticClass: "candidate-list-meta m-0 w-100" },
+                              [
+                                _c("li", [
+                                  _c("i", { staticClass: "fas fa-venus-mars" }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "ml-1 hide-line-1" },
+                                    [_vm._v(_vm._s(_vm.item.gender))]
+                                  ),
+                                ]),
+                                _vm._v(" "),
+                                _c("li", { staticClass: "mt-1" }, [
+                                  _c("i", {
+                                    staticClass: "fas fa-envelope-open-text",
                                   }),
                                   _vm._v(" "),
                                   _c(
                                     "div",
-                                    {
-                                      staticClass: "candidate-header mt-2 ml-2",
-                                    },
+                                    { staticClass: "ml-1 hide-line-1" },
                                     [
-                                      _c(
-                                        "h6",
-                                        { staticClass: "candidate-name mb-0" },
-                                        [_vm._v(_vm._s(item.full_name))]
+                                      _vm._v(
+                                        _vm._s(_vm.item.experience) + " Years"
                                       ),
                                     ]
                                   ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                { staticClass: "candidate-description my-1" },
-                                [_vm._v(_vm._s(item.bio))]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "ul",
-                                {
-                                  staticClass: "candidate-list-meta m-0 w-100",
-                                },
-                                [
-                                  _c("li", [
-                                    _c("i", {
-                                      staticClass: "fas fa-venus-mars",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "ml-1 hide-line-1" },
-                                      [_vm._v(_vm._s(item.gender))]
-                                    ),
-                                  ]),
+                                ]),
+                                _vm._v(" "),
+                                _c("li", { staticClass: "mt-1" }, [
+                                  _c("i", {
+                                    staticClass: "fas fa-map-marker-alt",
+                                  }),
                                   _vm._v(" "),
-                                  _c("li", { staticClass: "mt-1" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-envelope-open-text",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "ml-1 hide-line-1" },
-                                      [
-                                        _vm._v(
-                                          _vm._s(item.experience) + " Years"
-                                        ),
-                                      ]
-                                    ),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("li", { staticClass: "mt-1" }, [
-                                    _c("i", {
-                                      staticClass: "fas fa-map-marker-alt",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "ml-1 hide-line-1" },
-                                      [_vm._v(_vm._s(item.city))]
-                                    ),
-                                  ]),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _vm._m(0, true),
-                            ]
-                          ),
-                        ]),
-                      ]
-                    )
-                  }),
-                  0
-                ),
+                                  _c(
+                                    "div",
+                                    { staticClass: "ml-1 hide-line-1" },
+                                    [_vm._v(_vm._s(_vm.item.city))]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(0),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
               ]),
             ]),
           ]),
