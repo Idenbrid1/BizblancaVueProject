@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <CompanyNavbar />
+        <CandidateNavbar />
         <div class="container cont-flex PostJobContainer">
             <div class="col-sm-12 col-md-12 col-lg-12 xs-padding pt-3">
                 <h1 class="post_new_job_title mx-2">Company Profile</h1>
@@ -182,7 +182,8 @@
                                         </div>
                                         <ul class="job-list-fav m-0">
                                             <li>
-                                                <a class="job-view-btn">View</a>
+                                                <router-link class="job-view-btn" data-toggle="collapse"
+                                                    :to="{ name: 'JobDetail', params: { id: item.id } }">View</router-link>
                                             </li>
                                         </ul>
                                     </div>
@@ -204,7 +205,7 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
-    import CompanyNavbar from '../partials/CompanyNavbar.vue';
+    import CandidateNavbar from '../partials/CandidateNavbar.vue';
     export default {
         data() {
             return {
@@ -216,7 +217,7 @@
         },
         components: {
             WebsiteNavbar,
-            CompanyNavbar,
+            CandidateNavbar,
         },
         methods: {
             getSingleCompanyDetail() {

@@ -223,6 +223,9 @@
 
                                 </div>
                             </div>
+                            <div v-if="searchData.length == 0">
+                                <h2>Data Not Found</h2>
+                            </div>
                             <!-- </div> -->
                         </div>
                     </div>
