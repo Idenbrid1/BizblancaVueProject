@@ -103,10 +103,10 @@
                                         <label for="all-genders">All Genders</label>
                                     </div>
                                     <div class="col-12 job-condition">
-                                        <button type="submit" @click="clearSearch()"
-                                            class="job-condition-clear-btn">Clear</button>
                                         <button type="submit" @click="search()"
                                             class="job-condition-search-btn">Search</button>
+                                        <button type="submit" @click="clearSearch()"
+                                            class="job-condition-clear-btn">Clear</button>
                                     </div>
                                 </div>
                             </div>
@@ -132,12 +132,31 @@
                         </form>
                     </div>
                 </div>
-                <div class="candidate">
+                <div class="candidate border-0">
                     <!-- Job List Toolbar Start -->
                     <div>
+                        <!-- <div class="job-list-toolbar">
+                            <ul class="job-pagination pagination-center ">
+                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
+                                            aria-hidden="true"></i> Previous 20</a></li>
+                                <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
+                                <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
+                                <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
+                                <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
+                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
+                                            aria-hidden="true"></i> Next 20</a></li>
+                            </ul>
+                            <div class="job-filter">
+                                <select class="job-select">
+                                    <option>Search order by</option>
+                                    <option>Top Rated</option>
+                                    <option>Most Popular</option>
+                                </select>
+                            </div>
+                        </div> -->
                         <!-- Job List Toolbar End -->
                         <!-- Job List Wrap Start -->
-                        <div class="job-list-wrap">
+                        <div class="job-list-wrap p-0">
                             <div class="job-list" v-if="index < searchData.length" v-for="(item, index) in jobToShow"
                                 :key="index">
                                 <div class="company-logo col-auto py-2">
