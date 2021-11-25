@@ -19,13 +19,76 @@
                 <h2>Get your free trial today</h2>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
             </div>
-            <div class="row m-0">
-                <div class="col-12 col-md-4">
+            <div class="row m-0 no-gutters">
+                <div class="col-12 col-md-4 package-box">
                     <div class="pricing-detail-box">
                         <div class="about-pricing">
                             <p class="package-plan-title">BASIC</p>
-                            <p><span>RS 100</span> / MONTH</p>
+                            <p><span>RS 100</span> &nbsp;/ MONTH</p>
                             <p class="plan-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                        </div>
+                        <div class="package-benefits">
+                            <ul class="package-benefits-list">
+                                <li class="mt-0"><i class="fas tick fa-check-circle"></i>All Limited User</li>
+                                <li><i class="fas tick fa-check-circle"></i>Own Analytics Platform</li>
+                                <li><i class="far cross fa-times-circle"></i>Chat Support</li>
+                                <li><i class="fas tick fa-check-circle"></i>Optimize Hashtags</li>
+                                <li><i class="fas tick fa-check-circle"></i>Own Analytics Platform</li>
+                                <li><i class="fas tick fa-check-circle"></i>Chat Support</li>
+                                <li><i class="far cross fa-times-circle"></i>Optimize Hashtags</li>
+                                <li><i class="fas tick fa-check-circle"></i>Unlimited Users</li>
+                                <li><i class="fas tick fa-check-circle"></i>Optimize Hashtags</li>
+                                <li><i class="fas tick fa-check-circle"></i>Unlimited Users</li>
+                            </ul>
+                            <a href="" class="buy-plan-anker">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 package-box">
+                    <div class="pricing-detail-box">
+                        <div class="about-pricing">
+                            <p class="package-plan-title">ADVANCE</p>
+                            <p><span>RS 500</span> &nbsp;/ MONTH</p>
+                            <p class="plan-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                        </div>
+                        <div class="package-benefits">
+                            <ul class="package-benefits-list">
+                                <li class="mt-0"><i class="fas tick fa-check-circle"></i>All Limited User</li>
+                                <li><i class="fas tick fa-check-circle"></i>Own Analytics Platform</li>
+                                <li><i class="far cross fa-times-circle"></i>Chat Support</li>
+                                <li><i class="fas tick fa-check-circle"></i>Optimize Hashtags</li>
+                                <li><i class="fas tick fa-check-circle"></i>Own Analytics Platform</li>
+                                <li><i class="fas tick fa-check-circle"></i>Chat Support</li>
+                                <li><i class="far cross fa-times-circle"></i>Optimize Hashtags</li>
+                                <li><i class="fas tick fa-check-circle"></i>Unlimited Users</li>
+                                <li><i class="fas tick fa-check-circle"></i>Optimize Hashtags</li>
+                                <li><i class="fas tick fa-check-circle"></i>Unlimited Users</li>
+                            </ul>
+                            <a href="" class="buy-plan-anker">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 package-box">
+                    <div class="pricing-detail-box">
+                        <div class="about-pricing">
+                            <p class="package-plan-title">PREMIUM</p>
+                            <p><span>RS 1,000</span> &nbsp;/ MONTH</p>
+                            <p class="plan-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                        </div>
+                        <div class="package-benefits">
+                            <ul class="package-benefits-list">
+                                <li class="mt-0"><i class="fas tick fa-check-circle"></i>All Limited User</li>
+                                <li><i class="fas tick fa-check-circle"></i>Own Analytics Platform</li>
+                                <li><i class="fas tick fa-check-circle"></i>Chat Support</li>
+                                <li><i class="fas tick fa-check-circle"></i>Optimize Hashtags</li>
+                                <li><i class="fas tick fa-check-circle"></i>Own Analytics Platform</li>
+                                <li><i class="fas tick fa-check-circle"></i>Chat Support</li>
+                                <li><i class="fas tick fa-check-circle"></i>Optimize Hashtags</li>
+                                <li><i class="fas tick fa-check-circle"></i>Unlimited Users</li>
+                                <li><i class="fas tick fa-check-circle"></i>Optimize Hashtags</li>
+                                <li><i class="fas tick fa-check-circle"></i>Unlimited Users</li>
+                            </ul>
+                            <a href="" class="buy-plan-anker">Choose Plan</a>
                         </div>
                     </div>
                 </div>

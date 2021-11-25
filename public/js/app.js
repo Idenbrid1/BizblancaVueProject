@@ -2138,6 +2138,69 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -17008,18 +17071,228 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row m-0" }, [
-        _c("div", { staticClass: "col-12 col-md-4" }, [
+      _c("div", { staticClass: "row m-0 no-gutters" }, [
+        _c("div", { staticClass: "col-12 col-md-4 package-box" }, [
           _c("div", { staticClass: "pricing-detail-box" }, [
             _c("div", { staticClass: "about-pricing" }, [
               _c("p", { staticClass: "package-plan-title" }, [_vm._v("BASIC")]),
               _vm._v(" "),
-              _c("p", [_c("span", [_vm._v("RS 100")]), _vm._v(" / MONTH")]),
+              _c("p", [_c("span", [_vm._v("RS 100")]), _vm._v("  / MONTH")]),
               _vm._v(" "),
               _c("p", { staticClass: "plan-description" }, [
                 _vm._v(
                   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula."
                 ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "package-benefits" }, [
+              _c("ul", { staticClass: "package-benefits-list" }, [
+                _c("li", { staticClass: "mt-0" }, [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("All Limited User"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Own Analytics Platform"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "far cross fa-times-circle" }),
+                  _vm._v("Chat Support"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Optimize Hashtags"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Own Analytics Platform"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Chat Support"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "far cross fa-times-circle" }),
+                  _vm._v("Optimize Hashtags"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Unlimited Users"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Optimize Hashtags"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Unlimited Users"),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "buy-plan-anker", attrs: { href: "" } }, [
+                _vm._v("Choose Plan"),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 col-md-4 package-box" }, [
+          _c("div", { staticClass: "pricing-detail-box" }, [
+            _c("div", { staticClass: "about-pricing" }, [
+              _c("p", { staticClass: "package-plan-title" }, [
+                _vm._v("ADVANCE"),
+              ]),
+              _vm._v(" "),
+              _c("p", [_c("span", [_vm._v("RS 500")]), _vm._v("  / MONTH")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "plan-description" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula."
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "package-benefits" }, [
+              _c("ul", { staticClass: "package-benefits-list" }, [
+                _c("li", { staticClass: "mt-0" }, [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("All Limited User"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Own Analytics Platform"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "far cross fa-times-circle" }),
+                  _vm._v("Chat Support"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Optimize Hashtags"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Own Analytics Platform"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Chat Support"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "far cross fa-times-circle" }),
+                  _vm._v("Optimize Hashtags"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Unlimited Users"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Optimize Hashtags"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Unlimited Users"),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "buy-plan-anker", attrs: { href: "" } }, [
+                _vm._v("Choose Plan"),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 col-md-4 package-box" }, [
+          _c("div", { staticClass: "pricing-detail-box" }, [
+            _c("div", { staticClass: "about-pricing" }, [
+              _c("p", { staticClass: "package-plan-title" }, [
+                _vm._v("PREMIUM"),
+              ]),
+              _vm._v(" "),
+              _c("p", [_c("span", [_vm._v("RS 1,000")]), _vm._v("  / MONTH")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "plan-description" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula."
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "package-benefits" }, [
+              _c("ul", { staticClass: "package-benefits-list" }, [
+                _c("li", { staticClass: "mt-0" }, [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("All Limited User"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Own Analytics Platform"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Chat Support"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Optimize Hashtags"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Own Analytics Platform"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Chat Support"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Optimize Hashtags"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Unlimited Users"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Optimize Hashtags"),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", { staticClass: "fas tick fa-check-circle" }),
+                  _vm._v("Unlimited Users"),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "buy-plan-anker", attrs: { href: "" } }, [
+                _vm._v("Choose Plan"),
               ]),
             ]),
           ]),
