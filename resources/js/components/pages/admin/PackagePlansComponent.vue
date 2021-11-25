@@ -6,7 +6,9 @@
         <div class="pacakges-plan-container container">
             <div class="get-free-trial">
                 <h2>Get your free trial today</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem
+                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum
+                    dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
             </div>
             <div class="row m-0 no-gutters">
                 <div class="col-12 col-md-4 package-box"  v-for="(item, index) in plans" :key="index">
@@ -34,6 +36,77 @@
                     </div>
                 </div>
             </div>
+            <section class="need-help-section">
+                <h1 class="need-help-title">Need Help?</h1>
+                <div class="help-queries-wrap">
+                    <div class="help-queries">
+                        <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries.
+                        </p>
+                        <div>
+                            <a class="read-more-descrp" href="">Read More &nbsp;<i class="fas fa-angle-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="help-queries">
+                        <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries.
+                        </p>
+                        <div>
+                            <a class="read-more-descrp" href="">Read More &nbsp;<i class="fas fa-angle-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="help-queries">
+                        <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries.
+                        </p>
+                        <div>
+                            <a class="read-more-descrp" href="">Read More &nbsp;<i class="fas fa-angle-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="help-queries">
+                        <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries.
+                        </p>
+                        <div>
+                            <a class="read-more-descrp" href="">Read More &nbsp;<i class="fas fa-angle-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="help-queries">
+                        <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries.
+                        </p>
+                        <div>
+                            <a class="read-more-descrp" href="">Read More &nbsp;<i class="fas fa-angle-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </div>
     </div>
 </template>
@@ -48,11 +121,9 @@
                 plans: [],
             }
         },
-        mounted() {
-
-        },
+        mounted() {},
         created() {
-            this.getPackagePlans()
+            this.getPackagePlans();
         },
         components: {
             WebsiteNavbar,

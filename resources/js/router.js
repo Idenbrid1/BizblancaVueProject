@@ -13,6 +13,7 @@ import CandidateProfile from './components/pages/website/candidate/CandidateProf
 import CompanyProfile from './components/pages/website/company/CompanyProfileComponent.vue';
 import CompanyPostJob from './components/pages/website/company/CompanyPostJobComponent.vue';
 import CompanyDetail from './components/pages/website/company/CompanyDetailComponent.vue';
+import CompanyDashboard from './components/pages/website/company/CompanyDashboardComponent.vue';
 import CandidateDetail from './components/pages/website/candidate/CandidateDetailComponent.vue';
 import CandidateSearch from './components/pages/website/company/CandidateSearchComponent.vue';
 import CompanySearch from './components/pages/website/candidate/CompanySearchComponent.vue';
@@ -107,6 +108,11 @@ const router = new VueRouter({
             path: '/company-detail/:id',
             name: 'CompanyDetail',
             component: CompanyDetail
+        },
+        {
+            path: '/company-dashboard',
+            name: 'CompanyDashboard',
+            component: CompanyDashboard
         },
         {
             path: '/candidate-reset-password',
