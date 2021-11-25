@@ -25354,6 +25354,7 @@ var render = function () {
                                                 staticClass: "form-control",
                                                 attrs: {
                                                   name: "cnic",
+                                                  type: "number",
                                                   placeholder: "Enter Cnic",
                                                   value: "",
                                                 },
@@ -25521,7 +25522,7 @@ var render = function () {
                                                 staticClass: "form-control",
                                                 attrs: {
                                                   name: "zipcode",
-                                                  type: "text",
+                                                  type: "number",
                                                   value: "",
                                                   placeholder: "Enter ZIP code",
                                                 },
@@ -26989,7 +26990,7 @@ var render = function () {
                                                           name: "personsManaged",
                                                           placeholder:
                                                             "Enter No of Persons Managed",
-                                                          type: "text",
+                                                          type: "number",
                                                           value: "",
                                                         },
                                                         domProps: {
@@ -27147,7 +27148,7 @@ var render = function () {
                                                           name: "currentSalary",
                                                           placeholder:
                                                             "Enter Current Salary",
-                                                          type: "text",
+                                                          type: "number",
                                                           value: "",
                                                         },
                                                         domProps: {
@@ -30735,7 +30736,7 @@ var render = function () {
                                                               value: "",
                                                               placeholder:
                                                                 "Enter Link",
-                                                              type: "text",
+                                                              type: "url",
                                                             },
                                                             domProps: {
                                                               value:
@@ -31793,6 +31794,7 @@ var render = function () {
                                               ],
                                               staticClass: "form-control",
                                               attrs: {
+                                                type: "number",
                                                 name: "expectedSalary",
                                                 placeholder:
                                                   "Enter Expected Salary",
