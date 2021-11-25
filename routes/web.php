@@ -226,6 +226,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
         Route::prefix('company')->name('company.')->group(function(){
             Route::get('index', [App\Http\Controllers\Admin\CompanyController::class, 'index'])->name('index');
             Route::get('package-companies', [App\Http\Controllers\Admin\CompanyController::class, 'packageCompanies'])->name('packageCompanies');
+            Route::get('pay-now/{id}', [App\Http\Controllers\Admin\CompanyController::class, 'payNow'])->name('payNow');
         });
 
         Route::prefix('contact-us')->name('contact_us.')->group(function(){

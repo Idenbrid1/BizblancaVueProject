@@ -100,4 +100,14 @@ class CompanyController extends Controller
         return view('adminpanel/pages/order_companies', compact('companies'));
     }
 
+    public function payNow($id)
+    {
+        $order = Order::find($id);
+        $order->status = 'active';
+        $order->update();
+        $company = Company::find($order->id);
+        $company->post_job_count = 0;
+        $company->update();
+        return back();
+    }
 }

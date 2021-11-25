@@ -6,7 +6,7 @@ use App\Models\Candidate;
 use App\Models\CandidateSkill;
 use App\Models\Company;
 use App\Models\JobPost;
-use App\Models\Package;
+use App\Models\Pakage;
 use Illuminate\Http\Request;
 
 class CommonController extends Controller
@@ -113,8 +113,8 @@ class CommonController extends Controller
         ]);
     }
 
-    public function getPackagePlansList()
+    public function getPakagePlansList()
     {
-        return Package::all();
+        return Pakage::all();
     }
 }

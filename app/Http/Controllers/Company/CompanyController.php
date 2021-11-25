@@ -45,8 +45,13 @@ class CompanyController extends Controller
                 'response' => 'expire'
             ]);
         }
-        else
-        {
+        else if($company->order['status'] == 'pending'){
+            return response()->json([
+                'company' => $company,
+                'response' => 'pending'
+            ]);
+        }
+        else{
             return response()->json([
                 'company' => $company,
                 'response' => 'pending'
@@ -214,7 +219,7 @@ class CompanyController extends Controller
     {
         $user = Auth::user();
         $company = Company::where('user_id', $user->id)->first();
-        $jobs = JobPost::where('company_id', $company->id)->orderBy('created_at', 'desc')->paginate(2);
+        $jobs = JobPost::where('company_id', $company->id)->orderBy('created_at', 'desc')->withTrashed()->paginate(2);
         return response()->json($jobs);
     }
 

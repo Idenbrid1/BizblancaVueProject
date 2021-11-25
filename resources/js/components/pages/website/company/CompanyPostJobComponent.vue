@@ -28,7 +28,7 @@
                             <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo" />
                             <span class="company-h line-clamp-1">Ahmad</span>
                         </div>
-                        <div class="job-list-content col">
+                        <div class="job-list-content col" :class="!item.deleted_at ? '' : 'deletejobcard' ">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">{{item.title}}</h6>
                                 <!-- <i class="fa fa-star" aria-hidden="true"></i>
@@ -39,7 +39,8 @@
 
                                 <div class="d-flex align-items-center">
                                     <span class="job-post-date"><timeago :datetime="item.created_at"></timeago></span>
-                                    <i class="far fa-heart"></i>
+                                    <i v-if="!item.deleted_at" class="far fa-heart"></i>
+                                    <p v-else style="color: red"> DELETED</p>
                                 </div>
                             </div>
 
@@ -79,10 +80,10 @@
                                     </ul>
                                 </div>
                                 <ul class="job-list-fav m-0">
-                                    <li><a @click="deleteJobPost(item.id)" class="job-post-ions"><i class="fas fa-trash-alt"></i></a></li>
-                                    <li><a @click="editJobPost(item.id)" class="job-post-ions"><i class="fas fa-edit"></i></a></li>
+                                    <li><a v-if="!item.deleted_at" @click="deleteJobPost(item.id)" class="job-post-ions"><i class="fas fa-trash-alt"></i></a></li>
+                                    <li><a v-if="!item.deleted_at" @click="editJobPost(item.id)" class="job-post-ions"><i class="fas fa-edit"></i></a></li>
                                     <li>
-                                        <router-link :to="{ name: 'JobDetail', params: { id: item.id } }" data-toggle="collapse" class="job-post-ions">
+                                        <router-link v-if="!item.deleted_at" :to="{ name: 'JobDetail', params: { id: item.id } }" data-toggle="collapse" class="job-post-ions">
                                         <i class="fas fa-eye"></i>
                                         </router-link>
                                     </li>
@@ -778,6 +779,7 @@
                                         title: 'Posted!😎',
                                         text: 'Your Job is Now Live',
                                     })
+                                    $('#PostNewJobModal').modal('hide')
                                     this.errors = []
                                     this.record = {
                                         bannar: '',

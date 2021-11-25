@@ -6584,3 +6584,7 @@ progress {
     color: #FFFFFF;
     font-size: 16px;
 }
+.deletejobcard{
+    background-color: red;
+    color: white;
+}

@@ -77,10 +77,19 @@
                                     <td class="center">{{$company->phone}}</td>
                                     <td class="center">{{$company->Package->title}}</td>
                                     <td>
-                                        @if($company->Package->status == 'pending')
-                                        <a>
-                                            <small id="" class="label label-primary">Paid</small>
+                                        @if($company->Order->status == 'pending')
+                                        <a href="{{route('admin.company.payNow', $company->Order->id)}}">
+                                            <small class="label label-primary">Pay Now</small>
                                         </a>
+                                        @elseif($company->Order->status == 'active')
+                                        <a>
+                                            <small class="label label-primary">Paid</small>
+                                        </a>
+                                        @else($company->Order->status == 'expire')
+                                        <a>
+                                            <small class="label label-primary">Expire</small>
+                                        </a>
+                                        @endif
                                     </td>
                                     <td>
                                         <a>
