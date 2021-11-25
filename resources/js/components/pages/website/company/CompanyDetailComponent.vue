@@ -125,43 +125,72 @@
                     </p>
                 </div>
                 <!-- Job List Wrap Start -->
-                <div class="job-list-wrap">
-                    <!-- Job List Start -->
-                    <div class="job-list" v-for="(item, index) in data.jobs" :key="index">
-                        <div class="company-logo col-auto py-2">
-                            <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo">
-                            <span class="company-h">{{item.title}}</span>
-                        </div>
-                        <div class="job-list-content col">
-                            <div class="job-header">
-                                <h6 class="job-title mb-0">{{item.title}}</h6>
-                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i> -->
+               <div class="job-list-wrap p-0">
+                            <div class="job-list" v-for="(item, index) in data.jobs" :key="index">
+                                <div class="company-logo col-auto py-2">
+                                    <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo">
+                                    <span class="company-h line-clamp-1">{{item.title}}</span>
+                                </div>
+                                <div class="job-list-content col">
+                                    <div class="job-header">
+                                        <h6 class="job-title mb-0">{{item.title}}</h6>
+                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i> -->
+                                        <div class="d-flex align-items-center">
+                                            <span class="job-post-date">20 hours ago </span>
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                    </div>
+
+                                    <p class="job-description">{{item.description}}</p>
+                                    <div class="job-content-wrap">
+                                        <div class="job-dynamic-values">
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                                    <span>{{item.created_at | moment("YYYY-MM-DD")}}</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/experience-job.svg" alt="">
+                                                    <span>{{item.experience}}</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/money-job.svg" alt="">
+                                                    <span>{{item.salary_range}}</span>
+                                                </li>
+                                                <li>
+                                                    <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
+                                                        alt="img">
+                                                    <span>{{item.location}}</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                                    <span>{{item.shift}}</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/switch-job.svg" alt="">
+                                                    <span>{{item.job_type}}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="job-list-fav m-0">
+                                            <li>
+                                                <a class="job-view-btn">View</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
                             </div>
-                            <!-- <span class="job-post-date">20 hours ago</span> -->
-                            <p class="job-description">{{item.description}}</p>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fa fa-calendar"></i>{{item.created_at | moment("YYYY-MM-DD")}}</li>
-                                <li><i class="fal fa-address-card"></i>{{item.experience}}</li>
-                            </ul>
-                            <ul class="job-list-meta m-0 border-post">
-                                <li><i class="fal fa-money-bill-alt"></i>{{item.salary_range}}</li>
-                                <li><i class="fa fa-map-marker"></i>{{item.location}}</li>
-                            </ul>
-                            <ul class="job-list-meta m-0">
-                                <li><i class="fal fa-laptop-house"></i>{{item.shift}}</li>
-                                <li><i class="fal fa-clock"></i>{{item.salary_type}}</li>
-                            </ul>
-                            <ul class="job-list-fav m-0">
-                                <!-- <li><a href="#" class="job-wishlist-btn"><i class="fa fa-heart"></i></a></li> -->
-                                <li><a href="#" class="job-view-btn">View</a></li>
-                            </ul>
+                            <!-- </div> -->
                         </div>
-                    </div>
-                </div>
                 <!-- Job List Wrap Start -->
                 <!-- Pagination Start -->
                 <div class="bottom-pagination">

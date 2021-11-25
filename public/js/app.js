@@ -10860,6 +10860,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -38838,7 +38867,7 @@ var render = function () {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "job-list-wrap" },
+              { staticClass: "job-list-wrap p-0" },
               _vm._l(_vm.data.jobs, function (item, index) {
                 return _c("div", { key: index, staticClass: "job-list" }, [
                   _c("div", { staticClass: "company-logo col-auto py-2" }, [
@@ -38849,7 +38878,7 @@ var render = function () {
                       },
                     }),
                     _vm._v(" "),
-                    _c("span", { staticClass: "company-h" }, [
+                    _c("span", { staticClass: "company-h line-clamp-1" }, [
                       _vm._v(_vm._s(item.title)),
                     ]),
                   ]),
@@ -38859,53 +38888,103 @@ var render = function () {
                       _c("h6", { staticClass: "job-title mb-0" }, [
                         _vm._v(_vm._s(item.title)),
                       ]),
+                      _vm._v(" "),
+                      _vm._m(2, true),
                     ]),
                     _vm._v(" "),
                     _c("p", { staticClass: "job-description" }, [
                       _vm._v(_vm._s(item.description)),
                     ]),
                     _vm._v(" "),
-                    _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-                      _c("li", [
-                        _c("i", { staticClass: "fa fa-calendar" }),
-                        _vm._v(
-                          _vm._s(
-                            _vm._f("moment")(item.created_at, "YYYY-MM-DD")
-                          )
-                        ),
+                    _c("div", { staticClass: "job-content-wrap" }, [
+                      _c("div", { staticClass: "job-dynamic-values" }, [
+                        _c("ul", [
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/calendar-job.svg",
+                                alt: "img",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("moment")(
+                                    item.created_at,
+                                    "YYYY-MM-DD"
+                                  )
+                                )
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/experience-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.experience))]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("ul", [
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/money-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.salary_range))]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("img", {
+                              staticStyle: { margin: "0px 3px" },
+                              attrs: {
+                                height: "16px",
+                                width: "10px",
+                                src: "/website/assets/images/pin.svg",
+                                alt: "img",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.location))]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("ul", [
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/suitcase-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.shift))]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/switch-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.job_type))]),
+                          ]),
+                        ]),
                       ]),
                       _vm._v(" "),
-                      _c("li", [
-                        _c("i", { staticClass: "fal fa-address-card" }),
-                        _vm._v(_vm._s(item.experience)),
-                      ]),
+                      _vm._m(3, true),
                     ]),
-                    _vm._v(" "),
-                    _c("ul", { staticClass: "job-list-meta m-0 border-post" }, [
-                      _c("li", [
-                        _c("i", { staticClass: "fal fa-money-bill-alt" }),
-                        _vm._v(_vm._s(item.salary_range)),
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("i", { staticClass: "fa fa-map-marker" }),
-                        _vm._v(_vm._s(item.location)),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c("ul", { staticClass: "job-list-meta m-0" }, [
-                      _c("li", [
-                        _c("i", { staticClass: "fal fa-laptop-house" }),
-                        _vm._v(_vm._s(item.shift)),
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("i", { staticClass: "fal fa-clock" }),
-                        _vm._v(_vm._s(item.salary_type)),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _vm._m(2, true),
                   ]),
                 ])
               }),
@@ -38975,12 +39054,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex align-items-center" }, [
+      _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
+      _vm._v(" "),
+      _c("i", { staticClass: "far fa-heart" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "job-list-fav m-0" }, [
-      _c("li", [
-        _c("a", { staticClass: "job-view-btn", attrs: { href: "#" } }, [
-          _vm._v("View"),
-        ]),
-      ]),
+      _c("li", [_c("a", { staticClass: "job-view-btn" }, [_vm._v("View")])]),
     ])
   },
 ]

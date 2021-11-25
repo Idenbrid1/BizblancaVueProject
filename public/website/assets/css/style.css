@@ -3943,7 +3943,7 @@ body {
 
 .job-view-btn {
     background-color: #081351;
-    color: #fff;
+    color: #fff !important;
     font-size: 16px;
     height: 40px;
     width: 100px;
@@ -3952,6 +3952,7 @@ body {
     align-items: center;
     font-weight: 600;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .candidate-view-btn {
