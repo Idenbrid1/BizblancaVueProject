@@ -6728,9 +6728,6 @@ progress {
     color: #081351;
     padding-left: 4px;
 }
-.help-queries-wrap{
-    padding: 0px 45px 25px 45px;
-}
 .help-queries{
     margin-top: 25px;
 }
@@ -6747,4 +6744,18 @@ progress {
     text-decoration: underline;
     color: #0000EE;
     font-size: 16px;
+}
+.multiselect__tag{
+    background: #081351 !important;
+}
+.multiselect__tag-icon:after{
+    color: #ffffff !important;
+}
+.multiselect__option--highlight{
+    background: #081351 !important;
+    color: #ffffff !important;
+}
+.multiselect__option--highlight::placeholder{
+    background: #081351 !important;
+    color: #ffffff !important;
 }

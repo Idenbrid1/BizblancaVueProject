@@ -36576,7 +36576,7 @@ var render = function () {
                     _vm._v(" "),
                     _c(
                       "div",
-                      { staticClass: "col-md-6" },
+                      { staticClass: "col-12 col-md-12" },
                       [
                         _c("label", { attrs: { for: "" } }, [_vm._v("Skills")]),
                         _vm._v(" "),
