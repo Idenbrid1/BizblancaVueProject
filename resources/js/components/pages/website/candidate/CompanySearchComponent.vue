@@ -5,7 +5,7 @@
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <!---------------------------------->
-                <div class="product-search-box mb-2">
+                <div class="product-search-box">
                     <label class="search-box-h">
                         Keyword Search
                     </label>

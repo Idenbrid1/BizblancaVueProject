@@ -118,7 +118,7 @@
     }
     .condition-search-feilds{
         width: 100%;
-        padding: 0px;
+        padding: 10px;
     }
     .job-list-content{
         padding: 10px 10px!important;
@@ -132,6 +132,7 @@
     }
     .common-sidebar{
         width: 100%;
+        padding: 10px;
     }
     .form-control{
         height: 40px;

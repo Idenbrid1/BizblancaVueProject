@@ -1,7 +1,7 @@
 <template>
      <!-- seconday-Navigation -->
-        <header class="_secondary-header-nav p-0" id="secondary-header-nav">
-            <div class="p-0 m-auto" style="height: 42px">
+        <header class="_secondary-header-nav common-secondary-header p-0" id="secondary-header-nav">
+            <div class="p-0 m-auto">
                 <ul>
                     <li>
                         <router-link :to="{ name: 'CompanyProfile' }" class="secondaymenu" id="secondary-anker">My Page</router-link>
