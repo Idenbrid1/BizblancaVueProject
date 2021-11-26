@@ -17,7 +17,9 @@ import CompanyDashboard from './components/pages/website/company/CompanyDashboar
 import JobAppliedCandidates from './components/pages/website/company/JobAppliedCandidatesComponent.vue';
 import CandidateDetail from './components/pages/website/candidate/CandidateDetailComponent.vue';
 import CandidateSearch from './components/pages/website/company/CandidateSearchComponent.vue';
+import CandidateDashboard from './components/pages/website/candidate/CandidateDashboardComponent.vue';
 import CompanySearch from './components/pages/website/candidate/CompanySearchComponent.vue';
+import CompanyChat from './components/pages/website/company/CompanyChatComponent.vue';
 import JobSearch from './components/pages/website/candidate/JobSearchComponent.vue';
 import JobDetail from './components/pages/website/candidate/JobDetailComponent.vue';
 import PackagePlans from './components/pages/admin/PackagePlansComponent.vue';
@@ -119,6 +121,16 @@ const router = new VueRouter({
             path: '/company-dashboard',
             name: 'CompanyDashboard',
             component: CompanyDashboard
+        },
+        {
+            path: '/company-chat',
+            name: 'CompanyChat',
+            component: CompanyChat
+        },
+        {
+            path: '/candidate-dashboard',
+            name: 'CandidateDashboard',
+            component: CandidateDashboard
         },
         {
             path: '/candidate-reset-password',

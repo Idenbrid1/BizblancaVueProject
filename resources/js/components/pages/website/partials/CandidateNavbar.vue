@@ -4,7 +4,7 @@
             <div class="p-0 m-auto">
                 <ul>
                     <li>
-                        <router-link :to="{ name: 'CandidateDashboard' }" class="secondaymenu" :class="this.$route.path == '/candidate-dashoard' ? 'candidate-active' : '' " id="secondary-anker">My Page</router-link>
+                        <router-link :to="{ name: 'CandidateDashboard' }" class="secondaymenu" :class="this.$route.path == '/candidate-dashboard' ? 'candidate-active' : '' " id="secondary-anker">My Page</router-link>
                         <span class="seprate-line"></span>
                     </li>
                     <li>
@@ -12,7 +12,7 @@
                             class="seprate-line"></span>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'CandidateMessage' }" class="secondaymenu" :class="this.$route.path == '/candidate-message' ? 'candidate-active' : ''" id="secondary-anker-2">Messages</router-link><span
+                        <router-link :to="{ name: 'CompanyChat' }" class="secondaymenu" :class="this.$route.path == '/company-chat' ? 'candidate-active' : ''" id="secondary-anker-2">Messages</router-link><span
                             class="seprate-line"></span>
                     </li>
                     <li>

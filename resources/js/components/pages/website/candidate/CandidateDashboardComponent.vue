@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <CompanyNavbar />
+        <CandidateNavbar />
 
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
@@ -18,7 +18,7 @@
                                 </svg>
                             </span>
                         </label>
-                        <h1>company dashboard under development waiting for abdullah Xd</h1>
+                        <h1>candidate dashboard under development waiting for abdullah Xd</h1>
                     </div>
                 </div>
                 <!---- ------------------------------>
@@ -487,7 +487,7 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
-    import CompanyNavbar from '../partials/CompanyNavbar.vue';
+    import CandidateNavbar from '../partials/CandidateNavbar.vue';
     import pagination from 'laravel-vue-pagination';
     import Multiselect from 'vue-multiselect'
     export default {
@@ -546,7 +546,7 @@
         },
         components: {
             WebsiteNavbar,
-            CompanyNavbar,
+            CandidateNavbar,
             Multiselect,
             pagination,
         },
