@@ -134,8 +134,7 @@
                             <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
                             <div class="row m-0">
-                                <div class="candidate-single" v-for="(item, index) in searchData.data"
-                                    :key="index">
+                                <div class="candidate-single" v-for="(item, index) in searchData.data" :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
                                             <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+item.profile_image+')'}"></div>
@@ -163,7 +162,7 @@
                                                 <div class="hide-line-1">{{item.experience}} Years</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
+                                                <div class="hide-line-1" v-for="(skills, index) in item.candidate_skills" :key="index">{{skills.name}},</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
                                                 <div class="hide-line-1">{{item.city}}</div>
@@ -172,8 +171,7 @@
                                         </ul>
 
                                         <ul class="candidate-list-fav">
-                                            <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                    Profile</a></li>
+                                            <li class="w-100"><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: item.id } }">View Profile</router-link></li>
                                             <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
                                                         class="far fa-heart"></i></a>
                                             </li>

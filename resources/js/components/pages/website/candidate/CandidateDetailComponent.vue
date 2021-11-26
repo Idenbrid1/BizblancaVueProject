@@ -1,6 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
+        <CompanyNavbar />
         <div class="candidate-profile-container container">
             <div class="row no-gutters">
                 <div class="col-5 col-md-3">
@@ -137,10 +138,12 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
+    import CompanyNavbar from '../partials/CompanyNavbar.vue';
     export default {
         data() {
             return {
-
+                data: {},
+                related_candidate: '',
             }
         },
         mounted() {
@@ -148,9 +151,16 @@
         },
         components: {
             WebsiteNavbar,
+            CompanyNavbar,
         },
         methods: {
-
+            getSingleJobDetail() {  
+                axios.get('/get-single-candidate-detail/' + this.$route.params.id)
+                    .then((response) => {
+                        this.data = response.data.job
+                        this.related_candidate = response.data.related_candidate
+                    });
+            },
         },
     };
 
