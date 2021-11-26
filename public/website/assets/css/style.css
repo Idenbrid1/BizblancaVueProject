@@ -2049,9 +2049,9 @@ body {
 
 .candidate {
     width: 100%;
-    margin: 50px auto 0;
     border-radius: 5px;
     border: 1px solid #081351;
+    margin: 30px auto;
 }
 
 .job-description,
@@ -2164,7 +2164,7 @@ body {
 .product-search-box {
     width: 100%;
     border: 1px solid #081351;
-    margin: 50px auto 0;
+    margin: 30px auto;
     border-radius: 5px;
 }
 

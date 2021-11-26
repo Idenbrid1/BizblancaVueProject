@@ -36787,7 +36787,7 @@ var render = function () {
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "candidate my-2" }, [
+          _c("div", { staticClass: "candidate" }, [
             _c("label", { staticClass: "candidate-tagline" }, [
               _vm._v("\n                    Candidates\n                "),
             ]),

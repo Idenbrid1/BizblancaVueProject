@@ -108,7 +108,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="candidate my-2">
+                <div class="candidate">
                     <label class="candidate-tagline">
                         Candidates
                     </label>
