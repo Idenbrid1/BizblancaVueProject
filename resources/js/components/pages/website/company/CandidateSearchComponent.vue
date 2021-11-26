@@ -95,11 +95,16 @@
                         Keyword Search
                     </label>
                     <div class="col-md-12 search-container">
-                        <form action="/">
+                        <form>
                             <div> <label class="keyword-input-title">Keyword Search</label></div>
-                            <input type="text" placeholder="* Includes All Keywords" name="search">
-                            <button type="submit" @click.prevent="keywordSearch()" class="keyword-search-btn">Search</button>
-                            <button type="submit" @click.prevent="clearSearch()" class="keyword-search-btn">Clear</button>
+                            <input class="form-control" type="text" placeholder="* Includes All Keywords" name="search"
+                                v-model="record.keyword">
+                            <div class="keyword-search-ankers">
+                                <button type="submit" @click.prevent="keywordSearch()"
+                                    class="keyword-search-btn">Search</button>
+                                <button type="submit" @click.prevent="clearSearch()"
+                                    class="keyword-clear-btn">Clear</button>
+                            </div>
                         </form>
                     </div>
                 </div>
