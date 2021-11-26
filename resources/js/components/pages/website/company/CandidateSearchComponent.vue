@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <!---- ------------------------------>
-                <!-- <div class="product-search-box">
+                <div class="product-search-box">
                     <label class="search-box-h">
                         Keyword Search
                     </label>
@@ -102,7 +102,7 @@
                             <button type="submit" @click.prevent="clearSearch()" class="keyword-search-btn">Clear</button>
                         </form>
                     </div>
-                </div> -->
+                </div>
                 <div class="candidate my-2">
                     <label class="candidate-tagline">
                         Candidates
