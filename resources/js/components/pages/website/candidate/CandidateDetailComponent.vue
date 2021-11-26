@@ -6,8 +6,8 @@
             <div class="row no-gutters">
                 <div class="col-5 col-md-3">
                     <div class="candidate-pic-detail">
-                        <div class="candidate-detail-img"
-                            style="background-image:url('/website/assets/images/Profile-detail-pic.png')"></div>
+                        <div class="candidate-detail-img" v-if="data.profile_image" :style="{ 'background-image': 'url(/storage/images/candidates/profile/' + data.profile_image + ')' }"></div>
+                        <div class="candidate-detail-img" v-else> not avaiable</div>
                         <a class="candidate-send-msg" href="">
                             <img class="ionic-send-msg" src="/website/assets/images/Icon ionic-ios-send.svg" alt="">
                             Send Message
@@ -18,14 +18,14 @@
                     <div>
                         <ul class="candidate-detail-list">
                             <li>
-                                <p>Muhammad Ahmad</p>
+                                <p>{{data.full_name}}</p>
                             </li>
-                            <li class="v-on-d"><img src="/website/assets/images/pin-job.svg" alt=""> Lahore, Pakistan</li>
+                            <li class="v-on-d"><img src="/website/assets/images/pin-job.svg" alt=""> {{data.city}}</li>
                             <li class="v-on-d"><i class="far fa-heart"></i> Add to Wishlist</li>
                         </ul>
-                        <p class="candidate-designation">Web Developer</p>
+                        <p class="candidate-designation">{{data.bio}}</p>
                         <ul class="v-on-m m-0 p-0 pt-2 candidate-detail-list-m">
-                            <li><img src="/website/assets/images/pin-job.svg" alt=""> Lahore, Pakistan</li>
+                            <li><img src="/website/assets/images/pin-job.svg" alt=""> {{data.city}}</li>
                             <li><i class="far fa-heart"></i> Add to Wishlist</li>
                         </ul>
                     </div>
@@ -37,9 +37,9 @@
                     <li class="col-12 col-md-3 candidate-detail-label">CONTACT INFORMATION:</li>
                     <li class="col-12 col-md-9 candidate-detail-info">
                         <ul class="candidate-info">
-                            <li><span>Phone:</span>+92 300 123 4567</li>
-                            <li><span>Address:</span>178B - Lalazar Garden, Phase 2, Lahore</li>
-                            <li><span>Email:</span><u>abdullah.idenbrid@gmail.com</u></li>
+                            <li><span>Phone:</span>{{data.phone}}</li>
+                            <li><span>Address:</span>{{data.location}}</li>
+                            <li><span>Email:</span><u>{{data.email}}</u></li>
                         </ul>
                     </li>
                 </ul>
@@ -47,14 +47,12 @@
                     <li class="col-12 col-md-3 candidate-detail-label">BASIC INFORMATION:</li>
                     <li class="col-12 col-md-9 candidate-detail-info">
                         <ul class="candidate-info">
-                            <li><span>Date of Birth:</span>25 May, 1993</li>
-                            <li><span>Gender:</span>Male</li>
-                            <li><span>City:</span>Lahore</li>
-                            <li><span>Zip Code:</span>54000</li>
-                            <li><span>CNIC:</span>35202-0008766-0</li>
-                            <li><span>Bio:</span>I am Graduated from University of South Asia, I have done BS Computer
-                                Science. My expertise are UI/UX Designing, Product Designing, Graphic Designing, HTML,
-                                CSS.</li>
+                            <li><span>Date of Birth:</span>{{data.date_of_birth}}</li>
+                            <li><span>Gender:</span>{{data.gender}}</li>
+                            <li><span>City:</span>{{data.city}}</li>
+                            <li><span>Zip Code:</span>{{data.zip_code}}</li>
+                            <li><span>CNIC:</span>{{data.cnic}}</li>
+                            <li><span>Bio:</span>{{data.bio}}</li>
                         </ul>
                     </li>
                 </ul>
@@ -62,10 +60,10 @@
                     <li class="col-12 col-md-3 candidate-detail-label">EDUCATION:</li>
                     <li class="col-12 col-md-9 candidate-detail-info">
                         <ul class="candidate-info">
-                            <li><span>Matriculation:</span>2012 to 2014 - Lahore Children High School</li>
-                            <li><span>Intermediate:</span>2014 to 2016 - Punjab Group of Colleges</li>
+                            <li v-for="(edu, index) in data.candidate_education" :key="index"><span>{{edu.school_type}}:</span>{{edu.start_date}} to {{edu.end_date}} - {{edu.school_name}}</li>
+                            <!-- <li><span>Intermediate:</span>2014 to 2016 - Punjab Group of Colleges</li>
                             <li><span>Bachelors:</span>2016 to 2020 - BS (Computer Science) - University of South Asia,
-                                Cantt Campus</li>
+                                Cantt Campus</li> -->
                         </ul>
                     </li>
                 </ul>
@@ -73,9 +71,9 @@
                     <li class="col-12 col-md-3 candidate-detail-label">WORK EXPERIENCE:</li>
                     <li class="col-12 col-md-9 candidate-detail-info">
                         <ul class="candidate-info">
-                            <li><span>WORK EXPERIENCE:</span>UI/UX Designer - 6 months</li>
-                            <li><span>Powerstar Group Limited:</span>Graphic Designer - 2 months</li>
-                            <li><span>IDENBRID:</span>UI/UX Designer - Working</li>
+                            <li v-for="(com, index) in data.candidate_experience" :key="index"><span>{{com.company_name}}:</span>{{com.designation}} - {{com.start_date}} to {{com.end_date}}</li>
+                            <!-- <li><span>Powerstar Group Limited:</span>Graphic Designer - 2 months</li>
+                            <li><span>IDENBRID:</span>UI/UX Designer - Working</li> -->
                         </ul>
                     </li>
                 </ul>
@@ -84,11 +82,7 @@
                     <li class="col-12 col-md-9 candidate-detail-info">
                         <ul class="candidate-info">
                             <li class="skills-candidate">
-                                <div>Product Designing</div>
-                                <div>UI/UX Designing</div>
-                                <div>Graphic Designing</div>
-                                <div>HTML</div>
-                                <div>CSS</div>
+                                <div v-for="(skills, index) in data.candidate_skills" :key="index">{{skills.name}}</div>
                             </li>
                         </ul>
                     </li>
@@ -97,9 +91,7 @@
                     <li class="col-12 col-md-3 candidate-detail-label">AWARDS:</li>
                     <li class="col-12 col-md-9 candidate-detail-info">
                         <ul class="candidate-info">
-                            <li><span>Best Entrepreneurship Gala Seller:</span>2020</li>
-                            <li><span>Best Photographer of the Year:</span>2019</li>
-                            <li><span>Brainstorming Champion:</span>2019</li>
+                            <li v-for="(award, index) in data.candidate_awards" :key="index"><span>{{award.name}}:</span>{{award.date}}</li>
                         </ul>
                     </li>
                 </ul>
@@ -107,10 +99,8 @@
                     <li class="col-12 col-md-3 candidate-detail-label">LANGUAGES:</li>
                     <li class="col-12 col-md-9 candidate-detail-info">
                         <ul class="candidate-info">
-                            <li class="skills-candidate">
-                                <div>English</div>
-                                <div>Urdu</div>
-                                <div>Punjabi</div>
+                            <li  class="skills-candidate">
+                                <div v-for="(language, index) in data.candidate_language" :key="index">{{language.name}}</div>
                             </li>
                         </ul>
                     </li>
@@ -146,15 +136,15 @@
                 related_candidate: '',
             }
         },
-        mounted() {
-
+        created() {
+            this.getSingleCandidateDetail()
         },
         components: {
             WebsiteNavbar,
             CompanyNavbar,
         },
         methods: {
-            getSingleJobDetail() {  
+            getSingleCandidateDetail() {  
                 axios.get('/get-single-candidate-detail/' + this.$route.params.id)
                     .then((response) => {
                         this.data = response.data.job
