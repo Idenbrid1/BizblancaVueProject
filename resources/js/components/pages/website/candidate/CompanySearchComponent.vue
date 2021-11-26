@@ -421,8 +421,8 @@
                 this.record = {
                     keyword: '',
                 };
-                this.scompaniesToShow = 2,
-                    this.searchData = ''
+                this.companiesToShow = 2,
+                this.searchData = ''
             }
         },
     };

@@ -4,7 +4,7 @@
         <CompanyNavbar />
         <div class="container cont-flex user-profile-container PostJobContainer">
             <div class="condition-search-feilds">
-                <div class="px-2">
+                <div>
                     <h1 class="post_new_job_title">Post New Job</h1>
                     <p class="post_new_job_descrp">
                         To add more jobs in your company profile, Please click the Add more jobs button and after that
@@ -28,7 +28,7 @@
                             <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo" />
                             <span class="company-h line-clamp-1">Ahmad</span>
                         </div>
-                        <div class="job-list-content col" :class="!item.deleted_at ? '' : 'deletejobcard' ">
+                        <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">{{item.title}}</h6>
                                 <!-- <i class="fa fa-star" aria-hidden="true"></i>
@@ -40,7 +40,7 @@
                                 <div class="d-flex align-items-center">
                                     <span class="job-post-date"><timeago :datetime="item.created_at"></timeago></span>
                                     <i v-if="!item.deleted_at" class="far fa-heart"></i>
-                                    <p v-else style="color: red"> DELETED</p>
+                                    <p v-else :class="!item.deleted_at ? '' : 'job-deleted-mark'"> DELETED</p>
                                 </div>
                             </div>
 
