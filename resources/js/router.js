@@ -101,7 +101,7 @@ const router = new VueRouter({
             }
         },
         {
-            path: '/candidate-detail',
+            path: '/candidate-detail/:id',
             name: 'CandidateDetail',
             component: CandidateDetail
         },

@@ -70,7 +70,7 @@ class CommonController extends Controller
             }
             $candidate_skills_lists = Candidate::whereIn('id', $final_skills_array)->get();
                 
-            }
+        }
         else{
             $candidate_skills_lists = Candidate::all();
         }
@@ -80,19 +80,18 @@ class CommonController extends Controller
                 $candidate_skills_lists = $candidate_skills_lists->where($field, $request->$field);
             }
         }
-        return $candidate_skills_lists;
-        if($candidate_skills_lists)
+        if(empty($candidate_skills_lists))
         {
             return $candidate_skills_lists;
         }
         else{
-            return Candidate::random();
+            return Candidate::inRandomOrder()->paginate(12);
         }
     }
 
     public function getCandidateSearch()
     {
-        return Candidate::latest()->paginate(12); 
+        return Candidate::with('CandidateSkills')->latest()->paginate(12); 
     }
 
     public function getCompanyDetail($id)
@@ -111,6 +110,16 @@ class CommonController extends Controller
         return response()->json([
             'job' => $job,
             'related_job' => $retatedCompanyJob
+        ]);
+    }
+
+    public function getCandidateDetail($id)
+    {
+        $candidate = Candidate::with(['CandidateAwards', 'CandidateEducation', 'CandidateExperience', 'CandidateLanguage', 'CandidateSkills', 'CandidateProjects'])->find($id);
+        $retatedCandidate = Candidate::with(['CandidateAwards', 'CandidateEducation', 'CandidateExperience', 'CandidateLanguage', 'CandidateSkills', 'CandidateProjects'])->inRandomOrder()->get();
+        return response()->json([
+            'job' => $candidate,
+            'related_candidate' => $retatedCandidate
         ]);
     }
 
