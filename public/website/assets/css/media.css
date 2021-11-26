@@ -120,7 +120,7 @@
         width: 100%;
     }
     .job-list-content{
-        padding: 0px 10px!important;
+        padding: 10px 10px!important;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -150,13 +150,19 @@
         width: 100px;
     }
     .company-h{
-        font-size: 14px;
+        font-size: 16px;
     }
     .job-title{
         font-size: 16px;
     }
+    .job-list-wrap{
+        padding: 10px;
+    }
+    .post_new_job_anker{
+        padding: 15px;
+    }
     .job-post-date{
-        font-size: 10px;
+        font-size: 12px;
     }
     .job-detail-info{
         padding: 0px 0px 19px 9px;
@@ -197,11 +203,11 @@
     }
     .job-dynamic-values>ul>li>span{
         padding-left: 3px;
-        font-size: 10px;
+        font-size: 12px;
     }
     .job-dynamic-values>ul{
         padding-right: 9px;
-        margin-right: 18px;
+        margin-right: 5px;
         border-right: none;
     }
     .job-apply-anker{

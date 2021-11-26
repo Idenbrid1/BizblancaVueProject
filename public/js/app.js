@@ -39256,194 +39256,189 @@ var render = function () {
                     ]),
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "job-list-content col",
-                      class: !item.deleted_at ? "" : "deletejobcard",
-                    },
-                    [
-                      _c("div", { staticClass: "job-header" }, [
-                        _c("h6", { staticClass: "job-title mb-0" }, [
-                          _vm._v(_vm._s(item.title)),
+                  _c("div", { staticClass: "job-list-content col" }, [
+                    _c("div", { staticClass: "job-header" }, [
+                      _c("h6", { staticClass: "job-title mb-0" }, [
+                        _vm._v(_vm._s(item.title)),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex align-items-center" }, [
+                        _c(
+                          "span",
+                          { staticClass: "job-post-date" },
+                          [
+                            _c("timeago", {
+                              attrs: { datetime: item.created_at },
+                            }),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        !item.deleted_at
+                          ? _c("i", { staticClass: "far fa-heart" })
+                          : _c(
+                              "p",
+                              {
+                                class: !item.deleted_at
+                                  ? ""
+                                  : "job-deleted-mark",
+                              },
+                              [_vm._v(" DELETED")]
+                            ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "job-description" }, [
+                      _vm._v(_vm._s(item.job_description)),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "job-content-wrap" }, [
+                      _c("div", { staticClass: "job-dynamic-values" }, [
+                        _c("ul", [
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/calendar-job.svg",
+                                alt: "img",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("moment")(
+                                    item.created_at,
+                                    "YYYY-MM-DD"
+                                  )
+                                )
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/experience-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.experience))]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("ul", [
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/money-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.salary_range))]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("img", {
+                              staticStyle: { margin: "0px 3px" },
+                              attrs: {
+                                height: "16px",
+                                width: "10px",
+                                src: "/website/assets/images/pin.svg",
+                                alt: "img",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.location))]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("ul", [
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/suitcase-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.shift))]),
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("img", {
+                              attrs: {
+                                src: "/website/assets/images/switch-job.svg",
+                                alt: "",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(item.job_type))]),
+                          ]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "job-list-fav m-0" }, [
+                        _c("li", [
+                          !item.deleted_at
+                            ? _c(
+                                "a",
+                                {
+                                  staticClass: "job-post-ions",
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.deleteJobPost(item.id)
+                                    },
+                                  },
+                                },
+                                [_c("i", { staticClass: "fas fa-trash-alt" })]
+                              )
+                            : _vm._e(),
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          !item.deleted_at
+                            ? _c(
+                                "a",
+                                {
+                                  staticClass: "job-post-ions",
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.editJobPost(item.id)
+                                    },
+                                  },
+                                },
+                                [_c("i", { staticClass: "fas fa-edit" })]
+                              )
+                            : _vm._e(),
                         ]),
                         _vm._v(" "),
                         _c(
-                          "div",
-                          { staticClass: "d-flex align-items-center" },
+                          "li",
                           [
-                            _c(
-                              "span",
-                              { staticClass: "job-post-date" },
-                              [
-                                _c("timeago", {
-                                  attrs: { datetime: item.created_at },
-                                }),
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
                             !item.deleted_at
-                              ? _c("i", { staticClass: "far fa-heart" })
-                              : _c("p", { staticStyle: { color: "red" } }, [
-                                  _vm._v(" DELETED"),
-                                ]),
-                          ]
+                              ? _c(
+                                  "router-link",
+                                  {
+                                    staticClass: "job-post-ions",
+                                    attrs: {
+                                      to: {
+                                        name: "JobDetail",
+                                        params: { id: item.id },
+                                      },
+                                      "data-toggle": "collapse",
+                                    },
+                                  },
+                                  [_c("i", { staticClass: "fas fa-eye" })]
+                                )
+                              : _vm._e(),
+                          ],
+                          1
                         ),
                       ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "job-description" }, [
-                        _vm._v(_vm._s(item.job_description)),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "job-content-wrap" }, [
-                        _c("div", { staticClass: "job-dynamic-values" }, [
-                          _c("ul", [
-                            _c("li", [
-                              _c("img", {
-                                attrs: {
-                                  src: "/website/assets/images/calendar-job.svg",
-                                  alt: "img",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c("span", [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm._f("moment")(
-                                      item.created_at,
-                                      "YYYY-MM-DD"
-                                    )
-                                  )
-                                ),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("img", {
-                                attrs: {
-                                  src: "/website/assets/images/experience-job.svg",
-                                  alt: "",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c("span", [_vm._v(_vm._s(item.experience))]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("ul", [
-                            _c("li", [
-                              _c("img", {
-                                attrs: {
-                                  src: "/website/assets/images/money-job.svg",
-                                  alt: "",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c("span", [_vm._v(_vm._s(item.salary_range))]),
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("img", {
-                                staticStyle: { margin: "0px 3px" },
-                                attrs: {
-                                  height: "16px",
-                                  width: "10px",
-                                  src: "/website/assets/images/pin.svg",
-                                  alt: "img",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c("span", [_vm._v(_vm._s(item.location))]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("ul", [
-                            _c("li", [
-                              _c("img", {
-                                attrs: {
-                                  src: "/website/assets/images/suitcase-job.svg",
-                                  alt: "",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c("span", [_vm._v(_vm._s(item.shift))]),
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("img", {
-                                attrs: {
-                                  src: "/website/assets/images/switch-job.svg",
-                                  alt: "",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c("span", [_vm._v(_vm._s(item.job_type))]),
-                            ]),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("ul", { staticClass: "job-list-fav m-0" }, [
-                          _c("li", [
-                            !item.deleted_at
-                              ? _c(
-                                  "a",
-                                  {
-                                    staticClass: "job-post-ions",
-                                    on: {
-                                      click: function ($event) {
-                                        return _vm.deleteJobPost(item.id)
-                                      },
-                                    },
-                                  },
-                                  [_c("i", { staticClass: "fas fa-trash-alt" })]
-                                )
-                              : _vm._e(),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", [
-                            !item.deleted_at
-                              ? _c(
-                                  "a",
-                                  {
-                                    staticClass: "job-post-ions",
-                                    on: {
-                                      click: function ($event) {
-                                        return _vm.editJobPost(item.id)
-                                      },
-                                    },
-                                  },
-                                  [_c("i", { staticClass: "fas fa-edit" })]
-                                )
-                              : _vm._e(),
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "li",
-                            [
-                              !item.deleted_at
-                                ? _c(
-                                    "router-link",
-                                    {
-                                      staticClass: "job-post-ions",
-                                      attrs: {
-                                        to: {
-                                          name: "JobDetail",
-                                          params: { id: item.id },
-                                        },
-                                        "data-toggle": "collapse",
-                                      },
-                                    },
-                                    [_c("i", { staticClass: "fas fa-eye" })]
-                                  )
-                                : _vm._e(),
-                            ],
-                            1
-                          ),
-                        ]),
-                      ]),
-                    ]
-                  ),
+                    ]),
+                  ]),
                 ])
               }),
               0

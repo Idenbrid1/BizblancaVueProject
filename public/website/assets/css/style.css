@@ -2126,7 +2126,19 @@ body {
     font-weight: 500;
     color: #757575;
 }
-
+.job-deleted-mark{
+    position: absolute; 
+    right: -24px;
+    font-weight: 800;
+    bottom: -35px;
+    font-size: 18px;
+    color: #fff;
+    padding: 15px;
+    height: 84px;
+    background: red;
+    opacity: 0.2;
+    transform: rotate(-34deg);
+}
 .job-post-ions {
     display: block;
 }
@@ -4207,7 +4219,11 @@ body {
 }
 .job-list-content {
     padding: 10px 10px;
-    height: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
 /* candidate style */
 
@@ -4297,14 +4313,6 @@ body {
     .job-search-count {
         text-align: center;
     }
-}
-
-.job-list-content {
-    padding: 10px !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 140px;
 }
 
 @media only screen and (max-width: 360px) and (min-width: 320px) {
@@ -6659,10 +6667,6 @@ progress {
 .about-pricing>p {
     margin: 0px;
     color: #FFFFFF;
-}
-.deletejobcard{
-    background-color: red;
-    color: white;
 }
 .about-pricing>.plan-description {
     color: #FFFFFF;
