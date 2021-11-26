@@ -2,10 +2,10 @@
     <div>
         <WebsiteNavbar />
         <CandidateNavbar />
-        <div class="profile-wrapper mt-5">
+        <div class="profile-wrapper">
             <div class="row m-0 container p-0">
                 <div class="col-12 p-0">
-                    <div v-if="this.skills_exist == false" class="alert-message-resume resume-attention-alert col-12">
+                    <div v-if="this.skills_exist == false" class="alert-message-resume resume-attention-alert col-12 mt-5">
                         <h2>Please correct any deficiencies in your profile</h2>
                         <p>
                             Since [personal information] such as name and contact information is

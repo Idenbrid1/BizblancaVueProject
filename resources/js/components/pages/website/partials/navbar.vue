@@ -112,7 +112,7 @@
         </header>
         <!-- seconday-Navigation -->
         <header class="_secondary-header-nav p-0" id="secondary-header-nav">
-            <div class="p-0 m-auto" style="height: 42px">
+            <div class="p-0 m-auto">
                 <ul>
                     <li>
                         <a href="#news" class="secondaymenu" id="secondary-anker">News</a>
