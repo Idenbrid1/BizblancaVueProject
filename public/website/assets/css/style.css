@@ -1815,9 +1815,6 @@ body {
     letter-spacing: 1.5px;
     text-align: center;
 }
-.job-list-wrap{
-    padding: 20px;
-}
 .job-list-toolbar {
     display: -webkit-box;
     display: -webkit-flex;
@@ -6062,7 +6059,8 @@ progress {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px 30px 10px;
+    padding: 10px 0px 30px 0px;
+    flex-wrap: wrap;
 }
 
 .post_new_job_anker>a {

@@ -4,7 +4,7 @@
         <CompanyNavbar />
         <div class="container cont-flex user-profile-container PostJobContainer">
             <div class="condition-search-feilds">
-                <div class="px-2">
+                <div>
                     <h1 class="post_new_job_title">Post New Job</h1>
                     <p class="post_new_job_descrp">
                         To add more jobs in your company profile, Please click the Add more jobs button and after that

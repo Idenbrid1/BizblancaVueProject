@@ -8502,7 +8502,7 @@ __webpack_require__.r(__webpack_exports__);
       this.record = {
         keyword: ''
       };
-      this.scompaniesToShow = 2, this.searchData = '';
+      this.companiesToShow = 2, this.searchData = '';
     }
   }
 });
@@ -36536,7 +36536,7 @@ var render = function () {
               _vm._v(" "),
               _c("div", { staticClass: "content" }, [
                 _c("div", { staticClass: "content-body" }, [
-                  _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "row m-0" }, [
                     _c("div", { staticClass: "col-md-6" }, [
                       _c("label", [_vm._v("Experience")]),
                       _vm._v(" "),
@@ -36796,7 +36796,7 @@ var render = function () {
               _c("div", { staticClass: "job-list-wrap" }, [
                 _c(
                   "div",
-                  { staticClass: "row m-0" },
+                  { staticClass: "row m-0 justify-content-center" },
                   _vm._l(_vm.searchData.data, function (item, index) {
                     return _c(
                       "div",
@@ -41199,7 +41199,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "px-2" }, [
+    return _c("div", [
       _c("h1", { staticClass: "post_new_job_title" }, [_vm._v("Post New Job")]),
       _vm._v(" "),
       _c("p", { staticClass: "post_new_job_descrp" }, [
