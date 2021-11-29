@@ -87,6 +87,11 @@
                                         <i class="fas fa-eye"></i>
                                         </router-link>
                                     </li>
+                                    <li>
+                                        <router-link v-if="!item.deleted_at" :to="{ name: 'JobAppliedCandidates', params: { id: item.id } }" data-toggle="collapse" class="job-post-ions">
+                                        <i class="fas fa-eye"></i>
+                                        </router-link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

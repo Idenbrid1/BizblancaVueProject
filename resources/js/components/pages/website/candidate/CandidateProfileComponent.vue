@@ -1420,56 +1420,58 @@
                                                             <i class="fas fa-times"></i>
                                                         </a>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="institute">Institute Type</label>
-                                                            <select name="school_type" class="form-control"
-                                                                v-model="education_push_array.school_type"
-                                                                placeholder="Please Select">
-                                                                <option value="Metric">Metric</option>
-                                                                <option value="Intermediate">Intermediate</option>
-                                                                <option value="Bachelor">Bachelor</option>
-                                                            </select>
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="institute">Institute Type</label>
+                                                                <select name="school_type" class="form-control"
+                                                                    v-model="education_push_array.school_type"
+                                                                    placeholder="Please Select">
+                                                                    <option value="Metric">Metric</option>
+                                                                    <option value="Intermediate">Intermediate</option>
+                                                                    <option value="Bachelor">Bachelor</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="school_name">Institute name</label>
-                                                            <input name="school_name"
-                                                                v-model="education_push_array.school_name"
-                                                                class="form-control" type="text"
-                                                                placeholder="Please Select" value="" />
-                                                            <!-- <select name="school_name" class="form-control" v-model="educationUpdate.school_name"
-                                                                placeholder="Enter Institute Name" id="school_name">
-                                                                <option value="$university">university</option>
-                                                            </select> -->
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="school_name">Institute name</label>
+                                                                <input name="school_name"
+                                                                    v-model="education_push_array.school_name"
+                                                                    class="form-control" type="text"
+                                                                    placeholder="Please Select" value="" />
+                                                                <!-- <select name="school_name" class="form-control" v-model="educationUpdate.school_name"
+                                                                    placeholder="Enter Institute Name" id="school_name">
+                                                                    <option value="$university">university</option>
+                                                                </select> -->
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="startingDate">Starting Date</label>
-                                                            <input name="start_date"
-                                                                v-model="education_push_array.start_date"
-                                                                class="form-control" type="date"
-                                                                placeholder="Please Select" value="" />
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="startingDate">Starting Date</label>
+                                                                <input name="start_date"
+                                                                    v-model="education_push_array.start_date"
+                                                                    class="form-control" type="date"
+                                                                    placeholder="Please Select" value="" />
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="endingDate">Ending Date</label>
-                                                            <input name="end_date" id="endingDate"
-                                                                v-model="education_push_array.end_date"
-                                                                class="form-control" type="date"
-                                                                placeholder="Please Select" value="" />
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="endingDate">Ending Date</label>
+                                                                <input name="end_date" id="endingDate"
+                                                                    v-model="education_push_array.end_date"
+                                                                    class="form-control" type="date"
+                                                                    placeholder="Please Select" value="" />
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="department">Department</label>
-                                                            <input name="department" id="department"
-                                                                v-model="education_push_array.department"
-                                                                class="form-control" type="text" placeholder="Faculty"
-                                                                value="" />
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label for="department">Department</label>
+                                                                <input name="department" id="department"
+                                                                    v-model="education_push_array.department"
+                                                                    class="form-control" type="text" placeholder="Faculty"
+                                                                    value="" />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2533,6 +2535,11 @@
                         name: this.language_push_array.name,
                         level: this.language_push_array.level,
                     })
+                    this.addMoreDBLanguage = false
+                    this.language_push_array = {
+                        name: '',
+                        level: '',
+                    }
                 }
                 axios.post('/update/language', this.profile.candidate_language)
                     .then((res) => {

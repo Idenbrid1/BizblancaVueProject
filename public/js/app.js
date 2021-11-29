@@ -2282,9 +2282,7 @@ __webpack_require__.r(__webpack_exports__);
                 confirmButtonText: 'Download Invoice'
               }).then(function (result) {
                 if (result.isConfirmed) {
-                  axios__WEBPACK_IMPORTED_MODULE_0___default().get('/download-invoice/' + res.data.order_id).then(function (response) {
-                    _this2.plans = response.data;
-                  });
+                  axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/download-invoice/' + res.data.order_id).then(function (response) {});
                 }
               });
             }
@@ -7755,6 +7753,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -8008,6 +8008,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           name: this.language_push_array.name,
           level: this.language_push_array.level
         });
+        this.addMoreDBLanguage = false;
+        this.language_push_array = {
+          name: '',
+          level: ''
+        };
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/language', this.profile.candidate_language).then(function (res) {
@@ -9938,9 +9943,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -10521,8 +10523,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -10557,7 +10557,9 @@ __webpack_require__.r(__webpack_exports__);
         keyword: '',
         skills: []
       },
-      searchData: {}
+      searchData: '',
+      candidateToShow: 3,
+      totalcandidates: 0
     };
   },
   mounted: function mounted() {
@@ -10597,13 +10599,15 @@ __webpack_require__.r(__webpack_exports__);
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-candidates-search?page=' + page).then(function (response) {
         _this.searchData = response.data;
+        _this.totalcandidates = _this.searchData.length;
       });
     },
     search: function search() {
       var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/candidate-search', this.record).then(function (response) {
-        _this2.searchData = response;
+        _this2.searchData = response.data;
+        _this2.totalcandidates = _this2.searchData.length;
       });
     },
     keywordSearch: function keywordSearch() {
@@ -10611,6 +10615,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/candidate-keyword-search/' + this.record.keyword).then(function (response) {
         _this3.searchData = response.data;
+        _this3.totalcandidates = _this3.searchData.length;
       });
     }
   }
@@ -12267,6 +12272,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -13193,8 +13203,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
-/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
-/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__);
 //
 //
 //
@@ -13503,476 +13511,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      record: {
-        id: 0,
-        bannar: '',
-        job_title: '',
-        job_designation: '',
-        job_description: '',
-        job_type: '',
-        shift: '',
-        industry: '',
-        department: '',
-        experience: '',
-        salary_type: '',
-        salary_range: '',
-        gender: '',
-        location: '',
-        total_positions: '',
-        qualification_level: '',
-        benefits: '',
-        job_responsibilities: '',
-        status: 0
-      },
-      max: 36,
-      errors: [],
-      jobs: {}
+      data: []
     };
   },
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    pagination: (laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default())
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   mounted: function mounted() {
     var swiper = new Swiper(".bizer-ranking-slider", {
@@ -13988,240 +13538,16 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   created: function created() {
-    this.getCompanyJobs();
+    this.getSingleJobDetail();
   },
   methods: {
-    getCompanyJobs: function getCompanyJobs() {
+    getSingleJobDetail: function getSingleJobDetail() {
       var _this = this;
 
-      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('get-company-jobs?page=' + page).then(function (response) {
-        _this.jobs = response.data;
-      });
-    },
-    deleteJobPost: function deleteJobPost(id) {
-      var _this2 = this;
-
-      Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then(function (result) {
-        if (result.isConfirmed) {
-          axios__WEBPACK_IMPORTED_MODULE_0___default().get('/delete-job-post/' + id).then(function (response) {
-            if (response.data.success == true) {
-              Swal.fire('Deleted!', 'Your job has been deleted.', 'success');
-
-              _this2.getCompanyJobs();
-            } else {
-              Swal.fire('Not Found', 'Your job not found.', 'info');
-            }
-          });
-        }
-      });
-    },
-    postJob: function postJob() {
-      var _this3 = this;
-
-      Swal.fire({
-        title: 'Are you sure to post this job?',
-        text: "After Yes you your job will be live",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        cancelButtonText: 'No, keep Edit!',
-        confirmButtonText: 'Yes, post it!'
-      }).then(function (result) {
-        if (result.isConfirmed) {
-          var $formData = $('#formData');
-          var data = new FormData(formData);
-          axios__WEBPACK_IMPORTED_MODULE_0___default().post('/company/post-job', data).then(function (res) {
-            if (res.data.success == false) {
-              _this3.errors = res.data.errors;
-            } else {
-              _this3.getCompanyJobs();
-
-              Swal.fire({
-                icon: 'success',
-                title: 'Posted!😎',
-                text: 'Your Job is Now Live'
-              });
-              $('#PostNewJobModal').modal('hide');
-              _this3.errors = [];
-              _this3.record = {
-                bannar: '',
-                title: '',
-                job_designation: '',
-                job_description: '',
-                job_type: '',
-                shift: '',
-                industry: '',
-                department: '',
-                experience: '',
-                salary_type: '',
-                salary_range: '',
-                gender: '',
-                location: '',
-                total_position: '',
-                qualification_level: '',
-                benefits: '',
-                job_responsibilities: ''
-              };
-              _this3.$refs.bannar.value = null;
-            }
-          });
-        }
-      });
-    },
-    editJobPost: function editJobPost(id) {
-      var _this4 = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/edit-job-post/' + id).then(function (response) {
-        if (response.data.success == true) {
-          _this4.record.id = response.data.data.id;
-          _this4.record.bannar = response.data.data.bannar;
-          _this4.record.job_title = response.data.data.title;
-          _this4.record.job_designation = response.data.data.designation;
-          _this4.record.job_description = response.data.data.description;
-          _this4.record.job_type = response.data.data.job_type;
-          _this4.record.shift = response.data.data.shift; // this.record.industry =  response.data.data.id;
-          // this.record.department =  response.data.data.id;
-
-          _this4.record.experience = response.data.data.experience;
-          _this4.record.salary_type = response.data.data.salary_type;
-          _this4.record.salary_range = response.data.data.salary_range;
-          _this4.record.gender = response.data.data.gender;
-          _this4.record.location = response.data.data.location;
-          _this4.record.total_positions = response.data.data.total_position;
-          _this4.record.qualification_level = response.data.data.qualification_level;
-          _this4.record.benefits = response.data.data.benefits;
-          _this4.record.job_responsibilities = response.data.data.job_responsibilities;
-          $('#PostNewJobModal').modal('show');
-        } else {}
-      });
-    },
-    clearRecord: function clearRecord() {
-      this.record = {
-        id: 0,
-        bannar: '',
-        job_title: '',
-        job_designation: '',
-        job_description: '',
-        job_type: '',
-        shift: '',
-        industry: '',
-        department: '',
-        experience: '',
-        salary_type: '',
-        salary_range: '',
-        gender: '',
-        location: '',
-        total_positions: '',
-        qualification_level: '',
-        benefits: '',
-        job_responsibilities: ''
-      };
-    },
-    updateJobPost: function updateJobPost() {
-      var _this5 = this;
-
-      Swal.fire({
-        title: 'Are you sure to post this job?',
-        text: "After Yes you your job will be live",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        cancelButtonText: 'No, keep Edit!',
-        confirmButtonText: 'Yes, post it!'
-      }).then(function (result) {
-        if (result.isConfirmed) {
-          var $formData = $('#formData');
-          var data = new FormData(formData);
-          axios__WEBPACK_IMPORTED_MODULE_0___default().post('/company/post-job', data).then(function (res) {
-            if (res.data.success == false) {
-              _this5.errors = res.data.errors;
-            } else {
-              _this5.getCompanyJobs();
-
-              Swal.fire({
-                icon: 'success',
-                title: 'Posted!😎',
-                text: 'Your Job is Now Live'
-              });
-              _this5.errors = [];
-              _this5.record = {
-                bannar: '',
-                title: '',
-                job_designation: '',
-                job_description: '',
-                job_type: '',
-                shift: '',
-                industry: '',
-                department: '',
-                experience: '',
-                salary_type: '',
-                salary_range: '',
-                gender: '',
-                location: '',
-                total_position: '',
-                qualification_level: '',
-                benefits: '',
-                job_responsibilities: ''
-              };
-              _this5.$refs.bannar.value = null;
-            }
-          });
-        }
-      });
-    },
-    postNewJob: function postNewJob() {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/check-job-post-limit').then(function (response) {
-        if (response.data.success == true) {
-          $('#PostNewJobModal').modal('show');
-        } else {
-          if (response.data.response == 'expire') {
-            Swal.fire({
-              icon: 'error',
-              title: 'Package Expire',
-              text: 'Your Package Expire and you not able to post more jobs ',
-              footer: '<a href="/#/package-plans">Upgrade Plan</a> '
-            });
-          } else if (response.data.response == 'pending') {
-            Swal.fire({
-              icon: 'error',
-              title: 'Please Wait',
-              text: 'Please pay your dues to post jobs! Thanks',
-              footer: '<a href="/#/package-plans">Upgrade Plan</a> '
-            });
-          } else {
-            Swal.fire({
-              icon: 'error',
-              title: 'Limit Exceeded',
-              text: 'Your Post Job Limit Exceeded',
-              footer: '<a href="/#/package-plans">Upgrade Plan</a> '
-            });
-          }
-        }
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-applied-applicants-list/' + this.$route.params.id).then(function (response) {
+        _this.data = response.data.candidates;
       });
     }
-  },
-  computed: {
-    checkdatediffer: function checkdatediffer() {
-      dateDiff = function dateDiff(startDateString, endDateString) {
-        var start = moment($);
-        var end = moment(endDateString);
-        var duration = moment.duration(end.diff(start));
-        var days = duration.asDays();
-        return Math.round(days);
-      };
-    } // document.querySelector(".diff").innerHTML = dateDiff("2020-09-11T18:30:00.000Z", "2020-09-15T18:30:00.000Z");
-
   }
 });
 
@@ -14723,7 +14049,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_23__["default"]({
     name: 'CompanyDetail',
     component: _components_pages_website_company_CompanyDetailComponent_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
   }, {
-    path: '/job-applied-candidates',
+    path: '/job-applied-candidates/:id',
     name: 'JobAppliedCandidates',
     component: _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
   }, {
@@ -30763,438 +30089,472 @@ var render = function () {
                                               _vm._v(" "),
                                               _c(
                                                 "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
+                                                { staticClass: "row" },
                                                 [
                                                   _c(
                                                     "div",
                                                     {
-                                                      staticClass: "form-group",
+                                                      staticClass:
+                                                        "col-12 col-md-6",
                                                     },
                                                     [
                                                       _c(
-                                                        "label",
+                                                        "div",
                                                         {
-                                                          attrs: {
-                                                            for: "institute",
-                                                          },
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Institute Type"
-                                                          ),
-                                                        ]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "select",
-                                                        {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm
-                                                                  .education_push_array
-                                                                  .school_type,
-                                                              expression:
-                                                                "education_push_array.school_type",
-                                                            },
-                                                          ],
                                                           staticClass:
-                                                            "form-control",
-                                                          attrs: {
-                                                            name: "school_type",
-                                                            placeholder:
-                                                              "Please Select",
-                                                          },
-                                                          on: {
-                                                            change: function (
-                                                              $event
-                                                            ) {
-                                                              var $$selectedVal =
-                                                                Array.prototype.filter
-                                                                  .call(
-                                                                    $event
-                                                                      .target
-                                                                      .options,
-                                                                    function (
-                                                                      o
-                                                                    ) {
-                                                                      return o.selected
-                                                                    }
-                                                                  )
-                                                                  .map(
-                                                                    function (
-                                                                      o
-                                                                    ) {
-                                                                      var val =
-                                                                        "_value" in
-                                                                        o
-                                                                          ? o._value
-                                                                          : o.value
-                                                                      return val
-                                                                    }
-                                                                  )
-                                                              _vm.$set(
-                                                                _vm.education_push_array,
-                                                                "school_type",
-                                                                $event.target
-                                                                  .multiple
-                                                                  ? $$selectedVal
-                                                                  : $$selectedVal[0]
-                                                              )
-                                                            },
-                                                          },
+                                                            "form-group",
                                                         },
                                                         [
                                                           _c(
-                                                            "option",
+                                                            "label",
                                                             {
                                                               attrs: {
-                                                                value: "Metric",
-                                                              },
-                                                            },
-                                                            [_vm._v("Metric")]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "option",
-                                                            {
-                                                              attrs: {
-                                                                value:
-                                                                  "Intermediate",
+                                                                for: "institute",
                                                               },
                                                             },
                                                             [
                                                               _vm._v(
-                                                                "Intermediate"
+                                                                "Institute Type"
                                                               ),
                                                             ]
                                                           ),
                                                           _vm._v(" "),
                                                           _c(
-                                                            "option",
+                                                            "select",
                                                             {
+                                                              directives: [
+                                                                {
+                                                                  name: "model",
+                                                                  rawName:
+                                                                    "v-model",
+                                                                  value:
+                                                                    _vm
+                                                                      .education_push_array
+                                                                      .school_type,
+                                                                  expression:
+                                                                    "education_push_array.school_type",
+                                                                },
+                                                              ],
+                                                              staticClass:
+                                                                "form-control",
                                                               attrs: {
-                                                                value:
-                                                                  "Bachelor",
+                                                                name: "school_type",
+                                                                placeholder:
+                                                                  "Please Select",
+                                                              },
+                                                              on: {
+                                                                change:
+                                                                  function (
+                                                                    $event
+                                                                  ) {
+                                                                    var $$selectedVal =
+                                                                      Array.prototype.filter
+                                                                        .call(
+                                                                          $event
+                                                                            .target
+                                                                            .options,
+                                                                          function (
+                                                                            o
+                                                                          ) {
+                                                                            return o.selected
+                                                                          }
+                                                                        )
+                                                                        .map(
+                                                                          function (
+                                                                            o
+                                                                          ) {
+                                                                            var val =
+                                                                              "_value" in
+                                                                              o
+                                                                                ? o._value
+                                                                                : o.value
+                                                                            return val
+                                                                          }
+                                                                        )
+                                                                    _vm.$set(
+                                                                      _vm.education_push_array,
+                                                                      "school_type",
+                                                                      $event
+                                                                        .target
+                                                                        .multiple
+                                                                        ? $$selectedVal
+                                                                        : $$selectedVal[0]
+                                                                    )
+                                                                  },
                                                               },
                                                             },
-                                                            [_vm._v("Bachelor")]
+                                                            [
+                                                              _c(
+                                                                "option",
+                                                                {
+                                                                  attrs: {
+                                                                    value:
+                                                                      "Metric",
+                                                                  },
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "Metric"
+                                                                  ),
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "option",
+                                                                {
+                                                                  attrs: {
+                                                                    value:
+                                                                      "Intermediate",
+                                                                  },
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "Intermediate"
+                                                                  ),
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "option",
+                                                                {
+                                                                  attrs: {
+                                                                    value:
+                                                                      "Bachelor",
+                                                                  },
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "Bachelor"
+                                                                  ),
+                                                                ]
+                                                              ),
+                                                            ]
                                                           ),
                                                         ]
                                                       ),
                                                     ]
                                                   ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
-                                                [
+                                                  _vm._v(" "),
                                                   _c(
                                                     "div",
                                                     {
-                                                      staticClass: "form-group",
+                                                      staticClass:
+                                                        "col-12 col-md-6",
                                                     },
                                                     [
                                                       _c(
-                                                        "label",
+                                                        "div",
                                                         {
-                                                          attrs: {
-                                                            for: "school_name",
-                                                          },
+                                                          staticClass:
+                                                            "form-group",
                                                         },
                                                         [
-                                                          _vm._v(
-                                                            "Institute name"
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "school_name",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Institute name"
+                                                              ),
+                                                            ]
                                                           ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm
+                                                                    .education_push_array
+                                                                    .school_name,
+                                                                expression:
+                                                                  "education_push_array.school_name",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "school_name",
+                                                              type: "text",
+                                                              placeholder:
+                                                                "Please Select",
+                                                              value: "",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm
+                                                                  .education_push_array
+                                                                  .school_name,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.education_push_array,
+                                                                  "school_name",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
                                                         ]
                                                       ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm
-                                                                .education_push_array
-                                                                .school_name,
-                                                            expression:
-                                                              "education_push_array.school_name",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "school_name",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Please Select",
-                                                          value: "",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            _vm
-                                                              .education_push_array
-                                                              .school_name,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              _vm.education_push_array,
-                                                              "school_name",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
                                                     ]
                                                   ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
-                                                [
+                                                  _vm._v(" "),
                                                   _c(
                                                     "div",
                                                     {
-                                                      staticClass: "form-group",
+                                                      staticClass:
+                                                        "col-12 col-md-6",
                                                     },
                                                     [
                                                       _c(
-                                                        "label",
+                                                        "div",
                                                         {
-                                                          attrs: {
-                                                            for: "startingDate",
-                                                          },
+                                                          staticClass:
+                                                            "form-group",
                                                         },
                                                         [
-                                                          _vm._v(
-                                                            "Starting Date"
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "startingDate",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Starting Date"
+                                                              ),
+                                                            ]
                                                           ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm
+                                                                    .education_push_array
+                                                                    .start_date,
+                                                                expression:
+                                                                  "education_push_array.start_date",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "start_date",
+                                                              type: "date",
+                                                              placeholder:
+                                                                "Please Select",
+                                                              value: "",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm
+                                                                  .education_push_array
+                                                                  .start_date,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.education_push_array,
+                                                                  "start_date",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
                                                         ]
                                                       ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm
-                                                                .education_push_array
-                                                                .start_date,
-                                                            expression:
-                                                              "education_push_array.start_date",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "start_date",
-                                                          type: "date",
-                                                          placeholder:
-                                                            "Please Select",
-                                                          value: "",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            _vm
-                                                              .education_push_array
-                                                              .start_date,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              _vm.education_push_array,
-                                                              "start_date",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
                                                     ]
                                                   ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "col-12 col-md-6",
-                                                },
-                                                [
+                                                  _vm._v(" "),
                                                   _c(
                                                     "div",
                                                     {
-                                                      staticClass: "form-group",
+                                                      staticClass:
+                                                        "col-12 col-md-6",
                                                     },
                                                     [
                                                       _c(
-                                                        "label",
+                                                        "div",
                                                         {
-                                                          attrs: {
-                                                            for: "endingDate",
-                                                          },
+                                                          staticClass:
+                                                            "form-group",
                                                         },
-                                                        [_vm._v("Ending Date")]
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "endingDate",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Ending Date"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm
+                                                                    .education_push_array
+                                                                    .end_date,
+                                                                expression:
+                                                                  "education_push_array.end_date",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "end_date",
+                                                              id: "endingDate",
+                                                              type: "date",
+                                                              placeholder:
+                                                                "Please Select",
+                                                              value: "",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm
+                                                                  .education_push_array
+                                                                  .end_date,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.education_push_array,
+                                                                  "end_date",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
                                                       ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm
-                                                                .education_push_array
-                                                                .end_date,
-                                                            expression:
-                                                              "education_push_array.end_date",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "end_date",
-                                                          id: "endingDate",
-                                                          type: "date",
-                                                          placeholder:
-                                                            "Please Select",
-                                                          value: "",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            _vm
-                                                              .education_push_array
-                                                              .end_date,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              _vm.education_push_array,
-                                                              "end_date",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
                                                     ]
                                                   ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                { staticClass: "col-12" },
-                                                [
+                                                  _vm._v(" "),
                                                   _c(
                                                     "div",
-                                                    {
-                                                      staticClass: "form-group",
-                                                    },
+                                                    { staticClass: "col-12" },
                                                     [
                                                       _c(
-                                                        "label",
+                                                        "div",
                                                         {
-                                                          attrs: {
-                                                            for: "department",
-                                                          },
+                                                          staticClass:
+                                                            "form-group",
                                                         },
-                                                        [_vm._v("Department")]
+                                                        [
+                                                          _c(
+                                                            "label",
+                                                            {
+                                                              attrs: {
+                                                                for: "department",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Department"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c("input", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm
+                                                                    .education_push_array
+                                                                    .department,
+                                                                expression:
+                                                                  "education_push_array.department",
+                                                              },
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              name: "department",
+                                                              id: "department",
+                                                              type: "text",
+                                                              placeholder:
+                                                                "Faculty",
+                                                              value: "",
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm
+                                                                  .education_push_array
+                                                                  .department,
+                                                            },
+                                                            on: {
+                                                              input: function (
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.education_push_array,
+                                                                  "department",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              },
+                                                            },
+                                                          }),
+                                                        ]
                                                       ),
-                                                      _vm._v(" "),
-                                                      _c("input", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm
-                                                                .education_push_array
-                                                                .department,
-                                                            expression:
-                                                              "education_push_array.department",
-                                                          },
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          name: "department",
-                                                          id: "department",
-                                                          type: "text",
-                                                          placeholder:
-                                                            "Faculty",
-                                                          value: "",
-                                                        },
-                                                        domProps: {
-                                                          value:
-                                                            _vm
-                                                              .education_push_array
-                                                              .department,
-                                                        },
-                                                        on: {
-                                                          input: function (
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
-                                                            }
-                                                            _vm.$set(
-                                                              _vm.education_push_array,
-                                                              "department",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          },
-                                                        },
-                                                      }),
                                                     ]
                                                   ),
                                                 ]
@@ -36982,20 +36342,25 @@ var render = function () {
                   : _vm._e()
               }),
               _vm._v(" "),
-              _c("div", { staticClass: "text-center" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "load-more-btn mx-auto",
-                    on: {
-                      click: function ($event) {
-                        _vm.companiesToShow += 2
-                      },
-                    },
-                  },
-                  [_vm._v("Load more")]
-                ),
-              ]),
+              _vm.searchData.length
+                ? _c("div", { staticClass: "text-center" }, [
+                    _vm.searchData.length != _vm.companiesToShow &&
+                    _vm.totalCompanies > _vm.companiesToShow
+                      ? _c(
+                          "button",
+                          {
+                            staticClass: "load-more-btn mx-auto",
+                            on: {
+                              click: function ($event) {
+                                _vm.companiesToShow += 2
+                              },
+                            },
+                          },
+                          [_vm._v("Load more")]
+                        )
+                      : _vm._e(),
+                  ])
+                : _vm._e(),
             ],
             2
           ),
@@ -38643,211 +38008,204 @@ var render = function () {
               _c(
                 "div",
                 { staticClass: "job-list-wrap p-0" },
-                [
-                  _vm._l(_vm.jobToShow, function (item, index) {
-                    return index < _vm.searchData.length
-                      ? _c("div", { key: index, staticClass: "job-list" }, [
-                          _c(
-                            "div",
-                            { staticClass: "company-logo col-auto py-2" },
-                            [
-                              _c("img", {
-                                attrs: {
-                                  src:
-                                    "/storage/images/companies/" +
-                                    _vm.searchData[index].company.logo,
-                                  alt: "Company Logo",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                { staticClass: "company-h line-clamp-1" },
-                                [
-                                  _vm._v(
-                                    _vm._s(
-                                      _vm.searchData[index].company.company_name
-                                    )
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
+                _vm._l(_vm.jobToShow, function (item, index) {
+                  return index < _vm.searchData.length
+                    ? _c("div", { key: index, staticClass: "job-list" }, [
+                        _c(
+                          "div",
+                          { staticClass: "company-logo col-auto py-2" },
+                          [
+                            _c("img", {
+                              attrs: {
+                                src:
+                                  "/storage/images/companies/" +
+                                  _vm.searchData[index].company.logo,
+                                alt: "Company Logo",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              { staticClass: "company-h line-clamp-1" },
+                              [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.searchData[index].company.company_name
+                                  )
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "job-list-content col" }, [
+                          _c("div", { staticClass: "job-header" }, [
+                            _c("h6", { staticClass: "job-title mb-0" }, [
+                              _vm._v(_vm._s(_vm.searchData[index].title)),
+                            ]),
+                            _vm._v(" "),
+                            _vm._m(1, true),
+                          ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "job-list-content col" }, [
-                            _c("div", { staticClass: "job-header" }, [
-                              _c("h6", { staticClass: "job-title mb-0" }, [
-                                _vm._v(_vm._s(_vm.searchData[index].title)),
-                              ]),
-                              _vm._v(" "),
-                              _vm._m(1, true),
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "job-description" }, [
-                              _vm._v(_vm._s(_vm.searchData[index].description)),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "job-content-wrap" }, [
-                              _c("div", { staticClass: "job-dynamic-values" }, [
-                                _c("ul", [
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/calendar-job.svg",
-                                        alt: "img",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("moment")(
-                                            _vm.searchData[index].created_at,
-                                            "YYYY-MM-DD"
-                                          )
-                                        )
-                                      ),
-                                    ]),
-                                  ]),
+                          _c("p", { staticClass: "job-description" }, [
+                            _vm._v(_vm._s(_vm.searchData[index].description)),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "job-content-wrap" }, [
+                            _c("div", { staticClass: "job-dynamic-values" }, [
+                              _c("ul", [
+                                _c("li", [
+                                  _c("img", {
+                                    attrs: {
+                                      src: "/website/assets/images/calendar-job.svg",
+                                      alt: "img",
+                                    },
+                                  }),
                                   _vm._v(" "),
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/experience-job.svg",
-                                        alt: "",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(_vm.searchData[index].experience)
-                                      ),
-                                    ]),
+                                  _c("span", [
+                                    _vm._v(
+                                      _vm._s(
+                                        _vm._f("moment")(
+                                          _vm.searchData[index].created_at,
+                                          "YYYY-MM-DD"
+                                        )
+                                      )
+                                    ),
                                   ]),
                                 ]),
                                 _vm._v(" "),
-                                _c("ul", [
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/money-job.svg",
-                                        alt: "",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm.searchData[index].salary_range
-                                        )
-                                      ),
-                                    ]),
-                                  ]),
+                                _c("li", [
+                                  _c("img", {
+                                    attrs: {
+                                      src: "/website/assets/images/experience-job.svg",
+                                      alt: "",
+                                    },
+                                  }),
                                   _vm._v(" "),
-                                  _c("li", [
-                                    _c("img", {
-                                      staticStyle: { margin: "0px 3px" },
-                                      attrs: {
-                                        height: "16px",
-                                        width: "10px",
-                                        src: "/website/assets/images/pin.svg",
-                                        alt: "img",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(_vm.searchData[index].location)
-                                      ),
-                                    ]),
-                                  ]),
-                                ]),
-                                _vm._v(" "),
-                                _c("ul", [
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/suitcase-job.svg",
-                                        alt: "",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(_vm.searchData[index].shift)
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/switch-job.svg",
-                                        alt: "",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(_vm.searchData[index].job_type)
-                                      ),
-                                    ]),
+                                  _c("span", [
+                                    _vm._v(
+                                      _vm._s(_vm.searchData[index].experience)
+                                    ),
                                   ]),
                                 ]),
                               ]),
                               _vm._v(" "),
-                              _c("ul", { staticClass: "job-list-fav m-0" }, [
-                                _c(
-                                  "li",
-                                  [
-                                    _c(
-                                      "router-link",
-                                      {
-                                        staticClass: "job-view-btn",
-                                        attrs: {
-                                          "data-toggle": "collapse",
-                                          to: {
-                                            name: "JobDetail",
-                                            params: {
-                                              id: _vm.searchData[index].id,
-                                            },
+                              _c("ul", [
+                                _c("li", [
+                                  _c("img", {
+                                    attrs: {
+                                      src: "/website/assets/images/money-job.svg",
+                                      alt: "",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", [
+                                    _vm._v(
+                                      _vm._s(_vm.searchData[index].salary_range)
+                                    ),
+                                  ]),
+                                ]),
+                                _vm._v(" "),
+                                _c("li", [
+                                  _c("img", {
+                                    staticStyle: { margin: "0px 3px" },
+                                    attrs: {
+                                      height: "16px",
+                                      width: "10px",
+                                      src: "/website/assets/images/pin.svg",
+                                      alt: "img",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", [
+                                    _vm._v(
+                                      _vm._s(_vm.searchData[index].location)
+                                    ),
+                                  ]),
+                                ]),
+                              ]),
+                              _vm._v(" "),
+                              _c("ul", [
+                                _c("li", [
+                                  _c("img", {
+                                    attrs: {
+                                      src: "/website/assets/images/suitcase-job.svg",
+                                      alt: "",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", [
+                                    _vm._v(_vm._s(_vm.searchData[index].shift)),
+                                  ]),
+                                ]),
+                                _vm._v(" "),
+                                _c("li", [
+                                  _c("img", {
+                                    attrs: {
+                                      src: "/website/assets/images/switch-job.svg",
+                                      alt: "",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", [
+                                    _vm._v(
+                                      _vm._s(_vm.searchData[index].job_type)
+                                    ),
+                                  ]),
+                                ]),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c("ul", { staticClass: "job-list-fav m-0" }, [
+                              _c(
+                                "li",
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass: "job-view-btn",
+                                      attrs: {
+                                        "data-toggle": "collapse",
+                                        to: {
+                                          name: "JobDetail",
+                                          params: {
+                                            id: _vm.searchData[index].id,
                                           },
                                         },
                                       },
-                                      [_vm._v("View")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                              ]),
+                                    },
+                                    [_vm._v("View")]
+                                  ),
+                                ],
+                                1
+                              ),
                             ]),
                           ]),
-                        ])
-                      : _vm._e()
-                  }),
-                  _vm._v(" "),
-                  _vm.searchData.length == 0
-                    ? _c("div", [_c("h2", [_vm._v("Data Not Found")])])
-                    : _vm._e(),
-                ],
-                2
+                        ]),
+                      ])
+                    : _vm._e()
+                }),
+                0
               ),
             ]),
             _vm._v(" "),
             _vm.searchData.length
               ? _c("div", { staticClass: "text-center" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "load-more-btn mx-auto",
-                      on: {
-                        click: function ($event) {
-                          _vm.jobToShow += 2
+                  _vm.searchData.length != _vm.jobToShow &&
+                  _vm.totalJobs > _vm.jobToShow
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "load-more-btn mx-auto",
+                          on: {
+                            click: function ($event) {
+                              _vm.jobToShow += 2
+                            },
+                          },
                         },
-                      },
-                    },
-                    [_vm._v("Load more")]
-                  ),
+                        [_vm._v("Load more")]
+                      )
+                    : _vm._e(),
                 ])
               : _vm._e(),
           ]),
@@ -39784,123 +39142,179 @@ var render = function () {
                 _c(
                   "div",
                   { staticClass: "row m-0 justify-content-center" },
-                  _vm._l(_vm.searchData.data, function (item, index) {
-                    return _c(
-                      "div",
-                      { key: index, staticClass: "candidate-single" },
-                      [
-                        _c("div", { staticClass: "candidate-list-content" }, [
-                          _c("div", { staticClass: "candidate-image" }, [
-                            _c("div", {
-                              staticClass: "candidate-photo",
-                              style: {
-                                backgroundImage:
-                                  "url(/storage/images/candidates/" +
-                                  item.profile_image +
-                                  ")",
-                              },
-                            }),
-                            _vm._v(" "),
+                  _vm._l(_vm.candidateToShow, function (item, index) {
+                    return index < _vm.searchData.length
+                      ? _c(
+                          "div",
+                          { key: index, staticClass: "candidate-single" },
+                          [
                             _c(
                               "div",
-                              { staticClass: "candidate-header mt-2 ml-2" },
+                              { staticClass: "candidate-list-content" },
                               [
+                                _c("div", { staticClass: "candidate-image" }, [
+                                  _c("div", {
+                                    staticClass: "candidate-photo",
+                                    style: {
+                                      backgroundImage:
+                                        "url(/storage/images/candidates/" +
+                                        _vm.searchData[index].profile_image +
+                                        ")",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "candidate-header mt-2 ml-2",
+                                    },
+                                    [
+                                      _c(
+                                        "h6",
+                                        { staticClass: "candidate-name mb-0" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.searchData[index].full_name
+                                            )
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                                _vm._v(" "),
                                 _c(
-                                  "h6",
-                                  { staticClass: "candidate-name mb-0" },
-                                  [_vm._v(_vm._s(item.full_name))]
+                                  "p",
+                                  { staticClass: "candidate-description my-1" },
+                                  [_vm._v(_vm._s(_vm.searchData[index].bio))]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "ul",
+                                  { staticClass: "candidate-list-meta" },
+                                  [
+                                    _c("li", [
+                                      _c("i", {
+                                        staticClass: "fas fa-venus-mars",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "hide-line-1" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(_vm.searchData[index].gender)
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm._m(1, true),
+                                    _vm._v(" "),
+                                    _c("li", { staticClass: "mt-1" }, [
+                                      _c("i", {
+                                        staticClass:
+                                          "fas fa-envelope-open-text",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "hide-line-1" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.searchData[index].experience
+                                            ) + " Years"
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "li",
+                                      { staticClass: "mt-1" },
+                                      [
+                                        _c("i", {
+                                          staticClass: "fas fa-user-cog",
+                                        }),
+                                        _vm._v(" "),
+                                        _vm._l(
+                                          _vm.searchData[index]
+                                            .candidate_skills,
+                                          function (skills, index) {
+                                            return _c(
+                                              "div",
+                                              {
+                                                key: index,
+                                                staticClass: "hide-line-1",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  _vm._s(skills.name) + ","
+                                                ),
+                                              ]
+                                            )
+                                          }
+                                        ),
+                                      ],
+                                      2
+                                    ),
+                                    _vm._v(" "),
+                                    _c("li", { staticClass: "mt-1" }, [
+                                      _c("i", {
+                                        staticClass: "fas fa-map-marker-alt",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "hide-line-1" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(_vm.searchData[index].city)
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "ul",
+                                  { staticClass: "candidate-list-fav" },
+                                  [
+                                    _c(
+                                      "li",
+                                      { staticClass: "w-100" },
+                                      [
+                                        _c(
+                                          "router-link",
+                                          {
+                                            staticClass: "job-view-btn",
+                                            attrs: {
+                                              "data-toggle": "collapse",
+                                              to: {
+                                                name: "CandidateDetail",
+                                                params: {
+                                                  id: _vm.searchData[index].id,
+                                                },
+                                              },
+                                            },
+                                          },
+                                          [_vm._v("View Profile")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _vm._m(2, true),
+                                  ]
                                 ),
                               ]
                             ),
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "p",
-                            { staticClass: "candidate-description my-1" },
-                            [_vm._v(_vm._s(item.bio))]
-                          ),
-                          _vm._v(" "),
-                          _c("ul", { staticClass: "candidate-list-meta" }, [
-                            _c("li", [
-                              _c("i", { staticClass: "fas fa-venus-mars" }),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "hide-line-1" }, [
-                                _vm._v(_vm._s(item.gender)),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _vm._m(1, true),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "mt-1" }, [
-                              _c("i", {
-                                staticClass: "fas fa-envelope-open-text",
-                              }),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "hide-line-1" }, [
-                                _vm._v(_vm._s(item.experience) + " Years"),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "li",
-                              { staticClass: "mt-1" },
-                              [
-                                _c("i", { staticClass: "fas fa-user-cog" }),
-                                _vm._v(" "),
-                                _vm._l(
-                                  item.candidate_skills,
-                                  function (skills, index) {
-                                    return _c(
-                                      "div",
-                                      {
-                                        key: index,
-                                        staticClass: "hide-line-1",
-                                      },
-                                      [_vm._v(_vm._s(skills.name) + ",")]
-                                    )
-                                  }
-                                ),
-                              ],
-                              2
-                            ),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "mt-1" }, [
-                              _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "hide-line-1" }, [
-                                _vm._v(_vm._s(item.city)),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("ul", { staticClass: "candidate-list-fav" }, [
-                            _c(
-                              "li",
-                              { staticClass: "w-100" },
-                              [
-                                _c(
-                                  "router-link",
-                                  {
-                                    staticClass: "job-view-btn",
-                                    attrs: {
-                                      "data-toggle": "collapse",
-                                      to: {
-                                        name: "CandidateDetail",
-                                        params: { id: item.id },
-                                      },
-                                    },
-                                  },
-                                  [_vm._v("View Profile")]
-                                ),
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _vm._m(2, true),
-                          ]),
-                        ]),
-                      ]
-                    )
+                          ]
+                        )
+                      : _vm._e()
                   }),
                   0
                 ),
@@ -39908,17 +39322,25 @@ var render = function () {
             ]),
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "bottom-pagination" },
-            [
-              _c("pagination", {
-                attrs: { data: _vm.searchData },
-                on: { "pagination-change-page": _vm.getCandidate },
-              }),
-            ],
-            1
-          ),
+          _vm.searchData.length
+            ? _c("div", { staticClass: "text-center" }, [
+                _vm.searchData.length != _vm.candidateToShow &&
+                _vm.totalcandidates > _vm.candidateToShow
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "load-more-btn mx-auto",
+                        on: {
+                          click: function ($event) {
+                            _vm.candidateToShow += 3
+                          },
+                        },
+                      },
+                      [_vm._v("Load more")]
+                    )
+                  : _vm._e(),
+              ])
+            : _vm._e(),
         ]),
         _vm._v(" "),
         _vm._m(3),
@@ -42291,6 +41713,29 @@ var render = function () {
                                     attrs: {
                                       to: {
                                         name: "JobDetail",
+                                        params: { id: item.id },
+                                      },
+                                      "data-toggle": "collapse",
+                                    },
+                                  },
+                                  [_c("i", { staticClass: "fas fa-eye" })]
+                                )
+                              : _vm._e(),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          [
+                            !item.deleted_at
+                              ? _c(
+                                  "router-link",
+                                  {
+                                    staticClass: "job-post-ions",
+                                    attrs: {
+                                      to: {
+                                        name: "JobAppliedCandidates",
                                         params: { id: item.id },
                                       },
                                       "data-toggle": "collapse",
@@ -47049,1735 +46494,146 @@ var render = function () {
       _vm._v(" "),
       _c("CompanyNavbar"),
       _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
       _c(
         "div",
         {
-          staticClass: "modal fade PostNewJobModal",
-          attrs: {
-            id: "PostNewJobModal",
-            tabindex: "-1",
-            role: "dialog",
-            "aria-labelledby": "myLargeModalLabel",
-            "aria-hidden": "true",
-          },
+          staticClass:
+            "container cont-flex user-profile-container PostJobContainer",
         },
         [
-          _c(
-            "div",
-            { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
-            [
-              _c("form", { attrs: { id: "formData" } }, [
-                _c("div", { staticClass: "modal-content p-0" }, [
-                  _c("div", { staticClass: "container editModel pb-5" }, [
-                    _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
-                    _vm._v(" "),
-                    _c(
-                      "section",
-                      { staticClass: "modelForm container p-0 p-md-2" },
+          _c("div", { staticClass: "condition-search-feilds" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "candidate" }, [
+              _c("label", { staticClass: "candidate-tagline" }, [
+                _vm._v("\n                    Candidates\n                "),
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c(
+                  "div",
+                  {
+                    staticClass: "job-list-wrap",
+                    staticStyle: { padding: "10px" },
+                  },
+                  _vm._l(_vm.data, function (item, index) {
+                    return _c(
+                      "div",
+                      {
+                        key: index,
+                        staticClass: "row m-0 justify-content-center",
+                      },
                       [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "row no-gutters",
-                            attrs: { id: "subFormFieldsContainer" },
-                          },
-                          [
-                            _c("div", { staticClass: "col-12" }, [
+                        _c("div", { staticClass: "candidate-single" }, [
+                          _c("div", { staticClass: "candidate-list-content" }, [
+                            _c("div", { staticClass: "candidate-image" }, [
+                              _c("div", {
+                                staticClass: "candidate-photo",
+                                style: {
+                                  "background-image":
+                                    "url(/storage/images/candidates/" +
+                                    item.candidates.profile_image +
+                                    ")",
+                                },
+                              }),
+                              _vm._v(" "),
                               _c(
                                 "div",
-                                {
-                                  staticClass: "subForm",
-                                  attrs: { id: "subForm" },
-                                },
+                                { staticClass: "candidate-header mt-2 ml-2" },
                                 [
-                                  _vm._m(1),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _vm.record.id != 0
-                                      ? _c("img", {
-                                          attrs: {
-                                            src:
-                                              "/storage/images/companies/" +
-                                              _vm.record.bannar,
-                                            height: "50",
-                                            width: "50",
-                                            alt: "Company Logo",
-                                          },
-                                        })
-                                      : _vm._e(),
-                                    _vm._v(" "),
-                                    _vm._m(2),
-                                    _vm._v(" "),
-                                    _c("input", {
-                                      ref: "bannar",
-                                      staticClass: "form-control",
-                                      staticStyle: {
-                                        padding: "4px !important",
-                                        height: "40px",
-                                      },
-                                      attrs: {
-                                        name: "bannar",
-                                        id: "bannar",
-                                        type: "file",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors.bannar != null
-                                        ? _c(
-                                            "span",
-                                            { staticClass: "text-danger" },
-                                            [
-                                              _vm._v(
-                                                "\n                                                    " +
-                                                  _vm._s(_vm.errors.bannar[0]) +
-                                                  "\n                                                "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "subFormFields" }, [
-                                    _c("div", { staticClass: "row" }, [
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(3),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value: _vm.record.job_title,
-                                                    expression:
-                                                      "record.job_title",
-                                                  },
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  type: "text",
-                                                  id: "job-title",
-                                                  name: "job_title",
-                                                  placeholder:
-                                                    "Enter Job Title",
-                                                },
-                                                domProps: {
-                                                  value: _vm.record.job_title,
-                                                },
-                                                on: {
-                                                  input: function ($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.record,
-                                                      "job_title",
-                                                      $event.target.value
-                                                    )
-                                                  },
-                                                },
-                                              }),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.job_title != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .job_title[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
+                                  _c(
+                                    "h6",
+                                    { staticClass: "candidate-name mb-0" },
+                                    [
+                                      _vm._v(
+                                        _vm._s(item.candidates.full_name) +
+                                          "Khan"
                                       ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(4),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value:
-                                                      _vm.record
-                                                        .job_designation,
-                                                    expression:
-                                                      "record.job_designation",
-                                                  },
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  type: "text",
-                                                  id: "job_designation",
-                                                  name: "job_designation",
-                                                  placeholder:
-                                                    "Enter Job Designation",
-                                                },
-                                                domProps: {
-                                                  value:
-                                                    _vm.record.job_designation,
-                                                },
-                                                on: {
-                                                  input: function ($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.record,
-                                                      "job_designation",
-                                                      $event.target.value
-                                                    )
-                                                  },
-                                                },
-                                              }),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.job_designation !=
-                                                null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .job_designation[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(5),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.record.salary_type,
-                                                      expression:
-                                                        "record.salary_type",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "salary_type",
-                                                    id: "salary_type",
-                                                  },
-                                                  on: {
-                                                    change: function ($event) {
-                                                      var $$selectedVal =
-                                                        Array.prototype.filter
-                                                          .call(
-                                                            $event.target
-                                                              .options,
-                                                            function (o) {
-                                                              return o.selected
-                                                            }
-                                                          )
-                                                          .map(function (o) {
-                                                            var val =
-                                                              "_value" in o
-                                                                ? o._value
-                                                                : o.value
-                                                            return val
-                                                          })
-                                                      _vm.$set(
-                                                        _vm.record,
-                                                        "salary_type",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    },
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Please Select",
-                                                        default: "true",
-                                                        selected: "true",
-                                                        disabled: "disabled",
-                                                      },
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "Please Select\n                                                            "
-                                                      ),
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Yearly",
-                                                      },
-                                                    },
-                                                    [_vm._v("Yearly")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Monthly",
-                                                      },
-                                                    },
-                                                    [_vm._v("Monthly")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Weekly",
-                                                      },
-                                                    },
-                                                    [_vm._v("Weekly")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Hourly",
-                                                      },
-                                                    },
-                                                    [_vm._v("Hourly")]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.salary_type != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .salary_type[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(6),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.record.salary_range,
-                                                      expression:
-                                                        "record.salary_range",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "salary_range",
-                                                    id: "salary_range",
-                                                  },
-                                                  on: {
-                                                    change: function ($event) {
-                                                      var $$selectedVal =
-                                                        Array.prototype.filter
-                                                          .call(
-                                                            $event.target
-                                                              .options,
-                                                            function (o) {
-                                                              return o.selected
-                                                            }
-                                                          )
-                                                          .map(function (o) {
-                                                            var val =
-                                                              "_value" in o
-                                                                ? o._value
-                                                                : o.value
-                                                            return val
-                                                          })
-                                                      _vm.$set(
-                                                        _vm.record,
-                                                        "salary_range",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    },
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Please Select",
-                                                        selected: "",
-                                                        disabled: "",
-                                                      },
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "Please\n                                                                Select"
-                                                      ),
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "10000-20000",
-                                                      },
-                                                    },
-                                                    [_vm._v("10000 - 20000 ")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "20000-30000",
-                                                      },
-                                                    },
-                                                    [_vm._v("20000 - 30000")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "30000-40000",
-                                                      },
-                                                    },
-                                                    [_vm._v("30000 - 40000")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "40000-50000",
-                                                      },
-                                                    },
-                                                    [_vm._v("40000 - 50000")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "50000-60000",
-                                                      },
-                                                    },
-                                                    [_vm._v("50000 - 60000")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "60000-70000",
-                                                      },
-                                                    },
-                                                    [_vm._v("60000 - 70000")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "70000-80000",
-                                                      },
-                                                    },
-                                                    [_vm._v("70000 - 80000")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "80000-90000",
-                                                      },
-                                                    },
-                                                    [_vm._v("80000 - 90000")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "90000-100000",
-                                                      },
-                                                    },
-                                                    [_vm._v("90000 - 100000")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "100000-150000",
-                                                      },
-                                                    },
-                                                    [_vm._v("100000 - 150000")]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.salary_range != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .salary_range[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(7),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value: _vm.record.shift,
-                                                      expression:
-                                                        "record.shift",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "shift",
-                                                    id: "shift",
-                                                  },
-                                                  on: {
-                                                    change: function ($event) {
-                                                      var $$selectedVal =
-                                                        Array.prototype.filter
-                                                          .call(
-                                                            $event.target
-                                                              .options,
-                                                            function (o) {
-                                                              return o.selected
-                                                            }
-                                                          )
-                                                          .map(function (o) {
-                                                            var val =
-                                                              "_value" in o
-                                                                ? o._value
-                                                                : o.value
-                                                            return val
-                                                          })
-                                                      _vm.$set(
-                                                        _vm.record,
-                                                        "shift",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    },
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Please Select",
-                                                        selected: "",
-                                                        disabled: "",
-                                                      },
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "Please\n                                                                Select"
-                                                      ),
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: { value: "Night" },
-                                                    },
-                                                    [_vm._v("Night")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Morning",
-                                                      },
-                                                    },
-                                                    [_vm._v("Morning")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Afternoon",
-                                                      },
-                                                    },
-                                                    [_vm._v("Afternoon")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Please Select",
-                                                      },
-                                                    },
-                                                    [_vm._v("Please Select")]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.shift != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .shift[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(8),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value:
-                                                      _vm.record.experience,
-                                                    expression:
-                                                      "record.experience",
-                                                  },
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  type: "number",
-                                                  placeholder:
-                                                    "Enter Experience",
-                                                  name: "experience",
-                                                },
-                                                domProps: {
-                                                  value: _vm.record.experience,
-                                                },
-                                                on: {
-                                                  input: function ($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.record,
-                                                      "experience",
-                                                      $event.target.value
-                                                    )
-                                                  },
-                                                },
-                                              }),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.experience != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .experience[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(9),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value: _vm.record.location,
-                                                    expression:
-                                                      "record.location",
-                                                  },
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  type: "text",
-                                                  id: "location",
-                                                  placeholder: "Enter Location",
-                                                  name: "location",
-                                                },
-                                                domProps: {
-                                                  value: _vm.record.location,
-                                                },
-                                                on: {
-                                                  input: function ($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.record,
-                                                      "location",
-                                                      $event.target.value
-                                                    )
-                                                  },
-                                                },
-                                              }),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.location != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .location[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(10),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.record.job_type,
-                                                      expression:
-                                                        "record.job_type",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "job_type",
-                                                    id: "job_type",
-                                                  },
-                                                  on: {
-                                                    change: function ($event) {
-                                                      var $$selectedVal =
-                                                        Array.prototype.filter
-                                                          .call(
-                                                            $event.target
-                                                              .options,
-                                                            function (o) {
-                                                              return o.selected
-                                                            }
-                                                          )
-                                                          .map(function (o) {
-                                                            var val =
-                                                              "_value" in o
-                                                                ? o._value
-                                                                : o.value
-                                                            return val
-                                                          })
-                                                      _vm.$set(
-                                                        _vm.record,
-                                                        "job_type",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    },
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Please Select",
-                                                        selected: "",
-                                                        disabled: "",
-                                                      },
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "Please\n                                                                Select"
-                                                      ),
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Full Time",
-                                                      },
-                                                    },
-                                                    [_vm._v("Full Time")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Part Time",
-                                                      },
-                                                    },
-                                                    [_vm._v("Part Time")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Internship",
-                                                      },
-                                                    },
-                                                    [_vm._v("Internship")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Permenent",
-                                                      },
-                                                    },
-                                                    [_vm._v("Permenent")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Contract",
-                                                      },
-                                                    },
-                                                    [_vm._v("Contract")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Freelance",
-                                                      },
-                                                    },
-                                                    [_vm._v("Freelance")]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.job_type != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .job_type[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Gender")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value: _vm.record.gender,
-                                                      expression:
-                                                        "record.gender",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: { name: "gender" },
-                                                  on: {
-                                                    change: function ($event) {
-                                                      var $$selectedVal =
-                                                        Array.prototype.filter
-                                                          .call(
-                                                            $event.target
-                                                              .options,
-                                                            function (o) {
-                                                              return o.selected
-                                                            }
-                                                          )
-                                                          .map(function (o) {
-                                                            var val =
-                                                              "_value" in o
-                                                                ? o._value
-                                                                : o.value
-                                                            return val
-                                                          })
-                                                      _vm.$set(
-                                                        _vm.record,
-                                                        "gender",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    },
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "",
-                                                        disabled: "",
-                                                      },
-                                                    },
-                                                    [_vm._v("select please")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        selected: "",
-                                                        value: "Male",
-                                                      },
-                                                    },
-                                                    [_vm._v("Male")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Female",
-                                                      },
-                                                    },
-                                                    [_vm._v("Female")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: { value: "Other" },
-                                                    },
-                                                    [_vm._v("Other")]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.gender != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .gender[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(11),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value:
-                                                      _vm.record
-                                                        .total_positions,
-                                                    expression:
-                                                      "record.total_positions",
-                                                  },
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  type: "number",
-                                                  id: "total_positions",
-                                                  placeholder:
-                                                    "Total Positions",
-                                                  name: "total_positions",
-                                                },
-                                                domProps: {
-                                                  value:
-                                                    _vm.record.total_positions,
-                                                },
-                                                on: {
-                                                  input: function ($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.record,
-                                                      "total_positions",
-                                                      $event.target.value
-                                                    )
-                                                  },
-                                                },
-                                              }),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.total_positions !=
-                                                null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .total_positions[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-12" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _vm._m(12),
-                                            _vm._v(" "),
-                                            _c("textarea", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value:
-                                                    _vm.record.job_description,
-                                                  expression:
-                                                    "record.job_description",
-                                                },
-                                              ],
-                                              staticClass: "form-control",
-                                              staticStyle: { height: "100px" },
-                                              attrs: {
-                                                placeholder:
-                                                  "Enter Job Description",
-                                                name: "job_description",
-                                                id: "job_description",
-                                                maxlength: _vm.max,
-                                              },
-                                              domProps: {
-                                                value:
-                                                  _vm.record.job_description,
-                                              },
-                                              on: {
-                                                input: function ($event) {
-                                                  if ($event.target.composing) {
-                                                    return
-                                                  }
-                                                  _vm.$set(
-                                                    _vm.record,
-                                                    "job_description",
-                                                    $event.target.value
-                                                  )
-                                                },
-                                              },
-                                            }),
-                                            _vm._v(" "),
-                                            _c("div", {
-                                              domProps: {
-                                                textContent: _vm._s(
-                                                  _vm.max -
-                                                    _vm.record.job_description
-                                                      .length
-                                                ),
-                                              },
-                                            }),
-                                            _vm._v(" "),
-                                            _c("small", [
-                                              _vm.errors.job_description != null
-                                                ? _c(
-                                                    "span",
-                                                    {
-                                                      staticClass:
-                                                        "text-danger",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                                                " +
-                                                          _vm._s(
-                                                            _vm.errors
-                                                              .job_description[0]
-                                                          ) +
-                                                          "\n                                                            "
-                                                      ),
-                                                    ]
-                                                  )
-                                                : _vm._e(),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-12" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _vm._m(13),
-                                            _vm._v(" "),
-                                            _c("textarea", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value:
-                                                    _vm.record
-                                                      .job_responsibilities,
-                                                  expression:
-                                                    "record.job_responsibilities",
-                                                },
-                                              ],
-                                              staticClass: "form-control",
-                                              staticStyle: { height: "100px" },
-                                              attrs: {
-                                                maxlength: "255",
-                                                placeholder:
-                                                  "Enter Job Description",
-                                                name: "job_responsibilities",
-                                                id: "job_responsibilities",
-                                              },
-                                              domProps: {
-                                                value:
-                                                  _vm.record
-                                                    .job_responsibilities,
-                                              },
-                                              on: {
-                                                input: function ($event) {
-                                                  if ($event.target.composing) {
-                                                    return
-                                                  }
-                                                  _vm.$set(
-                                                    _vm.record,
-                                                    "job_responsibilities",
-                                                    $event.target.value
-                                                  )
-                                                },
-                                              },
-                                            }),
-                                            _vm._v(" "),
-                                            _c("small", [
-                                              _vm.errors.job_responsibilities !=
-                                              null
-                                                ? _c(
-                                                    "span",
-                                                    {
-                                                      staticClass:
-                                                        "text-danger",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                                                " +
-                                                          _vm._s(
-                                                            _vm.errors
-                                                              .job_responsibilities[0]
-                                                          ) +
-                                                          "\n                                                            "
-                                                      ),
-                                                    ]
-                                                  )
-                                                : _vm._e(),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-12" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _vm._m(14),
-                                            _vm._v(" "),
-                                            _c(
-                                              "select",
-                                              {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value:
-                                                      _vm.record
-                                                        .qualification_level,
-                                                    expression:
-                                                      "record.qualification_level",
-                                                  },
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  id: "qualification_level",
-                                                  name: "qualification_level",
-                                                },
-                                                on: {
-                                                  change: function ($event) {
-                                                    var $$selectedVal =
-                                                      Array.prototype.filter
-                                                        .call(
-                                                          $event.target.options,
-                                                          function (o) {
-                                                            return o.selected
-                                                          }
-                                                        )
-                                                        .map(function (o) {
-                                                          var val =
-                                                            "_value" in o
-                                                              ? o._value
-                                                              : o.value
-                                                          return val
-                                                        })
-                                                    _vm.$set(
-                                                      _vm.record,
-                                                      "qualification_level",
-                                                      $event.target.multiple
-                                                        ? $$selectedVal
-                                                        : $$selectedVal[0]
-                                                    )
-                                                  },
-                                                },
-                                              },
-                                              [
-                                                _c(
-                                                  "option",
-                                                  {
-                                                    attrs: { value: "Metric" },
-                                                  },
-                                                  [_vm._v("Metric")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "option",
-                                                  {
-                                                    attrs: {
-                                                      value: "Intermediate",
-                                                    },
-                                                  },
-                                                  [_vm._v("Intermediate")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "option",
-                                                  {
-                                                    attrs: {
-                                                      value: "Graduation",
-                                                    },
-                                                  },
-                                                  [_vm._v("Graduation")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "option",
-                                                  {
-                                                    attrs: { value: "Masters" },
-                                                  },
-                                                  [_vm._v("Masters")]
-                                                ),
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("small", [
-                                              _vm.errors.qualification_level !=
-                                              null
-                                                ? _c(
-                                                    "span",
-                                                    {
-                                                      staticClass:
-                                                        "text-danger",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                                                " +
-                                                          _vm._s(
-                                                            _vm.errors
-                                                              .qualification_level[0]
-                                                          ) +
-                                                          "\n                                                            "
-                                                      ),
-                                                    ]
-                                                  )
-                                                : _vm._e(),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-12" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _vm._m(15),
-                                            _vm._v(" "),
-                                            _c("textarea", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.record.benefits,
-                                                  expression: "record.benefits",
-                                                },
-                                              ],
-                                              staticClass: "form-control",
-                                              staticStyle: { height: "100px" },
-                                              attrs: {
-                                                maxlength: "255",
-                                                placeholder: "Enter Benefits",
-                                                id: "benefits",
-                                                name: "benefits",
-                                              },
-                                              domProps: {
-                                                value: _vm.record.benefits,
-                                              },
-                                              on: {
-                                                input: function ($event) {
-                                                  if ($event.target.composing) {
-                                                    return
-                                                  }
-                                                  _vm.$set(
-                                                    _vm.record,
-                                                    "benefits",
-                                                    $event.target.value
-                                                  )
-                                                },
-                                              },
-                                            }),
-                                            _vm._v(" "),
-                                            _c("small", [
-                                              _vm.errors.benefits != null
-                                                ? _c(
-                                                    "span",
-                                                    {
-                                                      staticClass:
-                                                        "text-danger",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                                                " +
-                                                          _vm._s(
-                                                            _vm.errors
-                                                              .benefits[0]
-                                                          ) +
-                                                          "\n                                                            "
-                                                      ),
-                                                    ]
-                                                  )
-                                                : _vm._e(),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-12" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _vm._m(16),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.record.status,
-                                                  expression: "record.status",
-                                                },
-                                              ],
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                type: "radio",
-                                                value: "1",
-                                              },
-                                              domProps: {
-                                                checked: _vm._q(
-                                                  _vm.record.status,
-                                                  "1"
-                                                ),
-                                              },
-                                              on: {
-                                                change: function ($event) {
-                                                  return _vm.$set(
-                                                    _vm.record,
-                                                    "status",
-                                                    "1"
-                                                  )
-                                                },
-                                              },
-                                            }),
-                                            _vm._v(" "),
-                                            _vm._m(17),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.record.status,
-                                                  expression: "record.status",
-                                                },
-                                              ],
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                type: "radio",
-                                                value: "0",
-                                              },
-                                              domProps: {
-                                                checked: _vm._q(
-                                                  _vm.record.status,
-                                                  "0"
-                                                ),
-                                              },
-                                              on: {
-                                                change: function ($event) {
-                                                  return _vm.$set(
-                                                    _vm.record,
-                                                    "status",
-                                                    "0"
-                                                  )
-                                                },
-                                              },
-                                            }),
-                                            _vm._v(" "),
-                                            _c("small", [
-                                              _vm.errors.benefits != null
-                                                ? _c(
-                                                    "span",
-                                                    {
-                                                      staticClass:
-                                                        "text-danger",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                                                " +
-                                                          _vm._s(
-                                                            _vm.errors
-                                                              .benefits[0]
-                                                          ) +
-                                                          "\n                                                            "
-                                                      ),
-                                                    ]
-                                                  )
-                                                : _vm._e(),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]),
-                                    ]),
-                                  ]),
+                                    ]
+                                  ),
                                 ]
                               ),
                             ]),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row mt-4 " }, [
-                          _c(
-                            "div",
-                            { staticClass: "col-lg-12 modelBtnContainer " },
-                            [
-                              _vm.record.id == 0
-                                ? _c(
-                                    "button",
-                                    {
-                                      staticClass: "positiveBtn modelBtn mr-1",
-                                      on: {
-                                        click: function ($event) {
-                                          $event.preventDefault()
-                                          return _vm.postJob()
-                                        },
-                                      },
-                                    },
-                                    [_vm._v("Post")]
-                                  )
-                                : _c(
-                                    "button",
-                                    {
-                                      staticClass: "positiveBtn modelBtn mr-1",
-                                      on: {
-                                        click: function ($event) {
-                                          $event.preventDefault()
-                                          return _vm.updatePostJob()
-                                        },
-                                      },
-                                    },
-                                    [_vm._v("Update")]
-                                  ),
+                            _vm._v(" "),
+                            _c(
+                              "p",
+                              { staticClass: "candidate-description my-1" },
+                              [_vm._v(_vm._s(item.candidates.bio))]
+                            ),
+                            _vm._v(" "),
+                            _c("ul", { staticClass: "candidate-list-meta" }, [
+                              _c("li", [
+                                _c("i", { staticClass: "fas fa-venus-mars" }),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "hide-line-1" }, [
+                                  _vm._v(_vm._s(item.candidates.gender)),
+                                ]),
+                              ]),
                               _vm._v(" "),
+                              _vm._m(2, true),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "mt-1" }, [
+                                _c("i", {
+                                  staticClass: "fas fa-envelope-open-text",
+                                }),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "hide-line-1" }, [
+                                  _vm._v(_vm._s(item.candidates.experience)),
+                                ]),
+                              ]),
+                              _vm._v(" "),
+                              _vm._m(3, true),
+                              _vm._v(" "),
+                              _c("li", { staticClass: "mt-1" }, [
+                                _c("i", {
+                                  staticClass: "fas fa-map-marker-alt",
+                                }),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "hide-line-1" }, [
+                                  _vm._v(_vm._s(item.candidates.city)),
+                                ]),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c("ul", { staticClass: "candidate-list-fav" }, [
                               _c(
-                                "button",
-                                {
-                                  staticClass: "negativeBtn modelBtn ml-1",
-                                  attrs: { "data-dismiss": "modal" },
-                                  on: {
-                                    click: function ($event) {
-                                      return _vm.clearRecord()
+                                "li",
+                                { staticClass: "w-100" },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass: "job-view-btn",
+                                      attrs: {
+                                        "data-toggle": "collapse",
+                                        to: {
+                                          name: "CandidateDetail",
+                                          params: { id: item.candidates.id },
+                                        },
+                                      },
                                     },
-                                  },
-                                },
-                                [_vm._v("Cancel")]
+                                    [_vm._v("View Profile")]
+                                  ),
+                                ],
+                                1
                               ),
-                            ]
-                          ),
+                              _vm._v(" "),
+                              _vm._m(4, true),
+                            ]),
+                          ]),
                         ]),
                       ]
-                    ),
-                  ]),
-                ]),
+                    )
+                  }),
+                  0
+                ),
               ]),
-            ]
-          ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _vm._m(5),
         ]
       ),
     ],
@@ -48789,906 +46645,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "container cont-flex user-profile-container PostJobContainer",
-      },
-      [
-        _c("div", { staticClass: "condition-search-feilds" }, [
-          _c("div", [
-            _c("h1", { staticClass: "post_new_job_title" }, [
-              _vm._v("Job Applied Candidates"),
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "post_new_job_descrp" }, [
-              _vm._v(
-                "\n                    To add more jobs in your company profile, Please click the Add more jobs button and after that\n                    form\n                    will appear in front of you and you have to fill this form with all the necessary requirements\n                    and\n                    then click on update, your job will be posted in your company dashboard.\n                "
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "post_new_job_anker" }, [
-            _c("div"),
-            _vm._v(" "),
-            _c("p", [_vm._v("Showing 5 results of 123,456 jobs")]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "candidate" }, [
-            _c("label", { staticClass: "candidate-tagline" }, [
-              _vm._v("\n                    Candidates\n                "),
-            ]),
-            _vm._v(" "),
-            _c("div", [
-              _c(
-                "div",
-                {
-                  staticClass: "job-list-wrap",
-                  staticStyle: { padding: "10px" },
-                },
-                [
-                  _c("div", { staticClass: "row m-0 justify-content-center" }, [
-                    _c("div", { staticClass: "candidate-single" }, [
-                      _c("div", { staticClass: "candidate-list-content" }, [
-                        _c("div", { staticClass: "candidate-image" }, [
-                          _c("div", {
-                            staticClass: "candidate-photo",
-                            staticStyle: { backgroundImage: "url('')" },
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "candidate-header mt-2 ml-2" },
-                            [
-                              _c("h6", { staticClass: "candidate-name mb-0" }, [
-                                _vm._v("Sameena Khan"),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "candidate-description my-1" }, [
-                          _vm._v(
-                            "My name is Sameena Khan and I am graduated from university of..."
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("ul", { staticClass: "candidate-list-meta" }, [
-                          _c("li", [
-                            _c("i", { staticClass: "fas fa-venus-mars" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("Female"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", { staticClass: "fas fa-graduation-cap" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("BSSE"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", {
-                              staticClass: "fas fa-envelope-open-text",
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("2 Years"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", { staticClass: "fas fa-user-cog" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("HTML,Bootstrap,CSS,Node JS"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("Lahore"),
-                            ]),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("ul", { staticClass: "candidate-list-fav" }, [
-                          _c("li", { staticClass: "w-100" }, [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "candidate-view-btn w-100",
-                                attrs: { href: "#" },
-                              },
-                              [
-                                _vm._v(
-                                  "View\n                                                Profile"
-                                ),
-                              ]
-                            ),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "candidate-wishlist-btn ml-2 ",
-                                attrs: { href: "#" },
-                              },
-                              [_c("i", { staticClass: "far fa-heart" })]
-                            ),
-                          ]),
-                        ]),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "candidate-single" }, [
-                      _c("div", { staticClass: "candidate-list-content" }, [
-                        _c("div", { staticClass: "candidate-image" }, [
-                          _c("div", {
-                            staticClass: "candidate-photo",
-                            staticStyle: { backgroundImage: "url('')" },
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "candidate-header mt-2 ml-2" },
-                            [
-                              _c("h6", { staticClass: "candidate-name mb-0" }, [
-                                _vm._v("Sameena Khan"),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "candidate-description my-1" }, [
-                          _vm._v(
-                            "My name is Sameena Khan and I am graduated from university of..."
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("ul", { staticClass: "candidate-list-meta" }, [
-                          _c("li", [
-                            _c("i", { staticClass: "fas fa-venus-mars" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("Female"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", { staticClass: "fas fa-graduation-cap" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("BSSE"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", {
-                              staticClass: "fas fa-envelope-open-text",
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("2 Years"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", { staticClass: "fas fa-user-cog" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("HTML,Bootstrap,CSS,Node JS"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("Lahore"),
-                            ]),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("ul", { staticClass: "candidate-list-fav" }, [
-                          _c("li", { staticClass: "w-100" }, [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "candidate-view-btn w-100",
-                                attrs: { href: "#" },
-                              },
-                              [
-                                _vm._v(
-                                  "View\n                                                Profile"
-                                ),
-                              ]
-                            ),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "candidate-wishlist-btn ml-2 ",
-                                attrs: { href: "#" },
-                              },
-                              [_c("i", { staticClass: "far fa-heart" })]
-                            ),
-                          ]),
-                        ]),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "candidate-single" }, [
-                      _c("div", { staticClass: "candidate-list-content" }, [
-                        _c("div", { staticClass: "candidate-image" }, [
-                          _c("div", {
-                            staticClass: "candidate-photo",
-                            staticStyle: { backgroundImage: "url('')" },
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "candidate-header mt-2 ml-2" },
-                            [
-                              _c("h6", { staticClass: "candidate-name mb-0" }, [
-                                _vm._v("Sameena Khan"),
-                              ]),
-                            ]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "candidate-description my-1" }, [
-                          _vm._v(
-                            "My name is Sameena Khan and I am graduated from university of..."
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("ul", { staticClass: "candidate-list-meta" }, [
-                          _c("li", [
-                            _c("i", { staticClass: "fas fa-venus-mars" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("Female"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", { staticClass: "fas fa-graduation-cap" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("BSSE"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", {
-                              staticClass: "fas fa-envelope-open-text",
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("2 Years"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", { staticClass: "fas fa-user-cog" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("HTML,Bootstrap,CSS,Node JS"),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { staticClass: "mt-1" }, [
-                            _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "hide-line-1" }, [
-                              _vm._v("Lahore"),
-                            ]),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("ul", { staticClass: "candidate-list-fav" }, [
-                          _c("li", { staticClass: "w-100" }, [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "candidate-view-btn w-100",
-                                attrs: { href: "#" },
-                              },
-                              [
-                                _vm._v(
-                                  "View\n                                                Profile"
-                                ),
-                              ]
-                            ),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "candidate-wishlist-btn ml-2 ",
-                                attrs: { href: "#" },
-                              },
-                              [_c("i", { staticClass: "far fa-heart" })]
-                            ),
-                          ]),
-                        ]),
-                      ]),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "common-sidebar" }, [
-          _c("br"),
-          _c("br"),
-          _vm._v(" "),
-          _c("div", { staticClass: "col p-0 p-md-2" }, [
-            _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-              _c(
-                "div",
-                { staticClass: "side-card-title text-center text-white" },
-                [_vm._v("For Queries")]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "side-card-body" }, [
-                _c("p", { staticClass: "card-title" }, [
-                  _vm._v(
-                    "If you have any further queries, please contact us without any\n                            hesitation."
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("ul", { staticClass: "social-btns center-block" }, [
-                  _c("li", [
-                    _c("button", { staticClass: "btn btn-whatsapp" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/website/assets/images/whatsapp-quaries.svg",
-                        },
-                      }),
-                      _c("span", [
-                        _vm._v(
-                          "+92 306 404\n                                        1221"
-                        ),
-                      ]),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("button", { staticClass: "btn btn-facebook" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/website/assets/images/facebook-quaries.svg",
-                        },
-                      }),
-                      _c("span", [_vm._v("@BizBlanca")]),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("button", { staticClass: "btn btn-linkedin" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/website/assets/images/linkdine-quaries.svg",
-                        },
-                      }),
-                      _c("span", [_vm._v("@BizBlanca")]),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("button", { staticClass: "btn btn-google" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/website/assets/images/gmail-quaries.svg",
-                        },
-                      }),
-                      _c("span", [_vm._v("bizer@bizblanca.com")]),
-                    ]),
-                  ]),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "divider" }, [_c("hr")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-              _c(
-                "div",
-                { staticClass: "side-card-title text-center text-white" },
-                [_vm._v("New Govt Jobs")]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "side-govtjobcard-body " }, [
-                _c("div", { staticClass: "gov-job-box" }, [
-                  _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "govt-job-list-content col px-2" }, [
-                    _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "mb-2" }, [
-                      _vm._v(
-                        "If you have any further queries, please contact us without any\n                                    hesitation."
-                      ),
-                    ]),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "gov-job-box" }, [
-                  _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "govt-job-list-content col px-2" }, [
-                    _c("h6", [_vm._v("Incharge Information Center")]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "mb-2" }, [
-                      _vm._v(
-                        "If you have any further queries, please contact us without any\n                                    hesitation."
-                      ),
-                    ]),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "gov-job-box" }, [
-                  _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "govt-job-list-content col px-2" }, [
-                    _c("h6", [_vm._v("Education Department KPK")]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "mb-2" }, [
-                      _vm._v(
-                        "If you have any further queries, please contact us without any\n                                    hesitation."
-                      ),
-                    ]),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "gov-job-box" }, [
-                  _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "govt-job-list-content col px-2" }, [
-                    _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "mb-2" }, [
-                      _vm._v(
-                        "If you have any further queries, please contact us without any\n                                    hesitation."
-                      ),
-                    ]),
-                  ]),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "divider" }, [_c("hr")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-              _c(
-                "div",
-                { staticClass: "side-card-title text-center text-white" },
-                [_vm._v("Top Rizer's Ranking")]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "side-card-body" }, [
-                _c("div", { staticClass: "swiper bizer-ranking-slider" }, [
-                  _c("div", { staticClass: "swiper-wrapper" }, [
-                    _c("div", { staticClass: "swiper-slide" }, [
-                      _c("div", { staticClass: "wrapper" }, [
-                        _c("div", { staticClass: "profile" }, [
-                          _c("img", {
-                            staticClass: "thumbnail",
-                            attrs: {
-                              src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                            },
-                          }),
-                        ]),
-                        _vm._v(" "),
-                        _c("h3", { staticClass: "name" }, [
-                          _vm._v("Natasha Anjum"),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "title" }, [
-                          _vm._v("Laravel Developer"),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "position-box" }, [
-                          _c("img", {
-                            attrs: {
-                              src: "/website/assets/images/position-crown.svg",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("h3", { staticClass: "position-number" }, [
-                            _vm._v("1st"),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "description" }, [
-                          _vm._v(
-                            "I have learned a lot of things in my life but to be a\n                                            Laravel developer has changed my life."
-                          ),
-                        ]),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "swiper-slide" }, [
-                      _c("div", { staticClass: "wrapper" }, [
-                        _c("div", { staticClass: "profile" }, [
-                          _c("img", {
-                            staticClass: "thumbnail",
-                            attrs: {
-                              src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                            },
-                          }),
-                        ]),
-                        _vm._v(" "),
-                        _c("h3", { staticClass: "name" }, [
-                          _vm._v("Natasha Anjum"),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "title" }, [
-                          _vm._v("Laravel Developer"),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "position-box" }, [
-                          _c("img", {
-                            attrs: {
-                              src: "/website/assets/images/position-crown.svg",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("h3", { staticClass: "position-number" }, [
-                            _vm._v("2nd"),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "description" }, [
-                          _vm._v(
-                            "I have learned a lot of things in my life but to be a\n                                            Laravel developer has changed my life."
-                          ),
-                        ]),
-                      ]),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "swiper-pagination" }),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "divider" }, [_c("hr")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-              _c(
-                "div",
-                { staticClass: "side-card-title text-center text-white" },
-                [_vm._v("FAQS")]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "side-card-body" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "accordion-faq",
-                    attrs: { id: "accordionExample" },
-                  },
-                  [
-                    _c("div", { staticClass: "faq-card" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "faq-card-header",
-                          attrs: { id: "headingOne" },
-                        },
-                        [
-                          _c("h5", { staticClass: "mb-0" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-block text-left faq-btn",
-                                attrs: {
-                                  type: "button",
-                                  "data-toggle": "collapse",
-                                  "data-target": "#collapseOne",
-                                  "aria-expanded": "true",
-                                  "aria-controls": "collapseOne",
-                                },
-                              },
-                              [
-                                _c("i", {
-                                  staticClass: "fa fa-caret-right mr-2",
-                                }),
-                                _vm._v("Q. What is BizBlanca?"),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "collapse fade",
-                          attrs: {
-                            id: "collapseOne",
-                            "aria-labelledby": "headingOne",
-                            "data-parent": "#accordionExample",
-                          },
-                        },
-                        [
-                          _c("div", { staticClass: "faq-card-body" }, [
-                            _vm._v(
-                              "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "faq-card" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "faq-card-header",
-                          attrs: { id: "headingTwo" },
-                        },
-                        [
-                          _c("h5", { staticClass: "mb-0" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn  collapsed btn-block text-left faq-btn",
-                                attrs: {
-                                  type: "button",
-                                  "data-toggle": "collapse",
-                                  "data-target": "#collapseTwo",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapseTwo",
-                                },
-                              },
-                              [
-                                _c("i", {
-                                  staticClass: "fa fa-caret-right mr-2",
-                                }),
-                                _vm._v(
-                                  "Q. How BizBlanca works?\n                                        "
-                                ),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "collapse fade",
-                          attrs: {
-                            id: "collapseTwo",
-                            "aria-labelledby": "headingTwo",
-                            "data-parent": "#accordionExample",
-                          },
-                        },
-                        [
-                          _c("div", { staticClass: "faq-card-body" }, [
-                            _vm._v(
-                              "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "faq-card" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "faq-card-header",
-                          attrs: { id: "headingTwo" },
-                        },
-                        [
-                          _c("h5", { staticClass: "mb-0" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn  collapsed btn-block text-left faq-btn",
-                                attrs: {
-                                  type: "button",
-                                  "data-toggle": "collapse",
-                                  "data-target": "#collapseTwo",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapseTwo",
-                                },
-                              },
-                              [
-                                _c("i", {
-                                  staticClass: "fa fa-caret-right mr-2",
-                                }),
-                                _vm._v(
-                                  "Q. What is BizBlanca mission?\n                                        "
-                                ),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "collapse fade",
-                          attrs: {
-                            id: "collapseTwo",
-                            "aria-labelledby": "headingTwo",
-                            "data-parent": "#accordionExample",
-                          },
-                        },
-                        [
-                          _c("div", { staticClass: "faq-card-body" }, [
-                            _vm._v(
-                              "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "faq-card" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "faq-card-header",
-                          attrs: { id: "headingTwo" },
-                        },
-                        [
-                          _c("h5", { staticClass: "mb-0" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn  collapsed btn-block text-left faq-btn",
-                                attrs: {
-                                  type: "button",
-                                  "data-toggle": "collapse",
-                                  "data-target": "#collapseTwo",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapseTwo",
-                                },
-                              },
-                              [
-                                _c("i", {
-                                  staticClass: "fa fa-caret-right mr-2",
-                                }),
-                                _vm._v(
-                                  "Q. Why BizBlanca?\n                                        "
-                                ),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "collapse fade",
-                          attrs: {
-                            id: "collapseTwo",
-                            "aria-labelledby": "headingTwo",
-                            "data-parent": "#accordionExample",
-                          },
-                        },
-                        [
-                          _c("div", { staticClass: "faq-card-body" }, [
-                            _vm._v(
-                              "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]),
-                  ]
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "divider" }, [_c("hr")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
-              _c(
-                "div",
-                { staticClass: "side-card-title text-center text-white" },
-                [_vm._v("Ads")]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "ads-side-card-body" }, [
-                _c("div", { staticClass: "swiper ads-slider" }, [
-                  _c("div", { staticClass: "swiper-wrapper" }, [
-                    _c("div", { staticClass: "swiper-slide" }, [
-                      _c("img", {
-                        staticClass: "ads-img",
-                        attrs: {
-                          src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                        },
-                      }),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "swiper-slide" }, [
-                      _c("img", {
-                        staticClass: "ads-img",
-                        attrs: {
-                          src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                        },
-                      }),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "swiper-slide" }, [
-                      _c("img", {
-                        staticClass: "ads-img",
-                        attrs: {
-                          src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
-                        },
-                      }),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "swiper-button-next" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "swiper-button-prev" }),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", [
+      _c("h1", { staticClass: "post_new_job_title" }, [
+        _vm._v("Job Applied Candidates"),
+      ]),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [
-        _vm._v("Add more Jobs"),
+      _c("p", { staticClass: "post_new_job_descrp" }, [
+        _vm._v(
+          "\n                    To add more jobs in your company profile, Please click the Add more jobs button and after that\n                    form\n                    will appear in front of you and you have to fill this form with all the necessary requirements\n                    and\n                    then click on update, your job will be posted in your company dashboard.\n                "
+        ),
       ]),
     ])
   },
@@ -49696,19 +46661,43 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "bannar" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(" Banner"),
+    return _c("div", { staticClass: "post_new_job_anker" }, [
+      _c("div"),
+      _vm._v(" "),
+      _c("p", [_vm._v("Showing 5 results of 123,456 jobs")]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "job-title" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        "\n                                                            Job Title"
+    return _c("li", { staticClass: "mt-1" }, [
+      _c("i", { staticClass: "fas fa-graduation-cap" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "hide-line-1" }, [_vm._v("BSSE")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mt-1" }, [
+      _c("i", { staticClass: "fas fa-user-cog" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "hide-line-1" }, [
+        _vm._v("HTML,Bootstrap,CSS,Node JS"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        { staticClass: "candidate-wishlist-btn ml-2 ", attrs: { href: "#" } },
+        [_c("i", { staticClass: "far fa-heart" })]
       ),
     ])
   },
@@ -49716,144 +46705,530 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "job_designation" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        " Job\n                                                            Designation"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "salary_type" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(" Salary Type"),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "salary_range" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(" Salary Range"),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "shift" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        "\n                                                            Shift"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "" } }, [
-      _vm._v("Experience"),
-      _c("small", [_vm._v(" in years")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "location" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        "\n                                                            Location"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "job_type" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        "\n                                                            Job Type"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "total_positions" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        " Total\n                                                            Positions"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "job_description" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        " Job\n                                                            Description"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "job_responsibilities" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        " Job\n                                                            Responsibilities"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "qualification_level" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        " Qualifications &\n                                                            Technicalities"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "benefits" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        "\n                                                            Benefits"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "benefits" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v("Active"),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "benefits" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v("Inactive"),
+    return _c("div", { staticClass: "common-sidebar" }, [
+      _c("br"),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "col p-0 p-md-2" }, [
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("For Queries"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card-body" }, [
+            _c("p", { staticClass: "card-title" }, [
+              _vm._v(
+                "If you have any further queries, please contact us without any\n                            hesitation."
+              ),
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "social-btns center-block" }, [
+              _c("li", [
+                _c("button", { staticClass: "btn btn-whatsapp" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/website/assets/images/whatsapp-quaries.svg",
+                    },
+                  }),
+                  _c("span", [
+                    _vm._v(
+                      "+92 306 404\n                                        1221"
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("button", { staticClass: "btn btn-facebook" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/website/assets/images/facebook-quaries.svg",
+                    },
+                  }),
+                  _c("span", [_vm._v("@BizBlanca")]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("button", { staticClass: "btn btn-linkedin" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/website/assets/images/linkdine-quaries.svg",
+                    },
+                  }),
+                  _c("span", [_vm._v("@BizBlanca")]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("button", { staticClass: "btn btn-google" }, [
+                  _c("img", {
+                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
+                  }),
+                  _c("span", [_vm._v("bizer@bizblanca.com")]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }, [_c("hr")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("New Govt Jobs"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-govtjobcard-body " }, [
+            _c("div", { staticClass: "gov-job-box" }, [
+              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-2" }, [
+                  _vm._v(
+                    "If you have any further queries, please contact us without any\n                                    hesitation."
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "gov-job-box" }, [
+              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                _c("h6", [_vm._v("Incharge Information Center")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-2" }, [
+                  _vm._v(
+                    "If you have any further queries, please contact us without any\n                                    hesitation."
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "gov-job-box" }, [
+              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                _c("h6", [_vm._v("Education Department KPK")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-2" }, [
+                  _vm._v(
+                    "If you have any further queries, please contact us without any\n                                    hesitation."
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "gov-job-box" }, [
+              _c("div", { staticClass: "govt-job-img col-auto p-0" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "govt-job-list-content col px-2" }, [
+                _c("h6", [_vm._v("BOP Galaxy Management Trainee Program")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-2" }, [
+                  _vm._v(
+                    "If you have any further queries, please contact us without any\n                                    hesitation."
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }, [_c("hr")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("Top Rizer's Ranking"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card-body" }, [
+            _c("div", { staticClass: "swiper bizer-ranking-slider" }, [
+              _c("div", { staticClass: "swiper-wrapper" }, [
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("div", { staticClass: "wrapper" }, [
+                    _c("div", { staticClass: "profile" }, [
+                      _c("img", {
+                        staticClass: "thumbnail",
+                        attrs: {
+                          src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("h3", { staticClass: "name" }, [
+                      _vm._v("Natasha Anjum"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "title" }, [
+                      _vm._v("Laravel Developer"),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "position-box" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/website/assets/images/position-crown.svg",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "position-number" }, [
+                        _vm._v("1st"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "description" }, [
+                      _vm._v(
+                        "I have learned a lot of things in my life but to be a\n                                            Laravel developer has changed my life."
+                      ),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("div", { staticClass: "wrapper" }, [
+                    _c("div", { staticClass: "profile" }, [
+                      _c("img", {
+                        staticClass: "thumbnail",
+                        attrs: {
+                          src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("h3", { staticClass: "name" }, [
+                      _vm._v("Natasha Anjum"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "title" }, [
+                      _vm._v("Laravel Developer"),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "position-box" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/website/assets/images/position-crown.svg",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("h3", { staticClass: "position-number" }, [
+                        _vm._v("2nd"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "description" }, [
+                      _vm._v(
+                        "I have learned a lot of things in my life but to be a\n                                            Laravel developer has changed my life."
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-pagination" }),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }, [_c("hr")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("FAQS"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-card-body" }, [
+            _c(
+              "div",
+              {
+                staticClass: "accordion-faq",
+                attrs: { id: "accordionExample" },
+              },
+              [
+                _c("div", { staticClass: "faq-card" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "faq-card-header",
+                      attrs: { id: "headingOne" },
+                    },
+                    [
+                      _c("h5", { staticClass: "mb-0" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-block text-left faq-btn",
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "collapse",
+                              "data-target": "#collapseOne",
+                              "aria-expanded": "true",
+                              "aria-controls": "collapseOne",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
+                            _vm._v("Q. What is BizBlanca?"),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapse fade",
+                      attrs: {
+                        id: "collapseOne",
+                        "aria-labelledby": "headingOne",
+                        "data-parent": "#accordionExample",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "faq-card-body" }, [
+                        _vm._v(
+                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "faq-card" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "faq-card-header",
+                      attrs: { id: "headingTwo" },
+                    },
+                    [
+                      _c("h5", { staticClass: "mb-0" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "btn  collapsed btn-block text-left faq-btn",
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "collapse",
+                              "data-target": "#collapseTwo",
+                              "aria-expanded": "false",
+                              "aria-controls": "collapseTwo",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
+                            _vm._v(
+                              "Q. How BizBlanca works?\n                                        "
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapse fade",
+                      attrs: {
+                        id: "collapseTwo",
+                        "aria-labelledby": "headingTwo",
+                        "data-parent": "#accordionExample",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "faq-card-body" }, [
+                        _vm._v(
+                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "faq-card" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "faq-card-header",
+                      attrs: { id: "headingTwo" },
+                    },
+                    [
+                      _c("h5", { staticClass: "mb-0" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "btn  collapsed btn-block text-left faq-btn",
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "collapse",
+                              "data-target": "#collapseTwo",
+                              "aria-expanded": "false",
+                              "aria-controls": "collapseTwo",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
+                            _vm._v(
+                              "Q. What is BizBlanca mission?\n                                        "
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapse fade",
+                      attrs: {
+                        id: "collapseTwo",
+                        "aria-labelledby": "headingTwo",
+                        "data-parent": "#accordionExample",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "faq-card-body" }, [
+                        _vm._v(
+                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "faq-card" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "faq-card-header",
+                      attrs: { id: "headingTwo" },
+                    },
+                    [
+                      _c("h5", { staticClass: "mb-0" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "btn  collapsed btn-block text-left faq-btn",
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "collapse",
+                              "data-target": "#collapseTwo",
+                              "aria-expanded": "false",
+                              "aria-controls": "collapseTwo",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: "fa fa-caret-right mr-2" }),
+                            _vm._v(
+                              "Q. Why BizBlanca?\n                                        "
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "collapse fade",
+                      attrs: {
+                        id: "collapseTwo",
+                        "aria-labelledby": "headingTwo",
+                        "data-parent": "#accordionExample",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "faq-card-body" }, [
+                        _vm._v(
+                          "\n                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n                                        Lorem Ipsum has been the industry's standard dummy text ever since the\n                                        1500s,\n                                    "
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "divider" }, [_c("hr")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "side-card h-300 shadow-sm" }, [
+          _c("div", { staticClass: "side-card-title text-center text-white" }, [
+            _vm._v("Ads"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "ads-side-card-body" }, [
+            _c("div", { staticClass: "swiper ads-slider" }, [
+              _c("div", { staticClass: "swiper-wrapper" }, [
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("img", {
+                    staticClass: "ads-img",
+                    attrs: {
+                      src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("img", {
+                    staticClass: "ads-img",
+                    attrs: {
+                      src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "swiper-slide" }, [
+                  _c("img", {
+                    staticClass: "ads-img",
+                    attrs: {
+                      src: "https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w",
+                    },
+                  }),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-button-next" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "swiper-button-prev" }),
+            ]),
+          ]),
+        ]),
+      ]),
     ])
   },
 ]
@@ -71450,7 +68825,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
+module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 
