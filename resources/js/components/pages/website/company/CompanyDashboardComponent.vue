@@ -3,23 +3,62 @@
         <WebsiteNavbar />
         <CompanyNavbar />
 
-        <div class="container user-profile-container cont-flex">
+        <div class="container user-profile-container cont-flex p-0">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
                     <div>
                         <input class="product_accordion" type="checkbox" name="accordion" id="first" checked>
                         <label class="search-box-h" for="first">
-                            Condition Search
-                            <span class="chevron">
+                            Message
+                            <!-- <span class="chevron">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round">
                                     <polyline points="6 9 12 15 18 9"></polyline>
                                 </svg>
-                            </span>
+                            </span> -->
+                            <i class="far fa-comment-alt"></i>
                         </label>
-                        <h1>company dashboard under development waiting for abdullah Xd</h1>
                     </div>
+                    <div class="dashboard-msgs-container">
+                        <div class="msg-wrap">
+                            <div class="msg-user-name">
+                                <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
+                                <p class="msg-time-date">10/08/2021, 09:10 am</p>
+                            </div>
+                            <router-link to="/company-dashboard" class="msg-title">
+                                JOB FOR MERN STACK DEVELOPER
+                            </router-link>
+                            <p class="msg-description">
+                                Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I have expertise in...
+                            </p>
+                        </div>
+                        <div class="msg-wrap">
+                            <div class="msg-user-name">
+                                <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
+                                <p class="msg-time-date">10/08/2021, 09:10 am</p>
+                            </div>
+                            <router-link to="/company-dashboard" class="msg-title">
+                                JOB FOR MERN STACK DEVELOPER
+                            </router-link>
+                            <p class="msg-description">
+                                Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I have expertise in...
+                            </p>
+                        </div>
+                        <div class="msg-wrap">
+                            <div class="msg-user-name">
+                                <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
+                                <p class="msg-time-date">10/08/2021, 09:10 am</p>
+                            </div>
+                            <router-link to="/company-dashboard" class="msg-title">
+                                JOB FOR MERN STACK DEVELOPER
+                            </router-link>
+                            <p class="msg-description">
+                                Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I have expertise in...
+                            </p>
+                        </div>
+                    </div>
+                    
                 </div>
                 <!---- ------------------------------>
                 <!-- <div class="product-search-box">

@@ -48,7 +48,7 @@
                 <div class="job-list-wrap mt-3 p-0">
                     <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
-                    <div class="job-list"  v-if="index < searchData.length" v-for="(item, index) in companiesToShow"
+                    <div class="job-list m-0 mb-3"  v-if="index < searchData.length" v-for="(item, index) in companiesToShow"
                         :key="index">
                         <div class="company-logo col-auto py-2">
                             <img :src="'/storage/images/companies/'+searchData[index].logo" alt="Company Logo"/>
