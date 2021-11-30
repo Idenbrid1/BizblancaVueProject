@@ -4,7 +4,7 @@
         <CandidateNavbar />
 
         <div class="container user-profile-container cont-flex">
-            <div class="condition-search-feilds">
+            <div class="condition-search-feilds p-0">
                 <div class="product_accordion_container">
                     <div>
                         <input class="product_accordion" type="checkbox" name="accordion" id="first" checked>
@@ -79,7 +79,8 @@
                 </div> -->
                 <div class="candidate">
                     <label class="candidate-tagline">
-                        Candidates
+                        Recommended Jobs 
+                        <i class="fas fa-briefcase"></i>
                     </label>
                     <!-- Job List Toolbar Start -->
                     <div>
@@ -170,6 +171,111 @@
                             </div>
                             <!-- </div> -->
                         </div>
+                    </div>
+                    <div class="show-more-anker">
+                        <router-link class="show-more-common" to="/candidate-dashboard">Show more</router-link>
+                        <p class="notify-unread-msgs">You have <span>12</span> unread messages</p>
+                    </div>
+                </div>
+                <!-- whishlist -->
+                <div class="candidate">
+                    <label class="candidate-tagline">
+                        Whishlist
+                        <i class="fas fa-heart"></i>
+                    </label>
+                    <!-- Job List Toolbar Start -->
+                    <div>
+                        <!-- <div class="job-list-toolbar">
+                            <ul class="job-pagination pagination-center ">
+                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
+                                            aria-hidden="true"></i> Previous 20</a></li>
+                                <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
+                                <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
+                                <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
+                                <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
+                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
+                                            aria-hidden="true"></i> Next 20</a></li>
+                            </ul>
+                            <div class="job-filter">
+                                <select class="job-select">
+                                    <option>Search order by</option>
+                                    <option>Top Rated</option>
+                                    <option>Most Popular</option>
+                                </select>
+                            </div>
+                        </div> -->
+                        <!-- Job List Toolbar End -->
+                        <!-- Job List Wrap Start -->
+                        <div class="job-list-wrap p-0">
+                            <div class="job-list">
+                                <div class="company-logo col-auto py-2">
+                                    <img src="" alt="Company Logo">
+                                    <span class="company-h line-clamp-1">i2c</span>
+                                </div>
+                                <div class="job-list-content col">
+                                    <div class="job-header">
+                                        <h6 class="job-title mb-0">Data Analyst</h6>
+                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i> -->
+                                        <div class="d-flex align-items-center">
+                                            <span class="job-post-date">20 hours ago </span>
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                    </div>
+
+                                    <p class="job-description">As a Data Scientist, you will be in a central position as you will be evangelizing data and our methodologies to other functional analysts and other stakeholders in the company.</p>
+                                    <div class="job-content-wrap">
+                                        <div class="job-dynamic-values">
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                                    <span>Aug 23, 2021</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/experience-job.svg" alt="">
+                                                    <span>3 Years</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/money-job.svg" alt="">
+                                                    <span>80K to 100K</span>
+                                                </li>
+                                                <li>
+                                                    <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
+                                                        alt="img">
+                                                    <span>Lahore, Pakistan</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                                    <span>Morning Shift</span>
+                                                </li>
+                                                <li>
+                                                    <img src="/website/assets/images/switch-job.svg" alt="">
+                                                    <span>Full Time</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="job-list-fav m-0">
+                                            <li>
+                                                <router-link to="/candidate-dashboard" class="job-view-btn">View</router-link>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <div class="show-more-anker">
+                        <router-link class="show-more-common" to="/candidate-dashboard">Show more</router-link>
+                        <p class="notify-unread-msgs">You have <span>12</span> unread messages</p>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->

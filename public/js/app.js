@@ -5150,6 +5150,112 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -23806,7 +23912,7 @@ var render = function () {
       _c("CandidateNavbar"),
       _vm._v(" "),
       _c("div", { staticClass: "container user-profile-container cont-flex" }, [
-        _c("div", { staticClass: "condition-search-feilds" }, [
+        _c("div", { staticClass: "condition-search-feilds p-0" }, [
           _c("div", { staticClass: "product_accordion_container" }, [
             _vm._m(0),
             _vm._v(" "),
@@ -23898,17 +24004,15 @@ var render = function () {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "candidate" }, [
-            _c("label", { staticClass: "candidate-tagline" }, [
-              _vm._v("\n                    Candidates\n                "),
-            ]),
+            _vm._m(4),
             _vm._v(" "),
             _c("div", [
               _c("div", { staticClass: "job-list-wrap p-0" }, [
                 _c("div", { staticClass: "job-list" }, [
-                  _vm._m(4),
+                  _vm._m(5),
                   _vm._v(" "),
                   _c("div", { staticClass: "job-list-content col" }, [
-                    _vm._m(5),
+                    _vm._m(6),
                     _vm._v(" "),
                     _c("p", { staticClass: "job-description" }, [
                       _vm._v(
@@ -23917,7 +24021,7 @@ var render = function () {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "job-content-wrap" }, [
-                      _vm._m(6),
+                      _vm._m(7),
                       _vm._v(" "),
                       _c("ul", { staticClass: "job-list-fav m-0" }, [
                         _c(
@@ -23940,6 +24044,85 @@ var render = function () {
                 ]),
               ]),
             ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "show-more-anker" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "show-more-common",
+                    attrs: { to: "/candidate-dashboard" },
+                  },
+                  [_vm._v("Show more")]
+                ),
+                _vm._v(" "),
+                _vm._m(8),
+              ],
+              1
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "candidate" }, [
+            _vm._m(9),
+            _vm._v(" "),
+            _c("div", [
+              _c("div", { staticClass: "job-list-wrap p-0" }, [
+                _c("div", { staticClass: "job-list" }, [
+                  _vm._m(10),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "job-list-content col" }, [
+                    _vm._m(11),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "job-description" }, [
+                      _vm._v(
+                        "As a Data Scientist, you will be in a central position as you will be evangelizing data and our methodologies to other functional analysts and other stakeholders in the company."
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "job-content-wrap" }, [
+                      _vm._m(12),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "job-list-fav m-0" }, [
+                        _c(
+                          "li",
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "job-view-btn",
+                                attrs: { to: "/candidate-dashboard" },
+                              },
+                              [_vm._v("View")]
+                            ),
+                          ],
+                          1
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "show-more-anker" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "show-more-common",
+                    attrs: { to: "/candidate-dashboard" },
+                  },
+                  [_vm._v("Show more")]
+                ),
+                _vm._v(" "),
+                _vm._m(13),
+              ],
+              1
+            ),
           ]),
           _vm._v(" "),
           _c(
@@ -23955,7 +24138,7 @@ var render = function () {
           ),
         ]),
         _vm._v(" "),
-        _vm._m(7),
+        _vm._m(14),
       ]),
     ],
     1
@@ -24027,6 +24210,15 @@ var staticRenderFns = [
       _c("p", { staticClass: "msg-time-date" }, [
         _vm._v("10/08/2021, 09:10 am"),
       ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "candidate-tagline" }, [
+      _vm._v("\n                    Recommended Jobs \n                    "),
+      _c("i", { staticClass: "fas fa-briefcase" }),
     ])
   },
   function () {
@@ -24123,6 +24315,131 @@ var staticRenderFns = [
           _c("span", [_vm._v("Full Time")]),
         ]),
       ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "notify-unread-msgs" }, [
+      _vm._v("You have "),
+      _c("span", [_vm._v("12")]),
+      _vm._v(" unread messages"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "candidate-tagline" }, [
+      _vm._v("\n                    Whishlist\n                    "),
+      _c("i", { staticClass: "fas fa-heart" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "company-logo col-auto py-2" }, [
+      _c("img", { attrs: { src: "", alt: "Company Logo" } }),
+      _vm._v(" "),
+      _c("span", { staticClass: "company-h line-clamp-1" }, [_vm._v("i2c")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "job-header" }, [
+      _c("h6", { staticClass: "job-title mb-0" }, [_vm._v("Data Analyst")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "d-flex align-items-center" }, [
+        _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
+        _vm._v(" "),
+        _c("i", { staticClass: "far fa-heart" }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "job-dynamic-values" }, [
+      _c("ul", [
+        _c("li", [
+          _c("img", {
+            attrs: {
+              src: "/website/assets/images/calendar-job.svg",
+              alt: "img",
+            },
+          }),
+          _vm._v(" "),
+          _c("span", [_vm._v("Aug 23, 2021")]),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("img", {
+            attrs: {
+              src: "/website/assets/images/experience-job.svg",
+              alt: "",
+            },
+          }),
+          _vm._v(" "),
+          _c("span", [_vm._v("3 Years")]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c("img", {
+            attrs: { src: "/website/assets/images/money-job.svg", alt: "" },
+          }),
+          _vm._v(" "),
+          _c("span", [_vm._v("80K to 100K")]),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("img", {
+            staticStyle: { margin: "0px 3px" },
+            attrs: {
+              height: "16px",
+              width: "10px",
+              src: "/website/assets/images/pin.svg",
+              alt: "img",
+            },
+          }),
+          _vm._v(" "),
+          _c("span", [_vm._v("Lahore, Pakistan")]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c("img", {
+            attrs: { src: "/website/assets/images/suitcase-job.svg", alt: "" },
+          }),
+          _vm._v(" "),
+          _c("span", [_vm._v("Morning Shift")]),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("img", {
+            attrs: { src: "/website/assets/images/switch-job.svg", alt: "" },
+          }),
+          _vm._v(" "),
+          _c("span", [_vm._v("Full Time")]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "notify-unread-msgs" }, [
+      _vm._v("You have "),
+      _c("span", [_vm._v("12")]),
+      _vm._v(" unread messages"),
     ])
   },
   function () {

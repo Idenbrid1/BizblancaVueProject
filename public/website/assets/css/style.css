@@ -3940,10 +3940,12 @@ body {
     color: #081351;
     border-bottom: solid 1px #212b36;
     border-left: 5px solid;
-    font-weight: 500;
+    font-weight: bold;
     margin: 0px;
 }
-
+.candidate-tagline>i{
+    padding-left: 10px;
+}
 .candidate-description {
     font-size: 14px;
 }
@@ -6824,5 +6826,33 @@ progress {
     color: #757575;
     margin: 0px;
     padding-top: 5px;
+}
+.show-more-anker{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #081351;
+}
+.show-more-anker>p{
+    margin: 0px;
+}
+.show-more-common{
+    display: block;
+    padding: 10px 20px;
+    width: fit-content;
+    background: #081351;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.notify-unread-msgs{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+.notify-unread-msgs>span{
+    font-size: 20px;
 }
 /* company dashboard */

@@ -7,6 +7,19 @@
     .msg-user-name > h2, .msg-title{
         font-size: 14px;
     }
+    .show-more-anker{
+        padding: 15px;
+    }
+    .show-more-common{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    .notify-unread-msgs{
+        font-size: 14px;
+    }
+    .notify-unread-msgs>span{
+        font-size: 16px;
+    }
     .msg-time-date, .msg-description{
         font-size: 12px;
     }
