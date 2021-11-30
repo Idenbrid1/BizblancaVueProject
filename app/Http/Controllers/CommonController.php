@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Candidate;
 use App\Models\CandidateSkill;
 use App\Models\Company;
+use App\Models\CompanyWishList;
 use App\Models\ContactUs;
 use App\Models\JobPost;
+use App\Models\User;
 use App\Models\Order;
 use App\Models\Package;
 use App\Models\Pakage;
@@ -14,6 +16,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use DB;
 use Validator;
+use Auth;
 
 
 class CommonController extends Controller
@@ -70,28 +73,67 @@ class CommonController extends Controller
                 $skills_array[] =  $skill['name'];
             }
             $candidate_skills_lists = CandidateSkill::whereIn('name', $skills_array)->get();
+            $final_skills_array = [];
             foreach($candidate_skills_lists as $break_skill)
             {
                 $final_skills_array[] =  $break_skill->candidate_id;
             }
-            $candidate_skills_lists = Candidate::whereIn('id', $final_skills_array)->get();
-                
+            if(count($final_skills_array) > 0){
+                $candidate_skills_lists = Candidate::whereIn('id', $final_skills_array)->get();
+            }
         }
-        else{
-            $candidate_skills_lists = Candidate::all();
+        else{ 
+            $candidate_skills_lists = Candidate::get();
         }
         $fields = ['working_experience', 'city', 'gender'];
         foreach($fields as $field){
-            if(!empty($request->$field)){
+            if($request->$field){
                 $candidate_skills_lists = $candidate_skills_lists->where($field, $request->$field);
             }
         }
-        if(empty($candidate_skills_lists))
+        if($candidate_skills_lists)
         {
-            return $candidate_skills_lists;
+            // return $candidate_skills_lists;
+            $user = User::find(Auth::user()->id);
+            $company = Company::where('user_id', $user->id)->first();
+            // $candidates = Candidate::get();
+            foreach($candidate_skills_lists as $candidate)
+            {
+                if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+                {
+                    $candidate_with_wishlist[] = array(
+                        'candidate'=>$candidate,
+                        'is_wish_listed'=>true,
+                    );
+                }else{
+                    $candidate_with_wishlist[] = array(
+                        'candidate'=>$candidate,
+                        'is_wish_listed'=>false,
+                    );
+                }
+            }
+            return $candidate_with_wishlist;
         }
         else{
-            return Candidate::inRandomOrder()->get();
+            $user = User::find(Auth::user()->id);
+            $company = Company::where('user_id', $user->id)->first();
+            $candidates = Candidate::get();
+            foreach($candidates as $candidate)
+            {
+                if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+                {
+                    $candidate_with_wishlist[] = array(
+                        'candidate'=>$candidate,
+                        'is_wish_listed'=>true,
+                    );
+                }else{
+                    $candidate_with_wishlist[] = array(
+                        'candidate'=>$candidate,
+                        'is_wish_listed'=>false,
+                    );
+                }
+            }
+            return $candidate_with_wishlist;
         }
     }
 
@@ -186,6 +228,25 @@ class CommonController extends Controller
                     'success' => false,
                 ]);
             }
+        }
+    }
+
+    public function addToWishList($candidate_id)
+    {
+        $user = User::find(Auth::user()->id);
+        $company = Company::where('user_id', $user->id)->first();
+        $companywishlist = CompanyWishList::create([
+            'company_id' => $company->id,
+            'candidate_id' => $candidate_id,
+        ]);
+        if($companywishlist){
+            return response()->json([
+                'success' => true,
+            ]);
+        }else{
+            return response()->json([
+                'success' => false,
+            ]);
         }
     }
 

@@ -161,11 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-<<<<<<< HEAD
         Barryvdh\DomPDF\ServiceProvider::class,
-=======
-        // Barryvdh\Snappy\ServiceProvider::class,
->>>>>>> 0f58079a3c90c554bc0b5b513f5ab0fc4cde5782
 
         /*
          * Package Service Providers...
@@ -233,13 +229,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-<<<<<<< HEAD
         'PDF' => Barryvdh\DomPDF\Facade::class,
-=======
-        // 'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
-        // 'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
->>>>>>> 0f58079a3c90c554bc0b5b513f5ab0fc4cde5782
-
     ],
 
 ];

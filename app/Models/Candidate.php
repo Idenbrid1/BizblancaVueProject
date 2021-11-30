@@ -57,6 +57,7 @@ class Candidate extends Model
         'profile_image',
         'user_id'
     ];
+
     public function CandidateAwards()
     {
         return $this->hasMany(CandidateAward::class, 'candidate_id','id') ;

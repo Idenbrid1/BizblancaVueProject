@@ -64,6 +64,7 @@ Route::get('/reset-password/{token}', [App\Http\Controllers\Admin\Authentication
 Route::post('/complete-reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordFormPost']);
 Route::get('expire-today-jobs', [App\Http\Controllers\CommonController::class, 'expireTodayJobs']);
 Route::post('/submit-contact-us', [App\Http\Controllers\CommonController::class, 'contactUs']);
+Route::get('/add-to-wish-list/{candidate_id}', [App\Http\Controllers\CommonController::class, 'addToWishList']);
 
 //samad 
 Route::get('/login', function () {

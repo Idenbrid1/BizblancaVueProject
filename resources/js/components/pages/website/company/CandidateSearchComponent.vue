@@ -143,9 +143,9 @@
                                     :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+searchData[index].profile_image+')'}"></div>
+                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+searchData[index].candidate.profile_image+')'}"></div>
                                             <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">{{searchData[index].full_name}}</h6>
+                                                <h6 class="candidate-name mb-0">{{searchData[index].candidate.full_name}}</h6>
                                                 <!-- <div class="my-1">
                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -156,31 +156,30 @@
                                             </div>
                                         </div>
                                         <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">{{searchData[index].bio}}</p>
+                                        <p class="candidate-description my-1">{{searchData[index].candidate.bio}}</p>
                                         <ul class="candidate-list-meta">
                                             <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">{{searchData[index].gender}}</div>
+                                                <div class="hide-line-1">{{searchData[index].candidate.gender}}</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-graduation-cap"></i>
                                                 <div class="hide-line-1">BSSE</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">{{searchData[index].experience}} Years</div>
+                                                <div class="hide-line-1">{{searchData[index].candidate.experience}} Years</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1" v-for="(skills, index) in searchData[index].candidate_skills" :key="index">{{skills.name}},</div>
+                                                <div class="hide-line-1" v-for="(skills, index) in searchData[index].candidate.candidate_skills" :key="index">{{skills.name}},</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">{{searchData[index].city}}</div>
+                                                <div class="hide-line-1">{{searchData[index].candidate.city}}</div>
                                             </li>
 
                                         </ul>
 
                                         <ul class="candidate-list-fav">
-                                            <li class="w-100"><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: searchData[index].id } }">View Profile</router-link></li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
-                                            </li>
+                                            <li class="w-100"><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: searchData[index].candidate.id } }">View Profile</router-link></li>
+                                            <li v-if="searchData[index].is_wish_listed == false"><a @click="addToWishList(searchData[index].candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="far fa-heart"></i></a></li>
+                                            <li v-if="searchData[index].is_wish_listed == true"><a @click="addToWishList(searchData[index].candidate.id)" class="">liked</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -555,11 +554,19 @@
             },
             keywordSearch() {
                 axios.get('/candidate-keyword-search/'+this.record.keyword)
-                    .then((response) => {
-                        this.searchData = response.data
-                        this.totalcandidates = this.searchData.length
-                    });
+                .then((response) => {
+                    this.searchData = response.data
+                    this.totalcandidates = this.searchData.length
+                });
             },
+            addToWishList(id){
+                axios.get('/add-to-wish-list/'+id)
+                .then((response) => {
+                    // this.searchData = response.data
+                    // this.totalcandidates = this.searchData.length
+                });
+            },
+            
         },
     };
 

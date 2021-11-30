@@ -538,28 +538,39 @@
                     });
             },
             updateBasicInformation() {
+                Swal.fire({
+                    text:  'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading() 
+                    },
+                })
                 var $basicinformationForm = $('#basicinformationForm');
                 var data = new FormData(basicinformationForm);
                 axios.post('/update/company-basicinformation', data)
-                    .then((res) => {
-                        if (res.data.success == false) {
-                            this.errors = res.data.errors
-                        } else {
-                            this.errors = []
-                            this.getCompanyProfileData()
-                            // $('#basicInfoModal').modal('hide')
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Updated',
-                                text: 'Company Updated Successfully',
-                            })
-                        }
-                    })
-                    .catch((err) => {
-
-                    })
+                .then((res) => {
+                    if (res.data.success == false) {
+                        Swal.close()
+                        this.errors = res.data.errors
+                    } else {
+                        Swal.close()
+                        this.errors = []
+                        this.getCompanyProfileData()
+                        // $('#basicInfoModal').modal('hide')
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Updated',
+                            text: 'Company Updated Successfully',
+                        })
+                    }
+                })
             },
             updateSocialMedia() {
+                Swal.fire({
+                    text:  'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading() 
+                    },
+                })
                 var $fileUpload = $('#companyGallery');
                 if (parseInt($fileUpload.get(0).files.length) > 4){
                     Swal.fire({
@@ -567,6 +578,7 @@
                         title: 'Oops...',
                         text: 'You Cannot Select More Then 4 images!',
                     })
+                    Swal.close()
                     return false;
                 }
                 var $socialmediaForm = $('#socialmediaForm');
@@ -574,11 +586,13 @@
                 axios.post('/update/socialmedia', data)
                     .then((res) => {
                         if (res.data.success == false) {
+                            Swal.close()
                             this.errors = res.data.errors
+
                         } else {
                             this.errors = []
                             this.getCompanyProfileData()
-                            // $('#basicInfoModal').modal('hide')
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',

@@ -18,33 +18,53 @@
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <input type="text" class="form-control contact-feilds"
+                                        <input type="text" class="form-control contact-feilds" v-model="contact_us.name"
                                             placeholder="Enter Name" name="" id="" maxlength="50"
                                             required />
+                                        <small>
+                                            <span v-if="errors.name != null" class="text-danger float-left">
+                                                {{errors.name[0]}}
+                                            </span>
+                                        </small>
                                     </div>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <input type="email" class="form-control contact-feilds"
+                                        <input type="email" class="form-control contact-feilds" v-model="contact_us.email"
                                             placeholder="Enter Email" name="" id="" maxlength="50"
                                             required />
+                                        <small>
+                                            <span v-if="errors.email != null" class="text-danger float-left">
+                                                {{errors.email[0]}}
+                                            </span>
+                                        </small>
                                     </div>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <input type="number" class="form-control contact-feilds"
+                                        <input type="number" class="form-control contact-feilds" v-model="contact_us.phone"
                                             placeholder="Enter Phone" name="" id="" maxlength="20"
                                             required />
+                                        <small>
+                                            <span v-if="errors.phone != null" class="text-danger float-left">
+                                                {{errors.phone[0]}}
+                                            </span>
+                                        </small>
                                     </div>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <textarea rows="4" type="text" class="form-control contact-feilds message-box"
+                                        <textarea rows="4" type="text" class="form-control contact-feilds message-box" v-model="contact_us.message"
                                             placeholder="Enter Message" name="" id="" required></textarea>
+                                        <small>
+                                            <span v-if="errors.message != null" class="text-danger float-left">
+                                                {{errors.message[0]}}
+                                            </span>
+                                        </small>
                                     </div>
                                 </div>
                                 <div class="col-12 px-2 py-4">
-                                    <a href="./comming.html" class="contact-submit-anker w-100 d-block text-center">Send
+                                    <a @click.prevent="submitContactUs()" class="contact-submit-anker w-100 d-block text-center">Send
                                     </a>
                                 </div>
                             </div>
@@ -79,11 +99,19 @@
     </div>
 </template>
 <script>
+    import axios from 'axios';
     import WebsiteNavbar from './partials/navbar.vue';
     export default {
         data() {
             return {
                 isRole: '',
+                contact_us: {
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: '',
+                },
+                errors: []
             };
         },
         components: {
@@ -91,7 +119,38 @@
         },
         created() {},
         methods: {
+            submitContactUs(){
+                Swal.fire({
+                    text:  'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading() 
+                    },
+                })
+                axios.post('/submit-contact-us', this.contact_us)
+                .then((response) => {
+                    if(response.data.success == true)
+                    {
+                        Swal.close()
+                        Swal.fire({
+                            icon:  'success',
+                            title: 'Contact us query raised',
+                            text:  'Please wait we will contact you as soon as possible! THANKS',
+                        })
+                        this.contact_us = {
+                            name: '',
+                            email: '',
+                            phone: '',
+                            message: '',
+                        };
+                        this.errors = []
 
+                    }
+                    else{
+                        Swal.close()
+                        this.errors = response.data.errors
+                    }
+                });
+            }
         }
     };
 
