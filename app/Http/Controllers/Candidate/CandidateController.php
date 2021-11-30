@@ -387,15 +387,11 @@ class CandidateController extends Controller
     public function applyJob($job_id)
     {
         if($job_post = JobPost::where(['id' => $job_id, 'status' => 'Active'])->first()){
-            // $apply_candidate = new CandidateAppliedJob();
-            // $apply_candidate->job_id = $job_post->id;
-            // $apply_candidate->company_id = $job_post->company_id;
-            // $apply_candidate->user_id = Auth::user()->id;
-            // $apply_candidate->create();
+            $candidate = Candidate::where('user_id', Auth::user()->id)->first();
             CandidateAppliedJob::create([
                 'job_id' => $job_post->id,
                 'company_id' => $job_post->company_id,
-                'user_id' => Auth::user()->id
+                'candidate_id' => $candidate->id,
             ]);
             
             return response()->json([

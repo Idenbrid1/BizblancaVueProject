@@ -156,6 +156,7 @@ Route::post('/update/newsletter', [App\Http\Controllers\Website\Candidate\Profil
         Route::get('/buy-package-plan/{package_id}', [App\Http\Controllers\Company\CompanyController::class, 'buyPackage'])->name('profile.buyPackage');
         Route::get('/check-job-post-limit', [App\Http\Controllers\Company\CompanyController::class, 'checkPostJobLimit']);
         Route::get('/download-invoice/{order_id}', [App\Http\Controllers\Company\CompanyController::class, 'downloadInvoice']);
+        Route::get('/get-applied-applicants-list/{job_id}', [App\Http\Controllers\Company\CompanyController::class, 'getAppliedApplicantsList']);
 		// Route::get('/home', [App\Http\Controllers\Website\Company\HomeController::class, 'showDashboardPage'])->name('home');
 		// Route::get('/profile', [App\Http\Controllers\Website\Company\ProfileController::class, 'show'])->name('profile.show');
 		// Route::get('/profile_edit', [App\Http\Controllers\Website\Company\ProfileController::class, 'edit'])->name('profile.edit');

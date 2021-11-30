@@ -85,7 +85,7 @@ class CommonController extends Controller
             return $candidate_skills_lists;
         }
         else{
-            return Candidate::inRandomOrder()->paginate(12);
+            return Candidate::inRandomOrder()->get();
         }
     }
 

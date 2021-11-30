@@ -25,146 +25,45 @@
                     <div>
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap" style="padding:10px">
-                            <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
-                            <div class="row m-0 justify-content-center">
+                            <div class="row m-0 justify-content-center" v-for="(item, index) in data" :key="index">
                                 <div class="candidate-single">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo" style="backgroundImage: url('')"></div>
+                                            <div class="candidate-photo" :style="{ 'background-image': 'url(/storage/images/candidates/' + item.candidates.profile_image + ')' }"></div>
                                             <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
+                                                <h6 class="candidate-name mb-0">{{item.candidates.full_name}}Khan</h6>
                                             </div>
                                         </div>
                                         <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">My name is Sameena Khan and I am graduated from university of...</p>
+                                        <p class="candidate-description my-1">{{item.candidates.bio}}</p>
                                         <ul class="candidate-list-meta">
                                             <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">Female</div>
+                                                <div class="hide-line-1">{{item.candidates.gender}}</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-graduation-cap"></i>
                                                 <div class="hide-line-1">BSSE</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">2 Years</div>
+                                                <div class="hide-line-1">{{item.candidates.experience}}</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-user-cog"></i>
                                                 <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">Lahore</div>
+                                                <div class="hide-line-1">{{item.candidates.city}}</div>
                                             </li>
 
                                         </ul>
 
                                         <ul class="candidate-list-fav">
-                                            <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                    Profile</a></li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="candidate-single">
-                                    <div class="candidate-list-content">
-                                        <div class="candidate-image">
-                                            <div class="candidate-photo" style="backgroundImage: url('')"></div>
-                                            <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
-                                            </div>
-                                        </div>
-                                        <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">My name is Sameena Khan and I am graduated from university of...</p>
-                                        <ul class="candidate-list-meta">
-                                            <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">Female</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-graduation-cap"></i>
-                                                <div class="hide-line-1">BSSE</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">2 Years</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">Lahore</div>
-                                            </li>
-
-                                        </ul>
-
-                                        <ul class="candidate-list-fav">
-                                            <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                    Profile</a></li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="candidate-single">
-                                    <div class="candidate-list-content">
-                                        <div class="candidate-image">
-                                            <div class="candidate-photo" style="backgroundImage: url('')"></div>
-                                            <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
-                                            </div>
-                                        </div>
-                                        <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">My name is Sameena Khan and I am graduated from university of...</p>
-                                        <ul class="candidate-list-meta">
-                                            <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">Female</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-graduation-cap"></i>
-                                                <div class="hide-line-1">BSSE</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">2 Years</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">Lahore</div>
-                                            </li>
-
-                                        </ul>
-
-                                        <ul class="candidate-list-fav">
-                                            <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                    Profile</a></li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
+                                            <li class="w-100"><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: item.candidates.id } }">View Profile</router-link></li>
+                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i class="far fa-heart"></i></a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <!-- </div> -->
                         </div>
                         <!-- Job List Wrap Start -->
                     </div>
@@ -405,378 +304,21 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade PostNewJobModal" id="PostNewJobModal" tabindex="-1" role="dialog"
-            aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form id="formData">
-                    <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
-                            <h3 class="my-4">Update</h3>
-                            <section class="modelForm container p-0 p-md-2">
-                                <div class="row no-gutters" id="subFormFieldsContainer">
-                                    <div class="col-12">
-                                        <div id='subForm' class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Add more Jobs</h4>
-                                            </div>
-                                            <div class="form-group">
-                                                <img v-if="record.id != 0"
-                                                    :src="'/storage/images/companies/'+record.bannar" height="50"
-                                                    width="50" alt="Company Logo" />
-                                                <label for="bannar"><span class="required_feild">*</span> Banner</label>
-                                                <input class="form-control" style="padding:4px !important;height:40px;"
-                                                    name="bannar" id="bannar" ref="bannar" type="file" />
-                                                <small>
-                                                    <span v-if="errors.bannar != null" class="text-danger">
-                                                        {{errors.bannar[0]}}
-                                                    </span>
-                                                </small>
-                                            </div>
-                                            <div class="subFormFields">
-                                                <div class="row">
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="job-title"><span class="required_feild">*</span>
-                                                                Job Title</label>
-                                                            <input type="text" id="job-title" name="job_title"
-                                                                v-model="record.job_title" placeholder="Enter Job Title"
-                                                                class="form-control" />
-                                                            <small>
-                                                                <span v-if="errors.job_title != null"
-                                                                    class="text-danger">
-                                                                    {{errors.job_title[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="job_designation"><span
-                                                                    class="required_feild">*</span> Job
-                                                                Designation</label>
-                                                            <input type="text" id="job_designation"
-                                                                name="job_designation" v-model="record.job_designation"
-                                                                placeholder="Enter Job Designation"
-                                                                class="form-control" />
-                                                            <small>
-                                                                <span v-if="errors.job_designation != null"
-                                                                    class="text-danger">
-                                                                    {{errors.job_designation[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="salary_type"><span
-                                                                    class="required_feild">*</span> Salary Type</label>
-                                                            <select name="salary_type" id="salary_type"
-                                                                v-model="record.salary_type" class="form-control">
-                                                                <option value="Please Select" default="true"
-                                                                    selected="true" disabled="disabled">Please Select
-                                                                </option>
-                                                                <option value="Yearly">Yearly</option>
-                                                                <option value="Monthly">Monthly</option>
-                                                                <option value="Weekly">Weekly</option>
-                                                                <option value="Hourly">Hourly</option>
-                                                            </select>
-                                                            <small>
-                                                                <span v-if="errors.salary_type != null"
-                                                                    class="text-danger">
-                                                                    {{errors.salary_type[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="salary_range"><span
-                                                                    class="required_feild">*</span> Salary Range</label>
-                                                            <select name="salary_range" id="salary_range"
-                                                                v-model="record.salary_range" class="form-control">
-                                                                <option value="Please Select" selected disabled>Please
-                                                                    Select</option>
-                                                                <option value="10000-20000">10000 - 20000 </option>
-                                                                <option value="20000-30000">20000 - 30000</option>
-                                                                <option value="30000-40000">30000 - 40000</option>
-                                                                <option value="40000-50000">40000 - 50000</option>
-                                                                <option value="50000-60000">50000 - 60000</option>
-                                                                <option value="60000-70000">60000 - 70000</option>
-                                                                <option value="70000-80000">70000 - 80000</option>
-                                                                <option value="80000-90000">80000 - 90000</option>
-                                                                <option value="90000-100000">90000 - 100000</option>
-                                                                <option value="100000-150000">100000 - 150000</option>
-                                                            </select>
-                                                            <small>
-                                                                <span v-if="errors.salary_range != null"
-                                                                    class="text-danger">
-                                                                    {{errors.salary_range[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="shift"><span class="required_feild">*</span>
-                                                                Shift</label>
-                                                            <select name="shift" id="shift" v-model="record.shift"
-                                                                class="form-control">
-                                                                <option value="Please Select" selected disabled>Please
-                                                                    Select</option>
-                                                                <option value="Night">Night</option>
-                                                                <option value="Morning">Morning</option>
-                                                                <option value="Afternoon">Afternoon</option>
-                                                                <option value="Please Select">Please Select</option>
-                                                            </select>
-                                                            <small>
-                                                                <span v-if="errors.shift != null" class="text-danger">
-                                                                    {{errors.shift[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="">Experience<small> in years</small></label>
-                                                            <input type="number" v-model="record.experience"
-                                                                placeholder="Enter Experience" name="experience"
-                                                                class="form-control" />
-                                                            <small>
-                                                                <span v-if="errors.experience != null"
-                                                                    class="text-danger">
-                                                                    {{errors.experience[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="location"><span class="required_feild">*</span>
-                                                                Location</label>
-                                                            <input type="text" id="location"
-                                                                placeholder="Enter Location" v-model="record.location"
-                                                                name="location" class="form-control" />
-                                                            <small>
-                                                                <span v-if="errors.location != null"
-                                                                    class="text-danger">
-                                                                    {{errors.location[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="job_type"><span class="required_feild">*</span>
-                                                                Job Type</label>
-                                                            <select name="job_type" id="job_type"
-                                                                v-model="record.job_type" class="form-control">
-                                                                <option value="Please Select" selected disabled>Please
-                                                                    Select</option>
-                                                                <option value="Full Time">Full Time</option>
-                                                                <option value="Part Time">Part Time</option>
-                                                                <option value="Internship">Internship</option>
-                                                                <option value="Permenent">Permenent</option>
-                                                                <option value="Contract">Contract</option>
-                                                                <option value="Freelance">Freelance</option>
-                                                            </select>
-                                                            <small>
-                                                                <span v-if="errors.job_type != null"
-                                                                    class="text-danger">
-                                                                    {{errors.job_type[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="">Gender</label>
-                                                            <select name="gender" v-model="record.gender"
-                                                                class="form-control">
-                                                                <option value="" disabled>select please</option>
-                                                                <option selected value="Male">Male</option>
-                                                                <option value="Female">Female</option>
-                                                                <option value="Other">Other</option>
-                                                            </select>
-                                                            <small>
-                                                                <span v-if="errors.gender != null" class="text-danger">
-                                                                    {{errors.gender[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="total_positions"><span
-                                                                    class="required_feild">*</span> Total
-                                                                Positions</label>
-                                                            <input type="number" id="total_positions"
-                                                                placeholder="Total Positions"
-                                                                v-model="record.total_positions" name="total_positions"
-                                                                class="form-control" />
-                                                            <small>
-                                                                <span v-if="errors.total_positions != null"
-                                                                    class="text-danger">
-                                                                    {{errors.total_positions[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="job_description"><span
-                                                                    class="required_feild">*</span> Job
-                                                                Description</label>
-                                                            <textarea style="height: 100px;"
-                                                                v-model="record.job_description"
-                                                                placeholder="Enter Job Description"
-                                                                name="job_description" id="job_description"
-                                                                :maxlength="max" class="form-control"></textarea>
-                                                            <div v-text="(max - record.job_description.length)"></div>
-                                                            <small>
-                                                                <span v-if="errors.job_description != null"
-                                                                    class="text-danger">
-                                                                    {{errors.job_description[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="job_responsibilities"><span
-                                                                    class="required_feild">*</span> Job
-                                                                Responsibilities</label>
-                                                            <textarea style="height: 100px;" maxlength="255"
-                                                                v-model="record.job_responsibilities"
-                                                                placeholder="Enter Job Description"
-                                                                name="job_responsibilities" id="job_responsibilities"
-                                                                class="form-control"></textarea>
-                                                            <small>
-                                                                <span v-if="errors.job_responsibilities != null"
-                                                                    class="text-danger">
-                                                                    {{errors.job_responsibilities[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="qualification_level"><span
-                                                                    class="required_feild">*</span> Qualifications &
-                                                                Technicalities</label>
-                                                            <select id="qualification_level" name="qualification_level"
-                                                                v-model="record.qualification_level"
-                                                                class="form-control">
-                                                                <option value="Metric">Metric</option>
-                                                                <option value="Intermediate">Intermediate</option>
-                                                                <option value="Graduation">Graduation</option>
-                                                                <option value="Masters">Masters</option>
-                                                            </select>
-                                                            <small>
-                                                                <span v-if="errors.qualification_level != null"
-                                                                    class="text-danger">
-                                                                    {{errors.qualification_level[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="benefits"><span class="required_feild">*</span>
-                                                                Benefits</label>
-                                                            <textarea style="height: 100px;" maxlength="255"
-                                                                v-model="record.benefits" placeholder="Enter Benefits"
-                                                                id="benefits" name="benefits"
-                                                                class="form-control"></textarea>
-                                                            <small>
-                                                                <span v-if="errors.benefits != null"
-                                                                    class="text-danger">
-                                                                    {{errors.benefits[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="benefits"><span
-                                                                    class="required_feild">*</span>Active</label>
-                                                            <input type="radio" value="1" v-model="record.status"
-                                                                class="form-control" />
-                                                            <label for="benefits"><span
-                                                                    class="required_feild">*</span>Inactive</label>
-                                                            <input type="radio" value="0" v-model="record.status"
-                                                                class="form-control" />
-                                                            <small>
-                                                                <span v-if="errors.benefits != null"
-                                                                    class="text-danger">
-                                                                    {{errors.benefits[0]}}
-                                                                </span>
-                                                            </small>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row mt-4 ">
-                                    <div class="col-lg-12 modelBtnContainer ">
-                                        <button class="positiveBtn modelBtn mr-1" v-if="record.id == 0"
-                                            @click.prevent="postJob()">Post</button>
-                                        <button class="positiveBtn modelBtn mr-1" v-else
-                                            @click.prevent="updatePostJob()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
-                                            @click="clearRecord()">Cancel</button>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
 </template>
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CompanyNavbar from '../partials/CompanyNavbar.vue';
-    import pagination from 'laravel-vue-pagination'
     export default {
         data() {
             return {
-                record: {
-                    id: 0,
-                    bannar: '',
-                    job_title: '',
-                    job_designation: '',
-                    job_description: '',
-                    job_type: '',
-                    shift: '',
-                    industry: '',
-                    department: '',
-                    experience: '',
-                    salary_type: '',
-                    salary_range: '',
-                    gender: '',
-                    location: '',
-                    total_positions: '',
-                    qualification_level: '',
-                    benefits: '',
-                    job_responsibilities: '',
-                    status: 0,
-                },
-                max: 36,
-                errors: [],
-                jobs: {},
+                data: []
             };
         },
         components: {
             WebsiteNavbar,
             CompanyNavbar,
-            pagination,
         },
         mounted() {
             var swiper = new Swiper(".bizer-ranking-slider", {
@@ -792,244 +334,16 @@
             });
         },
         created() {
-            this.getCompanyJobs()
+            this.getSingleJobDetail()
         },
         methods: {
-            getCompanyJobs(page = 1) {
-                axios.get('get-company-jobs?page=' + page)
+            getSingleJobDetail() {
+                axios.get('/get-applied-applicants-list/' + this.$route.params.id)
                     .then((response) => {
-                        this.jobs = response.data
-                    });
-            },
-            deleteJobPost(id) {
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        axios.get('/delete-job-post/' + id)
-                            .then((response) => {
-                                if (response.data.success == true) {
-                                    Swal.fire(
-                                        'Deleted!',
-                                        'Your job has been deleted.',
-                                        'success'
-                                    )
-                                    this.getCompanyJobs()
-                                } else {
-                                    Swal.fire(
-                                        'Not Found',
-                                        'Your job not found.',
-                                        'info'
-                                    )
-                                }
-                            });
-                    }
-                })
-            },
-            postJob() {
-                Swal.fire({
-                    title: 'Are you sure to post this job?',
-                    text: "After Yes you your job will be live",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    cancelButtonText: 'No, keep Edit!',
-                    confirmButtonText: 'Yes, post it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        var $formData = $('#formData');
-                        var data = new FormData(formData);
-                        axios.post('/company/post-job', data)
-                            .then((res) => {
-                                if (res.data.success == false) {
-                                    this.errors = res.data.errors
-                                } else {
-                                    this.getCompanyJobs()
-                                    Swal.fire({
-                                        icon: 'success',
-                                        title: 'Posted!😎',
-                                        text: 'Your Job is Now Live',
-                                    })
-                                    $('#PostNewJobModal').modal('hide')
-                                    this.errors = []
-                                    this.record = {
-                                        bannar: '',
-                                        title: '',
-                                        job_designation: '',
-                                        job_description: '',
-                                        job_type: '',
-                                        shift: '',
-                                        industry: '',
-                                        department: '',
-                                        experience: '',
-                                        salary_type: '',
-                                        salary_range: '',
-                                        gender: '',
-                                        location: '',
-                                        total_position: '',
-                                        qualification_level: '',
-                                        benefits: '',
-                                        job_responsibilities: '',
-                                    };
-                                    this.$refs.bannar.value = null;
-                                }
-                            })
-                    }
-                })
-            },
-            editJobPost(id) {
-                axios.get('/edit-job-post/' + id)
-                    .then((response) => {
-                        if (response.data.success == true) {
-                            this.record.id = response.data.data.id;
-                            this.record.bannar = response.data.data.bannar;
-                            this.record.job_title = response.data.data.title;
-                            this.record.job_designation = response.data.data.designation;
-                            this.record.job_description = response.data.data.description;
-                            this.record.job_type = response.data.data.job_type;
-                            this.record.shift = response.data.data.shift;
-                            // this.record.industry =  response.data.data.id;
-                            // this.record.department =  response.data.data.id;
-                            this.record.experience = response.data.data.experience;
-                            this.record.salary_type = response.data.data.salary_type;
-                            this.record.salary_range = response.data.data.salary_range;
-                            this.record.gender = response.data.data.gender;
-                            this.record.location = response.data.data.location;
-                            this.record.total_positions = response.data.data.total_position;
-                            this.record.qualification_level = response.data.data.qualification_level;
-                            this.record.benefits = response.data.data.benefits;
-                            this.record.job_responsibilities = response.data.data.job_responsibilities;
-                            $('#PostNewJobModal').modal('show')
-                        } else {
-
-                        }
-                    });
-            },
-            clearRecord() {
-                this.record = {
-                    id: 0,
-                    bannar: '',
-                    job_title: '',
-                    job_designation: '',
-                    job_description: '',
-                    job_type: '',
-                    shift: '',
-                    industry: '',
-                    department: '',
-                    experience: '',
-                    salary_type: '',
-                    salary_range: '',
-                    gender: '',
-                    location: '',
-                    total_positions: '',
-                    qualification_level: '',
-                    benefits: '',
-                    job_responsibilities: '',
-                };
-            },
-            updateJobPost() {
-                Swal.fire({
-                    title: 'Are you sure to post this job?',
-                    text: "After Yes you your job will be live",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    cancelButtonText: 'No, keep Edit!',
-                    confirmButtonText: 'Yes, post it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        var $formData = $('#formData');
-                        var data = new FormData(formData);
-                        axios.post('/company/post-job', data)
-                            .then((res) => {
-                                if (res.data.success == false) {
-                                    this.errors = res.data.errors
-                                } else {
-                                    this.getCompanyJobs()
-                                    Swal.fire({
-                                        icon: 'success',
-                                        title: 'Posted!😎',
-                                        text: 'Your Job is Now Live',
-                                    })
-                                    this.errors = []
-                                    this.record = {
-                                        bannar: '',
-                                        title: '',
-                                        job_designation: '',
-                                        job_description: '',
-                                        job_type: '',
-                                        shift: '',
-                                        industry: '',
-                                        department: '',
-                                        experience: '',
-                                        salary_type: '',
-                                        salary_range: '',
-                                        gender: '',
-                                        location: '',
-                                        total_position: '',
-                                        qualification_level: '',
-                                        benefits: '',
-                                        job_responsibilities: '',
-                                    };
-                                    this.$refs.bannar.value = null;
-                                }
-                            })
-                    }
-                })
-            },
-            postNewJob() {
-                axios.get('/check-job-post-limit')
-                    .then((response) => {
-                        if (response.data.success == true) {
-                            $('#PostNewJobModal').modal('show')
-                        } else {
-                            if (response.data.response == 'expire') {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'Package Expire',
-                                    text: 'Your Package Expire and you not able to post more jobs ',
-                                    footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
-                                })
-                            } else if (response.data.response == 'pending') {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'Please Wait',
-                                    text: 'Please pay your dues to post jobs! Thanks',
-                                    footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
-                                })
-                            } else {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'Limit Exceeded',
-                                    text: 'Your Post Job Limit Exceeded',
-                                    footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
-                                })
-                            }
-                        }
+                        this.data = response.data.candidates
                     });
             },
         },
-        computed: {
-            checkdatediffer() {
-                dateDiff = (startDateString, endDateString) => {
-                    let start = moment($);
-                    let end = moment(endDateString);
-                    let duration = moment.duration(end.diff(start));
-                    let days = duration.asDays();
-                    return Math.round(days);
-                }
-            }
-
-            // document.querySelector(".diff").innerHTML = dateDiff("2020-09-11T18:30:00.000Z", "2020-09-15T18:30:00.000Z");
-        }
     };
 
 </script>

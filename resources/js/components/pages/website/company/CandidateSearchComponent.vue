@@ -139,13 +139,13 @@
                             <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
                             <div class="row m-0 justify-content-center">
-                                <div class="candidate-single" v-for="(item, index) in searchData.data"
+                                <div class="candidate-single" v-if="index < searchData.length" v-for="(item, index) in candidateToShow"
                                     :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+item.profile_image+')'}"></div>
+                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+searchData[index].profile_image+')'}"></div>
                                             <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">{{item.full_name}}</h6>
+                                                <h6 class="candidate-name mb-0">{{searchData[index].full_name}}</h6>
                                                 <!-- <div class="my-1">
                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -156,28 +156,28 @@
                                             </div>
                                         </div>
                                         <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">{{item.bio}}</p>
+                                        <p class="candidate-description my-1">{{searchData[index].bio}}</p>
                                         <ul class="candidate-list-meta">
                                             <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">{{item.gender}}</div>
+                                                <div class="hide-line-1">{{searchData[index].gender}}</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-graduation-cap"></i>
                                                 <div class="hide-line-1">BSSE</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">{{item.experience}} Years</div>
+                                                <div class="hide-line-1">{{searchData[index].experience}} Years</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1" v-for="(skills, index) in item.candidate_skills" :key="index">{{skills.name}},</div>
+                                                <div class="hide-line-1" v-for="(skills, index) in searchData[index].candidate_skills" :key="index">{{skills.name}},</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">{{item.city}}</div>
+                                                <div class="hide-line-1">{{searchData[index].city}}</div>
                                             </li>
 
                                         </ul>
 
                                         <ul class="candidate-list-fav">
-                                            <li class="w-100"><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: item.id } }">View Profile</router-link></li>
+                                            <li class="w-100"><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: searchData[index].id } }">View Profile</router-link></li>
                                             <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
                                                         class="far fa-heart"></i></a>
                                             </li>
@@ -190,11 +190,9 @@
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
-                <!-- Pagination Start -->
-                <div class="bottom-pagination">
-                    <pagination :data="searchData" @pagination-change-page="getCandidate"></pagination>
+                <div class="text-center" v-if="searchData.length">
+                    <button class="load-more-btn mx-auto" v-if="searchData.length != candidateToShow && totalcandidates > candidateToShow" @click="candidateToShow += 3">Load more</button>
                 </div>
-                <!-- Pagination End -->
             </div>
             <div class="common-sidebar">
                 <br><br>
@@ -505,7 +503,9 @@
                     keyword: '',
                     skills: [],
                 },
-                searchData: {},
+                searchData: '',
+                candidateToShow: 3,
+                totalcandidates: 0,
             }
         },
         mounted() {
@@ -543,18 +543,21 @@
                 axios.get('/get-candidates-search?page=' + page)
                     .then((response) => {
                         this.searchData = response.data
+                        this.totalcandidates = this.searchData.length
                     });
             },
             search() {
                 axios.post('/candidate-search', this.record)
                     .then((response) => {
-                        this.searchData = response
+                        this.searchData = response.data
+                        this.totalcandidates = this.searchData.length
                     });
             },
             keywordSearch() {
-                axios.get('/candidate-keyword-search/' + this.record.keyword)
+                axios.get('/candidate-keyword-search/'+this.record.keyword)
                     .then((response) => {
                         this.searchData = response.data
+                        this.totalcandidates = this.searchData.length
                     });
             },
         },

@@ -12,6 +12,10 @@ class CandidateAppliedJob extends Model
     protected $fillable = [
         'job_id',
         'company_id',
-        'user_id',
+        'candidate_id',
     ];
+    public function Candidates()
+    {
+        return $this->belongsTo(Candidate::class, 'candidate_id','id');
+    }
 }

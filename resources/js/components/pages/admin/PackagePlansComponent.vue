@@ -176,9 +176,9 @@
                                         confirmButtonText: 'Download Invoice'
                                         }).then((result) => {
                                         if (result.isConfirmed) {
-                                            axios.get('/download-invoice/'+res.data.order_id)
+                                            axios.get('api/download-invoice/'+res.data.order_id)
                                             .then((response) => {
-                                                this.plans = response.data
+                                            
                                             });
                                         }
                                     })

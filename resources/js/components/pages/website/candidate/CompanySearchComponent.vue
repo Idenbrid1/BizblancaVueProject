@@ -115,8 +115,8 @@
                         </div>
                     </div>
 
-                   <div class="text-center">
-                        <button class="load-more-btn mx-auto" @click="companiesToShow += 2">Load more</button>
+                   <div class="text-center" v-if="searchData.length">
+                        <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow && totalCompanies > companiesToShow" @click="companiesToShow += 2">Load more</button>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->

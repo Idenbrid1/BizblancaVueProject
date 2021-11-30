@@ -10,7 +10,9 @@ use App\Models\Candidate;
 use App\Models\CandidateAppliedJob;
 use App\Models\User;
 use App\Models\Company;
+use App\Models\Order;
 use App\Models\PasswordReset;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -82,6 +84,13 @@ class AuthenticationController extends Controller
                 $company->phone = $request->phone;
                 $company->user_id = $User->id;
                 $company->save(); 
+                $create_Order = Order::create([
+                    'package_id' => 1,
+                    'company_id' => $company->id,
+                    'user_id' => $User->id,
+                    'start_date' => Carbon::now(),
+                    'status' => 'approved',
+                ]);
             }
             if($request->type == 'candidate')
             {

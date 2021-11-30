@@ -223,14 +223,11 @@
 
                                 </div>
                             </div>
-                            <div v-if="searchData.length == 0">
-                                <h2>Data Not Found</h2>
-                            </div>
                             <!-- </div> -->
                         </div>
                     </div>
                     <div class="text-center" v-if="searchData.length">
-                        <button class="load-more-btn mx-auto" @click="jobToShow += 2">Load more</button>
+                        <button class="load-more-btn mx-auto" v-if="searchData.length != jobToShow && totalJobs > jobToShow " @click="jobToShow += 2">Load more</button>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->

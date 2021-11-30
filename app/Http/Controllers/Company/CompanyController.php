@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Auth;
 use File;
 use Validator;
 use App;
+use App\Models\CandidateAppliedJob;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 use Mail;
+use PDF;
 
 class CompanyController extends Controller
 {
@@ -23,40 +26,49 @@ class CompanyController extends Controller
     {
         $user_id = Auth::user()->id;
         $company = Company::where('user_id', $user_id)->with(['Order', 'Package'])->first();
-        if($company->order['status'] == 'active')
-        {
-            if($company->order['job_post'] == $company->post_job_count)
+        $order = Order::where('company_id', $company->id)->first();
+        if($order){
+            if($company->order['status'] == 'active')
             {
+                if($company->order['job_post'] == $company->post_job_count)
+                {
+                    return response()->json([
+                        'success' => false,
+                        'company' => $company,
+                        'response' => 'exceeded'
+                    ]);
+                }
+                else{
+                    return response()->json([
+                        'success' => true,
+                        'company' => $company,
+                    ]);
+                }
+            }else if($company->order['status'] == 'expire'){
                 return response()->json([
-                    'success' => false,
                     'company' => $company,
-                    'response' => 'exceeded'
+                    'response' => 'expire'
+                ]);
+            }
+            else if($company->order['status'] == 'pending'){
+                return response()->json([
+                    'company' => $company,
+                    'response' => 'pending'
                 ]);
             }
             else{
                 return response()->json([
-                    'success' => true,
                     'company' => $company,
+                    'response' => 0
                 ]);
             }
-        }else if($company->order['status'] == 'expire'){
-            return response()->json([
-                'company' => $company,
-                'response' => 'expire'
-            ]);
-        }
-        else if($company->order['status'] == 'pending'){
-            return response()->json([
-                'company' => $company,
-                'response' => 'pending'
-            ]);
-        }
-        else{
-            return response()->json([
-                'company' => $company,
-                'response' => 0
-            ]);
-        }
+        }else{
+                return response()->json([
+                    'company' => $company,
+                    'response' => 0
+                ]);
+            }
+        
     }
 
     public function updateCompanyBasicInformation(Request $request)
@@ -258,6 +270,9 @@ class CompanyController extends Controller
             $user_id = Auth::user()->id;
             $company = Company::where('user_id', $user_id)->first();
             $package = Package::find($package_id);
+            if($order_exist = Order::where('company_id', $company->id)->first()){
+                $order_exist->delete();
+            }
             $create_Order = Order::create([
                 'package_id' => $package->id,
                 'company_id' => $company->id,
@@ -288,44 +303,71 @@ class CompanyController extends Controller
         $user_id = Auth::user()->id;
         $company = Company::where('user_id', $user_id)->with('Order')->first();
         $package = Package::find($company->package_id);
-        if($company->order['status'] == 'active')
-        {
-            if($package->job_post == $company->post_job_count)
+        $order = Order::where('company_id', $company->id)->first();
+        if($order){
+            if($order->status == 'active')
+            {
+                if($package->job_post == $company->post_job_count)
+                {
+                    return response()->json([
+                        'success' => false,
+                        'limit' => 'exceeded'
+                    ]);
+                }
+                else{
+                    return response()->json([
+                        'success' => true,
+                    ]);
+                }
+            }else if($company->order['status'] == 'expire'){
+                return response()->json([
+                    'success' => false,
+                    'response' => 'expire'
+                ]);
+            }
+            else
             {
                 return response()->json([
                     'success' => false,
-                    'limit' => 'exceeded'
+                    'response' => 'pending'
                 ]);
             }
-            else{
+        }else
+            {
                 return response()->json([
-                    'success' => true,
+                    'success' => false,
+                    'response' => 'pending'
                 ]);
             }
-        }else if($company->order['status'] == 'expire'){
-            return response()->json([
-                'success' => false,
-                'response' => 'expire'
-            ]);
-        }
-        else
-        {
-            return response()->json([
-                'success' => false,
-                'response' => 'pending'
-            ]);
-        }
+        
     }
-
     public function downloadInvoice($id)
     {
         $order = Order::find($id);
         $company = Company::where('id', $order->company_id)->first();
-        
-        // $view = view('pdf.unpaidInvoicePDF', compact($company))->render();
-        $pdf = PDF::loadView('pdf.invoice', $company); 
-        return $pdf->stream('medium.pdf');
-        // $pdf = PDF::loadView($view);
-        // return $pdf->download('test.pdf');
+        // $pdf = PDF::loadView('pdf.invoice',compact('company'))->setPaper('a4', 'landscape');
+        // return $pdf->stream('invoice.pdf');
+
+        $snappy = App::make('snappy.pdf');
+        $html = '<h1>Bill</h1><p>You owe me money, dude.</p>';
+        $snappy->generateFromHtml($html, '/pdf/bill-123.pdf');
+        $snappy->generate('http://www.github.com', '/tmp/github.pdf');
+        //Or output:
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            array(
+                'Content-Type'          => 'application/pdf',
+                'Content-Disposition'   => 'attachment; filename="file.pdf"'
+            )
+        );
+    }
+
+    public function getAppliedApplicantsList($job_id)
+    {
+        $candidates = CandidateAppliedJob::where('job_id', $job_id)->with('Candidates')->get();
+        return response()->json([
+            'candidates' => $candidates,
+        ]);
     }
 }
