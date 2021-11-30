@@ -278,72 +278,61 @@
                     Get scouted or headhunted by companies you never imagined you could
                     work for.
                 </p>
-                <div class="row justify-content-center list-socaial">
-                    <div class="col-md-4 p-0 my-2">
+                <div class="list-socaial">
+                    <div class="services-box">
                         <div class="list__card">
                             <div class="list__card-image-container">
                                 <div class="list__card-image">
-                                    <img src="/website/assets/images/Icon awesome-question-circle.svg" />
-                                </div>
+                                    <img src="/website/assets/images/Icon awesome-question-circle.svg"></div>
                             </div>
                             <div class="list__card-content">
-                                <h3 class="h5 list__card-title">FAQs</h3>
+                                <h3 class="h5 list__card-title">FAQS</h3>
                                 <p class="list__card-description body--sm">
-                                    Here are answers to frequently asked questions about
-                                    BizBlanca. Please refer to it. If you don’t find the question
-                                    you’re looking for, from the Contact Us section you can send
-                                    your inquires to the BizBlanca business team directly.
+                                    Here are answers to frequently asked questions about BizBlanca. Please refer to it.
+                                    If you don’t find the question you’re looking for, from the Contact Us section you
+                                    can send your inquires to the BizBlanca business team directly.
                                 </p>
-                            </div>
-                            <a class="list__card-link minor-button-right" tabindex="0"
-                                href="/tools/reed-salary-guides-2021">Read more
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            </div> <a tabindex="0" href="/tools/reed-salary-guides-2021"
+                                class="list__card-link minor-button-right">Read more
+                                <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-4 p-0 my-2">
+                    <div class="services-box">
                         <div class="list__card">
                             <div class="list__card-image-container">
-                                <div class="list__card-image">
-                                    <img src="/website/assets/images/Group-1360.png" />
-                                </div>
+                                <div class="list__card-image"><img src="/website/assets/images/Group-1360.png"></div>
                             </div>
                             <div class="list__card-content">
                                 <h3 class="h5 list__card-title">Social Media of BizBlanca</h3>
                                 <p class="list__card-description body--sm">
-                                    BizBlanca receives job posts from many IT companies every day.
-                                    In addition, We received CVs from many candidates too.
-                                    BizBlanca also conducts headhunting and has excellent human
-                                    resources in our DB that are not even in the market. Stay
-                                    updated on BizBlanca social media.
+                                    BizBlanca receives job posts from many IT companies every day. In addition, We
+                                    received CVs from many candidates too. BizBlanca also conducts headhunting and has
+                                    excellent human resources in our DB that are not even in the market. Stay updated on
+                                    BizBlanca social media.
                                 </p>
-                            </div>
-                            <a class="list__card-link minor-button-right" tabindex="0"
-                                href="/tools/reed-salary-guides-2021">Read more
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            </div> <a tabindex="0" href="/tools/reed-salary-guides-2021"
+                                class="list__card-link minor-button-right">Read more
+                                <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-4 p-0 my-2">
+                    <div class="services-box">
                         <div class="list__card">
                             <div class="list__card-image-container">
-                                <div class="list__card-image">
-                                    <img src="/website/assets/images/Group 1361.svg" />
-                                </div>
+                                <div class="list__card-image"><img src="/website/assets/images/Group 1361.svg"></div>
                             </div>
                             <div class="list__card-content">
                                 <h3 class="h5 list__card-title">
-                                    BizBlanca ONLINE SALON information
+                                    BizBlanca ONLINESALON information
                                 </h3>
                                 <p class="list__card-description body--sm">
-                                    In this webinar, our BizBlanca Business Development Executive
-                                    Mujtaba gives you an eye opening speech for career with
-                                    BizBlanca. For companies, we are guiding our top tips for you
-                                    to use on interviewing candidates to get the most out of your
-                                    time with applicant.
+                                    In this webinar, our BizBlanca Business Development Executive Mujtaba gives you an
+                                    eye opening speech for career with BizBlanca. For companies, we are guiding our top
+                                    tips for you to use on interviewing candidates to get the most out of your time with
+                                    applicant.
                                 </p>
-                            </div>
-                            <a class="list__card-link minor-button-right" tabindex="0"
-                                href="/tools/reed-salary-guides-2021">Read more
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            </div> <a tabindex="0" href="/tools/reed-salary-guides-2021"
+                                class="list__card-link minor-button-right">Read more
+                                <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -495,8 +484,9 @@
                                 <div class="col-12 px-2">
                                     <div class="form-group">
                                         <label for="">Message</label>
-                                        <textarea rows="4" type="text" class="form-control pl-3 message-box" v-model="contact_us.message"
-                                            placeholder="Message" name="" id="" required></textarea>
+                                        <textarea rows="4" type="text" class="form-control pl-3 message-box"
+                                            v-model="contact_us.message" placeholder="Message" name="" id=""
+                                            required></textarea>
                                         <small>
                                             <span v-if="errors.message != null" class="text-danger float-left">
                                                 {{errors.message[0]}}
@@ -560,7 +550,7 @@
             CompanyNavbar,
             CandidateNavbar,
         },
-        created(){
+        created() {
             this.checkRole()
         },
         mounted() {
@@ -632,46 +622,43 @@
                     prevEl: ".swiper-button-prev",
                 },
             });
-            setTimeout(()=>{
+            setTimeout(() => {
                 this.expireTodayJobs()
-            },5000)
+            }, 5000)
         },
-        methods:{
+        methods: {
             checkRole() {
                 axios.get('navbar-check-roles')
-                .then((response) => {
-                    if(response.data.success)
-                    {
-                        this.isRole = response.data.role
-                    }
-                });
+                    .then((response) => {
+                        if (response.data.success) {
+                            this.isRole = response.data.role
+                        }
+                    });
             },
-            expireTodayJobs(){
+            expireTodayJobs() {
                 axios.get('expire-today-jobs')
             },
-            submitContactUs(){
+            submitContactUs() {
                 Swal.fire({
-                    text:  'Please Wait We SettingUp Your Dashboard',
+                    text: 'Please Wait We SettingUp Your Dashboard',
                     didOpen: () => {
-                        Swal.showLoading() 
+                        Swal.showLoading()
                     },
                 })
                 axios.post('/submit-contact-us', this.contact_us)
-                .then((response) => {
-                    if(response.data.success == true)
-                    {
-                        Swal.close()
-                        Swal.fire({
-                            icon:  'success',
-                            title: 'Contact us query raised',
-                            text:  'Please wait we will contact you as soon as possible! THANKS',
-                        })
-                    }
-                    else{
-                        Swal.close()
-                        this.errors = response.data.errors
-                    }
-                });
+                    .then((response) => {
+                        if (response.data.success == true) {
+                            Swal.close()
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Contact us query raised',
+                                text: 'Please wait we will contact you as soon as possible! THANKS',
+                            })
+                        } else {
+                            Swal.close()
+                            this.errors = response.data.errors
+                        }
+                    });
             }
         }
     };

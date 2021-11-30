@@ -1364,13 +1364,11 @@ body {
 
 .list__card {
     border: 1px solid #081351;
-    margin: 0 15px;
     padding: 10px;
     height: 100%;
-}
-
-.list__card {
-    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 }
 
 .list__card-link {
@@ -1383,6 +1381,9 @@ body {
     background-color: #081351;
     text-align: center;
     padding: 12px;
+    margin: 0px auto;
+    height: 50px;
+    width: 200px;
 }
 
 .list__card-link:after {
@@ -1413,27 +1414,15 @@ body {
     text-align: center;
     position: relative;
 }
-
-.list__card-content {
-    text-align: center;
-}
-
-.list__card-content {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    flex-grow: 1;
-    padding: 2rem 0;
-    height: 358px;
-}
-
 .list__card-title {
     margin-bottom: .4rem;
     color: #353E71;
     font-size: 24px;
     height: 60px;
 }
-
+.list__card-description{
+    margin: 0px;
+}
 .list__card-icon:before {
     display: block;
     position: absolute;
@@ -3408,19 +3397,6 @@ body {
 }
 
 /*hapening section*/
-
-.list__card {
-    border: 1px solid #081351;
-    margin: 0 15px;
-    padding: 10px;
-    height: 100%;
-}
-
-.list__card {
-    padding: 2rem 2rem;
-}
-
-
 
 .list__card-link:after {
     display: block;
@@ -6940,26 +6916,31 @@ progress {
     font-size: 16px;
     color: #000000;
 }
-.info-about-office{
+
+.info-about-office {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.info-about-office>p{
+
+.info-about-office>p {
     text-align: center;
 }
-.info-about-office>p>span{
+
+.info-about-office>p>span {
     display: block;
     font-size: 16px;
     font-weight: 500;
     color: #FFFFFF;
 }
-.info-about-office>p>i{
+
+.info-about-office>p>i {
     font-size: 20px;
     color: #FFDE59;
 }
-.contact-feilds{
+
+.contact-feilds {
     background: #F1F1F1 0% 0% no-repeat padding-box;
     border-radius: 5px;
     border: none;
@@ -6968,33 +6949,40 @@ progress {
     color: #757575;
     border-left: 5px solid #081351;
 }
-.contact-feilds:focus{
+
+.contact-feilds:focus {
     outline: none;
     outline-style: none;
 }
+
 /* terms-condition */
-.terms-condition-container{
+.terms-condition-container {
     padding: 50px 0px;
 }
-.terms-condition-queries{
+
+.terms-condition-queries {
     margin: 0px;
     padding: 0px;
 }
-.terms-condition-queries>li{
+
+.terms-condition-queries>li {
     padding: 10px 0px;
 }
-.terms-condition-queries>li>h1{
+
+.terms-condition-queries>li>h1 {
     font-size: 32px;
     color: #000000;
     font-weight: bold;
 }
-.terms-condition-queries>li>p{
+
+.terms-condition-queries>li>p {
     margin: 0px;
     font-size: 16px;
     color: #000000;
 }
+
 /* faq */
-.faq-title{
+.faq-title {
     padding: 15px;
     width: 100%;
     background: #081351;
@@ -7005,17 +6993,18 @@ progress {
     color: #ffffff;
     margin: 20px 0px;
 }
-.faq-title > h1{
+
+.faq-title>h1 {
     font-size: 50px;
     font-weight: bold;
     margin: 0px;
     color: #ffffff;
 }
-.faq-title > p{
+
+.faq-title>p {
     font-size: 20px;
 }
-.faq-tabs-list > li > a
-{
+.faq-tabs-list>li>a {
     width: 160px;
     height: 80px;
     background: #F5F5F5 0% 0% no-repeat padding-box;
@@ -7031,11 +7020,82 @@ progress {
     transition: .5s all;
     text-align: center;
 }
-.faq-tabs-list > li > a:hover{
+
+.faq-tabs-list>li>a:hover {
     color: #ffffff;
     background: #081351;
 }
-.faq-tabs-list > li > a.active{
+
+.faq-tabs-list>li>a.active {
     color: #ffffff;
-    background:#081351 !important;
+    background: #081351 !important;
 }
+
+/* privacy policy */
+.privacy-policy-container {
+    padding: 50px 0px;
+}
+
+.privacy-policy-queries {
+    margin: 0px;
+    padding: 0px;
+}
+
+.privacy-policy-queries>li {
+    padding: 10px 0px;
+}
+
+.privacy-policy-queries>li>h1 {
+    font-size: 32px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.privacy-policy-queries>li>p {
+    margin: 0px;
+    font-size: 16px;
+    color: #000000;
+}
+
+/* privacy policy */
+/* services */
+.list-services, .list-socaial{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    justify-content: space-between;
+}
+.list-socaial > .services-box{
+    margin: 15px 0px;
+}
+.list-services > .services-box{
+    width: 340px;
+    margin: 15px 0px;
+}
+.list-socaial > .services-box{
+    width: 320px;
+}
+.list-socaial .list__card{
+    padding: 30px 15px 15px 15px;
+}
+.list-services .list__card {
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    padding: 15px;
+    margin: 0px;
+}
+
+.list-services .list__card-title {
+    width: fit-content;
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 3px solid #081351;
+}
+.list-services .list__card-content {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* services */

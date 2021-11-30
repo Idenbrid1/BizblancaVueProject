@@ -4,8 +4,21 @@
         height: 120px;
         width: 120px;
     }
-    .terms-condition-container{
+    .terms-condition-container, .privacy-policy-container{
         padding: 0px;
+    }
+    .terms-condition-queries>li>h1,
+    .privacy-policy-queries>li>h1
+    {
+        font-size: 20px;
+    }
+    .list-services > .services-box, .list-socaial > .services-box{
+        width:100%;
+    }
+    .terms-condition-queries>li>p
+    .privacy-policy-queries>li>p
+    {
+        font-size: 12px;
     }
     .faq-tabs-list > li > a{
         width: 100px;
@@ -23,12 +36,6 @@
     }
     .contact-page-feilds, .office-info{
         width: 100%;
-    }
-    .terms-condition-queries>li>h1{
-        font-size: 20px;
-    }
-    .terms-condition-queries>li>p{
-        font-size: 12px;
     }
     .msg-user-name > h2, .msg-title{
         font-size: 14px;
@@ -552,6 +559,9 @@
     }
     .contact-page-feilds, .office-info{
         width: 100%;
+    }
+    .list-services > .services-box, .list-socaial > .services-box{
+        width:46%;
     }
  }
 @media screen and (max-width:993px) {
