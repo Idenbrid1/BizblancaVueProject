@@ -3092,6 +3092,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -21696,6 +21700,15 @@ var staticRenderFns = [
                   }),
                   _vm._v(" "),
                   _c("span", [_vm._v("0301-4345825")]),
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _c("i", {
+                    staticClass: "fas fa-envelope",
+                    attrs: { "aria-hidden": "true" },
+                  }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("info@bizblanca.com")]),
                 ]),
               ]),
               _vm._v(" "),

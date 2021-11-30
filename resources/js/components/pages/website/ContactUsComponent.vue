@@ -60,6 +60,10 @@
                                 <i class="fa fa-phone-alt" aria-hidden="true"></i>
                                 <span>0301-4345825</span>
                             </p>
+                            <p>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span>info@bizblanca.com</span>
+                            </p>
                         </div>
                         <div style="width: 100%">
                             <iframe width="100%" height="260" frameborder="0" scrolling="no" marginheight="0"

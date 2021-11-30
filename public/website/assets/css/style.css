@@ -6924,9 +6924,9 @@ progress {
 }
 
 .info-about-office {
-    height: 200px;
     background: #081351;
     border-radius: 5px;
+    padding: 15px;
 }
 
 .contact-page-title {
@@ -6939,4 +6939,23 @@ progress {
     /* margin: 0px; */
     font-size: 16px;
     color: #000000;
+}
+.info-about-office{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-about-office>p{
+    text-align: center;
+}
+.info-about-office>p>span{
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.info-about-office>p>i{
+    font-size: 20px;
+    color: #FFDE59;
 }
