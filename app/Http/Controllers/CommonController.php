@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Candidate;
 use App\Models\CandidateSkill;
 use App\Models\Company;
+use App\Models\ContactUs;
 use App\Models\JobPost;
 use App\Models\Order;
 use App\Models\Package;
 use App\Models\Pakage;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use DB;
+use Validator;
+
 
 class CommonController extends Controller
 {
@@ -132,11 +136,56 @@ class CommonController extends Controller
 
     public function expireTodayJobs()
     {
-        $fetchList = Order::where(['status'=>'active', 'end_date'=>Carbon::now()])->get();
-        
-        if(count($fetchList) > 0){
-            $fetchList->status = 'expire';
-            $fetchList->update();
+        // $fetchList = Order::where('status', 'active')->toSql();
+        // $todaydate = Carbon::now();
+        // return DB::select("SELECT * FROM `orders` WHERE  `end_date` = '$todaydate'");
+    }
+    public function contactUs(Request $request)
+    {
+        $attributeNames = [
+            'name' => 'Name',
+            'email' => 'Email',
+            'phone' => 'Phone',
+            'message' => 'Message',
+        ];
+
+        $messages = [
+            // 'text.unique_with' => 'This Company Already Exist!',
+        ];
+
+        $rules = [
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'message' => 'required',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+        $validator->setAttributeNames($attributeNames);
+
+        if($validator->fails()){
+            return response()->json([
+                'success' => false,
+                'errors' => $validator->errors(),
+            ]);
+        }
+        else
+        {
+            $contact_us = ContactUs::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'message' => $request->message,
+            ]);
+            if($contact_us){
+                return response()->json([
+                    'success' => true,
+                ]);
+            }else{
+                return response()->json([
+                    'success' => false,
+                ]);
+            }
         }
     }
 

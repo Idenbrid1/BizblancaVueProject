@@ -456,36 +456,56 @@
                                 <div class="col-12 px-2">
                                     <div class="form-group">
                                         <label for="">Full Name</label>
-                                        <input type="text" class="form-control pl-2"
+                                        <input type="text" class="form-control pl-2" v-model="contact_us.name"
                                             placeholder="Please enter your full name" name="" id="" maxlength="50"
                                             required />
+                                        <small>
+                                            <span v-if="errors.name != null" class="text-danger float-left">
+                                                {{errors.name[0]}}
+                                            </span>
+                                        </small>
                                     </div>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
                                         <label for="">Email</label>
-                                        <input type="email" class="form-control pl-2"
+                                        <input type="email" class="form-control pl-2" v-model="contact_us.email"
                                             placeholder="Please enter your email" name="" id="" maxlength="50"
                                             required />
+                                        <small>
+                                            <span v-if="errors.email != null" class="text-danger float-left">
+                                                {{errors.email[0]}}
+                                            </span>
+                                        </small>
                                     </div>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
                                         <label for="">Phone Number</label>
-                                        <input type="number" class="form-control pl-2"
+                                        <input type="number" class="form-control pl-2" v-model="contact_us.phone"
                                             placeholder="Please enter your phone number" name="" id="" maxlength="20"
                                             required />
+                                        <small>
+                                            <span v-if="errors.phone != null" class="text-danger float-left">
+                                                {{errors.phone[0]}}
+                                            </span>
+                                        </small>
                                     </div>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
                                         <label for="">Message</label>
-                                        <textarea rows="4" type="text" class="form-control pl-3 message-box"
+                                        <textarea rows="4" type="text" class="form-control pl-3 message-box" v-model="contact_us.message"
                                             placeholder="Message" name="" id="" required></textarea>
+                                        <small>
+                                            <span v-if="errors.message != null" class="text-danger float-left">
+                                                {{errors.message[0]}}
+                                            </span>
+                                        </small>
                                     </div>
                                 </div>
                                 <div class="col-12 px-2 py-4">
-                                    <a href="./comming.html" class="contact-submit-anker">Send
+                                    <a @click.prevent="submitContactUs()" class="contact-submit-anker">Send
                                     </a>
                                 </div>
                             </div>
@@ -526,6 +546,13 @@
         data() {
             return {
                 isRole: '',
+                contact_us: {
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: '',
+                },
+                errors: []
             };
         },
         components: {
@@ -621,6 +648,30 @@
             },
             expireTodayJobs(){
                 axios.get('expire-today-jobs')
+            },
+            submitContactUs(){
+                Swal.fire({
+                    text:  'Please Wait We SettingUp Your Dashboard',
+                    didOpen: () => {
+                        Swal.showLoading() 
+                    },
+                })
+                axios.post('/submit-contact-us', this.contact_us)
+                .then((response) => {
+                    if(response.data.success == true)
+                    {
+                        Swal.close()
+                        Swal.fire({
+                            icon:  'success',
+                            title: 'Contact us query raised',
+                            text:  'Please wait we will contact you as soon as possible! THANKS',
+                        })
+                    }
+                    else{
+                        Swal.close()
+                        this.errors = response.data.errors
+                    }
+                });
             }
         }
     };

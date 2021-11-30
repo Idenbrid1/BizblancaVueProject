@@ -63,6 +63,7 @@ Route::post('/reset-password', [App\Http\Controllers\Admin\AuthenticationControl
 Route::get('/reset-password/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPassword']);
 Route::post('/complete-reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordFormPost']);
 Route::get('expire-today-jobs', [App\Http\Controllers\CommonController::class, 'expireTodayJobs']);
+Route::post('/submit-contact-us', [App\Http\Controllers\CommonController::class, 'contactUs']);
 
 //samad 
 Route::get('/login', function () {
