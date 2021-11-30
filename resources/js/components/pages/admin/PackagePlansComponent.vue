@@ -176,10 +176,10 @@
                                         confirmButtonText: 'Download Invoice'
                                         }).then((result) => {
                                         if (result.isConfirmed) {
-                                            axios.get('api/download-invoice/'+res.data.order_id)
-                                            .then((response) => {
-                                            
-                                            });
+                                            // axios.get('download-invoice/'+res.data.order_id)
+                                            // .then((response) => {
+                                                window.open('/download-invoice/' + res.data.order_id, '_blank')
+                                            // });
                                         }
                                     })
                                 }

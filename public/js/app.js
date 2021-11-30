@@ -2282,7 +2282,9 @@ __webpack_require__.r(__webpack_exports__);
                 confirmButtonText: 'Download Invoice'
               }).then(function (result) {
                 if (result.isConfirmed) {
-                  axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/download-invoice/' + res.data.order_id).then(function (response) {});
+                  // axios.get('download-invoice/'+res.data.order_id)
+                  // .then((response) => {
+                  window.open('/download-invoice/' + res.data.order_id, '_blank'); // });
                 }
               });
             }
@@ -4672,6 +4674,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     this.checkRole();
   },
   mounted: function mounted() {
+    var _this = this;
+
     var swiper = new Swiper(".BlogsSwiper", _defineProperty({
       slidesPerView: 1,
       spaceBetween: 1,
@@ -4739,16 +4743,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         prevEl: ".swiper-button-prev"
       }
     });
+    setTimeout(function () {
+      _this.expireTodayJobs();
+    }, 5000);
   },
   methods: {
     checkRole: function checkRole() {
-      var _this = this;
+      var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
         if (response.data.success) {
-          _this.isRole = response.data.role;
+          _this2.isRole = response.data.role;
         }
       });
+    },
+    expireTodayJobs: function expireTodayJobs() {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('expire-today-jobs');
     }
   }
 });

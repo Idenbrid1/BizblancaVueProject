@@ -605,6 +605,9 @@
                     prevEl: ".swiper-button-prev",
                 },
             });
+            setTimeout(()=>{
+                this.expireTodayJobs()
+            },5000)
         },
         methods:{
             checkRole() {
@@ -616,6 +619,9 @@
                     }
                 });
             },
+            expireTodayJobs(){
+                axios.get('expire-today-jobs')
+            }
         }
     };
 

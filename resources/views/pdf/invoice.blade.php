@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>INVOICE BIZBLANCA</title>
 </head>
+
 <body>
-    <h1>{{$company->created_at}}</h1>
+    <table>
+        <tr>
+            <td>© IDENBRID INC.™</td>
+            <td>176-Y, DHA Phase 4, Lahore</td>
+            <t>0301-4345825</t>
+            <div><a href="mailto:company@example.com">company@idenbrid.com</a></div>
+        </tr>
+    </table>
 </body>
+
 </html>

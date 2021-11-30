@@ -284,6 +284,10 @@ class CompanyController extends Controller
             $company->package_id = $package->id;
             $company->order_id = $create_Order->id;
             $company->update();
+
+            $pdf = PDF::loadView('pdf.invoice',compact('company'))->setPaper('a4', 'landscape');
+            Storage::put('public/pdf/'.$company->company_name.'-invoice.pdf', $pdf->output());
+            
             Mail::to($company->email)->send(new SendInvoiceMail($company));
             return response()->json([
                 'success' => true,
@@ -345,22 +349,9 @@ class CompanyController extends Controller
     {
         $order = Order::find($id);
         $company = Company::where('id', $order->company_id)->first();
-        // $pdf = PDF::loadView('pdf.invoice',compact('company'))->setPaper('a4', 'landscape');
-        // return $pdf->stream('invoice.pdf');
+        $pdf = PDF::loadView('pdf.invoice',compact('company'))->setPaper('a4', 'landscape');
+        return $pdf->download('invoice.pdf');
 
-        $snappy = App::make('snappy.pdf');
-        $html = '<h1>Bill</h1><p>You owe me money, dude.</p>';
-        $snappy->generateFromHtml($html, '/pdf/bill-123.pdf');
-        $snappy->generate('http://www.github.com', '/tmp/github.pdf');
-        //Or output:
-        return new Response(
-            $snappy->getOutputFromHtml($html),
-            200,
-            array(
-                'Content-Type'          => 'application/pdf',
-                'Content-Disposition'   => 'attachment; filename="file.pdf"'
-            )
-        );
     }
 
     public function getAppliedApplicantsList($job_id)
