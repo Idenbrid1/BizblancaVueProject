@@ -105,7 +105,7 @@
                         <div class="job-list-wrap">
                             <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
-                            <div class="row m-0">
+                            <div class="row m-0 justify-content-center">
                                 <div class="candidate-single">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
@@ -284,7 +284,7 @@
                         <div class="job-list-wrap">
                             <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
-                            <div class="row m-0">
+                            <div class="row m-0 justify-content-center">
                                 <div class="candidate-single">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">

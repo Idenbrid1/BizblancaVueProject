@@ -40746,7 +40746,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _c("div", { staticClass: "job-list-wrap" }, [
-        _c("div", { staticClass: "row m-0" }, [
+        _c("div", { staticClass: "row m-0 justify-content-center" }, [
           _c("div", { staticClass: "candidate-single" }, [
             _c("div", { staticClass: "candidate-list-content" }, [
               _c("div", { staticClass: "candidate-image" }, [
@@ -41036,7 +41036,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _c("div", { staticClass: "job-list-wrap" }, [
-        _c("div", { staticClass: "row m-0" }, [
+        _c("div", { staticClass: "row m-0 justify-content-center" }, [
           _c("div", { staticClass: "candidate-single" }, [
             _c("div", { staticClass: "candidate-list-content" }, [
               _c("div", { staticClass: "candidate-image" }, [
