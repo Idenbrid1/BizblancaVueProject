@@ -66,7 +66,7 @@
                             </p>
                         </div>
                         <div style="width: 100%">
-                            <iframe width="100%" height="230" frameborder="0" scrolling="no" marginheight="0"
+                            <iframe width="100%" height="220" frameborder="0" scrolling="no" marginheight="0"
                                 marginwidth="0"
                                 src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=176%20Y%20block%20%20DHA%20Phase%203%20%20Lahore%20Cantt%20%20Pakistan+(Idenbrid)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                             </iframe>
