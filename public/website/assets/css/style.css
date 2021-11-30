@@ -6925,7 +6925,7 @@ progress {
 
 .info-about-office {
     background: #081351;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
     padding: 15px;
 }
 
@@ -6958,4 +6958,17 @@ progress {
 .info-about-office>p>i{
     font-size: 20px;
     color: #FFDE59;
+}
+.contact-feilds{
+    background: #F1F1F1 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: #757575;
+    border-left: 5px solid #081351;
+}
+.contact-feilds:focus{
+    outline: none;
+    outline-style: none;
 }

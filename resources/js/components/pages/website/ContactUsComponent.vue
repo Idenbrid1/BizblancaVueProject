@@ -18,29 +18,29 @@
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <input type="text" class="form-control pl-2"
-                                            placeholder="Please enter your full name" name="" id="" maxlength="50"
+                                        <input type="text" class="form-control contact-feilds"
+                                            placeholder="Enter Name" name="" id="" maxlength="50"
                                             required />
                                     </div>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <input type="email" class="form-control pl-2"
-                                            placeholder="Please enter your email" name="" id="" maxlength="50"
+                                        <input type="email" class="form-control contact-feilds"
+                                            placeholder="Enter Email" name="" id="" maxlength="50"
                                             required />
                                     </div>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <input type="number" class="form-control pl-2"
-                                            placeholder="Please enter your phone number" name="" id="" maxlength="20"
+                                        <input type="number" class="form-control contact-feilds"
+                                            placeholder="Enter Phone" name="" id="" maxlength="20"
                                             required />
                                     </div>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <textarea rows="4" type="text" class="form-control pl-3 message-box"
-                                            placeholder="Message" name="" id="" required></textarea>
+                                        <textarea rows="4" type="text" class="form-control contact-feilds message-box"
+                                            placeholder="Enter Message" name="" id="" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12 px-2 py-4">
@@ -66,7 +66,7 @@
                             </p>
                         </div>
                         <div style="width: 100%">
-                            <iframe width="100%" height="260" frameborder="0" scrolling="no" marginheight="0"
+                            <iframe width="100%" height="230" frameborder="0" scrolling="no" marginheight="0"
                                 marginwidth="0"
                                 src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=176%20Y%20block%20%20DHA%20Phase%203%20%20Lahore%20Cantt%20%20Pakistan+(Idenbrid)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                             </iframe>

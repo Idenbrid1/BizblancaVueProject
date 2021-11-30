@@ -21606,10 +21606,10 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-12 px-2" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("input", {
-                        staticClass: "form-control pl-2",
+                        staticClass: "form-control contact-feilds",
                         attrs: {
                           type: "text",
-                          placeholder: "Please enter your full name",
+                          placeholder: "Enter Name",
                           name: "",
                           id: "",
                           maxlength: "50",
@@ -21622,10 +21622,10 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-12 px-2" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("input", {
-                        staticClass: "form-control pl-2",
+                        staticClass: "form-control contact-feilds",
                         attrs: {
                           type: "email",
-                          placeholder: "Please enter your email",
+                          placeholder: "Enter Email",
                           name: "",
                           id: "",
                           maxlength: "50",
@@ -21638,10 +21638,10 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-12 px-2" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("input", {
-                        staticClass: "form-control pl-2",
+                        staticClass: "form-control contact-feilds",
                         attrs: {
                           type: "number",
-                          placeholder: "Please enter your phone number",
+                          placeholder: "Enter Phone",
                           name: "",
                           id: "",
                           maxlength: "20",
@@ -21654,11 +21654,11 @@ var staticRenderFns = [
                   _c("div", { staticClass: "col-12 px-2" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("textarea", {
-                        staticClass: "form-control pl-3 message-box",
+                        staticClass: "form-control contact-feilds message-box",
                         attrs: {
                           rows: "4",
                           type: "text",
-                          placeholder: "Message",
+                          placeholder: "Enter Message",
                           name: "",
                           id: "",
                           required: "",
@@ -21716,7 +21716,7 @@ var staticRenderFns = [
                 _c("iframe", {
                   attrs: {
                     width: "100%",
-                    height: "260",
+                    height: "230",
                     frameborder: "0",
                     scrolling: "no",
                     marginheight: "0",
