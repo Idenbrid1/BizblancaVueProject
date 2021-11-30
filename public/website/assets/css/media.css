@@ -4,6 +4,9 @@
         height: 120px;
         width: 120px;
     }
+    .contact-page-feilds, .office-info{
+        width: 100%;
+    }
     .msg-user-name > h2, .msg-title{
         font-size: 14px;
     }
@@ -524,11 +527,17 @@
     .job-list{
         margin: 7px;
     }
+    .contact-page-feilds, .office-info{
+        width: 100%;
+    }
  }
 @media screen and (max-width:993px) {
     .heading-ankers > li > h6 {
         margin: 0px;
         width: auto;
+    }
+    .contact-page-feilds, .office-info{
+        width: 100%;
     }
 }
 @media screen and (max-width:320px) {
