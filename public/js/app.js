@@ -49088,31 +49088,32 @@ var render = function () {
                                       1
                                     ),
                                     _vm._v(" "),
-                                    _vm.searchData[index].is_wish_listed ==
-                                    false
-                                      ? _c("li", [
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "candidate-wishlist-btn ml-2 ",
-                                              on: {
-                                                click: function ($event) {
-                                                  return _vm.addToWishList(
-                                                    _vm.searchData[index]
-                                                      .candidate.id
-                                                  )
-                                                },
-                                              },
+                                    _c("li", [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "candidate-wishlist-btn ml-2 ",
+                                          on: {
+                                            click: function ($event) {
+                                              return _vm.addToWishList(
+                                                _vm.searchData[index].candidate
+                                                  .id
+                                              )
                                             },
-                                            [
-                                              _c("i", {
-                                                staticClass: "far fa-heart",
-                                              }),
-                                            ]
-                                          ),
-                                        ])
-                                      : _vm._e(),
+                                          },
+                                        },
+                                        [
+                                          _c("i", {
+                                            class:
+                                              _vm.searchData[index]
+                                                .is_wish_listed == false
+                                                ? "far fa-heart"
+                                                : "fas fa-heart",
+                                          }),
+                                        ]
+                                      ),
+                                    ]),
                                   ]
                                 ),
                               ]
@@ -51772,7 +51773,7 @@ var render = function () {
               "div",
               { staticClass: "job-list-wrap" },
               _vm._l(_vm.jobs.data, function (item, index) {
-                return _c("div", { key: index, staticClass: "job-list" }, [
+                return _c("div", { key: index, staticClass: "job-list mx-0" }, [
                   _c("div", { staticClass: "company-logo col-auto py-2" }, [
                     _c("img", {
                       attrs: {

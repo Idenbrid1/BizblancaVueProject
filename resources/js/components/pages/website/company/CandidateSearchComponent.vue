@@ -178,7 +178,7 @@
 
                                         <ul class="candidate-list-fav">
                                             <li class="w-100"><router-link class="job-view-btn w-100" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: searchData[index].candidate.id } }">View Profile</router-link></li>
-                                            <li v-if="searchData[index].is_wish_listed == false"><a @click="addToWishList(searchData[index].candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="far fa-heart"></i></a></li>
+                                            <li><a @click="addToWishList(searchData[index].candidate.id)" class="candidate-wishlist-btn ml-2 "><i :class="searchData[index].is_wish_listed == false ? 'far fa-heart' : 'fas fa-heart'" ></i></a></li>
                                             <!-- <li v-if="searchData[index].is_wish_listed == true"><a @click="addToWishList(searchData[index].candidate.id)" class="">liked</a></li> -->
                                         </ul>
                                     </div>

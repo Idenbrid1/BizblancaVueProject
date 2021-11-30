@@ -23,7 +23,7 @@
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">
                     <!-- Job List Start -->
-                    <div class="job-list" v-for="(item, index) in jobs.data" :key="index">
+                    <div class="job-list mx-0" v-for="(item, index) in jobs.data" :key="index">
                         <div class="company-logo col-auto py-2">
                             <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo" />
                             <span class="company-h line-clamp-1">Ahmad</span>
