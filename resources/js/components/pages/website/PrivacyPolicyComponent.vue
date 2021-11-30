@@ -4,8 +4,8 @@
         <CompanyNavbar />
         <h1 class="pricing-plan-title">Privacy Policy</h1>
         <div class="pacakges-plan-container container">
-            <section class="terms-condition-container">
-                <ul class="terms-condition-queries">
+            <section class="privacy-policy-container">
+                <ul class="privacy-policy-queries">
                     <li>
                         <h1>Data Sharing and Transfers</h1>
                         <p>

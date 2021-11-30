@@ -5342,16 +5342,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -5548,6 +5538,174 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../website/partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {},
+  created: function created() {},
+  components: {
+    WebsiteNavbar: _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ServicesComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ServicesComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../website/partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -15304,10 +15462,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/website/LandingPageComponent.vue */ "./resources/js/components/pages/website/LandingPageComponent.vue");
 /* harmony import */ var _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/website/ForCompaniesComponent.vue */ "./resources/js/components/pages/website/ForCompaniesComponent.vue");
 /* harmony import */ var _components_pages_website_ForCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/website/ForCandidatesComponent.vue */ "./resources/js/components/pages/website/ForCandidatesComponent.vue");
@@ -15333,6 +15491,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/pages/website/TermsConditionComponent.vue */ "./resources/js/components/pages/website/TermsConditionComponent.vue");
 /* harmony import */ var _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/pages/website/FaqComponent.vue */ "./resources/js/components/pages/website/FaqComponent.vue");
 /* harmony import */ var _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/pages/website/PrivacyPolicyComponent.vue */ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue");
+/* harmony import */ var _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/pages/website/ServicesComponent.vue */ "./resources/js/components/pages/website/ServicesComponent.vue");
 
 
 
@@ -15361,8 +15520,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_26__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_27__["default"]);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_27__["default"]({
+
+vue__WEBPACK_IMPORTED_MODULE_27__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_28__["default"]);
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_28__["default"]({
   linkExactActiveClass: 'active',
   routes: [{
     path: "*",
@@ -15454,6 +15614,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_27__["default"]({
     path: '/terms-condition',
     name: 'TermsCondition',
     component: _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_23__["default"]
+  }, {
+    path: '/services',
+    name: 'Services',
+    component: _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_26__["default"]
   }, {
     path: '/faq',
     name: 'Faq',
@@ -22863,6 +23027,45 @@ component.options.__file = "resources/js/components/pages/website/PrivacyPolicyC
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/ServicesComponent.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/pages/website/ServicesComponent.vue ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ServicesComponent_vue_vue_type_template_id_66cc09a5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ServicesComponent.vue?vue&type=template&id=66cc09a5& */ "./resources/js/components/pages/website/ServicesComponent.vue?vue&type=template&id=66cc09a5&");
+/* harmony import */ var _ServicesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ServicesComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/website/ServicesComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ServicesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ServicesComponent_vue_vue_type_template_id_66cc09a5___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ServicesComponent_vue_vue_type_template_id_66cc09a5___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/ServicesComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/TermsConditionComponent.vue":
 /*!***************************************************************************!*\
   !*** ./resources/js/components/pages/website/TermsConditionComponent.vue ***!
@@ -23782,6 +23985,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PrivacyPolicyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PrivacyPolicyComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PrivacyPolicyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/ServicesComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/ServicesComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ServicesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ServicesComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ServicesComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ServicesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -25233,6 +25452,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PrivacyPolicyComponent_vue_vue_type_template_id_be343666___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PrivacyPolicyComponent_vue_vue_type_template_id_be343666___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PrivacyPolicyComponent.vue?vue&type=template&id=be343666& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=template&id=be343666&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/ServicesComponent.vue?vue&type=template&id=66cc09a5&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/ServicesComponent.vue?vue&type=template&id=66cc09a5& ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ServicesComponent_vue_vue_type_template_id_66cc09a5___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ServicesComponent_vue_vue_type_template_id_66cc09a5___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ServicesComponent_vue_vue_type_template_id_66cc09a5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ServicesComponent.vue?vue&type=template&id=66cc09a5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ServicesComponent.vue?vue&type=template&id=66cc09a5&");
 
 
 /***/ }),
@@ -32157,153 +32393,137 @@ var staticRenderFns = [
             ),
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "row justify-content-center list-socaial" },
-            [
-              _c("div", { staticClass: "col-md-4 p-0 my-2" }, [
-                _c("div", { staticClass: "list__card" }, [
-                  _c("div", { staticClass: "list__card-image-container" }, [
-                    _c("div", { staticClass: "list__card-image" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "/website/assets/images/Icon awesome-question-circle.svg",
-                        },
-                      }),
-                    ]),
+          _c("div", { staticClass: "list-socaial" }, [
+            _c("div", { staticClass: "services-box" }, [
+              _c("div", { staticClass: "list__card" }, [
+                _c("div", { staticClass: "list__card-image-container" }, [
+                  _c("div", { staticClass: "list__card-image" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/Icon awesome-question-circle.svg",
+                      },
+                    }),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "list__card-content" }, [
+                  _c("h3", { staticClass: "h5 list__card-title" }, [
+                    _vm._v("FAQS"),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "list__card-content" }, [
-                    _c("h3", { staticClass: "h5 list__card-title" }, [
-                      _vm._v("FAQs"),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      { staticClass: "list__card-description body--sm" },
-                      [
-                        _vm._v(
-                          "\n                                Here are answers to frequently asked questions about\n                                BizBlanca. Please refer to it. If you don’t find the question\n                                you’re looking for, from the Contact Us section you can send\n                                your inquires to the BizBlanca business team directly.\n                            "
-                        ),
-                      ]
+                  _c("p", { staticClass: "list__card-description body--sm" }, [
+                    _vm._v(
+                      "\n                                Here are answers to frequently asked questions about BizBlanca. Please refer to it.\n                                If you don’t find the question you’re looking for, from the Contact Us section you\n                                can send your inquires to the BizBlanca business team directly.\n                            "
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "list__card-link minor-button-right",
+                    attrs: {
+                      tabindex: "0",
+                      href: "/tools/reed-salary-guides-2021",
+                    },
+                  },
+                  [
+                    _vm._v("Read more\n                            "),
+                    _c("i", {
+                      staticClass: "fa fa-long-arrow-right",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                  ]
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "services-box" }, [
+              _c("div", { staticClass: "list__card" }, [
+                _c("div", { staticClass: "list__card-image-container" }, [
+                  _c("div", { staticClass: "list__card-image" }, [
+                    _c("img", {
+                      attrs: { src: "/website/assets/images/Group-1360.png" },
+                    }),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "list__card-content" }, [
+                  _c("h3", { staticClass: "h5 list__card-title" }, [
+                    _vm._v("Social Media of BizBlanca"),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "list__card-description body--sm" }, [
+                    _vm._v(
+                      "\n                                BizBlanca receives job posts from many IT companies every day. In addition, We\n                                received CVs from many candidates too. BizBlanca also conducts headhunting and has\n                                excellent human resources in our DB that are not even in the market. Stay updated on\n                                BizBlanca social media.\n                            "
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "list__card-link minor-button-right",
+                    attrs: {
+                      tabindex: "0",
+                      href: "/tools/reed-salary-guides-2021",
+                    },
+                  },
+                  [
+                    _vm._v("Read more\n                            "),
+                    _c("i", {
+                      staticClass: "fa fa-long-arrow-right",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                  ]
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "services-box" }, [
+              _c("div", { staticClass: "list__card" }, [
+                _c("div", { staticClass: "list__card-image-container" }, [
+                  _c("div", { staticClass: "list__card-image" }, [
+                    _c("img", {
+                      attrs: { src: "/website/assets/images/Group 1361.svg" },
+                    }),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "list__card-content" }, [
+                  _c("h3", { staticClass: "h5 list__card-title" }, [
+                    _vm._v(
+                      "\n                                BizBlanca ONLINE\u000bSALON information\n                            "
                     ),
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "list__card-link minor-button-right",
-                      attrs: {
-                        tabindex: "0",
-                        href: "/tools/reed-salary-guides-2021",
-                      },
-                    },
-                    [
-                      _vm._v("Read more\n                            "),
-                      _c("i", {
-                        staticClass: "fa fa-long-arrow-right",
-                        attrs: { "aria-hidden": "true" },
-                      }),
-                    ]
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-4 p-0 my-2" }, [
-                _c("div", { staticClass: "list__card" }, [
-                  _c("div", { staticClass: "list__card-image-container" }, [
-                    _c("div", { staticClass: "list__card-image" }, [
-                      _c("img", {
-                        attrs: { src: "/website/assets/images/Group-1360.png" },
-                      }),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "list__card-content" }, [
-                    _c("h3", { staticClass: "h5 list__card-title" }, [
-                      _vm._v("Social Media of BizBlanca"),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      { staticClass: "list__card-description body--sm" },
-                      [
-                        _vm._v(
-                          "\n                                BizBlanca receives job posts from many IT companies every day.\n                                In addition, We received CVs from many candidates too.\n                                BizBlanca also conducts headhunting and has excellent human\n                                resources in our DB that are not even in the market. Stay\n                                updated on BizBlanca social media.\n                            "
-                        ),
-                      ]
+                  _c("p", { staticClass: "list__card-description body--sm" }, [
+                    _vm._v(
+                      "\n                                In this webinar, our BizBlanca Business Development Executive Mujtaba gives you an\n                                eye opening speech for career with BizBlanca. For companies, we are guiding our top\n                                tips for you to use on interviewing candidates to get the most out of your time with\n                                applicant.\n                            "
                     ),
                   ]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "list__card-link minor-button-right",
-                      attrs: {
-                        tabindex: "0",
-                        href: "/tools/reed-salary-guides-2021",
-                      },
-                    },
-                    [
-                      _vm._v("Read more\n                            "),
-                      _c("i", {
-                        staticClass: "fa fa-long-arrow-right",
-                        attrs: { "aria-hidden": "true" },
-                      }),
-                    ]
-                  ),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-4 p-0 my-2" }, [
-                _c("div", { staticClass: "list__card" }, [
-                  _c("div", { staticClass: "list__card-image-container" }, [
-                    _c("div", { staticClass: "list__card-image" }, [
-                      _c("img", {
-                        attrs: { src: "/website/assets/images/Group 1361.svg" },
-                      }),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "list__card-content" }, [
-                    _c("h3", { staticClass: "h5 list__card-title" }, [
-                      _vm._v(
-                        "\n                                BizBlanca ONLINE SALON information\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      { staticClass: "list__card-description body--sm" },
-                      [
-                        _vm._v(
-                          "\n                                In this webinar, our BizBlanca Business Development Executive\n                                Mujtaba gives you an eye opening speech for career with\n                                BizBlanca. For companies, we are guiding our top tips for you\n                                to use on interviewing candidates to get the most out of your\n                                time with applicant.\n                            "
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "list__card-link minor-button-right",
-                      attrs: {
-                        tabindex: "0",
-                        href: "/tools/reed-salary-guides-2021",
-                      },
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "list__card-link minor-button-right",
+                    attrs: {
+                      tabindex: "0",
+                      href: "/tools/reed-salary-guides-2021",
                     },
-                    [
-                      _vm._v("Read more\n                            "),
-                      _c("i", {
-                        staticClass: "fa fa-long-arrow-right",
-                        attrs: { "aria-hidden": "true" },
-                      }),
-                    ]
-                  ),
-                ]),
+                  },
+                  [
+                    _vm._v("Read more\n                            "),
+                    _c("i", {
+                      staticClass: "fa fa-long-arrow-right",
+                      attrs: { "aria-hidden": "true" },
+                    }),
+                  ]
+                ),
               ]),
-            ]
-          ),
+            ]),
+          ]),
         ]),
       ]
     )
@@ -32630,8 +32850,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "pacakges-plan-container container" }, [
-      _c("section", { staticClass: "terms-condition-container" }, [
-        _c("ul", { staticClass: "terms-condition-queries" }, [
+      _c("section", { staticClass: "privacy-policy-container" }, [
+        _c("ul", { staticClass: "privacy-policy-queries" }, [
           _c("li", [
             _c("h1", [_vm._v("Data Sharing and Transfers")]),
             _vm._v(" "),
@@ -32690,6 +32910,324 @@ var staticRenderFns = [
                 "\n                        Please contact us if you have any questions about our privacy policy or information we hold\n                        about you. Relevant contact details are provided on the Website.\n                    "
               ),
             ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ServicesComponent.vue?vue&type=template&id=66cc09a5&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ServicesComponent.vue?vue&type=template&id=66cc09a5& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      _c("CompanyNavbar"),
+      _vm._v(" "),
+      _c("h1", { staticClass: "pricing-plan-title" }, [_vm._v("Services")]),
+      _vm._v(" "),
+      _vm._m(0),
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "pacakges-plan-container container" }, [
+      _c("div", { staticClass: "get-free-trial" }, [
+        _c("h2", [_vm._v("What we offer to companies?")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum\n                dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "list-services" }, [
+        _c("div", { staticClass: "services-box" }, [
+          _c("div", { staticClass: "list__card" }, [
+            _c("div", { staticClass: "list__card-image-container" }, [
+              _c("div", { staticClass: "list__card-image" }, [
+                _c("img", {
+                  attrs: {
+                    src: "/website/assets/images/Icon awesome-question-circle.svg",
+                  },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list__card-content" }, [
+              _c("h3", { staticClass: "h5 list__card-title" }, [
+                _vm._v("Lorem ipsum"),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "list__card-description body--sm" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "list__card-link minor-button-right",
+                attrs: {
+                  tabindex: "0",
+                  href: "/tools/reed-salary-guides-2021",
+                },
+              },
+              [
+                _vm._v("Read more\n                        "),
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-box" }, [
+          _c("div", { staticClass: "list__card" }, [
+            _c("div", { staticClass: "list__card-image-container" }, [
+              _c("div", { staticClass: "list__card-image" }, [
+                _c("img", {
+                  attrs: { src: "/website/assets/images/Group-1360.png" },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list__card-content" }, [
+              _c("h3", { staticClass: "h5 list__card-title" }, [
+                _vm._v("Lorem ipsum"),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "list__card-description body--sm" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "list__card-link minor-button-right",
+                attrs: {
+                  tabindex: "0",
+                  href: "/tools/reed-salary-guides-2021",
+                },
+              },
+              [
+                _vm._v("Read more\n                        "),
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-box" }, [
+          _c("div", { staticClass: "list__card" }, [
+            _c("div", { staticClass: "list__card-image-container" }, [
+              _c("div", { staticClass: "list__card-image" }, [
+                _c("img", {
+                  attrs: { src: "/website/assets/images/Group 1361.svg" },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list__card-content" }, [
+              _c("h3", { staticClass: "h5 list__card-title" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "list__card-description body--sm" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "list__card-link minor-button-right",
+                attrs: {
+                  tabindex: "0",
+                  href: "/tools/reed-salary-guides-2021",
+                },
+              },
+              [
+                _vm._v("Read more\n                        "),
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-box" }, [
+          _c("div", { staticClass: "list__card" }, [
+            _c("div", { staticClass: "list__card-image-container" }, [
+              _c("div", { staticClass: "list__card-image" }, [
+                _c("img", {
+                  attrs: { src: "/website/assets/images/Group 1361.svg" },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list__card-content" }, [
+              _c("h3", { staticClass: "h5 list__card-title" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "list__card-description body--sm" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "list__card-link minor-button-right",
+                attrs: {
+                  tabindex: "0",
+                  href: "/tools/reed-salary-guides-2021",
+                },
+              },
+              [
+                _vm._v("Read more\n                        "),
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-box" }, [
+          _c("div", { staticClass: "list__card" }, [
+            _c("div", { staticClass: "list__card-image-container" }, [
+              _c("div", { staticClass: "list__card-image" }, [
+                _c("img", {
+                  attrs: { src: "/website/assets/images/Group 1361.svg" },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list__card-content" }, [
+              _c("h3", { staticClass: "h5 list__card-title" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "list__card-description body--sm" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "list__card-link minor-button-right",
+                attrs: {
+                  tabindex: "0",
+                  href: "/tools/reed-salary-guides-2021",
+                },
+              },
+              [
+                _vm._v("Read more\n                        "),
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-box" }, [
+          _c("div", { staticClass: "list__card" }, [
+            _c("div", { staticClass: "list__card-image-container" }, [
+              _c("div", { staticClass: "list__card-image" }, [
+                _c("img", {
+                  attrs: { src: "/website/assets/images/Group 1361.svg" },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list__card-content" }, [
+              _c("h3", { staticClass: "h5 list__card-title" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "list__card-description body--sm" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "list__card-link minor-button-right",
+                attrs: {
+                  tabindex: "0",
+                  href: "/tools/reed-salary-guides-2021",
+                },
+              },
+              [
+                _vm._v("Read more\n                        "),
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" },
+                }),
+              ]
+            ),
           ]),
         ]),
       ]),
