@@ -36,6 +36,7 @@ class SendInvoiceMail extends Mailable
         return $this->from('info@bizblanca.com')
                     ->subject('Bizblanca Plan Invoice')
                     ->view('email.company-invoice')
+                    ->attach(storage_path('app/public/pdf/'.$company->company_name.'-invoice.pdf'))
                     ->with([
                         'company'          => $companyinfo
                     ]);

@@ -6,8 +6,10 @@ use App\Models\Candidate;
 use App\Models\CandidateSkill;
 use App\Models\Company;
 use App\Models\JobPost;
+use App\Models\Order;
 use App\Models\Package;
 use App\Models\Pakage;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class CommonController extends Controller
@@ -127,4 +129,15 @@ class CommonController extends Controller
     {
         return Package::all();
     }
+
+    public function expireTodayJobs()
+    {
+        $fetchList = Order::where(['status'=>'active', 'end_date'=>Carbon::now()])->get();
+        
+        if(count($fetchList) > 0){
+            $fetchList->status = 'expire';
+            $fetchList->update();
+        }
+    }
+
 }

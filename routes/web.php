@@ -62,6 +62,8 @@ Route::get('/get-single-candidate-detail/{id}', [App\Http\Controllers\CommonCont
 Route::post('/reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordPost']);
 Route::get('/reset-password/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPassword']);
 Route::post('/complete-reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordFormPost']);
+Route::get('expire-today-jobs', [App\Http\Controllers\CommonController::class, 'expireTodayJobs']);
+
 //samad 
 Route::get('/login', function () {
     return view('website/pages/login');
@@ -113,6 +115,8 @@ Route::middleware('auth')->group(function(){
     Route::post('/update/experience-letter-file', [App\Http\Controllers\Candidate\CandidateController::class, 'updateExperienceLetterFile'])->name('profile.updateExperienceLetter');
     Route::post('/update/desire-job', [App\Http\Controllers\Candidate\CandidateController::class, 'updateDesireJob'])->name('profile.updateDesireJob');
     Route::get('/apply-job/{job_id}', [App\Http\Controllers\Candidate\CandidateController::class, 'applyJob']);
+    Route::get('download-invoice/{order_id}', [App\Http\Controllers\Company\CompanyController::class, 'downloadInvoice']);
+   
     // Route::post('/update/remark', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateRemark'])->name('profile.updateRemark');
     // // Route::post('/update/cnic-back', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnicBack'])->name('profile.updateCnicBack');
     // Route::post('/update/profile-pic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfilePic'])->name('profile.updateProfilePic');
