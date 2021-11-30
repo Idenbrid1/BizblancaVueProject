@@ -23,6 +23,7 @@ import CompanyChat from './components/pages/website/company/CompanyChatComponent
 import JobSearch from './components/pages/website/candidate/JobSearchComponent.vue';
 import JobDetail from './components/pages/website/candidate/JobDetailComponent.vue';
 import PackagePlans from './components/pages/admin/PackagePlansComponent.vue';
+import ContactUs from './components/pages/website/ContactUsComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -121,6 +122,11 @@ const router = new VueRouter({
             path: '/company-dashboard',
             name: 'CompanyDashboard',
             component: CompanyDashboard
+        },
+        {
+            path: '/contact-us',
+            name: 'ContactUs',
+            component: ContactUs
         },
         {
             path: '/company-chat',
