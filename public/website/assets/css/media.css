@@ -4,8 +4,17 @@
         height: 120px;
         width: 120px;
     }
+    .terms-condition-container{
+        padding: 0px;
+    }
     .contact-page-feilds, .office-info{
         width: 100%;
+    }
+    .terms-condition-queries>li>h1{
+        font-size: 20px;
+    }
+    .terms-condition-queries>li>p{
+        font-size: 12px;
     }
     .msg-user-name > h2, .msg-title{
         font-size: 14px;

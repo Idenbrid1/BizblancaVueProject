@@ -1586,7 +1586,7 @@ body {
 
 .contact-submit-anker {
     background-color: #081351;
-    color: #fff;
+    color: #fff !important;
     padding: 10px 40px;
     border-radius: 5px;
     font-size: 16px;
@@ -6971,4 +6971,25 @@ progress {
 .contact-feilds:focus{
     outline: none;
     outline-style: none;
+}
+/* terms-condition */
+.terms-condition-container{
+    padding: 50px 0px;
+}
+.terms-condition-queries{
+    margin: 0px;
+    padding: 0px;
+}
+.terms-condition-queries>li{
+    padding: 10px 0px;
+}
+.terms-condition-queries>li>h1{
+    font-size: 32px;
+    color: #000000;
+    font-weight: bold;
+}
+.terms-condition-queries>li>p{
+    margin: 0px;
+    font-size: 16px;
+    color: #000000;
 }

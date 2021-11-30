@@ -24,6 +24,7 @@ import JobSearch from './components/pages/website/candidate/JobSearchComponent.v
 import JobDetail from './components/pages/website/candidate/JobDetailComponent.vue';
 import PackagePlans from './components/pages/admin/PackagePlansComponent.vue';
 import ContactUs from './components/pages/website/ContactUsComponent.vue';
+import TermsCondition from './components/pages/website/TermsConditionComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -127,6 +128,11 @@ const router = new VueRouter({
             path: '/contact-us',
             name: 'ContactUs',
             component: ContactUs
+        },
+        {
+            path: '/terms-condition',
+            name: 'TermsCondition',
+            component: TermsCondition
         },
         {
             path: '/company-chat',
