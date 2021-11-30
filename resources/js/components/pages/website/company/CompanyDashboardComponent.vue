@@ -260,64 +260,36 @@
                     </label>
                     <!-- Job List Toolbar Start -->
                     <div>
-                        <!-- <div class="job-list-toolbar">
-                            <ul class="job-pagination pagination-center ">
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                            aria-hidden="true"></i> Previous 20</a></li>
-                                <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                            aria-hidden="true"></i> Next 20</a></li>
-                            </ul>
-                            <div class="job-filter">
-                                <select class="job-select">
-                                    <option>Search order by</option>
-                                    <option>Top Rated</option>
-                                    <option>Most Popular</option>
-                                </select>
-                            </div>
-                        </div> -->
-                        <!-- Job List Toolbar End -->
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap">
                             <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
-                            <div class="row m-0 justify-content-center">
-                                <div class="candidate-single">
+                            <div class="row m-0 justify-content-center" >
+                                <div class="candidate-single" v-if="index < wishlist.length" v-for="(item, index) in wishlist" :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo" style="{ backgroundImage:url('')}"></div>
+                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+item.candidate.profile_image+')'}"></div>
                                             <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
+                                                <h6 class="candidate-name mb-0">{{item.candidate.full_name}}</h6>
                                             </div>
                                         </div>
                                         <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">My name is Sameena Khan and I am graduated
-                                            from university of...</p>
+                                        <p class="candidate-description my-1">{{item.candidate.bio}}</p>
                                         <ul class="candidate-list-meta">
                                             <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">Female</div>
+                                                <div class="hide-line-1">{{item.candidate.gender}}</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-graduation-cap"></i>
                                                 <div class="hide-line-1">BSSE</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">2 Years</div>
+                                                <div class="hide-line-1">{{item.candidate.experience}} Years</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
+                                                <div class="hide-line-1" v-for="(skills, index) in item.candidate.candidate_skills" :key="index">{{skills.name}}, </div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">Lahore</div>
+                                                <div class="hide-line-1">{{item.candidate.city}}</div>
                                             </li>
 
                                         </ul>
@@ -326,99 +298,7 @@
                                             <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
                                                     Profile</a></li>
                                             <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="candidate-single">
-                                    <div class="candidate-list-content">
-                                        <div class="candidate-image">
-                                            <div class="candidate-photo" style="{ backgroundImage:url('')}"></div>
-                                            <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
-                                            </div>
-                                        </div>
-                                        <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">My name is Sameena Khan and I am graduated
-                                            from university of...</p>
-                                        <ul class="candidate-list-meta">
-                                            <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">Female</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-graduation-cap"></i>
-                                                <div class="hide-line-1">BSSE</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">2 Years</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">Lahore</div>
-                                            </li>
-
-                                        </ul>
-
-                                        <ul class="candidate-list-fav">
-                                            <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                    Profile</a></li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="candidate-single">
-                                    <div class="candidate-list-content">
-                                        <div class="candidate-image">
-                                            <div class="candidate-photo" style="{ backgroundImage:url('')}"></div>
-                                            <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
-                                            </div>
-                                        </div>
-                                        <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">My name is Sameena Khan and I am graduated
-                                            from university of...</p>
-                                        <ul class="candidate-list-meta">
-                                            <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">Female</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-graduation-cap"></i>
-                                                <div class="hide-line-1">BSSE</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">2 Years</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">Lahore</div>
-                                            </li>
-
-                                        </ul>
-
-                                        <ul class="candidate-list-fav">
-                                            <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                    Profile</a></li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
+                                                        class="fas fa-heart"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -433,11 +313,6 @@
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
-                <!-- Pagination Start -->
-                <div class="bottom-pagination">
-                    <pagination :data="searchData" @pagination-change-page="getCandidate"></pagination>
-                </div>
-                <!-- Pagination End -->
             </div>
             <div class="common-sidebar">
                 <br><br>
@@ -711,44 +586,10 @@
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CompanyNavbar from '../partials/CompanyNavbar.vue';
-    import pagination from 'laravel-vue-pagination';
-    import Multiselect from 'vue-multiselect'
     export default {
         data() {
             return {
-                options: [{
-                        name: 'Javascript',
-                        language: 'JavaScript'
-                    },
-                    {
-                        name: 'Adonis',
-                        language: 'Adonis'
-                    },
-                    {
-                        name: 'Rails',
-                        language: 'Ruby'
-                    },
-                    {
-                        name: 'Sinatra',
-                        language: 'Ruby'
-                    },
-                    {
-                        name: 'Laravel',
-                        language: 'PHP'
-                    },
-                    {
-                        name: 'Phoenix',
-                        language: 'Elixir'
-                    }
-                ],
-                record: {
-                    working_experience: '',
-                    city: '',
-                    gender: '',
-                    keyword: '',
-                    skills: [],
-                },
-                searchData: {},
+               wishlist: [],
             }
         },
         mounted() {
@@ -765,41 +606,20 @@
             });
         },
         created() {
-            this.getCandidate()
+            this.getCompanyWishList()
         },
         components: {
             WebsiteNavbar,
             CompanyNavbar,
-            Multiselect,
-            pagination,
+            
         },
         methods: {
-            addSkill(newTag) {
-                const tag = {
-                    name: newTag,
-                    code: newTag
-                }
-                this.options.push(tag)
-                this.record.skills.push(tag)
-            },
-            getCandidate(page = 1) {
-                axios.get('/get-candidates-search?page=' + page)
-                    .then((response) => {
-                        this.searchData = response.data
-                    });
-            },
-            search() {
-                axios.post('/candidate-search', this.record)
-                    .then((response) => {
-                        this.searchData = response
-                    });
-            },
-            keywordSearch() {
-                axios.get('/candidate-keyword-search/' + this.record.keyword)
-                    .then((response) => {
-                        this.searchData = response.data
-                    });
-            },
+           getCompanyWishList(){
+               axios.get('get-company-wish-list')
+                .then((response) => {
+                    this.wishlist = response.data.wish_listed
+                });
+           },
         },
     };
 

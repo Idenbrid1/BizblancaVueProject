@@ -12058,10 +12058,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
-/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
-/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
-/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_4__);
 //
 //
 //
@@ -12646,166 +12642,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      options: [{
-        name: 'Javascript',
-        language: 'JavaScript'
-      }, {
-        name: 'Adonis',
-        language: 'Adonis'
-      }, {
-        name: 'Rails',
-        language: 'Ruby'
-      }, {
-        name: 'Sinatra',
-        language: 'Ruby'
-      }, {
-        name: 'Laravel',
-        language: 'PHP'
-      }, {
-        name: 'Phoenix',
-        language: 'Elixir'
-      }],
-      record: {
-        working_experience: '',
-        city: '',
-        gender: '',
-        keyword: '',
-        skills: []
-      },
-      searchData: {}
+      wishlist: []
     };
   },
   mounted: function mounted() {
@@ -12822,43 +12665,18 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   created: function created() {
-    this.getCandidate();
+    this.getCompanyWishList();
   },
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Multiselect: (vue_multiselect__WEBPACK_IMPORTED_MODULE_4___default()),
-    pagination: (laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default())
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   methods: {
-    addSkill: function addSkill(newTag) {
-      var tag = {
-        name: newTag,
-        code: newTag
-      };
-      this.options.push(tag);
-      this.record.skills.push(tag);
-    },
-    getCandidate: function getCandidate() {
+    getCompanyWishList: function getCompanyWishList() {
       var _this = this;
 
-      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-candidates-search?page=' + page).then(function (response) {
-        _this.searchData = response.data;
-      });
-    },
-    search: function search() {
-      var _this2 = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/candidate-search', this.record).then(function (response) {
-        _this2.searchData = response;
-      });
-    },
-    keywordSearch: function keywordSearch() {
-      var _this3 = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/candidate-keyword-search/' + this.record.keyword).then(function (response) {
-        _this3.searchData = response.data;
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('get-company-wish-list').then(function (response) {
+        _this.wishlist = response.data.wish_listed;
       });
     }
   }
@@ -49949,7 +49767,162 @@ var render = function () {
             _c("div", { staticClass: "candidate" }, [
               _vm._m(7),
               _vm._v(" "),
-              _vm._m(8),
+              _c("div", [
+                _c("div", { staticClass: "job-list-wrap" }, [
+                  _c(
+                    "div",
+                    { staticClass: "row m-0 justify-content-center" },
+                    _vm._l(_vm.wishlist, function (item, index) {
+                      return index < _vm.wishlist.length
+                        ? _c(
+                            "div",
+                            { key: index, staticClass: "candidate-single" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "candidate-list-content" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "candidate-image" },
+                                    [
+                                      _c("div", {
+                                        staticClass: "candidate-photo",
+                                        style: {
+                                          backgroundImage:
+                                            "url(/storage/images/candidates/" +
+                                            item.candidate.profile_image +
+                                            ")",
+                                        },
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "candidate-header mt-2 ml-2",
+                                        },
+                                        [
+                                          _c(
+                                            "h6",
+                                            {
+                                              staticClass:
+                                                "candidate-name mb-0",
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(item.candidate.full_name)
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass: "candidate-description my-1",
+                                    },
+                                    [_vm._v(_vm._s(item.candidate.bio))]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "ul",
+                                    { staticClass: "candidate-list-meta" },
+                                    [
+                                      _c("li", [
+                                        _c("i", {
+                                          staticClass: "fas fa-venus-mars",
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "hide-line-1" },
+                                          [
+                                            _vm._v(
+                                              _vm._s(item.candidate.gender)
+                                            ),
+                                          ]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _vm._m(8, true),
+                                      _vm._v(" "),
+                                      _c("li", { staticClass: "mt-1" }, [
+                                        _c("i", {
+                                          staticClass:
+                                            "fas fa-envelope-open-text",
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "hide-line-1" },
+                                          [
+                                            _vm._v(
+                                              _vm._s(
+                                                item.candidate.experience
+                                              ) + " Years"
+                                            ),
+                                          ]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        { staticClass: "mt-1" },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fas fa-user-cog",
+                                          }),
+                                          _vm._v(" "),
+                                          _vm._l(
+                                            item.candidate.candidate_skills,
+                                            function (skills, index) {
+                                              return _c(
+                                                "div",
+                                                {
+                                                  key: index,
+                                                  staticClass: "hide-line-1",
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(skills.name) + ", "
+                                                  ),
+                                                ]
+                                              )
+                                            }
+                                          ),
+                                        ],
+                                        2
+                                      ),
+                                      _vm._v(" "),
+                                      _c("li", { staticClass: "mt-1" }, [
+                                        _c("i", {
+                                          staticClass: "fas fa-map-marker-alt",
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "hide-line-1" },
+                                          [_vm._v(_vm._s(item.candidate.city))]
+                                        ),
+                                      ]),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._m(9, true),
+                                ]
+                              ),
+                            ]
+                          )
+                        : _vm._e()
+                    }),
+                    0
+                  ),
+                ]),
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -49964,26 +49937,14 @@ var render = function () {
                     [_vm._v("Show more")]
                   ),
                   _vm._v(" "),
-                  _vm._m(9),
+                  _vm._m(10),
                 ],
                 1
               ),
             ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "bottom-pagination" },
-              [
-                _c("pagination", {
-                  attrs: { data: _vm.searchData },
-                  on: { "pagination-change-page": _vm.getCandidate },
-                }),
-              ],
-              1
-            ),
           ]),
           _vm._v(" "),
-          _vm._m(10),
+          _vm._m(11),
         ]
       ),
     ],
@@ -50361,270 +50322,35 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "job-list-wrap" }, [
-        _c("div", { staticClass: "row m-0 justify-content-center" }, [
-          _c("div", { staticClass: "candidate-single" }, [
-            _c("div", { staticClass: "candidate-list-content" }, [
-              _c("div", { staticClass: "candidate-image" }, [
-                _c("div", {
-                  staticClass: "candidate-photo",
-                  staticStyle: { "{ backgroundImage": "url('')}" },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "candidate-header mt-2 ml-2" }, [
-                  _c("h6", { staticClass: "candidate-name mb-0" }, [
-                    _vm._v("Sameena Khan"),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "candidate-description my-1" }, [
-                _vm._v(
-                  "My name is Sameena Khan and I am graduated\n                                        from university of..."
-                ),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-meta" }, [
-                _c("li", [
-                  _c("i", { staticClass: "fas fa-venus-mars" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Female")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-graduation-cap" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("BSSE")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-envelope-open-text" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("2 Years"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-user-cog" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("HTML,Bootstrap,CSS,Node JS"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Lahore")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-fav" }, [
-                _c("li", { staticClass: "w-100" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-view-btn w-100",
-                      attrs: { href: "#" },
-                    },
-                    [
-                      _vm._v(
-                        "View\n                                                Profile"
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-wishlist-btn ml-2 ",
-                      attrs: { href: "#" },
-                    },
-                    [_c("i", { staticClass: "far fa-heart" })]
-                  ),
-                ]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "candidate-single" }, [
-            _c("div", { staticClass: "candidate-list-content" }, [
-              _c("div", { staticClass: "candidate-image" }, [
-                _c("div", {
-                  staticClass: "candidate-photo",
-                  staticStyle: { "{ backgroundImage": "url('')}" },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "candidate-header mt-2 ml-2" }, [
-                  _c("h6", { staticClass: "candidate-name mb-0" }, [
-                    _vm._v("Sameena Khan"),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "candidate-description my-1" }, [
-                _vm._v(
-                  "My name is Sameena Khan and I am graduated\n                                        from university of..."
-                ),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-meta" }, [
-                _c("li", [
-                  _c("i", { staticClass: "fas fa-venus-mars" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Female")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-graduation-cap" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("BSSE")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-envelope-open-text" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("2 Years"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-user-cog" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("HTML,Bootstrap,CSS,Node JS"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Lahore")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-fav" }, [
-                _c("li", { staticClass: "w-100" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-view-btn w-100",
-                      attrs: { href: "#" },
-                    },
-                    [
-                      _vm._v(
-                        "View\n                                                Profile"
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-wishlist-btn ml-2 ",
-                      attrs: { href: "#" },
-                    },
-                    [_c("i", { staticClass: "far fa-heart" })]
-                  ),
-                ]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "candidate-single" }, [
-            _c("div", { staticClass: "candidate-list-content" }, [
-              _c("div", { staticClass: "candidate-image" }, [
-                _c("div", {
-                  staticClass: "candidate-photo",
-                  staticStyle: { "{ backgroundImage": "url('')}" },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "candidate-header mt-2 ml-2" }, [
-                  _c("h6", { staticClass: "candidate-name mb-0" }, [
-                    _vm._v("Sameena Khan"),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "candidate-description my-1" }, [
-                _vm._v(
-                  "My name is Sameena Khan and I am graduated\n                                        from university of..."
-                ),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-meta" }, [
-                _c("li", [
-                  _c("i", { staticClass: "fas fa-venus-mars" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Female")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-graduation-cap" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("BSSE")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-envelope-open-text" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("2 Years"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-user-cog" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("HTML,Bootstrap,CSS,Node JS"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Lahore")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-fav" }, [
-                _c("li", { staticClass: "w-100" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-view-btn w-100",
-                      attrs: { href: "#" },
-                    },
-                    [
-                      _vm._v(
-                        "View\n                                                Profile"
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-wishlist-btn ml-2 ",
-                      attrs: { href: "#" },
-                    },
-                    [_c("i", { staticClass: "far fa-heart" })]
-                  ),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
+    return _c("li", { staticClass: "mt-1" }, [
+      _c("i", { staticClass: "fas fa-graduation-cap" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "hide-line-1" }, [_vm._v("BSSE")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "candidate-list-fav" }, [
+      _c("li", { staticClass: "w-100" }, [
+        _c(
+          "a",
+          { staticClass: "candidate-view-btn w-100", attrs: { href: "#" } },
+          [
+            _vm._v(
+              "View\n                                                Profile"
+            ),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "candidate-wishlist-btn ml-2 ", attrs: { href: "#" } },
+          [_c("i", { staticClass: "fas fa-heart" })]
+        ),
       ]),
     ])
   },

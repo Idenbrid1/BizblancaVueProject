@@ -13,4 +13,9 @@ class CompanyWishList extends Model
         'candidate_id',
         'company_id',
     ];
+
+    public function Candidate()
+    {
+        return $this->belongsTo(Candidate::class, 'candidate_id', 'id')->with('CandidateSkills');
+    }
 }

@@ -361,4 +361,10 @@ class CompanyController extends Controller
             'candidates' => $candidates,
         ]);
     }
+
+    public function getCompanyWishList()
+    {
+        $user_id = Auth::user()->id;
+        return Company::where('user_id', $user_id)->with(['WishListed', 'WishListed.Candidate'])->first();
+    }
 }

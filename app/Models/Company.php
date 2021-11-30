@@ -46,4 +46,9 @@ class Company extends Model
     {
         return $this->belongsTo(Order::class, 'order_id', 'id');
     }
+
+    public function WishListed()
+    {
+        return $this->hasMany(CompanyWishList::class, 'company_id', 'id');
+    }
 }
