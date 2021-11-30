@@ -24,6 +24,9 @@ import JobSearch from './components/pages/website/candidate/JobSearchComponent.v
 import JobDetail from './components/pages/website/candidate/JobDetailComponent.vue';
 import PackagePlans from './components/pages/admin/PackagePlansComponent.vue';
 import ContactUs from './components/pages/website/ContactUsComponent.vue';
+import TermsCondition from './components/pages/website/TermsConditionComponent.vue';
+import Faq from './components/pages/website/FaqComponent.vue';
+import PrivacyPolicy from './components/pages/website/PrivacyPolicyComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -127,6 +130,21 @@ const router = new VueRouter({
             path: '/contact-us',
             name: 'ContactUs',
             component: ContactUs
+        },
+        {
+            path: '/privacy-policy',
+            name: 'PrivacyPolicy',
+            component: PrivacyPolicy
+        },
+        {
+            path: '/terms-condition',
+            name: 'TermsCondition',
+            component: TermsCondition
+        },
+        {
+            path: '/faq',
+            name: 'Faq',
+            component: Faq
         },
         {
             path: '/company-chat',

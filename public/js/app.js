@@ -3173,6 +3173,617 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/FaqComponent.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/FaqComponent.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../website/partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {},
+  created: function created() {},
+  components: {
+    WebsiteNavbar: _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=script&lang=js& ***!
@@ -4921,6 +5532,218 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     WebsiteFooter: _website_partials_footer_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../website/partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {},
+  created: function created() {},
+  components: {
+    WebsiteNavbar: _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../website/partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {},
+  created: function created() {},
+  components: {
+    WebsiteNavbar: _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  methods: {}
 });
 
 /***/ }),
@@ -14481,10 +15304,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/website/LandingPageComponent.vue */ "./resources/js/components/pages/website/LandingPageComponent.vue");
 /* harmony import */ var _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/website/ForCompaniesComponent.vue */ "./resources/js/components/pages/website/ForCompaniesComponent.vue");
 /* harmony import */ var _components_pages_website_ForCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/website/ForCandidatesComponent.vue */ "./resources/js/components/pages/website/ForCandidatesComponent.vue");
@@ -14507,6 +15330,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/pages/website/candidate/JobDetailComponent.vue */ "./resources/js/components/pages/website/candidate/JobDetailComponent.vue");
 /* harmony import */ var _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/pages/admin/PackagePlansComponent.vue */ "./resources/js/components/pages/admin/PackagePlansComponent.vue");
 /* harmony import */ var _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/pages/website/ContactUsComponent.vue */ "./resources/js/components/pages/website/ContactUsComponent.vue");
+/* harmony import */ var _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/pages/website/TermsConditionComponent.vue */ "./resources/js/components/pages/website/TermsConditionComponent.vue");
+/* harmony import */ var _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/pages/website/FaqComponent.vue */ "./resources/js/components/pages/website/FaqComponent.vue");
+/* harmony import */ var _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/pages/website/PrivacyPolicyComponent.vue */ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue");
 
 
 
@@ -14532,8 +15358,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_23__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_24__["default"]);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_24__["default"]({
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_26__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_27__["default"]);
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_27__["default"]({
   linkExactActiveClass: 'active',
   routes: [{
     path: "*",
@@ -14617,6 +15446,18 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_24__["default"]({
     path: '/contact-us',
     name: 'ContactUs',
     component: _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_22__["default"]
+  }, {
+    path: '/privacy-policy',
+    name: 'PrivacyPolicy',
+    component: _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_25__["default"]
+  }, {
+    path: '/terms-condition',
+    name: 'TermsCondition',
+    component: _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_23__["default"]
+  }, {
+    path: '/faq',
+    name: 'Faq',
+    component: _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_24__["default"]
   }, {
     path: '/company-chat',
     name: 'CompanyChat',
@@ -21788,6 +22629,45 @@ component.options.__file = "resources/js/components/pages/website/ContactUsCompo
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/FaqComponent.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/pages/website/FaqComponent.vue ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FaqComponent_vue_vue_type_template_id_e46adede___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FaqComponent.vue?vue&type=template&id=e46adede& */ "./resources/js/components/pages/website/FaqComponent.vue?vue&type=template&id=e46adede&");
+/* harmony import */ var _FaqComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FaqComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/website/FaqComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FaqComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FaqComponent_vue_vue_type_template_id_e46adede___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FaqComponent_vue_vue_type_template_id_e46adede___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/FaqComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/ForCandidatesComponent.vue":
 /*!**************************************************************************!*\
   !*** ./resources/js/components/pages/website/ForCandidatesComponent.vue ***!
@@ -21940,6 +22820,84 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/pages/website/MainApp.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/pages/website/PrivacyPolicyComponent.vue ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PrivacyPolicyComponent_vue_vue_type_template_id_be343666___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PrivacyPolicyComponent.vue?vue&type=template&id=be343666& */ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=template&id=be343666&");
+/* harmony import */ var _PrivacyPolicyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PrivacyPolicyComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PrivacyPolicyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PrivacyPolicyComponent_vue_vue_type_template_id_be343666___WEBPACK_IMPORTED_MODULE_0__.render,
+  _PrivacyPolicyComponent_vue_vue_type_template_id_be343666___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/PrivacyPolicyComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/TermsConditionComponent.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/pages/website/TermsConditionComponent.vue ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _TermsConditionComponent_vue_vue_type_template_id_6c35c822___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TermsConditionComponent.vue?vue&type=template&id=6c35c822& */ "./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=template&id=6c35c822&");
+/* harmony import */ var _TermsConditionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TermsConditionComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TermsConditionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TermsConditionComponent_vue_vue_type_template_id_6c35c822___WEBPACK_IMPORTED_MODULE_0__.render,
+  _TermsConditionComponent_vue_vue_type_template_id_6c35c822___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/TermsConditionComponent.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -22731,6 +23689,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/FaqComponent.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/FaqComponent.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FaqComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FaqComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/FaqComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FaqComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************!*\
   !*** ./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=script&lang=js& ***!
@@ -22792,6 +23766,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MainApp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MainApp.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/MainApp.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MainApp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PrivacyPolicyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PrivacyPolicyComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PrivacyPolicyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TermsConditionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./TermsConditionComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TermsConditionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -24129,6 +25135,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/FaqComponent.vue?vue&type=template&id=e46adede&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/FaqComponent.vue?vue&type=template&id=e46adede& ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FaqComponent_vue_vue_type_template_id_e46adede___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FaqComponent_vue_vue_type_template_id_e46adede___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FaqComponent_vue_vue_type_template_id_e46adede___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FaqComponent.vue?vue&type=template&id=e46adede& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/FaqComponent.vue?vue&type=template&id=e46adede&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4&":
 /*!*********************************************************************************************************!*\
   !*** ./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4& ***!
@@ -24193,6 +25216,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MainApp_vue_vue_type_template_id_b3f853e4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MainApp_vue_vue_type_template_id_b3f853e4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MainApp.vue?vue&type=template&id=b3f853e4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/MainApp.vue?vue&type=template&id=b3f853e4&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=template&id=be343666&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=template&id=be343666& ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PrivacyPolicyComponent_vue_vue_type_template_id_be343666___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PrivacyPolicyComponent_vue_vue_type_template_id_be343666___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PrivacyPolicyComponent_vue_vue_type_template_id_be343666___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PrivacyPolicyComponent.vue?vue&type=template&id=be343666& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=template&id=be343666&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=template&id=6c35c822&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=template&id=6c35c822& ***!
+  \**********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TermsConditionComponent_vue_vue_type_template_id_6c35c822___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TermsConditionComponent_vue_vue_type_template_id_6c35c822___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TermsConditionComponent_vue_vue_type_template_id_6c35c822___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./TermsConditionComponent.vue?vue&type=template&id=6c35c822& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=template&id=6c35c822&");
 
 
 /***/ }),
@@ -27535,6 +28592,1119 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/FaqComponent.vue?vue&type=template&id=e46adede&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/FaqComponent.vue?vue&type=template&id=e46adede& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      _c("CompanyNavbar"),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "faq-title" }, [
+      _c("h1", { staticClass: "faq-title" }, [_vm._v("FAQS")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Here are some of the frequently ask questions.")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "pacakges-plan-container container p-md-2 p-0" },
+      [
+        _c(
+          "ul",
+          {
+            staticClass: "nav nav-pills faq-tabs-list",
+            attrs: { role: "tablist" },
+          },
+          [
+            _c("li", { staticClass: "nav-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nav-link active",
+                  attrs: { "data-toggle": "pill", href: "#general-tab" },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-users" }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("General")]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nav-link",
+                  attrs: { "data-toggle": "pill", href: "#payment-tab" },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-users" }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Payment")]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nav-link",
+                  attrs: { "data-toggle": "pill", href: "#refund-tab" },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-users" }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Refund")]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nav-link",
+                  attrs: { "data-toggle": "pill", href: "#products-services" },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-users" }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Products & Services")]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nav-link",
+                  attrs: { "data-toggle": "pill", href: "#registration-tab" },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-users" }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Registration Issue")]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nav-link",
+                  attrs: { "data-toggle": "pill", href: "#technical-tab" },
+                },
+                [
+                  _c("i", { staticClass: "fas fa-users" }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Technical Issue")]),
+                ]
+              ),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "tab-content" }, [
+          _c(
+            "div",
+            {
+              staticClass: "container tab-pane active",
+              attrs: { id: "general-tab" },
+            },
+            [
+              _c("br"),
+              _vm._v(" "),
+              _c("section", { staticClass: "need-help-section" }, [
+                _c("h1", { staticClass: "need-help-title" }, [
+                  _vm._v("Need Help?"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "help-queries-wrap" }, [
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "container tab-pane fade",
+              attrs: { id: "payment-tab" },
+            },
+            [
+              _c("br"),
+              _vm._v(" "),
+              _c("section", { staticClass: "need-help-section" }, [
+                _c("h1", { staticClass: "need-help-title" }, [
+                  _vm._v("Need Help?"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "help-queries-wrap" }, [
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "container tab-pane fade",
+              attrs: { id: "refund-tab" },
+            },
+            [
+              _c("br"),
+              _vm._v(" "),
+              _c("section", { staticClass: "need-help-section" }, [
+                _c("h1", { staticClass: "need-help-title" }, [
+                  _vm._v("Need Help?"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "help-queries-wrap" }, [
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "container tab-pane fade",
+              attrs: { id: "products-services" },
+            },
+            [
+              _c("br"),
+              _vm._v(" "),
+              _c("section", { staticClass: "need-help-section" }, [
+                _c("h1", { staticClass: "need-help-title" }, [
+                  _vm._v("Need Help?"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "help-queries-wrap" }, [
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "container tab-pane fade",
+              attrs: { id: "registration-tab" },
+            },
+            [
+              _c("br"),
+              _vm._v(" "),
+              _c("section", { staticClass: "need-help-section" }, [
+                _c("h1", { staticClass: "need-help-title" }, [
+                  _vm._v("Need Help?"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "help-queries-wrap" }, [
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "container tab-pane fade",
+              attrs: { id: "technical-tab" },
+            },
+            [
+              _c("br"),
+              _vm._v(" "),
+              _c("section", { staticClass: "need-help-section" }, [
+                _c("h1", { staticClass: "need-help-title" }, [
+                  _vm._v("Need Help?"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "help-queries-wrap" }, [
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+        ]),
+      ]
+    )
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4&":
 /*!************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/ForCandidatesComponent.vue?vue&type=template&id=33a9bde4& ***!
@@ -30416,6 +32586,228 @@ var render = function () {
   return _c("div", [_c("router-view"), _vm._v(" "), _c("WebsiteFooter")], 1)
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=template&id=be343666&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/PrivacyPolicyComponent.vue?vue&type=template&id=be343666& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      _c("CompanyNavbar"),
+      _vm._v(" "),
+      _c("h1", { staticClass: "pricing-plan-title" }, [
+        _vm._v("Privacy Policy"),
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "pacakges-plan-container container" }, [
+      _c("section", { staticClass: "terms-condition-container" }, [
+        _c("ul", { staticClass: "terms-condition-queries" }, [
+          _c("li", [
+            _c("h1", [_vm._v("Data Sharing and Transfers")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        Save where it is necessary to do so in order to provide you with the Website’s recruitment\n                        services or to put you in touch with a third party as set out in this policy. Your personal\n                        data is stored on our servers. If we share your personal data with any third party service\n                        provider in the course of providing you with our services, those third parties are required\n                        to process your data in accordance with contracts which comply with data protection\n                        legislation.\n                    "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("h1", [_vm._v("Access to your information and correction")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        We want to make sure that your information is accurate and up-to-date and will delete or\n                        amend any information that we think is inaccurate. Should you wish to deactivate your\n                        account please do so in your MyPage account settings. Amendments to your account can be made\n                        on your MyPage. We aim to provide you with useful work-related services for the whole of\n                        your career. However, you have the right to deactivate your account at any time unless we\n                        are in the process of responding to any complaint that you make. Please note that\n                        deactivating your account does not delete your account or details from our server.\n                    "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("h1", [_vm._v("Cookies")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        Cookies are text files placed on your computer to collect standard internet log and visitor\n                        behavior information. This information is used to track visitor use of the Website, to\n                        compile statistical reports on Website activity and to help us make recommendations that are\n                        relevant to you. We also use third party advertising companies to serve ads when you visit\n                        the Website. Those companies may use information about your visits to this and other\n                        websites in order to provide you with advertisements about other goods and services that may\n                        be of interest to you.\n                    "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("h1", [_vm._v("Other websites")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        Our Website contains links to other websites. This privacy policy only applies to this\n                        Website, so when you link to other websites you should review their own privacy policies.\n                    "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("h1", [_vm._v("Changes to our Privacy Policy")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        We keep our privacy policy under regular review and we place any updates on this web page.\n                        This policy was last updated on 1st January, 2020.\n                    "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("h1", [_vm._v("How to contact us")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        Please contact us if you have any questions about our privacy policy or information we hold\n                        about you. Relevant contact details are provided on the Website.\n                    "
+              ),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=template&id=6c35c822&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/TermsConditionComponent.vue?vue&type=template&id=6c35c822& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      _c("CompanyNavbar"),
+      _vm._v(" "),
+      _c("h1", { staticClass: "pricing-plan-title" }, [
+        _vm._v("Terms & Conditions"),
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "pacakges-plan-container container" }, [
+      _c("section", { staticClass: "terms-condition-container" }, [
+        _c("ul", { staticClass: "terms-condition-queries" }, [
+          _c("li", [
+            _c("h1", [_vm._v("General")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        www.bizblanca.com(“the Website”) is a job site operated by Idenbrid Corporation.This privacy\n                        policy\n                        explains how we use the personal information we collect about you when you use the\n                        Website.If you\n                        register on the Website as a recruiter and/or advertiser and provide us with personal data,\n                        we will\n                        process such personal data on the basis that it is necessary to do so in order to perform\n                        the\n                        contract you enter into with us. Registration with and use of the Website for job seekers\n                        and/or\n                        receive career advice is free. We will process your personal data on the basis set out below\n                        as it\n                        is in our legitimate interests to do so following your registration.\n                    "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("h1", [_vm._v("What Information do we collect about you?")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        We collect personal data about you when you register with the Website. We do so in order to\n                        provide you with the recruitment services that are available through the Website as well as\n                        for other administrative purposes. "
+              ),
+              _c("br"),
+              _vm._v(
+                "The personal data that we collect includes your\n                        name,\n                        email address and telephone number. If you are a work seeker we will also ask for details of\n                        the kind of work you are looking for and your preferred work location. If you decide to\n                        upload or create a CV, cover letter, personal statement or other similar document or\n                        information we will keep that information for as long your account is active with the\n                        Website. If you decide to make any purchase on or through the Website, we may ask you for\n                        the details needed to process any payment that is required by the relevant third party\n                        course provider. If you choose to take any assessments available through the Website we will\n                        also maintaina record of your responses to and results of those assessments.\n                    "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("h1", [_vm._v("What do we do with your personal data?")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        By registering with the Website it is understood that work seekers are actively soliciting\n                        contact from prospective employers and recruiters about opportunities which match the work\n                        seekers’ fields of interest. If you are a work seeker we will therefore make your personal\n                        data available to recruiters and employers "
+              ),
+              _c("br"),
+              _vm._v(
+                " who use the Website to find suitable\n                        employees\n                        for specific roles that they are seeking to fill. We will also share your personal data\n                        within our main company Idenbrid Corporation and any present or future sister companies, to\n                        facilitate your search for work. Although the primary purpose of the Website is to allow\n                        work seekers, prospective employers and recruiters to find each other, work seekers have the\n                        ability to control the extent to which your personal data is shared with other recruiters\n                        and prospective employers through the contact preferences section of the “MyPage” section on\n                        the Website. For job seekers, we will use your personal data to provide you with the\n                        recruitment services that we provide, to manage your account and to email you about\n                        recruitment services which, for job seekers, includes job alerts, and emails we feel are\n                        relevant to your field of interest.\n                    "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("h1", [_vm._v("Marketing")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        In the event that you register on the Website as a work seeker we will only send you\n                        information which relates to our recruitment services unless you specifically opt in to\n                        receiving marketing material about other products and services through the contact\n                        preferences section of your account. If you consent to receive marketing material using your\n                        contact preferences you may change your mind at any time."
+              ),
+              _c("br"),
+              _vm._v(
+                " You can also amend the\n                        contact\n                        preferences in your account to stop us from contacting you in connection with the\n                        recruitment services or courses available through the Website for which you register when\n                        you set up your account.\n                    "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("h1", [_vm._v("How do you unsubscribe from future mailings?")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                        If you have a BizBlanca jobseeker account, you can stop receiving emails by updating your\n                        preferences in your MyPage account settings.\n                    "
+              ),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
