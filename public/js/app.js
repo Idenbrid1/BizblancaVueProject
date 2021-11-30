@@ -48724,7 +48724,7 @@ var render = function () {
               _c("div", { staticClass: "job-list-wrap" }, [
                 _c(
                   "div",
-                  { staticClass: "row m-0 justify-content-center" },
+                  { staticClass: "row m-0 justify-content-start" },
                   _vm._l(_vm.candidateToShow, function (item, index) {
                     return index < _vm.searchData.length
                       ? _c(
@@ -49753,7 +49753,7 @@ var render = function () {
                 _c("div", { staticClass: "job-list-wrap" }, [
                   _c(
                     "div",
-                    { staticClass: "row m-0 justify-content-center" },
+                    { staticClass: "row m-0 justify-content-start" },
                     _vm._l(_vm.wishlist, function (item, index) {
                       return index < _vm.wishlist.length
                         ? _c(
@@ -50016,7 +50016,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _c("div", { staticClass: "job-list-wrap" }, [
-        _c("div", { staticClass: "row m-0 justify-content-center" }, [
+        _c("div", { staticClass: "row m-0 justify-content-start" }, [
           _c("div", { staticClass: "candidate-single" }, [
             _c("div", { staticClass: "candidate-list-content" }, [
               _c("div", { staticClass: "candidate-image" }, [
