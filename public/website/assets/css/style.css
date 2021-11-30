@@ -3979,7 +3979,9 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
+.candidate-wishlist-btn i{
+    color: #fff;
+}
 .candidate-view-btn {
     background-color: #081351;
     color: #fff;
