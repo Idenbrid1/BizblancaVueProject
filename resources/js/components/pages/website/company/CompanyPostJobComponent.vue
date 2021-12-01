@@ -15,7 +15,7 @@
                     </p>
                 </div>
                 <div class="post_new_job_anker">
-                    <a @click="postNewJob()" >+ Add More
+                    <a @click="postNewJob()">+ Add More
                         Jobs</a>
                     <p>Showing 5 results of 123,456 jobs</p>
                 </div>
@@ -38,9 +38,12 @@
                                              <i class="fa fa-star" aria-hidden="true"></i> -->
 
                                 <div class="d-flex align-items-center">
-                                    <span class="job-post-date"><timeago :datetime="item.created_at"></timeago></span>
+                                    <span class="job-post-date">
+                                        <timeago :datetime="item.created_at"></timeago>
+                                    </span>
                                     <!-- <i v-if="!item.deleted_at" class="far fa-heart"></i> -->
-                                    <p v-if="item.deleted_at" :class="!item.deleted_at ? '' : 'job-deleted-mark'"> DELETED</p>
+                                    <p v-if="item.deleted_at" :class="!item.deleted_at ? '' : 'job-deleted-mark'">
+                                        DELETED</p>
                                 </div>
                             </div>
 
@@ -80,16 +83,22 @@
                                     </ul>
                                 </div>
                                 <ul class="job-list-fav m-0">
-                                    <li><a v-if="!item.deleted_at" @click="deleteJobPost(item.id)" class="job-post-ions"><i class="fas fa-trash-alt"></i></a></li>
-                                    <li><a v-if="!item.deleted_at" @click="editJobPost(item.id)" class="job-post-ions"><i class="fas fa-edit"></i></a></li>
+                                    <li><a v-if="!item.deleted_at" @click="deleteJobPost(item.id)"
+                                            class="job-post-ions"><i class="fas fa-trash-alt"></i></a></li>
+                                    <li><a v-if="!item.deleted_at" @click="editJobPost(item.id)"
+                                            class="job-post-ions"><i class="fas fa-edit"></i></a></li>
                                     <li>
-                                        <router-link v-if="!item.deleted_at" :to="{ name: 'JobDetail', params: { id: item.id } }" data-toggle="collapse" class="job-post-ions">
-                                        <i class="fas fa-eye"></i>
+                                        <router-link v-if="!item.deleted_at"
+                                            :to="{ name: 'JobDetail', params: { id: item.id } }" data-toggle="collapse"
+                                            class="job-post-ions">
+                                            <i class="fas fa-eye"></i>
                                         </router-link>
                                     </li>
                                     <li>
-                                        <router-link v-if="!item.deleted_at" :to="{ name: 'JobAppliedCandidates', params: { id: item.id } }" data-toggle="collapse" class="job-post-ions">
-                                        <i class="fas fa-eye"></i>
+                                        <router-link v-if="!item.deleted_at"
+                                            :to="{ name: 'JobAppliedCandidates', params: { id: item.id } }"
+                                            data-toggle="collapse" class="job-post-ions">
+                                            <i class="fas fa-eye"></i>
                                         </router-link>
                                     </li>
                                 </ul>
@@ -339,8 +348,8 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade PostNewJobModal" id="PostNewJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade PostNewJobModal" id="PostNewJobModal" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="formData">
                     <div class="modal-content p-0">
@@ -355,7 +364,9 @@
                                                 <h4 class="m-0 modelTitleText">Add more Jobs</h4>
                                             </div>
                                             <div class="form-group">
-                                                <img v-if="record.id != 0" :src="'/storage/images/companies/'+record.bannar" height="50" width="50" alt="Company Logo" />
+                                                <img v-if="record.id != 0"
+                                                    :src="'/storage/images/companies/'+record.bannar" height="50"
+                                                    width="50" alt="Company Logo" />
                                                 <label for="bannar"><span class="required_feild">*</span> Banner</label>
                                                 <input class="form-control" style="padding:4px !important;height:40px;"
                                                     name="bannar" id="bannar" ref="bannar" type="file" />
@@ -631,10 +642,25 @@
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="benefits"><span class="required_feild">*</span>Active</label>
-                                                            <input type="radio" value="Active" name="status" v-model="record.status" class="form-control"/>
-                                                            <label for="benefits"><span class="required_feild">*</span>Inactive</label>
-                                                            <input type="radio" value="Inactive" name="status" v-model="record.status" class="form-control"/>
+                                                            <div class="d-flex align-items-center">
+                                                                <label class="m-0">
+                                                                    <span class="required_feild">*</span> Status
+                                                                </label>
+                                                                <label class="active-inactive-job" for="Active-job">
+                                                                    <!-- <span class="required_feild">*</span> -->
+                                                                    Active
+                                                                    <input id="Active-job" type="radio" value="Active"
+                                                                        name="status" v-model="record.status" />
+                                                                </label>
+                                                                <label class="active-inactive-job" for="Inactive-job">
+                                                                    <!-- <span class="required_feild">*</span> -->
+                                                                    Inactive
+                                                                    <input type="radio" id="Inactive-job"
+                                                                        value="Inactive" name="status"
+                                                                        v-model="record.status" />
+                                                                </label>
+                                                            </div>
+
                                                             <small>
                                                                 <span v-if="errors.benefits != null"
                                                                     class="text-danger">
@@ -651,9 +677,12 @@
 
                                 <div class="row mt-4 ">
                                     <div class="col-lg-12 modelBtnContainer ">
-                                        <button class="positiveBtn modelBtn mr-1" v-if="record.id == 0" @click.prevent="postJob()">Post</button>
-                                        <button class="positiveBtn modelBtn mr-1" v-else @click.prevent="updatePostJob()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click="clearRecord()">Cancel</button>
+                                        <button class="positiveBtn modelBtn mr-1" v-if="record.id == 0"
+                                            @click.prevent="postJob()">Post</button>
+                                        <button class="positiveBtn modelBtn mr-1" v-else
+                                            @click.prevent="updatePostJob()">Update</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                            @click="clearRecord()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -726,37 +755,35 @@
                         this.jobs = response.data
                     });
             },
-            deleteJobPost(id){
+            deleteJobPost(id) {
                 Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
                 }).then((result) => {
-                if (result.isConfirmed) {
-                    axios.get('/delete-job-post/'+id)
-                    .then((response) => {
-                        if(response.data.success == true)
-                        {
-                            Swal.fire(
-                            'Deleted!',
-                            'Your job has been deleted.',
-                            'success'
-                            )
-                            this.getCompanyJobs()
-                        }
-                        else{
-                            Swal.fire(
-                            'Not Found',
-                            'Your job not found.',
-                            'info'
-                            )
-                        }
-                    });
-                }
+                    if (result.isConfirmed) {
+                        axios.get('/delete-job-post/' + id)
+                            .then((response) => {
+                                if (response.data.success == true) {
+                                    Swal.fire(
+                                        'Deleted!',
+                                        'Your job has been deleted.',
+                                        'success'
+                                    )
+                                    this.getCompanyJobs()
+                                } else {
+                                    Swal.fire(
+                                        'Not Found',
+                                        'Your job not found.',
+                                        'info'
+                                    )
+                                }
+                            });
+                    }
                 })
             },
             postJob() {
@@ -811,38 +838,36 @@
                     }
                 })
             },
-            editJobPost(id){
-                axios.get('/edit-job-post/'+id)
-                .then((response) => {
-                    if(response.data.success == true)
-                    {
-                        this.record.id = response.data.data.id;
-                        this.record.bannar =  response.data.data.bannar;
-                        this.record.job_title =  response.data.data.title;
-                        this.record.job_designation =  response.data.data.designation;
-                        this.record.job_description =  response.data.data.description;
-                        this.record.job_type =  response.data.data.job_type;
-                        this.record.shift =  response.data.data.shift;
-                        // this.record.industry =  response.data.data.id;
-                        // this.record.department =  response.data.data.id;
-                        this.record.experience =  response.data.data.experience;
-                        this.record.salary_type =  response.data.data.salary_type;
-                        this.record.salary_range =  response.data.data.salary_range;
-                        this.record.gender =  response.data.data.gender;
-                        this.record.location =  response.data.data.location;
-                        this.record.total_positions =  response.data.data.total_position;
-                        this.record.qualification_level =  response.data.data.qualification_level;
-                        this.record.benefits =  response.data.data.benefits;
-                        this.record.job_responsibilities =  response.data.data.job_responsibilities;
-                        this.record.status =  response.data.data.status;
-                        $('#PostNewJobModal').modal('show')
-                    }
-                    else{
-                       
-                    }
-                });
+            editJobPost(id) {
+                axios.get('/edit-job-post/' + id)
+                    .then((response) => {
+                        if (response.data.success == true) {
+                            this.record.id = response.data.data.id;
+                            this.record.bannar = response.data.data.bannar;
+                            this.record.job_title = response.data.data.title;
+                            this.record.job_designation = response.data.data.designation;
+                            this.record.job_description = response.data.data.description;
+                            this.record.job_type = response.data.data.job_type;
+                            this.record.shift = response.data.data.shift;
+                            // this.record.industry =  response.data.data.id;
+                            // this.record.department =  response.data.data.id;
+                            this.record.experience = response.data.data.experience;
+                            this.record.salary_type = response.data.data.salary_type;
+                            this.record.salary_range = response.data.data.salary_range;
+                            this.record.gender = response.data.data.gender;
+                            this.record.location = response.data.data.location;
+                            this.record.total_positions = response.data.data.total_position;
+                            this.record.qualification_level = response.data.data.qualification_level;
+                            this.record.benefits = response.data.data.benefits;
+                            this.record.job_responsibilities = response.data.data.job_responsibilities;
+                            this.record.status = response.data.data.status;
+                            $('#PostNewJobModal').modal('show')
+                        } else {
+
+                        }
+                    });
             },
-            clearRecord(){
+            clearRecord() {
                 this.record = {
                     id: 0,
                     bannar: '',
@@ -864,7 +889,7 @@
                     job_responsibilities: '',
                 };
             },
-            updateJobPost(){
+            updateJobPost() {
                 Swal.fire({
                     title: 'Are you sure to post this job?',
                     text: "After Yes you your job will be live",
@@ -915,38 +940,36 @@
                     }
                 })
             },
-            postNewJob(){
+            postNewJob() {
                 axios.get('/check-job-post-limit')
-                .then((response) => {
-                    if(response.data.success == true)
-                    {
-                        $('#PostNewJobModal').modal('show')
-                    }
-                    else{
-                        if(response.data.response == 'expire'){
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Package Expire',
-                                text: 'Your Package Expire and you not able to post more jobs ',
-                                footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
-                            })
-                        }else if(response.data.response == 'pending'){
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Please Wait',
-                                text: 'Please pay your dues to post jobs! Thanks',
-                                footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
-                            })
-                        }else{
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Limit Exceeded',
-                                text: 'Your Post Job Limit Exceeded',
-                                footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
-                            })
+                    .then((response) => {
+                        if (response.data.success == true) {
+                            $('#PostNewJobModal').modal('show')
+                        } else {
+                            if (response.data.response == 'expire') {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Package Expire',
+                                    text: 'Your Package Expire and you not able to post more jobs ',
+                                    footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
+                                })
+                            } else if (response.data.response == 'pending') {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Please Wait',
+                                    text: 'Please pay your dues to post jobs! Thanks',
+                                    footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
+                                })
+                            } else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Limit Exceeded',
+                                    text: 'Your Post Job Limit Exceeded',
+                                    footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
+                                })
+                            }
                         }
-                    }
-                });
+                    });
             },
         },
     };

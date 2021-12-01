@@ -3735,6 +3735,9 @@ a, button{
 .candidate-wishlist-btn i{
     color: #fff;
 }
+.candidate-wishlist-btn i:hover{
+    color: #fff;
+}
 .candidate-view-btn {
     background-color: #081351;
     color: #fff;
@@ -6375,6 +6378,12 @@ progress {
     font-size: 16px;
     color: #000000;
     font-weight: 400;
+}
+.active-inactive-job{
+    display: block;
+    margin: 0px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .package-box {
