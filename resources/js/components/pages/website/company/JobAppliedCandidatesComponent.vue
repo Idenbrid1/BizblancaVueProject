@@ -26,7 +26,7 @@
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap" style="padding:10px">
                             <!-- Job List Start -->
-                            <div class="row m-0 justify-content-center" v-for="(item, index) in data" :key="index">
+                            <div class="row m-0 justify-content-start" v-for="(item, index) in data" :key="index">
                                 <div class="candidate-single">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
