@@ -69,6 +69,7 @@ a, button{
     justify-content: center;
     text-align: center;
     padding: 20px !important;
+    height: 100%;
 }
 
 .left-login>span,
@@ -98,7 +99,9 @@ a, button{
     align-items: center;
     text-align: center;
 }
-
+.right-login{
+    min-height: 630px;
+}
 .registerTab {
     display: flex;
     flex-direction: column;

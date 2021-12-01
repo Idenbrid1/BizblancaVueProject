@@ -1,5 +1,8 @@
 
 @media screen and (max-width:769px) {
+    .login-wrapper{
+        border: none;
+    }
     .v-on-d {
         display: none !important;
     }
