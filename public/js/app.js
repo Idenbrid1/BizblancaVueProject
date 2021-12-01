@@ -2629,6 +2629,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2709,6 +2719,61 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -26894,7 +26959,7 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _c("div", { staticClass: "container py-5" }, [
+      _c("div", { staticClass: "container py-2 py-md-5" }, [
         _c("div", { staticClass: "login-page-container container p-0" }, [
           _c(
             "form",
@@ -27086,7 +27151,11 @@ var render = function () {
                             {
                               attrs: { to: { name: "CandidateResetPassword" } },
                             },
-                            [_vm._v("Forgot Password?")]
+                            [
+                              _vm._v(
+                                "Forgot Password?\n                                    "
+                              ),
+                            ]
                           ),
                         ],
                         1
@@ -27162,17 +27231,22 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4 col-12 p-0 left-login v-on-d" }, [
-      _c("img", {
-        attrs: { src: "/website/assets/images/login-profile.png", alt: "img" },
-      }),
-      _vm._v(" "),
-      _c("span", [_vm._v("Welcome Back")]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "\n                                    To keep connected with us please login with your personal\n                                    info\n                                "
-        ),
+    return _c("div", { staticClass: "col-md-4 col-12 p-0 v-on-d" }, [
+      _c("div", { staticClass: "left-login" }, [
+        _c("img", {
+          attrs: {
+            src: "/website/assets/images/login-profile.png",
+            alt: "img",
+          },
+        }),
+        _vm._v(" "),
+        _c("span", [_vm._v("Welcome Back")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n                                        To keep connected with us please login with your personal\n                                        info\n                                    "
+          ),
+        ]),
       ]),
     ])
   },
@@ -27265,7 +27339,7 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _c("div", { staticClass: "register-container py-5 mt-5" }, [
+      _c("div", { staticClass: "register-container py-3 mt-5" }, [
         _c("div", { staticClass: "container p-0" }, [
           _c("div", { staticClass: "login-wrapper row m-0" }, [
             _vm._m(0),
@@ -28077,10 +28151,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "col-md-4 col-12 p-0 left-register v-on-d" },
-      [
+    return _c("section", { staticClass: "col-md-4 col-12 p-0 v-on-d" }, [
+      _c("div", { staticClass: "left-register" }, [
         _c("img", {
           attrs: {
             src: "/website/assets/images/login-profile.png",
@@ -28092,11 +28164,11 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "\n                        To keep connected with us please login with your personal info\n                    "
+            "\n                            To keep connected with us please login with your personal info\n                        "
           ),
         ]),
-      ]
-    )
+      ]),
+    ])
   },
   function () {
     var _vm = this
