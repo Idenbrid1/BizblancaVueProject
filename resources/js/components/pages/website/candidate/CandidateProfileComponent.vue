@@ -63,7 +63,7 @@
                             </ul>
                             <!-- mobile tabs start-->
                             <ul class="mobileTabsIcons" style="display: none;">
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="IconsTab IconsTabActive"
                                             src="/website/assets/images/details.svg" alt="TabsIcon"></a></li>
                                 <li><a @click="openProfileTab()"><img class="IconsTab"
                                             src="/website/assets/images/mortarboard.svg" alt="TabsIcon"
@@ -71,7 +71,7 @@
                                 <li><a @click="openProfileTab()"><img class="IconsTab"
                                             src="/website/assets/images/score.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab IconsTabActive"
+                                <li><a @click="openProfileTab()"><img class="IconsTab"
                                             src="/website/assets/images/language.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
                                 <li><a @click="openProfileTab()"><img class="IconsTab"
@@ -92,12 +92,6 @@
                                 <li><a @click="openProfileTab()"><img class="IconsTab"
                                             src="/website/assets/images/google-docs.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/overtime.svg" alt="TabsIcon"
-                                            style="height: 27px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/overtime.svg" alt="TabsIcon"
-                                            style="height: 27px;"></a></li>
                             </ul>
 
                             <!-- Modal Tab start -->
@@ -125,16 +119,12 @@
                                                     alt="TabsIcon" style="height: 26px;"></li>
                                             <li><img class="IconsTab" src="/website/assets/images/google-docs.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/overtime.svg"
-                                                    alt="TabsIcon" style="height: 27px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/overtime.svg"
-                                                    alt="TabsIcon" style="height: 27px;"></li>
                                         </ul>
                                     </div>
                                     <div class="IconsModalTabAnkers">
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class="nav-item">
-                                                <a class="nav-link nav-link active" data-toggle="tab"
+                                                <a class="nav-link active" data-toggle="tab"
                                                     href="#basic-information">Basic information</a>
                                             </li>
                                             <li class="nav-item">
@@ -216,13 +206,13 @@
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
-                                                    <div class="line-text-1">
-                                                        <p>{{this.profile.city}}</p>
+                                                    <div>
+                                                        <p class="line-text-2">{{this.profile.city}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder">
-                                                    <div class="line-text-1">
-                                                        <p>{{this.profile.address}}</p>
+                                                    <div>
+                                                        <p class="line-text-2">{{this.profile.address}}</p>
                                                     </div>
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder rb0">
@@ -240,9 +230,9 @@
                                                 <li><span class="profileLabel profileLabelBorder">Date of Birth</span>
                                                 </li>
                                                 <li><span class="profileLabel profileLabelBorder">Zip Code</span></li>
-                                                <li><span class="profileLabel"></span></li>
-                                                <li><span class="profileLabel"></span></li>
-                                                <li><span class="profileLabel bb5"></span></li>
+                                                <li><span class="profileLabel v-on-d"></span></li>
+                                                <li><span class="profileLabel v-on-d"></span></li>
+                                                <li><span class="profileLabel bb5 v-on-d"></span></li>
                                                 <!-- <li><span class="profileLabel bbl5"></span></li> -->
                                             </ul>
                                             <ul class="profileInfoList">
@@ -288,7 +278,7 @@
                                                 <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
                                                 </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Department</span></li>
-                                                <li class="profileLabel profileLabelBorder bbl5"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder bbl5 v-on-d"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0">
@@ -311,27 +301,27 @@
                                                         <p>{{item.department}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0"></li>
+                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rb0 btr5"><span></span></li>
-                                                <li class="profileLabel profileLabelBorder rt0"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 btr5 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span></li>
                                                 <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0"><span></span></li>
-                                                <li class="profileLabel bbl5"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span></li>
+                                                <li class="profileLabel bbl5 v-on-d"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder rt0 rb0"></li>
-                                                <li class="profileInfo profileInfoBorder rt0"></li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profileInfo profileInfoBorder rt0 rb0 v-on-d"></li>
+                                                <li class="profileInfo profileInfoBorder rt0 v-on-d"></li>
+                                                <li class="profileInfo profileInfoBorder v-on-d">
                                                     <div class="line-text-1">
                                                         <p>{{item.end_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0"></li>
+                                                <li class="profileInfo profileInfoBorder rb0 v-ond"></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -353,7 +343,7 @@
                                                 <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
                                                 </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Department</span></li>
-                                                <li class="profileLabel profileLabelBorder bbl5"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder bbl5 v-on-d"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0">
@@ -376,28 +366,28 @@
                                                         <p>Computer Science</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0"></li>
+                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5"><span></span>
+                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span></li>
                                                 <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0"><span></span></li>
-                                                <li class="profileLabel bbl5"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span></li>
+                                                <li class="profileLabel bbl5 v-on-d"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
-                                                <li class="profileInfo"></li>
-                                                <li class="profileInfo profileInfoBorder rt0"></li>
+                                                <li class="profileInfo v-on-d"></li>
+                                                <li class="profileInfo profileInfoBorder rt0 v-on-d"></li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
                                                         <p>20/08/2020</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0"></li>
+                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -410,7 +400,7 @@
                                 <div id="languages" class="tab-pane fade">
                                     <h1 class="tabsHeading">Languages</h1>
                                     <div class="row no-gutters DocumentsInfoTab">
-                                        <div class="col-4 col-md-6 br1">
+                                        <div class="col-6 col-md-6 br1">
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 bl5"><span>Language Name</span></li>
                                                 <li>
@@ -426,7 +416,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="col-8 col-md-6 bl1">
+                                        <div class="col-6 col-md-6 bl1">
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 br5"><span>Language Level</span></li>
                                                 <li>
@@ -547,21 +537,21 @@
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5"><span></span>
+                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0 rb0"><span></span></li>
-                                                <li class="profileLabel profileLabelBorder rt0"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 rb0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span></li>
                                                 <li class="profileLabel profileLabelBorder"><span>Current Company</span>
                                                 </li>
                                                 <li class="profileLabel profileLabelBorder profileLabelBorderBottom">
                                                     <span>Current Salary</span></li>
-                                                <li class="profileLabel profileLabelBorder rb0 rt0"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 rt0 v-on-d"><span></span></li>
                                                 <!-- <li class="profileLabel bbl5"><span></span></li> -->
                                             </ul>
                                             <ul class="profileInfoList">
-                                                <li class="profileInfo"></li>
-                                                <li class="profileInfo"></li>
-                                                <li class="profileInfo profileInfoBorderBottom"></li>
+                                                <li class="profileInfo v-on-d"></li>
+                                                <li class="profileInfo v-on-d"></li>
+                                                <li class="profileInfo profileInfoBorderBottom v-on-d"></li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.current_working_company}}</p>
@@ -572,7 +562,7 @@
                                                         <p>{{this.profile.current_salary}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorderTop"></li>
+                                                <li class="profileInfo profileInfoBorderTop v-on-d"></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -657,8 +647,8 @@
                                                 </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Current Status</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0"><span></span></li>
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 bbl5"><span></span>
+                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 rb0 bbl5 v-on-d"><span></span>
                                                 </li>
                                             </ul>
                                             <ul class="profileInfoList">
@@ -683,29 +673,29 @@
                                                         <p v-if="experience.is_working_currently == 0">No</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0"></li>
+                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rb0 rt0 btr5"><span></span>
+                                                <li class="profileLabel profileLabelBorder rb0 rt0 btr5 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span></li>
                                                 <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0"><span></span></li>
-                                                <li class="profileLabel"><span></span></li>
-                                                <li class="profileLabel bbl5"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span></li>
+                                                <li class="profileLabel v-on-d"><span></span></li>
+                                                <li class="profileLabel bbl5 v-on-d"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
-                                                <li class="profileInfo"></li>
-                                                <li class="profileInfo profileInfoBorder rt0"></li>
+                                                <li class="profileInfo v-on-d"></li>
+                                                <li class="profileInfo profileInfoBorder rt0 v-on-d"></li>
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
                                                         <p>{{experience.end_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0"></li>
+                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -718,7 +708,7 @@
                                 <div id="skills" class="tab-pane fade">
                                     <h1 class="tabsHeading">Skills</h1>
                                     <div class="row no-gutters DocumentsInfoTab">
-                                        <div class="col-4 col-md-6 br1">
+                                        <div class="col-5 col-md-6 br1">
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 bl5"><span>Skills</span></li>
                                                 <li>
@@ -734,7 +724,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="col-8 col-md-6 bl1">
+                                        <div class="col-7 col-md-6 bl1">
                                             <ul class="profileLables w-100">
                                                 <li class="profileLabel w-100 br5"><span>Skill Level</span></li>
                                                 <li>
@@ -802,7 +792,7 @@
                                                                     <li><a class="ViewAnker"
                                                                             :href="'/storage/images/candidates/resume/'+this.profile.cv_file"
                                                                             target="_blank">View</a></li>
-                                                                    <div class="alert displaynone" id="responseMsg">
+                                                                    <div class="alert d-none" id="responseMsg">
                                                                     </div>
                                                                     <div class='alert alert-danger mt-2 d-none text-danger'
                                                                         id="err_file"></div>
@@ -1948,7 +1938,7 @@
                                                             <label for="projectLink">Link</label>
                                                             <input name="projectLink[]" class="form-control" value=""
                                                                 v-model="project_push_array.link"
-                                                                placeholder="Enter Link" type="text" />
+                                                                placeholder="Enter Link" type="url" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">

@@ -9038,16 +9038,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -11948,6 +11938,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -13921,56 +13913,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -34843,7 +34785,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "IconsTab IconsTabActive",
                             attrs: {
                               src: "/website/assets/images/details.svg",
                               alt: "TabsIcon",
@@ -34911,7 +34853,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab IconsTabActive",
+                            staticClass: "IconsTab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/language.svg",
@@ -35060,52 +35002,6 @@ var render = function () {
                         ]
                       ),
                     ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "27px" },
-                            attrs: {
-                              src: "/website/assets/images/overtime.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "27px" },
-                            attrs: {
-                              src: "/website/assets/images/overtime.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
                   ]
                 ),
                 _vm._v(" "),
@@ -35205,8 +35101,8 @@ var render = function () {
                                       "profileInfo profileInfoBorder",
                                   },
                                   [
-                                    _c("div", { staticClass: "line-text-1" }, [
-                                      _c("p", [
+                                    _c("div", [
+                                      _c("p", { staticClass: "line-text-2" }, [
                                         _vm._v(_vm._s(this.profile.city)),
                                       ]),
                                     ]),
@@ -35220,8 +35116,8 @@ var render = function () {
                                       "profileInfo profileInfoBorder",
                                   },
                                   [
-                                    _c("div", { staticClass: "line-text-1" }, [
-                                      _c("p", [
+                                    _c("div", [
+                                      _c("p", { staticClass: "line-text-2" }, [
                                         _vm._v(_vm._s(this.profile.address)),
                                       ]),
                                     ]),
@@ -35416,7 +35312,7 @@ var render = function () {
                                     _vm._v(" "),
                                     _c("li", {
                                       staticClass:
-                                        "profileInfo profileInfoBorder rb0",
+                                        "profileInfo profileInfoBorder rb0 v-on-d",
                                     }),
                                   ]),
                                 ]),
@@ -35427,19 +35323,19 @@ var render = function () {
                                   _c("ul", { staticClass: "profileInfoList" }, [
                                     _c("li", {
                                       staticClass:
-                                        "profileInfo profileInfoBorder rt0 rb0",
+                                        "profileInfo profileInfoBorder rt0 rb0 v-on-d",
                                     }),
                                     _vm._v(" "),
                                     _c("li", {
                                       staticClass:
-                                        "profileInfo profileInfoBorder rt0",
+                                        "profileInfo profileInfoBorder rt0 v-on-d",
                                     }),
                                     _vm._v(" "),
                                     _c(
                                       "li",
                                       {
                                         staticClass:
-                                          "profileInfo profileInfoBorder",
+                                          "profileInfo profileInfoBorder v-on-d",
                                       },
                                       [
                                         _c(
@@ -35456,7 +35352,7 @@ var render = function () {
                                     _vm._v(" "),
                                     _c("li", {
                                       staticClass:
-                                        "profileInfo profileInfoBorder rb0",
+                                        "profileInfo profileInfoBorder rb0 v-ond",
                                     }),
                                   ]),
                                 ]),
@@ -35487,7 +35383,7 @@ var render = function () {
                           "div",
                           { staticClass: "row no-gutters DocumentsInfoTab" },
                           [
-                            _c("div", { staticClass: "col-4 col-md-6 br1" }, [
+                            _c("div", { staticClass: "col-6 col-md-6 br1" }, [
                               _c("ul", { staticClass: "profileLables w-100" }, [
                                 _vm._m(10),
                                 _vm._v(" "),
@@ -35539,7 +35435,7 @@ var render = function () {
                               ]),
                             ]),
                             _vm._v(" "),
-                            _c("div", { staticClass: "col-8 col-md-6 bl1" }, [
+                            _c("div", { staticClass: "col-6 col-md-6 bl1" }, [
                               _c("ul", { staticClass: "profileLables w-100" }, [
                                 _vm._m(11),
                                 _vm._v(" "),
@@ -35847,13 +35743,13 @@ var render = function () {
                               _vm._m(17),
                               _vm._v(" "),
                               _c("ul", { staticClass: "profileInfoList" }, [
-                                _c("li", { staticClass: "profileInfo" }),
+                                _c("li", { staticClass: "profileInfo v-on-d" }),
                                 _vm._v(" "),
-                                _c("li", { staticClass: "profileInfo" }),
+                                _c("li", { staticClass: "profileInfo v-on-d" }),
                                 _vm._v(" "),
                                 _c("li", {
                                   staticClass:
-                                    "profileInfo profileInfoBorderBottom",
+                                    "profileInfo profileInfoBorderBottom v-on-d",
                                 }),
                                 _vm._v(" "),
                                 _c(
@@ -35894,7 +35790,7 @@ var render = function () {
                                 _vm._v(" "),
                                 _c("li", {
                                   staticClass:
-                                    "profileInfo profileInfoBorderTop",
+                                    "profileInfo profileInfoBorderTop v-on-d",
                                 }),
                               ]),
                             ]),
@@ -36148,7 +36044,7 @@ var render = function () {
                                     _vm._v(" "),
                                     _c("li", {
                                       staticClass:
-                                        "profileInfo profileInfoBorder rb0",
+                                        "profileInfo profileInfoBorder rb0 v-on-d",
                                     }),
                                   ]),
                                 ]),
@@ -36157,11 +36053,13 @@ var render = function () {
                                   _vm._m(24, true),
                                   _vm._v(" "),
                                   _c("ul", { staticClass: "profileInfoList" }, [
-                                    _c("li", { staticClass: "profileInfo" }),
+                                    _c("li", {
+                                      staticClass: "profileInfo v-on-d",
+                                    }),
                                     _vm._v(" "),
                                     _c("li", {
                                       staticClass:
-                                        "profileInfo profileInfoBorder rt0",
+                                        "profileInfo profileInfoBorder rt0 v-on-d",
                                     }),
                                     _vm._v(" "),
                                     _c(
@@ -36187,7 +36085,7 @@ var render = function () {
                                     _vm._v(" "),
                                     _c("li", {
                                       staticClass:
-                                        "profileInfo profileInfoBorder rb0",
+                                        "profileInfo profileInfoBorder rb0 v-on-d",
                                     }),
                                   ]),
                                 ]),
@@ -36213,7 +36111,7 @@ var render = function () {
                           "div",
                           { staticClass: "row no-gutters DocumentsInfoTab" },
                           [
-                            _c("div", { staticClass: "col-4 col-md-6 br1" }, [
+                            _c("div", { staticClass: "col-5 col-md-6 br1" }, [
                               _c("ul", { staticClass: "profileLables w-100" }, [
                                 _vm._m(26),
                                 _vm._v(" "),
@@ -36265,7 +36163,7 @@ var render = function () {
                               ]),
                             ]),
                             _vm._v(" "),
-                            _c("div", { staticClass: "col-8 col-md-6 bl1" }, [
+                            _c("div", { staticClass: "col-7 col-md-6 bl1" }, [
                               _c("ul", { staticClass: "profileLables w-100" }, [
                                 _vm._m(27),
                                 _vm._v(" "),
@@ -36411,8 +36309,7 @@ var render = function () {
                                                 ]),
                                                 _vm._v(" "),
                                                 _c("div", {
-                                                  staticClass:
-                                                    "alert displaynone",
+                                                  staticClass: "alert d-none",
                                                   attrs: { id: "responseMsg" },
                                                 }),
                                                 _vm._v(" "),
@@ -43098,7 +42995,7 @@ var render = function () {
                                                               value: "",
                                                               placeholder:
                                                                 "Enter Link",
-                                                              type: "text",
+                                                              type: "url",
                                                             },
                                                             domProps: {
                                                               value:
@@ -44199,28 +44096,6 @@ var staticRenderFns = [
               },
             }),
           ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "27px" },
-              attrs: {
-                src: "/website/assets/images/overtime.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "27px" },
-              attrs: {
-                src: "/website/assets/images/overtime.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
         ]),
       ]),
       _vm._v(" "),
@@ -44230,7 +44105,7 @@ var staticRenderFns = [
             _c(
               "a",
               {
-                staticClass: "nav-link nav-link active",
+                staticClass: "nav-link active",
                 attrs: { "data-toggle": "tab", href: "#basic-information" },
               },
               [_vm._v("Basic information")]
@@ -44406,11 +44281,11 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel" })]),
+      _c("li", [_c("span", { staticClass: "profileLabel v-on-d" })]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel" })]),
+      _c("li", [_c("span", { staticClass: "profileLabel v-on-d" })]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel bb5" })]),
+      _c("li", [_c("span", { staticClass: "profileLabel bb5 v-on-d" })]),
     ])
   },
   function () {
@@ -44467,7 +44342,7 @@ var staticRenderFns = [
         _c("span", [_vm._v("Department")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder bbl5" }, [
+      _c("li", { staticClass: "profileLabel profileLabelBorder bbl5 v-on-d" }, [
         _c("span"),
       ]),
     ])
@@ -44477,11 +44352,13 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "profileLables" }, [
-      _c("li", { staticClass: "profileLabel profileLabelBorder rb0 btr5" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profileLabel profileLabelBorder rb0 btr5 v-on-d" },
+        [_c("span")]
+      ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0" }, [
+      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 v-on-d" }, [
         _c("span"),
       ]),
       _vm._v(" "),
@@ -44489,11 +44366,11 @@ var staticRenderFns = [
         _c("span", [_vm._v("Ending Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rb0" }, [
+      _c("li", { staticClass: "profileLabel profileLabelBorder rb0 v-on-d" }, [
         _c("span"),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel bbl5" }, [_c("span")]),
+      _c("li", { staticClass: "profileLabel bbl5 v-on-d" }, [_c("span")]),
     ])
   },
   function () {
@@ -44556,7 +44433,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c(
                 "li",
-                { staticClass: "profileLabel profileLabelBorder bbl5" },
+                { staticClass: "profileLabel profileLabelBorder bbl5 v-on-d" },
                 [_c("span")]
               ),
             ]),
@@ -44586,7 +44463,9 @@ var staticRenderFns = [
                 ]),
               ]),
               _vm._v(" "),
-              _c("li", { staticClass: "profileInfo profileInfoBorder rb0" }),
+              _c("li", {
+                staticClass: "profileInfo profileInfoBorder rb0 v-on-d",
+              }),
             ]),
           ]),
           _vm._v(" "),
@@ -44594,29 +44473,40 @@ var staticRenderFns = [
             _c("ul", { staticClass: "profileLables" }, [
               _c(
                 "li",
-                { staticClass: "profileLabel profileLabelBorder rt0 rb0 btr5" },
+                {
+                  staticClass:
+                    "profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d",
+                },
                 [_c("span")]
               ),
               _vm._v(" "),
-              _c("li", { staticClass: "profileLabel profileLabelBorder rt0" }, [
-                _c("span"),
-              ]),
+              _c(
+                "li",
+                { staticClass: "profileLabel profileLabelBorder rt0 v-on-d" },
+                [_c("span")]
+              ),
               _vm._v(" "),
               _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
                 _c("span", [_vm._v("Ending Date")]),
               ]),
               _vm._v(" "),
-              _c("li", { staticClass: "profileLabel profileLabelBorder rb0" }, [
+              _c(
+                "li",
+                { staticClass: "profileLabel profileLabelBorder rb0 v-on-d" },
+                [_c("span")]
+              ),
+              _vm._v(" "),
+              _c("li", { staticClass: "profileLabel bbl5 v-on-d" }, [
                 _c("span"),
               ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "profileLabel bbl5" }, [_c("span")]),
             ]),
             _vm._v(" "),
             _c("ul", { staticClass: "profileInfoList" }, [
-              _c("li", { staticClass: "profileInfo" }),
+              _c("li", { staticClass: "profileInfo v-on-d" }),
               _vm._v(" "),
-              _c("li", { staticClass: "profileInfo profileInfoBorder rt0" }),
+              _c("li", {
+                staticClass: "profileInfo profileInfoBorder rt0 v-on-d",
+              }),
               _vm._v(" "),
               _c("li", { staticClass: "profileInfo profileInfoBorder" }, [
                 _c("div", { staticClass: "line-text-1" }, [
@@ -44624,7 +44514,9 @@ var staticRenderFns = [
                 ]),
               ]),
               _vm._v(" "),
-              _c("li", { staticClass: "profileInfo profileInfoBorder rb0" }),
+              _c("li", {
+                staticClass: "profileInfo profileInfoBorder rb0 v-on-d",
+              }),
             ]),
           ]),
         ]),
@@ -44771,15 +44663,17 @@ var staticRenderFns = [
     return _c("ul", { staticClass: "profileLables" }, [
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorder rt0 rb0 btr5" },
+        { staticClass: "profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d" },
         [_c("span")]
       ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 rb0" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profileLabel profileLabelBorder rt0 rb0 v-on-d" },
+        [_c("span")]
+      ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0" }, [
+      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 v-on-d" }, [
         _c("span"),
       ]),
       _vm._v(" "),
@@ -44796,9 +44690,11 @@ var staticRenderFns = [
         [_c("span", [_vm._v("Current Salary")])]
       ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rb0 rt0" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profileLabel profileLabelBorder rb0 rt0 v-on-d" },
+        [_c("span")]
+      ),
     ])
   },
   function () {
@@ -44924,13 +44820,13 @@ var staticRenderFns = [
         _c("span", [_vm._v("Current Status")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rb0" }, [
+      _c("li", { staticClass: "profileLabel profileLabelBorder rb0 v-on-d" }, [
         _c("span"),
       ]),
       _vm._v(" "),
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorder rt0 rb0 bbl5" },
+        { staticClass: "profileLabel profileLabelBorder rt0 rb0 bbl5 v-on-d" },
         [_c("span")]
       ),
     ])
@@ -44942,11 +44838,11 @@ var staticRenderFns = [
     return _c("ul", { staticClass: "profileLables" }, [
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorder rb0 rt0 btr5" },
+        { staticClass: "profileLabel profileLabelBorder rb0 rt0 btr5 v-on-d" },
         [_c("span")]
       ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0" }, [
+      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 v-on-d" }, [
         _c("span"),
       ]),
       _vm._v(" "),
@@ -44954,13 +44850,13 @@ var staticRenderFns = [
         _c("span", [_vm._v("Ending Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rb0" }, [
+      _c("li", { staticClass: "profileLabel profileLabelBorder rb0 v-on-d" }, [
         _c("span"),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel" }, [_c("span")]),
+      _c("li", { staticClass: "profileLabel v-on-d" }, [_c("span")]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel bbl5" }, [_c("span")]),
+      _c("li", { staticClass: "profileLabel bbl5 v-on-d" }, [_c("span")]),
     ])
   },
   function () {
@@ -49590,9 +49486,16 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _c("h1", [_vm._v("Chat is under developemnet")]),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "/" } }, [_vm._v("Back to Home")]),
+      _c(
+        "div",
+        { staticClass: "text-center my-5" },
+        [
+          _c("h1", [_vm._v("Chat is under developemnet")]),
+          _vm._v(" "),
+          _c("router-link", { attrs: { to: "/" } }, [_vm._v("Back to Home")]),
+        ],
+        1
+      ),
     ],
     1
   )
@@ -54329,239 +54232,9 @@ var render = function () {
                         [
                           _c("img", {
                             staticClass: "IconsTab",
-                            staticStyle: { height: "30px" },
-                            attrs: {
-                              src: "/website/assets/images/mortarboard.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "26px" },
-                            attrs: {
-                              src: "/website/assets/images/score.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab IconsTabActive",
-                            staticStyle: { height: "26px" },
-                            attrs: {
-                              src: "/website/assets/images/language.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "26px" },
-                            attrs: {
-                              src: "/website/assets/images/trophy.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/leader.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "26px" },
-                            attrs: {
-                              src: "/website/assets/images/work.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "26px" },
-                            attrs: {
-                              src: "/website/assets/images/overtime.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "26px" },
-                            attrs: {
-                              src: "/website/assets/images/settings.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "26px" },
-                            attrs: {
-                              src: "/website/assets/images/google-docs.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "27px" },
-                            attrs: {
-                              src: "/website/assets/images/overtime.svg",
-                              alt: "TabsIcon",
-                            },
-                          }),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        {
-                          on: {
-                            click: function ($event) {
-                              return _vm.openProfileTab()
-                            },
-                          },
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "IconsTab",
-                            staticStyle: { height: "27px" },
-                            attrs: {
-                              src: "/website/assets/images/overtime.svg",
                               alt: "TabsIcon",
                             },
                           }),
@@ -56030,119 +55703,9 @@ var staticRenderFns = [
           _c("li", [
             _c("img", {
               staticClass: "IconsTab",
-              staticStyle: { height: "30px" },
-              attrs: {
-                src: "/website/assets/images/mortarboard.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "26px" },
-              attrs: {
-                src: "/website/assets/images/score.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "26px" },
-              attrs: {
-                src: "/website/assets/images/language.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "26px" },
-              attrs: {
-                src: "/website/assets/images/trophy.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/leader.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "26px" },
-              attrs: {
-                src: "/website/assets/images/work.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "26px" },
-              attrs: {
-                src: "/website/assets/images/overtime.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "26px" },
-              attrs: {
-                src: "/website/assets/images/settings.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "26px" },
-              attrs: {
-                src: "/website/assets/images/google-docs.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "27px" },
-              attrs: {
-                src: "/website/assets/images/overtime.svg",
-                alt: "TabsIcon",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("img", {
-              staticClass: "IconsTab",
-              staticStyle: { height: "27px" },
-              attrs: {
-                src: "/website/assets/images/overtime.svg",
                 alt: "TabsIcon",
               },
             }),
