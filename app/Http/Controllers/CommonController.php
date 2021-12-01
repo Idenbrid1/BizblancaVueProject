@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Models\Candidate;
 use App\Models\CandidateSkill;
 use App\Models\Company;
@@ -17,8 +15,6 @@ use Illuminate\Http\Request;
 use DB;
 use Validator;
 use Auth;
-
-
 class CommonController extends Controller
 {
     public function jobSearch(Request $request)
@@ -82,7 +78,6 @@ class CommonController extends Controller
             }
         }
         return $candidate_with_wishlist;
-
     }
     public function companyKeywordSearch($keyword)
     {
@@ -117,22 +112,22 @@ class CommonController extends Controller
                 $candidate_skills_lists = $candidate_skills_lists->where($field, $request->$field);
             }
         }
-        if($candidate_skills_lists)
+        if(count($candidate_skills_lists) > 0)
         {
             // return $candidate_skills_lists;
             $user = User::find(Auth::user()->id);
             $company = Company::where('user_id', $user->id)->first();
             // $candidates = Candidate::get();
-            foreach($candidate_skills_lists as $candidate)
+            foreach($candidate_skills_lists as $key=>$candidate)
             {
                 if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
                 {
-                    $candidate_with_wishlist[] = array(
+                    $candidate_with_wishlist[$key] = array(
                         'candidate'=>$candidate,
                         'is_wish_listed'=>true,
                     );
                 }else{
-                    $candidate_with_wishlist[] = array(
+                    $candidate_with_wishlist[$key] = array(
                         'candidate'=>$candidate,
                         'is_wish_listed'=>false,
                     );
@@ -162,12 +157,10 @@ class CommonController extends Controller
             return $candidate_with_wishlist;
         }
     }
-
     public function getCandidateSearch()
     {
         return Candidate::with('CandidateSkills')->latest()->paginate(12); 
     }
-
     public function getCompanyDetail($id)
     {
         return Company::with('Jobs')->find($id);
@@ -186,7 +179,6 @@ class CommonController extends Controller
             'related_job' => $retatedCompanyJob
         ]);
     }
-
     public function getCandidateDetail($id)
     {
         $candidate = Candidate::with(['CandidateAwards', 'CandidateEducation', 'CandidateExperience', 'CandidateLanguage', 'CandidateSkills', 'CandidateProjects'])->find($id);
@@ -196,12 +188,10 @@ class CommonController extends Controller
             'related_candidate' => $retatedCandidate
         ]);
     }
-
     public function getPackagePlansList()
     {
         return Package::all();
     }
-
     public function expireTodayJobs()
     {
         // $fetchList = Order::where('status', 'active')->toSql();
@@ -216,21 +206,17 @@ class CommonController extends Controller
             'phone' => 'Phone',
             'message' => 'Message',
         ];
-
         $messages = [
             // 'text.unique_with' => 'This Company Already Exist!',
         ];
-
         $rules = [
             'name' => 'required',
             'email' => 'required',
             'phone' => 'required',
             'message' => 'required',
         ];
-
         $validator = Validator::make($request->all(), $rules, $messages);
         $validator->setAttributeNames($attributeNames);
-
         if($validator->fails()){
             return response()->json([
                 'success' => false,
@@ -256,5 +242,4 @@ class CommonController extends Controller
             }
         }
     }
-
 }

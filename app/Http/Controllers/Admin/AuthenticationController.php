@@ -11,6 +11,7 @@ use App\Models\CandidateAppliedJob;
 use App\Models\User;
 use App\Models\Company;
 use App\Models\Order;
+use App\Models\Package;
 use App\Models\PasswordReset;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -78,19 +79,23 @@ class AuthenticationController extends Controller
             $User = User::create($request->all());
             if($request->type == 'company')
             {
+                $package = Package::where('title', 'Free')->first();
                 $company = new Company;
                 $company->company_name = $request->company_name;
                 $company->email = $request->email; 
                 $company->phone = $request->phone;
                 $company->user_id = $User->id;
+                $company->package_id = $package->id;
                 $company->save(); 
                 $create_Order = Order::create([
                     'package_id' => 1,
                     'company_id' => $company->id,
                     'user_id' => $User->id,
                     'start_date' => Carbon::now(),
-                    'status' => 'approved',
+                    'status' => 'active',
                 ]);
+                $company->order = $create_Order->id;
+                $company->update();
             }
             if($request->type == 'candidate')
             {

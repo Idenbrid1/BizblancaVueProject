@@ -30,6 +30,7 @@ class Company extends Model
         'twitter',
         'github',
         'user_id',
+        'status',
     ];
 
     public function Jobs()

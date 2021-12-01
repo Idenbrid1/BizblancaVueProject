@@ -13652,7 +13652,7 @@ __webpack_require__.r(__webpack_exports__);
         qualification_level: '',
         benefits: '',
         job_responsibilities: '',
-        status: 0
+        status: 'Active'
       },
       max: 36,
       errors: [],
@@ -13791,6 +13791,7 @@ __webpack_require__.r(__webpack_exports__);
           _this4.record.qualification_level = response.data.data.qualification_level;
           _this4.record.benefits = response.data.data.benefits;
           _this4.record.job_responsibilities = response.data.data.job_responsibilities;
+          _this4.record.status = response.data.data.status;
           $('#PostNewJobModal').modal('show');
         } else {}
       });
@@ -53331,12 +53332,12 @@ var render = function () {
                                               staticClass: "form-control",
                                               attrs: {
                                                 type: "radio",
-                                                value: "1",
+                                                value: "Active",
                                               },
                                               domProps: {
                                                 checked: _vm._q(
                                                   _vm.record.status,
-                                                  "1"
+                                                  "Active"
                                                 ),
                                               },
                                               on: {
@@ -53344,7 +53345,7 @@ var render = function () {
                                                   return _vm.$set(
                                                     _vm.record,
                                                     "status",
-                                                    "1"
+                                                    "Active"
                                                   )
                                                 },
                                               },
@@ -53364,12 +53365,12 @@ var render = function () {
                                               staticClass: "form-control",
                                               attrs: {
                                                 type: "radio",
-                                                value: "0",
+                                                value: "Inactive",
                                               },
                                               domProps: {
                                                 checked: _vm._q(
                                                   _vm.record.status,
-                                                  "0"
+                                                  "Inactive"
                                                 ),
                                               },
                                               on: {
@@ -53377,7 +53378,7 @@ var render = function () {
                                                   return _vm.$set(
                                                     _vm.record,
                                                     "status",
-                                                    "0"
+                                                    "Inactive"
                                                   )
                                                 },
                                               },
@@ -54231,7 +54232,7 @@ var render = function () {
       _c("div", { staticClass: "profile-wrapper mt-5" }, [
         _c("div", { staticClass: "row m-0 container p-0" }, [
           _c("div", { staticClass: "col-12 p-0" }, [
-            this.profile.package_id == 0
+            this.profile.package_id == 0 && this.profile.package.title == "Free"
               ? _c(
                   "div",
                   {

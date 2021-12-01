@@ -632,9 +632,9 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="benefits"><span class="required_feild">*</span>Active</label>
-                                                            <input type="radio" value="1" v-model="record.status" class="form-control"/>
+                                                            <input type="radio" value="Active" v-model="record.status" class="form-control"/>
                                                             <label for="benefits"><span class="required_feild">*</span>Inactive</label>
-                                                            <input type="radio" value="0" v-model="record.status" class="form-control"/>
+                                                            <input type="radio" value="Inactive" v-model="record.status" class="form-control"/>
                                                             <small>
                                                                 <span v-if="errors.benefits != null"
                                                                     class="text-danger">
@@ -691,7 +691,7 @@
                     qualification_level: '',
                     benefits: '',
                     job_responsibilities: '',
-                    status: 0,
+                    status: 'Active',
                 },
                 max: 36,
                 errors: [],
@@ -834,6 +834,7 @@
                         this.record.qualification_level =  response.data.data.qualification_level;
                         this.record.benefits =  response.data.data.benefits;
                         this.record.job_responsibilities =  response.data.data.job_responsibilities;
+                        this.record.status =  response.data.data.status;
                         $('#PostNewJobModal').modal('show')
                     }
                     else{

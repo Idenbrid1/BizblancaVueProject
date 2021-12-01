@@ -30,7 +30,7 @@ class CompanyController extends Controller
         $company = Company::where('user_id', $user_id)->with(['Order', 'Package'])->first();
         $order = Order::where('company_id', $company->id)->first();
         if($order){
-            if($company->order['status'] == 'active')
+            if($order->status == 'active')
             {
                 if($company->order['job_post'] == $company->post_job_count)
                 {
@@ -141,6 +141,7 @@ class CompanyController extends Controller
 
     public function jobPost(Request $request)
     {
+        return $request;
         $attributeNames = [
             'bannar' => 'bannar',
             'job_title' => 'Job Title',
@@ -157,6 +158,7 @@ class CompanyController extends Controller
             'job_responsibilities' => 'Job Responsibilities',
             'qualification_level' => 'qualification',
             'benefits' => 'Benefits',
+            'status' => 'Status',
         ];
         $rules = array(
             'bannar' => 'required',
@@ -174,6 +176,7 @@ class CompanyController extends Controller
             'job_responsibilities' => 'required',
             'qualification_level' => 'required',
             'benefits' => 'required',
+            'status' => 'required',
         );
 
         $validator = Validator::make($request->all(), $rules);
@@ -208,6 +211,7 @@ class CompanyController extends Controller
             $postjob->job_responsibilities = $request->job_responsibilities;
             $postjob->qualification_level = $request->qualification_level;
             $postjob->benefits = $request->benefits;
+            $postjob->status = $request->status;
             $postjob->company_id = $company->id;
             if($request->bannar) 
             {   
