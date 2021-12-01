@@ -1405,7 +1405,7 @@
                                             </div>
                                             <div class="subFormFields">
                                                 <div class="row m-0" v-if="this.addMoreDBEducation == true">
-                                                    <div class="float-right w-100">
+                                                    <div class="text-right">
                                                         <a @click="removeAddMoreArrayEducation()">
                                                             <i class="fas fa-times"></i>
                                                         </a>
