@@ -53340,6 +53340,7 @@ var render = function () {
                                               attrs: {
                                                 type: "radio",
                                                 value: "Active",
+                                                name: "status",
                                               },
                                               domProps: {
                                                 checked: _vm._q(
@@ -53373,6 +53374,7 @@ var render = function () {
                                               attrs: {
                                                 type: "radio",
                                                 value: "Inactive",
+                                                name: "status",
                                               },
                                               domProps: {
                                                 checked: _vm._q(

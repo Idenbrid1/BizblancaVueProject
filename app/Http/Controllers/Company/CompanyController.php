@@ -141,7 +141,6 @@ class CompanyController extends Controller
 
     public function jobPost(Request $request)
     {
-        return $request;
         $attributeNames = [
             'bannar' => 'bannar',
             'job_title' => 'Job Title',

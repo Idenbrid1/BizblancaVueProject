@@ -632,9 +632,9 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="benefits"><span class="required_feild">*</span>Active</label>
-                                                            <input type="radio" value="Active" v-model="record.status" class="form-control"/>
+                                                            <input type="radio" value="Active" name="status" v-model="record.status" class="form-control"/>
                                                             <label for="benefits"><span class="required_feild">*</span>Inactive</label>
-                                                            <input type="radio" value="Inactive" v-model="record.status" class="form-control"/>
+                                                            <input type="radio" value="Inactive" name="status" v-model="record.status" class="form-control"/>
                                                             <small>
                                                                 <span v-if="errors.benefits != null"
                                                                     class="text-danger">
