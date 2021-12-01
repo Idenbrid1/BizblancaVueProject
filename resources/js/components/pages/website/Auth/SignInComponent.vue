@@ -7,7 +7,7 @@
                     <div class="row m-0">
                         <div class="col-12 p-0">
                             <section class="login-wrapper row m-0">
-                                <div class="col-md-4 col-12 p-0 left-login">
+                                <div class="col-md-4 col-12 p-0 left-login v-on-d">
                                     <img src="/website/assets/images/login-profile.png" alt="img" />
                                     <span>Welcome Back</span>
                                     <p>
@@ -66,7 +66,7 @@
                                                 <a href="#"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src="/website/assets/images/github.svg" alt="github" /></a>
+                                                <a href="#"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
                                             </li>
                                         </ul>
                                         <span>Don't have an account?

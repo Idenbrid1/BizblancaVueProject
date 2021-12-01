@@ -4,7 +4,7 @@
         <div class="register-container py-5 mt-5">
             <div class="container p-0">
                 <div class="login-wrapper row m-0">
-                    <section class="col-md-4 col-12 p-0 left-register">
+                    <section class="col-md-4 col-12 p-0 left-register v-on-d">
                         <img src="/website/assets/images/login-profile.png" alt="img" />
                         <span>Hello Friend</span>
                         <p>
@@ -90,13 +90,13 @@
                                                                 <a href="#"><img src="/website/assets/images/search.svg" alt="google" /></a>
                                                             </li>
                                                             <li>
-                                                                <a href="#"><img src="/website/assets/images/facebook.svg" alt="facebook" /></a>
+                                                                <a href="#"><img src="/website/assets/images/facebook_icon.png" alt="facebook" /></a>
                                                             </li>
                                                             <li>
                                                                 <a href="#"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
                                                             </li>
                                                             <li>
-                                                                <a href="#"><img src="/website/assets/images/github.svg" alt="github" /></a>
+                                                                <a href="#"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
                                                             </li>
                                                         </ul>
                                                         <span>Already have an account?

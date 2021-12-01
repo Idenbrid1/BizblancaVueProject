@@ -115,9 +115,7 @@
                                                         If you're having trouble clicking the "Verify Email Address"
                                                         button, copy and paste the URL below
                                                         into your web browser: <span class="break-all"
-                                                            style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; word-break: break-all;"><a
-                                                                href="http://localhost:8000/email/verify/28/4abb85a9cae71f0330f0445619156343b191d074?expires=1635250231&amp;signature=5c53d3dacb226ea76cf1a98ef9752a580bec506003d36d0f97d0f00c686e9ee3"
-                                                                style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3869d4;">http://localhost:8000/email/verify/28/4abb85a9cae71f0330f0445619156343b191d074?expires=1635250231&amp;signature=5c53d3dacb226ea76cf1a98ef9752a580bec506003d36d0f97d0f00c686e9ee3</a></span>
+                                                            style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; word-break: break-all;">
                                                     </p>
 
                                                 </td>

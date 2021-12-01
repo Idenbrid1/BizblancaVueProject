@@ -32,7 +32,7 @@
                                         <div class="candidate-image">
                                             <div class="candidate-photo" :style="{ 'background-image': 'url(/storage/images/candidates/' + item.candidates.profile_image + ')' }"></div>
                                             <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">{{item.candidates.full_name}}Khan</h6>
+                                                <h6 class="candidate-name mb-0">{{item.candidates.full_name}}</h6>
                                             </div>
                                         </div>
                                         <!-- <span class="job-post-date">20 hours ago</span> -->
