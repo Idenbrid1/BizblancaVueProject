@@ -54,6 +54,7 @@ Route::get('navbar-check-roles', [App\Http\Controllers\Admin\AuthenticationContr
 Route::post('/job-search', [App\Http\Controllers\CommonController::class, 'jobSearch']);
 Route::post('/candidate-search', [App\Http\Controllers\CommonController::class, 'candidateSearch']);
 Route::get('/job-keyword-search/{keyword}', [App\Http\Controllers\CommonController::class, 'jobKeywordSearch']);
+Route::get('/candidate-keyword-search/{keyword}', [App\Http\Controllers\CommonController::class, 'candidateKeywordSearch']);
 Route::get('/companies-keyword-search/{keyword}', [App\Http\Controllers\CommonController::class, 'companyKeywordSearch']);
 Route::get('get-candidates-search', [App\Http\Controllers\CommonController::class, 'getCandidateSearch']);
 Route::get('/get-single-company-detail/{id}', [App\Http\Controllers\CommonController::class, 'getCompanyDetail']);
@@ -64,7 +65,6 @@ Route::get('/reset-password/{token}', [App\Http\Controllers\Admin\Authentication
 Route::post('/complete-reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordFormPost']);
 Route::get('expire-today-jobs', [App\Http\Controllers\CommonController::class, 'expireTodayJobs']);
 Route::post('/submit-contact-us', [App\Http\Controllers\CommonController::class, 'contactUs']);
-Route::get('/add-to-wish-list/{candidate_id}', [App\Http\Controllers\CommonController::class, 'addToWishList']);
 
 //samad 
 Route::get('/login', function () {
@@ -95,10 +95,6 @@ Route::get('/comming_soon', function () {
 Route::get('oauth/{driver}', [RegisterController::class, 'redirectToProvider'])->name('social.oauth');
 Route::get('oauth/{driver}/callback', [RegisterController::class, 'handleProviderCallback'])->name('social.callback');
 
-
-
-Route::post('/search-jobs', [App\Http\Controllers\Website\Candidate\HomeController::class, 'searchJobs']);
-
 //samad
 Route::middleware('auth')->group(function(){
     // Route::get('/home', [App\Http\Controllers\Website\Candidate\HomeController::class, 'showDashboardPage'])->name('home');
@@ -118,6 +114,7 @@ Route::middleware('auth')->group(function(){
     Route::post('/update/desire-job', [App\Http\Controllers\Candidate\CandidateController::class, 'updateDesireJob'])->name('profile.updateDesireJob');
     Route::get('/apply-job/{job_id}', [App\Http\Controllers\Candidate\CandidateController::class, 'applyJob']);
     Route::get('download-invoice/{order_id}', [App\Http\Controllers\Company\CompanyController::class, 'downloadInvoice']);
+
    
     // Route::post('/update/remark', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateRemark'])->name('profile.updateRemark');
     // // Route::post('/update/cnic-back', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnicBack'])->name('profile.updateCnicBack');
@@ -164,6 +161,9 @@ Route::post('/update/newsletter', [App\Http\Controllers\Website\Candidate\Profil
         Route::get('/download-invoice/{order_id}', [App\Http\Controllers\Company\CompanyController::class, 'downloadInvoice']);
         Route::get('/get-applied-applicants-list/{job_id}', [App\Http\Controllers\Company\CompanyController::class, 'getAppliedApplicantsList']);
         Route::get('get-company-wish-list', [App\Http\Controllers\Company\CompanyController::class, 'getCompanyWishList']);
+        Route::get('/remove-to-wish-list/{id}', [App\Http\Controllers\Company\CompanyController::class, 'removeToWishList']);
+        Route::get('/add-to-wish-list/{candidate_id}', [App\Http\Controllers\Company\CompanyController::class, 'addToWishList']);
+
 		// Route::get('/home', [App\Http\Controllers\Website\Company\HomeController::class, 'showDashboardPage'])->name('home');
 		// Route::get('/profile', [App\Http\Controllers\Website\Company\ProfileController::class, 'show'])->name('profile.show');
 		// Route::get('/profile_edit', [App\Http\Controllers\Website\Company\ProfileController::class, 'edit'])->name('profile.edit');

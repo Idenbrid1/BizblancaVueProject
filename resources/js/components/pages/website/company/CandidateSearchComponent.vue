@@ -465,7 +465,6 @@
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CompanyNavbar from '../partials/CompanyNavbar.vue';
-    import pagination from 'laravel-vue-pagination';
     import Multiselect from 'vue-multiselect'
     export default {
         data() {
@@ -527,7 +526,6 @@
             WebsiteNavbar,
             CompanyNavbar,
             Multiselect,
-            pagination,
         },
         methods: {
             addSkill(newTag) {
@@ -562,9 +560,20 @@
             addToWishList(id){
                 axios.get('/add-to-wish-list/'+id)
                 .then((response) => {
-                    // this.searchData = response.data
-                    // this.totalcandidates = this.searchData.length
+                    
                 });
+            },
+            clearSearch(){
+                this.record = {
+                    working_experience: '',
+                    city: '',
+                    gender: '',
+                    keyword: '',
+                    skills: [],
+                };
+                this.searchData = '';
+                this.candidateToShow = 3;
+                this.totalcandidates = 0;
             },
             
         },

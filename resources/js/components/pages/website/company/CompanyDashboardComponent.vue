@@ -295,10 +295,8 @@
                                         </ul>
 
                                         <ul class="candidate-list-fav">
-                                            <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                    Profile</a></li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="fas fa-heart"></i></a>
+                                            <li class="w-100"><router-link class="job-view-btn w-100" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: item.candidate.id } }">View Profile</router-link></li>
+                                            <li><a @click="removeToWishList(item.id)" class="candidate-wishlist-btn ml-2"><i class="fas fa-heart"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -308,8 +306,8 @@
                         </div>
                     </div>
                     <div class="show-more-anker">
-                        <router-link class="show-more-common" to="/candidate-dashboard">Show more</router-link>
-                        <p class="notify-unread-msgs">You have <span>12</span> unread messages</p>
+                        <!-- <router-link class="show-more-common" to="/candidate-dashboard">Show more</router-link> -->
+                        <p class="notify-unread-msgs">You have <span>{{wishlist.length}}</span> candidates in wishlist</p>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
@@ -614,12 +612,18 @@
             
         },
         methods: {
-           getCompanyWishList(){
-               axios.get('get-company-wish-list')
+            getCompanyWishList(){
+                axios.get('get-company-wish-list')
+                    .then((response) => {
+                        this.wishlist = response.data.wish_listed
+                    });
+            },
+            removeToWishList(id){
+                axios.get('/remove-to-wish-list/'+id)
                 .then((response) => {
-                    this.wishlist = response.data.wish_listed
+                    this.getCompanyWishList()
                 });
-           },
+            },
         },
     };
 
