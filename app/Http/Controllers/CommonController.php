@@ -58,6 +58,32 @@ class CommonController extends Controller
             ->orWhere('designation', 'LIKE', "%{$keyword}%") 
             ->get();
     }
+    public function candidateKeywordSearch($keyword)
+    {
+        $candidates = Candidate::query()->with(['CandidateSkills'])
+                                        ->where('full_name', 'LIKE', "%{$keyword}%") 
+                                        // ->orWhere('city', 'LIKE', "%{$keyword}%") 
+                                        ->get();
+        $user = User::find(Auth::user()->id);
+        $company = Company::where('user_id', $user->id)->first();
+        foreach($candidates as $candidate)
+        {
+            if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+            {
+                $candidate_with_wishlist[] = array(
+                    'candidate'=>$candidate,
+                    'is_wish_listed'=>true,
+                );
+            }else{
+                $candidate_with_wishlist[] = array(
+                    'candidate'=>$candidate,
+                    'is_wish_listed'=>false,
+                );
+            }
+        }
+        return $candidate_with_wishlist;
+
+    }
     public function companyKeywordSearch($keyword)
     {
         return Company::query()
@@ -228,25 +254,6 @@ class CommonController extends Controller
                     'success' => false,
                 ]);
             }
-        }
-    }
-
-    public function addToWishList($candidate_id)
-    {
-        $user = User::find(Auth::user()->id);
-        $company = Company::where('user_id', $user->id)->first();
-        $companywishlist = CompanyWishList::create([
-            'company_id' => $company->id,
-            'candidate_id' => $candidate_id,
-        ]);
-        if($companywishlist){
-            return response()->json([
-                'success' => true,
-            ]);
-        }else{
-            return response()->json([
-                'success' => false,
-            ]);
         }
     }
 

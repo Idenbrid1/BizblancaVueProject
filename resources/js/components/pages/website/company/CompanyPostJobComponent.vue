@@ -948,19 +948,6 @@
                 });
             },
         },
-        computed: {
-            checkdatediffer(){
-                dateDiff= (startDateString, endDateString) => {
-                    let start = moment($); 
-                    let end = moment(endDateString);
-                    let duration = moment.duration(end.diff(start));
-                    let days = duration.asDays();
-                    return Math.round(days);
-                }
-            }
-
-            // document.querySelector(".diff").innerHTML = dateDiff("2020-09-11T18:30:00.000Z", "2020-09-15T18:30:00.000Z");
-        }
     };
 
 </script>

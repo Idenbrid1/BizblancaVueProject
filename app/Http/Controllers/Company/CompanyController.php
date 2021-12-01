@@ -15,6 +15,8 @@ use File;
 use Validator;
 use App;
 use App\Models\CandidateAppliedJob;
+use App\Models\CompanyWishList;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Mail;
@@ -366,5 +368,37 @@ class CompanyController extends Controller
     {
         $user_id = Auth::user()->id;
         return Company::where('user_id', $user_id)->with(['WishListed', 'WishListed.Candidate'])->first();
+    }
+
+    public function addToWishList($candidate_id)
+    {
+        $user = User::find(Auth::user()->id);
+        $company = Company::where('user_id', $user->id)->first();
+        $companywishlist = CompanyWishList::create([
+            'company_id' => $company->id,
+            'candidate_id' => $candidate_id,
+        ]);
+        if($companywishlist){
+            return response()->json([
+                'success' => true,
+            ]);
+        }else{
+            return response()->json([
+                'success' => false,
+            ]);
+        }
+    }
+
+    public function removeToWishList($id)
+    {
+        if(CompanyWishList::find($id)->delete()){
+            return response()->json([
+                'success' => true,
+            ]);
+        }else{
+            return response()->json([
+                'success' => false,
+            ]);
+        }
     }
 }
