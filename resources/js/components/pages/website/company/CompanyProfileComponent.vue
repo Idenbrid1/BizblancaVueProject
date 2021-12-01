@@ -43,38 +43,8 @@
                                 <li><a @click="openProfileTab()"><img class="IconsTab"
                                             src="/website/assets/images/details.svg" alt="TabsIcon"></a></li>
                                 <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/mortarboard.svg" alt="TabsIcon"
-                                            style="height: 30px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/score.svg" alt="TabsIcon"
-                                            style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab IconsTabActive"
-                                            src="/website/assets/images/language.svg" alt="TabsIcon"
-                                            style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/trophy.svg" alt="TabsIcon"
-                                            style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
                                             src="/website/assets/images/leader.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/work.svg" alt="TabsIcon"
-                                            style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/overtime.svg" alt="TabsIcon"
-                                            style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/settings.svg" alt="TabsIcon"
-                                            style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/google-docs.svg" alt="TabsIcon"
-                                            style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/overtime.svg" alt="TabsIcon"
-                                            style="height: 27px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
-                                            src="/website/assets/images/overtime.svg" alt="TabsIcon"
-                                            style="height: 27px;"></a></li>
                             </ul>
 
                             <!-- Modal Tab start -->
@@ -84,28 +54,8 @@
                                         <ul class="mobileModalTabsIcons p-0">
                                             <li><img class="IconsTab" src="/website/assets/images/details.svg"
                                                     alt="TabsIcon"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/mortarboard.svg"
-                                                    alt="TabsIcon" style="height: 30px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/score.svg"
-                                                    alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/language.svg"
-                                                    alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/trophy.svg"
-                                                    alt="TabsIcon" style="height: 26px;"></li>
                                             <li><img class="IconsTab" src="/website/assets/images/leader.svg"
-                                                    alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/work.svg"
-                                                    alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/overtime.svg"
-                                                    alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/settings.svg"
-                                                    alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/google-docs.svg"
-                                                    alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/overtime.svg"
-                                                    alt="TabsIcon" style="height: 27px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/overtime.svg"
-                                                    alt="TabsIcon" style="height: 27px;"></li>
+                                            alt="TabsIcon" style="height: 26px;"></li>
                                         </ul>
                                     </div>
                                     <div class="IconsModalTabAnkers">

@@ -1,5 +1,11 @@
 
 @media screen and (max-width:769px) {
+    .v-on-d {
+        display: none !important;
+    }
+    .v-on-m {
+        display: block;
+    }
     .candidate-detail-img{
         height: 120px;
         width: 120px;
@@ -502,9 +508,241 @@
         border: 2px solid #081351;
         margin: 16px 60px 15px 13px;
     }
+    /* slider */
+
+    .resume-builder-row p {
+        font-size: 18px;
+    }
+
+    .successStoriesSliderArrow:after {
+        font-family: swiper-icons;
+        text-transform: none !important;
+        letter-spacing: 0;
+        text-transform: none;
+        font-variant: initial;
+        line-height: 1;
+        background: #181351;
+        font-size: 21px !important;
+        color: white;
+        padding: 15px 7px;
+        border-radius: 7px;
+    }
+
+    .successStories>h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #081351;
+        margin: 20px 0px;
+    }
+
+    .CandidateDesignation,
+    .GenderAge,
+    .Scoutbizblanca {
+        font-size: 12px;
+    }
+
+    .candidateSucessDescrp {
+        font-size: 12px;
+        color: #081351;
+        width: 274px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+    }
+
+    .Scoutbizblanca {
+        font-weight: 700;
+        margin-top: 8px;
+    }
+
+    .sliderContent {
+        width: auto;
+    }
+
+    .CertificationsAndPayments>.row>.col-3>img {
+        width: 81px;
+        height: 97px;
+    }
+
+    .CertificationsAndPayments {
+        padding: 8px;
+    }
+
+    .CertificationsAndPayments>.row>.col-9>h3 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .paymentDescrpM {
+        font-size: 13px;
+        display: block;
+    }
+
+    .paymentDescrpD {
+        display: none;
+    }
+
+    .cvUpload>p {
+        font-size: 13px;
+        font-weight: 400;
+        color: #081351;
+        width: auto;
+    }
+
+    .UploadText {
+        font-size: 21px;
+    }
+
+    .yourCvOnlineText {
+        font-size: 18px;
+    }
+
+    .replyImg {
+        padding-right: 7rem;
+    }
+
+    .replyImg>img {
+        width: 101px;
+        height: 103px;
+    }
+
+    .cvUpload>a {
+        display: flex;
+        background-color: #081351;
+        color: #fff;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 8px 20px;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .resumeUpload>img {
+        width: 170px;
+    }
+
+    .resumeUpload .content_para {
+        width: auto;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .careerUpgradeProcess>.contentCareerSteps {
+        padding: 0px;
+    }
+
+    .ExpertiseProvide>li>p {
+        font-size: 12px;
+    }
+
+    .careerUpgradeProcess>.contentCareerSteps>.UpgradeProcessSteps>.UpgradeProcessStep>div>p {
+        width: 154px;
+        font-size: 12px;
+        color: #081351;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .careerUpgradeProcess>.contentCareerSteps>h2 {
+        font-size: 20px;
+    }
+
+    .careerUpgradeProcess>.contentCareerSteps>p {
+        font-size: 12px;
+        color: #081351;
+    }
+
+    .arrowImg {
+        margin: 30px 10px;
+        width: 28px;
+        height: 24px;
+    }
+
+    .careerUpgradeProcess>.contentCareerSteps>.UpgradeProcessSteps>.UpgradeProcessStep>div>h3 {
+        font-size: 18px;
+    }
+
+    .stepsimg {
+        width: 75px;
+        height: 75px;
+    }
+
+    .cardsInfo {
+        height: 226px;
+    }
+    .cardsInfoContainer {
+        text-align: left;
+        padding: 6px 0px !important;
+    }
+
+    .cardsInfoContainer span {
+        font-size: 20px;
+    }
+
+    .cardsInfoContainer .offersJobPara {
+        font-size: 13px;
+        margin: 10px 0px 20px 0px;
+    }
+
+    .MsgHeading {
+        font-size: 18px;
+        padding: 27px;
+    }
+
+    .candidateSection {
+        padding: 0px;
+    }
+
+    .leftContent {
+        padding: 10px !important;
+    }
+
+    .RightImage {
+        position: relative;
+        height: 300px;
+    }
+
+    .candiateBannerD {
+        position: relative;
+        height: 300px;
+        width: 100%;
+    }
+
+    .BannerCandidate {
+        flex-direction: column-reverse;
+    }
+
+    .leftContent>div>h1 {
+        letter-spacing: 0px;
+        color: #081351;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: inherit;
+    }
+
+    .leftContent>div>p {
+        letter-spacing: 0px;
+        color: #081351;
+        font-size: 13px;
+        width: fit-content;
+        margin-bottom: 30px;
+    }
+
+    .leftContent>div {
+        width: auto;
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (min-width:769px) {
+    .v-on-d {
+        display: block !important;
+    }
+    .v-on-m {
+        display: none;
+    }
     .help-queries-wrap{
         padding: 0px 45px 25px 0px;
     }

@@ -2,8 +2,10 @@
     <div>
         <WebsiteNavbar />
         <!-- <CompanyNavbar /> -->
-        <h1>Chat is under developemnet</h1>
-        <a href="/">Back to Home</a>
+        <div class="text-center my-5">
+            <h1>Chat is under developemnet</h1>
+        <router-link to="/">Back to Home</router-link>
+        </div>
     </div>
 </template>
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
