@@ -100,11 +100,11 @@ class CommonController extends Controller
                 $final_skills_array[] =  $break_skill->candidate_id;
             }
             if(count($final_skills_array) > 0){
-                $candidate_skills_lists = Candidate::whereIn('id', $final_skills_array)->get();
+                $candidate_skills_lists = Candidate::whereIn('id', $final_skills_array)->with('CandidateSkills')->get();
             }
         }
         else{ 
-            $candidate_skills_lists = Candidate::get();
+            $candidate_skills_lists = Candidate::with('CandidateSkills')->get();
         }
         $fields = ['working_experience', 'city', 'gender'];
         foreach($fields as $field){

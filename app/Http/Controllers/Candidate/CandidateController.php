@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Candidate;
 
 use App\Http\Controllers\Controller;
+use App\Mail\CandidateAppliedMail;
 use App\Models\Candidate;
 use App\Models\CandidateAppliedJob;
 use App\Models\CandidateAward;
@@ -16,6 +17,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use File;
 use Validator;
+use Illuminate\Support\Facades\Mail;
 
 class CandidateController extends Controller
 {
@@ -388,12 +390,12 @@ class CandidateController extends Controller
     {
         if($job_post = JobPost::where(['id' => $job_id, 'status' => 'Active'])->first()){
             $candidate = Candidate::where('user_id', Auth::user()->id)->first();
-            CandidateAppliedJob::create([
+            $candidateappliedjob = CandidateAppliedJob::create([
                 'job_id' => $job_post->id,
                 'company_id' => $job_post->company_id,
                 'candidate_id' => $candidate->id,
             ]);
-            
+            Mail::to($candidate->email)->send(new CandidateAppliedMail($candidateappliedjob));
             return response()->json([
                 'success' => true,
                 'message' => 'Applied SuccessfullyD',

@@ -10484,7 +10484,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
-/* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
 //
 //
 //
@@ -10669,7 +10668,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-
+ // import CompanyNavbar from '../partials/CompanyNavbar.vue';
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -10685,8 +10684,8 @@ __webpack_require__.r(__webpack_exports__);
     this.checkAuth();
   },
   components: {
-    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"] // CompanyNavbar,
+
   },
   watch: {
     '$route.path': function $routePath(val, oldVal) {
@@ -13711,7 +13710,7 @@ __webpack_require__.r(__webpack_exports__);
         job_responsibilities: '',
         status: 'Active'
       },
-      max: 36,
+      max: 255,
       errors: [],
       jobs: {}
     };
@@ -13801,6 +13800,7 @@ __webpack_require__.r(__webpack_exports__);
               $('#PostNewJobModal').modal('hide');
               _this3.errors = [];
               _this3.record = {
+                id: 0,
                 bannar: '',
                 title: '',
                 job_designation: '',
@@ -46527,8 +46527,6 @@ var render = function () {
     "div",
     [
       _c("WebsiteNavbar"),
-      _vm._v(" "),
-      _c("CandidateNavbar"),
       _vm._v(" "),
       _c("div", { staticClass: "container cont-flex PostJobContainer" }, [
         _c(

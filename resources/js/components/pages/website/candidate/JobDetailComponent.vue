@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <CandidateNavbar />
+        <!-- <CompanyNavbar /> -->
         <div class="container cont-flex PostJobContainer">
             <div class="col-sm-12 col-md-12 col-lg-12 xs-padding pt-3">
                 <div class="job-detail-info">
@@ -184,7 +184,7 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
-    import CandidateNavbar from '../partials/CandidateNavbar.vue';
+    // import CompanyNavbar from '../partials/CompanyNavbar.vue';
 
     export default {
         data() {
@@ -201,7 +201,7 @@
         },
         components: {
             WebsiteNavbar,
-            CandidateNavbar,
+            // CompanyNavbar,
 
         },
         watch: {

@@ -94,7 +94,7 @@ class AuthenticationController extends Controller
                     'start_date' => Carbon::now(),
                     'status' => 'active',
                 ]);
-                $company->order = $create_Order->id;
+                $company->order_id = $create_Order->id;
                 $company->update();
             }
             if($request->type == 'candidate')

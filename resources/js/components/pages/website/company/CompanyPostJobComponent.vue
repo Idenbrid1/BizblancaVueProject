@@ -693,7 +693,7 @@
                     job_responsibilities: '',
                     status: 'Active',
                 },
-                max: 36,
+                max: 255,
                 errors: [],
                 jobs: {},
             };
@@ -787,6 +787,7 @@
                                     $('#PostNewJobModal').modal('hide')
                                     this.errors = []
                                     this.record = {
+                                        id: 0,
                                         bannar: '',
                                         title: '',
                                         job_designation: '',
