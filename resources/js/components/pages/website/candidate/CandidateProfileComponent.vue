@@ -1404,13 +1404,13 @@
                                                 </div>
                                             </div>
                                             <div class="subFormFields">
-                                                <div class="row" v-if="this.addMoreDBEducation == true">
-                                                    <div class="float-right">
+                                                <div class="row m-0" v-if="this.addMoreDBEducation == true">
+                                                    <div class="float-right w-100">
                                                         <a @click="removeAddMoreArrayEducation()">
                                                             <i class="fas fa-times"></i>
                                                         </a>
                                                     </div>
-                                                    <div class="row">
+                                                    <div class="row m-0">
                                                         <div class="col-12 col-md-6">
                                                             <div class="form-group">
                                                                 <label for="institute">Institute Type</label>
@@ -2434,7 +2434,7 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            // $('#basicInfoModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
