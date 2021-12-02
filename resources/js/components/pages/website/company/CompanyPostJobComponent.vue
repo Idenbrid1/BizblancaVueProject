@@ -30,13 +30,15 @@
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">{{item.title}}</h6>
-                                    <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center">
                                     <span class="job-post-date">
                                         <timeago :datetime="item.created_at"></timeago>
                                     </span>
                                     <!-- <i v-if="!item.deleted_at" class="far fa-heart"></i> -->
-                                    <p v-if="item.deleted_at" :class="!item.deleted_at ? '' : 'job-deleted-mark'">
+                                    <div style="over-flow:hidden;">
+                                        <p v-if="item.deleted_at" :class="!item.deleted_at ? '' : 'job-deleted-mark'">
                                         DELETED</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -77,21 +79,21 @@
                                 </div>
                                 <ul class="job-list-fav m-0">
                                     <li><a v-if="!item.deleted_at" @click="deleteJobPost(item.id)" title="Delete Job"
-                                            class="job-post-ions"><i class="fas fa-trash-alt"></i></a></li>
+                                            class="job-post-ions title-tip"><i class="fas fa-trash-alt"></i></a></li>
                                     <li><a v-if="!item.deleted_at" @click="editJobPost(item.id)"
-                                            class="job-post-ions"><i class="fas fa-edit"></i></a></li>
+                                            class="job-post-ions title-tip" title="Edit View"><i class="fas fa-edit"></i></a></li>
                                     <li>
                                         <router-link v-if="!item.deleted_at"
                                             :to="{ name: 'JobDetail', params: { id: item.id } }" data-toggle="collapse"
-                                            class="job-post-ions">
+                                            class="job-post-ions title-tip" title="Job View">
                                             <i class="fas fa-eye"></i>
                                         </router-link>
                                     </li>
                                     <li>
                                         <router-link v-if="!item.deleted_at"
                                             :to="{ name: 'JobAppliedCandidates', params: { id: item.id } }"
-                                            data-toggle="collapse" class="job-post-ions">
-                                            <i class="fas fa-eye"></i>
+                                            data-toggle="collapse" title="Applied Candidates" class="job-post-ions title-tip">
+                                            <i class="fas fa-users"></i>
                                         </router-link>
                                     </li>
                                 </ul>
