@@ -55,7 +55,7 @@ class CandidateController extends Controller
             'full_name' => 'Full name',
             'gender' => 'Gender',
             'address' => 'address',
-            'date_of_birth' => 'date_of_birth',
+            'date_of_birth' => 'Date of birth',
             'city' => 'city',
             // 'country' => 'country',
             'cnic' => 'cnic',
@@ -70,7 +70,7 @@ class CandidateController extends Controller
             'date_of_birth' => 'required',
             'city' => 'required',
             // 'country' => 'required',
-            'cnic' => 'required',
+            'cnic' => 'required|max:13|min:13',
             'bio' => 'required',
             'zipcode' => 'required',
         );

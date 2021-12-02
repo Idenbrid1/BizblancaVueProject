@@ -1001,7 +1001,7 @@
                                                         <div class="form-group">
                                                             <label for="cinic">CNIC</label>
                                                             <input name="cnic" type="number" class="form-control"
-                                                                placeholder="Enter Cnic" value=""
+                                                                placeholder="Enter Cnic" value="" :max="13"
                                                                 v-model="basic_information_record.cnic" />
                                                             <small>
                                                                 <span v-if="errors_basic_information.cnic != null"
@@ -1381,7 +1381,7 @@
                                                                 type="date" placeholder="Please Select" value="" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
+                                                    <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="department">Department</label>
                                                             <input name="department[]" id="department"
@@ -1443,7 +1443,7 @@
                                                                     placeholder="Please Select" value="" />
                                                             </div>
                                                         </div>
-                                                        <div class="col-12">
+                                                        <div class="col-12 col-md-6">
                                                             <div class="form-group">
                                                                 <label for="department">Department</label>
                                                                 <input name="department" id="department"

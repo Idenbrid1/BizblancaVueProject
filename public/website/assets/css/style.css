@@ -4436,6 +4436,9 @@ a, button {
 	justify-content: center;
 	margin: 30px 7px;
 }
+.ViewEdit{
+    color: #ffffff !important;
+}
 .uploadViewAnkerList>li>a, .uploadViewAnkerList>li>label {
 	margin: 5px 10px;
 	cursor: pointer;
@@ -5091,7 +5094,7 @@ progress {
 		padding-left: 0px !important;
 	}
 	.candidate-single {
-		width: 48%;
+		width: 46%;
 	}
 }
 .job-detail-section>div>h3 {
