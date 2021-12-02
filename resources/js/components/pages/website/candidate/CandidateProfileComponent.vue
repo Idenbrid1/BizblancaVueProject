@@ -1770,7 +1770,7 @@
                                                 <h4 class="m-0 modelTitleText">Skills</h4>
                                             </div>
                                             <div id="SkillsFields" class="subFormFields row">
-                                                <div class="col-12 col-md-4 SkillsSection"
+                                                <div class="col-12 col-md-6 SkillsSection"
                                                     v-for="(skillUpdate, index) in this.profile.candidate_skills"
                                                     :key="index">
                                                     <div class="form-group">
@@ -1781,13 +1781,12 @@
                                                         <select name="skill_level[]" id="language" class="form-control"
                                                             v-model="skillUpdate.level">
                                                             <option value="Beginner">Beginner</option>
-                                                            <option value="Native">Native</option>
                                                             <option value="Intermediate">Intermediate</option>
                                                             <option value="Expert">Expert</option>
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-md-4 SkillsSection"
+                                                <div class="col-12 col-md-6 SkillsSection"
                                                     v-if="this.addMoreDBSkill == true">
                                                     <div class="form-group">
                                                         <a class="float-right"
@@ -1799,7 +1798,6 @@
                                                         <select name="skill_level[]" id="language" class="form-control"
                                                             v-model="skill_push_array.level">
                                                             <option value="Beginner">Beginner</option>
-                                                            <option value="Native">Native</option>
                                                             <option value="Intermediate">Intermediate</option>
                                                             <option value="Expert">Expert</option>
                                                         </select>

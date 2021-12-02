@@ -9091,8 +9091,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -41941,7 +41939,7 @@ var render = function () {
                                         {
                                           key: index,
                                           staticClass:
-                                            "col-12 col-md-4 SkillsSection",
+                                            "col-12 col-md-6 SkillsSection",
                                         },
                                         [
                                           _c(
@@ -42065,16 +42063,6 @@ var render = function () {
                                                     "option",
                                                     {
                                                       attrs: {
-                                                        value: "Native",
-                                                      },
-                                                    },
-                                                    [_vm._v("Native")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
                                                         value: "Intermediate",
                                                       },
                                                     },
@@ -42104,7 +42092,7 @@ var render = function () {
                                         "div",
                                         {
                                           staticClass:
-                                            "col-12 col-md-4 SkillsSection",
+                                            "col-12 col-md-6 SkillsSection",
                                         },
                                         [
                                           _c(
@@ -42226,16 +42214,6 @@ var render = function () {
                                                       },
                                                     },
                                                     [_vm._v("Beginner")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Native",
-                                                      },
-                                                    },
-                                                    [_vm._v("Native")]
                                                   ),
                                                   _vm._v(" "),
                                                   _c(
