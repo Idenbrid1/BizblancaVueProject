@@ -74,37 +74,13 @@
                         </form>
                     </div>
                 </div> -->
-                <div class="candidate">
+                <!-- <div class="candidate">
                     <label class="candidate-tagline">
                         Candidates
                         <i class="fas fa-users"></i>
                     </label>
-                    <!-- Job List Toolbar Start -->
                     <div>
-                        <!-- <div class="job-list-toolbar">
-                            <ul class="job-pagination pagination-center ">
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                            aria-hidden="true"></i> Previous 20</a></li>
-                                <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                            aria-hidden="true"></i> Next 20</a></li>
-                            </ul>
-                            <div class="job-filter">
-                                <select class="job-select">
-                                    <option>Search order by</option>
-                                    <option>Top Rated</option>
-                                    <option>Most Popular</option>
-                                </select>
-                            </div>
-                        </div> -->
-                        <!-- Job List Toolbar End -->
-                        <!-- Job List Wrap Start -->
                         <div class="job-list-wrap">
-                            <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
-                            <!-- Job List Start -->
                             <div class="row m-0 justify-content-start">
                                 <div class="candidate-single">
                                     <div class="candidate-list-content">
@@ -112,16 +88,44 @@
                                             <div class="candidate-photo" style="{ backgroundImage:url('')}"></div>
                                             <div class="candidate-header mt-2 ml-2">
                                                 <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
                                             </div>
                                         </div>
-                                        <!-- <span class="job-post-date">20 hours ago</span> -->
+                                        <p class="candidate-description my-1">My name is Sameena Khan and I am graduated
+                                            from university of...</p>
+                                        <ul class="candidate-list-meta">
+                                            <li><i class="fas fa-venus-mars"></i>
+                                                <div class="hide-line-1">Female</div>
+                                            </li>
+                                            <li class="mt-1"><i class="fas fa-graduation-cap"></i>
+                                                <div class="hide-line-1">BSSE</div>
+                                            </li>
+                                            <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
+                                                <div class="hide-line-1">2 Years</div>
+                                            </li>
+                                            <li class="mt-1"><i class="fas fa-user-cog"></i>
+                                                <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
+                                            </li>
+                                            <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
+                                                <div class="hide-line-1">Lahore</div>
+                                            </li>
+                                        </ul>
+                                        <ul class="candidate-list-fav">
+                                            <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
+                                                    Profile</a></li>
+                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
+                                                        class="far fa-heart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="candidate-single">
+                                    <div class="candidate-list-content">
+                                        <div class="candidate-image">
+                                            <div class="candidate-photo" style="{ backgroundImage:url('')}"></div>
+                                            <div class="candidate-header mt-2 ml-2">
+                                                <h6 class="candidate-name mb-0">Sameena Khan</h6>
+                                            </div>
+                                        </div>
                                         <p class="candidate-description my-1">My name is Sameena Khan and I am graduated
                                             from university of...</p>
                                         <ul class="candidate-list-meta">
@@ -158,62 +162,8 @@
                                             <div class="candidate-photo" style="{ backgroundImage:url('')}"></div>
                                             <div class="candidate-header mt-2 ml-2">
                                                 <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
                                             </div>
                                         </div>
-                                        <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">My name is Sameena Khan and I am graduated
-                                            from university of...</p>
-                                        <ul class="candidate-list-meta">
-                                            <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">Female</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-graduation-cap"></i>
-                                                <div class="hide-line-1">BSSE</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">2 Years</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
-                                            </li>
-                                            <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">Lahore</div>
-                                            </li>
-
-                                        </ul>
-
-                                        <ul class="candidate-list-fav">
-                                            <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
-                                                    Profile</a></li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="candidate-single">
-                                    <div class="candidate-list-content">
-                                        <div class="candidate-image">
-                                            <div class="candidate-photo" style="{ backgroundImage:url('')}"></div>
-                                            <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">Sameena Khan</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
-                                            </div>
-                                        </div>
-                                        <!-- <span class="job-post-date">20 hours ago</span> -->
                                         <p class="candidate-description my-1">My name is Sameena Khan and I am graduated
                                             from university of...</p>
                                         <ul class="candidate-list-meta">
@@ -245,14 +195,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- </div> -->
                         </div>
                     </div>
                     <div class="show-more-anker">
                         <router-link class="show-more-common" to="/candidate-dashboard">Show more</router-link>
                         <p class="notify-unread-msgs">You have <span>12</span> unread messages</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="candidate">
                     <label class="candidate-tagline">
                         Whishlist
@@ -268,7 +217,7 @@
                                 <div class="candidate-single" v-if="index < wishlist.length" v-for="(item, index) in wishlist" :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+item.candidate.profile_image+')'}"></div>
+                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/profile/'+item.candidate.profile_image+')'}"></div>
                                             <div class="candidate-header mt-2 ml-2">
                                                 <h6 class="candidate-name mb-0">{{item.candidate.full_name}}</h6>
                                             </div>

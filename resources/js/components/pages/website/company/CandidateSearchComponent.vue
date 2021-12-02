@@ -143,16 +143,9 @@
                                     :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/'+searchData[index].candidate.profile_image+')'}"></div>
+                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/profile/'+searchData[index].candidate.profile_image+')'}"></div>
                                             <div class="candidate-header mt-2 ml-2">
                                                 <h6 class="candidate-name mb-0">{{searchData[index].candidate.full_name}}</h6>
-                                                <!-- <div class="my-1">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                    </div> -->
                                             </div>
                                         </div>
                                         <!-- <span class="job-post-date">20 hours ago</span> -->

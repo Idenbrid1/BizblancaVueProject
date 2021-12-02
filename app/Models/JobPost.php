@@ -11,7 +11,7 @@ class JobPost extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'bannar',
+        'banner',
         'title',
         'designation',
         'job_description',

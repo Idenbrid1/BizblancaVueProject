@@ -142,10 +142,10 @@ class CompanyController extends Controller
     public function jobPost(Request $request)
     {
         $attributeNames = [
-            'bannar' => 'bannar',
+            'banner' => 'banner',
             'job_title' => 'Job Title',
             'job_designation' => 'Job Designation',
-            'salary_type' => 'Salary Type',
+            // 'salary_type' => 'Salary Type',
             'salary_range' => 'Salary Range',
             'shift' => 'Shift',
             'experience' => 'Experience',
@@ -154,16 +154,16 @@ class CompanyController extends Controller
             'gender' => 'Gender',
             'total_positions' => 'Total Positions',
             'job_description' => 'Job Description',
-            'job_responsibilities' => 'Job Responsibilities',
+            // 'job_responsibilities' => 'Job Responsibilities',
             'qualification_level' => 'qualification',
-            'benefits' => 'Benefits',
+            // 'benefits' => 'Benefits',
             'status' => 'Status',
         ];
         $rules = array(
-            'bannar' => 'required',
+            'banner' => 'required',
             'job_title' => 'required',
             'job_designation' => 'required',
-            'salary_type' => 'required',
+            // 'salary_type' => 'required',
             'salary_range' => 'required',
             'shift' => 'required',
             'experience' => 'required',
@@ -172,9 +172,9 @@ class CompanyController extends Controller
             'gender' => 'required',
             'total_positions' => 'required',
             'job_description' => 'required',
-            'job_responsibilities' => 'required',
+            // 'job_responsibilities' => 'required',
             'qualification_level' => 'required',
-            'benefits' => 'required',
+            // 'benefits' => 'required',
             'status' => 'required',
         );
 
@@ -194,7 +194,7 @@ class CompanyController extends Controller
             $postjob = new JobPost;
             $postjob->title = $request->job_title;
             $postjob->designation = $request->job_designation;
-            $postjob->salary_type = $request->salary_type;
+            // $postjob->salary_type = $request->salary_type;
             $range = str_replace("-", " ", $request->salary_range);
             $sperateRange = explode(" ", $range);
             $postjob->salary_range = $request->salary_range;
@@ -207,20 +207,20 @@ class CompanyController extends Controller
             $postjob->gender = $request->gender;
             $postjob->total_position = $request->total_positions;
             $postjob->description = $request->job_description;
-            $postjob->job_responsibilities = $request->job_responsibilities;
+            // $postjob->job_responsibilities = $request->job_responsibilities;
             $postjob->qualification_level = $request->qualification_level;
-            $postjob->benefits = $request->benefits;
+            // $postjob->benefits = $request->benefits;
             $postjob->status = $request->status;
             $postjob->company_id = $company->id;
-            if($request->bannar) 
+            if($request->banner) 
             {   
-                $file = $request->bannar;
+                $file = $request->banner;
                 $imagefilename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
                 $location = 'storage/images/companies/';
                 $file->move($location,$imagefilename);
-                File::delete($location.$postjob->bannar);
-                $postjob->bannar = $imagefilename;
+                File::delete($location.$postjob->banner);
+                $postjob->banner = $imagefilename;
             }
             $postjob->save();
             $company->post_job_count = $company->post_job_count + 1;
@@ -228,6 +228,95 @@ class CompanyController extends Controller
             return response()->json([
                 'success' => true,
                 'message' => 'Jobe Posted',
+            ]);
+        }
+    }
+
+    public function UpdatejobPost(Request $request)
+    {
+        $attributeNames = [
+            'job_title' => 'Job Title',
+            'job_designation' => 'Job Designation',
+            // 'salary_type' => 'Salary Type',
+            'salary_range' => 'Salary Range',
+            'shift' => 'Shift',
+            'experience' => 'Experience',
+            'location' => 'Location',
+            'job_type' => 'Job Type',
+            'gender' => 'Gender',
+            'total_positions' => 'Total Positions',
+            'job_description' => 'Job Description',
+            // 'job_responsibilities' => 'Job Responsibilities',
+            'qualification_level' => 'qualification',
+            // 'benefits' => 'Benefits',
+            'status' => 'Status',
+        ];
+        $rules = array(
+            'job_title' => 'required',
+            'job_designation' => 'required',
+            // 'salary_type' => 'required',
+            'salary_range' => 'required',
+            'shift' => 'required',
+            'experience' => 'required',
+            'location' => 'required',
+            'job_type' => 'required',
+            'gender' => 'required',
+            'total_positions' => 'required',
+            'job_description' => 'required',
+            // 'job_responsibilities' => 'required',
+            'qualification_level' => 'required',
+            // 'benefits' => 'required',
+            'status' => 'required',
+        );
+
+        $validator = Validator::make($request->all(), $rules);
+        $validator->setAttributeNames($attributeNames);
+
+        if ($validator->fails()){
+            return response()->json([
+                'errors' => $validator->errors(),
+                'success' => false,
+            ], 200);
+        }
+        else
+        {
+            $user = Auth::user();
+            $company = Company::where('user_id', $user->id)->first();
+            $postjob = JobPost::find($request->id);
+            $postjob->title = $request->job_title;
+            $postjob->designation = $request->job_designation;
+            // $postjob->salary_type = $request->salary_type;
+            $range = str_replace("-", " ", $request->salary_range);
+            $sperateRange = explode(" ", $range);
+            $postjob->salary_range = $request->salary_range;
+            $postjob->min_salary = $sperateRange[0];
+            $postjob->max_salary = $sperateRange[1];
+            $postjob->shift = $request->shift;
+            $postjob->location = $request->location;
+            $postjob->experience = $request->experience;
+            $postjob->job_type = $request->job_type;
+            $postjob->gender = $request->gender;
+            $postjob->total_position = $request->total_positions;
+            $postjob->description = $request->job_description;
+            // $postjob->job_responsibilities = $request->job_responsibilities;
+            $postjob->qualification_level = $request->qualification_level;
+            // $postjob->benefits = $request->benefits;
+            $postjob->status = $request->status;
+            $postjob->company_id = $company->id;
+            if($request->file('banner')) 
+            {   
+                $file = $request->banner;
+                $imagefilename = $file->getClientOriginalName();
+                $extension = $file->getClientOriginalExtension();
+                $location = 'storage/images/companies/';
+                $file->move($location,$imagefilename);
+                File::delete($location.$postjob->banner);
+                $postjob->banner = $imagefilename;
+            }
+            $postjob->update();
+            return response()->json([
+                'success' => true,
+                'message' => 'Job Updated',
             ]);
         }
     }

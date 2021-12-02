@@ -1066,17 +1066,7 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="country">Country</label>
-                                                            <select name="country" id="country" class="form-control"
-                                                                v-model="basic_information_record.country">
-                                                                <option value="lahore">Lahore</option>
-                                                                <option value="islamabad">Islamabad</option>
-                                                            </select>
-                                                            <small>
-                                                                <span v-if="errors_basic_information.country != null"
-                                                                    class="text-danger">
-                                                                    {{errors_basic_information.country[0]}}
-                                                                </span>
-                                                            </small>
+                                                            <input name="counter" disabled class="form-control" type="country" value="Pakistan" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
@@ -2289,7 +2279,7 @@
                     zipcode: '',
                     phone: '',
                     email: '',
-                    country: '',
+                    country: 'pakistan',
                     bio: '',
                 },
                 errors_basic_information: [],
@@ -2381,18 +2371,27 @@
                     });
             },
             updateBasicInformation() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 var $basicinformationForm = $('#basicinformationForm');
                 var data = new FormData(basicinformationForm);
                 axios.post('/update/basicinformation', data)
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors_basic_information = res.data.errors
+                            Swal.close()
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
                             $('#basicInfoModal').modal('hide')
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
+                                timer: 1500,
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
                             })
@@ -2403,7 +2402,6 @@
                     })
             },
             addMoreEducation() {
-
                 this.addMoreDBEducation = true
             },
             clearEducationArray() {
@@ -2418,6 +2416,12 @@
                 this.addMoreDBEducation = false
             },
             updateEducation() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 if (this.education_push_array.school_name) {
                     this.profile.candidate_education.push({
                         school_type: this.education_push_array.school_type,
@@ -2431,14 +2435,17 @@
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
+                            Swal.close()
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
                             // $('#basicInfoModal').modal('hide')
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
+                                timer: 1500
                             })
                             this.education_push_array = {
                                 school_type: '',
@@ -2520,6 +2527,12 @@
                 this.addMoreDBLanguage = false
             },
             updateLanguage() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 if (this.language_push_array.name) {
                     this.profile.candidate_language.push({
                         name: this.language_push_array.name,
@@ -2535,14 +2548,17 @@
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
+                            Swal.close()
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
                             $('#basicInfoModal').modal('hide')
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
+                                timer: 1500
                             })
                             this.language_push_array = {
                                 name: '',
@@ -2611,6 +2627,12 @@
                 this.addMoreDBAward = true
             },
             updateAward() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 if (this.award_push_array.name) {
                     this.profile.candidate_awards.push({
                         name: this.award_push_array.name,
@@ -2626,14 +2648,16 @@
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
+                            Swal.close()
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
+                                timer: 1500
                             })
                             this.award_push_array = {
                                 name: '',
@@ -2702,6 +2726,12 @@
                 this.addMoreDBSkill = false
             },
             updateSkill() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 if (this.skill_push_array.name) {
                     this.profile.candidate_skills.push({
                         name: this.skill_push_array.name,
@@ -2717,14 +2747,16 @@
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
+                            Swal.close()
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
+                                timer: 1500
                             })
                             this.skill_push_array = {
                                 name: '',
@@ -2796,6 +2828,12 @@
                 this.isWorkingCurrently = true
             },
             updateCurrentJob() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 axios.post('/update/current-job', {
                         isWorkingCurrently: this.profile.is_working_currently,
                         job_end_date: this.profile.job_end_date,
@@ -2809,14 +2847,16 @@
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
+                            Swal.close()
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
+                                timer: 1500
                             })
                             this.skill_push_array = {
                                 name: '',
@@ -2824,9 +2864,6 @@
                             }
                             this.addMoreDBSkill = false
                         }
-                    })
-                    .catch((err) => {
-
                     })
             },
             addMoreWorkExperience() {
@@ -2844,6 +2881,12 @@
                 this.addMoreDBWorkExperience = false
             },
             updateWorkExperience() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 if (this.work_experience_push_array.company_name) {
                     this.profile.candidate_experience.push({
                         company_name: this.work_experience_push_array.company_name,
@@ -2865,10 +2908,11 @@
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
+                            Swal.close()
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
@@ -2917,6 +2961,7 @@
                             icon: 'error',
                             title: 'Oops...',
                             text: 'Work Experience Already Exist!🥺',
+                            timer: 1500
                         })
                     }
                 }
@@ -2957,6 +3002,12 @@
                 this.addMoreDBProject = false
             },
             updateProject() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 if (this.project_push_array.name) {
                     this.profile.candidate_projects.push({
                         name: this.project_push_array.name,
@@ -2978,14 +3029,16 @@
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
+                            Swal.close()
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
+                                timer: 1500
                             })
                             this.project_push_array = {
                                 name: '',
@@ -3055,15 +3108,23 @@
                 }
             },
             saveResume() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 var $uploadresume = $('#uploadresume');
                 var data = new FormData(uploadresume);
                 axios.post('/update/resume-file', data)
                     .then((res) => {
                         if (res.data.success == true) {
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
+                                timer: 1500
                             })
                             this.getCandidateDashboardData()
 
@@ -3071,94 +3132,114 @@
 
                         }
                         if (res.data.type == 'error') {
+                            Swal.close()
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Resume Not Uploaded',
                                 text: 'File must be pdf & maximum size must be less then 2mb',
+                                timer: 1500
                             })
                         }
                     })
             },
             saveCNIC() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 var $uploadcnic = $('#uploadcnic');
                 var data = new FormData(uploadcnic);
                 axios.post('/update/cnic-file', data)
                     .then((res) => {
                         if (res.data.success == true) {
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
+                                timer: 1500
                             })
                             this.getCandidateDashboardData()
-
                             this.errors = []
-
                         }
                         if (res.data.type == 'error') {
+                            Swal.close()
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Cnic Not Uploaded',
                                 text: 'File must be pdf with both front and back clear pics & maximum size must be less then 2mb',
+                                timer: 1500
                             })
                         }
                     })
             },
             saveExperienceLetter() {
+                swal.fire({
+                    text: 'Please Wait...',
+                    didOpen: () => {
+                        Swal.showLoading()
+                    },
+                })
                 var $uploadexperienceletter = $('#uploadexperienceletter');
                 var data = new FormData(uploadexperienceletter);
                 axios.post('/update/experience-letter-file', data)
                     .then((res) => {
                         if (res.data.success == true) {
+                            Swal.close()
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Candidate Updated Successfully',
+                                timer: 1500
                             })
                             this.getCandidateDashboardData()
                             this.errors = []
                         }
                         if (res.data.type == 'error') {
+                            Swal.close()
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Cnic Not Uploaded',
                                 text: 'File must be pdf and maximum size must be less then 2mb',
+                                timer: 1500
                             })
                         }
                     })
             },
-            updateDesireJob() {
-                axios.post('/update/desire-job', {
-                        is_looking_for_job: this.profile.is_looking_for_job,
-                        looking_for_job_department: this.profile.looking_for_job_department,
-                        looking_for_job_expected_salary: this.profile.looking_for_job_expected_salary,
-                        looking_for_job_location: this.profile.looking_for_job_location,
-                        looking_for_job_position: this.profile.looking_for_job_position,
-                        looking_for_job_when: this.profile.looking_for_job_when,
-                    })
-                    .then((res) => {
-                        if (res.data.success == false) {
-                            this.errors = res.data.errors
-                        } else {
-                            this.errors = []
-                            this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Updated',
-                                text: 'Candidate Updated Successfully',
-                            })
-                            this.skill_push_array = {
-                                name: '',
-                                level: '',
-                            }
-                            this.addMoreDBSkill = false
-                        }
-                    })
-                    .catch((err) => {
+            // updateDesireJob() {
+            //     axios.post('/update/desire-job', {
+            //             is_looking_for_job: this.profile.is_looking_for_job,
+            //             looking_for_job_department: this.profile.looking_for_job_department,
+            //             looking_for_job_expected_salary: this.profile.looking_for_job_expected_salary,
+            //             looking_for_job_location: this.profile.looking_for_job_location,
+            //             looking_for_job_position: this.profile.looking_for_job_position,
+            //             looking_for_job_when: this.profile.looking_for_job_when,
+            //         })
+            //         .then((res) => {
+            //             if (res.data.success == false) {
+            //                 this.errors = res.data.errors
+            //             } else {
+            //                 this.errors = []
+            //                 this.getCandidateDashboardData()
+            //                 $('#basicInfoModal').modal('hide')
+            //                 Swal.fire({
+            //                     icon: 'success',
+            //                     title: 'Updated',
+            //                     text: 'Candidate Updated Successfully',
+            //                 })
+            //                 this.skill_push_array = {
+            //                     name: '',
+            //                     level: '',
+            //                 }
+            //                 this.addMoreDBSkill = false
+            //             }
+            //         })
+            //         .catch((err) => {
 
-                    })
-            },
+            //         })
+            // },
             openProfileTab() {
                 document.getElementById("ProfileTabMobileNav").style.left = "0%"
             },

@@ -9093,16 +9093,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -9120,7 +9110,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         zipcode: '',
         phone: '',
         email: '',
-        country: '',
+        country: 'pakistan',
         bio: ''
       },
       errors_basic_information: [],
@@ -9209,19 +9199,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     updateBasicInformation: function updateBasicInformation() {
       var _this2 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
       var $basicinformationForm = $('#basicinformationForm');
       var data = new FormData(basicinformationForm);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/basicinformation', data).then(function (res) {
         if (res.data.success == false) {
           _this2.errors_basic_information = res.data.errors;
+          Swal.close();
         } else {
           _this2.errors = [];
 
           _this2.getCandidateDashboardData();
 
           $('#basicInfoModal').modal('hide');
+          Swal.close();
           Swal.fire({
             icon: 'success',
+            timer: 1500,
             title: 'Updated',
             text: 'Candidate Updated Successfully'
           });
@@ -9245,6 +9244,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     updateEducation: function updateEducation() {
       var _this3 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
+
       if (this.education_push_array.school_name) {
         this.profile.candidate_education.push({
           school_type: this.education_push_array.school_type,
@@ -9258,16 +9264,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/education', this.profile.candidate_education).then(function (res) {
         if (res.data.success == false) {
           _this3.errors = res.data.errors;
+          Swal.close();
         } else {
           _this3.errors = [];
 
           _this3.getCandidateDashboardData(); // $('#basicInfoModal').modal('hide')
 
 
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Candidate Updated Successfully'
+            text: 'Candidate Updated Successfully',
+            timer: 1500
           });
           _this3.education_push_array = {
             school_type: '',
@@ -9351,6 +9360,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     updateLanguage: function updateLanguage() {
       var _this5 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
+
       if (this.language_push_array.name) {
         this.profile.candidate_language.push({
           name: this.language_push_array.name,
@@ -9366,16 +9382,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/language', this.profile.candidate_language).then(function (res) {
         if (res.data.success == false) {
           _this5.errors = res.data.errors;
+          Swal.close();
         } else {
           _this5.errors = [];
 
           _this5.getCandidateDashboardData();
 
           $('#basicInfoModal').modal('hide');
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Candidate Updated Successfully'
+            text: 'Candidate Updated Successfully',
+            timer: 1500
           });
           _this5.language_push_array = {
             name: '',
@@ -9447,6 +9466,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     updateAward: function updateAward() {
       var _this7 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
+
       if (this.award_push_array.name) {
         this.profile.candidate_awards.push({
           name: this.award_push_array.name,
@@ -9462,16 +9488,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/award', this.profile.candidate_awards).then(function (res) {
         if (res.data.success == false) {
           _this7.errors = res.data.errors;
+          Swal.close();
         } else {
           _this7.errors = [];
 
           _this7.getCandidateDashboardData();
 
-          $('#basicInfoModal').modal('hide');
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Candidate Updated Successfully'
+            text: 'Candidate Updated Successfully',
+            timer: 1500
           });
           _this7.award_push_array = {
             name: '',
@@ -9543,6 +9571,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     updateSkill: function updateSkill() {
       var _this9 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
+
       if (this.skill_push_array.name) {
         this.profile.candidate_skills.push({
           name: this.skill_push_array.name,
@@ -9558,16 +9593,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/skill', this.profile.candidate_skills).then(function (res) {
         if (res.data.success == false) {
           _this9.errors = res.data.errors;
+          Swal.close();
         } else {
           _this9.errors = [];
 
           _this9.getCandidateDashboardData();
 
-          $('#basicInfoModal').modal('hide');
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Candidate Updated Successfully'
+            text: 'Candidate Updated Successfully',
+            timer: 1500
           });
           _this9.skill_push_array = {
             name: '',
@@ -9642,6 +9679,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var _axios$post,
           _this11 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/current-job', (_axios$post = {
         isWorkingCurrently: this.profile.is_working_currently,
         job_end_date: this.profile.job_end_date,
@@ -9650,16 +9693,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, _defineProperty(_axios$post, "current_position", this.profile.current_position), _defineProperty(_axios$post, "no_of_persons_managed", this.profile.no_of_persons_managed), _defineProperty(_axios$post, "current_working_company", this.profile.current_working_company), _defineProperty(_axios$post, "current_salary", this.profile.current_salary), _axios$post)).then(function (res) {
         if (res.data.success == false) {
           _this11.errors = res.data.errors;
+          Swal.close();
         } else {
           _this11.errors = [];
 
           _this11.getCandidateDashboardData();
 
-          $('#basicInfoModal').modal('hide');
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Candidate Updated Successfully'
+            text: 'Candidate Updated Successfully',
+            timer: 1500
           });
           _this11.skill_push_array = {
             name: '',
@@ -9667,7 +9712,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           };
           _this11.addMoreDBSkill = false;
         }
-      })["catch"](function (err) {});
+      });
     },
     addMoreWorkExperience: function addMoreWorkExperience() {
       this.addMoreDBWorkExperience = true;
@@ -9685,6 +9730,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     updateWorkExperience: function updateWorkExperience() {
       var _this12 = this;
+
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
 
       if (this.work_experience_push_array.company_name) {
         this.profile.candidate_experience.push({
@@ -9707,12 +9759,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/experience', this.profile.candidate_experience).then(function (res) {
         if (res.data.success == false) {
           _this12.errors = res.data.errors;
+          Swal.close();
         } else {
           _this12.errors = [];
 
           _this12.getCandidateDashboardData();
 
-          $('#basicInfoModal').modal('hide');
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
@@ -9757,7 +9810,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Work Experience Already Exist!🥺'
+            text: 'Work Experience Already Exist!🥺',
+            timer: 1500
           });
         }
       }
@@ -9803,6 +9857,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     updateProject: function updateProject() {
       var _this14 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
+
       if (this.project_push_array.name) {
         this.profile.candidate_projects.push({
           name: this.project_push_array.name,
@@ -9824,16 +9885,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/project', this.profile.candidate_projects).then(function (res) {
         if (res.data.success == false) {
           _this14.errors = res.data.errors;
+          Swal.close();
         } else {
           _this14.errors = [];
 
           _this14.getCandidateDashboardData();
 
-          $('#basicInfoModal').modal('hide');
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Candidate Updated Successfully'
+            text: 'Candidate Updated Successfully',
+            timer: 1500
           });
           _this14.project_push_array = {
             name: '',
@@ -9906,14 +9969,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     saveResume: function saveResume() {
       var _this16 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
       var $uploadresume = $('#uploadresume');
       var data = new FormData(uploadresume);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/resume-file', data).then(function (res) {
         if (res.data.success == true) {
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Candidate Updated Successfully'
+            text: 'Candidate Updated Successfully',
+            timer: 1500
           });
 
           _this16.getCandidateDashboardData();
@@ -9922,10 +9993,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
 
         if (res.data.type == 'error') {
+          Swal.close();
           Swal.fire({
             icon: 'error',
             title: 'Resume Not Uploaded',
-            text: 'File must be pdf & maximum size must be less then 2mb'
+            text: 'File must be pdf & maximum size must be less then 2mb',
+            timer: 1500
           });
         }
       });
@@ -9933,14 +10006,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     saveCNIC: function saveCNIC() {
       var _this17 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
       var $uploadcnic = $('#uploadcnic');
       var data = new FormData(uploadcnic);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/cnic-file', data).then(function (res) {
         if (res.data.success == true) {
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Candidate Updated Successfully'
+            text: 'Candidate Updated Successfully',
+            timer: 1500
           });
 
           _this17.getCandidateDashboardData();
@@ -9949,10 +10030,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
 
         if (res.data.type == 'error') {
+          Swal.close();
           Swal.fire({
             icon: 'error',
             title: 'Cnic Not Uploaded',
-            text: 'File must be pdf with both front and back clear pics & maximum size must be less then 2mb'
+            text: 'File must be pdf with both front and back clear pics & maximum size must be less then 2mb',
+            timer: 1500
           });
         }
       });
@@ -9960,14 +10043,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     saveExperienceLetter: function saveExperienceLetter() {
       var _this18 = this;
 
+      swal.fire({
+        text: 'Please Wait...',
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
       var $uploadexperienceletter = $('#uploadexperienceletter');
       var data = new FormData(uploadexperienceletter);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/experience-letter-file', data).then(function (res) {
         if (res.data.success == true) {
+          Swal.close();
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Candidate Updated Successfully'
+            text: 'Candidate Updated Successfully',
+            timer: 1500
           });
 
           _this18.getCandidateDashboardData();
@@ -9976,46 +10067,47 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
 
         if (res.data.type == 'error') {
+          Swal.close();
           Swal.fire({
             icon: 'error',
             title: 'Cnic Not Uploaded',
-            text: 'File must be pdf and maximum size must be less then 2mb'
+            text: 'File must be pdf and maximum size must be less then 2mb',
+            timer: 1500
           });
         }
       });
     },
-    updateDesireJob: function updateDesireJob() {
-      var _this19 = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/desire-job', {
-        is_looking_for_job: this.profile.is_looking_for_job,
-        looking_for_job_department: this.profile.looking_for_job_department,
-        looking_for_job_expected_salary: this.profile.looking_for_job_expected_salary,
-        looking_for_job_location: this.profile.looking_for_job_location,
-        looking_for_job_position: this.profile.looking_for_job_position,
-        looking_for_job_when: this.profile.looking_for_job_when
-      }).then(function (res) {
-        if (res.data.success == false) {
-          _this19.errors = res.data.errors;
-        } else {
-          _this19.errors = [];
-
-          _this19.getCandidateDashboardData();
-
-          $('#basicInfoModal').modal('hide');
-          Swal.fire({
-            icon: 'success',
-            title: 'Updated',
-            text: 'Candidate Updated Successfully'
-          });
-          _this19.skill_push_array = {
-            name: '',
-            level: ''
-          };
-          _this19.addMoreDBSkill = false;
-        }
-      })["catch"](function (err) {});
-    },
+    // updateDesireJob() {
+    //     axios.post('/update/desire-job', {
+    //             is_looking_for_job: this.profile.is_looking_for_job,
+    //             looking_for_job_department: this.profile.looking_for_job_department,
+    //             looking_for_job_expected_salary: this.profile.looking_for_job_expected_salary,
+    //             looking_for_job_location: this.profile.looking_for_job_location,
+    //             looking_for_job_position: this.profile.looking_for_job_position,
+    //             looking_for_job_when: this.profile.looking_for_job_when,
+    //         })
+    //         .then((res) => {
+    //             if (res.data.success == false) {
+    //                 this.errors = res.data.errors
+    //             } else {
+    //                 this.errors = []
+    //                 this.getCandidateDashboardData()
+    //                 $('#basicInfoModal').modal('hide')
+    //                 Swal.fire({
+    //                     icon: 'success',
+    //                     title: 'Updated',
+    //                     text: 'Candidate Updated Successfully',
+    //                 })
+    //                 this.skill_push_array = {
+    //                     name: '',
+    //                     level: '',
+    //                 }
+    //                 this.addMoreDBSkill = false
+    //             }
+    //         })
+    //         .catch((err) => {
+    //         })
+    // },
     openProfileTab: function openProfileTab() {
       document.getElementById("ProfileTabMobileNav").style.left = "0%";
     },
@@ -11860,13 +11952,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -12120,57 +12205,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -13705,12 +13739,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 
@@ -13720,7 +13748,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       record: {
         id: 0,
-        bannar: '',
+        banner: '',
         job_title: '',
         job_designation: '',
         job_description: '',
@@ -13729,7 +13757,7 @@ __webpack_require__.r(__webpack_exports__);
         industry: '',
         department: '',
         experience: '',
-        salary_type: '',
+        // salary_type: '',
         salary_range: '',
         gender: '',
         location: '',
@@ -13830,7 +13858,7 @@ __webpack_require__.r(__webpack_exports__);
               _this3.errors = [];
               _this3.record = {
                 id: 0,
-                bannar: '',
+                banner: '',
                 title: '',
                 job_designation: '',
                 job_description: '',
@@ -13839,16 +13867,17 @@ __webpack_require__.r(__webpack_exports__);
                 industry: '',
                 department: '',
                 experience: '',
-                salary_type: '',
+                // salary_type: '',
                 salary_range: '',
                 gender: '',
                 location: '',
                 total_position: '',
                 qualification_level: '',
-                benefits: '',
-                job_responsibilities: ''
+                status: 'Active' // benefits: '',
+                // job_responsibilities: '',
+
               };
-              _this3.$refs.bannar.value = null;
+              _this3.$refs.banner.value = null;
             }
           });
         }
@@ -13860,7 +13889,7 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/edit-job-post/' + id).then(function (response) {
         if (response.data.success == true) {
           _this4.record.id = response.data.data.id;
-          _this4.record.bannar = response.data.data.bannar;
+          _this4.record.banner = response.data.data.banner;
           _this4.record.job_title = response.data.data.title;
           _this4.record.job_designation = response.data.data.designation;
           _this4.record.job_description = response.data.data.description;
@@ -13868,15 +13897,15 @@ __webpack_require__.r(__webpack_exports__);
           _this4.record.shift = response.data.data.shift; // this.record.industry =  response.data.data.id;
           // this.record.department =  response.data.data.id;
 
-          _this4.record.experience = response.data.data.experience;
-          _this4.record.salary_type = response.data.data.salary_type;
+          _this4.record.experience = response.data.data.experience; // this.record.salary_type = response.data.data.salary_type;
+
           _this4.record.salary_range = response.data.data.salary_range;
           _this4.record.gender = response.data.data.gender;
           _this4.record.location = response.data.data.location;
           _this4.record.total_positions = response.data.data.total_position;
-          _this4.record.qualification_level = response.data.data.qualification_level;
-          _this4.record.benefits = response.data.data.benefits;
-          _this4.record.job_responsibilities = response.data.data.job_responsibilities;
+          _this4.record.qualification_level = response.data.data.qualification_level; // this.record.benefits = response.data.data.benefits;
+          // this.record.job_responsibilities = response.data.data.job_responsibilities;
+
           _this4.record.status = response.data.data.status;
           $('#PostNewJobModal').modal('show');
         } else {}
@@ -13885,7 +13914,7 @@ __webpack_require__.r(__webpack_exports__);
     clearRecord: function clearRecord() {
       this.record = {
         id: 0,
-        bannar: '',
+        banner: '',
         job_title: '',
         job_designation: '',
         job_description: '',
@@ -13894,66 +13923,55 @@ __webpack_require__.r(__webpack_exports__);
         industry: '',
         department: '',
         experience: '',
-        salary_type: '',
+        // salary_type: '',
         salary_range: '',
         gender: '',
         location: '',
         total_positions: '',
         qualification_level: '',
-        benefits: '',
-        job_responsibilities: ''
+        status: 'Active' // benefits: '',
+        // job_responsibilities: '',
+
       };
     },
     updateJobPost: function updateJobPost() {
       var _this5 = this;
 
-      Swal.fire({
-        title: 'Are you sure to post this job?',
-        text: "After Yes you your job will be live",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        cancelButtonText: 'No, keep Edit!',
-        confirmButtonText: 'Yes, post it!'
-      }).then(function (result) {
-        if (result.isConfirmed) {
-          var $formData = $('#formData');
-          var data = new FormData(formData);
-          axios__WEBPACK_IMPORTED_MODULE_0___default().post('/company/post-job', data).then(function (res) {
-            if (res.data.success == false) {
-              _this5.errors = res.data.errors;
-            } else {
-              _this5.getCompanyJobs();
+      var $formData = $('#formData');
+      var data = new FormData(formData);
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/company/update-post-job', data).then(function (res) {
+        if (res.data.success == false) {
+          _this5.errors = res.data.errors;
+        } else {
+          _this5.getCompanyJobs();
 
-              Swal.fire({
-                icon: 'success',
-                title: 'Posted!😎',
-                text: 'Your Job is Now Live'
-              });
-              _this5.errors = [];
-              _this5.record = {
-                bannar: '',
-                title: '',
-                job_designation: '',
-                job_description: '',
-                job_type: '',
-                shift: '',
-                industry: '',
-                department: '',
-                experience: '',
-                salary_type: '',
-                salary_range: '',
-                gender: '',
-                location: '',
-                total_position: '',
-                qualification_level: '',
-                benefits: '',
-                job_responsibilities: ''
-              };
-              _this5.$refs.bannar.value = null;
-            }
+          Swal.fire({
+            icon: 'success',
+            title: 'Updated!😎',
+            text: 'Your Job is Updated and Live'
           });
+          _this5.errors = [];
+          _this5.record = {
+            banner: '',
+            title: '',
+            job_designation: '',
+            job_description: '',
+            job_type: '',
+            shift: '',
+            industry: '',
+            department: '',
+            experience: '',
+            // salary_type: '',
+            salary_range: '',
+            gender: '',
+            location: '',
+            total_position: '',
+            qualification_level: '',
+            status: 'Active' // benefits: '',
+            // job_responsibilities: '',
+
+          };
+          _this5.$refs.banner.value = null;
         }
       });
     },
@@ -37612,118 +37630,7 @@ var render = function () {
                                         ]
                                       ),
                                       _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "country" } },
-                                                [_vm._v("Country")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm
-                                                          .basic_information_record
-                                                          .country,
-                                                      expression:
-                                                        "basic_information_record.country",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "country",
-                                                    id: "country",
-                                                  },
-                                                  on: {
-                                                    change: function ($event) {
-                                                      var $$selectedVal =
-                                                        Array.prototype.filter
-                                                          .call(
-                                                            $event.target
-                                                              .options,
-                                                            function (o) {
-                                                              return o.selected
-                                                            }
-                                                          )
-                                                          .map(function (o) {
-                                                            var val =
-                                                              "_value" in o
-                                                                ? o._value
-                                                                : o.value
-                                                            return val
-                                                          })
-                                                      _vm.$set(
-                                                        _vm.basic_information_record,
-                                                        "country",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    },
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "lahore",
-                                                      },
-                                                    },
-                                                    [_vm._v("Lahore")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "islamabad",
-                                                      },
-                                                    },
-                                                    [_vm._v("Islamabad")]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors_basic_information
-                                                  .country != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm
-                                                                .errors_basic_information
-                                                                .country[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
+                                      _vm._m(34),
                                       _vm._v(" "),
                                       _c("div", { staticClass: "col-12" }, [
                                         _c(
@@ -37885,7 +37792,7 @@ var render = function () {
                               "div",
                               { staticClass: "subForm" },
                               [
-                                _vm._m(34),
+                                _vm._m(35),
                                 _vm._v(" "),
                                 _vm._l(
                                   this.profile.candidate_awards,
@@ -38388,7 +38295,7 @@ var render = function () {
                                     attrs: { id: "subForm" },
                                   },
                                   [
-                                    _vm._m(35),
+                                    _vm._m(36),
                                     _vm._v(" "),
                                     _c(
                                       "div",
@@ -39162,7 +39069,7 @@ var render = function () {
                                   "div",
                                   { staticClass: "subForm" },
                                   [
-                                    _vm._m(36),
+                                    _vm._m(37),
                                     _vm._v(" "),
                                     _vm._l(
                                       this.profile.candidate_education,
@@ -40312,7 +40219,7 @@ var render = function () {
                                           attrs: { id: "subForm" },
                                         },
                                         [
-                                          _vm._m(37, true),
+                                          _vm._m(38, true),
                                           _vm._v(" "),
                                           _c(
                                             "div",
@@ -40844,7 +40751,7 @@ var render = function () {
                                           attrs: { id: "subForm" },
                                         },
                                         [
-                                          _vm._m(38),
+                                          _vm._m(39),
                                           _vm._v(" "),
                                           _c(
                                             "div",
@@ -41511,7 +41418,7 @@ var render = function () {
                                 attrs: { id: "subForm" },
                               },
                               [
-                                _vm._m(39),
+                                _vm._m(40),
                                 _vm._v(" "),
                                 _c(
                                   "div",
@@ -42010,7 +41917,7 @@ var render = function () {
                               attrs: { id: "SkillsModal" },
                             },
                             [
-                              _vm._m(40),
+                              _vm._m(41),
                               _vm._v(" "),
                               _c(
                                 "div",
@@ -43505,9 +43412,9 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _vm._m(41),
-      _vm._v(" "),
       _vm._m(42),
+      _vm._v(" "),
+      _vm._m(43),
       _vm._v(" "),
       _c(
         "div",
@@ -43545,7 +43452,7 @@ var render = function () {
                               attrs: { id: "subForm" },
                             },
                             [
-                              _vm._m(43),
+                              _vm._m(44),
                               _vm._v(" "),
                               _c("div", { staticClass: "subFormFields" }, [
                                 _c("div", { staticClass: "row" }, [
@@ -45151,6 +45058,26 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("h4", { staticClass: "m-0 modelTitleText" }, [
         _vm._v("Basic Information"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-md-6" }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", { attrs: { for: "country" } }, [_vm._v("Country")]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-control",
+          attrs: {
+            name: "counter",
+            disabled: "",
+            type: "country",
+            value: "Pakistan",
+          },
+        }),
       ]),
     ])
   },
@@ -48764,7 +48691,7 @@ var render = function () {
                                     staticClass: "candidate-photo",
                                     style: {
                                       backgroundImage:
-                                        "url(/storage/images/candidates/" +
+                                        "url(/storage/images/candidates/profile/" +
                                         _vm.searchData[index].candidate
                                           .profile_image +
                                         ")",
@@ -49756,30 +49683,6 @@ var render = function () {
             _c("div", { staticClass: "candidate" }, [
               _vm._m(4),
               _vm._v(" "),
-              _vm._m(5),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "show-more-anker" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "show-more-common",
-                      attrs: { to: "/candidate-dashboard" },
-                    },
-                    [_vm._v("Show more")]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(6),
-                ],
-                1
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "candidate" }, [
-              _vm._m(7),
-              _vm._v(" "),
               _c("div", [
                 _c("div", { staticClass: "job-list-wrap" }, [
                   _c(
@@ -49803,7 +49706,7 @@ var render = function () {
                                         staticClass: "candidate-photo",
                                         style: {
                                           backgroundImage:
-                                            "url(/storage/images/candidates/" +
+                                            "url(/storage/images/candidates/profile/" +
                                             item.candidate.profile_image +
                                             ")",
                                         },
@@ -49861,7 +49764,7 @@ var render = function () {
                                         ),
                                       ]),
                                       _vm._v(" "),
-                                      _vm._m(8, true),
+                                      _vm._m(5, true),
                                       _vm._v(" "),
                                       _c("li", { staticClass: "mt-1" }, [
                                         _c("i", {
@@ -49997,7 +49900,7 @@ var render = function () {
             ]),
           ]),
           _vm._v(" "),
-          _vm._m(9),
+          _vm._m(6),
         ]
       ),
     ],
@@ -50070,296 +49973,6 @@ var staticRenderFns = [
       _c("p", { staticClass: "msg-time-date" }, [
         _vm._v("10/08/2021, 09:10 am"),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "candidate-tagline" }, [
-      _vm._v("\n                    Candidates\n                    "),
-      _c("i", { staticClass: "fas fa-users" }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "job-list-wrap" }, [
-        _c("div", { staticClass: "row m-0 justify-content-start" }, [
-          _c("div", { staticClass: "candidate-single" }, [
-            _c("div", { staticClass: "candidate-list-content" }, [
-              _c("div", { staticClass: "candidate-image" }, [
-                _c("div", {
-                  staticClass: "candidate-photo",
-                  staticStyle: { "{ backgroundImage": "url('')}" },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "candidate-header mt-2 ml-2" }, [
-                  _c("h6", { staticClass: "candidate-name mb-0" }, [
-                    _vm._v("Sameena Khan"),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "candidate-description my-1" }, [
-                _vm._v(
-                  "My name is Sameena Khan and I am graduated\n                                        from university of..."
-                ),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-meta" }, [
-                _c("li", [
-                  _c("i", { staticClass: "fas fa-venus-mars" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Female")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-graduation-cap" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("BSSE")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-envelope-open-text" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("2 Years"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-user-cog" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("HTML,Bootstrap,CSS,Node JS"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Lahore")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-fav" }, [
-                _c("li", { staticClass: "w-100" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-view-btn w-100",
-                      attrs: { href: "#" },
-                    },
-                    [
-                      _vm._v(
-                        "View\n                                                Profile"
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-wishlist-btn ml-2 ",
-                      attrs: { href: "#" },
-                    },
-                    [_c("i", { staticClass: "far fa-heart" })]
-                  ),
-                ]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "candidate-single" }, [
-            _c("div", { staticClass: "candidate-list-content" }, [
-              _c("div", { staticClass: "candidate-image" }, [
-                _c("div", {
-                  staticClass: "candidate-photo",
-                  staticStyle: { "{ backgroundImage": "url('')}" },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "candidate-header mt-2 ml-2" }, [
-                  _c("h6", { staticClass: "candidate-name mb-0" }, [
-                    _vm._v("Sameena Khan"),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "candidate-description my-1" }, [
-                _vm._v(
-                  "My name is Sameena Khan and I am graduated\n                                        from university of..."
-                ),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-meta" }, [
-                _c("li", [
-                  _c("i", { staticClass: "fas fa-venus-mars" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Female")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-graduation-cap" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("BSSE")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-envelope-open-text" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("2 Years"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-user-cog" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("HTML,Bootstrap,CSS,Node JS"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Lahore")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-fav" }, [
-                _c("li", { staticClass: "w-100" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-view-btn w-100",
-                      attrs: { href: "#" },
-                    },
-                    [
-                      _vm._v(
-                        "View\n                                                Profile"
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-wishlist-btn ml-2 ",
-                      attrs: { href: "#" },
-                    },
-                    [_c("i", { staticClass: "far fa-heart" })]
-                  ),
-                ]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "candidate-single" }, [
-            _c("div", { staticClass: "candidate-list-content" }, [
-              _c("div", { staticClass: "candidate-image" }, [
-                _c("div", {
-                  staticClass: "candidate-photo",
-                  staticStyle: { "{ backgroundImage": "url('')}" },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "candidate-header mt-2 ml-2" }, [
-                  _c("h6", { staticClass: "candidate-name mb-0" }, [
-                    _vm._v("Sameena Khan"),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "candidate-description my-1" }, [
-                _vm._v(
-                  "My name is Sameena Khan and I am graduated\n                                        from university of..."
-                ),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-meta" }, [
-                _c("li", [
-                  _c("i", { staticClass: "fas fa-venus-mars" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Female")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-graduation-cap" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("BSSE")]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-envelope-open-text" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("2 Years"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-user-cog" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [
-                    _vm._v("HTML,Bootstrap,CSS,Node JS"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "mt-1" }, [
-                  _c("i", { staticClass: "fas fa-map-marker-alt" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-line-1" }, [_vm._v("Lahore")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "candidate-list-fav" }, [
-                _c("li", { staticClass: "w-100" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-view-btn w-100",
-                      attrs: { href: "#" },
-                    },
-                    [
-                      _vm._v(
-                        "View\n                                                Profile"
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "candidate-wishlist-btn ml-2 ",
-                      attrs: { href: "#" },
-                    },
-                    [_c("i", { staticClass: "far fa-heart" })]
-                  ),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "notify-unread-msgs" }, [
-      _vm._v("You have "),
-      _c("span", [_vm._v("12")]),
-      _vm._v(" unread messages"),
     ])
   },
   function () {
@@ -51524,10 +51137,16 @@ var render = function () {
                     },
                   },
                 },
-                [_vm._v("+ Add More\n                    Jobs")]
+                [_vm._v("+ Add More Jobs")]
               ),
               _vm._v(" "),
-              _c("p", [_vm._v("Showing 5 results of 123,456 jobs")]),
+              _c("p", [
+                _vm._v(
+                  "Total " +
+                    _vm._s(_vm.jobs.data.length) +
+                    " posted jobs this page"
+                ),
+              ]),
             ]),
             _vm._v(" "),
             _c(
@@ -51538,7 +51157,7 @@ var render = function () {
                   _c("div", { staticClass: "company-logo col-auto py-2" }, [
                     _c("img", {
                       attrs: {
-                        src: "/storage/images/companies/" + item.bannar,
+                        src: "/storage/images/companies/" + item.banner,
                         alt: "Company Logo",
                       },
                     }),
@@ -51682,6 +51301,7 @@ var render = function () {
                                 "a",
                                 {
                                   staticClass: "job-post-ions",
+                                  attrs: { title: "Delete Job" },
                                   on: {
                                     click: function ($event) {
                                       return _vm.deleteJobPost(item.id)
@@ -51800,7 +51420,28 @@ var render = function () {
               _c("form", { attrs: { id: "formData" } }, [
                 _c("div", { staticClass: "modal-content p-0" }, [
                   _c("div", { staticClass: "container editModel pb-5" }, [
-                    _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
+                    _c("h3", { staticClass: "my-4" }, [_vm._v("Post Job")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.record.id,
+                          expression: "record.id",
+                        },
+                      ],
+                      attrs: { name: "id", id: "id", type: "hidden" },
+                      domProps: { value: _vm.record.id },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.record, "id", $event.target.value)
+                        },
+                      },
+                    }),
                     _vm._v(" "),
                     _c(
                       "section",
@@ -51829,7 +51470,7 @@ var render = function () {
                                           attrs: {
                                             src:
                                               "/storage/images/companies/" +
-                                              _vm.record.bannar,
+                                              _vm.record.banner,
                                             height: "50",
                                             width: "50",
                                             alt: "Company Logo",
@@ -51840,28 +51481,28 @@ var render = function () {
                                     _vm._m(3),
                                     _vm._v(" "),
                                     _c("input", {
-                                      ref: "bannar",
+                                      ref: "banner",
                                       staticClass: "form-control",
                                       staticStyle: {
                                         padding: "4px !important",
                                         height: "40px",
                                       },
                                       attrs: {
-                                        name: "bannar",
-                                        id: "bannar",
+                                        name: "banner",
+                                        id: "banner",
                                         type: "file",
                                       },
                                     }),
                                     _vm._v(" "),
                                     _c("small", [
-                                      _vm.errors.bannar != null
+                                      _vm.errors.banner != null
                                         ? _c(
                                             "span",
                                             { staticClass: "text-danger" },
                                             [
                                               _vm._v(
                                                 "\n                                                    " +
-                                                  _vm._s(_vm.errors.bannar[0]) +
+                                                  _vm._s(_vm.errors.banner[0]) +
                                                   "\n                                                "
                                               ),
                                             ]
@@ -52031,148 +51672,6 @@ var render = function () {
                                             { staticClass: "form-group" },
                                             [
                                               _vm._m(6),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.record.salary_type,
-                                                      expression:
-                                                        "record.salary_type",
-                                                    },
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    name: "salary_type",
-                                                    id: "salary_type",
-                                                  },
-                                                  on: {
-                                                    change: function ($event) {
-                                                      var $$selectedVal =
-                                                        Array.prototype.filter
-                                                          .call(
-                                                            $event.target
-                                                              .options,
-                                                            function (o) {
-                                                              return o.selected
-                                                            }
-                                                          )
-                                                          .map(function (o) {
-                                                            var val =
-                                                              "_value" in o
-                                                                ? o._value
-                                                                : o.value
-                                                            return val
-                                                          })
-                                                      _vm.$set(
-                                                        _vm.record,
-                                                        "salary_type",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    },
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Please Select",
-                                                        default: "true",
-                                                        selected: "true",
-                                                        disabled: "disabled",
-                                                      },
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "Please Select\n                                                            "
-                                                      ),
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Yearly",
-                                                      },
-                                                    },
-                                                    [_vm._v("Yearly")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Monthly",
-                                                      },
-                                                    },
-                                                    [_vm._v("Monthly")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Weekly",
-                                                      },
-                                                    },
-                                                    [_vm._v("Weekly")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "Hourly",
-                                                      },
-                                                    },
-                                                    [_vm._v("Hourly")]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("small", [
-                                                _vm.errors.salary_type != null
-                                                  ? _c(
-                                                      "span",
-                                                      {
-                                                        staticClass:
-                                                          "text-danger",
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                                " +
-                                                            _vm._s(
-                                                              _vm.errors
-                                                                .salary_type[0]
-                                                            ) +
-                                                            "\n                                                            "
-                                                        ),
-                                                      ]
-                                                    )
-                                                  : _vm._e(),
-                                              ]),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-12 col-md-6" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _vm._m(7),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -52373,7 +51872,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(8),
+                                              _vm._m(7),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -52511,7 +52010,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(9),
+                                              _vm._m(8),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -52584,7 +52083,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(10),
+                                              _vm._m(9),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -52656,7 +52155,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(11),
+                                              _vm._m(10),
                                               _vm._v(" "),
                                               _c(
                                                 "select",
@@ -52901,9 +52400,11 @@ var render = function () {
                                                   _c(
                                                     "option",
                                                     {
-                                                      attrs: { value: "Other" },
+                                                      attrs: {
+                                                        value: "No Preference",
+                                                      },
                                                     },
-                                                    [_vm._v("Other")]
+                                                    [_vm._v("No Preference")]
                                                   ),
                                                 ]
                                               ),
@@ -52942,7 +52443,7 @@ var render = function () {
                                             "div",
                                             { staticClass: "form-group" },
                                             [
-                                              _vm._m(12),
+                                              _vm._m(11),
                                               _vm._v(" "),
                                               _c("input", {
                                                 directives: [
@@ -53016,7 +52517,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _vm._m(13),
+                                            _vm._m(12),
                                             _vm._v(" "),
                                             _c("textarea", {
                                               directives: [
@@ -53096,80 +52597,7 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _vm._m(14),
-                                            _vm._v(" "),
-                                            _c("textarea", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value:
-                                                    _vm.record
-                                                      .job_responsibilities,
-                                                  expression:
-                                                    "record.job_responsibilities",
-                                                },
-                                              ],
-                                              staticClass: "form-control",
-                                              staticStyle: { height: "100px" },
-                                              attrs: {
-                                                maxlength: "255",
-                                                placeholder:
-                                                  "Enter Job Description",
-                                                name: "job_responsibilities",
-                                                id: "job_responsibilities",
-                                              },
-                                              domProps: {
-                                                value:
-                                                  _vm.record
-                                                    .job_responsibilities,
-                                              },
-                                              on: {
-                                                input: function ($event) {
-                                                  if ($event.target.composing) {
-                                                    return
-                                                  }
-                                                  _vm.$set(
-                                                    _vm.record,
-                                                    "job_responsibilities",
-                                                    $event.target.value
-                                                  )
-                                                },
-                                              },
-                                            }),
-                                            _vm._v(" "),
-                                            _c("small", [
-                                              _vm.errors.job_responsibilities !=
-                                              null
-                                                ? _c(
-                                                    "span",
-                                                    {
-                                                      staticClass:
-                                                        "text-danger",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                                                " +
-                                                          _vm._s(
-                                                            _vm.errors
-                                                              .job_responsibilities[0]
-                                                          ) +
-                                                          "\n                                                            "
-                                                      ),
-                                                    ]
-                                                  )
-                                                : _vm._e(),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-12" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
-                                            _vm._m(15),
+                                            _vm._m(13),
                                             _vm._v(" "),
                                             _c(
                                               "select",
@@ -53287,72 +52715,6 @@ var render = function () {
                                           "div",
                                           { staticClass: "form-group" },
                                           [
-                                            _vm._m(16),
-                                            _vm._v(" "),
-                                            _c("textarea", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.record.benefits,
-                                                  expression: "record.benefits",
-                                                },
-                                              ],
-                                              staticClass: "form-control",
-                                              staticStyle: { height: "100px" },
-                                              attrs: {
-                                                maxlength: "255",
-                                                placeholder: "Enter Benefits",
-                                                id: "benefits",
-                                                name: "benefits",
-                                              },
-                                              domProps: {
-                                                value: _vm.record.benefits,
-                                              },
-                                              on: {
-                                                input: function ($event) {
-                                                  if ($event.target.composing) {
-                                                    return
-                                                  }
-                                                  _vm.$set(
-                                                    _vm.record,
-                                                    "benefits",
-                                                    $event.target.value
-                                                  )
-                                                },
-                                              },
-                                            }),
-                                            _vm._v(" "),
-                                            _c("small", [
-                                              _vm.errors.benefits != null
-                                                ? _c(
-                                                    "span",
-                                                    {
-                                                      staticClass:
-                                                        "text-danger",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                                                " +
-                                                          _vm._s(
-                                                            _vm.errors
-                                                              .benefits[0]
-                                                          ) +
-                                                          "\n                                                            "
-                                                      ),
-                                                    ]
-                                                  )
-                                                : _vm._e(),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-12" }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "form-group" },
-                                          [
                                             _c(
                                               "div",
                                               {
@@ -53360,7 +52722,7 @@ var render = function () {
                                                   "d-flex align-items-center",
                                               },
                                               [
-                                                _vm._m(17),
+                                                _vm._m(14),
                                                 _vm._v(" "),
                                                 _c(
                                                   "label",
@@ -53524,7 +52886,7 @@ var render = function () {
                                       on: {
                                         click: function ($event) {
                                           $event.preventDefault()
-                                          return _vm.updatePostJob()
+                                          return _vm.updateJobPost()
                                         },
                                       },
                                     },
@@ -54121,7 +53483,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "bannar" } }, [
+    return _c("label", { attrs: { for: "banner" } }, [
       _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
       _vm._v(" Banner"),
     ])
@@ -54146,15 +53508,6 @@ var staticRenderFns = [
       _vm._v(
         " Job\n                                                            Designation"
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "salary_type" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(" Salary Type"),
     ])
   },
   function () {
@@ -54234,32 +53587,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "job_responsibilities" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        " Job\n                                                            Responsibilities"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("label", { attrs: { for: "qualification_level" } }, [
       _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
       _vm._v(
         " Qualifications &\n                                                            Technicalities"
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "benefits" } }, [
-      _c("span", { staticClass: "required_feild" }, [_vm._v("*")]),
-      _vm._v(
-        "\n                                                            Benefits"
       ),
     ])
   },
@@ -78528,7 +77859,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
+module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 
