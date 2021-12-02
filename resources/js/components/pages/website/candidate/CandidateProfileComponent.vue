@@ -5,7 +5,8 @@
         <div class="profile-wrapper">
             <div class="row m-0 container p-0">
                 <div class="col-12 p-0">
-                    <div v-if="this.skills_exist == false" class="alert-message-resume resume-attention-alert col-12 mt-5">
+                    <div v-if="this.skills_exist == false"
+                        class="alert-message-resume resume-attention-alert col-12 mt-5">
                         <h2>Please correct any deficiencies in your profile</h2>
                         <p>
                             Since [personal information] such as name and contact information is
@@ -278,7 +279,8 @@
                                                 <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
                                                 </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Department</span></li>
-                                                <li class="profileLabel profileLabelBorder bbl5 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder bbl5 v-on-d"><span></span>
+                                                </li>
                                             </ul>
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0">
@@ -306,11 +308,14 @@
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rb0 btr5 v-on-d"><span></span></li>
-                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 btr5 v-on-d">
+                                                    <span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span>
+                                                </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span>
+                                                </li>
                                                 <li class="profileLabel bbl5 v-on-d"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
@@ -343,7 +348,8 @@
                                                 <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
                                                 </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Department</span></li>
-                                                <li class="profileLabel profileLabelBorder bbl5 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder bbl5 v-on-d"><span></span>
+                                                </li>
                                             </ul>
                                             <ul class="profileInfoList">
                                                 <li class="profileInfo profileInfoBorder rt0">
@@ -371,12 +377,15 @@
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d"><span></span>
+                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d">
+                                                    <span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span>
+                                                </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span>
+                                                </li>
                                                 <li class="profileLabel bbl5 v-on-d"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
@@ -537,15 +546,19 @@
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d"><span></span>
+                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d">
+                                                    <span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 v-on-d"><span></span></li>
-                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 rb0 v-on-d"><span></span>
+                                                </li>
+                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span>
+                                                </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Current Company</span>
                                                 </li>
                                                 <li class="profileLabel profileLabelBorder profileLabelBorderBottom">
                                                     <span>Current Salary</span></li>
-                                                <li class="profileLabel profileLabelBorder rb0 rt0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 rt0 v-on-d"><span></span>
+                                                </li>
                                                 <!-- <li class="profileLabel bbl5"><span></span></li> -->
                                             </ul>
                                             <ul class="profileInfoList">
@@ -647,8 +660,10 @@
                                                 </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Current Status</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span></li>
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 bbl5 v-on-d"><span></span>
+                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span>
+                                                </li>
+                                                <li class="profileLabel profileLabelBorder rt0 rb0 bbl5 v-on-d">
+                                                    <span></span>
                                                 </li>
                                             </ul>
                                             <ul class="profileInfoList">
@@ -678,12 +693,15 @@
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rb0 rt0 btr5 v-on-d"><span></span>
+                                                <li class="profileLabel profileLabelBorder rb0 rt0 btr5 v-on-d">
+                                                    <span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span>
+                                                </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span></li>
+                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span>
+                                                </li>
                                                 <li class="profileLabel v-on-d"><span></span></li>
                                                 <li class="profileLabel bbl5 v-on-d"><span></span></li>
                                             </ul>
@@ -1001,7 +1019,7 @@
                                                             <label for="cinic">CNIC</label>
                                                             <input name="cnic" type="number" class="form-control"
                                                                 placeholder="Enter Cnic" value=""
-                                                                v-model="basic_information_record.cnic"/>
+                                                                v-model="basic_information_record.cnic" />
                                                             <small>
                                                                 <span v-if="errors_basic_information.cnic != null"
                                                                     class="text-danger">
@@ -1066,7 +1084,8 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="country">Country</label>
-                                                            <input name="counter" disabled class="form-control" type="country" value="Pakistan" />
+                                                            <input name="counter" disabled class="form-control"
+                                                                type="country" value="Pakistan" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
@@ -1224,7 +1243,7 @@
                                                             <label for="currentStatus">Yes</label>
                                                             <input class="my-1" @change="workingCurrentlyYes()"
                                                                 name="is_working_currently" value="1"
-                                                                v-model="profile.is_working_currently" type="radio"/>
+                                                                v-model="profile.is_working_currently" type="radio" />
                                                             <label for="currentStatus">No</label>
                                                             <input type="radio" @change="workingCurrentlyNo()"
                                                                 v-model="profile.is_working_currently" class="my-1"
@@ -1288,7 +1307,8 @@
                                                             <label for="skills">Current Salary</label>
                                                             <input name="currentSalary" class="form-control"
                                                                 v-model="profile.current_salary"
-                                                                placeholder="Enter Current Salary" type="number" value="">
+                                                                placeholder="Enter Current Salary" type="number"
+                                                                value="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1334,7 +1354,7 @@
                                             <div class="subFormFields"
                                                 v-for="(educationUpdate, index) in this.profile.candidate_education"
                                                 :key="index">
-                                                <div class="float-right">
+                                                <div class="text-right w-100 px-3">
                                                     <a @click="deleteEducationArray(index)">
                                                         <i class="fas fa-times"></i>
                                                     </a>
@@ -1394,8 +1414,8 @@
                                                 </div>
                                             </div>
                                             <div class="subFormFields">
-                                                <div class="row m-0" v-if="this.addMoreDBEducation == true">
-                                                    <div class="text-right">
+                                                <div class="row" v-if="this.addMoreDBEducation == true">
+                                                    <div class="text-right w-100 px-3">
                                                         <a @click="removeAddMoreArrayEducation()">
                                                             <i class="fas fa-times"></i>
                                                         </a>
@@ -1449,8 +1469,8 @@
                                                                 <label for="department">Department</label>
                                                                 <input name="department" id="department"
                                                                     v-model="education_push_array.department"
-                                                                    class="form-control" type="text" placeholder="Faculty"
-                                                                    value="" />
+                                                                    class="form-control" type="text"
+                                                                    placeholder="Faculty" value="" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1502,7 +1522,7 @@
                                                 <h4 class="m-0">Work Experience</h4>
                                             </div>
                                             <div class="subFormFields">
-                                                <div class="float-right">
+                                                <div class="text-right w-100 px-2">
                                                     <a @click="deleteWorkExperienceArray(index)">
                                                         <i class="fas fa-times"></i>
                                                     </a>
@@ -1576,7 +1596,7 @@
                                                 <h4 class="m-0">Work Experience</h4>
                                             </div>
                                             <div class="subFormFields">
-                                                <div class="float-right">
+                                                <div class="text-right w-100 px-2">
                                                     <a @click="removeAddMoreArrayWorkExperience()">
                                                         <i class="fas fa-times"></i>
                                                     </a>
@@ -1683,11 +1703,11 @@
                                                 <h4 class="m-0 modelTitleText">Languages</h4>
                                             </div>
                                             <div id="LanguagesFields" class="subFormFields row">
-                                                <div class="col-md-4 LanguagesSection"
+                                                <div class="col-md-6 LanguagesSection"
                                                     v-for="(languageUpdate, index) in this.profile.candidate_language"
                                                     :key="index">
                                                     <div class="form-group">
-                                                        <div class="float-right">
+                                                        <div class="text-right w-100">
                                                             <a @click="deleteLanguageArray(index)">
                                                                 <i class="fas fa-times"></i>
                                                             </a>
@@ -1704,10 +1724,10 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 LanguagesSection"
+                                                <div class="col-md-6 LanguagesSection"
                                                     v-if="this.addMoreDBLanguage == true">
                                                     <div class="form-group">
-                                                        <div class="float-right">
+                                                        <div class="text-right w-100">
                                                             <a @click="removeAddMoreArrayLanguage()">
                                                                 <i class="fas fa-times"></i>
                                                             </a>
@@ -1774,10 +1794,12 @@
                                                     v-for="(skillUpdate, index) in this.profile.candidate_skills"
                                                     :key="index">
                                                     <div class="form-group">
-                                                        <a class="float-right" @click="deleteSkillArray(index)"><i
-                                                                class="fas fa-times"></i></a>
+                                                        <a class="text-right d-block" @click="deleteSkillArray(index)">
+                                                            <i class="fas fa-times"></i>
+                                                        </a>
                                                         <input name="skill_name[]" value="" v-model="skillUpdate.name"
-                                                            for="english" class="form-control" style="margin-bottom:10px;">
+                                                            for="english" class="form-control"
+                                                            style="margin-bottom:10px;">
                                                         <select name="skill_level[]" id="language" class="form-control"
                                                             v-model="skillUpdate.level">
                                                             <option value="Beginner">Beginner</option>
@@ -1789,7 +1811,7 @@
                                                 <div class="col-12 col-md-6 SkillsSection"
                                                     v-if="this.addMoreDBSkill == true">
                                                     <div class="form-group">
-                                                        <a class="float-right"
+                                                        <a class="text-right d-block"
                                                             @click="removeAddMoreArraySkill(index)"><i
                                                                 class="fas fa-times"></i></a>
                                                         <input name="skill_name[]" value=""
@@ -1846,7 +1868,7 @@
                                     v-for="(projectUpdate, index) in this.profile.candidate_projects" :key="index">
                                     <div class="col-12 ProjectSection">
                                         <div id='subForm' class="subForm">
-                                            <div class="float-right">
+                                            <div class="text-right">
                                                 <a @click="deleteProjectArray(index)">
                                                     <i class="fas fa-times"></i>
                                                 </a>
@@ -1906,7 +1928,7 @@
                                     id="ProjectFieldsContainer">
                                     <div class="col-12 ProjectSection">
                                         <div id='subForm' class="subForm">
-                                            <div class="float-right">
+                                            <div class="text-right">
                                                 <a @click="removeAddMoreArrayProject(index)">
                                                     <i class="fas fa-times"></i>
                                                 </a>
