@@ -132,8 +132,8 @@
                                                     href="#education">Education</a>
                                             </li>
                                             <!-- <li class="nav-item">
-                                        <a class="nav-link nav-link @if(Session::get('active-tab') == 'projects') active @endif" data-toggle="tab" href="#qualification">Qualification</a>
-                                    </li> -->
+                                                <a class="nav-link nav-link @if(Session::get('active-tab') == 'projects') active @endif" data-toggle="tab" href="#qualification">Qualification</a>
+                                            </li> -->
                                             <li class="nav-item">
                                                 <a class="nav-link nav-link" data-toggle="tab"
                                                     href="#languages">Languages</a>
@@ -260,9 +260,8 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".basicInfoModal" data-toggle="modal"
-                                                data-target=".basicInfoModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="openBasicModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="education" class="tab-pane fade">
@@ -271,8 +270,7 @@
                                         v-for="(item, index) in this.profile.candidate_education" :key="index">
                                         <div class="col-12 col-md-6">
                                             <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder btr5"><span>Institute
-                                                        Type</span></li>
+                                                <!-- <li class="profileLabel profileLabelBorder btr5"><span>Institute Type</span></li> -->
                                                 <li class="profileLabel profileLabelBorder"><span>Institute Name</span>
                                                 </li>
                                                 <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
@@ -281,11 +279,11 @@
                                                 <li class="profileLabel profileLabelBorder bbl5 v-on-d"><span></span></li>
                                             </ul>
                                             <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder rt0">
+                                                <!-- <li class="profileInfo profileInfoBorder rt0">
                                                     <div class="line-text-1">
                                                         <p>{{item.school_type}}</p>
                                                     </div>
-                                                </li>
+                                                </li> -->
                                                 <li class="profileInfo profileInfoBorder">
                                                     <div class="line-text-1">
                                                         <p>{{item.school_name}}</p>
@@ -326,9 +324,8 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".EducationModal" data-toggle="modal"
-                                                data-target=".EducationModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="openEducationModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="qualification" class="tab-pane fade">
@@ -392,9 +389,8 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".QualificationModal" data-toggle="modal"
-                                                data-target=".QualificationModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="OpenWorkQualificationModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="languages" class="tab-pane fade">
@@ -436,9 +432,8 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".LanguagesModal" data-toggle="modal"
-                                                data-target=".LanguagesModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="openLanguagesModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="awards" class="tab-pane fade">
@@ -478,9 +473,8 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".AwardModal" data-toggle="modal"
-                                                data-target=".AwardModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="openAwardModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="current-job" class="tab-pane fade">
@@ -567,12 +561,11 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".CurrentJobModal" data-toggle="modal"
-                                                data-target=".CurrentJobModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="openCurrentJobModal()">Edit</a></li>
                                     </ul>
                                 </div>
-                                <div id="desire-job" class="tab-pane fade">
+                                <!-- <div id="desire-job" class="tab-pane fade">
                                     <h1 class="tabsHeading">Desire job</h1>
                                     <div class="row no-gutters DesireJobTab">
                                         <div class="col-12">
@@ -629,11 +622,10 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".DesireJobModal" data-toggle="modal"
-                                                data-target=".DesireJobModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="OpenDesireJobModal()">Edit</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 <div id="work-experience" class="tab-pane fade">
                                     <h1 class="tabsHeading">Work Experience</h1>
                                     <div class="row no-gutters ExperienceInfoTab"
@@ -700,9 +692,8 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".WorkExperienceModal" data-toggle="modal"
-                                                data-target=".WorkExperienceModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="openWorkExperienceModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="skills" class="tab-pane fade">
@@ -742,9 +733,8 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".SkillsModal" data-toggle="modal"
-                                                data-target=".SkillsModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="openSkillsModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="documents" class="tab-pane fade">
@@ -789,7 +779,7 @@
                                                                         <label class="UploadAnker"
                                                                             for="resume-pdf-file">Upload</label>
                                                                     </li>
-                                                                    <li><a class="ViewAnker"
+                                                                    <li><a v-if="this.profile.cv_file" class="ViewAnker"
                                                                             :href="'/storage/images/candidates/resume/'+this.profile.cv_file"
                                                                             target="_blank">View</a></li>
                                                                     <div class="alert d-none" id="responseMsg">
@@ -810,7 +800,7 @@
                                                                         <label class="UploadAnker"
                                                                             for="uploadcnicfrontback">Upload</label>
                                                                     </li>
-                                                                    <li><a class="ViewAnker"
+                                                                    <li><a class="ViewAnker" v-if="profile.cnic_image"
                                                                             :href="'/storage/images/candidates/cnic/'+this.profile.cnic_image"
                                                                             target="_blank">View</a></li>
                                                                 </ul>
@@ -827,7 +817,7 @@
                                                                         <label class="UploadAnker"
                                                                             for="experiencelatter">Upload</label>
                                                                     </li>
-                                                                    <li><a class="ViewAnker"
+                                                                    <li><a class="ViewAnker" v-if="profile.experience_letter"
                                                                             :href="'/storage/images/candidates/experience-letter/'+this.profile.experience_letter"
                                                                             target="_blank">View</a></li>
                                                                 </ul>
@@ -838,10 +828,6 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- <ul class="viewEditAnkerList">
-                                <li><a class="ViewAnker" href="#/">View</a></li>
-                                <li><a class="ViewEdit" href="#/">Edit</a></li>
-                            </ul> -->
                                 </div>
                                 <div id="projects" class="tab-pane fade">
                                     <h1 class="tabsHeading">Projects</h1>
@@ -889,22 +875,19 @@
                                         </div>
                                     </div>
                                     <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".ProjectsModal" data-toggle="modal"
-                                                data-target=".ProjectsModal">Edit</a></li>
+                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="ViewEdit" @click="openProjectModals()">Edit</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <!--  -->
                     </div>
                 </div>
             </div>
         </div>
         <!-- Modal BasicInfo  -->
         <!-- Large modal -->
-        <div class="modal fade basicInfoModal" id="basicInfoModal" tabindex="-1" role="dialog"
-            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal fade basicInfoModal" id="basicInfoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="basicinformationForm" enctype="multipart/form-data">
                     <div class="modal-content p-0">
@@ -1063,12 +1046,12 @@
                                                                 v-model="basic_information_record.email" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
+                                                    <!-- <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="country">Country</label>
-                                                            <input name="counter" disabled class="form-control" type="country" value="Pakistan" />
+                                                            <input name="country" disabled class="form-control" type="country" value="Pakistan" />
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="companyDescription">Bio</label>
@@ -1104,8 +1087,7 @@
         </div>
         <!-- Modal BasicInfo  -->
         <!-- AwardModal modal -->
-        <div class="modal fade AwardModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade AwardModal" id="AwardModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="awardForm" class="w-100" action="#" method="POST">
                     <div class="modal-content p-0">
@@ -1201,8 +1183,7 @@
         </div>
         <!-- Modal AwardModal  -->
         <!-- CurrentJobModal -->
-        <div class="modal fade CurrentJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade CurrentJobModal" id="CurrentJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="currentJobForm" class="w-100">
                     <div class="modal-content p-0">
@@ -1316,8 +1297,7 @@
         </div>
         <!-- Modal CurrentJobModal  -->
         <!-- EducationModal modal -->
-        <div class="modal fade EducationModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade EducationModal" id="EducationModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="educationform" class="w-100">
                     <div class="modal-content p-0">
@@ -1340,7 +1320,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-12 col-md-6">
+                                                    <!-- <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="institute">Institute Type</label>
                                                             <select name="school_type[]" class="form-control"
@@ -1351,7 +1331,7 @@
                                                                 <option value="Bachelor">Bachelor</option>
                                                             </select>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="school_name">Institute name</label>
@@ -1401,7 +1381,7 @@
                                                         </a>
                                                     </div>
                                                     <div class="row m-0">
-                                                        <div class="col-12 col-md-6">
+                                                        <!-- <div class="col-12 col-md-6">
                                                             <div class="form-group">
                                                                 <label for="institute">Institute Type</label>
                                                                 <select name="school_type" class="form-control"
@@ -1412,7 +1392,7 @@
                                                                     <option value="Bachelor">Bachelor</option>
                                                                 </select>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                         <div class="col-12 col-md-6">
                                                             <div class="form-group">
                                                                 <label for="school_name">Institute name</label>
@@ -1485,8 +1465,7 @@
         </div>
         <!-- Modal EducationModal  -->
         <!-- WorkExperienceModal modal -->
-        <div class="modal fade WorkExperienceModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade WorkExperienceModal" id="WorkExperienceModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="workExperienceForm" class="w-100" action="#" method="POST">
                     <div class="modal-content p-0">
@@ -1541,23 +1520,21 @@
                                                                 <div class="form-group">
                                                                     <label for="experience_end_date">Ending
                                                                         Date</label>
-                                                                    <input name="company_end_date[]"
+                                                                    <input name="company_end_date[]" :disabled="experienceUpdate.is_working_currently == true"
                                                                         v-model="experienceUpdate.end_date"
                                                                         id="experience_end_date" class="form-control"
-                                                                        type="date" placeholder="Please Select"
-                                                                        value="#">
+                                                                        type="date" placeholder="Please Select">
                                                                 </div>
                                                             </div>
                                                             <div class="col-6">
                                                                 <div
                                                                     class="form-group d-flex align-items-center justify-content-center m-0">
-                                                                    <input class="mr-1" name="currentWorking"
+                                                                    <input class="mr-1" name="currentWorking" @click="experienceUpdate.end_date = ''"
                                                                         id="experience_checkbox_end_date"
                                                                         v-model="experienceUpdate.is_working_currently"
                                                                         type="checkbox">
                                                                     <label class="m-0"
-                                                                        for="experience_checkbox_end_date">Currently
-                                                                        Working</label>
+                                                                        for="experience_checkbox_end_date">Currently Working</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1615,7 +1592,7 @@
                                                                 <div class="form-group">
                                                                     <label for="experience_end_date">Ending
                                                                         Date</label>
-                                                                    <input name="company_end_date[]"
+                                                                    <input name="company_end_date[]" :disabled="work_experience_push_array.is_working_currently == true"
                                                                         v-model="work_experience_push_array.end_date"
                                                                         id="experience_end_date" class="form-control"
                                                                         type="date" placeholder="Please Select"
@@ -1628,7 +1605,7 @@
                                                                     <input class="mr-1" name="currentWorking"
                                                                         id="experience_checkbox_end_date"
                                                                         v-model="work_experience_push_array.is_working_currently"
-                                                                        type="checkbox">
+                                                                        type="checkbox" @click="work_experience_push_array.end_date = ''">
                                                                     <label class="m-0"
                                                                         for="experience_checkbox_end_date">Currently
                                                                         Working</label>
@@ -1667,8 +1644,7 @@
         </div>
         <!-- Modal WorkExperienceModal  -->
         <!-- LanguagesModal modal -->
-        <div class="modal fade LanguagesModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade LanguagesModal" id="LanguagesModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="languageForm" class="w-100" action="#" method="POST">
                     <div class="modal-content p-0">
@@ -1754,8 +1730,7 @@
         </div>
         <!-- Modal LanguagesModal  -->
         <!-- SkillsModal modal -->
-        <div class="modal fade SkillsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade SkillsModal" id="SkillsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="skillForm" class="w-100">
                     <div class="modal-content p-0">
@@ -1836,8 +1811,7 @@
         </div>
         <!-- Modal SkillsModal  -->
         <!-- ProjectsModal modal -->
-        <div class="modal fade ProjectsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade ProjectsModal" id="ProjectsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="projectForm" class="w-100">
                     <div class="modal-content p-0">
@@ -1987,8 +1961,7 @@
         </div>
         <!-- Modal ProjectsModal  -->
         <!-- QualificationModal modal -->
-        <div class="modal fade QualificationModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade QualificationModal" id="QualificationModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content p-0">
                     <div class="container editModel pb-5">
@@ -2070,7 +2043,7 @@
         </div>
         <!-- Modal QualificationModal  -->
         <!-- SocialMediaModal modal -->
-        <div class="modal fade DesireJobModa" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        <!-- <div class="modal fade DesireJobModa" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content p-0">
@@ -2150,10 +2123,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Modal SocialMediaModal  -->
         <!-- DesireJobModal modal -->
-        <div class="modal fade DesireJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        <!-- <div class="modal fade DesireJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content p-0">
@@ -2192,12 +2165,6 @@
                                                             v-model="profile.looking_for_job_location" />
                                                     </div>
                                                 </div>
-                                                <!-- <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="area">Area</label>
-                                                        <input name="area" class="form-control" placeholder="Enter Area" v-model="profile.looking_for_job_location"/>
-                                                    </div>
-                                                </div> -->
                                             </div>
                                             <div class="row mt-3" v-if="profile.is_looking_for_job == 1">
                                                 <div class="col-lg-6">
@@ -2240,11 +2207,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="row mt-3">
-                                <div id='addDesiredJobBtn' class="col-lg-12 btn addNewButton">
-                                    <i class="fas fa-plus mr-1"></i> Add Another Job
-                                </div>
-                            </div> -->
                             <div class="row mt-4">
                                 <div class="col-lg-12 modelBtnContainer">
                                     <button class="positiveBtn modelBtn mr-1"
@@ -2257,7 +2219,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Modal DesireJobModal  -->
     </div>
 </template>
@@ -2285,7 +2247,7 @@
                 errors_basic_information: [],
                 education_record: [],
                 education_push_array: {
-                    school_type: '',
+                    // school_type: '',
                     school_name: '',
                     start_date: '',
                     end_date: '',
@@ -2407,7 +2369,7 @@
             clearEducationArray() {
                 this.getCandidateDashboardData()
                 this.education_push_array = {
-                    school_type: '',
+                    // school_type: '',
                     school_name: '',
                     start_date: '',
                     end_date: '',
@@ -2424,7 +2386,7 @@
                 })
                 if (this.education_push_array.school_name) {
                     this.profile.candidate_education.push({
-                        school_type: this.education_push_array.school_type,
+                        // school_type: this.education_push_array.school_type,
                         school_name: this.education_push_array.school_name,
                         start_date: this.education_push_array.start_date,
                         end_date: this.education_push_array.end_date,
@@ -2439,7 +2401,7 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            // $('#basicInfoModal').modal('hide')
+                            $('#EducationModal').modal('hide')
                             Swal.close()
                             Swal.fire({
                                 icon: 'success',
@@ -2448,7 +2410,7 @@
                                 timer: 1500
                             })
                             this.education_push_array = {
-                                school_type: '',
+                                // school_type: '',
                                 school_name: '',
                                 start_date: '',
                                 end_date: '',
@@ -2472,14 +2434,14 @@
                 } else {
                     if (this.existEducationArray() == true) {
                         this.profile.candidate_education.push({
-                            school_type: this.education_push_array.school_type,
+                            // school_type: this.education_push_array.school_type,
                             school_name: this.education_push_array.school_name,
                             start_date: this.education_push_array.start_date,
                             end_date: this.education_push_array.end_date,
                             department: this.education_push_array.department,
                         })
                         this.education_push_array = {
-                            school_type: '',
+                            // school_type: '',
                             school_name: '',
                             start_date: '',
                             end_date: '',
@@ -2498,8 +2460,7 @@
                 this.$delete(this.profile.candidate_education, index);
             },
             existEducationArray() {
-                if (this.profile.candidate_education.find(item => item.school_type === this.education_push_array
-                        .school_type)) {
+                if (this.profile.candidate_education.find(item => item.school_name === this.education_push_array.school_name)) {
                     return false;
                 } else {
                     return true;
@@ -2508,7 +2469,7 @@
             removeAddMoreArrayEducation() {
                 this.addMoreDBEducation = false
                 this.education_push_array = {
-                    school_type: '',
+                    // school_type: '',
                     school_name: '',
                     start_date: '',
                     end_date: '',
@@ -2552,7 +2513,7 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            $('#LanguagesModal').modal('hide')
                             Swal.close()
                             Swal.fire({
                                 icon: 'success',
@@ -2659,6 +2620,7 @@
                                 text: 'Candidate Updated Successfully',
                                 timer: 1500
                             })
+                            $('#AwardModal').modal('hide')
                             this.award_push_array = {
                                 name: '',
                                 date: '',
@@ -2684,9 +2646,16 @@
                             name: this.award_push_array.name,
                             date: this.award_push_array.date,
                         })
-                        this.award_push_array = {
-                            name: '',
-                            date: '',
+                        if(this.profile.candidate_awards.length == 3){
+                            Swal.fire({
+                                icon: 'info',
+                                title: 'You can only add 3 awards',
+                            })    
+                        }else{
+                            this.award_push_array = {
+                                name: '',
+                                date: '',
+                            }
                         }
                     } else {
                         Swal.fire({
@@ -2758,6 +2727,7 @@
                                 text: 'Candidate Updated Successfully',
                                 timer: 1500
                             })
+                            $('#SkillsModal').modal('hide')
                             this.skill_push_array = {
                                 name: '',
                                 level: '',
@@ -2858,6 +2828,7 @@
                                 text: 'Candidate Updated Successfully',
                                 timer: 1500
                             })
+                            $('#CurrentJobModal').modal('hide')
                             this.skill_push_array = {
                                 name: '',
                                 level: '',
@@ -2917,7 +2888,9 @@
                                 icon: 'success',
                                 title: 'Updated',
                                 text: 'Experience Updated Successfully',
+                                timer: 1500
                             })
+                            $('#WorkExperienceModal').modal('hide')
                             this.work_experience_push_array = {
                                 company_name: '',
                                 designation: '',
@@ -3040,6 +3013,7 @@
                                 text: 'Candidate Updated Successfully',
                                 timer: 1500
                             })
+                            $('#ProjectsModal').modal('hide')
                             this.project_push_array = {
                                 name: '',
                                 link: '',
@@ -3055,7 +3029,7 @@
                     })
             },
             addToProjectRecord() {
-                if (this.project_push_array.name == '') {
+                if (this.project_push_array.name == '' && this.project_push_array.link == '') {
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
@@ -3207,6 +3181,30 @@
                             })
                         }
                     })
+            },
+            openBasicModal(){
+                $('#basicInfoModal').modal('show')
+            },
+            openEducationModal(){
+                $('#EducationModal').modal('show')
+            },
+            openLanguagesModal(){
+                $('#LanguagesModal').modal('show')
+            },
+            openAwardModal(){
+                $('#AwardModal').modal('show')
+            },
+            openCurrentJobModal(){
+                $('#CurrentJobModal').modal('show')
+            },
+            openWorkExperienceModal(){
+                $('#WorkExperienceModal').modal('show')
+            },
+            openSkillsModal(){
+                $('#SkillsModal').modal('show')
+            },
+            openProjectModals(){
+                $('#ProjectsModal').modal('show')
             },
             // updateDesireJob() {
             //     axios.post('/update/desire-job', {

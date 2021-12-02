@@ -93,7 +93,8 @@
                             <h1 class="company-detail-title">Company Detail</h1>
                             <p>{{data.company.description}}</p>
                         </div>
-                        <a class="more-detail-anker" href="">More Details</a>
+                        <router-link class="more-detail-anker" data-toggle="collapse" :to="{ name: 'CompanyDetail', params: { id: data.company.id } }">View</router-link>
+                        <!-- <a class="more-detail-anker" href="">More Details</a> -->
                     </div>
                 </div>
                 <div class="px-2">

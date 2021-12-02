@@ -141,12 +141,12 @@
                             Swal.close()
                             if (response.data.user.type == 'candidate') {
                                 this.$router.push({
-                                    name: 'CandidateProfile'
+                                    name: 'CandidateDashboard'
                                 })
                             }
                             if (response.data.user.type == 'company') {
                                 this.$router.push({
-                                    name: 'CompanyProfile'
+                                    name: 'CompanyDashboard'
                                 })
                             }
                         }

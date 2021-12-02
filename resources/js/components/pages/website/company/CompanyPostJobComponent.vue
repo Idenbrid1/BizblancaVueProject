@@ -341,8 +341,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade PostNewJobModal" id="PostNewJobModal" tabindex="-1" role="dialog"
-            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal fade PostNewJobModal" id="PostNewJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="formData">
                     <div class="modal-content p-0">

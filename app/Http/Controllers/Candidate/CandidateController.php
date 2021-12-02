@@ -57,7 +57,7 @@ class CandidateController extends Controller
             'address' => 'address',
             'date_of_birth' => 'date_of_birth',
             'city' => 'city',
-            'country' => 'country',
+            // 'country' => 'country',
             'cnic' => 'cnic',
             'bio' => 'bio',
             'zipcode' => 'zipcode',
@@ -69,7 +69,7 @@ class CandidateController extends Controller
             'address' => 'required',
             'date_of_birth' => 'required',
             'city' => 'required',
-            'country' => 'required',
+            // 'country' => 'required',
             'cnic' => 'required',
             'bio' => 'required',
             'zipcode' => 'required',
@@ -93,7 +93,7 @@ class CandidateController extends Controller
             $candidate->address = $request->address;
             $candidate->date_of_birth = $request->date_of_birth;
             $candidate->city = $request->city;
-            $candidate->country = $request->country;
+            // $candidate->country = $request->country;
             $candidate->cnic = $request->cnic;
             $candidate->phone = $request->phone_no;
             $candidate->bio = $request->bio;
@@ -124,7 +124,7 @@ class CandidateController extends Controller
         $candidateeducation = CandidateEducation::where('candidate_id', $candidate->id)->delete();
         foreach($request->all() as $education ) {
             $candidateEducation = new CandidateEducation;
-            $candidateEducation->school_type = $education['school_type'];
+            // $candidateEducation->school_type = $education['school_type'];
             $candidateEducation->start_date = $education['start_date'];
             $candidateEducation->end_date = $education['end_date'];
             $candidateEducation->school_name = $education['school_name'];
@@ -255,7 +255,7 @@ class CandidateController extends Controller
     {
         $data = array();
         $validator = Validator::make($request->all(), [
-           'resume' => 'required|mimes:pdf|max:2048'
+           'resume' => 'required|mimes:pdf,docx,doc|max:2048'
         ]);
 
         if ($validator->fails()) {
@@ -290,7 +290,7 @@ class CandidateController extends Controller
     {
         $data = array();
         $validator = Validator::make($request->all(), [
-           'uploadcnicfrontback' => 'required|mimes:pdf|max:2048'
+           'uploadcnicfrontback' => 'required|mimes:pdf,docx,doc|max:2048'
         ]);
 
         if ($validator->fails()) {
@@ -324,7 +324,7 @@ class CandidateController extends Controller
     {
         $data = array();
         $validator = Validator::make($request->all(), [
-           'uploadexperienceletter' => 'required|mimes:pdf|max:2048'
+           'uploadexperienceletter' => 'required|mimes:pdf,docx,doc|max:2048'
         ]);
 
         if ($validator->fails()) {

@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <CompanyNavbar />
+        <!-- <CompanyNavbar /> -->
         <div class="candidate-profile-container container">
             <div class="row no-gutters">
                 <div class="col-5 col-md-3">
@@ -117,7 +117,7 @@
                     <li class="col-12 col-md-3 candidate-detail-label">PROJECTS:</li>
                     <li class="col-12 col-md-9 candidate-detail-info">
                         <ul class="candidate-info">
-                            <li><a href="" target="_blank">https://github.com/abdulla20963</a></li>
+                            <li v-for="(project, index) in data.candidate_projects" :key="index"><a :href="project.link" target="_blank">{{project.name}},</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -128,7 +128,7 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
-    import CompanyNavbar from '../partials/CompanyNavbar.vue';
+    // import CompanyNavbar from '../partials/CompanyNavbar.vue';
     export default {
         data() {
             return {
@@ -141,7 +141,7 @@
         },
         components: {
             WebsiteNavbar,
-            CompanyNavbar,
+            // CompanyNavbar,
         },
         methods: {
             getSingleCandidateDetail() {  
