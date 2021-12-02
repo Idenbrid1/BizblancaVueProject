@@ -18,14 +18,14 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-12 right-login">
-                                    <div class="loginText">
+                                    <div class="login-text">
                                         <h1>Login Account</h1>
                                         <p>
                                             If you are already a member, please login using the form
                                             below
                                         </p>
                                     </div>
-                                    <div class="loginFeilds">
+                                    <div class="login-feilds">
                                         <div class="form-group">
                                             <input type="email" placeholder="Enter Username" required name="email"
                                                 id="email" v-model="record.email" />
@@ -46,7 +46,7 @@
                                             </small>
                                         </div>
                                     </div>
-                                    <div class="rememberforgot">
+                                    <div class="remember-forgot">
                                         <div>
                                             <input type="checkbox" class="" name="" v-model="record.remember_me"
                                                 id="RememberPassword" />
@@ -55,13 +55,13 @@
                                         <router-link :to="{name: 'CandidateResetPassword'}">Forgot Password?
                                         </router-link>
                                     </div>
-                                    <div class="loginButton">
+                                    <div class="login-button">
                                         <button>Login</button>
                                         <router-link data-toggle="collapse" :to="{ name: 'Signin' }">or<br />
                                             Sign in with</router-link>
                                     </div>
-                                    <div class="directLogin">
-                                        <ul class="directLoginIcons">
+                                    <div class="direct-login">
+                                        <ul class="direct-login-icons">
                                             <li>
                                                 <a href="#"><img src="/website/assets/images/search.svg"
                                                         alt="google" /></a>

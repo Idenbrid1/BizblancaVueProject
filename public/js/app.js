@@ -2361,6 +2361,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2424,6 +2428,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
 //
 //
 //
@@ -4408,9 +4414,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -4420,7 +4423,7 @@ __webpack_require__.r(__webpack_exports__);
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   mounted: function mounted() {
-    var swiper = new Swiper(".successStoriesSwiper", {
+    var swiper = new Swiper(".success-stories-swiper", {
       slidesPerView: 1,
       spaceBetween: 30,
       loop: true,
@@ -4786,30 +4789,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -4819,7 +4798,7 @@ __webpack_require__.r(__webpack_exports__);
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   mounted: function mounted() {
-    var swiper = new Swiper(".helpslider", {
+    var swiper = new Swiper(".help-slider", {
       slidesPerView: 3,
       spaceBetween: 1,
       loop: true,
@@ -5438,7 +5417,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   mounted: function mounted() {
     var _this = this;
 
-    var swiper = new Swiper(".BlogsSwiper", _defineProperty({
+    var swiper = new Swiper(".blogs-swiper", _defineProperty({
       slidesPerView: 1,
       spaceBetween: 1,
       centeredSlides: true,
@@ -10127,10 +10106,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     //         })
     // },
     openProfileTab: function openProfileTab() {
-      document.getElementById("ProfileTabMobileNav").style.left = "0%";
+      document.getElementById("Profile-tab-mobile-nav").style.left = "0%";
     },
     closeProfileTab: function closeProfileTab() {
-      document.getElementById("ProfileTabMobileNav").style.left = "-100%";
+      document.getElementById("Profile-tab-mobile-nav").style.left = "-100%";
     }
   }
 });
@@ -14504,6 +14483,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -14606,10 +14620,10 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {});
     },
     openProfileTab: function openProfileTab() {
-      document.getElementById("ProfileTabMobileNav").style.left = "0%";
+      document.getElementById("Profile-tab-mobile-nav").style.left = "0%";
     },
     closeProfileTab: function closeProfileTab() {
-      document.getElementById("ProfileTabMobileNav").style.left = "-100%";
+      document.getElementById("Profile-tab-mobile-nav").style.left = "-100%";
     }
   }
 });
@@ -16053,7 +16067,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n@media (min-width: 1200px) {\n.container {\n        max-width: 1100px !important;\n}\n.profileLabel,\n    .profileInfoList>li {\n        height: 54px;\n}\n.profileLabel {\n        width: 140px;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n@media (min-width: 1200px) {\n.container {\n        max-width: 1100px !important;\n}\n.profileLabel,\n    .profile-info-list>li {\n        height: 54px;\n}\n.profile-label {\n        width: 140px;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16077,7 +16091,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n@media (min-width: 1200px) {\n.container {\n        max-width: 1100px !important;\n}\n.profileLabel,\n    .profileInfoList>li {\n        height: 54px;\n}\n.profileLabel {\n        width: 140px;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n@media (min-width: 1200px) {\n.container {\n        max-width: 1100px !important;\n}\n.profileLabel,\n    .profile-info-list>li {\n        height: 54px;\n}\n.profile-label {\n        width: 140px;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -26697,7 +26711,7 @@ var render = function () {
                 _c("div", { staticClass: "col-md-8 col-12 right-login" }, [
                   _vm._m(1),
                   _vm._v(" "),
-                  _c("div", { staticClass: "loginFeilds" }, [
+                  _c("div", { staticClass: "login-feilds" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("input", {
                         directives: [
@@ -26805,7 +26819,7 @@ var render = function () {
                     _c("br"),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "loginButton" }, [
+                  _c("div", { staticClass: "login-button" }, [
                     _c(
                       "button",
                       {
@@ -26856,7 +26870,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "loginText" }, [
+    return _c("div", { staticClass: "login-text" }, [
       _c("h1", [_vm._v("Forget Password")]),
     ])
   },
@@ -26909,7 +26923,7 @@ var render = function () {
                   _c("div", { staticClass: "col-md-8 col-12 right-login" }, [
                     _vm._m(1),
                     _vm._v(" "),
-                    _c("div", { staticClass: "loginFeilds" }, [
+                    _c("div", { staticClass: "login-feilds" }, [
                       _c("div", { staticClass: "form-group" }, [
                         _c("input", {
                           directives: [
@@ -26982,7 +26996,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "loginText" }, [
+    return _c("div", { staticClass: "login-text" }, [
       _c("h1", [_vm._v("Forget Password")]),
     ])
   },
@@ -26990,7 +27004,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "loginButton" }, [
+    return _c("div", { staticClass: "login-button" }, [
       _c("button", { staticClass: "w-auto", attrs: { type: "submit" } }, [
         _vm._v(
           "\n                                    Send Password Reset Link\n                                "
@@ -27048,7 +27062,7 @@ var render = function () {
                     _c("div", { staticClass: "col-md-8 col-12 right-login" }, [
                       _vm._m(1),
                       _vm._v(" "),
-                      _c("div", { staticClass: "loginFeilds" }, [
+                      _c("div", { staticClass: "login-feilds" }, [
                         _c("div", { staticClass: "form-group" }, [
                           _c("input", {
                             directives: [
@@ -27152,7 +27166,7 @@ var render = function () {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "rememberforgot" },
+                        { staticClass: "remember-forgot" },
                         [
                           _c("div", [
                             _c("input", {
@@ -27230,7 +27244,7 @@ var render = function () {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "loginButton" },
+                        { staticClass: "login-button" },
                         [
                           _c("button", [_vm._v("Login")]),
                           _vm._v(" "),
@@ -27254,7 +27268,7 @@ var render = function () {
                         1
                       ),
                       _vm._v(" "),
-                      _c("div", { staticClass: "directLogin" }, [
+                      _c("div", { staticClass: "direct-login" }, [
                         _vm._m(2),
                         _vm._v(" "),
                         _c(
@@ -27321,7 +27335,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "loginText" }, [
+    return _c("div", { staticClass: "login-text" }, [
       _c("h1", [_vm._v("Login Account")]),
       _vm._v(" "),
       _c("p", [
@@ -27335,7 +27349,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "directLoginIcons" }, [
+    return _c("ul", { staticClass: "direct-login-icons" }, [
       _c("li", [
         _c("a", { attrs: { href: "#" } }, [
           _c("img", {
@@ -27437,325 +27451,337 @@ var render = function () {
                         _c("div", { staticClass: "row m-0" }, [
                           _c("div", { staticClass: "col-12 p-0" }, [
                             _c("section", { staticClass: "row m-0" }, [
-                              _c("div", { staticClass: "col-12 registerTab" }, [
-                                _c("div", { staticClass: "loginFeilds" }, [
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                              _c(
+                                "div",
+                                { staticClass: "col-12 register-tab" },
+                                [
+                                  _c("div", { staticClass: "login-feilds" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.candidate_record.name,
+                                            expression: "candidate_record.name",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "text",
+                                          placeholder: "Your Name",
+                                          name: "name",
+                                          id: "name-input",
+                                        },
+                                        domProps: {
                                           value: _vm.candidate_record.name,
-                                          expression: "candidate_record.name",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "text",
-                                        placeholder: "Your Name",
-                                        name: "name",
-                                        id: "name-input",
-                                      },
-                                      domProps: {
-                                        value: _vm.candidate_record.name,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.candidate_record,
-                                            "name",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.candidate_record,
+                                              "name",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors.name != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(_vm.errors.name[0]) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors.name != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(_vm.errors.name[0]) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.candidate_record.email,
+                                            expression:
+                                              "candidate_record.email",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "email",
+                                          placeholder: "Email",
+                                          name: "email",
+                                          id: "email-input",
+                                        },
+                                        domProps: {
                                           value: _vm.candidate_record.email,
-                                          expression: "candidate_record.email",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "email",
-                                        placeholder: "Email",
-                                        name: "email",
-                                        id: "email-input",
-                                      },
-                                      domProps: {
-                                        value: _vm.candidate_record.email,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.candidate_record,
-                                            "email",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.candidate_record,
+                                              "email",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors.email != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(_vm.errors.email[0]) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors.email != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors.email[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.candidate_record.phone,
+                                            expression:
+                                              "candidate_record.phone",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "number",
+                                          placeholder: "Phone Number",
+                                          name: "phone",
+                                          id: "phone-no-input",
+                                        },
+                                        domProps: {
                                           value: _vm.candidate_record.phone,
-                                          expression: "candidate_record.phone",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "number",
-                                        placeholder: "Phone Number",
-                                        name: "phone",
-                                        id: "phone-no-input",
-                                      },
-                                      domProps: {
-                                        value: _vm.candidate_record.phone,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.candidate_record,
-                                            "phone",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.candidate_record,
+                                              "phone",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors.phone != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(_vm.errors.phone[0]) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors.phone != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors.phone[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.candidate_record.password,
+                                            expression:
+                                              "candidate_record.password",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "password",
+                                          placeholder: "Password",
+                                          name: "password",
+                                          id: "password-input",
+                                        },
+                                        domProps: {
                                           value: _vm.candidate_record.password,
-                                          expression:
-                                            "candidate_record.password",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "password",
-                                        placeholder: "Password",
-                                        name: "password",
-                                        id: "password-input",
-                                      },
-                                      domProps: {
-                                        value: _vm.candidate_record.password,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.candidate_record,
-                                            "password",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.candidate_record,
+                                              "password",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors.password != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(
-                                                    _vm.errors.password[0]
-                                                  ) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors.password != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors.password[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.candidate_record
+                                                .confirm_password,
+                                            expression:
+                                              "candidate_record.confirm_password",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "password",
+                                          placeholder: "Confirm Password",
+                                          name: "password_confirmation",
+                                          id: "confirm-password-input",
+                                        },
+                                        domProps: {
                                           value:
                                             _vm.candidate_record
                                               .confirm_password,
-                                          expression:
-                                            "candidate_record.confirm_password",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "password",
-                                        placeholder: "Confirm Password",
-                                        name: "password_confirmation",
-                                        id: "confirm-password-input",
-                                      },
-                                      domProps: {
-                                        value:
-                                          _vm.candidate_record.confirm_password,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.candidate_record,
-                                            "confirm_password",
-                                            $event.target.value
-                                          )
-                                        },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors.confirm_password != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(
-                                                    _vm.errors
-                                                      .confirm_password[0]
-                                                  ) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                ]),
-                                _vm._v(" "),
-                                _vm._m(2),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "directLogin" }, [
-                                  _vm._m(3),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    [
-                                      _vm._v(
-                                        "Already have an account?\n                                                        "
-                                      ),
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            "data-toggle": "collapse",
-                                            to: { name: "Signin" },
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.candidate_record,
+                                              "confirm_password",
+                                              $event.target.value
+                                            )
                                           },
                                         },
-                                        [_vm._v("Login")]
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                ]),
-                              ]),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors.confirm_password != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors
+                                                        .confirm_password[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("br"),
+                                  ]),
+                                  _vm._v(" "),
+                                  _vm._m(2),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "direct-login" }, [
+                                    _vm._m(3),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      [
+                                        _vm._v(
+                                          "Already have an account?\n                                                        "
+                                        ),
+                                        _c(
+                                          "router-link",
+                                          {
+                                            attrs: {
+                                              "data-toggle": "collapse",
+                                              to: { name: "Signin" },
+                                            },
+                                          },
+                                          [_vm._v("Login")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                  ]),
+                                ]
+                              ),
                             ]),
                           ]),
                         ]),
@@ -27785,418 +27811,427 @@ var render = function () {
                         _c("div", { staticClass: "row m-0" }, [
                           _c("div", { staticClass: "col-12 p-0" }, [
                             _c("section", { staticClass: "row m-0" }, [
-                              _c("div", { staticClass: "col-12 registerTab" }, [
-                                _c("div", { staticClass: "loginFeilds" }, [
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                              _c(
+                                "div",
+                                { staticClass: "col-12 register-tab" },
+                                [
+                                  _c("div", { staticClass: "login-feilds" }, [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.company_record.name,
+                                            expression: "company_record.name",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "text",
+                                          placeholder: "Your Name",
+                                          name: "name",
+                                          id: "name-input",
+                                        },
+                                        domProps: {
                                           value: _vm.company_record.name,
-                                          expression: "company_record.name",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "text",
-                                        placeholder: "Your Name",
-                                        name: "name",
-                                        id: "name-input",
-                                      },
-                                      domProps: {
-                                        value: _vm.company_record.name,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.company_record,
-                                            "name",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.company_record,
+                                              "name",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors_company.name != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(
-                                                    _vm.errors_company.name[0]
-                                                  ) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors_company.name != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors_company.name[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.company_record.company_name,
+                                            expression:
+                                              "company_record.company_name",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "text",
+                                          placeholder: "Company Name",
+                                          name: "company_name",
+                                          id: "company-name-input",
+                                        },
+                                        domProps: {
                                           value:
                                             _vm.company_record.company_name,
-                                          expression:
-                                            "company_record.company_name",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "text",
-                                        placeholder: "Company Name",
-                                        name: "company_name",
-                                        id: "company-name-input",
-                                      },
-                                      domProps: {
-                                        value: _vm.company_record.company_name,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.company_record,
-                                            "company_name",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.company_record,
+                                              "company_name",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors_company.company_name != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(
-                                                    _vm.errors_company
-                                                      .company_name[0]
-                                                  ) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors_company.company_name != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors_company
+                                                        .company_name[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.company_record.email,
+                                            expression: "company_record.email",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "email",
+                                          placeholder: "Email",
+                                          name: "email",
+                                          id: "email-input",
+                                        },
+                                        domProps: {
                                           value: _vm.company_record.email,
-                                          expression: "company_record.email",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "email",
-                                        placeholder: "Email",
-                                        name: "email",
-                                        id: "email-input",
-                                      },
-                                      domProps: {
-                                        value: _vm.company_record.email,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.company_record,
-                                            "email",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.company_record,
+                                              "email",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors_company.email != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(
-                                                    _vm.errors_company.email[0]
-                                                  ) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors_company.email != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors_company
+                                                        .email[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.company_record.phone,
+                                            expression: "company_record.phone",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "number",
+                                          name: "phone",
+                                          placeholder: "Phone Number",
+                                          id: "phone-no-input",
+                                        },
+                                        domProps: {
                                           value: _vm.company_record.phone,
-                                          expression: "company_record.phone",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "number",
-                                        name: "phone",
-                                        placeholder: "Phone Number",
-                                        id: "phone-no-input",
-                                      },
-                                      domProps: {
-                                        value: _vm.company_record.phone,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.company_record,
-                                            "phone",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.company_record,
+                                              "phone",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors_company.phone != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(
-                                                    _vm.errors_company.phone[0]
-                                                  ) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors_company.phone != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors_company
+                                                        .phone[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.company_record.password,
+                                            expression:
+                                              "company_record.password",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "password",
+                                          name: "password",
+                                          placeholder: "Password",
+                                          id: "password-input",
+                                        },
+                                        domProps: {
                                           value: _vm.company_record.password,
-                                          expression: "company_record.password",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "password",
-                                        name: "password",
-                                        placeholder: "Password",
-                                        id: "password-input",
-                                      },
-                                      domProps: {
-                                        value: _vm.company_record.password,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.company_record,
-                                            "password",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.company_record,
+                                              "password",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors_company.password != null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(
-                                                    _vm.errors_company
-                                                      .password[0]
-                                                  ) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors_company.password != null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors_company
+                                                        .password[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "form-group" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.company_record
+                                                .confirm_password,
+                                            expression:
+                                              "company_record.confirm_password",
+                                          },
+                                        ],
+                                        staticClass: "is-invali",
+                                        attrs: {
+                                          type: "password",
+                                          placeholder: "Confirm Password",
+                                          name: "password_confirmation",
+                                          id: "confirm-password-input",
+                                        },
+                                        domProps: {
                                           value:
                                             _vm.company_record.confirm_password,
-                                          expression:
-                                            "company_record.confirm_password",
                                         },
-                                      ],
-                                      staticClass: "is-invali",
-                                      attrs: {
-                                        type: "password",
-                                        placeholder: "Confirm Password",
-                                        name: "password_confirmation",
-                                        id: "confirm-password-input",
-                                      },
-                                      domProps: {
-                                        value:
-                                          _vm.company_record.confirm_password,
-                                      },
-                                      on: {
-                                        input: function ($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.company_record,
-                                            "confirm_password",
-                                            $event.target.value
-                                          )
+                                        on: {
+                                          input: function ($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.company_record,
+                                              "confirm_password",
+                                              $event.target.value
+                                            )
+                                          },
                                         },
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("small", [
-                                      _vm.errors_company.confirm_password !=
-                                      null
-                                        ? _c(
-                                            "span",
-                                            {
-                                              staticClass:
-                                                "text-danger float-left",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                                " +
-                                                  _vm._s(
-                                                    _vm.errors_company
-                                                      .confirm_password[0]
-                                                  ) +
-                                                  "\n                                                            "
-                                              ),
-                                            ]
-                                          )
-                                        : _vm._e(),
+                                      }),
+                                      _vm._v(" "),
+                                      _c("small", [
+                                        _vm.errors_company.confirm_password !=
+                                        null
+                                          ? _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "text-danger float-left",
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                                " +
+                                                    _vm._s(
+                                                      _vm.errors_company
+                                                        .confirm_password[0]
+                                                    ) +
+                                                    "\n                                                            "
+                                                ),
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                      ]),
                                     ]),
+                                    _vm._v(" "),
+                                    _c("br"),
                                   ]),
                                   _vm._v(" "),
-                                  _c("br"),
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "loginButton" },
-                                  [
-                                    _c("button", [_vm._v("Sign Up")]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "router-link",
-                                      {
-                                        attrs: {
-                                          "data-toggle": "collapse",
-                                          to: { name: "Signup" },
-                                        },
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                                                        or"
-                                        ),
-                                        _c("br"),
-                                        _vm._v(
-                                          "\n                                                        Sign up with"
-                                        ),
-                                      ]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "directLogin" }, [
-                                  _vm._m(4),
-                                  _vm._v(" "),
                                   _c(
-                                    "span",
+                                    "div",
+                                    { staticClass: "login-button" },
                                     [
-                                      _vm._v(
-                                        "Already have an account?\n                                                        "
-                                      ),
+                                      _c("button", [_vm._v("Sign Up")]),
+                                      _vm._v(" "),
                                       _c(
                                         "router-link",
                                         {
                                           attrs: {
                                             "data-toggle": "collapse",
-                                            to: { name: "Signin" },
+                                            to: { name: "Signup" },
                                           },
                                         },
-                                        [_vm._v("Login")]
+                                        [
+                                          _vm._v(
+                                            "\n                                                        or"
+                                          ),
+                                          _c("br"),
+                                          _vm._v(
+                                            "\n                                                        Sign up with"
+                                          ),
+                                        ]
                                       ),
                                     ],
                                     1
                                   ),
-                                ]),
-                              ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "direct-login" }, [
+                                    _vm._m(4),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      [
+                                        _vm._v(
+                                          "Already have an account?\n                                                        "
+                                        ),
+                                        _c(
+                                          "router-link",
+                                          {
+                                            attrs: {
+                                              "data-toggle": "collapse",
+                                              to: { name: "Signin" },
+                                            },
+                                          },
+                                          [_vm._v("Login")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                  ]),
+                                ]
+                              ),
                             ]),
                           ]),
                         ]),
@@ -28241,7 +28276,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "loginText" }, [
+    return _c("div", { staticClass: "login-text" }, [
       _c("h1", [_vm._v("Create Account")]),
       _vm._v(" "),
       _c(
@@ -28277,7 +28312,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "loginButton" }, [
+    return _c("div", { staticClass: "login-button" }, [
       _c("button", [_vm._v("Sign Up")]),
       _vm._v(" "),
       _c("a", { attrs: { href: "#" } }, [
@@ -28293,7 +28328,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "directLoginIcons" }, [
+    return _c("ul", { staticClass: "direct-login-icons" }, [
       _c("li", [
         _c("a", { attrs: { href: "#" } }, [
           _c("img", {
@@ -28340,7 +28375,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "directLoginIcons" }, [
+    return _c("ul", { staticClass: "direct-login-icons" }, [
       _c("li", [
         _c("a", { attrs: { href: "#" } }, [
           _c("img", {
@@ -28636,8 +28671,7 @@ var render = function () {
                       _c(
                         "a",
                         {
-                          staticClass:
-                            "contact-submit-anker w-100 d-block text-center",
+                          staticClass: "contact-submit-anker",
                           on: {
                             click: function ($event) {
                               $event.preventDefault()
@@ -29894,11 +29928,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "candidateSection" }, [
+    return _c("section", { staticClass: "candidate-section pt-5 p-md-0" }, [
       _c("div", { staticClass: "row no-gutters" }, [
-        _c("section", { staticClass: "col-12 CandidateLandingSection" }, [
-          _c("div", { staticClass: "row m-0 BannerCandidate" }, [
-            _c("div", { staticClass: "col-12 col-md-6 leftContent" }, [
+        _c("section", { staticClass: "col-12 candidate-landing-section" }, [
+          _c("div", { staticClass: "row m-0 banner-candidate" }, [
+            _c("div", { staticClass: "col-12 col-md-6 left-content" }, [
               _c("div", [
                 _c("h1", [
                   _vm._v(
@@ -29914,15 +29948,15 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c(
                   "a",
-                  { staticClass: "align-self-start", attrs: { href: "" } },
+                  { staticClass: "align-self-start", attrs: { href: "#" } },
                   [_vm._v("Signup Now")]
                 ),
               ]),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-md-6 p-0 RightImage" }, [
+            _c("div", { staticClass: "col-12 col-md-6 p-0 right-image" }, [
               _c("img", {
-                staticClass: "candiateBannerD",
+                staticClass: "candiate-banner-d",
                 attrs: {
                   src: "/website/assets/images/candidate-banner-m.png",
                   alt: "img",
@@ -29932,7 +29966,7 @@ var staticRenderFns = [
           ]),
         ]),
         _vm._v(" "),
-        _c("h1", { staticClass: "MsgHeading" }, [
+        _c("h1", { staticClass: "msg-heading" }, [
           _vm._v(
             "\n        Be scouted and headhunted by the top IT companies of Pakistan\n      "
           ),
@@ -29940,11 +29974,11 @@ var staticRenderFns = [
         _vm._v(" "),
         _c(
           "section",
-          { staticClass: "col-12 cardsInfoContainer p-md-0 px-1" },
+          { staticClass: "col-12 cards-info-container p-md-0 px-1" },
           [
             _c(
               "div",
-              { staticClass: "row no-gutters cardsInfoWrap container" },
+              { staticClass: "row no-gutters cards-info-wrap container" },
               [
                 _c("span", [
                   _vm._v(
@@ -29952,16 +29986,19 @@ var staticRenderFns = [
                   ),
                 ]),
                 _vm._v(" "),
-                _c("p", { staticClass: "offersJobPara" }, [
+                _c("p", { staticClass: "offers-job-para" }, [
                   _vm._v(
                     "\n            In the coming era, it is important to know your own market value.\n            Recieve job and offers and uncover your potential, your value in\n            the industry. Widen your career options and take a look at which\n            top companies want to hire you.\n          "
                   ),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "cardsInfo col-12 col-md-4" }, [
+                _c("div", { staticClass: "cards-info col-12 col-md-4" }, [
                   _c("img", {
-                    staticClass: "CardHappyImg",
-                    attrs: { src: "/website/assets/images/happy.svg", alt: "" },
+                    staticClass: "card-happy-img",
+                    attrs: {
+                      src: "/website/assets/images/happy.svg",
+                      alt: "img",
+                    },
                   }),
                   _vm._v(" "),
                   _c("h3", [
@@ -29977,12 +30014,12 @@ var staticRenderFns = [
                   ]),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "cardsInfo col-12 col-md-4" }, [
+                _c("div", { staticClass: "cards-info col-12 col-md-4" }, [
                   _c("img", {
-                    staticClass: "CardChooseBestImg",
+                    staticClass: "card-choose-best-img",
                     attrs: {
                       src: "/website/assets/images/choose-best.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -29999,12 +30036,12 @@ var staticRenderFns = [
                   ]),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "cardsInfo col-12 col-md-4" }, [
+                _c("div", { staticClass: "cards-info col-12 col-md-4" }, [
                   _c("img", {
-                    staticClass: "CardHelpYou",
+                    staticClass: "card-help-you",
                     attrs: {
                       src: "/website/assets/images/help-you.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30036,26 +30073,26 @@ var staticRenderFns = [
     return _c(
       "section",
       {
-        staticClass: "careerUpgradeProcess container",
+        staticClass: "career-upgrade-process container",
         attrs: { id: "process" },
       },
       [
-        _c("div", { staticClass: "contentCareerSteps" }, [
+        _c("div", { staticClass: "content-career-steps" }, [
           _c("h2", { staticClass: "heading-div" }, [
-            _c("div", { staticClass: "mr-2 titleEffect" }),
+            _c("div", { staticClass: "mr-2 title-effect" }),
             _vm._v("\n        The career upgrade process\n      "),
           ]),
           _vm._v(" "),
           _c("p", [_vm._v("Follow these steps for career success")]),
           _vm._v(" "),
-          _c("div", { staticClass: "row no-gutters UpgradeProcessSteps" }, [
-            _c("div", { staticClass: "col-6 col-md-3 UpgradeProcessStep" }, [
+          _c("div", { staticClass: "row no-gutters upgrade-process-steps" }, [
+            _c("div", { staticClass: "col-6 col-md-3 upgrade-process-step" }, [
               _c("div", [
                 _c("img", {
-                  staticClass: "stepsimg",
+                  staticClass: "steps-img",
                   attrs: {
                     src: "/website/assets/images/signup-bizblanca-cv-upgrade-process.svg",
-                    alt: "",
+                    alt: "img",
                   },
                 }),
                 _vm._v(" "),
@@ -30069,18 +30106,18 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("img", {
-                staticClass: "arrowImg",
-                attrs: { src: "/website/assets/images/arrow.svg", alt: "" },
+                staticClass: "arrow-img",
+                attrs: { src: "/website/assets/images/arrow.svg", alt: "img" },
               }),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-6 col-md-3 UpgradeProcessStep" }, [
+            _c("div", { staticClass: "col-6 col-md-3 upgrade-process-step" }, [
               _c("div", [
                 _c("img", {
-                  staticClass: "stepsimg",
+                  staticClass: "steps-img",
                   attrs: {
                     src: "/website/assets/images/top-rank-cand.svg",
-                    alt: "",
+                    alt: "img",
                   },
                 }),
                 _vm._v(" "),
@@ -30094,18 +30131,18 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("img", {
-                staticClass: "arrowImg v-on-d",
-                attrs: { src: "/website/assets/images/arrow.svg", alt: "" },
+                staticClass: "arrow-img v-on-d",
+                attrs: { src: "/website/assets/images/arrow.svg", alt: "img" },
               }),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-6 col-md-3 UpgradeProcessStep" }, [
+            _c("div", { staticClass: "col-6 col-md-3 upgrade-process-step" }, [
               _c("div", [
                 _c("img", {
-                  staticClass: "stepsimg",
+                  staticClass: "steps-img",
                   attrs: {
                     src: "/website/assets/images/job-interview.svg",
-                    alt: "",
+                    alt: "img",
                   },
                 }),
                 _vm._v(" "),
@@ -30119,18 +30156,18 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("img", {
-                staticClass: "arrowImg",
-                attrs: { src: "/website/assets/images/arrow.svg", alt: "" },
+                staticClass: "arrow-img",
+                attrs: { src: "/website/assets/images/arrow.svg", alt: "img" },
               }),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-6 col-md-3 UpgradeProcessStep" }, [
+            _c("div", { staticClass: "col-6 col-md-3 upgrade-process-step" }, [
               _c("div", { attrs: { id: "expertise" } }, [
                 _c("img", {
-                  staticClass: "stepsimg",
+                  staticClass: "steps-img",
                   attrs: {
                     src: "/website/assets/images/rec-offer-job.svg",
-                    alt: "",
+                    alt: "img",
                   },
                 }),
                 _vm._v(" "),
@@ -30159,12 +30196,12 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("div", { staticClass: "row no-gutters" }, [
             _c("div", { staticClass: "col-6 col-md-3" }, [
-              _c("ul", { staticClass: "ExpertiseProvide" }, [
+              _c("ul", { staticClass: "expertise-provide" }, [
                 _c("li", [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30175,7 +30212,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30186,7 +30223,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30197,7 +30234,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30208,7 +30245,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30218,12 +30255,12 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-6 col-md-3" }, [
-              _c("ul", { staticClass: "ExpertiseProvide" }, [
+              _c("ul", { staticClass: "expertise-provide" }, [
                 _c("li", [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30234,7 +30271,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30245,7 +30282,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30256,7 +30293,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30267,7 +30304,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30277,12 +30314,12 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-6 col-md-3" }, [
-              _c("ul", { staticClass: "ExpertiseProvide" }, [
+              _c("ul", { staticClass: "expertise-provide" }, [
                 _c("li", [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30293,7 +30330,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30304,7 +30341,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30315,7 +30352,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30326,7 +30363,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30336,12 +30373,12 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-6 col-md-3" }, [
-              _c("ul", { staticClass: "ExpertiseProvide" }, [
+              _c("ul", { staticClass: "expertise-provide" }, [
                 _c("li", [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30352,7 +30389,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30363,7 +30400,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30374,7 +30411,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30385,7 +30422,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/circle-arrow.svg",
-                      alt: "",
+                      alt: "img",
                     },
                   }),
                   _vm._v(" "),
@@ -30403,11 +30440,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "bg-Grey" }, [
-      _c("section", { staticClass: "uploadYourCv container" }, [
+      _c("section", { staticClass: "upload-your-cv container" }, [
         _c("div", { staticClass: "row no-gutters" }, [
-          _c("div", { staticClass: "col-12 col-md-6 cvUpload" }, [
+          _c("div", { staticClass: "col-12 col-md-6 cv-upload" }, [
             _c("h3", { staticClass: "heading-div" }, [
-              _c("div", { staticClass: "mr-2 titleEffect" }),
+              _c("div", { staticClass: "mr-2 title-effect" }),
               _vm._v("\n            What's Next...\n          "),
             ]),
             _vm._v(" "),
@@ -30417,9 +30454,9 @@ var staticRenderFns = [
               ),
             ]),
             _vm._v(" "),
-            _c("a", { attrs: { href: "" } }, [_vm._v("Upload your CV")]),
+            _c("a", { attrs: { href: "#" } }, [_vm._v("Upload your CV")]),
             _vm._v(" "),
-            _c("div", { staticClass: "replyImg" }, [
+            _c("div", { staticClass: "reply-img" }, [
               _c("img", {
                 attrs: {
                   src: "/website/assets/images/reply.svg",
@@ -30429,7 +30466,7 @@ var staticRenderFns = [
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-md-6 resumeUpload" }, [
+          _c("div", { staticClass: "col-12 col-md-6 resume-upload" }, [
             _c("div", { staticClass: "row no-gutters" }, [
               _c("div", { staticClass: "col-12 col-md-8" }, [
                 _c("img", {
@@ -30437,16 +30474,18 @@ var staticRenderFns = [
                     height: "250",
                     width: "235",
                     src: "/website/assets/images/resume.svg",
-                    alt: "",
+                    alt: "img",
                   },
                 }),
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "col-12 col-md-4" }, [
                 _c("div", [
-                  _c("span", { staticClass: "UploadText" }, [_vm._v("Upload")]),
+                  _c("span", { staticClass: "upload-text" }, [
+                    _vm._v("Upload"),
+                  ]),
                   _vm._v(" "),
-                  _c("h3", { staticClass: "yourCvOnlineText" }, [
+                  _c("h3", { staticClass: "your-cv-online-text" }, [
                     _vm._v("your cv online"),
                   ]),
                   _vm._v(" "),
@@ -30465,7 +30504,7 @@ var staticRenderFns = [
       _c(
         "section",
         {
-          staticClass: "CertificationsAndPayments container",
+          staticClass: "certifications-and-payments container",
           attrs: { id: "certificate" },
         },
         [
@@ -30474,7 +30513,7 @@ var staticRenderFns = [
               _c("img", {
                 attrs: {
                   src: "/website/assets/images/bizblancaBage.svg",
-                  alt: "",
+                  alt: "img",
                 },
               }),
             ]),
@@ -30490,7 +30529,7 @@ var staticRenderFns = [
                 ),
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "paymentDescrpD" }, [
+              _c("p", { staticClass: "payment-descrp-d" }, [
                 _vm._v(
                   "\n            At BizBlanca, we have a Payment Partnership with Bizers who have\n            BizBlanca Certification in order to eliminate the anxiety about\n            salary that many people have. This is a mechanism that allows you\n            to concentrate on your work stress-free by having our company\n            intervene and take over the work of receiving salary so that the\n            company you work for will pay your salary smoothly when you work\n            through BizBlanca.\n          "
                 ),
@@ -30498,7 +30537,7 @@ var staticRenderFns = [
             ]),
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "paymentDescrpM" }, [
+          _c("p", { staticClass: "payment-descrp-m" }, [
             _vm._v(
               "\n        At BizBlanca, we have a Payment Partnership with Bizers who have\n        BizBlanca Certification in order to eliminate the anxiety about salary\n        that many people have. This is a mechanism that allows you to\n        concentrate on your work stress-free by having our company intervene\n        and take over the work of receiving salary so that the company you\n        work for will pay your salary smoothly when you work through\n        BizBlanca.\n      "
             ),
@@ -30514,38 +30553,38 @@ var staticRenderFns = [
     return _c(
       "section",
       {
-        staticClass: "successStories container",
+        staticClass: "success-stories container",
         attrs: { id: "Testimonials" },
       },
       [
         _c("h3", { staticClass: "heading-div my-md-5" }, [
-          _c("div", { staticClass: "mr-2 titleEffect" }),
+          _c("div", { staticClass: "mr-2 title-effect" }),
           _vm._v("\n      BizBlanca's Success Stories\n    "),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "swiper successStoriesSwiper" }, [
+        _c("div", { staticClass: "swiper success-stories-swiper" }, [
           _c("div", { staticClass: "swiper-wrapper" }, [
             _c("div", { staticClass: "swiper-slide p-md-5" }, [
-              _c("div", { staticClass: "sliderContent" }, [
+              _c("div", { staticClass: "slider-content" }, [
                 _c("img", {
-                  staticClass: "candidateImg",
+                  staticClass: "candidate-img",
                   attrs: {
                     src: "/website/assets/images/avatart.jpeg",
-                    alt: "",
+                    alt: "img",
                   },
                 }),
                 _vm._v(" "),
-                _c("p", { staticClass: "CandidateDesignation" }, [
+                _c("p", { staticClass: "candidate-designation" }, [
                   _vm._v("Senior front end developer"),
                 ]),
                 _vm._v(" "),
-                _c("h4", { staticClass: "GenderAge" }, [_vm._v("Male's 20")]),
+                _c("h4", { staticClass: "gender-age" }, [_vm._v("Male's 20")]),
                 _vm._v(" "),
-                _c("h3", { staticClass: "Scoutbizblanca" }, [
+                _c("h3", { staticClass: "scout-bizblanca" }, [
                   _vm._v("Because of BizBlanca's scout..."),
                 ]),
                 _vm._v(" "),
-                _c("p", { staticClass: "candidateSucessDescrp" }, [
+                _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
                     "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
                   ),
@@ -30554,26 +30593,26 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "swiper-slide p-md-5" }, [
-              _c("div", { staticClass: "sliderContent" }, [
+              _c("div", { staticClass: "slider-content" }, [
                 _c("img", {
-                  staticClass: "candidateImg",
+                  staticClass: "candidate-img",
                   attrs: {
                     src: "/website/assets/images/avatart.jpeg",
-                    alt: "",
+                    alt: "img",
                   },
                 }),
                 _vm._v(" "),
-                _c("p", { staticClass: "CandidateDesignation" }, [
+                _c("p", { staticClass: "candidate-designation" }, [
                   _vm._v("Senior front end developer"),
                 ]),
                 _vm._v(" "),
-                _c("h4", { staticClass: "GenderAge" }, [_vm._v("Male's 20")]),
+                _c("h4", { staticClass: "gender-age" }, [_vm._v("Male's 20")]),
                 _vm._v(" "),
-                _c("h3", { staticClass: "Scoutbizblanca" }, [
+                _c("h3", { staticClass: "scout-bizblanca" }, [
                   _vm._v("Because of BizBlanca's scout..."),
                 ]),
                 _vm._v(" "),
-                _c("p", { staticClass: "candidateSucessDescrp" }, [
+                _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
                     "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
                   ),
@@ -30582,26 +30621,26 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "swiper-slide p-md-5" }, [
-              _c("div", { staticClass: "sliderContent" }, [
+              _c("div", { staticClass: "slider-content" }, [
                 _c("img", {
-                  staticClass: "candidateImg",
+                  staticClass: "candidate-img",
                   attrs: {
                     src: "/website/assets/images/avatart.jpeg",
-                    alt: "",
+                    alt: "img",
                   },
                 }),
                 _vm._v(" "),
-                _c("p", { staticClass: "CandidateDesignation" }, [
+                _c("p", { staticClass: "candidate-designation" }, [
                   _vm._v("Senior front end developer"),
                 ]),
                 _vm._v(" "),
-                _c("h4", { staticClass: "GenderAge" }, [_vm._v("Male's 20")]),
+                _c("h4", { staticClass: "gender-age" }, [_vm._v("Male's 20")]),
                 _vm._v(" "),
-                _c("h3", { staticClass: "Scoutbizblanca" }, [
+                _c("h3", { staticClass: "scout-bizblanca" }, [
                   _vm._v("Because of BizBlanca's scout..."),
                 ]),
                 _vm._v(" "),
-                _c("p", { staticClass: "candidateSucessDescrp" }, [
+                _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
                     "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
                   ),
@@ -30610,26 +30649,26 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "swiper-slide p-md-5" }, [
-              _c("div", { staticClass: "sliderContent" }, [
+              _c("div", { staticClass: "slider-content" }, [
                 _c("img", {
-                  staticClass: "candidateImg",
+                  staticClass: "candidate-img",
                   attrs: {
                     src: "/website/assets/images/avatart.jpeg",
-                    alt: "",
+                    alt: "img",
                   },
                 }),
                 _vm._v(" "),
-                _c("p", { staticClass: "CandidateDesignation" }, [
+                _c("p", { staticClass: "candidate-designation" }, [
                   _vm._v("Senior front end developer"),
                 ]),
                 _vm._v(" "),
-                _c("h4", { staticClass: "GenderAge" }, [_vm._v("Male's 20")]),
+                _c("h4", { staticClass: "gender-age" }, [_vm._v("Male's 20")]),
                 _vm._v(" "),
-                _c("h3", { staticClass: "Scoutbizblanca" }, [
+                _c("h3", { staticClass: "scout-bizblanca" }, [
                   _vm._v("Because of BizBlanca's scout..."),
                 ]),
                 _vm._v(" "),
-                _c("p", { staticClass: "candidateSucessDescrp" }, [
+                _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
                     "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
                   ),
@@ -30639,11 +30678,11 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", {
-            staticClass: "swiper-button-next successStoriesSliderArrow",
+            staticClass: "swiper-button-next success-stories-slider-arrow",
           }),
           _vm._v(" "),
           _c("div", {
-            staticClass: "swiper-button-prev successStoriesSliderArrow",
+            staticClass: "swiper-button-prev success-stories-slider-arrow",
           }),
           _vm._v(" "),
           _c("div", { staticClass: "swiper-pagination" }),
@@ -30676,7 +30715,7 @@ var staticRenderFns = [
                         },
                         [
                           _c("div", {
-                            staticClass: "mr-2 titleEffect",
+                            staticClass: "mr-2 title-effect",
                             staticStyle: { "background-color": "#fff" },
                           }),
                           _vm._v(
@@ -30770,7 +30809,7 @@ var staticRenderFns = [
               staticClass: "v-on-d",
               attrs: {
                 src: "/website/assets/images/resume-builder-banner.png",
-                alt: "",
+                alt: "img",
               },
             }),
             _vm._v(" "),
@@ -30778,7 +30817,7 @@ var staticRenderFns = [
               staticClass: "v-on-m w-100 p-2",
               attrs: {
                 src: "/website/assets/images/resume-builder-banner@2x.png",
-                alt: "",
+                alt: "img",
               },
             }),
           ]),
@@ -30790,7 +30829,7 @@ var staticRenderFns = [
               ),
             ]),
             _vm._v(" "),
-            _c("a", { attrs: { href: "" } }, [_vm._v("Signup Now")]),
+            _c("a", { attrs: { href: "#" } }, [_vm._v("Signup Now")]),
           ]),
         ]),
       ]
@@ -30833,23 +30872,23 @@ var staticRenderFns = [
     return _c(
       "div",
       {
-        staticClass: "companyBanner w-100 row no-gutters",
+        staticClass: "company-banner w-100 row no-gutters",
         attrs: { id: "why-bizblanca" },
       },
       [
-        _c("div", { staticClass: "bannerSec2 col-12 col-lg-6 px-2" }, [
-          _c("div", { staticClass: "leftboxbanner" }, [
+        _c("div", { staticClass: "banner-sec-2 col-12 col-lg-6 px-2" }, [
+          _c("div", { staticClass: "left-box-banner" }, [
             _c("h4", [_vm._v("WHY USE BIZBLANCA?")]),
             _vm._v(" "),
             _c("p", { staticClass: "pb-2" }, [
               _vm._v(
-                "\n          Find the perfect match from our extensive candidate database\n        "
+                "\n                    Find the perfect match from our extensive candidate database\n                "
               ),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex justify-content-center" }, [
               _c("img", {
-                staticClass: "bannerSec2Img",
+                staticClass: "banner-sec-2-img",
                 attrs: {
                   src: "/website/assets/images/pngwing.com (1)@2x.png",
                   alt: "",
@@ -30859,29 +30898,31 @@ var staticRenderFns = [
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "bannerSec1 col-md-12 col-lg-6" }, [
+        _c("div", { staticClass: "banner-sec-1 col-md-12 col-lg-6" }, [
           _c("div", { staticClass: "blue-inner-box" }, [
-            _c("div", { staticClass: "bannerSec1box1" }, [
-              _vm._v("\n          IT JOB KE LIYE "),
+            _c("div", { staticClass: "banner-sec1-box1" }, [
+              _vm._v("\n                    IT JOB KE LIYE "),
               _c("br"),
-              _vm._v("\n          BIZBANCA\n        "),
+              _vm._v("\n                    BIZBANCA\n                "),
             ]),
             _vm._v(" "),
-            _c("h4", { staticClass: "my-4" }, [
-              _vm._v("\n          Start a conversation"),
+            _c("h4", [
+              _vm._v("\n                    Start a conversation"),
               _c("br"),
-              _vm._v("\n          with one of our"),
+              _vm._v("\n                    with one of our"),
               _c("br"),
-              _vm._v("\n          specialist consultants\n        "),
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "mb-4" }, [
               _vm._v(
-                "\n          Send a brief overview of your requirements and we will contact you\n          to find out more about your needs.\n        "
+                "\n                    specialist consultants\n                "
               ),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "bannerSec1box2" }, [
+            _c("p", [
+              _vm._v(
+                "\n                    Send a brief overview of your requirements and we will contact you\n                    to find out more about your needs.\n                "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "banner-sec1-box2" }, [
               _c("a", { attrs: { href: "" } }, [_vm._v("Get in Touch")]),
             ]),
           ]),
@@ -30893,204 +30934,228 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "companyContainer w-100" }, [
+    return _c("div", { staticClass: "company-container w-100" }, [
       _c(
         "div",
-        { staticClass: "companyDescription container my-4 my-md-5 px-2" },
+        { staticClass: "company-description container my-4 my-md-5 px-2" },
         [
           _c("h4", { staticClass: "heading-div" }, [
-            _c("div", { staticClass: "mr-2 titleEffect" }),
-            _vm._v("\n        How BizBlanca can help you\n      "),
-          ]),
-          _vm._v(" "),
-          _c("p", [
+            _c("div", { staticClass: "mr-2 title-effect" }),
             _vm._v(
-              "\n        BizBlanca provides a tailored service to help you recruit your next\n        employee. So you can be confident you'll find an option to suit your\n        needs, every time.\n      "
+              "\n                How BizBlanca can help you\n            "
             ),
           ]),
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "\n        We go beyond simply finding you a new permanent employee on a one-off\n        basis, BizBlanca offers a level of service which allows us to build a\n        rapport with you and your organization. Even when we have found your\n        new hire, our experts continue to support you after your chosen\n        candidate has joined your organization.\n      "
+              "\n                BizBlanca provides a tailored service to help you recruit your next\n                employee. So you can be confident you'll find an option to suit your\n                needs, every time.\n            "
             ),
           ]),
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "\n        Whether you’re searching for a\n        scarce skillset, or are struggling with a high volume of applications,\n        we can find you the right professional for your role, saving you time\n        and money. When working with us to recruit permanently, you’ll receive\n        the following as standard:\n      "
+              "\n                We go beyond simply finding you a new permanent employee on a one-off\n                basis, BizBlanca offers a level of service which allows us to build a\n                rapport with you and your organization. Even when we have found your\n                new hire, our experts continue to support you after your chosen\n                candidate has joined your organization.\n            "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Whether you’re searching for a\n                scarce skillset, or are struggling with a high volume of applications,\n                we can find you the right professional for your role, saving you time\n                and money. When working with us to recruit permanently, you’ll receive\n                the following as standard:\n            "
             ),
           ]),
           _vm._v(" "),
           _c("ul", { staticClass: "p-0" }, [
             _c("li", { staticClass: "my-1" }, [
               _vm._v(
-                "\n          - Expert advice on your job description, the salary you should offer\n          and talent attraction strategy\n        "
+                "\n                    - Expert advice on your job description, the salary you should offer\n                    and talent attraction strategy\n                "
               ),
             ]),
             _vm._v(" "),
             _c("li", { staticClass: "my-1" }, [
               _vm._v(
-                "\n          - A vast range of compliance and screening checks\n        "
+                "\n                    - A vast range of compliance and screening checks\n                "
               ),
             ]),
             _vm._v(" "),
             _c("li", { staticClass: "my-1" }, [
               _vm._v(
-                "\n          - Support with arranging interviews and ensuring follow up\n        "
+                "\n                    - Support with arranging interviews and ensuring follow up\n                "
               ),
             ]),
             _vm._v(" "),
             _c("li", { staticClass: "my-1" }, [
               _vm._v(
-                "\n          - Guidance on offer negotiation and counteroffer scenarios\n        "
+                "\n                    - Guidance on offer negotiation and counteroffer scenarios\n                "
               ),
             ]),
           ]),
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "companyDifference container px-2" }, [
+      _c("div", { staticClass: "company-difference container px-2" }, [
         _c("h4", { staticClass: "heading-div" }, [
-          _c("div", { staticClass: "mr-2 titleEffect" }),
-          _vm._v("\n        The BizBlanca difference\n      "),
+          _c("div", { staticClass: "mr-2 title-effect" }),
+          _vm._v("\n                The BizBlanca difference\n            "),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+        _c("div", { staticClass: "company-difference-attribute my-1" }, [
           _vm._v(
-            "\n        Unlike other HR agents, BizBlanca focuses on creating an online\n        community\n        "
+            "\n                Unlike other HR agents, BizBlanca focuses on creating an online\n                community\n                "
           ),
           _c("i", { staticClass: "fas fa-chevron-down" }),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+        _c("div", { staticClass: "company-difference-attribute my-1" }, [
           _vm._v(
-            "\n        7 days from the start of service to hiring\n        "
+            "\n                7 days from the start of service to hiring\n                "
           ),
           _c("i", { staticClass: "fas fa-chevron-down" }),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+        _c("div", { staticClass: "company-difference-attribute my-1" }, [
           _vm._v(
-            "\n        50 to 70% cheaper than other companies in the same industry\n        "
+            "\n                50 to 70% cheaper than other companies in the same industry\n                "
           ),
           _c("i", { staticClass: "fas fa-chevron-down" }),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+        _c("div", { staticClass: "company-difference-attribute my-1" }, [
           _vm._v(
-            "\n        Our company holds information on more than 5,000+ job seekers as a DB\n        "
+            "\n                Our company holds information on more than 5,000+ job seekers as a DB\n                "
           ),
           _c("i", { staticClass: "fas fa-chevron-down" }),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "companyDifferenceAttribute my-1" }, [
+        _c("div", { staticClass: "company-difference-attribute my-1" }, [
           _vm._v(
-            "\n        No need to pay salaries directly to employees\n        "
+            "\n                No need to pay salaries directly to employees\n                "
           ),
           _c("i", { staticClass: "fas fa-chevron-down" }),
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "companyHelp container px-2" }, [
+      _c("div", { staticClass: "company-help container px-2" }, [
         _c("h4", { staticClass: "heading-div mb-2" }, [
-          _c("div", { staticClass: "mr-2 titleEffect" }),
+          _c("div", { staticClass: "mr-2 title-effect" }),
           _vm._v(
-            "\n        We can help you find the best IT employees...\n      "
+            "\n                We can help you find the best IT employees...\n            "
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "swiper helpslider" }, [
+        _c("div", { staticClass: "swiper help-slider" }, [
           _c("div", { staticClass: "swiper-wrapper py-4" }, [
             _c("div", { staticClass: "swiper-slide" }, [
-              _c("div", { staticClass: "companyHelpBox my-3" }, [
-                _c("div", { staticClass: "companyHelpBoxTop" }, [_vm._v("1")]),
+              _c("div", { staticClass: "company-help-box my-3" }, [
+                _c("div", { staticClass: "company-help-box-top" }, [
+                  _vm._v("1"),
+                ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "companyHelpBoxBottom" }, [
-                  _vm._v("\n                We Recruit across"),
-                  _c("span", { staticClass: "boxBottomSpan" }, [_vm._v("20")]),
+                _c("div", { staticClass: "company-help-box-bottom" }, [
+                  _vm._v("\n                                We Recruit across"),
+                  _c("span", { staticClass: "box-bottom-span" }, [
+                    _vm._v("20"),
+                  ]),
                   _vm._v(
-                    "\n                Specialist Sectors\n              "
+                    "\n                                Specialist Sectors\n                            "
                   ),
                 ]),
               ]),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "swiper-slide" }, [
-              _c("div", { staticClass: "companyHelpBox my-3" }, [
-                _c("div", { staticClass: "companyHelpBoxTop" }, [_vm._v("1")]),
+              _c("div", { staticClass: "company-help-box my-3" }, [
+                _c("div", { staticClass: "company-help-box-top" }, [
+                  _vm._v("1"),
+                ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "companyHelpBoxBottom" }, [
-                  _vm._v("\n                We have access to over"),
-                  _c("span", { staticClass: "boxBottomSpan" }, [
+                _c("div", { staticClass: "company-help-box-bottom" }, [
+                  _vm._v(
+                    "\n                                We have access to over"
+                  ),
+                  _c("span", { staticClass: "box-bottom-span" }, [
                     _vm._v("5,000"),
                   ]),
-                  _vm._v("\n                Candidates\n              "),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "swiper-slide" }, [
-              _c("div", { staticClass: "companyHelpBox my-3" }, [
-                _c("div", { staticClass: "companyHelpBoxTop" }, [_vm._v("1")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "companyHelpBoxBottom" }, [
-                  _vm._v("\n                Each month over"),
-                  _c("span", { staticClass: "boxBottomSpan" }, [_vm._v("50")]),
                   _vm._v(
-                    " business\n                trust us to recruit\n              "
+                    "\n                                Candidates\n                            "
                   ),
                 ]),
               ]),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "swiper-slide" }, [
-              _c("div", { staticClass: "companyHelpBox my-3" }, [
-                _c("div", { staticClass: "companyHelpBoxTop" }, [_vm._v("1")]),
+              _c("div", { staticClass: "company-help-box my-3" }, [
+                _c("div", { staticClass: "company-help-box-top" }, [
+                  _vm._v("1"),
+                ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "companyHelpBoxBottom" }, [
-                  _vm._v("\n                We Recruit across"),
-                  _c("span", { staticClass: "boxBottomSpan" }, [_vm._v("20")]),
+                _c("div", { staticClass: "company-help-box-bottom" }, [
+                  _vm._v("\n                                Each month over"),
+                  _c("span", { staticClass: "box-bottom-span" }, [
+                    _vm._v("50"),
+                  ]),
                   _vm._v(
-                    "\n                Specialist Sectors\n              "
+                    " business\n                                trust us to recruit\n                            "
                   ),
                 ]),
               ]),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "swiper-slide" }, [
-              _c("div", { staticClass: "companyHelpBox my-3" }, [
-                _c("div", { staticClass: "companyHelpBoxTop" }, [_vm._v("1")]),
+              _c("div", { staticClass: "company-help-box my-3" }, [
+                _c("div", { staticClass: "company-help-box-top" }, [
+                  _vm._v("1"),
+                ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "companyHelpBoxBottom" }, [
-                  _vm._v("\n                We Recruit across"),
-                  _c("span", { staticClass: "boxBottomSpan" }, [_vm._v("20")]),
+                _c("div", { staticClass: "company-help-box-bottom" }, [
+                  _vm._v("\n                                We Recruit across"),
+                  _c("span", { staticClass: "box-bottom-span" }, [
+                    _vm._v("20"),
+                  ]),
                   _vm._v(
-                    "\n                Specialist Sectors\n              "
+                    "\n                                Specialist Sectors\n                            "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "swiper-slide" }, [
+              _c("div", { staticClass: "company-help-box my-3" }, [
+                _c("div", { staticClass: "company-help-box-top" }, [
+                  _vm._v("1"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "company-help-box-bottom" }, [
+                  _vm._v("\n                                We Recruit across"),
+                  _c("span", { staticClass: "box-bottom-span" }, [
+                    _vm._v("20"),
+                  ]),
+                  _vm._v(
+                    "\n                                Specialist Sectors\n                            "
                   ),
                 ]),
               ]),
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "swiper-button-next helpSliderArrow" }),
+          _c("div", { staticClass: "swiper-button-next help-slider-arrow" }),
           _vm._v(" "),
-          _c("div", { staticClass: "swiper-button-prev helpSliderArrow" }),
+          _c("div", { staticClass: "swiper-button-prev help-slider-arrow" }),
           _vm._v(" "),
           _c("div", { staticClass: "swiper-pagination" }),
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "companyCapacity" }, [
+      _c("div", { staticClass: "company-capacity" }, [
         _c("h4", { staticClass: "mb-0" }, [
           _vm._v(
-            "\n        Over 2000 talented people on standby, ready to receive a scout from\n        your company\n      "
+            "\n                Over 2000 talented people on standby, ready to receive a scout from\n                your company\n            "
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "companyCapacityBody" }, [
+        _c("div", { staticClass: "company-capacity-body" }, [
           _c("h5", [
             _vm._v(
-              "\n          Join Pakistan's best startups and large companies using our platform\n        "
+              "\n                    Join Pakistan's best startups and large companies using our platform\n                "
             ),
           ]),
           _vm._v(" "),
@@ -31102,16 +31167,18 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("div", { staticClass: "row no-gutters container mx-auto p-0" }, [
             _c("div", { staticClass: "col-12 col-md-4" }, [
-              _c("div", { staticClass: "companyCapacityBottom" }, [
+              _c("div", { staticClass: "company-capacity-bottom" }, [
                 _c("img", {
                   attrs: { src: "/website/assets/images/small.png", alt: "" },
                 }),
                 _vm._v(" "),
                 _c("div", [
-                  _c("h1", { staticClass: "employeeCount" }, [
-                    _vm._v("\n                  10"),
+                  _c("h1", { staticClass: "employee-count" }, [
+                    _vm._v("\n                                    10"),
                     _c("br"),
-                    _vm._v("\n                  employees\n                "),
+                    _vm._v(
+                      "\n                                    employees\n                                "
+                    ),
                   ]),
                   _vm._v(" "),
                   _c("h2", [_vm._v("45%")]),
@@ -31120,16 +31187,18 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-12 col-md-4" }, [
-              _c("div", { staticClass: "companyCapacityBottom" }, [
+              _c("div", { staticClass: "company-capacity-bottom" }, [
                 _c("img", {
                   attrs: { src: "/website/assets/images/medium.png", alt: "" },
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "ml-2" }, [
-                  _c("h1", { staticClass: "employeeCount" }, [
-                    _vm._v("\n                  10 - 50"),
+                  _c("h1", { staticClass: "employee-count" }, [
+                    _vm._v("\n                                    10 - 50"),
                     _c("br"),
-                    _vm._v("\n                  employees\n                "),
+                    _vm._v(
+                      "\n                                    employees\n                                "
+                    ),
                   ]),
                   _vm._v(" "),
                   _c("h2", [_vm._v("32%")]),
@@ -31138,16 +31207,18 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-12 col-md-4" }, [
-              _c("div", { staticClass: "companyCapacityBottom" }, [
+              _c("div", { staticClass: "company-capacity-bottom" }, [
                 _c("img", {
                   attrs: { src: "/website/assets/images/large.png", alt: "" },
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "ml-2" }, [
-                  _c("h1", { staticClass: "employeeCount" }, [
-                    _vm._v("\n                  51"),
+                  _c("h1", { staticClass: "employee-count" }, [
+                    _vm._v("\n                                    51"),
                     _c("br"),
-                    _vm._v("\n                  employees\n                "),
+                    _vm._v(
+                      "\n                                    employees\n                                "
+                    ),
                   ]),
                   _vm._v(" "),
                   _c("h2", [_vm._v("23%")]),
@@ -31158,17 +31229,17 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "companyTestimonial container" }, [
-        _c("h4", { staticClass: "heading-div testimonialsText" }, [
-          _c("div", { staticClass: "mr-2 titleEffect" }),
-          _vm._v("\n        Testimonials\n      "),
+      _c("div", { staticClass: "company-testimonial container" }, [
+        _c("h4", { staticClass: "heading-div testimonials-text" }, [
+          _c("div", { staticClass: "mr-2 title-effect" }),
+          _vm._v("\n                Testimonials\n            "),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row no-gutters" }, [
           _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonialCard testimonialCard1" }, [
+            _c("div", { staticClass: "testimonial-card testimonial-card-1" }, [
               _c("img", {
-                staticClass: "testimonialCardImg",
+                staticClass: "testimonial-card-img",
                 attrs: {
                   src: "/website/assets/images/Group 1386.png",
                   alt: "1",
@@ -31177,32 +31248,32 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBox my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box my-1" }, [
                 _vm._v("Before"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
                 _vm._v(
-                  "\n              TechWorld is a leading cybersecurity and engineering solutions\n              company with vast experience in multiple services such as\n              security product\n            "
+                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
                 ),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBox my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box my-1" }, [
                 _vm._v("After"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
                 _vm._v(
-                  "\n              TechWorld now have more services such as malware research and\n              managed services for customers around the globe and with the\n              services of BizBlanca could get more better resource for their\n              research work and future goals.\n            "
+                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
                 ),
               ]),
             ]),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonialCard testimonialCard2" }, [
+            _c("div", { staticClass: "testimonial-card testimonial-card-2" }, [
               _c("img", {
-                staticClass: "testimonialCardImg",
+                staticClass: "testimonial-card-img",
                 attrs: {
                   src: "/website/assets/images/Group 1385.png",
                   alt: "2",
@@ -31211,32 +31282,32 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBox my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box my-1" }, [
                 _vm._v("Before"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
                 _vm._v(
-                  "\n              TechWorld is a leading cybersecurity and engineering solutions\n              company with vast experience in multiple services such as\n              security product\n            "
+                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
                 ),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBox my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box my-1" }, [
                 _vm._v("After"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
                 _vm._v(
-                  "\n              TechWorld now have more services such as malware research and\n              managed services for customers around the globe and with the\n              services of BizBlanca could get more better resource for their\n              research work and future goals.\n            "
+                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
                 ),
               ]),
             ]),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonialCard testimonialCard3" }, [
+            _c("div", { staticClass: "testimonial-card testimonial-card-3" }, [
               _c("img", {
-                staticClass: "testimonialCardImg",
+                staticClass: "testimonial-card-img",
                 attrs: {
                   src: "/website/assets/images/Group 1391.png",
                   alt: "2",
@@ -31245,32 +31316,32 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBox my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box my-1" }, [
                 _vm._v("Before"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
                 _vm._v(
-                  "\n              TechWorld is a leading cybersecurity and engineering solutions\n              company with vast experience in multiple services such as\n              security product\n            "
+                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
                 ),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBox my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box my-1" }, [
                 _vm._v("After"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
                 _vm._v(
-                  "\n              TechWorld now have more services such as malware research and\n              managed services for customers around the globe and with the\n              services of BizBlanca could get more better resource for their\n              research work and future goals.\n            "
+                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
                 ),
               ]),
             ]),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonialCard testimonialCard4" }, [
+            _c("div", { staticClass: "testimonial-card testimonial-card-4" }, [
               _c("img", {
-                staticClass: "testimonialCardImg",
+                staticClass: "testimonial-card-img",
                 attrs: {
                   src: "/website/assets/images/Group 1394.png",
                   alt: "3",
@@ -31279,23 +31350,23 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBox my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box my-1" }, [
                 _vm._v("Before"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
                 _vm._v(
-                  "\n              TechWorld is a leading cybersecurity and engineering solutions\n              company with vast experience in multiple services such as\n              security product\n            "
+                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
                 ),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBox my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box my-1" }, [
                 _vm._v("After"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "testimonialCardBoxContent my-1" }, [
+              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
                 _vm._v(
-                  "\n              TechWorld now have more services such as malware research and\n              managed services for customers around the globe and with the\n              services of BizBlanca could get more better resource for their\n              research work and future goals.\n            "
+                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
                 ),
               ]),
             ]),
@@ -31306,18 +31377,18 @@ var staticRenderFns = [
       _c(
         "div",
         {
-          staticClass: "companyFlowContainer container-fluid",
+          staticClass: "company-flow-container container-fluid",
           attrs: { id: "flow-of-use" },
         },
         [
-          _c("div", { staticClass: "companyFlow container" }, [
+          _c("div", { staticClass: "company-flow container" }, [
             _c("h4", { staticClass: "my-2 heading-div" }, [
-              _c("div", { staticClass: "mr-2 titleEffect" }),
-              _vm._v("\n          Flow of use\n        "),
+              _c("div", { staticClass: "mr-2 title-effect" }),
+              _vm._v("\n                    Flow of use\n                "),
             ]),
             _vm._v(" "),
             _c("img", {
-              staticClass: "flowPhoto w-100",
+              staticClass: "flow-photo w-100",
               attrs: { src: "/website/assets/images/Group 1687.svg", alt: "" },
             }),
           ]),
@@ -31327,34 +31398,34 @@ var staticRenderFns = [
       _c(
         "div",
         {
-          staticClass: "companyFaqs container px-2",
+          staticClass: "company-faqs container px-2",
           attrs: { id: "faqs-sec" },
         },
         [
           _c("h4", { staticClass: "my-2 heading-div" }, [
-            _c("div", { staticClass: "mr-2 titleEffect" }),
-            _vm._v("\n        FAQS\n      "),
+            _c("div", { staticClass: "mr-2 title-effect" }),
+            _vm._v("\n                FAQS\n            "),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "row no-gutters" }, [
-            _c("div", { staticClass: "col-6 col-lg-4" }, [
-              _c("div", { staticClass: "companyFaqBox" }, [
+          _c("div", { staticClass: "row no-gutters justify-content-between" }, [
+            _c("div", { staticClass: "company-faq-box" }, [
+              _c("div", [
                 _c("div", { staticClass: "question" }, [
                   _vm._v("How much cost?"),
                 ]),
               ]),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-6 col-lg-4" }, [
-              _c("div", { staticClass: "companyFaqBox" }, [
+            _c("div", { staticClass: "company-faq-box" }, [
+              _c("div", [
                 _c("div", { staticClass: "question" }, [
                   _vm._v("How to try to DB?"),
                 ]),
               ]),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-sm-12 col-lg-4 my-4 my-lg-0" }, [
-              _c("div", { staticClass: "companyFaqBox" }, [
+            _c("div", { staticClass: "company-faq-box" }, [
+              _c("div", [
                 _c("div", { staticClass: "question" }, [
                   _vm._v("How to create an account"),
                 ]),
@@ -31747,11 +31818,11 @@ var staticRenderFns = [
               { staticClass: "container", attrs: { id: "news-section" } },
               [
                 _c("div", { attrs: { id: "blogs-section-scroll" } }, [
-                  _c("div", { staticClass: "swiper-container BlogsSwiper" }, [
+                  _c("div", { staticClass: "swiper-container blogs-swiper" }, [
                     _c("div", { staticClass: "row" }, [
                       _c("div", { staticClass: "col-md-12 text-left" }, [
                         _c("div", { staticClass: "heading-div" }, [
-                          _c("div", { staticClass: "mr-2 titleEffect" }),
+                          _c("div", { staticClass: "mr-2 title-effect" }),
                           _vm._v(" "),
                           _c("h2", { staticClass: "site-heading mb-0" }, [
                             _vm._v("News"),
@@ -32116,7 +32187,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "list__title-container row" }, [
             _c("div", { staticClass: "col-md-12" }, [
               _c("div", { staticClass: "heading-div mb-3" }, [
-                _c("div", { staticClass: "mr-2 titleEffect" }),
+                _c("div", { staticClass: "mr-2 title-effect" }),
                 _vm._v(" "),
                 _c("h2", { staticClass: "site-heading mb-0" }, [
                   _vm._v(
@@ -32250,7 +32321,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col-md-12 pb-5 third-inner-sec" }, [
               _c("div", { staticClass: "heading-div mb-3" }, [
-                _c("div", { staticClass: "mr-2 titleEffect" }),
+                _c("div", { staticClass: "mr-2 title-effect" }),
                 _vm._v(" "),
                 _c("h2", { staticClass: "site-heading mb-0" }, [
                   _vm._v("IT job ke liye, BizBlanca"),
@@ -32292,7 +32363,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "heading-div mb-3" }, [
-            _c("div", { staticClass: "mr-2 titleEffect" }),
+            _c("div", { staticClass: "mr-2 title-effect" }),
             _vm._v(" "),
             _c("h2", { staticClass: "site-heading mb-0" }, [
               _vm._v("What's happening"),
@@ -32459,7 +32530,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12 pb-5 pl-0" }, [
                     _c("div", { staticClass: "story-heading-div mb-2" }, [
-                      _c("div", { staticClass: "mr-2 story-titleEffect" }),
+                      _c("div", { staticClass: "mr-2 story-title-effect" }),
                       _vm._v(" "),
                       _c(
                         "h2",
@@ -32543,7 +32614,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12 pb-5 pl-0" }, [
                     _c("div", { staticClass: "story-heading-div mb-2" }, [
-                      _c("div", { staticClass: "mr-2 story-titleEffect" }),
+                      _c("div", { staticClass: "mr-2 story-title-effect" }),
                       _vm._v(" "),
                       _c(
                         "h2",
@@ -32632,7 +32703,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 pb-4 px-2" }, [
       _c("div", { staticClass: "heading-div mb-3" }, [
-        _c("div", { staticClass: "mr-2 titleEffect" }),
+        _c("div", { staticClass: "mr-2 title-effect" }),
         _vm._v(" "),
         _c("h2", { staticClass: "site-heading mb-0" }, [_vm._v("Contact Us")]),
       ]),
@@ -32650,7 +32721,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 col-md-6 map-office" }, [
       _c("div", { staticClass: "heading-div mb-3" }, [
-        _c("div", { staticClass: "mr-2 titleEffect" }),
+        _c("div", { staticClass: "mr-2 title-effect" }),
         _vm._v(" "),
         _c("h2", { staticClass: "site-heading mb-0" }, [_vm._v("Address")]),
       ]),
@@ -34929,7 +35000,7 @@ var render = function () {
                 _c(
                   "ul",
                   {
-                    staticClass: "mobileTabsIcons",
+                    staticClass: "mobile-tabs-icons",
                     staticStyle: { display: "none" },
                   },
                   [
@@ -34945,7 +35016,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab IconsTabActive",
+                            staticClass: "icons-tab icons-tab-active",
                             attrs: {
                               src: "/website/assets/images/details.svg",
                               alt: "TabsIcon",
@@ -34967,7 +35038,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "30px" },
                             attrs: {
                               src: "/website/assets/images/mortarboard.svg",
@@ -34990,7 +35061,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/score.svg",
@@ -35013,7 +35084,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/language.svg",
@@ -35036,7 +35107,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/trophy.svg",
@@ -35059,7 +35130,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/leader.svg",
@@ -35083,7 +35154,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/work.svg",
@@ -35106,7 +35177,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/overtime.svg",
@@ -35129,7 +35200,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/settings.svg",
@@ -35152,7 +35223,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/google-docs.svg",
@@ -35168,7 +35239,7 @@ var render = function () {
                 _c(
                   "div",
                   {
-                    staticClass: "ProfileTabMobileNav",
+                    staticClass: "Profile-tab-mobile-nav",
                     attrs: { id: "ProfileTabMobileNav" },
                     on: {
                       click: function ($event) {
@@ -35192,23 +35263,23 @@ var render = function () {
                         attrs: { id: "basic-information" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Basic information"),
                         ]),
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "row no-gutters BasicInfoTab" },
+                          { staticClass: "row no-gutters basic-info-tab" },
                           [
                             _c("div", { staticClass: "col-12 col-md-6" }, [
                               _vm._m(2),
                               _vm._v(" "),
-                              _c("ul", { staticClass: "profileInfoList" }, [
+                              _c("ul", { staticClass: "profile-info-list" }, [
                                 _c(
                                   "li",
                                   {
                                     staticClass:
-                                      "h150 profileInfo profileInfoBorderBottom",
+                                      "h150 profile-info profile-info-border-bottom",
                                     staticStyle: { height: "150px" },
                                   },
                                   [
@@ -35228,7 +35299,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -35243,7 +35314,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -35258,7 +35329,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", [
@@ -35273,7 +35344,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", [
@@ -35288,7 +35359,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder rb0",
+                                      "profile-info profile-info-border rb0",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -35304,11 +35375,11 @@ var render = function () {
                             _c("div", { staticClass: "col-12 col-md-6" }, [
                               _vm._m(3),
                               _vm._v(" "),
-                              _c("ul", { staticClass: "profileInfoList" }, [
+                              _c("ul", { staticClass: "profile-info-list" }, [
                                 _c(
                                   "li",
                                   {
-                                    staticClass: "profileInfo h150",
+                                    staticClass: "profile-info h150",
                                     staticStyle: { height: "150px" },
                                   },
                                   [
@@ -35331,7 +35402,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -35348,7 +35419,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileLabelBorderTop",
+                                      "profile-info profile-label-border-top",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -35365,14 +35436,14 @@ var render = function () {
                           ]
                         ),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "viewEditAnkerList" }, [
+                        _c("ul", { staticClass: "view-edit-anker-list" }, [
                           _c(
                             "li",
                             [
                               _c(
                                 "router-link",
                                 {
-                                  staticClass: "ViewAnker",
+                                  staticClass: "view-anker",
                                   attrs: {
                                     "data-toggle": "collapse",
                                     to: {
@@ -35391,7 +35462,7 @@ var render = function () {
                             _c(
                               "a",
                               {
-                                staticClass: "ViewEdit",
+                                staticClass: "view-edit",
                                 on: {
                                   click: function ($event) {
                                     return _vm.openBasicModal()
@@ -35412,7 +35483,7 @@ var render = function () {
                         attrs: { id: "education" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Education"),
                         ]),
                         _vm._v(" "),
@@ -35423,129 +35494,140 @@ var render = function () {
                               "div",
                               {
                                 key: index,
-                                staticClass: "row no-gutters EducationInfoTab",
+                                staticClass:
+                                  "row no-gutters education-info-tab",
                               },
                               [
                                 _c("div", { staticClass: "col-12 col-md-6" }, [
                                   _vm._m(5, true),
                                   _vm._v(" "),
-                                  _c("ul", { staticClass: "profileInfoList" }, [
-                                    _c(
-                                      "li",
-                                      {
+                                  _c(
+                                    "ul",
+                                    { staticClass: "profile-info-list" },
+                                    [
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(
+                                                  _vm._s(item.school_name)
+                                                ),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(_vm._s(item.start_date)),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(_vm._s(item.department)),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("li", {
                                         staticClass:
-                                          "profileInfo profileInfoBorder",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(_vm._s(item.school_name)),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(_vm._s(item.start_date)),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(_vm._s(item.department)),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("li", {
-                                      staticClass:
-                                        "profileInfo profileInfoBorder rb0 v-on-d",
-                                    }),
-                                  ]),
+                                          "profile-info profile-info-border rb0 v-on-d",
+                                      }),
+                                    ]
+                                  ),
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "col-12 col-md-6" }, [
                                   _vm._m(6, true),
                                   _vm._v(" "),
-                                  _c("ul", { staticClass: "profileInfoList" }, [
-                                    _c("li", {
-                                      staticClass:
-                                        "profileInfo profileInfoBorder rt0 rb0 v-on-d",
-                                    }),
-                                    _vm._v(" "),
-                                    _c("li", {
-                                      staticClass:
-                                        "profileInfo profileInfoBorder rt0 v-on-d",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
+                                  _c(
+                                    "ul",
+                                    { staticClass: "profile-info-list" },
+                                    [
+                                      _c("li", {
                                         staticClass:
-                                          "profileInfo profileInfoBorder v-on-d",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(_vm._s(item.end_date)),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("li", {
-                                      staticClass:
-                                        "profileInfo profileInfoBorder rb0 v-ond",
-                                    }),
-                                  ]),
+                                          "profile-info profile-info-border rt0 rb0 v-on-d",
+                                      }),
+                                      _vm._v(" "),
+                                      _c("li", {
+                                        staticClass:
+                                          "profile-info profile-info-border rt0 v-on-d",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border v-on-d",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(_vm._s(item.end_date)),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("li", {
+                                        staticClass:
+                                          "profile-info profile-info-border rb0 v-ond",
+                                      }),
+                                    ]
+                                  ),
                                 ]),
                               ]
                             )
                           }
                         ),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "viewEditAnkerList" }, [
+                        _c("ul", { staticClass: "view-edit-anker-list" }, [
                           _c(
                             "li",
                             [
                               _c(
                                 "router-link",
                                 {
-                                  staticClass: "ViewAnker",
+                                  staticClass: "view-anker",
                                   attrs: {
                                     "data-toggle": "collapse",
                                     to: {
@@ -35564,7 +35646,7 @@ var render = function () {
                             _c(
                               "a",
                               {
-                                staticClass: "ViewEdit",
+                                staticClass: "view-edit",
                                 on: {
                                   click: function ($event) {
                                     return _vm.openEducationModal()
@@ -35586,20 +35668,20 @@ var render = function () {
                         attrs: { id: "qualification" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Qualification"),
                         ]),
                         _vm._v(" "),
                         _vm._m(7),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "viewEditAnkerList" }, [
+                        _c("ul", { staticClass: "view-edit-anker-list" }, [
                           _c(
                             "li",
                             [
                               _c(
                                 "router-link",
                                 {
-                                  staticClass: "ViewAnker",
+                                  staticClass: "view-anker",
                                   attrs: {
                                     "data-toggle": "collapse",
                                     to: {
@@ -35618,7 +35700,7 @@ var render = function () {
                             _c(
                               "a",
                               {
-                                staticClass: "ViewEdit",
+                                staticClass: "view-edit",
                                 on: {
                                   click: function ($event) {
                                     return _vm.OpenWorkQualificationModal()
@@ -35639,126 +35721,136 @@ var render = function () {
                         attrs: { id: "languages" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Languages"),
                         ]),
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "row no-gutters DocumentsInfoTab" },
+                          { staticClass: "row no-gutters documents-info-tab" },
                           [
                             _c("div", { staticClass: "col-6 col-md-6 br1" }, [
-                              _c("ul", { staticClass: "profileLables w-100" }, [
-                                _vm._m(8),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  _vm._l(
-                                    this.profile.candidate_language,
-                                    function (language, index) {
-                                      return _c(
-                                        "ul",
-                                        {
-                                          key: index,
-                                          staticClass: "profileInfoList",
-                                        },
-                                        [
-                                          _c(
-                                            "li",
-                                            {
-                                              staticClass:
-                                                "profileInfo profileInfoBorder rt0",
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "line-text-1" },
-                                                [
-                                                  _c(
-                                                    "p",
-                                                    {
-                                                      staticClass:
-                                                        "SkillsTitle",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        _vm._s(language.name)
-                                                      ),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      )
-                                    }
+                              _c(
+                                "ul",
+                                { staticClass: "profile-labels w-100" },
+                                [
+                                  _vm._m(8),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    _vm._l(
+                                      this.profile.candidate_language,
+                                      function (language, index) {
+                                        return _c(
+                                          "ul",
+                                          {
+                                            key: index,
+                                            staticClass: "profile-info-list",
+                                          },
+                                          [
+                                            _c(
+                                              "li",
+                                              {
+                                                staticClass:
+                                                  "profile-info profile-info-border rt0",
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass: "line-text-1",
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "p",
+                                                      {
+                                                        staticClass:
+                                                          "skills-title",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(language.name)
+                                                        ),
+                                                      ]
+                                                    ),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        )
+                                      }
+                                    ),
+                                    0
                                   ),
-                                  0
-                                ),
-                              ]),
+                                ]
+                              ),
                             ]),
                             _vm._v(" "),
                             _c("div", { staticClass: "col-6 col-md-6 bl1" }, [
-                              _c("ul", { staticClass: "profileLables w-100" }, [
-                                _vm._m(9),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  _vm._l(
-                                    this.profile.candidate_language,
-                                    function (language, index) {
-                                      return _c(
-                                        "ul",
-                                        {
-                                          key: index,
-                                          staticClass: "profileInfoList",
-                                        },
-                                        [
-                                          _c(
-                                            "li",
-                                            {
-                                              staticClass:
-                                                "profileInfo profileInfoBorder rt0",
-                                            },
-                                            [
-                                              _c(
-                                                "ul",
-                                                {
-                                                  staticClass:
-                                                    "uploadViewAnkerList",
-                                                },
-                                                [
-                                                  _c("li", [
-                                                    _c("p", [
-                                                      _vm._v(
-                                                        _vm._s(language.level)
-                                                      ),
+                              _c(
+                                "ul",
+                                { staticClass: "profile-labels w-100" },
+                                [
+                                  _vm._m(9),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    _vm._l(
+                                      this.profile.candidate_language,
+                                      function (language, index) {
+                                        return _c(
+                                          "ul",
+                                          {
+                                            key: index,
+                                            staticClass: "profile-info-list",
+                                          },
+                                          [
+                                            _c(
+                                              "li",
+                                              {
+                                                staticClass:
+                                                  "profile-info profile-info-border rt0",
+                                              },
+                                              [
+                                                _c(
+                                                  "ul",
+                                                  {
+                                                    staticClass:
+                                                      "upload-view-anker-list",
+                                                  },
+                                                  [
+                                                    _c("li", [
+                                                      _c("p", [
+                                                        _vm._v(
+                                                          _vm._s(language.level)
+                                                        ),
+                                                      ]),
                                                     ]),
-                                                  ]),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      )
-                                    }
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        )
+                                      }
+                                    ),
+                                    0
                                   ),
-                                  0
-                                ),
-                              ]),
+                                ]
+                              ),
                             ]),
                           ]
                         ),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "viewEditAnkerList" }, [
+                        _c("ul", { staticClass: "view-edit-anker-list" }, [
                           _c(
                             "li",
                             [
                               _c(
                                 "router-link",
                                 {
-                                  staticClass: "ViewAnker",
+                                  staticClass: "view-anker",
                                   attrs: {
                                     "data-toggle": "collapse",
                                     to: {
@@ -35777,7 +35869,7 @@ var render = function () {
                             _c(
                               "a",
                               {
-                                staticClass: "ViewEdit",
+                                staticClass: "view-edit",
                                 on: {
                                   click: function ($event) {
                                     return _vm.openLanguagesModal()
@@ -35795,127 +35887,140 @@ var render = function () {
                       "div",
                       { staticClass: "tab-pane fade", attrs: { id: "awards" } },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Awards"),
                         ]),
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "row no-gutters AwardsInfoTab" },
+                          { staticClass: "row no-gutters awards-info-tab" },
                           [
                             _c("div", { staticClass: "col-8 col-md-6 br1" }, [
-                              _c("ul", { staticClass: "profileLables w-100" }, [
-                                _vm._m(10),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  _vm._l(
-                                    this.profile.candidate_awards,
-                                    function (awardN, index) {
-                                      return _c(
-                                        "ul",
-                                        {
-                                          key: index,
-                                          staticClass: "profileInfoList",
-                                        },
-                                        [
-                                          _c(
-                                            "li",
-                                            {
-                                              staticClass:
-                                                "profileInfo profileInfoBorder rt0",
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "line-text-1" },
-                                                [
-                                                  _c(
-                                                    "p",
-                                                    {
-                                                      staticClass:
-                                                        "awardsTitle",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        _vm._s(awardN.name)
-                                                      ),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      )
-                                    }
+                              _c(
+                                "ul",
+                                { staticClass: "profile-labels w-100" },
+                                [
+                                  _vm._m(10),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    _vm._l(
+                                      this.profile.candidate_awards,
+                                      function (awardN, index) {
+                                        return _c(
+                                          "ul",
+                                          {
+                                            key: index,
+                                            staticClass: "profile-info-list",
+                                          },
+                                          [
+                                            _c(
+                                              "li",
+                                              {
+                                                staticClass:
+                                                  "profile-info profile-info-border rt0",
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass: "line-text-1",
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "p",
+                                                      {
+                                                        staticClass:
+                                                          "awardsTitle",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(awardN.name)
+                                                        ),
+                                                      ]
+                                                    ),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        )
+                                      }
+                                    ),
+                                    0
                                   ),
-                                  0
-                                ),
-                              ]),
+                                ]
+                              ),
                             ]),
                             _vm._v(" "),
                             _c("div", { staticClass: "col-4 col-md-6 bl1" }, [
-                              _c("ul", { staticClass: "profileLables w-100" }, [
-                                _vm._m(11),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  _vm._l(
-                                    this.profile.candidate_awards,
-                                    function (awardD, index) {
-                                      return _c(
-                                        "ul",
-                                        {
-                                          key: index,
-                                          staticClass: "profileInfoList",
-                                        },
-                                        [
-                                          _c(
-                                            "li",
-                                            {
-                                              staticClass:
-                                                "profileInfo profileInfoBorder rt0",
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "line-text-1" },
-                                                [
-                                                  _c(
-                                                    "p",
-                                                    {
-                                                      staticClass: "awardsYear",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        _vm._s(awardD.date)
-                                                      ),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      )
-                                    }
+                              _c(
+                                "ul",
+                                { staticClass: "profile-labels w-100" },
+                                [
+                                  _vm._m(11),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    _vm._l(
+                                      this.profile.candidate_awards,
+                                      function (awardD, index) {
+                                        return _c(
+                                          "ul",
+                                          {
+                                            key: index,
+                                            staticClass: "profile-info-list",
+                                          },
+                                          [
+                                            _c(
+                                              "li",
+                                              {
+                                                staticClass:
+                                                  "profile-info profile-info-border rt0",
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass: "line-text-1",
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "p",
+                                                      {
+                                                        staticClass:
+                                                          "awardsYear",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(awardD.date)
+                                                        ),
+                                                      ]
+                                                    ),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        )
+                                      }
+                                    ),
+                                    0
                                   ),
-                                  0
-                                ),
-                              ]),
+                                ]
+                              ),
                             ]),
                           ]
                         ),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "viewEditAnkerList" }, [
+                        _c("ul", { staticClass: "view-edit-anker-list" }, [
                           _c(
                             "li",
                             [
                               _c(
                                 "router-link",
                                 {
-                                  staticClass: "ViewAnker",
+                                  staticClass: "view-anker",
                                   attrs: {
                                     "data-toggle": "collapse",
                                     to: {
@@ -35934,7 +36039,7 @@ var render = function () {
                             _c(
                               "a",
                               {
-                                staticClass: "ViewEdit",
+                                staticClass: "view-edit",
                                 on: {
                                   click: function ($event) {
                                     return _vm.openAwardModal()
@@ -35955,23 +36060,23 @@ var render = function () {
                         attrs: { id: "current-job" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Current job"),
                         ]),
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "row no-gutters CurrentJobTab" },
+                          { staticClass: "row no-gutters current-info-tab" },
                           [
                             _c("div", { staticClass: "col-12 col-md-6" }, [
                               _vm._m(12),
                               _vm._v(" "),
-                              _c("ul", { staticClass: "profileInfoList" }, [
+                              _c("ul", { staticClass: "profile-info-list" }, [
                                 _c(
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder rt0",
+                                      "profile-info profile-info-border rt0",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -35990,7 +36095,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -36007,7 +36112,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -36024,7 +36129,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -36041,7 +36146,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -36058,7 +36163,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -36078,21 +36183,25 @@ var render = function () {
                             _c("div", { staticClass: "col-12 col-md-6" }, [
                               _vm._m(13),
                               _vm._v(" "),
-                              _c("ul", { staticClass: "profileInfoList" }, [
-                                _c("li", { staticClass: "profileInfo v-on-d" }),
+                              _c("ul", { staticClass: "profile-info-list" }, [
+                                _c("li", {
+                                  staticClass: "profile-info v-on-d",
+                                }),
                                 _vm._v(" "),
-                                _c("li", { staticClass: "profileInfo v-on-d" }),
+                                _c("li", {
+                                  staticClass: "profile-info v-on-d",
+                                }),
                                 _vm._v(" "),
                                 _c("li", {
                                   staticClass:
-                                    "profileInfo profileInfoBorderBottom v-on-d",
+                                    "profile-info profile-info-border-bottom v-on-d",
                                 }),
                                 _vm._v(" "),
                                 _c(
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -36111,7 +36220,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -36126,21 +36235,21 @@ var render = function () {
                                 _vm._v(" "),
                                 _c("li", {
                                   staticClass:
-                                    "profileInfo profileInfoBorderTop v-on-d",
+                                    "profile-info profile-info-border-top v-on-d",
                                 }),
                               ]),
                             ]),
                           ]
                         ),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "viewEditAnkerList" }, [
+                        _c("ul", { staticClass: "view-edit-anker-list" }, [
                           _c(
                             "li",
                             [
                               _c(
                                 "router-link",
                                 {
-                                  staticClass: "ViewAnker",
+                                  staticClass: "view-anker",
                                   attrs: {
                                     "data-toggle": "collapse",
                                     to: {
@@ -36159,7 +36268,7 @@ var render = function () {
                             _c(
                               "a",
                               {
-                                staticClass: "ViewEdit",
+                                staticClass: "view-edit",
                                 on: {
                                   click: function ($event) {
                                     return _vm.openCurrentJobModal()
@@ -36180,7 +36289,7 @@ var render = function () {
                         attrs: { id: "work-experience" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Work Experience"),
                         ]),
                         _vm._v(" "),
@@ -36191,159 +36300,172 @@ var render = function () {
                               "div",
                               {
                                 key: index,
-                                staticClass: "row no-gutters ExperienceInfoTab",
+                                staticClass:
+                                  "row no-gutters experience-info-tab",
                               },
                               [
                                 _c("div", { staticClass: "col-12 col-md-6" }, [
                                   _vm._m(14, true),
                                   _vm._v(" "),
-                                  _c("ul", { staticClass: "profileInfoList" }, [
-                                    _c(
-                                      "li",
-                                      {
+                                  _c(
+                                    "ul",
+                                    { staticClass: "profile-info-list" },
+                                    [
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border rt0",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(
+                                                  _vm._s(
+                                                    experience.company_name
+                                                  )
+                                                ),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(
+                                                  _vm._s(experience.designation)
+                                                ),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(
+                                                  _vm._s(experience.start_date)
+                                                ),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              experience.is_working_currently ==
+                                              1
+                                                ? _c("p", [_vm._v("Yes")])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              experience.is_working_currently ==
+                                              0
+                                                ? _c("p", [_vm._v("No")])
+                                                : _vm._e(),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("li", {
                                         staticClass:
-                                          "profileInfo profileInfoBorder rt0",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(
-                                                _vm._s(experience.company_name)
-                                              ),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(
-                                                _vm._s(experience.designation)
-                                              ),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(
-                                                _vm._s(experience.start_date)
-                                              ),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            experience.is_working_currently == 1
-                                              ? _c("p", [_vm._v("Yes")])
-                                              : _vm._e(),
-                                            _vm._v(" "),
-                                            experience.is_working_currently == 0
-                                              ? _c("p", [_vm._v("No")])
-                                              : _vm._e(),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("li", {
-                                      staticClass:
-                                        "profileInfo profileInfoBorder rb0 v-on-d",
-                                    }),
-                                  ]),
+                                          "profile-info profile-info-border rb0 v-on-d",
+                                      }),
+                                    ]
+                                  ),
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "col-12 col-md-6" }, [
                                   _vm._m(15, true),
                                   _vm._v(" "),
-                                  _c("ul", { staticClass: "profileInfoList" }, [
-                                    _c("li", {
-                                      staticClass: "profileInfo v-on-d",
-                                    }),
-                                    _vm._v(" "),
-                                    _c("li", {
-                                      staticClass:
-                                        "profileInfo profileInfoBorder rt0 v-on-d",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
+                                  _c(
+                                    "ul",
+                                    { staticClass: "profile-info-list" },
+                                    [
+                                      _c("li", {
+                                        staticClass: "profile-info v-on-d",
+                                      }),
+                                      _vm._v(" "),
+                                      _c("li", {
                                         staticClass:
-                                          "profileInfo profileInfoBorder",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(
-                                                _vm._s(experience.end_date)
-                                              ),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("li", {
-                                      staticClass:
-                                        "profileInfo profileInfoBorder rb0 v-on-d",
-                                    }),
-                                  ]),
+                                          "profile-info profile-info-border rt0 v-on-d",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(
+                                                  _vm._s(experience.end_date)
+                                                ),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("li", {
+                                        staticClass:
+                                          "profile-info profile-info-border rb0 v-on-d",
+                                      }),
+                                    ]
+                                  ),
                                 ]),
                               ]
                             )
                           }
                         ),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "viewEditAnkerList" }, [
+                        _c("ul", { staticClass: "view-edit-anker-list" }, [
                           _c(
                             "li",
                             [
                               _c(
                                 "router-link",
                                 {
-                                  staticClass: "ViewAnker",
+                                  staticClass: "view-anker",
                                   attrs: {
                                     "data-toggle": "collapse",
                                     to: {
@@ -36362,7 +36484,7 @@ var render = function () {
                             _c(
                               "a",
                               {
-                                staticClass: "ViewEdit",
+                                staticClass: "view-edit",
                                 on: {
                                   click: function ($event) {
                                     return _vm.openWorkExperienceModal()
@@ -36381,128 +36503,140 @@ var render = function () {
                       "div",
                       { staticClass: "tab-pane fade", attrs: { id: "skills" } },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Skills"),
                         ]),
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "row no-gutters DocumentsInfoTab" },
+                          { staticClass: "row no-gutters documents-info-tab" },
                           [
                             _c("div", { staticClass: "col-5 col-md-6 br1" }, [
-                              _c("ul", { staticClass: "profileLables w-100" }, [
-                                _vm._m(16),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  _vm._l(
-                                    this.profile.candidate_skills,
-                                    function (skillN, index) {
-                                      return _c(
-                                        "ul",
-                                        {
-                                          key: index,
-                                          staticClass: "profileInfoList",
-                                        },
-                                        [
-                                          _c(
-                                            "li",
-                                            {
-                                              staticClass:
-                                                "profileInfo profileInfoBorder rt0",
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "line-text-1" },
-                                                [
-                                                  _c(
-                                                    "p",
-                                                    {
-                                                      staticClass:
-                                                        "SkillsTitle",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        _vm._s(skillN.name)
-                                                      ),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      )
-                                    }
+                              _c(
+                                "ul",
+                                { staticClass: "profile-labels w-100" },
+                                [
+                                  _vm._m(16),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    _vm._l(
+                                      this.profile.candidate_skills,
+                                      function (skillN, index) {
+                                        return _c(
+                                          "ul",
+                                          {
+                                            key: index,
+                                            staticClass: "profile-info-list",
+                                          },
+                                          [
+                                            _c(
+                                              "li",
+                                              {
+                                                staticClass:
+                                                  "profile-info profile-info-border rt0",
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass: "line-text-1",
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "p",
+                                                      {
+                                                        staticClass:
+                                                          "skills-title",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(skillN.name)
+                                                        ),
+                                                      ]
+                                                    ),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        )
+                                      }
+                                    ),
+                                    0
                                   ),
-                                  0
-                                ),
-                              ]),
+                                ]
+                              ),
                             ]),
                             _vm._v(" "),
                             _c("div", { staticClass: "col-7 col-md-6 bl1" }, [
-                              _c("ul", { staticClass: "profileLables w-100" }, [
-                                _vm._m(17),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  _vm._l(
-                                    this.profile.candidate_skills,
-                                    function (skillL, index) {
-                                      return _c(
-                                        "ul",
-                                        {
-                                          key: index,
-                                          staticClass: "profileInfoList",
-                                        },
-                                        [
-                                          _c(
-                                            "li",
-                                            {
-                                              staticClass:
-                                                "profileInfo profileInfoBorder rt0",
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "line-text-1" },
-                                                [
-                                                  _c(
-                                                    "p",
-                                                    {
-                                                      staticClass:
-                                                        "SkillsTitle",
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        _vm._s(skillL.level)
-                                                      ),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      )
-                                    }
+                              _c(
+                                "ul",
+                                { staticClass: "profile-labels w-100" },
+                                [
+                                  _vm._m(17),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    _vm._l(
+                                      this.profile.candidate_skills,
+                                      function (skillL, index) {
+                                        return _c(
+                                          "ul",
+                                          {
+                                            key: index,
+                                            staticClass: "profile-info-list",
+                                          },
+                                          [
+                                            _c(
+                                              "li",
+                                              {
+                                                staticClass:
+                                                  "profile-info profile-info-border rt0",
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass: "line-text-1",
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "p",
+                                                      {
+                                                        staticClass:
+                                                          "skills-title",
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(skillL.level)
+                                                        ),
+                                                      ]
+                                                    ),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        )
+                                      }
+                                    ),
+                                    0
                                   ),
-                                  0
-                                ),
-                              ]),
+                                ]
+                              ),
                             ]),
                           ]
                         ),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "viewEditAnkerList" }, [
+                        _c("ul", { staticClass: "view-edit-anker-list" }, [
                           _c(
                             "li",
                             [
                               _c(
                                 "router-link",
                                 {
-                                  staticClass: "ViewAnker",
+                                  staticClass: "view-anker",
                                   attrs: {
                                     "data-toggle": "collapse",
                                     to: {
@@ -36521,7 +36655,7 @@ var render = function () {
                             _c(
                               "a",
                               {
-                                staticClass: "ViewEdit",
+                                staticClass: "view-edit",
                                 on: {
                                   click: function ($event) {
                                     return _vm.openSkillsModal()
@@ -36542,252 +36676,267 @@ var render = function () {
                         attrs: { id: "documents" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Documents"),
                         ]),
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "row no-gutters DocumentsInfoTab" },
+                          { staticClass: "row no-gutters documents-info-tab" },
                           [
                             _vm._m(18),
                             _vm._v(" "),
                             _c("div", { staticClass: "col-12 col-md-6 bl1" }, [
-                              _c("ul", { staticClass: "profileLables w-100" }, [
-                                _vm._m(19),
-                                _vm._v(" "),
-                                _c("li", [
-                                  _c("ul", { staticClass: "profileInfoList" }, [
+                              _c(
+                                "ul",
+                                { staticClass: "profile-labels w-100" },
+                                [
+                                  _vm._m(19),
+                                  _vm._v(" "),
+                                  _c("li", [
                                     _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder rt0",
-                                      },
+                                      "ul",
+                                      { staticClass: "profile-info-list" },
                                       [
                                         _c(
-                                          "form",
-                                          { attrs: { id: "uploadresume" } },
-                                          [
-                                            _c(
-                                              "ul",
-                                              {
-                                                staticClass:
-                                                  "uploadViewAnkerList",
-                                              },
-                                              [
-                                                _c("li", [
-                                                  _c("input", {
-                                                    attrs: {
-                                                      type: "file",
-                                                      hidden: "",
-                                                      name: "resume",
-                                                      id: "resume-pdf-file",
-                                                    },
-                                                    on: {
-                                                      change: function (
-                                                        $event
-                                                      ) {
-                                                        return _vm.saveResume()
-                                                      },
-                                                    },
-                                                  }),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      staticClass:
-                                                        "UploadAnker",
-                                                      attrs: {
-                                                        for: "resume-pdf-file",
-                                                      },
-                                                    },
-                                                    [_vm._v("Upload")]
-                                                  ),
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("li", [
-                                                  this.profile.cv_file
-                                                    ? _c(
-                                                        "a",
-                                                        {
-                                                          staticClass:
-                                                            "ViewAnker",
-                                                          attrs: {
-                                                            href:
-                                                              "/storage/images/candidates/resume/" +
-                                                              this.profile
-                                                                .cv_file,
-                                                            target: "_blank",
-                                                          },
-                                                        },
-                                                        [_vm._v("View")]
-                                                      )
-                                                    : _vm._e(),
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("div", {
-                                                  staticClass: "alert d-none",
-                                                  attrs: { id: "responseMsg" },
-                                                }),
-                                                _vm._v(" "),
-                                                _c("div", {
-                                                  staticClass:
-                                                    "alert alert-danger mt-2 d-none text-danger",
-                                                  attrs: { id: "err_file" },
-                                                }),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder rt0",
-                                      },
-                                      [
-                                        _c(
-                                          "form",
-                                          { attrs: { id: "uploadcnic" } },
-                                          [
-                                            _c(
-                                              "ul",
-                                              {
-                                                staticClass:
-                                                  "uploadViewAnkerList",
-                                              },
-                                              [
-                                                _c("li", [
-                                                  _c("input", {
-                                                    attrs: {
-                                                      type: "file",
-                                                      hidden: "",
-                                                      name: "uploadcnicfrontback",
-                                                      id: "uploadcnicfrontback",
-                                                    },
-                                                    on: {
-                                                      change: function (
-                                                        $event
-                                                      ) {
-                                                        return _vm.saveCNIC()
-                                                      },
-                                                    },
-                                                  }),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      staticClass:
-                                                        "UploadAnker",
-                                                      attrs: {
-                                                        for: "uploadcnicfrontback",
-                                                      },
-                                                    },
-                                                    [_vm._v("Upload")]
-                                                  ),
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("li", [
-                                                  _vm.profile.cnic_image
-                                                    ? _c(
-                                                        "a",
-                                                        {
-                                                          staticClass:
-                                                            "ViewAnker",
-                                                          attrs: {
-                                                            href:
-                                                              "/storage/images/candidates/cnic/" +
-                                                              this.profile
-                                                                .cnic_image,
-                                                            target: "_blank",
-                                                          },
-                                                        },
-                                                        [_vm._v("View")]
-                                                      )
-                                                    : _vm._e(),
-                                                ]),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder rt0 rb0",
-                                      },
-                                      [
-                                        _c(
-                                          "form",
+                                          "li",
                                           {
-                                            attrs: {
-                                              id: "uploadexperienceletter",
-                                            },
+                                            staticClass:
+                                              "profile-info profile-info-border rt0",
                                           },
                                           [
                                             _c(
-                                              "ul",
-                                              {
-                                                staticClass:
-                                                  "uploadViewAnkerList",
-                                              },
+                                              "form",
+                                              { attrs: { id: "uploadresume" } },
                                               [
-                                                _c("li", [
-                                                  _c("input", {
-                                                    attrs: {
-                                                      type: "file",
-                                                      hidden: "",
-                                                      name: "uploadexperienceletter",
-                                                      id: "experiencelatter",
-                                                    },
-                                                    on: {
-                                                      change: function (
-                                                        $event
-                                                      ) {
-                                                        return _vm.saveExperienceLetter()
-                                                      },
-                                                    },
-                                                  }),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "label",
-                                                    {
-                                                      staticClass:
-                                                        "UploadAnker",
-                                                      attrs: {
-                                                        for: "experiencelatter",
-                                                      },
-                                                    },
-                                                    [_vm._v("Upload")]
-                                                  ),
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("li", [
-                                                  _vm.profile.experience_letter
-                                                    ? _c(
-                                                        "a",
-                                                        {
-                                                          staticClass:
-                                                            "ViewAnker",
-                                                          attrs: {
-                                                            href:
-                                                              "/storage/images/candidates/experience-letter/" +
-                                                              this.profile
-                                                                .experience_letter,
-                                                            target: "_blank",
+                                                _c(
+                                                  "ul",
+                                                  {
+                                                    staticClass:
+                                                      "upload-view-anker-list",
+                                                  },
+                                                  [
+                                                    _c("li", [
+                                                      _c("input", {
+                                                        attrs: {
+                                                          type: "file",
+                                                          hidden: "",
+                                                          name: "resume",
+                                                          id: "resume-pdf-file",
+                                                        },
+                                                        on: {
+                                                          change: function (
+                                                            $event
+                                                          ) {
+                                                            return _vm.saveResume()
                                                           },
                                                         },
-                                                        [_vm._v("View")]
-                                                      )
-                                                    : _vm._e(),
-                                                ]),
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          staticClass:
+                                                            "UploadAnker",
+                                                          attrs: {
+                                                            for: "resume-pdf-file",
+                                                          },
+                                                        },
+                                                        [_vm._v("Upload")]
+                                                      ),
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c("li", [
+                                                      this.profile.cv_file
+                                                        ? _c(
+                                                            "a",
+                                                            {
+                                                              staticClass:
+                                                                "view-anker",
+                                                              attrs: {
+                                                                href:
+                                                                  "/storage/images/candidates/resume/" +
+                                                                  this.profile
+                                                                    .cv_file,
+                                                                target:
+                                                                  "_blank",
+                                                              },
+                                                            },
+                                                            [_vm._v("View")]
+                                                          )
+                                                        : _vm._e(),
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c("div", {
+                                                      staticClass:
+                                                        "alert d-none",
+                                                      attrs: {
+                                                        id: "responseMsg",
+                                                      },
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("div", {
+                                                      staticClass:
+                                                        "alert alert-danger mt-2 d-none text-danger",
+                                                      attrs: { id: "err_file" },
+                                                    }),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "li",
+                                          {
+                                            staticClass:
+                                              "profile-info profile-info-border rt0",
+                                          },
+                                          [
+                                            _c(
+                                              "form",
+                                              { attrs: { id: "uploadcnic" } },
+                                              [
+                                                _c(
+                                                  "ul",
+                                                  {
+                                                    staticClass:
+                                                      "upload-view-anker-list",
+                                                  },
+                                                  [
+                                                    _c("li", [
+                                                      _c("input", {
+                                                        attrs: {
+                                                          type: "file",
+                                                          hidden: "",
+                                                          name: "uploadcnicfrontback",
+                                                          id: "uploadcnicfrontback",
+                                                        },
+                                                        on: {
+                                                          change: function (
+                                                            $event
+                                                          ) {
+                                                            return _vm.saveCNIC()
+                                                          },
+                                                        },
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          staticClass:
+                                                            "UploadAnker",
+                                                          attrs: {
+                                                            for: "uploadcnicfrontback",
+                                                          },
+                                                        },
+                                                        [_vm._v("Upload")]
+                                                      ),
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c("li", [
+                                                      _vm.profile.cnic_image
+                                                        ? _c(
+                                                            "a",
+                                                            {
+                                                              staticClass:
+                                                                "view-anker",
+                                                              attrs: {
+                                                                href:
+                                                                  "/storage/images/candidates/cnic/" +
+                                                                  this.profile
+                                                                    .cnic_image,
+                                                                target:
+                                                                  "_blank",
+                                                              },
+                                                            },
+                                                            [_vm._v("View")]
+                                                          )
+                                                        : _vm._e(),
+                                                    ]),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "li",
+                                          {
+                                            staticClass:
+                                              "profile-info profile-info-border rt0 rb0",
+                                          },
+                                          [
+                                            _c(
+                                              "form",
+                                              {
+                                                attrs: {
+                                                  id: "uploadexperienceletter",
+                                                },
+                                              },
+                                              [
+                                                _c(
+                                                  "ul",
+                                                  {
+                                                    staticClass:
+                                                      "upload-view-anker-list",
+                                                  },
+                                                  [
+                                                    _c("li", [
+                                                      _c("input", {
+                                                        attrs: {
+                                                          type: "file",
+                                                          hidden: "",
+                                                          name: "uploadexperienceletter",
+                                                          id: "experiencelatter",
+                                                        },
+                                                        on: {
+                                                          change: function (
+                                                            $event
+                                                          ) {
+                                                            return _vm.saveExperienceLetter()
+                                                          },
+                                                        },
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "label",
+                                                        {
+                                                          staticClass:
+                                                            "UploadAnker",
+                                                          attrs: {
+                                                            for: "experiencelatter",
+                                                          },
+                                                        },
+                                                        [_vm._v("Upload")]
+                                                      ),
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c("li", [
+                                                      _vm.profile
+                                                        .experience_letter
+                                                        ? _c(
+                                                            "a",
+                                                            {
+                                                              staticClass:
+                                                                "view-anker",
+                                                              attrs: {
+                                                                href:
+                                                                  "/storage/images/candidates/experience-letter/" +
+                                                                  this.profile
+                                                                    .experience_letter,
+                                                                target:
+                                                                  "_blank",
+                                                              },
+                                                            },
+                                                            [_vm._v("View")]
+                                                          )
+                                                        : _vm._e(),
+                                                    ]),
+                                                  ]
+                                                ),
                                               ]
                                             ),
                                           ]
@@ -36795,8 +36944,8 @@ var render = function () {
                                       ]
                                     ),
                                   ]),
-                                ]),
-                              ]),
+                                ]
+                              ),
                             ]),
                           ]
                         ),
@@ -36810,7 +36959,7 @@ var render = function () {
                         attrs: { id: "projects" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Projects"),
                         ]),
                         _vm._v(" "),
@@ -36821,133 +36970,139 @@ var render = function () {
                               "div",
                               {
                                 key: index,
-                                staticClass: "row no-gutters DesireJobTab",
+                                staticClass: "row no-gutters desire-job-tab",
                               },
                               [
                                 _c("div", { staticClass: "col-12" }, [
                                   _vm._m(20, true),
                                   _vm._v(" "),
-                                  _c("ul", { staticClass: "profileInfoList" }, [
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder rt0 justify-content-start",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(_vm._s(project.name)),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder justify-content-start",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(
-                                                _vm._s(project.start_date)
-                                              ),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder justify-content-start",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(_vm._s(project.end_date)),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder justify-content-start",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-3" },
-                                          [
-                                            _c("p", [
-                                              _vm._v(
-                                                _vm._s(project.description)
-                                              ),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "li",
-                                      {
-                                        staticClass:
-                                          "profileInfo profileInfoBorder justify-content-start",
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "line-text-1 pl-2" },
-                                          [
-                                            _c(
-                                              "a",
-                                              {
-                                                attrs: {
-                                                  href: project.link,
-                                                  target: "_blank",
+                                  _c(
+                                    "ul",
+                                    { staticClass: "profile-info-list" },
+                                    [
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border rt0 justify-content-start",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(_vm._s(project.name)),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border justify-content-start",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(
+                                                  _vm._s(project.start_date)
+                                                ),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border justify-content-start",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(
+                                                  _vm._s(project.end_date)
+                                                ),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border justify-content-start",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-3" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(
+                                                  _vm._s(project.description)
+                                                ),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "li",
+                                        {
+                                          staticClass:
+                                            "profile-info profile-info-border justify-content-start",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "line-text-1 pl-2" },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  attrs: {
+                                                    href: project.link,
+                                                    target: "_blank",
+                                                  },
                                                 },
-                                              },
-                                              [_vm._v(_vm._s(project.link))]
-                                            ),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                  ]),
+                                                [_vm._v(_vm._s(project.link))]
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
                                 ]),
                               ]
                             )
                           }
                         ),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "viewEditAnkerList" }, [
+                        _c("ul", { staticClass: "view-edit-anker-list" }, [
                           _c(
                             "li",
                             [
                               _c(
                                 "router-link",
                                 {
-                                  staticClass: "ViewAnker",
+                                  staticClass: "view-anker",
                                   attrs: {
                                     "data-toggle": "collapse",
                                     to: {
@@ -36966,7 +37121,7 @@ var render = function () {
                             _c(
                               "a",
                               {
-                                staticClass: "ViewEdit",
+                                staticClass: "view-edit",
                                 on: {
                                   click: function ($event) {
                                     return _vm.openProjectModals()
@@ -37015,10 +37170,10 @@ var render = function () {
                 },
                 [
                   _c("div", { staticClass: "modal-content p-0" }, [
-                    _c("div", { staticClass: "container editModel pb-5" }, [
+                    _c("div", { staticClass: "container edit-modal pb-5" }, [
                       _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                       _vm._v(" "),
-                      _c("section", { staticClass: "modelForm" }, [
+                      _c("section", { staticClass: "modal-form" }, [
                         _c(
                           "div",
                           {
@@ -37030,7 +37185,7 @@ var render = function () {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "subForm",
+                                  staticClass: "sub-form",
                                   attrs: { id: "subForm" },
                                 },
                                 [
@@ -38017,15 +38172,15 @@ var render = function () {
                 },
                 [
                   _c("div", { staticClass: "modal-content p-0" }, [
-                    _c("div", { staticClass: "container editModel pb-5" }, [
+                    _c("div", { staticClass: "container edit-modal pb-5" }, [
                       _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                       _vm._v(" "),
-                      _c("section", { staticClass: "modelForm" }, [
+                      _c("section", { staticClass: "modal-form" }, [
                         _c("div", { staticClass: "row no-gutters" }, [
                           _c("div", { staticClass: "col-12" }, [
                             _c(
                               "div",
-                              { staticClass: "subForm" },
+                              { staticClass: "sub-form" },
                               [
                                 _vm._m(22),
                                 _vm._v(" "),
@@ -38509,10 +38664,10 @@ var render = function () {
                 { staticClass: "w-100", attrs: { id: "currentJobForm" } },
                 [
                   _c("div", { staticClass: "modal-content p-0" }, [
-                    _c("div", { staticClass: "container editModel pb-5" }, [
+                    _c("div", { staticClass: "container edit-modal pb-5" }, [
                       _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                       _vm._v(" "),
-                      _c("section", { staticClass: "modelForm" }, [
+                      _c("section", { staticClass: "modal-form" }, [
                         _c(
                           "div",
                           {
@@ -38527,7 +38682,7 @@ var render = function () {
                                 _c(
                                   "div",
                                   {
-                                    staticClass: "subForm",
+                                    staticClass: "sub-form",
                                     attrs: { id: "subForm" },
                                   },
                                   [
@@ -39287,10 +39442,10 @@ var render = function () {
                 { staticClass: "w-100", attrs: { id: "educationform" } },
                 [
                   _c("div", { staticClass: "modal-content p-0" }, [
-                    _c("div", { staticClass: "container editModel pb-5" }, [
+                    _c("div", { staticClass: "container edit-modal pb-5" }, [
                       _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                       _vm._v(" "),
-                      _c("section", { staticClass: "modelForm" }, [
+                      _c("section", { staticClass: "modal-form" }, [
                         _c(
                           "div",
                           {
@@ -39304,7 +39459,7 @@ var render = function () {
                               [
                                 _c(
                                   "div",
-                                  { staticClass: "subForm" },
+                                  { staticClass: "sub-form" },
                                   [
                                     _vm._m(24),
                                     _vm._v(" "),
@@ -40147,12 +40302,12 @@ var render = function () {
                 },
                 [
                   _c("div", { staticClass: "modal-content p-0" }, [
-                    _c("div", { staticClass: "container editModel pb-5" }, [
+                    _c("div", { staticClass: "container edit-modal pb-5" }, [
                       _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                       _vm._v(" "),
                       _c(
                         "section",
-                        { staticClass: "modelForm" },
+                        { staticClass: "modal-form" },
                         [
                           _vm._l(
                             this.profile.candidate_experience,
@@ -40175,7 +40330,7 @@ var render = function () {
                                       _c(
                                         "div",
                                         {
-                                          staticClass: "subForm",
+                                          staticClass: "sub-form",
                                           attrs: { id: "subForm" },
                                         },
                                         [
@@ -40718,7 +40873,7 @@ var render = function () {
                                       _c(
                                         "div",
                                         {
-                                          staticClass: "subForm",
+                                          staticClass: "sub-form",
                                           attrs: { id: "subForm" },
                                         },
                                         [
@@ -41392,10 +41547,10 @@ var render = function () {
                 },
                 [
                   _c("div", { staticClass: "modal-content p-0" }, [
-                    _c("div", { staticClass: "container editModel pb-5" }, [
+                    _c("div", { staticClass: "container edit-modal pb-5" }, [
                       _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                       _vm._v(" "),
-                      _c("section", { staticClass: "modelForm" }, [
+                      _c("section", { staticClass: "modal-form" }, [
                         _c("div", { staticClass: "row no-gutters" }, [
                           _c("div", { staticClass: "col-12" }, [
                             _c(
@@ -41894,10 +42049,10 @@ var render = function () {
             [
               _c("form", { staticClass: "w-100", attrs: { id: "skillForm" } }, [
                 _c("div", { staticClass: "modal-content p-0" }, [
-                  _c("div", { staticClass: "container editModel pb-5" }, [
+                  _c("div", { staticClass: "container edit-modal pb-5" }, [
                     _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                     _vm._v(" "),
-                    _c("section", { staticClass: "modelForm" }, [
+                    _c("section", { staticClass: "modal-form" }, [
                       _c("div", { staticClass: "row no-gutters" }, [
                         _c("div", { staticClass: "col-12" }, [
                           _c(
@@ -42353,12 +42508,12 @@ var render = function () {
                 { staticClass: "w-100", attrs: { id: "projectForm" } },
                 [
                   _c("div", { staticClass: "modal-content p-0" }, [
-                    _c("div", { staticClass: "container editModel pb-5" }, [
+                    _c("div", { staticClass: "container edit-modal pb-5" }, [
                       _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                       _vm._v(" "),
                       _c(
                         "section",
-                        { staticClass: "modelForm" },
+                        { staticClass: "modal-form" },
                         [
                           _vm._l(
                             this.profile.candidate_projects,
@@ -42408,17 +42563,20 @@ var render = function () {
                                           _vm._v(" "),
                                           _c(
                                             "div",
-                                            { staticClass: "modelTitle my-3" },
+                                            {
+                                              staticClass: "modal-title  my-3",
+                                            },
                                             [
                                               _c("div", {
-                                                staticClass: "mr-2 titleEffect",
+                                                staticClass:
+                                                  "mr-2 title-effect",
                                               }),
                                               _vm._v(" "),
                                               _c(
                                                 "h4",
                                                 {
                                                   staticClass:
-                                                    "m-0 modelTitleText",
+                                                    "m-0 modal-title-text",
                                                 },
                                                 [
                                                   _vm._v(
@@ -43402,16 +43560,16 @@ var staticRenderFns = [
         attrs: { role: "tablist", id: "DesktopTabsIcons" },
       },
       [
-        _c("li", { staticClass: "nav-item profileIconTab" }, [
+        _c("li", { staticClass: "nav-item profile-icon-tab" }, [
           _c("img", {
-            staticClass: "profileIcon",
+            staticClass: "profile-icon",
             attrs: {
               src: "/website/assets/images/dashboard-interface.svg",
               alt: "img",
             },
           }),
           _vm._v(" "),
-          _c("span", { staticClass: "profileText" }, [_vm._v("Profile")]),
+          _c("span", { staticClass: "profile-text" }, [_vm._v("Profile")]),
         ]),
         _vm._v(" "),
         _c("li", { staticClass: "nav-item" }, [
@@ -43530,12 +43688,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row no-gutters modalTabConatiner" }, [
-      _c("div", { staticClass: "IconsModal" }, [
-        _c("ul", { staticClass: "mobileModalTabsIcons p-0" }, [
+    return _c("div", { staticClass: "row no-gutters modal-tab-conatiner" }, [
+      _c("div", { staticClass: "icons-modal" }, [
+        _c("ul", { staticClass: "mobile-modal-tabs-icons p-0" }, [
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               attrs: {
                 src: "/website/assets/images/details.svg",
                 alt: "TabsIcon",
@@ -43545,7 +43703,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "30px" },
               attrs: {
                 src: "/website/assets/images/mortarboard.svg",
@@ -43556,7 +43714,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/score.svg",
@@ -43567,7 +43725,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/language.svg",
@@ -43578,7 +43736,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/trophy.svg",
@@ -43589,7 +43747,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/leader.svg",
@@ -43600,7 +43758,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/work.svg",
@@ -43611,7 +43769,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/overtime.svg",
@@ -43622,7 +43780,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/settings.svg",
@@ -43633,7 +43791,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/google-docs.svg",
@@ -43644,7 +43802,7 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "IconsModalTabAnkers" }, [
+      _c("div", { staticClass: "icons-modal-tab-ankers" }, [
         _c("ul", { staticClass: "nav nav-tabs", attrs: { role: "tablist" } }, [
           _c("li", { staticClass: "nav-item" }, [
             _c(
@@ -43767,10 +43925,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
       _c(
         "li",
-        { staticClass: "profileLabel h150 profileLabelBorder rt0 btr5" },
+        { staticClass: "profile-label h150 profile-label-border rt0 btr5" },
         [
           _c("span", [
             _vm._v(
@@ -43780,23 +43938,23 @@ var staticRenderFns = [
         ]
       ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Full Name")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Gender")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("City")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Address")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder bbl5" }, [
+      _c("li", { staticClass: "profile-label profile-label-border bbl5" }, [
         _c("span", [_vm._v("Phone")]),
       ]),
     ])
@@ -43805,39 +43963,39 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
       _c("li", [
         _c(
           "span",
-          { staticClass: "profileLabel h150 profileLabelBorder rt0 btr5" },
+          { staticClass: "profile-label h150 profile-label-border rt0 btr5" },
           [_vm._v("Bio")]
         ),
       ]),
       _vm._v(" "),
       _c("li", [
-        _c("span", { staticClass: "profileLabel profileLabelBorder" }, [
+        _c("span", { staticClass: "profile-label profile-label-border" }, [
           _vm._v("Date of Birth"),
         ]),
       ]),
       _vm._v(" "),
       _c("li", [
-        _c("span", { staticClass: "profileLabel profileLabelBorder" }, [
+        _c("span", { staticClass: "profile-label profile-label-border" }, [
           _vm._v("Zip Code"),
         ]),
       ]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel v-on-d" })]),
+      _c("li", [_c("span", { staticClass: "profile-label v-on-d" })]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel v-on-d" })]),
+      _c("li", [_c("span", { staticClass: "profile-label v-on-d" })]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel bb5 v-on-d" })]),
+      _c("li", [_c("span", { staticClass: "profile-label bb5 v-on-d" })]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileInfo" }, [
+    return _c("li", { staticClass: "profile-info" }, [
       _c("div", { staticClass: "line-text-1" }, [_c("p")]),
     ])
   },
@@ -43845,60 +44003,66 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Institute Name")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Starting Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Department")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder bbl5 v-on-d" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profile-label profile-label-border bbl5 v-on-d" },
+        [_c("span")]
+      ),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorder rb0 btr5 v-on-d" },
+        { staticClass: "profile-label profile-label-border rb0 btr5 v-on-d" },
         [_c("span")]
       ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 v-on-d" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profile-label profile-label-border rt0 v-on-d" },
+        [_c("span")]
+      ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Ending Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rb0 v-on-d" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profile-label profile-label-border rb0 v-on-d" },
+        [_c("span")]
+      ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel bbl5 v-on-d" }, [_c("span")]),
+      _c("li", { staticClass: "profile-label bbl5 v-on-d" }, [_c("span")]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row no-gutters QualificationInfoTab" }, [
+    return _c("div", { staticClass: "row no-gutters qualification-info-tab" }, [
       _c("div", { staticClass: "col-12 col-md-6" }, [
-        _c("ul", { staticClass: "profileLables" }, [
+        _c("ul", { staticClass: "profile-labels" }, [
           _c(
             "li",
-            { staticClass: "profileLabel profileLabelBorder rt0 btr5" },
+            { staticClass: "profile-label profile-label-border rt0 btr5" },
             [
               _c("span", [
                 _vm._v(
@@ -43908,96 +44072,102 @@ var staticRenderFns = [
             ]
           ),
           _vm._v(" "),
-          _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+          _c("li", { staticClass: "profile-label profile-label-border" }, [
             _c("span", [_vm._v("Institute Name")]),
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+          _c("li", { staticClass: "profile-label profile-label-border" }, [
             _c("span", [_vm._v("Starting Date")]),
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+          _c("li", { staticClass: "profile-label profile-label-border" }, [
             _c("span", [_vm._v("Department")]),
           ]),
           _vm._v(" "),
           _c(
             "li",
-            { staticClass: "profileLabel profileLabelBorder bbl5 v-on-d" },
+            { staticClass: "profile-label profile-label-border bbl5 v-on-d" },
             [_c("span")]
           ),
         ]),
         _vm._v(" "),
-        _c("ul", { staticClass: "profileInfoList" }, [
-          _c("li", { staticClass: "profileInfo profileInfoBorder rt0" }, [
+        _c("ul", { staticClass: "profile-info-list" }, [
+          _c("li", { staticClass: "profile-info profile-info-border rt0" }, [
             _c("div", { staticClass: "line-text-1" }, [
               _c("p", [_vm._v("University")]),
             ]),
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "profileInfo profileInfoBorder" }, [
+          _c("li", { staticClass: "profile-info profile-info-border" }, [
             _c("div", { staticClass: "line-text-1" }, [
               _c("p", [_vm._v("Superior University")]),
             ]),
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "profileInfo profileInfoBorder" }, [
+          _c("li", { staticClass: "profile-info profile-info-border" }, [
             _c("div", { staticClass: "line-text-1" }, [
               _c("p", [_vm._v("09/09/2016")]),
             ]),
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "profileInfo profileInfoBorder" }, [
+          _c("li", { staticClass: "profile-info profile-info-border" }, [
             _c("div", { staticClass: "line-text-1" }, [
               _c("p", [_vm._v("Computer Science")]),
             ]),
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "profileInfo profileInfoBorder rb0 v-on-d" }),
+          _c("li", {
+            staticClass: "profile-info profile-info-border rb0 v-on-d",
+          }),
         ]),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-12 col-md-6" }, [
-        _c("ul", { staticClass: "profileLables" }, [
+        _c("ul", { staticClass: "profile-labels" }, [
           _c(
             "li",
             {
               staticClass:
-                "profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d",
+                "profile-label profile-label-border rt0 rb0 btr5 v-on-d",
             },
             [_c("span")]
           ),
           _vm._v(" "),
           _c(
             "li",
-            { staticClass: "profileLabel profileLabelBorder rt0 v-on-d" },
+            { staticClass: "profile-label profile-label-border rt0 v-on-d" },
             [_c("span")]
           ),
           _vm._v(" "),
-          _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+          _c("li", { staticClass: "profile-label profile-label-border" }, [
             _c("span", [_vm._v("Ending Date")]),
           ]),
           _vm._v(" "),
           _c(
             "li",
-            { staticClass: "profileLabel profileLabelBorder rb0 v-on-d" },
+            { staticClass: "profile-label profile-label-border rb0 v-on-d" },
             [_c("span")]
           ),
           _vm._v(" "),
-          _c("li", { staticClass: "profileLabel bbl5 v-on-d" }, [_c("span")]),
+          _c("li", { staticClass: "profile-label bbl5 v-on-d" }, [_c("span")]),
         ]),
         _vm._v(" "),
-        _c("ul", { staticClass: "profileInfoList" }, [
-          _c("li", { staticClass: "profileInfo v-on-d" }),
+        _c("ul", { staticClass: "profile-info-list" }, [
+          _c("li", { staticClass: "profile-info v-on-d" }),
           _vm._v(" "),
-          _c("li", { staticClass: "profileInfo profileInfoBorder rt0 v-on-d" }),
+          _c("li", {
+            staticClass: "profile-info profile-info-border rt0 v-on-d",
+          }),
           _vm._v(" "),
-          _c("li", { staticClass: "profileInfo profileInfoBorder" }, [
+          _c("li", { staticClass: "profile-info profile-info-border" }, [
             _c("div", { staticClass: "line-text-1" }, [
               _c("p", [_vm._v("20/08/2020")]),
             ]),
           ]),
           _vm._v(" "),
-          _c("li", { staticClass: "profileInfo profileInfoBorder rb0 v-on-d" }),
+          _c("li", {
+            staticClass: "profile-info profile-info-border rb0 v-on-d",
+          }),
         ]),
       ]),
     ])
@@ -44006,7 +44176,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileLabel w-100 bl5" }, [
+    return _c("li", { staticClass: "profile-label w-100 bl5" }, [
       _c("span", [_vm._v("Language Name")]),
     ])
   },
@@ -44014,7 +44184,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileLabel w-100 br5" }, [
+    return _c("li", { staticClass: "profile-label w-100 br5" }, [
       _c("span", [_vm._v("Language Level")]),
     ])
   },
@@ -44022,7 +44192,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileLabel w-100 bl5" }, [
+    return _c("li", { staticClass: "profile-label w-100 bl5" }, [
       _c("span", [_vm._v("Award Name")]),
     ])
   },
@@ -44030,7 +44200,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileLabel w-100 br5" }, [
+    return _c("li", { staticClass: "profile-label w-100 br5" }, [
       _c("span", [_vm._v("Year")]),
     ])
   },
@@ -44038,8 +44208,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 btr5" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
+      _c("li", { staticClass: "profile-label profile-label-border rt0 btr5" }, [
         _c("span", [
           _vm._v(
             "Currently\n                                                    Working"
@@ -44047,15 +44217,15 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Starting Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Ending Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [
           _vm._v(
             "Current\n                                                    Position"
@@ -44063,11 +44233,11 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Current Status")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [
           _vm._v(
             "No of Persons\n                                                    Managed"
@@ -44080,24 +44250,28 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d" },
+        {
+          staticClass: "profile-label profile-label-border rt0 rb0 btr5 v-on-d",
+        },
         [_c("span")]
       ),
       _vm._v(" "),
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorder rt0 rb0 v-on-d" },
+        { staticClass: "profile-label profile-label-border rt0 rb0 v-on-d" },
         [_c("span")]
       ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 v-on-d" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profile-label profile-label-border rt0 v-on-d" },
+        [_c("span")]
+      ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Current Company")]),
       ]),
       _vm._v(" "),
@@ -44105,14 +44279,14 @@ var staticRenderFns = [
         "li",
         {
           staticClass:
-            "profileLabel profileLabelBorder profileLabelBorderBottom",
+            "profile-label profile-label-border profile-label-border-bottom",
         },
         [_c("span", [_vm._v("Current Salary")])]
       ),
       _vm._v(" "),
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorder rb0 rt0 v-on-d" },
+        { staticClass: "profile-label profile-label-border rb0 rt0 v-on-d" },
         [_c("span")]
       ),
     ])
@@ -44121,30 +44295,34 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 btr5" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
+      _c("li", { staticClass: "profile-label profile-label-border rt0 btr5" }, [
         _c("span", [_vm._v("Company")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Position")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Starting Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Current Status")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rb0 v-on-d" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profile-label profile-label-border rb0 v-on-d" },
+        [_c("span")]
+      ),
       _vm._v(" "),
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorder rt0 rb0 bbl5 v-on-d" },
+        {
+          staticClass: "profile-label profile-label-border rt0 rb0 bbl5 v-on-d",
+        },
         [_c("span")]
       ),
     ])
@@ -44153,35 +44331,41 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorder rb0 rt0 btr5 v-on-d" },
+        {
+          staticClass: "profile-label profile-label-border rb0 rt0 btr5 v-on-d",
+        },
         [_c("span")]
       ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 v-on-d" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profile-label profile-label-border rt0 v-on-d" },
+        [_c("span")]
+      ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Ending Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder rb0 v-on-d" }, [
-        _c("span"),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profile-label profile-label-border rb0 v-on-d" },
+        [_c("span")]
+      ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel v-on-d" }, [_c("span")]),
+      _c("li", { staticClass: "profile-label v-on-d" }, [_c("span")]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel bbl5 v-on-d" }, [_c("span")]),
+      _c("li", { staticClass: "profile-label bbl5 v-on-d" }, [_c("span")]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileLabel w-100 bl5" }, [
+    return _c("li", { staticClass: "profile-label w-100 bl5" }, [
       _c("span", [_vm._v("Skills")]),
     ])
   },
@@ -44189,7 +44373,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileLabel w-100 br5" }, [
+    return _c("li", { staticClass: "profile-label w-100 br5" }, [
       _c("span", [_vm._v("Skill Level")]),
     ])
   },
@@ -44198,20 +44382,20 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 col-md-6 br1" }, [
-      _c("ul", { staticClass: "profileLables w-100" }, [
-        _c("li", { staticClass: "profileLabel w-100 bl5" }, [
+      _c("ul", { staticClass: "profile-labels w-100" }, [
+        _c("li", { staticClass: "profile-label w-100 bl5" }, [
           _c("span", [_vm._v("Type")]),
         ]),
         _vm._v(" "),
         _c("li", [
-          _c("ul", { staticClass: "profileInfoList" }, [
-            _c("li", { staticClass: "profileInfo profileInfoBorder rt0" }, [
+          _c("ul", { staticClass: "profile-info-list" }, [
+            _c("li", { staticClass: "profile-info profile-info-border rt0" }, [
               _c("div", { staticClass: "line-text-1" }, [
                 _c("p", { staticClass: "documentsTitle" }, [_vm._v("Resume")]),
               ]),
             ]),
             _vm._v(" "),
-            _c("li", { staticClass: "profileInfo profileInfoBorder rt0" }, [
+            _c("li", { staticClass: "profile-info profile-info-border rt0" }, [
               _c("div", { staticClass: "line-text-1" }, [
                 _c("p", { staticClass: "documentsTitle" }, [
                   _vm._v("CNIC (Front, Back)"),
@@ -44219,15 +44403,19 @@ var staticRenderFns = [
               ]),
             ]),
             _vm._v(" "),
-            _c("li", { staticClass: "profileInfo profileInfoBorder rt0 rb0" }, [
-              _c("div", { staticClass: "line-text-1" }, [
-                _c("p", { staticClass: "documentsTitle" }, [
-                  _vm._v(
-                    "Latest Experience Letter,\n                                                                Certificates"
-                  ),
+            _c(
+              "li",
+              { staticClass: "profile-info profile-info-border rt0 rb0" },
+              [
+                _c("div", { staticClass: "line-text-1" }, [
+                  _c("p", { staticClass: "documentsTitle" }, [
+                    _vm._v(
+                      "Latest Experience Letter,\n                                                                Certificates"
+                    ),
+                  ]),
                 ]),
-              ]),
-            ]),
+              ]
+            ),
           ]),
         ]),
       ]),
@@ -44237,7 +44425,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileLabel w-100 br5" }, [
+    return _c("li", { staticClass: "profile-label w-100 br5" }, [
       _c("span", [_vm._v("View")]),
     ])
   },
@@ -44245,24 +44433,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
-      _c("li", { staticClass: "profileLabel profileLabelBorder rt0 btr5" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
+      _c("li", { staticClass: "profile-label profile-label-border rt0 btr5" }, [
         _c("span", [_vm._v("Name")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Starting Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Ending Date")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Description")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Link")]),
       ]),
     ])
@@ -44271,10 +44459,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [
+      _c("h4", { staticClass: "m-0 modal-title-text" }, [
         _vm._v("Basic Information"),
       ]),
     ])
@@ -44283,38 +44471,40 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [_vm._v("Award")]),
+      _c("h4", { staticClass: "m-0 modal-title-text" }, [_vm._v("Award")]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [_vm._v("Current Job")]),
+      _c("h4", { staticClass: "m-0 modal-title-text" }, [
+        _vm._v("Current Job"),
+      ]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [_vm._v("Education")]),
+      _c("h4", { staticClass: "m-0 modal-title-text" }, [_vm._v("Education")]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
       _c("h4", { staticClass: "m-0" }, [_vm._v("Work Experience")]),
     ])
@@ -44323,8 +44513,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
       _c("h4", { staticClass: "m-0" }, [_vm._v("Work Experience")]),
     ])
@@ -44333,20 +44523,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [_vm._v("Languages")]),
+      _c("h4", { staticClass: "m-0 modal-title-text" }, [_vm._v("Languages")]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [_vm._v("Skills")]),
+      _c("h4", { staticClass: "m-0 modal-title-text" }, [_vm._v("Skills")]),
     ])
   },
   function () {
@@ -44371,10 +44561,10 @@ var staticRenderFns = [
           { staticClass: "modal-dialog modal-dialog-centered modal-lg" },
           [
             _c("div", { staticClass: "modal-content p-0" }, [
-              _c("div", { staticClass: "container editModel pb-5" }, [
+              _c("div", { staticClass: "container edit-modal pb-5" }, [
                 _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                 _vm._v(" "),
-                _c("section", { staticClass: "modelForm" }, [
+                _c("section", { staticClass: "modal-form" }, [
                   _c(
                     "div",
                     {
@@ -44387,12 +44577,14 @@ var staticRenderFns = [
                         { staticClass: "col-12 QualificationSection" },
                         [
                           _c("div", { staticClass: "subForm" }, [
-                            _c("div", { staticClass: "modelTitle my-3" }, [
-                              _c("div", { staticClass: "mr-2 titleEffect" }),
+                            _c("div", { staticClass: "modal-title  my-3" }, [
+                              _c("div", { staticClass: "mr-2 title-effect" }),
                               _vm._v(" "),
-                              _c("h4", { staticClass: "m-0 modelTitleText" }, [
-                                _vm._v("Qualification"),
-                              ]),
+                              _c(
+                                "h4",
+                                { staticClass: "m-0 modal-title-text" },
+                                [_vm._v("Qualification")]
+                              ),
                             ]),
                             _vm._v(" "),
                             _c("div", { staticClass: "subFormFields" }, [
@@ -50419,7 +50611,7 @@ var render = function () {
             [
               _c("form", { attrs: { id: "formData" } }, [
                 _c("div", { staticClass: "modal-content p-0" }, [
-                  _c("div", { staticClass: "container editModel pb-5" }, [
+                  _c("div", { staticClass: "container edit-modal pb-5" }, [
                     _c("h3", { staticClass: "my-4" }, [_vm._v("Post Job")]),
                     _vm._v(" "),
                     _c("input", {
@@ -50445,20 +50637,20 @@ var render = function () {
                     _vm._v(" "),
                     _c(
                       "section",
-                      { staticClass: "modelForm container p-0 p-md-2" },
+                      { staticClass: "modal-form container p-0 p-md-2" },
                       [
                         _c(
                           "div",
                           {
                             staticClass: "row no-gutters",
-                            attrs: { id: "subFormFieldsContainer" },
+                            attrs: { id: "sub-form-fields-container" },
                           },
                           [
                             _c("div", { staticClass: "col-12" }, [
                               _c(
                                 "div",
                                 {
-                                  staticClass: "subForm",
+                                  staticClass: "sub-form",
                                   attrs: { id: "subForm" },
                                 },
                                 [
@@ -52471,10 +52663,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [
+      _c("h4", { staticClass: "m-0 modal-title-text" }, [
         _vm._v("Add more Jobs"),
       ]),
     ])
@@ -52636,7 +52828,7 @@ var render = function () {
       _c("CompanyNavbar"),
       _vm._v(" "),
       _c("div", { staticClass: "profile-wrapper mt-5" }, [
-        _c("div", { staticClass: "row m-0 container p-0" }, [
+        _c("div", { staticClass: "row m-0 container px-1" }, [
           _c("div", { staticClass: "col-12 p-0" }, [
             this.profile.package_id == 0 && this.profile.package.title == "Free"
               ? _c(
@@ -52665,7 +52857,7 @@ var render = function () {
                               to: { name: "PackagePlans" },
                             },
                           },
-                          [_vm._v("UPGRADE")]
+                          [_vm._v("\n                            UPGRADE")]
                         ),
                       ],
                       1
@@ -52700,7 +52892,7 @@ var render = function () {
                 _c(
                   "ul",
                   {
-                    staticClass: "mobileTabsIcons",
+                    staticClass: "mobile-tabs-icons",
                     staticStyle: { display: "none" },
                   },
                   [
@@ -52716,7 +52908,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             attrs: {
                               src: "/website/assets/images/details.svg",
                               alt: "TabsIcon",
@@ -52738,7 +52930,7 @@ var render = function () {
                         },
                         [
                           _c("img", {
-                            staticClass: "IconsTab",
+                            staticClass: "icons-tab",
                             staticStyle: { height: "26px" },
                             attrs: {
                               src: "/website/assets/images/leader.svg",
@@ -52754,7 +52946,7 @@ var render = function () {
                 _c(
                   "div",
                   {
-                    staticClass: "ProfileTabMobileNav",
+                    staticClass: "Profile-tab-mobile-nav",
                     attrs: { id: "ProfileTabMobileNav" },
                     on: {
                       click: function ($event) {
@@ -52778,23 +52970,23 @@ var render = function () {
                         attrs: { id: "basic-information" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Basic information"),
                         ]),
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "row no-gutters BasicInfoTab" },
+                          { staticClass: "row no-gutters basic-info-tab" },
                           [
                             _c("div", { staticClass: "col-12 col-md-6" }, [
                               _vm._m(2),
                               _vm._v(" "),
-                              _c("ul", { staticClass: "profileInfoList" }, [
+                              _c("ul", { staticClass: "profile-info-list" }, [
                                 _c(
                                   "li",
                                   {
                                     staticClass:
-                                      "h150 profileInfo profileInfoBorderBottom",
+                                      "h150 profile-info profile-info-border-bottom",
                                     staticStyle: { height: "150px" },
                                   },
                                   [
@@ -52814,7 +53006,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -52831,7 +53023,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -52848,7 +53040,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -52863,7 +53055,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -52878,7 +53070,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder rb0",
+                                      "profile-info profile-info-border rb0",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -52893,7 +53085,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder rb0 h150",
+                                      "profile-info profile-info-border rb0 h150",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-5" }, [
@@ -52908,7 +53100,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder rb0",
+                                      "profile-info profile-info-border rb0 rm0",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -52926,11 +53118,11 @@ var render = function () {
                             _c("div", { staticClass: "col-12 col-md-6" }, [
                               _vm._m(3),
                               _vm._v(" "),
-                              _c("ul", { staticClass: "profileInfoList" }, [
+                              _c("ul", { staticClass: "profile-info-list" }, [
                                 _c(
                                   "li",
                                   {
-                                    staticClass: "profileInfo h150",
+                                    staticClass: "profile-info h150",
                                     staticStyle: { height: "150px" },
                                   },
                                   [
@@ -52953,7 +53145,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -52968,7 +53160,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileLabelBorderTop",
+                                      "profile-info profile-label-border-top",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -52983,7 +53175,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-2" }, [
@@ -53011,23 +53203,23 @@ var render = function () {
                         attrs: { id: "social-media" },
                       },
                       [
-                        _c("h1", { staticClass: "tabsHeading" }, [
+                        _c("h1", { staticClass: "tabs-heading" }, [
                           _vm._v("Social Media"),
                         ]),
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "row no-gutters EducationInfoTab" },
+                          { staticClass: "row no-gutters education-info-tab" },
                           [
                             _c("div", { staticClass: "col-12 col-md-6" }, [
                               _vm._m(6),
                               _vm._v(" "),
-                              _c("ul", { staticClass: "profileInfoList" }, [
+                              _c("ul", { staticClass: "profile-info-list" }, [
                                 _c(
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder rt0",
+                                      "profile-info profile-info-border rt0",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -53042,7 +53234,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -53057,7 +53249,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -53072,7 +53264,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder",
+                                      "profile-info profile-info-border",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -53087,7 +53279,7 @@ var render = function () {
                                   "li",
                                   {
                                     staticClass:
-                                      "profileInfo profileInfoBorder rb0",
+                                      "profile-info profile-info-border rb0",
                                   },
                                   [
                                     _c("div", { staticClass: "line-text-1" }, [
@@ -53188,25 +53380,25 @@ var render = function () {
             [
               _c("form", { attrs: { id: "basicinformationForm" } }, [
                 _c("div", { staticClass: "modal-content p-0" }, [
-                  _c("div", { staticClass: "container editModel pb-5" }, [
+                  _c("div", { staticClass: "container edit-modal pb-5" }, [
                     _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                     _vm._v(" "),
                     _c(
                       "section",
-                      { staticClass: "modelForm container p-0 p-md-2" },
+                      { staticClass: "modal-form container p-0 p-md-2" },
                       [
                         _c(
                           "div",
                           {
                             staticClass: "row no-gutters",
-                            attrs: { id: "subFormFieldsContainer" },
+                            attrs: { id: "sub-form-fields-container" },
                           },
                           [
                             _c("div", { staticClass: "col-12" }, [
                               _c(
                                 "div",
                                 {
-                                  staticClass: "subForm",
+                                  staticClass: "sub-form",
                                   attrs: { id: "subForm" },
                                 },
                                 [
@@ -53832,10 +54024,10 @@ var render = function () {
             [
               _c("form", { attrs: { id: "socialmediaForm" } }, [
                 _c("div", { staticClass: "modal-content p-0" }, [
-                  _c("div", { staticClass: "container editModel pb-5" }, [
+                  _c("div", { staticClass: "container edit-modal pb-5" }, [
                     _c("h3", { staticClass: "my-4" }, [_vm._v("Update")]),
                     _vm._v(" "),
-                    _c("section", { staticClass: "modelForm" }, [
+                    _c("section", { staticClass: "modal-form" }, [
                       _c(
                         "div",
                         {
@@ -53844,7 +54036,7 @@ var render = function () {
                         },
                         [
                           _c("div", { staticClass: "col-12 EductionSection" }, [
-                            _c("div", { staticClass: "subForm" }, [
+                            _c("div", { staticClass: "sub-form" }, [
                               _vm._m(10),
                               _vm._v(" "),
                               _c("div", { staticClass: "subFormFields" }, [
@@ -54154,16 +54346,16 @@ var staticRenderFns = [
         attrs: { role: "tablist", id: "DesktopTabsIcons" },
       },
       [
-        _c("li", { staticClass: "nav-item profileIconTab" }, [
+        _c("li", { staticClass: "nav-item profile-icon-tab" }, [
           _c("img", {
-            staticClass: "profileIcon",
+            staticClass: "profile-icon",
             attrs: {
               src: "/website/assets/images/dashboard-interface.svg",
               alt: "img",
             },
           }),
           _vm._v(" "),
-          _c("span", { staticClass: "profileText" }, [_vm._v("Profile")]),
+          _c("span", { staticClass: "profile-text" }, [_vm._v("Profile")]),
         ]),
         _vm._v(" "),
         _c("li", { staticClass: "nav-item" }, [
@@ -54194,12 +54386,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row no-gutters modalTabConatiner" }, [
-      _c("div", { staticClass: "IconsModal" }, [
-        _c("ul", { staticClass: "mobileModalTabsIcons p-0" }, [
+    return _c("div", { staticClass: "row no-gutters modal-tab-conatiner" }, [
+      _c("div", { staticClass: "icons-modal" }, [
+        _c("ul", { staticClass: "mobile-modal-tabs-icons p-0" }, [
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               attrs: {
                 src: "/website/assets/images/details.svg",
                 alt: "TabsIcon",
@@ -54209,7 +54401,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", [
             _c("img", {
-              staticClass: "IconsTab",
+              staticClass: "icons-tab",
               staticStyle: { height: "26px" },
               attrs: {
                 src: "/website/assets/images/leader.svg",
@@ -54220,7 +54412,7 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "IconsModalTabAnkers" }, [
+      _c("div", { staticClass: "icons-modal-tab-ankers" }, [
         _c("ul", { staticClass: "nav nav-tabs", attrs: { role: "tablist" } }, [
           _c("li", { staticClass: "nav-item" }, [
             _c(
@@ -54255,106 +54447,114 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
       _c(
         "li",
-        { staticClass: "profileLabel h150 profileLabelBorder rt0 btr5" },
+        { staticClass: "profile-label h150 profile-label-border rt0 btr5" },
         [_c("span", [_vm._v("Logo")])]
       ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Name")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Founded")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Ceo")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("span", [_vm._v("Industry")]),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder bbl5" }, [
+      _c("li", { staticClass: "profile-label profile-label-border bbl5 rmo" }, [
         _c("span", [_vm._v("Weblink")]),
       ]),
       _vm._v(" "),
       _c(
         "li",
-        { staticClass: "profileLabel profileLabelBorderTop bbl5 h150" },
+        { staticClass: "profile-label profile-label-border-top bbl5 h150" },
         [_c("span", [_vm._v("Description")])]
       ),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorderTop bbl5" }, [
-        _c("span", [
-          _vm._v(
-            "No of\n                                                    Employees"
-          ),
-        ]),
-      ]),
+      _c(
+        "li",
+        { staticClass: "profile-label profile-label-border-top bbl5 rmo" },
+        [
+          _c("span", [
+            _vm._v(
+              "No of\n                                                    Employees"
+            ),
+          ]),
+        ]
+      ),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
       _c("li", [
         _c(
           "span",
-          { staticClass: "profileLabel h150 profileLabelBorder rt0 btr5" },
+          {
+            staticClass: "profile-label h150 profile-label-border rt0 btr5 rm0",
+          },
           [_vm._v("Phone")]
         ),
       ]),
       _vm._v(" "),
       _c("li", [
-        _c("span", { staticClass: "profileLabel profileLabelBorder" }, [
+        _c("span", { staticClass: "profile-label profile-label-border" }, [
           _vm._v("Email"),
         ]),
       ]),
       _vm._v(" "),
       _c("li", [
-        _c("span", { staticClass: "profileLabel profileLabelBorder" }, [
+        _c("span", { staticClass: "profile-label profile-label-border" }, [
           _vm._v("City"),
         ]),
       ]),
       _vm._v(" "),
       _c("li", [
-        _c("span", { staticClass: "profileLabel profileLabelBorder" }, [
+        _c("span", { staticClass: "profile-label profile-label-border" }, [
           _vm._v("Address"),
         ]),
       ]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel" })]),
+      _c("li", [_c("span", { staticClass: "profile-label v-on-d" })]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel" })]),
+      _c("li", [_c("span", { staticClass: "profile-label v-on-d" })]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel h150" })]),
+      _c("li", [_c("span", { staticClass: "profile-label h150 v-on-d" })]),
       _vm._v(" "),
-      _c("li", [_c("span", { staticClass: "profileLabel bb5" })]),
+      _c("li", [_c("span", { staticClass: "profile-label bb5 v-on-d" })]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "profileInfo profileLabelBorderTop" }, [
-      _c("div", { staticClass: "line-text-2" }, [_c("p")]),
-    ])
+    return _c(
+      "li",
+      { staticClass: "profile-info profile-label-border-top v-on-d" },
+      [_c("div", { staticClass: "line-text-2" }, [_c("p")])]
+    )
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "viewEditAnkerList" }, [
+    return _c("ul", { staticClass: "view-edit-anker-list" }, [
       _c("li", [
         _c(
           "a",
           {
-            staticClass: "ViewEdit",
+            staticClass: "view-edit",
             attrs: {
               href: ".basicInfoModal",
               "data-toggle": "modal",
@@ -54370,32 +54570,32 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "profileLables" }, [
-      _c("li", { staticClass: "profileLabel profileLabelBorder btr5" }, [
+    return _c("ul", { staticClass: "profile-labels" }, [
+      _c("li", { staticClass: "profile-label profile-label-border btr5" }, [
         _c("img", {
           attrs: { src: "/website/assets/images/whatsapp.svg", alt: "" },
         }),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("img", {
           attrs: { src: "/website/assets/images/facebook.svg", alt: "" },
         }),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("img", {
           attrs: { src: "/website/assets/images/linkedin.svg", alt: "" },
         }),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("img", {
           attrs: { src: "/website/assets/images/twitter.svg", alt: "" },
         }),
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "profileLabel profileLabelBorder" }, [
+      _c("li", { staticClass: "profile-label profile-label-border" }, [
         _c("img", {
           attrs: { src: "/website/assets/images/github.svg", alt: "" },
         }),
@@ -54406,12 +54606,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "viewEditAnkerList" }, [
+    return _c("ul", { staticClass: "view-edit-anker-list" }, [
       _c("li", [
         _c(
           "a",
           {
-            staticClass: "ViewEdit",
+            staticClass: "view-edit",
             attrs: {
               href: ".SocialMediaModal",
               "data-toggle": "modal",
@@ -54427,10 +54627,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [
+      _c("h4", { staticClass: "m-0 modal-title-text" }, [
         _vm._v("Basic Information"),
       ]),
     ])
@@ -54454,10 +54654,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modelTitle my-3" }, [
-      _c("div", { staticClass: "mr-2 titleEffect" }),
+    return _c("div", { staticClass: "modal-title  my-3" }, [
+      _c("div", { staticClass: "mr-2 title-effect" }),
       _vm._v(" "),
-      _c("h4", { staticClass: "m-0 modelTitleText" }, [_vm._v("Social Media")]),
+      _c("h4", { staticClass: "m-0 modal-title-text" }, [
+        _vm._v("Social Media"),
+      ]),
     ])
   },
   function () {
@@ -54468,7 +54670,11 @@ var staticRenderFns = [
       _c("div", { staticClass: "form-group" }, [
         _c("label", { attrs: { for: "companyGallery" } }, [
           _vm._v("Company Pics "),
-          _c("small", [_vm._v("(Max upload4)")]),
+          _c("small", [
+            _vm._v(
+              "(Max\n                                                                upload4)"
+            ),
+          ]),
         ]),
         _vm._v(" "),
         _c("input", {
@@ -55602,7 +55808,7 @@ var staticRenderFns = [
             [
               _c("div", { staticClass: "nav__col mb-4" }, [
                 _c("div", { staticClass: "footer-heading-div mb-2" }, [
-                  _c("div", { staticClass: "mr-2 footer-titleEffect" }),
+                  _c("div", { staticClass: "mr-2 footer-title-effect" }),
                   _vm._v(" "),
                   _c("span", { staticClass: "nav__col-title" }, [
                     _vm._v("For Employers"),
@@ -55637,7 +55843,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("div", { staticClass: "nav__col mb-4" }, [
                 _c("div", { staticClass: "footer-heading-div mb-2" }, [
-                  _c("div", { staticClass: "mr-2 footer-titleEffect" }),
+                  _c("div", { staticClass: "mr-2 footer-title-effect" }),
                   _vm._v(" "),
                   _c("span", { staticClass: "nav__col-title" }, [
                     _vm._v("For Candidates"),
@@ -55668,7 +55874,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("div", { staticClass: "nav__col mb-4" }, [
                 _c("div", { staticClass: "footer-heading-div mb-2" }, [
-                  _c("div", { staticClass: "mr-2 footer-titleEffect" }),
+                  _c("div", { staticClass: "mr-2 footer-title-effect" }),
                   _vm._v(" "),
                   _c("span", { staticClass: "nav__col-title" }, [
                     _vm._v("Our Expertise"),
@@ -55698,7 +55904,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("div", { staticClass: "nav__col mb-4" }, [
                 _c("div", { staticClass: "footer-heading-div mb-2" }, [
-                  _c("div", { staticClass: "mr-2 footer-titleEffect" }),
+                  _c("div", { staticClass: "mr-2 footer-title-effect" }),
                   _vm._v(" "),
                   _c("span", { staticClass: "nav__col-title" }, [
                     _vm._v("Resources"),
@@ -55720,7 +55926,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("div", { staticClass: "nav__col mb-4" }, [
                 _c("div", { staticClass: "footer-heading-div mb-2" }, [
-                  _c("div", { staticClass: "mr-2 footer-titleEffect" }),
+                  _c("div", { staticClass: "mr-2 footer-title-effect" }),
                   _vm._v(" "),
                   _c("span", { staticClass: "nav__col-title" }, [
                     _vm._v("About Bizblanca"),
@@ -55755,7 +55961,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("div", { staticClass: "nav__col mb-4" }, [
                 _c("div", { staticClass: "footer-heading-div mb-2" }, [
-                  _c("div", { staticClass: "mr-2 footer-titleEffect" }),
+                  _c("div", { staticClass: "mr-2 footer-title-effect" }),
                   _vm._v(" "),
                   _c("span", { staticClass: "nav__col-title" }, [
                     _vm._v("Contact"),
@@ -55802,7 +56008,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-4 col-12 offset-lg-1 p-0" }, [
             _c("div", { staticClass: "footer-heading-div mb-2" }, [
-              _c("div", { staticClass: "mr-2 footer-titleEffect" }),
+              _c("div", { staticClass: "mr-2 footer-title-effect" }),
               _vm._v(" "),
               _c("h3", { staticClass: "h4 m-0" }, [_vm._v("NEWS LETTER")]),
             ]),

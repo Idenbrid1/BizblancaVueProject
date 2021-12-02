@@ -12,9 +12,34 @@ $(document).ready(function () {
             count = 0;
         }
     });
-})
+});
 
-var swiper = new Swiper(".helpslider", {
+function removeExperience(e) {
+    let targetvalue = e.target;
+    $(targetvalue).parent().parent().parent().remove();
+}
+
+function openProfileTab() {
+    document.getElementById("Profile-tab-mobile-nav").style.left = "0%";
+}
+
+function closeProfileTab() {
+    document.getElementById("Profile-tab-mobile-nav").style.left = "-100%";
+}
+
+
+let NavBarToggle = 0;
+
+function ShowNavbar() {
+    if (NavBarToggle == 0) {
+        document.getElementById("nav-lists").classList.add("_Menus-show");
+        NavBarToggle++
+    } else {
+        NavBarToggle = 0;
+        document.getElementById("nav-lists").classList.remove("_Menus-show");
+    }
+}
+var swiper = new Swiper(".help-slider", {
     cssMode: true,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -170,7 +195,7 @@ var swiper = new Swiper(".logoslider", {
 
 // add qualification
 let addEducationHtml = `
-  <div class="subForm w-100">
+  <div class="sub-form w-100">
   <div class="modelTitle my-3">
                               <div class='d-flex w-100'>
                                 <div class="mr-2 titleEffect"></div>
@@ -179,7 +204,7 @@ let addEducationHtml = `
                               <i onclick="removeSection(event)" class="fas fa-times"></i>
                               
                           </div>
-              <div class="subFormFields">
+              <div class="sub-formFields">
   <div class="row">
       <div class="col-lg-6 mb-2">
           <label class="modelLabel" for="institute">Institute Type</label>
@@ -218,8 +243,8 @@ let addEducationHtml = `
   </div>
   `;
 $("#addEducationBtn").on("click", function () {
-    if ($(".subForm").length < 3) {
-        $("#subFormFieldsContainer").append(addEducationHtml);
+    if ($(".sub-form").length < 3) {
+        $("#sub-formFieldsContainer").append(addEducationHtml);
     } else {
         window.alert("You can add maximum 3 qualifications.");
         //   $('#addqualificationbtn').addClass('d-none');
@@ -234,7 +259,7 @@ function removeSection(e) {
 // add qualification
 
 let addQualificationHtml = `
-  <div class="subForm w-100">
+  <div class="sub-form w-100">
   <div class="modelTitle my-3">
                               <div class='d-flex w-100'>
                                 <div class="mr-2 titleEffect"></div>
@@ -243,7 +268,7 @@ let addQualificationHtml = `
                               <i onclick="removeSection(event)" class="fas fa-times"></i>
                               
                           </div>
-              <div class="subFormFields">
+              <div class="sub-formFields">
   <div class="row">
       <div class="col-lg-6 mb-2">
           <label class="modelLabel" for="institute">Institute Type</label>
@@ -282,8 +307,8 @@ let addQualificationHtml = `
   </div>
   `;
 $("#addQualificationBtn").on("click", function () {
-    if ($(".subForm").length < 3) {
-        $("#subFormFieldsContainer").append(addQualificationHtml);
+    if ($(".sub-form").length < 3) {
+        $("#sub-formFieldsContainer").append(addQualificationHtml);
     } else {
         window.alert("You can add maximum 3 qualifications.");
     }
@@ -295,7 +320,7 @@ function removeSection(e) {
 }
 // Desired Job
 let desiredJob = `<div class="col-12">
-  <div id='subForm' class="subForm">
+  <div id='sub-form' class="sub-form">
   <div class="modelTitle my-3">
   <div class='d-flex w-100'>
     <div class="mr-2 titleEffect"></div>
@@ -304,7 +329,7 @@ let desiredJob = `<div class="col-12">
   <i onclick="removeExperience(event)" class="fas fa-times"></i>
   
   </div>
-      <div class="subFormFields">
+      <div class="sub-formFields">
           <div class="row">
               <div class="col-lg-6">
                   <label class="modelLabel" for="currentStatus">Looking for Job</label>
@@ -352,8 +377,8 @@ let desiredJob = `<div class="col-12">
   </div>
   </div>`
 $("#addDesiredJobBtn").on("click", function () {
-    if ($(".subForm").length < 3) {
-        $("#subFormFieldsContainer").append(desiredJob);
+    if ($(".sub-form").length < 3) {
+        $("#sub-formFieldsContainer").append(desiredJob);
     } else {
         window.alert("You can add maximum 3 qualifications.");
     }
@@ -884,8 +909,8 @@ let languageModel = `
   
                               `;
 $("#addLanguageBtn").on("click", function () {
-    if ($(".subFormFields").length < 6) {
-        $(".subFormFields").append(languageModel);
+    if ($(".sub-formFields").length < 6) {
+        $(".sub-formFields").append(languageModel);
     } else {
         window.alert("You can add maximum 3 Jobs.");
     }
@@ -898,7 +923,7 @@ function removeLanguage(e) {
 //project
 let projectHTML = `
   <div class="col-12">
-                      <div id='subForm' class="subForm">
+                      <div id='sub-form' class="sub-form">
                       <div class="modelTitle my-3">
                       <div class='d-flex w-100'>
                         <div class="mr-2 titleEffect"></div>
@@ -907,7 +932,7 @@ let projectHTML = `
                       <i onclick="removeExperience(event)" class="fas fa-times"></i>
                       
                   </div>
-                          <div class="subFormFields">
+                          <div class="sub-formFields">
                               <div class="row">
                                   <div class="col-lg-6 mb-2">
                                       <label class="modelLabel" for="projectName">Project Name</label>
@@ -939,8 +964,8 @@ let projectHTML = `
                   </div>
   `
 $("#addProjectBtn").on("click", function () {
-    if ($(".subForm").length < 3) {
-        $("#subFormFieldsContainer").append(projectHTML);
+    if ($(".sub-form").length < 3) {
+        $("#sub-formFieldsContainer").append(projectHTML);
     } else {
         window.alert("You can add maximum 3 Jobs.");
     }
@@ -953,7 +978,7 @@ function removeLanguage(e) {
 // current Job
 let jobExperience = `
   <div class="col-12">
-  <div id='subForm' class="subForm">
+  <div id='sub-form' class="sub-form">
   <div class="modelTitle my-3">
                               <div class='d-flex w-100'>
                                 <div class="mr-2 titleEffect"></div>
@@ -962,7 +987,7 @@ let jobExperience = `
                               <i onclick="removeExperience(event)" class="fas fa-times"></i>
                               
                           </div>
-      <div class="subFormFields">
+      <div class="sub-formFields">
           <div class="row">
               <div class="col-lg-6">
                   <label class="modelLabel" for="currentStatus">Current Working</label>
@@ -1020,8 +1045,8 @@ let jobExperience = `
   </div>
                               `;
 $("#addJobBtn").on("click", function () {
-    if ($(".subFormFields").length < 3) {
-        $("#subFormFieldsContainer").append(jobExperience);
+    if ($(".sub-formFields").length < 3) {
+        $("#sub-formFieldsContainer").append(jobExperience);
     } else {
         window.alert("You can add maximum 3 Jobs.");
     }
@@ -1193,7 +1218,7 @@ $("#addLanguageBtn").on("click", function () {
 
 // award
 let singleAward = `
-  <div class="subFormFieldsRow row mt-3">
+  <div class="sub-formFieldsRow row mt-3">
                                   <div class="col-lg-6 mb-2">
                                       <label class="modelLabel" for="award">Award Name</label>
                                       <input name="award" class="modelInput" placeholder="Enter Award Name">
@@ -1208,8 +1233,8 @@ let singleAward = `
                               </div>`;
 
 $("#addAwardBtn").on("click", function () {
-    if ($(".subFormFieldsRow").length < 3) {
-        $(".subFormFields").append(singleAward);
+    if ($(".sub-formFieldsRow").length < 3) {
+        $(".sub-formFields").append(singleAward);
     } else {
         window.alert("You can add maximum 5 awards.");
     }
@@ -1221,7 +1246,7 @@ function removeAward(e) {
 }
 let singleExperience = `
   <div class="col-12">
-                      <div id='subForm' class="subForm">
+                      <div id='sub-form' class="sub-form">
                       
                           <div class="modelTitle my-3">
                               <div class='d-flex w-100'>
@@ -1231,7 +1256,7 @@ let singleExperience = `
                               <i onclick="removeExperience(event)" class="fas fa-times"></i>
                               
                           </div>
-                          <div class="subFormFields">
+                          <div class="sub-formFields">
                               <div class="row">
                                   <div class="col-lg-6 mb-2">
                                       <label class="modelLabel" for="compnay">Company</label>
@@ -1269,35 +1294,9 @@ let singleExperience = `
       `;
 
 $("#addExperiencesBtn").on("click", function () {
-    if ($(".subFormFields").length < 3) {
-        $("#subFormFieldsContainer").append(singleExperience);
+    if ($(".sub-formFields").length < 3) {
+        $("#sub-formFieldsContainer").append(singleExperience);
     } else {
         window.alert("You can add maximum 3 experience.");
     }
 });
-
-function removeExperience(e) {
-    let targetvalue = e.target;
-    $(targetvalue).parent().parent().parent().remove();
-}
-
-function openProfileTab() {
-    document.getElementById("ProfileTabMobileNav").style.left = "0%";
-}
-
-function closeProfileTab() {
-    document.getElementById("ProfileTabMobileNav").style.left = "-100%";
-}
-
-
-let NavBarToggle = 0;
-
-function ShowNavbar() {
-    if (NavBarToggle == 0) {
-        document.getElementById("nav-lists").classList.add("_Menus-show");
-        NavBarToggle++
-    } else {
-        NavBarToggle = 0;
-        document.getElementById("nav-lists").classList.remove("_Menus-show");
-    }
-}

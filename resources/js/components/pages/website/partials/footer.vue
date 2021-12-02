@@ -6,7 +6,7 @@
                <nav aria-label="main-footer-nav" class="nav col-lg-7 col-12 p-0">
                   <div class="nav__col mb-4">
                      <div class="footer-heading-div mb-2">
-                        <div class="mr-2 footer-titleEffect"></div>
+                        <div class="mr-2 footer-title-effect"></div>
                         <span class="nav__col-title">For Employers</span>
                      </div>
                      <a href="#" class="nav__item" target="_blank">Authorise Timesheets</a>
@@ -17,7 +17,7 @@
                   </div>
                   <div class="nav__col mb-4">
                      <div class="footer-heading-div mb-2">
-                        <div class="mr-2 footer-titleEffect"></div>
+                        <div class="mr-2 footer-title-effect"></div>
                         <span class="nav__col-title">For Candidates</span>
                      </div>
                      <a href="#" class="nav__item" target="_blank">Submit Timesheets</a>
@@ -27,7 +27,7 @@
                   </div>
                   <div class="nav__col mb-4">
                      <div class="footer-heading-div mb-2">
-                        <div class="mr-2 footer-titleEffect"></div>
+                        <div class="mr-2 footer-title-effect"></div>
                         <span class="nav__col-title">Our Expertise</span>
                      </div>
                      <a class="nav__item" href="#">Accountancy &amp; Finance</a>
@@ -38,7 +38,7 @@
                   </div>
                   <div class="nav__col mb-4">
                      <div class="footer-heading-div mb-2">
-                        <div class="mr-2 footer-titleEffect"></div>
+                        <div class="mr-2 footer-title-effect"></div>
                         <span class="nav__col-title">Resources</span>
                      </div>
                      <a class="nav__item" href="#">Articles</a>
@@ -47,7 +47,7 @@
                   </div>
                   <div class="nav__col mb-4">
                      <div class="footer-heading-div mb-2">
-                        <div class="mr-2 footer-titleEffect"></div>
+                        <div class="mr-2 footer-title-effect"></div>
                         <span class="nav__col-title">About Bizblanca</span>
                      </div>
                      <a class="nav__item" href="#">Our Story</a>
@@ -58,7 +58,7 @@
                   </div>
                   <div class="nav__col mb-4">
                      <div class="footer-heading-div mb-2">
-                        <div class="mr-2 footer-titleEffect"></div>
+                        <div class="mr-2 footer-title-effect"></div>
                         <span class="nav__col-title">Contact</span>
                      </div>
                      <a class="nav__item" href="#">Find a Reed Office</a>
@@ -70,7 +70,7 @@
                </nav>
                <div class="col-lg-4 col-12 offset-lg-1 p-0">
                   <div class="footer-heading-div mb-2">
-                     <div class="mr-2 footer-titleEffect"></div>
+                     <div class="mr-2 footer-title-effect"></div>
                      <h3 class="h4 m-0">NEWS LETTER</h3>
                   </div>
                   <p>Please enter your email to subscribe our news letter!</p>

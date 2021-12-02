@@ -14,7 +14,7 @@
                         </div>
                     </section>
                     <div class="col-md-8 col-12 right-register">
-                        <div class="loginText">
+                        <div class="login-text">
                             <h1>Create Account</h1>
                             <ul class="nav nav-tabs border-0" role="tablist">
                                 <li class="nav-item">
@@ -33,8 +33,8 @@
                                     <div class="row m-0">
                                         <div class="col-12 p-0">
                                             <section class="row m-0">
-                                                <div class="col-12 registerTab">
-                                                    <div class="loginFeilds">
+                                                <div class="col-12 register-tab">
+                                                    <div class="login-feilds">
                                                         <div class="form-group">
                                                             <input class="is-invali" type="text"
                                                                 v-model="candidate_record.name" placeholder="Your Name"
@@ -100,13 +100,13 @@
                                                         </div>
                                                         <br />
                                                     </div>
-                                                    <div class="loginButton">
+                                                    <div class="login-button">
                                                         <button>Sign Up</button>
                                                         <a href="#">or<br />
                                                             Sign up with</a>
                                                     </div>
-                                                    <div class="directLogin">
-                                                        <ul class="directLoginIcons">
+                                                    <div class="direct-login">
+                                                        <ul class="direct-login-icons">
                                                             <li>
                                                                 <a href="#"><img src="/website/assets/images/search.svg"
                                                                         alt="google" /></a>
@@ -144,8 +144,8 @@
                                     <div class="row m-0">
                                         <div class="col-12 p-0">
                                             <section class="row m-0">
-                                                <div class="col-12 registerTab">
-                                                    <div class="loginFeilds">
+                                                <div class="col-12 register-tab">
+                                                    <div class="login-feilds">
                                                         <div class="form-group">
                                                             <input class="is-invali" type="text"
                                                                 v-model="company_record.name" placeholder="Your Name"
@@ -222,14 +222,14 @@
                                                         </div>
                                                         <br />
                                                     </div>
-                                                    <div class="loginButton">
+                                                    <div class="login-button">
                                                         <button>Sign Up</button>
                                                         <router-link data-toggle="collapse" :to="{ name: 'Signup' }">
                                                             or<br />
                                                             Sign up with</router-link>
                                                     </div>
-                                                    <div class="directLogin">
-                                                        <ul class="directLoginIcons">
+                                                    <div class="direct-login">
+                                                        <ul class="direct-login-icons">
                                                             <li>
                                                                 <a href="#"><img src="/website/assets/images/search.svg"
                                                                         alt="google" /></a>

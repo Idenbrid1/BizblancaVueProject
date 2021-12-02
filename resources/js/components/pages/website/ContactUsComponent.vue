@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 px-2 py-4">
-                                    <a @click.prevent="submitContactUs()" class="contact-submit-anker w-100 d-block text-center">Send
+                                    <a @click.prevent="submitContactUs()" class="contact-submit-anker">Send
                                     </a>
                                 </div>
                             </div>

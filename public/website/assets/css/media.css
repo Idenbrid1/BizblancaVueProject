@@ -1,151 +1,320 @@
-
+/* for common mobile devices */
 @media screen and (max-width:769px) {
-    .login-wrapper{
+
+    .video-heading,
+    .site-heading {
+        font-size: 20px;
+    }
+    .rm0 {
+        border-radius: 0px !important;   
+    }
+    .banner-sec-2-img {
+        width: 200px;
+        height: 175px;
+    }
+
+    .testimonial-card {
+        padding: 40px 0px;
+    }
+
+    .company-flow {
+        padding: 10px 0px;
+    }
+
+    .company-flow>h4 {
+        margin: 15px 0px;
+    }
+
+    .testimonial-card-box {
+        width: 80px;
+        padding: 6px 15px;
+    }
+
+    .testimonial-card-box-content {
+        font-size: 12px;
+    }
+
+    .testimonial-card-3 {
+        border-right: none;
+    }
+
+    .testimonial-card-4 {
+        border-top: 1px solid #081351;
+    }
+
+    .testimonial-card h1 {
+        font-size: 20px;
+    }
+
+    .company-rights>a {
+        margin: 2px 0px;
+    }
+
+    .company-rights {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .social-icons-footer {
+        margin: 5px 0px;
+    }
+
+    .blue-inner-box {
+        margin: 0px 20px 0px auto;
+        max-width: 86%;
+    }
+    .company-capacity>h4 {
+		border-radius: 20px 20px 0px 0px;
+		font-size: 18px;
+		padding: 13px;
+	}
+	.company-faq-box {
+		width: 165px;
+		height: 170px;
+		border: 1px solid #081351;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.question {
+		font-size: 19px;
+	}
+    .banner-sec-1 {
+        position: relative;
+        height: 100%;
+    }
+    .company-faqs {
+        padding: 10px 0px;
+    }
+    .left-box-banner {
+        width: 100%;
+        padding-top: 0.5rem;
+    }
+
+    .company-banner {
+        flex-direction: column-reverse;
+    }
+
+    .blue-inner-box h4 {
+        font-size: 20px;
+    }
+
+    .banner-sec1-box1 {
+        font-size: 14px;
+        padding: 7px 24px;
+    }
+
+    .blue-inner-box>p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .banner-sec1-box2 a {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+
+    .left-box-banner h4 {
+        font-size: 20px;
+        color: #000000;
+    }
+
+    .left-box-banner>p {
+        font-size: 12px;
+    }
+
+    .login-wrapper {
         border: none;
     }
+
     .v-on-d {
         display: none !important;
     }
+
     .v-on-m {
         display: block;
     }
-    .candidate-detail-img{
+
+    .candidate-detail-img {
         height: 120px;
         width: 120px;
     }
-    .terms-condition-container, .privacy-policy-container{
+
+    .terms-condition-container,
+    .privacy-policy-container {
         padding: 0px;
     }
-    .job-list{
+
+    .job-list {
         margin: 15px;
     }
+
     .terms-condition-queries>li>h1,
-    .privacy-policy-queries>li>h1
-    {
+    .privacy-policy-queries>li>h1 {
         font-size: 20px;
     }
-    .list-services > .services-box, .list-socaial > .services-box{
-        width:100%;
+
+    .list-services>.services-box,
+    .list-socaial>.services-box {
+        width: 100%;
     }
-    .terms-condition-queries>li>p
-    .privacy-policy-queries>li>p
-    {
+
+    .terms-condition-queries>li>p .privacy-policy-queries>li>p {
         font-size: 12px;
     }
-    .faq-tabs-list > li > a{
+
+    .faq-tabs-list>li>a {
         width: 100px;
         height: 70px;
         font-size: 12px;
     }
-    .faq-title{
+
+    .faq-title {
         margin-top: 52px;
     }
-    .faq-title > h1{
+
+    .faq-title>h1 {
         font-size: 20px;
     }
-    .faq-title > p{
+
+    .faq-title>p {
         font-size: 16px;
     }
-    .contact-page-feilds, .office-info{
+
+    .contact-page-feilds,
+    .office-info {
         width: 100%;
     }
-    .msg-user-name > h2, .msg-title{
+
+    .msg-user-name>h2,
+    .msg-title {
         font-size: 14px;
     }
-    .show-more-anker{
+
+    .show-more-anker {
         padding: 15px;
     }
-    .show-more-common{
+
+    .show-more-common {
         font-size: 12px;
         padding: 8px 10px;
     }
-    .notify-unread-msgs{
+
+    .notify-unread-msgs {
         font-size: 14px;
     }
-    .notify-unread-msgs>span{
+
+    .notify-unread-msgs>span {
         font-size: 16px;
     }
-    .msg-time-date, .msg-description{
+
+    .msg-time-date,
+    .msg-description {
         font-size: 12px;
     }
-    .msg-wrap{
+
+    .msg-wrap {
         padding: 10px !important;
     }
-    .candidate-single{
+
+    .candidate-single {
         width: 100%;
     }
-    .pricing-plan-title{
+
+    .pricing-plan-title {
         margin-top: 48px;
         height: 50px;
         font-size: 20px;
     }
-    .help-queries-wrap{
+
+    .help-queries-wrap {
         padding: 0px;
     }
-    .help-queries{
+
+    .help-queries {
         padding-left: 0px;
         border: none;
     }
-    .need-help-title{
+
+    .need-help-title {
         font-size: 20px;
     }
-    .package-plan-title{
+
+    .package-plan-title {
         font-size: 16px;
         font-weight: 500;
     }
-    .about-pricing>p{
+
+    .about-pricing>p {
         font-size: 16px;
         margin-top: 10px;
     }
-    .about-pricing>p>span{
+
+    .about-pricing>p>span {
         font-size: 20px;
     }
-    .package-benefits{
+
+    .package-benefits {
         padding: 15px;
     }
-    .about-pricing>.plan-description, .package-benefits-list>li{
+
+    .about-pricing>.plan-description,
+    .package-benefits-list>li {
         font-size: 12px;
     }
-    .pricing-detail-box{
+
+    .pricing-detail-box {
         height: auto;
     }
-    .buy-plan-anker{
+
+    .buy-plan-anker {
         border-radius: 3px;
         font-size: 12px;
         height: 30px;
     }
 
-    .about-pricing>.plan-description{
+    .about-pricing>.plan-description {
         margin: 0px;
     }
-    .help-queries>h4{
+
+    .help-queries>h4 {
         font-size: 14px
     }
-    .help-queries>p{
+
+    .help-queries>p {
         font-size: 12px;
     }
-    .read-more-descrp{
+
+    .read-more-descrp {
         font-size: 12px;
         padding-top: 5px;
     }
-    .get-free-trial{
-        margin:15px 0px;
+
+    .get-free-trial {
+        margin: 15px 0px;
     }
-    .get-free-trial>h2{
+
+    .get-free-trial>h2 {
         font-size: 20px;
     }
-    .package-box{
+
+    .package-box {
         margin: 4px 2px;
         width: 100%;
     }
+
     .pacakges-plan-container {
         padding: 0px 11px;
     }
-    .get-free-trial>p{
+
+    .get-free-trial>p {
         font-size: 12px;
         margin-bottom: 0px;
     }
-    .candidate-send-msg{
+
+    .candidate-send-msg {
         height: 30px;
         width: 120px;
         font-size: 12px;
@@ -153,203 +322,259 @@
         text-align: center;
         line-height: 30px;
     }
+
     .ionic-send-msg {
         padding-right: 5px;
         height: 10px;
     }
-    .candidate-profile-container{
+
+    .candidate-profile-container {
         margin-top: 55px;
     }
-    .candidate-detail-list>li>p{
+
+    .candidate-detail-list>li>p {
         margin-top: 0px;
         font-size: 16px;
     }
-    .candidate-detail-list-m>li{
+
+    .candidate-detail-list-m>li {
         font-size: 12px;
         margin: 10px 0px;
-     }
-     .candidate-designation, .detail-label{
-         font-size: 14px;
-     }
-    .company-logo{
+    }
+
+    .candidate-designation,
+    .detail-label {
+        font-size: 14px;
+    }
+
+    .company-logo {
         width: 100%;
     }
-    .job-condition-clear-btn, .keyword-clear-btn{
+
+    .job-condition-clear-btn,
+    .keyword-clear-btn {
         width: 110px;
         border-radius: 3px;
     }
-    .job-condition-search-btn, .keyword-search-btn, .load-more-btn
-    {
+
+    .job-condition-search-btn,
+    .keyword-search-btn,
+    .load-more-btn {
         width: 110px;
         border-radius: 3px;
     }
-    .condition-search-feilds{
+
+    .condition-search-feilds {
         width: 100%;
         padding: 10px;
     }
-    .job-list-content{
-        padding: 10px 10px!important;
+
+    .job-list-content {
+        padding: 10px 10px !important;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: auto;
     }
-    .user-profile-container{
+
+    .user-profile-container {
         padding-top: 75px !important;
+        padding: 0px;
     }
-    .common-sidebar{
+
+    .common-sidebar {
         width: 100%;
         padding: 10px;
     }
-    .form-control{
+
+    .form-control {
         height: 40px;
         font-size: 14px;
     }
-    .job-view-btn{
+
+    .job-view-btn {
         height: 30px;
         font-size: 12px;
         border-radius: 3px;
     }
-    .job-wishlist-btn{
+
+    .job-wishlist-btn {
         height: 30px;
         width: 30px;
         font-size: 14px;
         border-radius: 3px;
     }
-    .company-logo img{
+
+    .company-logo img {
         height: 100px;
         width: 100px;
     }
-    .company-h{
+
+    .company-h {
         font-size: 16px;
     }
-    .job-title{
+
+    .job-title {
         font-size: 16px;
     }
-    .job-post-date{
+
+    .job-post-date {
         font-size: 12px;
     }
-    .job-detail-info{
+
+    .job-detail-info {
         padding: 0px 0px 19px 9px;
     }
-    .job-info-visual{
+
+    .job-info-visual {
         height: 100px;
         width: 100px;
     }
+
     .job-description,
-    .candidate-description{
+    .candidate-description {
         font-size: 12px;
     }
-    .job-content-wrap{
+
+    .job-content-wrap {
         flex-direction: column;
         align-items: flex-start;
     }
-    .job-info-img{
+
+    .job-info-img {
         height: 60px;
         width: 60px;
     }
-    .job-info-title{
+
+    .job-info-title {
         padding-top: 3px;
         font-size: 13px;
     }
-    .job-title-view{
+
+    .job-title-view {
         font-size: 17px;
     }
-    .job-info-static{
+
+    .job-info-static {
         padding: 0px 11px;
     }
-    .job-apply-ankers>a{
+
+    .job-apply-ankers>a {
         font-size: 12px;
         margin-right: 10px;
         padding: 10px 8px;
     }
-    .job-detail-container{
+
+    .job-detail-container {
         padding: 10px;
     }
-    .job-dynamic-values>ul>li>span{
+
+    .job-dynamic-values>ul>li>span {
         padding-left: 3px;
         font-size: 12px;
     }
-    .job-dynamic-values>ul{
+
+    .job-dynamic-values>ul {
         padding-right: 9px;
         margin-right: 5px;
         border-right: none;
     }
-    .job-apply-anker{
+
+    .job-apply-anker {
         padding: 10px 20px !important;
     }
-    .PostJobContainer{
-        padding:63px 0px;
+
+    .PostJobContainer {
+        padding: 63px 0px;
     }
+
     .company_images_detail {
         display: flex;
         flex-wrap: wrap;
         padding: 10px 7px;
         justify-content: space-between;
     }
+
     .company_detail_info>.info_left {
         height: 200px;
         width: 200px;
     }
-    .company_detail_info > .info_left .company_image{
+
+    .company_detail_info>.info_left .company_image {
         width: 120px;
         height: 120px;
         background: white;
         box-shadow: 0px 3px 6px #00000029;
         border-radius: 150px;
     }
+
     .company_detail_info>.info_right {
         justify-content: space-between;
     }
-    
+
     .company_detail_info>.info_right ul {
         margin: 0px;
     }
-    .company_detail_info > .info_left .company_name{
+
+    .company_detail_info>.info_left .company_name {
         font-size: 11px;
     }
-    .company_images_detail >img{
+
+    .company_images_detail>img {
         width: 87px;
         height: 65px;
         margin: 0px;
     }
-    .company_social_icons{
+
+    .company_social_icons {
         height: 20px;
         width: 20px;
     }
+
     .info_title_label {
         font-size: 14px;
     }
+
     .info_dynamic {
         font-size: 12px;
     }
-    .company_detail_info{
+
+    .company_detail_info {
         margin: 20px 0px;
     }
-    .CompanyProfileVideo{
+
+    .CompanyProfileVideo {
         height: 183px;
     }
-    .post_new_job_anker > a{
+
+    .post_new_job_anker>a {
         padding: 10px;
     }
-    .humburger{
+
+    .humburger {
         display: block;
     }
-    .hidden-nav{
+
+    .hidden-nav {
         display: none;
     }
+
     .ankers-wrap .about-company-anker {
         padding: 6px 5px;
     }
+
     .ankers-wrap {
         width: 100%;
     }
-    .BlogsSwiper {
+
+    .blogs-swiper {
         width: 100%;
     }
+
     .candidate-list>li>div {
         min-height: 300px;
     }
+
     .ankers-wrap>.about-us-anker {
         bottom: 5%;
         left: 4%;
@@ -359,6 +584,7 @@
         padding: 6px 34px;
 
     }
+
     ._secondary-header>.container>ul {
         padding: 9px;
         font-size: 0.7rem;
@@ -417,107 +643,137 @@
     .view-on-mobile {
         display: block;
     }
-    .candidate-list > li > div > h3{
+
+    .candidate-list>li>div>h3 {
         font-size: 5vw;
         line-height: 1.5;
         padding: 20px 0;
         text-align: center;
     }
-    .introduction-company > ul > li{
+
+    .introduction-company>ul>li {
         justify-content: center;
         padding: 10px 0px;
     }
-    .success-voice-blocks .single-block > .block{
+
+    .success-voice-blocks .single-block>.block {
         display: flex;
         flex-direction: column;
     }
-    .success-voice-blocks > .col-12{
+
+    .success-voice-blocks>.col-12 {
         padding: 0px;
     }
-    .successful-voices > .container{
+
+    .successful-voices>.container {
         padding: 0px 8px 0px 8px;
     }
-    .about-content-section > h3, .about-content-section > h1, .about-content-section > p{
+
+    .about-content-section>h3,
+    .about-content-section>h1,
+    .about-content-section>p {
         font-size: 12px;
     }
-    .about-content-section{
+
+    .about-content-section {
         padding: 40px 0px 20px 0px;
     }
-    .faq-user-section-about{
-        padding:60px 0px 30px 0px;
+
+    .faq-user-section-about {
+        padding: 60px 0px 30px 0px;
     }
-    .search-by-occupation{
+
+    .search-by-occupation {
         border-right: none;
     }
-    .search-category-section{
+
+    .search-category-section {
         padding: 5px;
         padding-top: 20px;
     }
+
     .jobs-block-section {
         padding-bottom: 30px !important;
     }
-    .testimonals-blocks{
+
+    .testimonals-blocks {
         padding: 0px;
     }
-    .testimonials-user-about > .container{
+
+    .testimonials-user-about>.container {
         padding: 0px;
     }
-    .bizer-service-container{
+
+    .bizer-service-container {
         padding: 12px;
     }
+
     .view-list-anker {
         padding: 10px 25px;
     }
+
     .sixth-section {
         padding: 15px 15px 50px 15px;
     }
-    .contact-detail{
+
+    .contact-detail {
         min-width: 100%;
     }
-    .HomeSwiper>.swiper-wrapper>.swiper-slide h1{
+
+    .HomeSwiper>.swiper-wrapper>.swiper-slide h1 {
         font-size: 28px !important;
     }
-    .HomeSwiper>.swiper-wrapper>.swiper-slide h2{
+
+    .HomeSwiper>.swiper-wrapper>.swiper-slide h2 {
         font-size: 18px !important;
     }
-    .flow-of-use-block{
+
+    .flow-of-use-block {
         flex: 90%;
         max-width: 90%;
         margin: 10px 0px;
         padding-right: 25px;
     }
-    .right-login{
+
+    .right-login {
         padding: 10px !important;
     }
-    .right-register{
+
+    .right-register {
         padding: 10px !important;
     }
-    .mobileTabsIcons{
+
+    .mobile-tabs-icons {
         display: block !important;
     }
-    #DesktopTabsIcons{
+
+    #DesktopTabsIcons {
         display: none;
     }
-    .h150{
+
+    .h150 {
         height: 105px;
     }
+
     .tabs-content-wrap>.tab-content {
         padding: 10px;
-      }
-    .profileInfo > .ProfileUserPic {
+    }
+
+    .profile-info>.ProfileUserPic {
         width: 73px;
         height: 73px;
         border-radius: 100px;
         border: 2px solid #081351;
         margin: 16px 60px 15px 13px;
     }
+
     /* slider */
 
     .resume-builder-row p {
         font-size: 18px;
     }
 
-    .successStoriesSliderArrow:after {
+    .success-stories-slider-arrow:after {
         font-family: swiper-icons;
         text-transform: none !important;
         letter-spacing: 0;
@@ -531,20 +787,20 @@
         border-radius: 7px;
     }
 
-    .successStories>h3 {
+    .success-stories>h3 {
         font-size: 20px;
         font-weight: 700;
         color: #081351;
         margin: 20px 0px;
     }
 
-    .CandidateDesignation,
-    .GenderAge,
-    .Scoutbizblanca {
+    .candidate-designation,
+    .gender-age,
+    .scout-bizblanca {
         font-size: 12px;
     }
 
-    .candidateSucessDescrp {
+    .candidate-success-descrp {
         font-size: 12px;
         color: #081351;
         width: 274px;
@@ -554,25 +810,25 @@
         overflow: hidden;
     }
 
-    .Scoutbizblanca {
+    .scout-bizblanca {
         font-weight: 700;
         margin-top: 8px;
     }
 
-    .sliderContent {
+    .slider-content {
         width: auto;
     }
 
-    .CertificationsAndPayments>.row>.col-3>img {
+    .certifications-and-payments>.row>.col-3>img {
         width: 81px;
         height: 97px;
     }
 
-    .CertificationsAndPayments {
+    .certifications-and-payments {
         padding: 8px;
     }
 
-    .CertificationsAndPayments>.row>.col-9>h3 {
+    .certifications-and-payments>.row>.col-9>h3 {
         font-size: 20px;
         font-weight: 700;
         letter-spacing: 1px;
@@ -583,35 +839,35 @@
         display: block;
     }
 
-    .paymentDescrpD {
+    .payment-descrp-d {
         display: none;
     }
 
-    .cvUpload>p {
+    .cv-upload>p {
         font-size: 13px;
         font-weight: 400;
         color: #081351;
         width: auto;
     }
 
-    .UploadText {
+    .upload-text {
         font-size: 21px;
     }
 
-    .yourCvOnlineText {
+    .your-cv-online-text {
         font-size: 18px;
     }
 
-    .replyImg {
+    .reply-img {
         padding-right: 7rem;
     }
 
-    .replyImg>img {
+    .reply-img>img {
         width: 101px;
         height: 103px;
     }
 
-    .cvUpload>a {
+    .cv-upload>a {
         display: flex;
         background-color: #081351;
         color: #fff;
@@ -622,25 +878,25 @@
         font-size: 12px;
     }
 
-    .resumeUpload>img {
+    .resume-upload>img {
         width: 170px;
     }
 
-    .resumeUpload .content_para {
+    .resume-upload .content_para {
         width: auto;
         font-size: 13px;
         font-weight: 400;
     }
 
-    .careerUpgradeProcess>.contentCareerSteps {
+    .career-upgrade-process>.content-career-steps {
         padding: 0px;
     }
 
-    .ExpertiseProvide>li>p {
+    .expertise-provide>li>p {
         font-size: 12px;
     }
 
-    .careerUpgradeProcess>.contentCareerSteps>.UpgradeProcessSteps>.UpgradeProcessStep>div>p {
+    .career-upgrade-process>.content-career-steps>.upgrade-process-steps>.upgrade-process-step>div>p {
         width: 154px;
         font-size: 12px;
         color: #081351;
@@ -648,76 +904,77 @@
         text-align: center;
     }
 
-    .careerUpgradeProcess>.contentCareerSteps>h2 {
+    .career-upgrade-process>.content-career-steps>h2 {
         font-size: 20px;
     }
 
-    .careerUpgradeProcess>.contentCareerSteps>p {
+    .career-upgrade-process>.content-career-steps>p {
         font-size: 12px;
         color: #081351;
     }
 
-    .arrowImg {
+    .arrow-img {
         margin: 30px 10px;
         width: 28px;
         height: 24px;
     }
 
-    .careerUpgradeProcess>.contentCareerSteps>.UpgradeProcessSteps>.UpgradeProcessStep>div>h3 {
+    .career-upgrade-process>.content-career-steps>.upgrade-process-steps>.upgrade-process-step>div>h3 {
         font-size: 18px;
     }
 
-    .stepsimg {
+    .steps-img {
         width: 75px;
         height: 75px;
     }
 
-    .cardsInfo {
+    .cards-info {
         height: 226px;
     }
-    .cardsInfoContainer {
+
+    .cards-info-container {
         text-align: left;
         padding: 6px 0px !important;
     }
 
-    .cardsInfoContainer span {
+    .cards-info-container span {
         font-size: 20px;
     }
 
-    .cardsInfoContainer .offersJobPara {
+    .cards-info-container .offers-job-para {
         font-size: 13px;
         margin: 10px 0px 20px 0px;
     }
 
-    .MsgHeading {
+    .msg-heading {
         font-size: 18px;
         padding: 27px;
     }
 
-    .candidateSection {
+    .candidate-section {
         padding: 0px;
     }
 
-    .leftContent {
+    .left-content {
         padding: 10px !important;
     }
 
-    .RightImage {
+    .right-image {
         position: relative;
         height: 300px;
     }
 
-    .candiateBannerD {
+    .candiate-banner-d {
         position: relative;
         height: 300px;
         width: 100%;
     }
 
-    .BannerCandidate {
+    .banner-candidate {
         flex-direction: column-reverse;
     }
 
-    .leftContent>div>h1 {
+    .left-content>div>h1 {
         letter-spacing: 0px;
         color: #081351;
         font-size: 20px;
@@ -725,7 +982,7 @@
         line-height: inherit;
     }
 
-    .leftContent>div>p {
+    .left-content>div>p {
         letter-spacing: 0px;
         color: #081351;
         font-size: 13px;
@@ -733,43 +990,51 @@
         margin-bottom: 30px;
     }
 
-    .leftContent>div {
+    .left-content>div {
         width: auto;
         margin-bottom: 10px;
     }
 }
-
+/* for both tab or Desktop view */
 @media screen and (min-width:769px) {
     .v-on-d {
         display: block !important;
     }
+
     .v-on-m {
         display: none;
     }
-    .help-queries-wrap{
+
+    .help-queries-wrap {
         padding: 0px 45px 25px 0px;
     }
-    .help-queries{
+
+    .help-queries {
         padding-left: 45px;
         border-left: 3px solid #081351;
     }
-    #DesktopTabsIcons{
+
+    #DesktopTabsIcons {
         display: block;
         height: 100%;
     }
-    .PostJobContainer{
-        padding:40px 0px;
+
+    .PostJobContainer {
+        padding: 40px 0px;
     }
+
     .image-banner {
         background-color: #484FE2;
     }
-    .humburger{
+
+    .humburger {
         display: none;
     }
-    .hidden-nav{
+
+    .hidden-nav {
         display: block;
     }
-    
+
     .view-on-desktop {
         display: block;
     }
@@ -797,42 +1062,75 @@
         font-weight: 520;
     }
 }
+/* for tabs and small screen laptops */
 @media only screen and (max-width: 1200px) and (min-width: 992px) {
-    .job-list{
+    .job-list {
         margin: 7px;
     }
-    .contact-page-feilds, .office-info{
+
+    .left-box-banner {
+        width: 480px;
+    }
+
+    .contact-page-feilds,
+    .office-info {
         width: 100%;
     }
-    .list-services > .services-box, .list-socaial > .services-box{
-        width:46%;
+
+    .list-services>.services-box,
+    .list-socaial>.services-box {
+        width: 46%;
     }
- }
+}
+/* for tab view */
+@media screen and (min-width:768px) and (max-width: 1024px) {
+	.company-faq-box{
+        height: 300px;
+        width: 300px;
+    }
+    .left-content>div{
+        width: 450px;
+    }
+}
 @media screen and (max-width:993px) {
-    .heading-ankers > li > h6 {
+    .heading-ankers>li>h6 {
         margin: 0px;
         width: auto;
     }
-    .contact-page-feilds, .office-info{
+
+    .contact-page-feilds,
+    .office-info {
         width: 100%;
     }
 }
-@media screen and (max-width:320px) {
-    .job-dynamic-values>ul>li>span{
-        font-size: 11px;
-    }
-    .pacakges-plan-container{
-        padding: 0px;
-    }
-}
+/* for Average/Standard Screen laptops */
 @media screen and (max-width:1466px) {
-    .BlogsSwiper>.swiper-wrapper>.single-blog-wrap>.single-blog>img {
+    .blogs-swiper>.swiper-wrapper>.single-blog-wrap>.single-blog>img {
         display: block;
         height: 160px;
     }
+
+}
+/* for high/big screen Desktop/Laptop */
+@media screen and (min-width:1466px) {
+    .blue-inner-box {
+        max-width: 50%;
+        margin: 0px 184px 0px auto;
+    }
+
 }
 @media screen and (min-height:1050px) {
-   .HomeSwiper{
-       height: 60vh;
-   }
+    .HomeSwiper {
+        height: 60vh;
+    }
+}
+/* for small devices */
+@media screen and (max-width:320px) {
+    .job-dynamic-values>ul>li>span {
+        font-size: 11px;
+    }
+
+    .pacakges-plan-container {
+        padding: 0px;
+    }
 }

@@ -3,11 +3,11 @@
     <WebsiteNavbar />
     
     <!-- Hero Banner Section -->
-    <section class="candidateSection">
+    <section class="candidate-section pt-5 p-md-0">
       <div class="row no-gutters">
-        <section class="col-12 CandidateLandingSection">
-          <div class="row m-0 BannerCandidate">
-            <div class="col-12 col-md-6 leftContent">
+        <section class="col-12 candidate-landing-section">
+          <div class="row m-0 banner-candidate">
+            <div class="col-12 col-md-6 left-content">
               <div>
                 <h1>
                   BizBlanca builds IT recruitment community that can source
@@ -19,39 +19,39 @@
                   seekers to work for the next company for a long time based on
                   your background and can surely step up.
                 </p>
-                <a href="" class="align-self-start">Signup Now</a>
+                <a href="#" class="align-self-start">Signup Now</a>
               </div>
             </div>
-            <div class="col-12 col-md-6 p-0 RightImage">
+            <div class="col-12 col-md-6 p-0 right-image">
               <img
-                class="candiateBannerD"
+                class="candiate-banner-d"
                 src="/website/assets/images/candidate-banner-m.png"
                 alt="img"
               />
-              <!-- <img src="/website/assets/images/candidate-banner-m.png" alt=""> -->
+              <!-- <img src="/website/assets/images/candidate-banner-m.png" alt="img"> -->
             </div>
           </div>
         </section>
-        <h1 class="MsgHeading">
+        <h1 class="msg-heading">
           Be scouted and headhunted by the top IT companies of Pakistan
         </h1>
-        <section class="col-12 cardsInfoContainer p-md-0 px-1">
-          <div class="row no-gutters cardsInfoWrap container">
+        <section class="col-12 cards-info-container p-md-0 px-1">
+          <div class="row no-gutters cards-info-wrap container">
             <span
               >Upgrade and change your career with style Get scouted by the best
               companies in Pakistan</span
             >
-            <p class="offersJobPara">
+            <p class="offers-job-para">
               In the coming era, it is important to know your own market value.
               Recieve job and offers and uncover your potential, your value in
               the industry. Widen your career options and take a look at which
               top companies want to hire you.
             </p>
-            <div class="cardsInfo col-12 col-md-4">
+            <div class="cards-info col-12 col-md-4">
               <img
                 src="/website/assets/images/happy.svg"
-                class="CardHappyImg"
-                alt=""
+                class="card-happy-img"
+                alt="img"
               />
               <h3>
                 More than 75% of the job offers on BizBlanca pay 100,000PKR or
@@ -62,11 +62,11 @@
                 jobs which can set you up for life.
               </p>
             </div>
-            <div class="cardsInfo col-12 col-md-4">
+            <div class="cards-info col-12 col-md-4">
               <img
                 src="/website/assets/images/choose-best.svg"
-                class="CardChooseBestImg"
-                alt=""
+                class="card-choose-best-img"
+                alt="img"
               />
               <h3>
                 With around 200 companies, we select the best companies across
@@ -77,11 +77,11 @@
                 offers that will give your career a big boost.
               </p>
             </div>
-            <div class="cardsInfo col-12 col-md-4">
+            <div class="cards-info col-12 col-md-4">
               <img
                 src="/website/assets/images/help-you.svg"
-                class="CardHelpYou"
-                alt=""
+                class="card-help-you"
+                alt="img"
               />
               <h3>We support you along the way- both online and offline</h3>
               <p>
@@ -94,36 +94,36 @@
         <section></section>
       </div>
     </section>
-    <section class="careerUpgradeProcess container" id="process">
-      <div class="contentCareerSteps">
+    <section class="career-upgrade-process container" id="process">
+      <div class="content-career-steps">
         <h2 class="heading-div">
-          <div class="mr-2 titleEffect"></div>
+          <div class="mr-2 title-effect"></div>
           The career upgrade process
         </h2>
         <p>Follow these steps for career success</p>
-        <div class="row no-gutters UpgradeProcessSteps">
-          <div class="col-6 col-md-3 UpgradeProcessStep">
+        <div class="row no-gutters upgrade-process-steps">
+          <div class="col-6 col-md-3 upgrade-process-step">
             <div>
               <img
-                class="stepsimg"
+                class="steps-img"
                 src="/website/assets/images/signup-bizblanca-cv-upgrade-process.svg"
-                alt=""
+                alt="img"
               />
               <h3>Step 1</h3>
               <p>Sign up with BizBlanca and create your professional CV</p>
             </div>
             <img
-              class="arrowImg"
+              class="arrow-img"
               src="/website/assets/images/arrow.svg"
-              alt=""
+              alt="img"
             />
           </div>
-          <div class="col-6 col-md-3 UpgradeProcessStep">
+          <div class="col-6 col-md-3 upgrade-process-step">
             <div>
               <img
-                class="stepsimg"
+                class="steps-img"
                 src="/website/assets/images/top-rank-cand.svg"
-                alt=""
+                alt="img"
               />
               <h3>Step 2</h3>
               <p>
@@ -132,17 +132,17 @@
               </p>
             </div>
             <img
-              class="arrowImg v-on-d"
+              class="arrow-img v-on-d"
               src="/website/assets/images/arrow.svg"
-              alt=""
+              alt="img"
             />
           </div>
-          <div class="col-6 col-md-3 UpgradeProcessStep">
+          <div class="col-6 col-md-3 upgrade-process-step">
             <div>
               <img
-                class="stepsimg"
+                class="steps-img"
                 src="/website/assets/images/job-interview.svg"
-                alt=""
+                alt="img"
               />
               <h3>Step 3</h3>
               <p>
@@ -151,22 +151,22 @@
               </p>
             </div>
             <img
-              class="arrowImg"
+              class="arrow-img"
               src="/website/assets/images/arrow.svg"
-              alt=""
+              alt="img"
             />
           </div>
-          <div class="col-6 col-md-3 UpgradeProcessStep">
+          <div class="col-6 col-md-3 upgrade-process-step">
             <div id="expertise">
               <img
-                class="stepsimg"
+                class="steps-img"
                 src="/website/assets/images/rec-offer-job.svg"
-                alt=""
+                alt="img"
               />
               <h3>Step 4</h3>
               <p>Recieve your job offer and get ready to upgrade your career</p>
             </div>
-            <!-- <img class="arrowImg" src="/website/assets/images/arrow.svg" alt=""> -->
+            <!-- <img class="arrow-img" src="/website/assets/images/arrow.svg" alt="img"> -->
           </div>
         </div>
         <h2>We are ready to provide expertises in 20 specialist sectors</h2>
@@ -178,97 +178,97 @@
         </p>
         <div class="row no-gutters">
           <div class="col-6 col-md-3">
-            <ul class="ExpertiseProvide">
+            <ul class="expertise-provide">
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Project Manager</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Project Leader</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Management</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>IT Consultant</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Web UI/UX Designer</p>
               </li>
             </ul>
           </div>
           <div class="col-6 col-md-3">
-            <ul class="ExpertiseProvide">
+            <ul class="expertise-provide">
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Frontend Engineer</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Backend Engineer</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>WordPress Engineer</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Mob App Engineer</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Network Engineer</p>
               </li>
             </ul>
           </div>
           <div class="col-6 col-md-3">
-            <ul class="ExpertiseProvide">
+            <ul class="expertise-provide">
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Infrastructure Engineer</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>QA Test Engineer</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Architecture Developer</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>IT Security Engineer</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Sales Engieer</p>
               </li>
             </ul>
           </div>
           <div class="col-6 col-md-3">
-            <ul class="ExpertiseProvide">
+            <ul class="expertise-provide">
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>Data Scientist / Analyst</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>IT Sales Department</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>IT Human Resource</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>IT Customer Support</p>
               </li>
               <li>
-                <img src="/website/assets/images/circle-arrow.svg" alt="" />
+                <img src="/website/assets/images/circle-arrow.svg" alt="img" />
                 <p>IT Legal / Finance</p>
               </li>
             </ul>
@@ -277,36 +277,36 @@
       </div>
     </section>
     <div class="bg-Grey">
-      <section class="uploadYourCv container">
+      <section class="upload-your-cv container">
         <div class="row no-gutters">
-          <div class="col-12 col-md-6 cvUpload">
+          <div class="col-12 col-md-6 cv-upload">
             <h3 class="heading-div">
-              <div class="mr-2 titleEffect"></div>
+              <div class="mr-2 title-effect"></div>
               What's Next...
             </h3>
             <p>
               We're here to help you take your next step in the world of work,
               wherever or whatever it is.
             </p>
-            <a href="">Upload your CV</a>
-            <div class="replyImg">
+            <a href="#">Upload your CV</a>
+            <div class="reply-img">
               <img src="/website/assets/images/reply.svg" alt="reply" />
             </div>
           </div>
-          <div class="col-12 col-md-6 resumeUpload">
+          <div class="col-12 col-md-6 resume-upload">
             <div class="row no-gutters">
               <div class="col-12 col-md-8">
                 <img
                   height="250"
                   width="235"
                   src="/website/assets/images/resume.svg"
-                  alt=""
+                  alt="img"
                 />
               </div>
               <div class="col-12 col-md-4">
                 <div>
-                  <span class="UploadText">Upload</span>
-                  <h3 class="yourCvOnlineText">your cv online</h3>
+                  <span class="upload-text">Upload</span>
+                  <h3 class="your-cv-online-text">your cv online</h3>
                   <p class="content_para">
                     Your CV is the first impression recruiters have of you. Most
                     of the candidates still have a CV that looks like this. Are
@@ -319,15 +319,15 @@
           </div>
         </div>
       </section>
-      <section class="CertificationsAndPayments container" id="certificate">
+      <section class="certifications-and-payments container" id="certificate">
         <div class="row no-gutters">
           <div class="col-3">
-            <img src="/website/assets/images/bizblancaBage.svg" alt="" />
+            <img src="/website/assets/images/bizblancaBage.svg" alt="img" />
           </div>
           <div class="col-9">
             <h3>BizBlanca Certification and Payment Partnership</h3>
             <p>Are you worried about your work? Everyone has some worries.</p>
-            <p class="paymentDescrpD">
+            <p class="payment-descrp-d">
               At BizBlanca, we have a Payment Partnership with Bizers who have
               BizBlanca Certification in order to eliminate the anxiety about
               salary that many people have. This is a mechanism that allows you
@@ -338,7 +338,7 @@
             </p>
           </div>
         </div>
-        <p class="paymentDescrpM">
+        <p class="payment-descrp-m">
           At BizBlanca, we have a Payment Partnership with Bizers who have
           BizBlanca Certification in order to eliminate the anxiety about salary
           that many people have. This is a mechanism that allows you to
@@ -349,24 +349,24 @@
         </p>
       </section>
     </div>
-    <section class="successStories container" id="Testimonials">
+    <section class="success-stories container" id="Testimonials">
       <h3 class="heading-div my-md-5">
-        <div class="mr-2 titleEffect"></div>
+        <div class="mr-2 title-effect"></div>
         BizBlanca's Success Stories
       </h3>
-      <div class="swiper successStoriesSwiper">
+      <div class="swiper success-stories-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide p-md-5">
-            <div class="sliderContent">
+            <div class="slider-content">
               <img
-                class="candidateImg"
+                class="candidate-img"
                 src="/website/assets/images/avatart.jpeg"
-                alt=""
+                alt="img"
               />
-              <p class="CandidateDesignation">Senior front end developer</p>
-              <h4 class="GenderAge">Male's 20</h4>
-              <h3 class="Scoutbizblanca">Because of BizBlanca's scout...</h3>
-              <p class="candidateSucessDescrp">
+              <p class="candidate-designation">Senior front end developer</p>
+              <h4 class="gender-age">Male's 20</h4>
+              <h3 class="scout-bizblanca">Because of BizBlanca's scout...</h3>
+              <p class="candidate-success-descrp">
                 After being scouted and hired by my company through BizBlanca, I
                 have become an accomplished and multifaceted technology leader
                 with 4 years of exceptional expertise in the provisions of
@@ -383,16 +383,16 @@
             </div>
           </div>
           <div class="swiper-slide p-md-5">
-            <div class="sliderContent">
+            <div class="slider-content">
               <img
-                class="candidateImg"
+                class="candidate-img"
                 src="/website/assets/images/avatart.jpeg"
-                alt=""
+                alt="img"
               />
-              <p class="CandidateDesignation">Senior front end developer</p>
-              <h4 class="GenderAge">Male's 20</h4>
-              <h3 class="Scoutbizblanca">Because of BizBlanca's scout...</h3>
-              <p class="candidateSucessDescrp">
+              <p class="candidate-designation">Senior front end developer</p>
+              <h4 class="gender-age">Male's 20</h4>
+              <h3 class="scout-bizblanca">Because of BizBlanca's scout...</h3>
+              <p class="candidate-success-descrp">
                 After being scouted and hired by my company through BizBlanca, I
                 have become an accomplished and multifaceted technology leader
                 with 4 years of exceptional expertise in the provisions of
@@ -409,16 +409,16 @@
             </div>
           </div>
           <div class="swiper-slide p-md-5">
-            <div class="sliderContent">
+            <div class="slider-content">
               <img
-                class="candidateImg"
+                class="candidate-img"
                 src="/website/assets/images/avatart.jpeg"
-                alt=""
+                alt="img"
               />
-              <p class="CandidateDesignation">Senior front end developer</p>
-              <h4 class="GenderAge">Male's 20</h4>
-              <h3 class="Scoutbizblanca">Because of BizBlanca's scout...</h3>
-              <p class="candidateSucessDescrp">
+              <p class="candidate-designation">Senior front end developer</p>
+              <h4 class="gender-age">Male's 20</h4>
+              <h3 class="scout-bizblanca">Because of BizBlanca's scout...</h3>
+              <p class="candidate-success-descrp">
                 After being scouted and hired by my company through BizBlanca, I
                 have become an accomplished and multifaceted technology leader
                 with 4 years of exceptional expertise in the provisions of
@@ -435,16 +435,16 @@
             </div>
           </div>
           <div class="swiper-slide p-md-5">
-            <div class="sliderContent">
+            <div class="slider-content">
               <img
-                class="candidateImg"
+                class="candidate-img"
                 src="/website/assets/images/avatart.jpeg"
-                alt=""
+                alt="img"
               />
-              <p class="CandidateDesignation">Senior front end developer</p>
-              <h4 class="GenderAge">Male's 20</h4>
-              <h3 class="Scoutbizblanca">Because of BizBlanca's scout...</h3>
-              <p class="candidateSucessDescrp">
+              <p class="candidate-designation">Senior front end developer</p>
+              <h4 class="gender-age">Male's 20</h4>
+              <h3 class="scout-bizblanca">Because of BizBlanca's scout...</h3>
+              <p class="candidate-success-descrp">
                 After being scouted and hired by my company through BizBlanca, I
                 have become an accomplished and multifaceted technology leader
                 with 4 years of exceptional expertise in the provisions of
@@ -461,8 +461,8 @@
             </div>
           </div>
         </div>
-        <div class="swiper-button-next successStoriesSliderArrow"></div>
-        <div class="swiper-button-prev successStoriesSliderArrow"></div>
+        <div class="swiper-button-next success-stories-slider-arrow"></div>
+        <div class="swiper-button-prev success-stories-slider-arrow"></div>
         <div class="swiper-pagination"></div>
       </div>
     </section>
@@ -474,10 +474,7 @@
               <div class="row">
                 <div class="col-md-12 pb-3 pl-0">
                   <h1 class="text-left heading-div" style="color: #fff">
-                    <div
-                      class="mr-2 titleEffect"
-                      style="background-color: #fff"
-                    ></div>
+                    <div class="mr-2 title-effect" style="background-color: #fff"></div>
                     Vidoes
                   </h1>
                 </div>
@@ -528,12 +525,12 @@
           <img
             src="/website/assets/images/resume-builder-banner.png"
             class="v-on-d"
-            alt=""
+            alt="img"
           />
           <img
             src="/website/assets/images/resume-builder-banner@2x.png"
             class="v-on-m w-100 p-2"
-            alt=""
+            alt="img"
           />
         </div>
         <div class="col-12 col-md-9 p-2">
@@ -541,7 +538,7 @@
             If you would like to be part of us, please sign up and upload your
             resume. Your career journey will begin with us.
           </p>
-          <a href="">Signup Now</a>
+          <a href="#">Signup Now</a>
         </div>
       </div>
     </div>
@@ -558,7 +555,7 @@ export default {
     WebsiteNavbar,
   },
   mounted() {
-    var swiper = new Swiper(".successStoriesSwiper", {
+    var swiper = new Swiper(".success-stories-swiper", {
       slidesPerView: 1,
       spaceBetween: 30,
       loop: true,

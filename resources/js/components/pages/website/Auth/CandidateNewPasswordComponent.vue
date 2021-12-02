@@ -1,6 +1,6 @@
 <template>
     <div>
-        <WebsiteNavbar/>
+        <WebsiteNavbar />
         <div class="login-page-container container p-0">
             <form>
                 <div class="row m-0">
@@ -12,12 +12,14 @@
                                 <p>To keep connected with us please login with your personal info</p>
                             </div>
                             <div class="col-md-8 col-12 right-login">
-                                <div class="loginText">
+                                <div class="login-text">
                                     <h1>Forget Password</h1>
                                 </div>
-                                <div class="loginFeilds">
+                                <div class="login-feilds">
                                     <div class="form-group">
-                                        <input id="password" v-model="record.password" type="password" class="form-control" name="password" required autocomplete="new-password" placeholder="Please Enter New Password">
+                                        <input id="password" v-model="record.password" type="password"
+                                            class="form-control" name="password" required autocomplete="new-password"
+                                            placeholder="Please Enter New Password">
                                         <small>
                                             <span v-if="errors.password != null" class="text-danger float-left">
                                                 {{errors.password[0]}}
@@ -26,7 +28,9 @@
                                     </div>
                                     <br>
                                     <div class="form-group">
-                                        <input id="password-confirm" v-model="record.confirm_password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Please Enter Confirm Password">
+                                        <input id="password-confirm" v-model="record.confirm_password" type="password"
+                                            class="form-control" name="password_confirmation" required
+                                            autocomplete="new-password" placeholder="Please Enter Confirm Password">
                                         <small>
                                             <span v-if="errors.confirm_password != null" class="text-danger float-left">
                                                 {{errors.confirm_password[0]}}
@@ -35,7 +39,7 @@
                                     </div>
                                     <br>
                                 </div>
-                                <div class="loginButton">
+                                <div class="login-button">
                                     <button @click.prevent="resetPassword()">
                                         Reset Password
                                     </button>
@@ -49,8 +53,8 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
-import WebsiteNavbar from '../partials/navbar.vue';
+    import axios from 'axios';
+    import WebsiteNavbar from '../partials/navbar.vue';
     export default {
         data() {
             return {
@@ -66,30 +70,30 @@ import WebsiteNavbar from '../partials/navbar.vue';
             WebsiteNavbar,
         },
         methods: {
-            resetPassword(){
+            resetPassword() {
                 Swal.fire({
-                    text:  'Please Wait We are Resting your Password',
+                    text: 'Please Wait We are Resting your Password',
                     didOpen: () => {
-                        Swal.showLoading() 
+                        Swal.showLoading()
                     },
                 })
                 axios.post('/complete-reset-password', this.record)
-                .then((response) => {
-                    if(response.data.success == false)
-                    {
-                        Swal.close()
-                        this.errors = response.data.errors
-                    }
-                    else{
-                        Swal.close()
-                        Swal.fire({
-                            icon:  'success',
-                            title: 'Rest Successfully',
-                            text:  'Now you can login again! Thanks',
-                        })
-                        this.$router.push({ name: 'signin' })
-                    }
-                });
+                    .then((response) => {
+                        if (response.data.success == false) {
+                            Swal.close()
+                            this.errors = response.data.errors
+                        } else {
+                            Swal.close()
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Rest Successfully',
+                                text: 'Now you can login again! Thanks',
+                            })
+                            this.$router.push({
+                                name: 'signin'
+                            })
+                        }
+                    });
             },
         }
     };

@@ -347,16 +347,16 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="formData">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Post Job</h3>
                             <input name="id" id="id" v-model="record.id" type="hidden" />
-                            <section class="modelForm container p-0 p-md-2">
-                                <div class="row no-gutters" id="subFormFieldsContainer">
+                            <section class="modal-form container p-0 p-md-2">
+                                <div class="row no-gutters" id="sub-form-fields-container">
                                     <div class="col-12">
-                                        <div id='subForm' class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Add more Jobs</h4>
+                                        <div id='subForm' class="sub-form">
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Add more Jobs</h4>
                                             </div>
                                             <div class="form-group">
                                                 <img v-if="record.id != 0"

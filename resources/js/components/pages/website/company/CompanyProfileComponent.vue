@@ -3,20 +3,22 @@
         <WebsiteNavbar />
         <CompanyNavbar />
         <div class="profile-wrapper mt-5">
-            <div class="row m-0 container p-0">
+            <div class="row m-0 container px-1">
                 <div class="col-12 p-0">
-                    <div v-if="this.profile.package_id == 0 && this.profile.package.title == 'Free'" class="alert-message-resume resume-attention-alert col-12">
+                    <div v-if="this.profile.package_id == 0 && this.profile.package.title == 'Free'"
+                        class="alert-message-resume resume-attention-alert col-12">
                         <h2>Please upgrade you plan for better experience</h2>
                         <p>
                             Since [personal information] such as name and contact information is
                             described in the registered work history, the examination is
                             suspended. Please check your registration information and update
                             your resume.
-                            <router-link class="job-view-btn" data-toggle="collapse"
-                                :to="{ name: 'PackagePlans' }">UPGRADE</router-link>
+                            <router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'PackagePlans' }">
+                                UPGRADE</router-link>
                         </p>
                     </div>
-                    <div v-if="this.order_status == 'pending'" class="alert-message-resume resume-attention-alert col-12">
+                    <div v-if="this.order_status == 'pending'"
+                        class="alert-message-resume resume-attention-alert col-12">
                         <h2>Please Wait Untill Bizblanca team approve your request</h2>
                     </div>
                 </div>
@@ -25,10 +27,10 @@
                         <!-- tabs ankers -->
                         <div class="tabs-ankers col-md-3 col-2">
                             <ul class="nav nav-tabs" role="tablist" id="DesktopTabsIcons">
-                                <li class="nav-item profileIconTab">
-                                    <img class="profileIcon" src="/website/assets/images/dashboard-interface.svg"
+                                <li class="nav-item profile-icon-tab">
+                                    <img class="profile-icon" src="/website/assets/images/dashboard-interface.svg"
                                         alt="img">
-                                    <span class="profileText">Profile</span>
+                                    <span class="profile-text">Profile</span>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#basic-information">Basic
@@ -39,26 +41,26 @@
                                 </li>
                             </ul>
                             <!-- mobile tabs start-->
-                            <ul class="mobileTabsIcons" style="display: none;">
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                            <ul class="mobile-tabs-icons" style="display: none;">
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/details.svg" alt="TabsIcon"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/leader.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
                             </ul>
 
                             <!-- Modal Tab start -->
-                            <div id="ProfileTabMobileNav" class="ProfileTabMobileNav" @click="closeProfileTab()">
-                                <div class="row no-gutters modalTabConatiner">
-                                    <div class="IconsModal">
-                                        <ul class="mobileModalTabsIcons p-0">
-                                            <li><img class="IconsTab" src="/website/assets/images/details.svg"
+                            <div id="ProfileTabMobileNav" class="Profile-tab-mobile-nav" @click="closeProfileTab()">
+                                <div class="row no-gutters modal-tab-conatiner">
+                                    <div class="icons-modal">
+                                        <ul class="mobile-modal-tabs-icons p-0">
+                                            <li><img class="icons-tab" src="/website/assets/images/details.svg"
                                                     alt="TabsIcon"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/leader.svg"
-                                            alt="TabsIcon" style="height: 26px;"></li>
+                                            <li><img class="icons-tab" src="/website/assets/images/leader.svg"
+                                                    alt="TabsIcon" style="height: 26px;"></li>
                                         </ul>
                                     </div>
-                                    <div class="IconsModalTabAnkers">
+                                    <div class="icons-modal-tab-ankers">
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class="nav-item">
                                                 <a class="nav-link active" data-toggle="tab"
@@ -80,60 +82,60 @@
                             <!--  -->
                             <div class="tab-content">
                                 <div id="basic-information" class="tab-pane in active">
-                                    <h1 class="tabsHeading">Basic information</h1>
-                                    <div class="row no-gutters BasicInfoTab">
+                                    <h1 class="tabs-heading">Basic information</h1>
+                                    <div class="row no-gutters basic-info-tab">
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel h150 profileLabelBorder rt0 btr5">
+                                            <ul class="profile-labels">
+                                                <li class="profile-label h150 profile-label-border rt0 btr5">
                                                     <span>Logo</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Name</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Founded</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Ceo</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Industry</span></li>
-                                                <li class="profileLabel profileLabelBorder bbl5"><span>Weblink</span>
+                                                <li class="profile-label profile-label-border"><span>Name</span></li>
+                                                <li class="profile-label profile-label-border"><span>Founded</span></li>
+                                                <li class="profile-label profile-label-border"><span>Ceo</span></li>
+                                                <li class="profile-label profile-label-border"><span>Industry</span></li>
+                                                <li class="profile-label profile-label-border bbl5 rmo"><span>Weblink</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorderTop bbl5 h150">
+                                                <li class="profile-label profile-label-border-top bbl5 h150">
                                                     <span>Description</span></li>
-                                                <li class="profileLabel profileLabelBorderTop bbl5"><span>No of
+                                                <li class="profile-label profile-label-border-top bbl5 rmo"><span>No of
                                                         Employees</span></li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="h150 profileInfo profileInfoBorderBottom"
+                                            <ul class="profile-info-list">
+                                                <li class="h150 profile-info profile-info-border-bottom"
                                                     style="height: 150px;">
-                                                    <img :src="'/storage/images/companies/'+profile.logo" class="ProfileUserPic"
-                                                        alt="profileImg">
+                                                    <img :src="'/storage/images/companies/'+profile.logo"
+                                                        class="ProfileUserPic" alt="profileImg">
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{profile.company_name}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{profile.establish_at}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{profile.ceo}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{profile.industry}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0">
+                                                <li class="profile-info profile-info-border rb0">
                                                     <div class="line-text-1">
                                                         <p>{{profile.web_link}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0 h150">
+                                                <li class="profile-info profile-info-border rb0 h150">
                                                     <div class="line-text-5">
                                                         <p>{{profile.description}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0">
+                                                <li class="profile-info profile-info-border rb0 rm0">
                                                     <div class="line-text-1">
                                                         <p>{{profile.no_of_employees}}</p>
                                                     </div>
@@ -141,41 +143,41 @@
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
+                                            <ul class="profile-labels">
                                                 <li><span
-                                                        class="profileLabel h150 profileLabelBorder rt0 btr5">Phone</span>
+                                                        class="profile-label h150 profile-label-border rt0 btr5 rm0">Phone</span>
                                                 </li>
-                                                <li><span class="profileLabel profileLabelBorder">Email</span></li>
-                                                <li><span class="profileLabel profileLabelBorder">City</span></li>
-                                                <li><span class="profileLabel profileLabelBorder">Address</span></li>
-                                                <li><span class="profileLabel"></span></li>
-                                                <li><span class="profileLabel"></span></li>
-                                                <li><span class="profileLabel h150"></span></li>
-                                                <li><span class="profileLabel bb5"></span></li>
-                                                <!-- <li><span class="profileLabel bbl5"></span></li> -->
+                                                <li><span class="profile-label profile-label-border">Email</span></li>
+                                                <li><span class="profile-label profile-label-border">City</span></li>
+                                                <li><span class="profile-label profile-label-border">Address</span></li>
+                                                <li><span class="profile-label v-on-d"></span></li>
+                                                <li><span class="profile-label v-on-d"></span></li>
+                                                <li><span class="profile-label h150 v-on-d"></span></li>
+                                                <li><span class="profile-label bb5 v-on-d"></span></li>
+                                                <!-- <li><span class="profile-label bbl5"></span></li> -->
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo h150" style="height: 150px;">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info h150" style="height: 150px;">
                                                     <div class="line-text-5" style="height: 105px;">
                                                         <p>{{profile.phone}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p class="pr-5">{{profile.email}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileLabelBorderTop">
+                                                <li class="profile-info profile-label-border-top">
                                                     <div class="line-text-1">
                                                         <p>{{profile.city}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-2">
                                                         <p>{{profile.address}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileLabelBorderTop">
+                                                <li class="profile-info profile-label-border-top v-on-d">
                                                     <div class="line-text-2">
                                                         <p></p>
                                                     </div>
@@ -183,45 +185,50 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".basicInfoModal" data-toggle="modal"
+                                    <ul class="view-edit-anker-list">
+                                        <!-- <li><a class="view-anker" href="#/">View</a></li> -->
+                                        <li><a class="view-edit" href=".basicInfoModal" data-toggle="modal"
                                                 data-target=".basicInfoModal">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="social-media" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Social Media</h1>
-                                    <div class="row no-gutters EducationInfoTab">
+                                    <h1 class="tabs-heading">Social Media</h1>
+                                    <div class="row no-gutters education-info-tab">
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder btr5"><img src="/website/assets/images/whatsapp.svg" alt=""></li>
-                                                <li class="profileLabel profileLabelBorder"><img src="/website/assets/images/facebook.svg" alt=""></li>
-                                                <li class="profileLabel profileLabelBorder"><img src="/website/assets/images/linkedin.svg" alt=""></li>
-                                                <li class="profileLabel profileLabelBorder"><img src="/website/assets/images/twitter.svg" alt=""></li>
-                                                <li class="profileLabel profileLabelBorder"><img src="/website/assets/images/github.svg" alt=""></li>
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border btr5"><img
+                                                        src="/website/assets/images/whatsapp.svg" alt=""></li>
+                                                <li class="profile-label profile-label-border"><img
+                                                        src="/website/assets/images/facebook.svg" alt=""></li>
+                                                <li class="profile-label profile-label-border"><img
+                                                        src="/website/assets/images/linkedin.svg" alt=""></li>
+                                                <li class="profile-label profile-label-border"><img
+                                                        src="/website/assets/images/twitter.svg" alt=""></li>
+                                                <li class="profile-label profile-label-border"><img
+                                                        src="/website/assets/images/github.svg" alt=""></li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder rt0">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info profile-info-border rt0">
                                                     <div class="line-text-1">
                                                         <p>{{profile.whatsapp}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{profile.facebook}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{profile.linkedin}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{profile.twitter}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0">
+                                                <li class="profile-info profile-info-border rb0">
                                                     <div class="line-text-1">
                                                         <p>{{profile.github}}</p>
                                                     </div>
@@ -233,21 +240,24 @@
                                                 <div class="CompanyImages">
                                                     <div class="labelCompany btr5">Company Pics</div>
                                                     <div class="CompanyImage" v-if="profile.profile_gallery">
-                                                        <img v-for="(item, index) in profile.profile_gallery.split(',')" :key="index" :src="'/storage/images/companies/'+item" alt="item">
+                                                        <img v-for="(item, index) in profile.profile_gallery.split(',')"
+                                                            :key="index" :src="'/storage/images/companies/'+item"
+                                                            alt="item">
                                                     </div>
                                                 </div>
                                                 <div class="video_upload_tab">
                                                     <div class="videoLabelCompany">Video</div>
                                                     <div class="videotag" v-if="profile.profile_video">
-                                                        <video controls :src="'/storage/images/companies/'+profile.profile_video"></video>
+                                                        <video controls
+                                                            :src="'/storage/images/companies/'+profile.profile_video"></video>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <!-- <li><a class="ViewAnker" href="#/">View</a></li> -->
-                                        <li><a class="ViewEdit" href=".SocialMediaModal" data-toggle="modal"
+                                    <ul class="view-edit-anker-list">
+                                        <!-- <li><a class="view-anker" href="#/">View</a></li> -->
+                                        <li><a class="view-edit" href=".SocialMediaModal" data-toggle="modal"
                                                 data-target=".SocialMediaModal">Edit</a></li>
                                     </ul>
                                 </div>
@@ -266,83 +276,93 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="basicinformationForm">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm container p-0 p-md-2">
-                                <div class="row no-gutters" id="subFormFieldsContainer">
+                            <section class="modal-form container p-0 p-md-2">
+                                <div class="row no-gutters" id="sub-form-fields-container">
                                     <div class="col-12">
-                                        <div id='subForm' class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Basic Information</h4>
+                                        <div id='subForm' class="sub-form">
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Basic Information</h4>
                                             </div>
                                             <div class="subFormFields">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="companyLogo">Logo</label>
-                                                            <input type="file" id="companyLogo" name="companyLogo" class="form-control" />
+                                                            <input type="file" id="companyLogo" name="companyLogo"
+                                                                class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="no_of_employees">No of Employees</label>
-                                                            <input type="number" id="no_of_employees" name="no_of_employees" class="form-control" v-model="profile.no_of_employees"/>
+                                                            <input type="number" id="no_of_employees"
+                                                                name="no_of_employees" class="form-control"
+                                                                v-model="profile.no_of_employees" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="establish_at">Founded</label>
-                                                            <input type="date" placeholder="Enter Founded" id="establish_at" name="establish_at" v-model="profile.establish_at"
-                                                                class="form-control" />
+                                                            <input type="date" placeholder="Enter Founded"
+                                                                id="establish_at" name="establish_at"
+                                                                v-model="profile.establish_at" class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="ceo">CEO</label>
-                                                            <input type="text" placeholder="Enter CEO" id="ceo" name="ceo" v-model="profile.ceo"
-                                                                class="form-control" />
+                                                            <input type="text" placeholder="Enter CEO" id="ceo"
+                                                                name="ceo" v-model="profile.ceo" class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="industry">Industry</label>
-                                                            <input type="text" placeholder="Enter Industry" id="industry" name="industry" v-model="profile.industry"
+                                                            <input type="text" placeholder="Enter Industry"
+                                                                id="industry" name="industry" v-model="profile.industry"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="city">City</label>
-                                                            <input type="text" placeholder="Enter City" id="city" name="city" v-model="profile.city"
+                                                            <input type="text" placeholder="Enter City" id="city"
+                                                                name="city" v-model="profile.city"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="address">Address</label>
-                                                            <input type="text" placeholder="Enter Address" name="address" v-model="profile.address"
+                                                            <input type="text" placeholder="Enter Address"
+                                                                name="address" v-model="profile.address"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="phone">Phone</label>
-                                                            <input type="number" placeholder="Enter Phone" id="phone" name="phone" v-model="profile.phone"
+                                                            <input type="number" placeholder="Enter Phone" id="phone"
+                                                                name="phone" v-model="profile.phone"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="email">Email</label>
-                                                            <input type="email" placeholder="Enter Email" id="email" name="email" v-model="profile.email" disabled
+                                                            <input type="email" placeholder="Enter Email" id="email"
+                                                                name="email" v-model="profile.email" disabled
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="web_link">Weblink</label>
-                                                            <input type="url" placeholder="Enter Weblink" id="web_link" name="web_link" v-model="profile.web_link"
+                                                            <input type="url" placeholder="Enter Weblink" id="web_link"
+                                                                name="web_link" v-model="profile.web_link"
                                                                 class="form-control" />
                                                         </div>
                                                     </div>
@@ -350,7 +370,9 @@
                                                         <div class="form-group">
                                                             <label for="description">Description</label>
                                                             <textarea style="height: 100px;"
-                                                                placeholder="Enter Description" id="description" maxlength="255" name="description" v-model="profile.description"
+                                                                placeholder="Enter Description" id="description"
+                                                                maxlength="255" name="description"
+                                                                v-model="profile.description"
                                                                 class="form-control"></textarea>
                                                         </div>
                                                     </div>
@@ -362,8 +384,10 @@
 
                                 <div class="row mt-4 ">
                                     <div class="col-lg-12 modelBtnContainer ">
-                                        <button class="positiveBtn modelBtn mr-1" @click.prevent="updateBasicInformation()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="getCompanyProfileData()">Cancel</button>
+                                        <button class="positiveBtn modelBtn mr-1"
+                                            @click.prevent="updateBasicInformation()">Update</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                            @click.prevent="getCompanyProfileData()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
@@ -378,29 +402,31 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="socialmediaForm">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm">
+                            <section class="modal-form">
                                 <div class="row no-gutters" id="EducationFieldsContainer">
                                     <div class="col-12 EductionSection">
-                                        <div class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText"  >Social Media</h4>
+                                        <div class="sub-form">
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Social Media</h4>
                                             </div>
                                             <div class="subFormFields">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="whatsapp_link">Whatsapp</label>
-                                                            <input type="url" id="whatsapp_link" name="whatsapp" v-model="profile.whatsapp"
-                                                                placeholder="Enter Whatsapp" class="form-control" />
+                                                            <input type="url" id="whatsapp_link" name="whatsapp"
+                                                                v-model="profile.whatsapp" placeholder="Enter Whatsapp"
+                                                                class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="facebook_link">Facebook</label>
-                                                            <input type="url" id="facebook_link" name="facebook" v-model="profile.facebook"
+                                                            <input type="url" id="facebook_link" name="facebook"
+                                                                v-model="profile.facebook"
                                                                 placeholder="Paste Facebook Link"
                                                                 class="form-control" />
                                                         </div>
@@ -408,34 +434,41 @@
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="linkedin_link">Linkedin</label>
-                                                            <input type="url" id="linkedin_link" placeholder="Paste LinkedIn Link" name="linkedin" v-model="profile.linkedin"
-                                                                class="form-control" /> 
+                                                            <input type="url" id="linkedin_link"
+                                                                placeholder="Paste LinkedIn Link" name="linkedin"
+                                                                v-model="profile.linkedin" class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="twitter_link">Twitter</label>
-                                                            <input type="url" id="twitter_link" placeholder="Paste Twitter Link" name="twitter" v-model="profile.twitter"
-                                                                class="form-control" />
+                                                            <input type="url" id="twitter_link"
+                                                                placeholder="Paste Twitter Link" name="twitter"
+                                                                v-model="profile.twitter" class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="github_link">Github</label>
-                                                            <input type="url" id="github_link" placeholder="Paste GitHub Link" name="github"  v-model="profile.github"
-                                                                class="form-control" />
+                                                            <input type="url" id="github_link"
+                                                                placeholder="Paste GitHub Link" name="github"
+                                                                v-model="profile.github" class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="companyGallery">Company Pics <small>(Max upload4)</small></label>
-                                                            <input name="companyGallery[]" type="file" multiple="multiple" id="companyGallery" class="form-control" />
+                                                            <label for="companyGallery">Company Pics <small>(Max
+                                                                    upload4)</small></label>
+                                                            <input name="companyGallery[]" type="file"
+                                                                multiple="multiple" id="companyGallery"
+                                                                class="form-control" />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="companyVideo">Video</label>
-                                                            <input type="file" value="" id="companyVideo" name="companyVideo" class="form-control" />
+                                                            <input type="file" value="" id="companyVideo"
+                                                                name="companyVideo" class="form-control" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -445,14 +478,16 @@
                                 </div>
                                 <div class="row mt-4 ">
                                     <div class="col-lg-12 modelBtnContainer ">
-                                        <button class="positiveBtn modelBtn mr-1" @click.prevent="updateSocialMedia()">Update</button>
-                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal" @click.prevent="getCompanyProfileData()">Cancel</button>
+                                        <button class="positiveBtn modelBtn mr-1"
+                                            @click.prevent="updateSocialMedia()">Update</button>
+                                        <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
+                                            @click.prevent="getCompanyProfileData()">Cancel</button>
                                     </div>
                                 </div>
                             </section>
                         </div>
                     </div>
-            </form>
+                </form>
             </div>
         </div>
     </div>
@@ -489,40 +524,40 @@
             },
             updateBasicInformation() {
                 Swal.fire({
-                    text:  'Please Wait...',
+                    text: 'Please Wait...',
                     didOpen: () => {
-                        Swal.showLoading() 
+                        Swal.showLoading()
                     },
                 })
                 var $basicinformationForm = $('#basicinformationForm');
                 var data = new FormData(basicinformationForm);
                 axios.post('/update/company-basicinformation', data)
-                .then((res) => {
-                    if (res.data.success == false) {
-                        Swal.close()
-                        this.errors = res.data.errors
-                    } else {
-                        Swal.close()
-                        this.errors = []
-                        this.getCompanyProfileData()
-                        // $('#basicInfoModal').modal('hide')
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Updated',
-                            text: 'Company Updated Successfully',
-                        })
-                    }
-                })
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            Swal.close()
+                            this.errors = res.data.errors
+                        } else {
+                            Swal.close()
+                            this.errors = []
+                            this.getCompanyProfileData()
+                            // $('#basicInfoModal').modal('hide')
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Updated',
+                                text: 'Company Updated Successfully',
+                            })
+                        }
+                    })
             },
             updateSocialMedia() {
                 Swal.fire({
-                    text:  'Please Wait...',
+                    text: 'Please Wait...',
                     didOpen: () => {
-                        Swal.showLoading() 
+                        Swal.showLoading()
                     },
                 })
                 var $fileUpload = $('#companyGallery');
-                if (parseInt($fileUpload.get(0).files.length) > 4){
+                if (parseInt($fileUpload.get(0).files.length) > 4) {
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
@@ -555,10 +590,10 @@
                     })
             },
             openProfileTab() {
-                document.getElementById("ProfileTabMobileNav").style.left = "0%";
+                document.getElementById("Profile-tab-mobile-nav").style.left = "0%";
             },
             closeProfileTab() {
-                document.getElementById("ProfileTabMobileNav").style.left = "-100%";
+                document.getElementById("Profile-tab-mobile-nav").style.left = "-100%";
             },
         },
     };
@@ -571,11 +606,11 @@
         }
 
         .profileLabel,
-        .profileInfoList>li {
+        .profile-info-list>li {
             height: 54px;
         }
 
-        .profileLabel {
+        .profile-label {
             width: 140px;
         }
     }

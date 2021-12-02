@@ -22,10 +22,10 @@
                         <div class="tabs-ankers col-md-3 col-2">
                             <!-- <a href="#">Download CV</a> -->
                             <ul class="nav nav-tabs" role="tablist" id="DesktopTabsIcons">
-                                <li class="nav-item profileIconTab">
-                                    <img class="profileIcon" src="/website/assets/images/dashboard-interface.svg"
+                                <li class="nav-item profile-icon-tab">
+                                    <img class="profile-icon" src="/website/assets/images/dashboard-interface.svg"
                                         alt="img">
-                                    <span class="profileText">Profile</span>
+                                    <span class="profile-text">Profile</span>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#basic-information">Basic
@@ -63,66 +63,66 @@
                                 </li>
                             </ul>
                             <!-- mobile tabs start-->
-                            <ul class="mobileTabsIcons" style="display: none;">
-                                <li><a @click="openProfileTab()"><img class="IconsTab IconsTabActive"
+                            <ul class="mobile-tabs-icons" style="display: none;">
+                                <li><a @click="openProfileTab()"><img class="icons-tab icons-tab-active"
                                             src="/website/assets/images/details.svg" alt="TabsIcon"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/mortarboard.svg" alt="TabsIcon"
                                             style="height: 30px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/score.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/language.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/trophy.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/leader.svg" alt="TabsIcon" Î
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/work.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/overtime.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/settings.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="IconsTab"
+                                <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/google-docs.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
                             </ul>
 
                             <!-- Modal Tab start -->
-                            <div id="ProfileTabMobileNav" class="ProfileTabMobileNav" @click="closeProfileTab()">
-                                <div class="row no-gutters modalTabConatiner">
-                                    <div class="IconsModal">
-                                        <ul class="mobileModalTabsIcons p-0">
-                                            <li><img class="IconsTab" src="/website/assets/images/details.svg"
+                            <div id="ProfileTabMobileNav" class="Profile-tab-mobile-nav" @click="closeProfileTab()">
+                                <div class="row no-gutters modal-tab-conatiner">
+                                    <div class="icons-modal">
+                                        <ul class="mobile-modal-tabs-icons p-0">
+                                            <li><img class="icons-tab" src="/website/assets/images/details.svg"
                                                     alt="TabsIcon"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/mortarboard.svg"
+                                            <li><img class="icons-tab" src="/website/assets/images/mortarboard.svg"
                                                     alt="TabsIcon" style="height: 30px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/score.svg"
+                                            <li><img class="icons-tab" src="/website/assets/images/score.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/language.svg"
+                                            <li><img class="icons-tab" src="/website/assets/images/language.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/trophy.svg"
+                                            <li><img class="icons-tab" src="/website/assets/images/trophy.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/leader.svg"
+                                            <li><img class="icons-tab" src="/website/assets/images/leader.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/work.svg"
+                                            <li><img class="icons-tab" src="/website/assets/images/work.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/overtime.svg"
+                                            <li><img class="icons-tab" src="/website/assets/images/overtime.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/settings.svg"
+                                            <li><img class="icons-tab" src="/website/assets/images/settings.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="IconsTab" src="/website/assets/images/google-docs.svg"
+                                            <li><img class="icons-tab" src="/website/assets/images/google-docs.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
                                         </ul>
                                     </div>
-                                    <div class="IconsModalTabAnkers">
+                                    <div class="icons-modal-tab-ankers">
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class="nav-item">
                                                 <a class="nav-link active" data-toggle="tab"
@@ -177,46 +177,46 @@
                             <!--  -->
                             <div class="tab-content">
                                 <div id="basic-information" class="tab-pane in active show">
-                                    <h1 class="tabsHeading">Basic information</h1>
-                                    <div class="row no-gutters BasicInfoTab">
+                                    <h1 class="tabs-heading">Basic information</h1>
+                                    <div class="row no-gutters basic-info-tab">
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel h150 profileLabelBorder rt0 btr5"><span>Profile
+                                            <ul class="profile-labels">
+                                                <li class="profile-label h150 profile-label-border rt0 btr5"><span>Profile
                                                         Pic</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Full Name</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Gender</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>City</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Address</span></li>
-                                                <li class="profileLabel profileLabelBorder bbl5"><span>Phone</span></li>
-                                                <!-- <li class="profileLabel profileLabelBorderTop bbl5"><span>Date of Birth</span></li> -->
+                                                <li class="profile-label profile-label-border"><span>Full Name</span></li>
+                                                <li class="profile-label profile-label-border"><span>Gender</span></li>
+                                                <li class="profile-label profile-label-border"><span>City</span></li>
+                                                <li class="profile-label profile-label-border"><span>Address</span></li>
+                                                <li class="profile-label profile-label-border bbl5"><span>Phone</span></li>
+                                                <!-- <li class="profile-label profile-label-border-top bbl5"><span>Date of Birth</span></li> -->
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="h150 profileInfo profileInfoBorderBottom"
+                                            <ul class="profile-info-list">
+                                                <li class="h150 profile-info profile-info-border-bottom"
                                                     style="height: 150px;">
                                                     <img :src="'/storage/images/candidates/profile/'+this.profile.profile_image"
                                                         class="ProfileUserPic" alt="profileImg">
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.full_name}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.gender}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div>
                                                         <p class="line-text-2">{{this.profile.city}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div>
                                                         <p class="line-text-2">{{this.profile.address}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0">
+                                                <li class="profile-info profile-info-border rb0">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.phone}}</p>
                                                     </div>
@@ -224,35 +224,35 @@
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
+                                            <ul class="profile-labels">
                                                 <li><span
-                                                        class="profileLabel h150 profileLabelBorder rt0 btr5">Bio</span>
+                                                        class="profile-label h150 profile-label-border rt0 btr5">Bio</span>
                                                 </li>
-                                                <li><span class="profileLabel profileLabelBorder">Date of Birth</span>
+                                                <li><span class="profile-label profile-label-border">Date of Birth</span>
                                                 </li>
-                                                <li><span class="profileLabel profileLabelBorder">Zip Code</span></li>
-                                                <li><span class="profileLabel v-on-d"></span></li>
-                                                <li><span class="profileLabel v-on-d"></span></li>
-                                                <li><span class="profileLabel bb5 v-on-d"></span></li>
-                                                <!-- <li><span class="profileLabel bbl5"></span></li> -->
+                                                <li><span class="profile-label profile-label-border">Zip Code</span></li>
+                                                <li><span class="profile-label v-on-d"></span></li>
+                                                <li><span class="profile-label v-on-d"></span></li>
+                                                <li><span class="profile-label bb5 v-on-d"></span></li>
+                                                <!-- <li><span class="profile-label bbl5"></span></li> -->
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo h150" style="height: 150px;">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info h150" style="height: 150px;">
                                                     <div class="line-text-5" style="height: 105px;">
                                                         <p>{{this.profile.bio}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p class="pr-5">{{this.profile.date_of_birth}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileLabelBorderTop">
+                                                <li class="profile-info profile-label-border-top">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.zipcode}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo">
+                                                <li class="profile-info">
                                                     <div class="line-text-1">
                                                         <p></p>
                                                     </div>
@@ -260,161 +260,161 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="openBasicModal()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="openBasicModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="education" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Education</h1>
-                                    <div class="row no-gutters EducationInfoTab"
+                                    <h1 class="tabs-heading">Education</h1>
+                                    <div class="row no-gutters education-info-tab"
                                         v-for="(item, index) in this.profile.candidate_education" :key="index">
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <!-- <li class="profileLabel profileLabelBorder btr5"><span>Institute Type</span></li> -->
-                                                <li class="profileLabel profileLabelBorder"><span>Institute Name</span>
+                                            <ul class="profile-labels">
+                                                <!-- <li class="profile-label profile-label-border btr5"><span>Institute Type</span></li> -->
+                                                <li class="profile-label profile-label-border"><span>Institute Name</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
+                                                <li class="profile-label profile-label-border"><span>Starting Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Department</span></li>
-                                                <li class="profileLabel profileLabelBorder bbl5 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border"><span>Department</span></li>
+                                                <li class="profile-label profile-label-border bbl5 v-on-d"><span></span>
                                                 </li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <!-- <li class="profileInfo profileInfoBorder rt0">
+                                            <ul class="profile-info-list">
+                                                <!-- <li class="profile-info profile-info-border rt0">
                                                     <div class="line-text-1">
                                                         <p>{{item.school_type}}</p>
                                                     </div>
                                                 </li> -->
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{item.school_name}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{item.start_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{item.department}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
+                                                <li class="profile-info profile-info-border rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rb0 btr5 v-on-d">
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border rb0 btr5 v-on-d">
                                                     <span></span></li>
-                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rt0 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
+                                                <li class="profile-label profile-label-border"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rb0 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel bbl5 v-on-d"><span></span></li>
+                                                <li class="profile-label bbl5 v-on-d"><span></span></li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder rt0 rb0 v-on-d"></li>
-                                                <li class="profileInfo profileInfoBorder rt0 v-on-d"></li>
-                                                <li class="profileInfo profileInfoBorder v-on-d">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info profile-info-border rt0 rb0 v-on-d"></li>
+                                                <li class="profile-info profile-info-border rt0 v-on-d"></li>
+                                                <li class="profile-info profile-info-border v-on-d">
                                                     <div class="line-text-1">
                                                         <p>{{item.end_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0 v-ond"></li>
+                                                <li class="profile-info profile-info-border rb0 v-ond"></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="openEducationModal()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="openEducationModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="qualification" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Qualification</h1>
-                                    <div class="row no-gutters QualificationInfoTab">
+                                    <h1 class="tabs-heading">Qualification</h1>
+                                    <div class="row no-gutters qualification-info-tab">
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 btr5"><span>Institute
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border rt0 btr5"><span>Institute
                                                         Type</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Institute Name</span>
+                                                <li class="profile-label profile-label-border"><span>Institute Name</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
+                                                <li class="profile-label profile-label-border"><span>Starting Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Department</span></li>
-                                                <li class="profileLabel profileLabelBorder bbl5 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border"><span>Department</span></li>
+                                                <li class="profile-label profile-label-border bbl5 v-on-d"><span></span>
                                                 </li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder rt0">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info profile-info-border rt0">
                                                     <div class="line-text-1">
                                                         <p>University</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>Superior University</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>09/09/2016</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>Computer Science</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
+                                                <li class="profile-info profile-info-border rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d">
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border rt0 rb0 btr5 v-on-d">
                                                     <span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rt0 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
+                                                <li class="profile-label profile-label-border"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rb0 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel bbl5 v-on-d"><span></span></li>
+                                                <li class="profile-label bbl5 v-on-d"><span></span></li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo v-on-d"></li>
-                                                <li class="profileInfo profileInfoBorder rt0 v-on-d"></li>
-                                                <li class="profileInfo profileInfoBorder">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info v-on-d"></li>
+                                                <li class="profile-info profile-info-border rt0 v-on-d"></li>
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>20/08/2020</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
+                                                <li class="profile-info profile-info-border rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="OpenWorkQualificationModal()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="OpenWorkQualificationModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="languages" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Languages</h1>
-                                    <div class="row no-gutters DocumentsInfoTab">
+                                    <h1 class="tabs-heading">Languages</h1>
+                                    <div class="row no-gutters documents-info-tab">
                                         <div class="col-6 col-md-6 br1">
-                                            <ul class="profileLables w-100">
-                                                <li class="profileLabel w-100 bl5"><span>Language Name</span></li>
+                                            <ul class="profile-labels w-100">
+                                                <li class="profile-label w-100 bl5"><span>Language Name</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList"
+                                                    <ul class="profile-info-list"
                                                         v-for="(language, index) in this.profile.candidate_language"
                                                         :key="index">
-                                                        <li class="profileInfo profileInfoBorder rt0">
+                                                        <li class="profile-info profile-info-border rt0">
                                                             <div class="line-text-1">
-                                                                <p class="SkillsTitle">{{language.name}}</p>
+                                                                <p class="skills-title">{{language.name}}</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -422,14 +422,14 @@
                                             </ul>
                                         </div>
                                         <div class="col-6 col-md-6 bl1">
-                                            <ul class="profileLables w-100">
-                                                <li class="profileLabel w-100 br5"><span>Language Level</span></li>
+                                            <ul class="profile-labels w-100">
+                                                <li class="profile-label w-100 br5"><span>Language Level</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList"
+                                                    <ul class="profile-info-list"
                                                         v-for="(language, index) in this.profile.candidate_language"
                                                         :key="index">
-                                                        <li class="profileInfo profileInfoBorder rt0">
-                                                            <ul class="uploadViewAnkerList">
+                                                        <li class="profile-info profile-info-border rt0">
+                                                            <ul class="upload-view-anker-list">
                                                                 <li>
                                                                     <p>{{language.level}}</p>
                                                                 </li>
@@ -440,22 +440,22 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="openLanguagesModal()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="openLanguagesModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="awards" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Awards</h1>
-                                    <div class="row no-gutters AwardsInfoTab">
+                                    <h1 class="tabs-heading">Awards</h1>
+                                    <div class="row no-gutters awards-info-tab">
                                         <div class="col-8 col-md-6 br1">
-                                            <ul class="profileLables w-100">
-                                                <li class="profileLabel w-100 bl5"><span>Award Name</span></li>
+                                            <ul class="profile-labels w-100">
+                                                <li class="profile-label w-100 bl5"><span>Award Name</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList"
+                                                    <ul class="profile-info-list"
                                                         v-for="(awardN, index) in this.profile.candidate_awards"
                                                         :key="index">
-                                                        <li class="profileInfo profileInfoBorder rt0">
+                                                        <li class="profile-info profile-info-border rt0">
                                                             <div class="line-text-1">
                                                                 <p class="awardsTitle">{{awardN.name}}</p>
                                                             </div>
@@ -465,13 +465,13 @@
                                             </ul>
                                         </div>
                                         <div class="col-4 col-md-6 bl1">
-                                            <ul class="profileLables w-100">
-                                                <li class="profileLabel w-100 br5"><span>Year</span></li>
+                                            <ul class="profile-labels w-100">
+                                                <li class="profile-label w-100 br5"><span>Year</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList"
+                                                    <ul class="profile-info-list"
                                                         v-for="(awardD, index) in this.profile.candidate_awards"
                                                         :key="index">
-                                                        <li class="profileInfo profileInfoBorder rt0">
+                                                        <li class="profile-info profile-info-border rt0">
                                                             <div class="line-text-1">
                                                                 <p class="awardsYear">{{awardD.date}}</p>
                                                             </div>
@@ -481,57 +481,57 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="openAwardModal()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="openAwardModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="current-job" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Current job</h1>
-                                    <div class="row no-gutters CurrentJobTab">
+                                    <h1 class="tabs-heading">Current job</h1>
+                                    <div class="row no-gutters current-info-tab">
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 btr5"><span>Currently
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border rt0 btr5"><span>Currently
                                                         Working</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
+                                                <li class="profile-label profile-label-border"><span>Starting Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
+                                                <li class="profile-label profile-label-border"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Current
+                                                <li class="profile-label profile-label-border"><span>Current
                                                         Position</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Current Status</span>
+                                                <li class="profile-label profile-label-border"><span>Current Status</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>No of Persons
+                                                <li class="profile-label profile-label-border"><span>No of Persons
                                                         Managed</span></li>
-                                                <!-- <li class="profileLabel profileLabelBorder rb0 bbl5"><span>Skills</span></li> -->
+                                                <!-- <li class="profile-label profile-label-border rb0 bbl5"><span>Skills</span></li> -->
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder rt0">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info profile-info-border rt0">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.is_working_currently}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.job_start_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.job_end_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.current_position}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.current_status}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.no_of_persons_managed}}</p>
                                                     </div>
@@ -539,94 +539,94 @@
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 btr5 v-on-d">
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border rt0 rb0 btr5 v-on-d">
                                                     <span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rt0 rb0 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rt0 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Current Company</span>
+                                                <li class="profile-label profile-label-border"><span>Current Company</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder profileLabelBorderBottom">
+                                                <li class="profile-label profile-label-border profile-label-border-bottom">
                                                     <span>Current Salary</span></li>
-                                                <li class="profileLabel profileLabelBorder rb0 rt0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rb0 rt0 v-on-d"><span></span>
                                                 </li>
-                                                <!-- <li class="profileLabel bbl5"><span></span></li> -->
+                                                <!-- <li class="profile-label bbl5"><span></span></li> -->
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo v-on-d"></li>
-                                                <li class="profileInfo v-on-d"></li>
-                                                <li class="profileInfo profileInfoBorderBottom v-on-d"></li>
-                                                <li class="profileInfo profileInfoBorder">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info v-on-d"></li>
+                                                <li class="profile-info v-on-d"></li>
+                                                <li class="profile-info profile-info-border-bottom v-on-d"></li>
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.current_working_company}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.current_salary}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorderTop v-on-d"></li>
+                                                <li class="profile-info profile-info-border-top v-on-d"></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="openCurrentJobModal()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="openCurrentJobModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <!-- <div id="desire-job" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Desire job</h1>
-                                    <div class="row no-gutters DesireJobTab">
+                                    <h1 class="tabs-heading">Desire job</h1>
+                                    <div class="row no-gutters desire-job-tab">
                                         <div class="col-12">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 btr5"><span>Looking for
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border rt0 btr5"><span>Looking for
                                                         Job</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Location</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Area</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Expected Salary</span>
+                                                <li class="profile-label profile-label-border"><span>Location</span></li>
+                                                <li class="profile-label profile-label-border"><span>Area</span></li>
+                                                <li class="profile-label profile-label-border"><span>Expected Salary</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Joining From</span>
+                                                <li class="profile-label profile-label-border"><span>Joining From</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Position</span></li>
-                                                <li class="profileLabel profileLabelBorder rb0 bbl5"><span>Shift</span>
+                                                <li class="profile-label profile-label-border"><span>Position</span></li>
+                                                <li class="profile-label profile-label-border rb0 bbl5"><span>Shift</span>
                                                 </li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder rt0 justify-content-start">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info profile-info-border rt0 justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.is_looking_for_job}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder justify-content-start">
+                                                <li class="profile-info profile-info-border justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.looking_for_job_location}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder justify-content-start">
+                                                <li class="profile-info profile-info-border justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.looking_for_job_location}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder justify-content-start">
+                                                <li class="profile-info profile-info-border justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.looking_for_job_expected_salary}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder justify-content-start">
+                                                <li class="profile-info profile-info-border justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>-</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder justify-content-start">
+                                                <li class="profile-info profile-info-border justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>{{this.profile.looking_for_job_position}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0 justify-content-start">
+                                                <li class="profile-info profile-info-border rb0 justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>-</p>
                                                     </div>
@@ -634,99 +634,99 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="OpenDesireJobModal()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="OpenDesireJobModal()">Edit</a></li>
                                     </ul>
                                 </div> -->
                                 <div id="work-experience" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Work Experience</h1>
-                                    <div class="row no-gutters ExperienceInfoTab"
+                                    <h1 class="tabs-heading">Work Experience</h1>
+                                    <div class="row no-gutters experience-info-tab"
                                         v-for="(experience, index) in this.profile.candidate_experience" :key="index">
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 btr5">
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border rt0 btr5">
                                                     <span>Company</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Position</span></li>
-                                                <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
+                                                <li class="profile-label profile-label-border"><span>Position</span></li>
+                                                <li class="profile-label profile-label-border"><span>Starting Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Current Status</span>
+                                                <li class="profile-label profile-label-border"><span>Current Status</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rb0 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0 rb0 bbl5 v-on-d">
+                                                <li class="profile-label profile-label-border rt0 rb0 bbl5 v-on-d">
                                                     <span></span>
                                                 </li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder rt0">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info profile-info-border rt0">
                                                     <div class="line-text-1">
                                                         <p>{{experience.company_name}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{experience.designation}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{experience.start_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder">
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p v-if="experience.is_working_currently == 1">Yes</p>
                                                         <p v-if="experience.is_working_currently == 0">No</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
+                                                <li class="profile-info profile-info-border rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rb0 rt0 btr5 v-on-d">
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border rb0 rt0 btr5 v-on-d">
                                                     <span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rt0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rt0 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
+                                                <li class="profile-label profile-label-border"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder rb0 v-on-d"><span></span>
+                                                <li class="profile-label profile-label-border rb0 v-on-d"><span></span>
                                                 </li>
-                                                <li class="profileLabel v-on-d"><span></span></li>
-                                                <li class="profileLabel bbl5 v-on-d"><span></span></li>
+                                                <li class="profile-label v-on-d"><span></span></li>
+                                                <li class="profile-label bbl5 v-on-d"><span></span></li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo v-on-d"></li>
-                                                <li class="profileInfo profileInfoBorder rt0 v-on-d"></li>
-                                                <li class="profileInfo profileInfoBorder">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info v-on-d"></li>
+                                                <li class="profile-info profile-info-border rt0 v-on-d"></li>
+                                                <li class="profile-info profile-info-border">
                                                     <div class="line-text-1">
                                                         <p>{{experience.end_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder rb0 v-on-d"></li>
+                                                <li class="profile-info profile-info-border rb0 v-on-d"></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="openWorkExperienceModal()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="openWorkExperienceModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="skills" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Skills</h1>
-                                    <div class="row no-gutters DocumentsInfoTab">
+                                    <h1 class="tabs-heading">Skills</h1>
+                                    <div class="row no-gutters documents-info-tab">
                                         <div class="col-5 col-md-6 br1">
-                                            <ul class="profileLables w-100">
-                                                <li class="profileLabel w-100 bl5"><span>Skills</span></li>
+                                            <ul class="profile-labels w-100">
+                                                <li class="profile-label w-100 bl5"><span>Skills</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList"
+                                                    <ul class="profile-info-list"
                                                         v-for="(skillN, index) in this.profile.candidate_skills"
                                                         :key="index">
-                                                        <li class="profileInfo profileInfoBorder rt0">
+                                                        <li class="profile-info profile-info-border rt0">
                                                             <div class="line-text-1">
-                                                                <p class="SkillsTitle">{{skillN.name}}</p>
+                                                                <p class="skills-title">{{skillN.name}}</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -734,15 +734,15 @@
                                             </ul>
                                         </div>
                                         <div class="col-7 col-md-6 bl1">
-                                            <ul class="profileLables w-100">
-                                                <li class="profileLabel w-100 br5"><span>Skill Level</span></li>
+                                            <ul class="profile-labels w-100">
+                                                <li class="profile-label w-100 br5"><span>Skill Level</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList"
+                                                    <ul class="profile-info-list"
                                                         v-for="(skillL, index) in this.profile.candidate_skills"
                                                         :key="index">
-                                                        <li class="profileInfo profileInfoBorder rt0">
+                                                        <li class="profile-info profile-info-border rt0">
                                                             <div class="line-text-1">
-                                                                <p class="SkillsTitle">{{skillL.level}}</p>
+                                                                <p class="skills-title">{{skillL.level}}</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -750,30 +750,30 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="openSkillsModal()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="openSkillsModal()">Edit</a></li>
                                     </ul>
                                 </div>
                                 <div id="documents" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Documents</h1>
-                                    <div class="row no-gutters DocumentsInfoTab">
+                                    <h1 class="tabs-heading">Documents</h1>
+                                    <div class="row no-gutters documents-info-tab">
                                         <div class="col-12 col-md-6 br1">
-                                            <ul class="profileLables w-100">
-                                                <li class="profileLabel w-100 bl5"><span>Type</span></li>
+                                            <ul class="profile-labels w-100">
+                                                <li class="profile-label w-100 bl5"><span>Type</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList">
-                                                        <li class="profileInfo profileInfoBorder rt0">
+                                                    <ul class="profile-info-list">
+                                                        <li class="profile-info profile-info-border rt0">
                                                             <div class="line-text-1">
                                                                 <p class="documentsTitle">Resume</p>
                                                             </div>
                                                         </li>
-                                                        <li class="profileInfo profileInfoBorder rt0">
+                                                        <li class="profile-info profile-info-border rt0">
                                                             <div class="line-text-1">
                                                                 <p class="documentsTitle">CNIC (Front, Back)</p>
                                                             </div>
                                                         </li>
-                                                        <li class="profileInfo profileInfoBorder rt0 rb0">
+                                                        <li class="profile-info profile-info-border rt0 rb0">
                                                             <div class="line-text-1">
                                                                 <p class="documentsTitle">Latest Experience Letter,
                                                                     Certificates</p>
@@ -784,20 +784,20 @@
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md-6 bl1">
-                                            <ul class="profileLables w-100">
-                                                <li class="profileLabel w-100 br5"><span>View</span></li>
+                                            <ul class="profile-labels w-100">
+                                                <li class="profile-label w-100 br5"><span>View</span></li>
                                                 <li>
-                                                    <ul class="profileInfoList">
-                                                        <li class="profileInfo profileInfoBorder rt0">
+                                                    <ul class="profile-info-list">
+                                                        <li class="profile-info profile-info-border rt0">
                                                             <form id="uploadresume">
-                                                                <ul class="uploadViewAnkerList">
+                                                                <ul class="upload-view-anker-list">
                                                                     <li>
                                                                         <input type="file" hidden name="resume"
                                                                             @change="saveResume()" id="resume-pdf-file">
                                                                         <label class="UploadAnker"
                                                                             for="resume-pdf-file">Upload</label>
                                                                     </li>
-                                                                    <li><a v-if="this.profile.cv_file" class="ViewAnker"
+                                                                    <li><a v-if="this.profile.cv_file" class="view-anker"
                                                                             :href="'/storage/images/candidates/resume/'+this.profile.cv_file"
                                                                             target="_blank">View</a></li>
                                                                     <div class="alert d-none" id="responseMsg">
@@ -807,9 +807,9 @@
                                                                 </ul>
                                                             </form>
                                                         </li>
-                                                        <li class="profileInfo profileInfoBorder rt0">
+                                                        <li class="profile-info profile-info-border rt0">
                                                             <form id="uploadcnic">
-                                                                <ul class="uploadViewAnkerList">
+                                                                <ul class="upload-view-anker-list">
                                                                     <li>
                                                                         <input type="file" hidden
                                                                             name="uploadcnicfrontback"
@@ -818,15 +818,15 @@
                                                                         <label class="UploadAnker"
                                                                             for="uploadcnicfrontback">Upload</label>
                                                                     </li>
-                                                                    <li><a class="ViewAnker" v-if="profile.cnic_image"
+                                                                    <li><a class="view-anker" v-if="profile.cnic_image"
                                                                             :href="'/storage/images/candidates/cnic/'+this.profile.cnic_image"
                                                                             target="_blank">View</a></li>
                                                                 </ul>
                                                             </form>
                                                         </li>
-                                                        <li class="profileInfo profileInfoBorder rt0 rb0">
+                                                        <li class="profile-info profile-info-border rt0 rb0">
                                                             <form id="uploadexperienceletter">
-                                                                <ul class="uploadViewAnkerList">
+                                                                <ul class="upload-view-anker-list">
                                                                     <li>
                                                                         <input type="file" hidden
                                                                             name="uploadexperienceletter"
@@ -835,7 +835,7 @@
                                                                         <label class="UploadAnker"
                                                                             for="experiencelatter">Upload</label>
                                                                     </li>
-                                                                    <li><a class="ViewAnker" v-if="profile.experience_letter"
+                                                                    <li><a class="view-anker" v-if="profile.experience_letter"
                                                                             :href="'/storage/images/candidates/experience-letter/'+this.profile.experience_letter"
                                                                             target="_blank">View</a></li>
                                                                 </ul>
@@ -848,43 +848,43 @@
                                     </div>
                                 </div>
                                 <div id="projects" class="tab-pane fade">
-                                    <h1 class="tabsHeading">Projects</h1>
-                                    <div class="row no-gutters DesireJobTab"
+                                    <h1 class="tabs-heading">Projects</h1>
+                                    <div class="row no-gutters desire-job-tab"
                                         v-for="(project, index) in this.profile.candidate_projects" :key="index">
                                         <div class="col-12">
-                                            <ul class="profileLables">
-                                                <li class="profileLabel profileLabelBorder rt0 btr5"><span>Name</span>
+                                            <ul class="profile-labels">
+                                                <li class="profile-label profile-label-border rt0 btr5"><span>Name</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Starting Date</span>
+                                                <li class="profile-label profile-label-border"><span>Starting Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Ending Date</span>
+                                                <li class="profile-label profile-label-border"><span>Ending Date</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Description</span>
+                                                <li class="profile-label profile-label-border"><span>Description</span>
                                                 </li>
-                                                <li class="profileLabel profileLabelBorder"><span>Link</span></li>
+                                                <li class="profile-label profile-label-border"><span>Link</span></li>
                                             </ul>
-                                            <ul class="profileInfoList">
-                                                <li class="profileInfo profileInfoBorder rt0 justify-content-start">
+                                            <ul class="profile-info-list">
+                                                <li class="profile-info profile-info-border rt0 justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>{{project.name}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder justify-content-start">
+                                                <li class="profile-info profile-info-border justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>{{project.start_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder justify-content-start">
+                                                <li class="profile-info profile-info-border justify-content-start">
                                                     <div class="line-text-1">
                                                         <p>{{project.end_date}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder justify-content-start">
+                                                <li class="profile-info profile-info-border justify-content-start">
                                                     <div class="line-text-3">
                                                         <p>{{project.description}}</p>
                                                     </div>
                                                 </li>
-                                                <li class="profileInfo profileInfoBorder justify-content-start">
+                                                <li class="profile-info profile-info-border justify-content-start">
                                                     <div class="line-text-1 pl-2">
                                                         <a :href="project.link" target="_blank">{{project.link}}</a>
                                                     </div>
@@ -892,9 +892,9 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <ul class="viewEditAnkerList">
-                                        <li><router-link class="ViewAnker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
-                                        <li><a class="ViewEdit" @click="openProjectModals()">Edit</a></li>
+                                    <ul class="view-edit-anker-list">
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><a class="view-edit" @click="openProjectModals()">Edit</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -909,15 +909,15 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="basicinformationForm" enctype="multipart/form-data">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm">
+                            <section class="modal-form">
                                 <div class="row no-gutters" id="subFormFieldsContainer">
                                     <div class="col-12">
-                                        <div id='subForm' class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Basic Information</h4>
+                                        <div id='subForm' class="sub-form">
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Basic Information</h4>
                                             </div>
                                             <div class="subFormFields">
                                                 <div class="row">
@@ -1109,15 +1109,15 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="awardForm" class="w-100" action="#" method="POST">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm">
+                            <section class="modal-form">
                                 <div class="row no-gutters">
                                     <div class="col-12">
-                                        <div class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Award</h4>
+                                        <div class="sub-form">
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Award</h4>
                                             </div>
                                             <div class="subFormFields" id="AwardFieldsContainer"
                                                 v-for="(awardUpdate, index) in this.profile.candidate_awards"
@@ -1205,15 +1205,15 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="currentJobForm" class="w-100">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm">
+                            <section class="modal-form">
                                 <div class="row no-gutters" id="CurrentJobFieldsContainer">
                                     <div class="col-12 CurrentJobSection">
-                                        <div id='subForm' class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Current Job</h4>
+                                        <div id='subForm' class="sub-form">
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Current Job</h4>
                                             </div>
                                             <div class="subFormFields">
                                                 <div class="row">
@@ -1320,15 +1320,15 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="educationform" class="w-100">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm">
+                            <section class="modal-form">
                                 <div class="row no-gutters" id="EducationFieldsContainer">
                                     <div class="col-12 EductionSection">
-                                        <div class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Education</h4>
+                                        <div class="sub-form">
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Education</h4>
                                             </div>
                                             <div class="subFormFields"
                                                 v-for="(educationUpdate, index) in this.profile.candidate_education"
@@ -1488,15 +1488,15 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="workExperienceForm" class="w-100" action="#" method="POST">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm">
+                            <section class="modal-form">
                                 <div class="row no-gutters" id="WorkExperienceContainer"
                                     v-for="(experienceUpdate, index) in this.profile.candidate_experience" :key="index">
                                     <div class="col-12 WorkExperienceSection">
-                                        <div id='subForm' class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
+                                        <div id='subForm' class="sub-form">
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
                                                 <h4 class="m-0">Work Experience</h4>
                                             </div>
                                             <div class="subFormFields">
@@ -1566,9 +1566,9 @@
                                 <div class="row no-gutters" id="WorkExperienceContainer"
                                     v-if="this.addMoreDBWorkExperience == true">
                                     <div class="col-12 WorkExperienceSection">
-                                        <div id='subForm' class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
+                                        <div id='subForm' class="sub-form">
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
                                                 <h4 class="m-0">Work Experience</h4>
                                             </div>
                                             <div class="subFormFields">
@@ -1667,15 +1667,15 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="languageForm" class="w-100" action="#" method="POST">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm">
+                            <section class="modal-form">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div id='subForm' class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Languages</h4>
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Languages</h4>
                                             </div>
                                             <div id="LanguagesFields" class="subFormFields row">
                                                 <div class="col-md-6 LanguagesSection"
@@ -1753,15 +1753,15 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="skillForm" class="w-100">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm">
+                            <section class="modal-form">
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div id="SkillsModal" class="subForm">
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Skills</h4>
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Skills</h4>
                                             </div>
                                             <div id="SkillsFields" class="subFormFields row">
                                                 <div class="col-12 col-md-6 SkillsSection"
@@ -1834,9 +1834,9 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="projectForm" class="w-100">
                     <div class="modal-content p-0">
-                        <div class="container editModel pb-5">
+                        <div class="container edit-modal pb-5">
                             <h3 class="my-4">Update</h3>
-                            <section class="modelForm">
+                            <section class="modal-form">
                                 <div class="row no-gutters" id="ProjectFieldsContainer"
                                     v-for="(projectUpdate, index) in this.profile.candidate_projects" :key="index">
                                     <div class="col-12 ProjectSection">
@@ -1846,9 +1846,9 @@
                                                     <i class="fas fa-times"></i>
                                                 </a>
                                             </div>
-                                            <div class="modelTitle my-3">
-                                                <div class="mr-2 titleEffect"></div>
-                                                <h4 class="m-0 modelTitleText">Projects {{projectUpdate.name}}</h4>
+                                            <div class="modal-title  my-3">
+                                                <div class="mr-2 title-effect"></div>
+                                                <h4 class="m-0 modal-title-text">Projects {{projectUpdate.name}}</h4>
                                             </div>
                                             <div class="subFormFields">
                                                 <div class="row">
@@ -1983,16 +1983,16 @@
         <div class="modal fade QualificationModal" id="QualificationModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content p-0">
-                    <div class="container editModel pb-5">
+                    <div class="container edit-modal pb-5">
                         <h3 class="my-4">Update</h3>
-                        <section class="modelForm">
+                        <section class="modal-form">
 
                             <div class="row no-gutters" id="QualificationFieldsContainer">
                                 <div class="col-12 QualificationSection">
                                     <div class="subForm">
-                                        <div class="modelTitle my-3">
-                                            <div class="mr-2 titleEffect"></div>
-                                            <h4 class="m-0 modelTitleText">Qualification</h4>
+                                        <div class="modal-title  my-3">
+                                            <div class="mr-2 title-effect"></div>
+                                            <h4 class="m-0 modal-title-text">Qualification</h4>
                                         </div>
                                         <div class="subFormFields">
 
@@ -2066,14 +2066,14 @@
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content p-0">
-                    <div class="container editModel pb-5">
+                    <div class="container edit-modal pb-5">
                         <h3 class="my-4">Update</h3>
-                        <section class="modelForm">
+                        <section class="modal-form">
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <div class="subForm">
-                                        <div class="modelTitle my-3">
-                                            <div class="mr-2 titleEffect"></div>
+                                        <div class="modal-title  my-3">
+                                            <div class="mr-2 title-effect"></div>
                                             <h4 class="m-0">Social Media</h4>
                                         </div>
                                         <div class="subFormFields">
@@ -2149,15 +2149,15 @@
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content p-0">
-                    <div class="container editModel pb-5">
+                    <div class="container edit-modal pb-5">
                         <h3 class="my-4">Update</h3>
-                        <section class="modelForm">
+                        <section class="modal-form">
                             <div class="row no-gutters" id="subFormFieldsContainer">
                                 <div class="col-12">
                                     <div id='subForm' class="subForm">
-                                        <div class="modelTitle my-3">
-                                            <div class="mr-2 titleEffect"></div>
-                                            <h4 class="m-0 modelTitleText">Desired Job</h4>
+                                        <div class="modal-title  my-3">
+                                            <div class="mr-2 title-effect"></div>
+                                            <h4 class="m-0 modal-title-text">Desired Job</h4>
                                         </div>
                                         <div class="subFormFields">
                                             <div class="row">
@@ -3258,10 +3258,10 @@
             //         })
             // },
             openProfileTab() {
-                document.getElementById("ProfileTabMobileNav").style.left = "0%"
+                document.getElementById("Profile-tab-mobile-nav").style.left = "0%"
             },
             closeProfileTab() {
-                document.getElementById("ProfileTabMobileNav").style.left = "-100%"
+                document.getElementById("Profile-tab-mobile-nav").style.left = "-100%"
             }
         },
     };
@@ -3274,11 +3274,11 @@
         }
 
         .profileLabel,
-        .profileInfoList>li {
+        .profile-info-list>li {
             height: 54px;
         }
 
-        .profileLabel {
+        .profile-label {
             width: 140px;
         }
     }

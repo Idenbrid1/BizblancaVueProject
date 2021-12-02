@@ -29,11 +29,11 @@
                     <section id="news-section" class="container">
                         <!-- swiper blogs -->
                         <div class="" id="blogs-section-scroll">
-                            <div class="swiper-container BlogsSwiper">
+                            <div class="swiper-container blogs-swiper">
                                 <div class="row">
                                     <div class="col-md-12 text-left">
                                         <div class="heading-div">
-                                            <div class="mr-2 titleEffect"></div>
+                                            <div class="mr-2 title-effect"></div>
                                             <h2 class="site-heading mb-0">News</h2>
                                         </div>
                                         <p class="pt-1 pb-2 mb-0">
@@ -186,7 +186,7 @@
                 <div class="list__title-container row">
                     <div class="col-md-12">
                         <div class="heading-div mb-3">
-                            <div class="mr-2 titleEffect"></div>
+                            <div class="mr-2 title-effect"></div>
                             <h2 class="site-heading mb-0">
                                 We are an IT recruiting expertise
                             </h2>
@@ -249,7 +249,7 @@
                     <div class="row">
                         <div class="col-md-12 pb-5 third-inner-sec">
                             <div class="heading-div mb-3">
-                                <div class="mr-2 titleEffect"></div>
+                                <div class="mr-2 title-effect"></div>
                                 <h2 class="site-heading mb-0">IT job ke liye, BizBlanca</h2>
                             </div>
                             <p class="pt-2">
@@ -271,7 +271,7 @@
         <section class="bg-Grey" id="happening">
             <div class="container">
                 <div class="heading-div mb-3">
-                    <div class="mr-2 titleEffect"></div>
+                    <div class="mr-2 title-effect"></div>
                     <h2 class="site-heading mb-0">What's happening</h2>
                 </div>
                 <p>
@@ -348,7 +348,7 @@
                             <div class="row">
                                 <div class="col-md-12 pb-5 pl-0">
                                     <div class="story-heading-div mb-2">
-                                        <div class="mr-2 story-titleEffect"></div>
+                                        <div class="mr-2 story-title-effect"></div>
                                         <h2 class="video-heading text-left text-white m-0">
                                             Our Stories<span class="line"></span>
                                         </h2>
@@ -388,7 +388,7 @@
                             <div class="row">
                                 <div class="col-md-12 pb-5 pl-0">
                                     <div class="story-heading-div mb-2">
-                                        <div class="mr-2 story-titleEffect"></div>
+                                        <div class="mr-2 story-title-effect"></div>
                                         <h2 class="video-heading text-left text-white m-0">
                                             Our Stories<span class="line"></span>
                                         </h2>
@@ -434,7 +434,7 @@
                             <div class="row m-0">
                                 <div class="col-12 pb-4 px-2">
                                     <div class="heading-div mb-3">
-                                        <div class="mr-2 titleEffect"></div>
+                                        <div class="mr-2 title-effect"></div>
                                         <h2 class="site-heading mb-0">Contact Us</h2>
                                     </div>
                                     <p style="color: #081351">
@@ -503,7 +503,7 @@
                     </div>
                     <div class="col-12 col-md-6 map-office">
                         <div class="heading-div mb-3">
-                            <div class="mr-2 titleEffect"></div>
+                            <div class="mr-2 title-effect"></div>
                             <h2 class="site-heading mb-0">Address</h2>
                         </div>
                         <p style="color: #081351">
@@ -557,7 +557,7 @@
             this.checkRole()
         },
         mounted() {
-            var swiper = new Swiper(".BlogsSwiper", {
+            var swiper = new Swiper(".blogs-swiper", {
                 slidesPerView: 1,
                 spaceBetween: 1,
                 centeredSlides: true,
