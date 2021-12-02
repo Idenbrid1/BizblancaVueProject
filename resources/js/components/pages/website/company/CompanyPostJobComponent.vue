@@ -15,9 +15,8 @@
                     </p>
                 </div>
                 <div class="post_new_job_anker">
-                    <a @click="postNewJob()">+ Add More
-                        Jobs</a>
-                    <p>Showing 5 results of 123,456 jobs</p>
+                    <a @click="postNewJob()">+ Add More Jobs</a>
+                    <p>Total {{jobs.data.length}} posted jobs this page</p>
                 </div>
 
                 <!-- Job List Wrap Start -->
@@ -25,19 +24,13 @@
                     <!-- Job List Start -->
                     <div class="job-list mx-0" v-for="(item, index) in jobs.data" :key="index">
                         <div class="company-logo col-auto py-2">
-                            <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo" />
+                            <img :src="'/storage/images/companies/'+item.banner" alt="Company Logo" />
                             <span class="company-h line-clamp-1">Ahmad</span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">{{item.title}}</h6>
-                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i> -->
-
-                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
                                     <span class="job-post-date">
                                         <timeago :datetime="item.created_at"></timeago>
                                     </span>
@@ -83,7 +76,7 @@
                                     </ul>
                                 </div>
                                 <ul class="job-list-fav m-0">
-                                    <li><a v-if="!item.deleted_at" @click="deleteJobPost(item.id)"
+                                    <li><a v-if="!item.deleted_at" @click="deleteJobPost(item.id)" title="Delete Job"
                                             class="job-post-ions"><i class="fas fa-trash-alt"></i></a></li>
                                     <li><a v-if="!item.deleted_at" @click="editJobPost(item.id)"
                                             class="job-post-ions"><i class="fas fa-edit"></i></a></li>
@@ -354,7 +347,8 @@
                 <form id="formData">
                     <div class="modal-content p-0">
                         <div class="container editModel pb-5">
-                            <h3 class="my-4">Update</h3>
+                            <h3 class="my-4">Post Job</h3>
+                            <input name="id" id="id" v-model="record.id" type="hidden" />
                             <section class="modelForm container p-0 p-md-2">
                                 <div class="row no-gutters" id="subFormFieldsContainer">
                                     <div class="col-12">
@@ -365,14 +359,14 @@
                                             </div>
                                             <div class="form-group">
                                                 <img v-if="record.id != 0"
-                                                    :src="'/storage/images/companies/'+record.bannar" height="50"
+                                                    :src="'/storage/images/companies/'+record.banner" height="50"
                                                     width="50" alt="Company Logo" />
-                                                <label for="bannar"><span class="required_feild">*</span> Banner</label>
+                                                <label for="banner"><span class="required_feild">*</span> Banner</label>
                                                 <input class="form-control" style="padding:4px !important;height:40px;"
-                                                    name="bannar" id="bannar" ref="bannar" type="file" />
+                                                    name="banner" id="banner" ref="banner" type="file" />
                                                 <small>
-                                                    <span v-if="errors.bannar != null" class="text-danger">
-                                                        {{errors.bannar[0]}}
+                                                    <span v-if="errors.banner != null" class="text-danger">
+                                                        {{errors.banner[0]}}
                                                     </span>
                                                 </small>
                                             </div>
@@ -410,7 +404,7 @@
                                                             </small>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-6">
+                                                    <!-- <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="salary_type"><span
                                                                     class="required_feild">*</span> Salary Type</label>
@@ -431,7 +425,7 @@
                                                                 </span>
                                                             </small>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="salary_range"><span
@@ -540,7 +534,7 @@
                                                                 <option value="" disabled>select please</option>
                                                                 <option selected value="Male">Male</option>
                                                                 <option value="Female">Female</option>
-                                                                <option value="Other">Other</option>
+                                                                <option value="No Preference">No Preference</option>
                                                             </select>
                                                             <small>
                                                                 <span v-if="errors.gender != null" class="text-danger">
@@ -585,7 +579,7 @@
                                                             </small>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
+                                                    <!-- <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="job_responsibilities"><span
                                                                     class="required_feild">*</span> Job
@@ -602,7 +596,7 @@
                                                                 </span>
                                                             </small>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="qualification_level"><span
@@ -624,7 +618,7 @@
                                                             </small>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
+                                                    <!-- <div class="col-12">
                                                         <div class="form-group">
                                                             <label for="benefits"><span class="required_feild">*</span>
                                                                 Benefits</label>
@@ -639,7 +633,7 @@
                                                                 </span>
                                                             </small>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <div class="d-flex align-items-center">
@@ -680,7 +674,7 @@
                                         <button class="positiveBtn modelBtn mr-1" v-if="record.id == 0"
                                             @click.prevent="postJob()">Post</button>
                                         <button class="positiveBtn modelBtn mr-1" v-else
-                                            @click.prevent="updatePostJob()">Update</button>
+                                            @click.prevent="updateJobPost()">Update</button>
                                         <button class="negativeBtn modelBtn ml-1" data-dismiss="modal"
                                             @click="clearRecord()">Cancel</button>
                                     </div>
@@ -703,7 +697,7 @@
             return {
                 record: {
                     id: 0,
-                    bannar: '',
+                    banner: '',
                     job_title: '',
                     job_designation: '',
                     job_description: '',
@@ -712,7 +706,7 @@
                     industry: '',
                     department: '',
                     experience: '',
-                    salary_type: '',
+                    // salary_type: '',
                     salary_range: '',
                     gender: '',
                     location: '',
@@ -815,7 +809,7 @@
                                     this.errors = []
                                     this.record = {
                                         id: 0,
-                                        bannar: '',
+                                        banner: '',
                                         title: '',
                                         job_designation: '',
                                         job_description: '',
@@ -824,16 +818,17 @@
                                         industry: '',
                                         department: '',
                                         experience: '',
-                                        salary_type: '',
+                                        // salary_type: '',
                                         salary_range: '',
                                         gender: '',
                                         location: '',
                                         total_position: '',
                                         qualification_level: '',
-                                        benefits: '',
-                                        job_responsibilities: '',
+                                        status: 'Active',
+                                        // benefits: '',
+                                        // job_responsibilities: '',
                                     };
-                                    this.$refs.bannar.value = null;
+                                    this.$refs.banner.value = null;
                                 }
                             })
                     }
@@ -844,7 +839,7 @@
                     .then((response) => {
                         if (response.data.success == true) {
                             this.record.id = response.data.data.id;
-                            this.record.bannar = response.data.data.bannar;
+                            this.record.banner = response.data.data.banner;
                             this.record.job_title = response.data.data.title;
                             this.record.job_designation = response.data.data.designation;
                             this.record.job_description = response.data.data.description;
@@ -853,14 +848,14 @@
                             // this.record.industry =  response.data.data.id;
                             // this.record.department =  response.data.data.id;
                             this.record.experience = response.data.data.experience;
-                            this.record.salary_type = response.data.data.salary_type;
+                            // this.record.salary_type = response.data.data.salary_type;
                             this.record.salary_range = response.data.data.salary_range;
                             this.record.gender = response.data.data.gender;
                             this.record.location = response.data.data.location;
                             this.record.total_positions = response.data.data.total_position;
                             this.record.qualification_level = response.data.data.qualification_level;
-                            this.record.benefits = response.data.data.benefits;
-                            this.record.job_responsibilities = response.data.data.job_responsibilities;
+                            // this.record.benefits = response.data.data.benefits;
+                            // this.record.job_responsibilities = response.data.data.job_responsibilities;
                             this.record.status = response.data.data.status;
                             $('#PostNewJobModal').modal('show')
                         } else {
@@ -871,7 +866,7 @@
             clearRecord() {
                 this.record = {
                     id: 0,
-                    bannar: '',
+                    banner: '',
                     job_title: '',
                     job_designation: '',
                     job_description: '',
@@ -880,66 +875,55 @@
                     industry: '',
                     department: '',
                     experience: '',
-                    salary_type: '',
+                    // salary_type: '',
                     salary_range: '',
                     gender: '',
                     location: '',
                     total_positions: '',
                     qualification_level: '',
-                    benefits: '',
-                    job_responsibilities: '',
+                    status: 'Active',
+                    // benefits: '',
+                    // job_responsibilities: '',
                 };
             },
             updateJobPost() {
-                Swal.fire({
-                    title: 'Are you sure to post this job?',
-                    text: "After Yes you your job will be live",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    cancelButtonText: 'No, keep Edit!',
-                    confirmButtonText: 'Yes, post it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        var $formData = $('#formData');
-                        var data = new FormData(formData);
-                        axios.post('/company/post-job', data)
-                            .then((res) => {
-                                if (res.data.success == false) {
-                                    this.errors = res.data.errors
-                                } else {
-                                    this.getCompanyJobs()
-                                    Swal.fire({
-                                        icon: 'success',
-                                        title: 'Posted!😎',
-                                        text: 'Your Job is Now Live',
-                                    })
-                                    this.errors = []
-                                    this.record = {
-                                        bannar: '',
-                                        title: '',
-                                        job_designation: '',
-                                        job_description: '',
-                                        job_type: '',
-                                        shift: '',
-                                        industry: '',
-                                        department: '',
-                                        experience: '',
-                                        salary_type: '',
-                                        salary_range: '',
-                                        gender: '',
-                                        location: '',
-                                        total_position: '',
-                                        qualification_level: '',
-                                        benefits: '',
-                                        job_responsibilities: '',
-                                    };
-                                    this.$refs.bannar.value = null;
-                                }
+                var $formData = $('#formData');
+                var data = new FormData(formData);
+                axios.post('/company/update-post-job', data)
+                    .then((res) => {
+                        if (res.data.success == false) {
+                            this.errors = res.data.errors
+                        } else {
+                            this.getCompanyJobs()
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Updated!😎',
+                                text: 'Your Job is Updated and Live',
                             })
-                    }
-                })
+                            this.errors = []
+                            this.record = {
+                                banner: '',
+                                title: '',
+                                job_designation: '',
+                                job_description: '',
+                                job_type: '',
+                                shift: '',
+                                industry: '',
+                                department: '',
+                                experience: '',
+                                // salary_type: '',
+                                salary_range: '',
+                                gender: '',
+                                location: '',
+                                total_position: '',
+                                qualification_level: '',
+                                status: 'Active',
+                                // benefits: '',
+                                // job_responsibilities: '',
+                            };
+                            this.$refs.banner.value = null;
+                        }
+                    })
             },
             postNewJob() {
                 axios.get('/check-job-post-limit')
