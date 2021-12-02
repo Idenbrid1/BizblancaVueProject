@@ -322,7 +322,7 @@
                             </div>
                             <div class="list__card-content">
                                 <h3 class="h5 list__card-title">
-                                    BizBlanca ONLINESALON information
+                                    BizBlanca ONLINE SALON information
                                 </h3>
                                 <p class="list__card-description body--sm">
                                     In this webinar, our BizBlanca Business Development Executive Mujtaba gives you an
@@ -356,7 +356,7 @@
                                 </div>
                                 <div class="col-md-6 movie-wrap">
                                     <div class="movie-inner">
-                                        <iframe src="https://www.youtube.com/embed/djqoRNnDqFU" frameborder="0"
+                                        <iframe src="https://www.youtube.com/embed/MjWJ2deIOkg" frameborder="0"
                                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                             allowfullscreen="" width="100%" height="280px">
                                         </iframe>
@@ -375,7 +375,7 @@
                                         type specimen book.
                                     </p>
                                     <div id="contact-section" class="col-12 anker-list d-flex w-100 pt-2 mt-4 px-0">
-                                        <a href="./comming.html" class="videoview-list-anker">Read More
+                                        <a href="#" class="videoview-list-anker">Read More
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
@@ -396,7 +396,7 @@
                                 </div>
                                 <div class="col-md-6 movie-wrap">
                                     <div class="movie-inner">
-                                        <iframe src="https://www.youtube.com/embed/djqoRNnDqFU" frameborder="0"
+                                        <iframe src="https://www.youtube.com/embed/6NMLf3-ePbQ" frameborder="0"
                                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                             allowfullscreen="" width="100%" height="280px">
                                         </iframe>
@@ -415,7 +415,7 @@
                                         type specimen book.
                                     </p>
                                     <div id="contact-section" class="col-12 anker-list d-flex w-100 pt-2 mt-4 px-0">
-                                        <a href="./comming.html" class="videoview-list-anker">Read More
+                                        <a href="#" class="videoview-list-anker">Read More
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
@@ -430,7 +430,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-12 w-100 p-0 pr-md-5">
-                        <form action="" class="">
+                        <form action="">
                             <div class="row m-0">
                                 <div class="col-12 pb-4 px-2">
                                     <div class="heading-div mb-3">

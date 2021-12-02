@@ -882,7 +882,7 @@
                                                 </li>
                                                 <li class="profileInfo profileInfoBorder justify-content-start">
                                                     <div class="line-text-1 pl-2">
-                                                        <a class="" href="">{{project.link}}</a>
+                                                        <a :href="project.link" target="_blank">{{project.link}}</a>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -2390,12 +2390,12 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            $('.basicInfoModal').modal('hide');
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
-                            })
+                                text: 'Basic Information Updated Successfully',
+                            });
                         }
                     })
                     .catch((err) => {
@@ -2438,7 +2438,7 @@
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Education Updated Successfully',
                             })
                             this.education_push_array = {
                                 school_type: '',
@@ -2538,11 +2538,11 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            // $('#basicInfoModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Language Updated Successfully',
                             })
                             this.language_push_array = {
                                 name: '',
@@ -2629,11 +2629,11 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            // $('#basicInfoModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Award Updated Successfully',
                             })
                             this.award_push_array = {
                                 name: '',
@@ -2720,11 +2720,11 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            // $('#basicInfoModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Skill Updated Successfully',
                             })
                             this.skill_push_array = {
                                 name: '',
@@ -2812,11 +2812,11 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            // $('#basicInfoModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'CurrentJob Updated Successfully',
                             })
                             this.skill_push_array = {
                                 name: '',
@@ -2868,11 +2868,11 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            // $('#basicInfoModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Experience Updated Successfully',
                             })
                             this.work_experience_push_array = {
                                 company_name: '',
@@ -2981,11 +2981,11 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            // $('#basicInfoModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Project Updated Successfully',
                             })
                             this.project_push_array = {
                                 name: '',
@@ -3142,11 +3142,11 @@
                         } else {
                             this.errors = []
                             this.getCandidateDashboardData()
-                            $('#basicInfoModal').modal('hide')
+                            // $('#basicInfoModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'DesireJob Updated Successfully',
                             })
                             this.skill_push_array = {
                                 name: '',

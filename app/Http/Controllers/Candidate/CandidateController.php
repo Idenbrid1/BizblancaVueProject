@@ -52,15 +52,15 @@ class CandidateController extends Controller
     {
         $attributeNames = [
             // 'profilePhoto' => 'Profile Picture',
-            'full_name' => 'Title',
-            'gender' => 'Description',
-            'address' => 'Photos',
-            'date_of_birth' => 'Website',
-            'city' => 'Instagram',
-            'country' => 'Facebook',
-            'cnic' => 'Phone',
-            'bio' => 'Email',
-            'zipcode' => 'Whatsapp',
+            'full_name' => 'Full name',
+            'gender' => 'Gender',
+            'address' => 'address',
+            'date_of_birth' => 'date_of_birth',
+            'city' => 'city',
+            'country' => 'country',
+            'cnic' => 'cnic',
+            'bio' => 'bio',
+            'zipcode' => 'zipcode',
         ];
         $rules = array(
             // 'profilePhoto' => 'required',
