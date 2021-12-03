@@ -48203,7 +48203,9 @@ var render = function () {
                       }),
                       _vm._v(" "),
                       this.showError == true
-                        ? _c("div", [_vm._v("Data Not Found")])
+                        ? _c("span", { staticClass: "show-result-msg" }, [
+                            _vm._v("Data Not Found"),
+                          ])
                         : _vm._e(),
                     ],
                     2
@@ -48437,7 +48439,9 @@ var render = function () {
                   }),
                   _vm._v(" "),
                   this.showError == true
-                    ? _c("div", [_vm._v("Data Not Found")])
+                    ? _c("span", { staticClass: "show-result-msg" }, [
+                        _vm._v("Data Not Found"),
+                      ])
                     : _vm._e(),
                   _vm._v(" "),
                   _vm.searchData.length

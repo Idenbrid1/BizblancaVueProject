@@ -195,7 +195,7 @@
 
                                 </div>
                             </div>
-                            <div v-if="this.showError == true">Data Not Found</div>
+                            <span class="show-result-msg" v-if="this.showError == true">Data Not Found</span>
                         </div>
                     </div>
                     <div class="text-center" v-if="searchData.length">
@@ -271,7 +271,7 @@
 
                         </div>
                     </div>
-                    <div v-if="this.showError == true">Data Not Found</div>
+                    <span class="show-result-msg" v-if="this.showError == true">Data Not Found</span>
                     <div class="text-center" v-if="searchData.length">
                         <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow && totalCompanies > companiesToShow" @click="companiesToShow += 2">Load more</button>
                     </div>

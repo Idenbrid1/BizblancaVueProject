@@ -5124,6 +5124,14 @@ progress {
 	align-items: flex-end;
 	justify-content: space-between;
 }
+.show-result-msg{
+	font-size: 32px;
+    font-weight: 600;
+    color: #000000;
+	display: block;
+	width: 100%;
+    text-align: center;
+}
 /* job-detail-info */
 
 .line-clamp-1 {

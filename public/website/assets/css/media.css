@@ -9,6 +9,9 @@
         font-size: 13px;
         padding: 7px 16px;
     }
+    .show-result-msg{
+        font-size: 20px;
+    }
     .rm0 {
         border-radius: 0px !important;   
     }
