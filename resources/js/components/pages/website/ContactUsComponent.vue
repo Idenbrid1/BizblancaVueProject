@@ -9,18 +9,18 @@
                             <div class="row m-0">
                                 <div class="col-12 px-2">
                                     <div class="heading-div">
-                                        <h2 class="site-heading contact-page-title mb-0">Contact Us</h2>
+                                        <h2 class="site-heading contact-page-title mb-0">We Would Love To Hear From You!
+                                        </h2>
                                     </div>
                                     <p class="contact-page-descrp">
-                                        Please complete the form with your enquiry for the Bizblanca
-                                        team and we will respond to you as soon as possible.
+                                        Do you have any questions? Don't be concerned! Simply contact a member of our
+                                        customer service team. Your remarks have always been meaningful to us.
                                     </p>
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
                                         <input type="text" class="form-control contact-feilds" v-model="contact_us.name"
-                                            placeholder="Enter Name" name="" id="" maxlength="50"
-                                            required />
+                                            placeholder="Enter Name" name="" id="" maxlength="50" required />
                                         <small>
                                             <span v-if="errors.name != null" class="text-danger float-left">
                                                 {{errors.name[0]}}
@@ -30,9 +30,9 @@
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <input type="email" class="form-control contact-feilds" v-model="contact_us.email"
-                                            placeholder="Enter Email" name="" id="" maxlength="50"
-                                            required />
+                                        <input type="email" class="form-control contact-feilds"
+                                            v-model="contact_us.email" placeholder="Enter Email" name="" id=""
+                                            maxlength="50" required />
                                         <small>
                                             <span v-if="errors.email != null" class="text-danger float-left">
                                                 {{errors.email[0]}}
@@ -42,9 +42,9 @@
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <input type="number" class="form-control contact-feilds" v-model="contact_us.phone"
-                                            placeholder="Enter Phone" name="" id="" maxlength="20"
-                                            required />
+                                        <input type="number" class="form-control contact-feilds"
+                                            v-model="contact_us.phone" placeholder="Enter Phone" name="" id=""
+                                            maxlength="20" required />
                                         <small>
                                             <span v-if="errors.phone != null" class="text-danger float-left">
                                                 {{errors.phone[0]}}
@@ -54,8 +54,9 @@
                                 </div>
                                 <div class="col-12 px-2">
                                     <div class="form-group">
-                                        <textarea rows="4" type="text" class="form-control contact-feilds message-box" v-model="contact_us.message"
-                                            placeholder="Enter Message" name="" id="" required></textarea>
+                                        <textarea rows="4" type="text" class="form-control contact-feilds message-box"
+                                            v-model="contact_us.message" placeholder="Enter Message" name="" id=""
+                                            required></textarea>
                                         <small>
                                             <span v-if="errors.message != null" class="text-danger float-left">
                                                 {{errors.message[0]}}
@@ -119,37 +120,35 @@
         },
         created() {},
         methods: {
-            submitContactUs(){
+            submitContactUs() {
                 Swal.fire({
-                    text:  'Please Wait...',
+                    text: 'Please Wait...',
                     didOpen: () => {
-                        Swal.showLoading() 
+                        Swal.showLoading()
                     },
                 })
                 axios.post('/submit-contact-us', this.contact_us)
-                .then((response) => {
-                    if(response.data.success == true)
-                    {
-                        Swal.close()
-                        Swal.fire({
-                            icon:  'success',
-                            title: 'Contact us query raised',
-                            text:  'Please wait we will contact you as soon as possible! THANKS',
-                        })
-                        this.contact_us = {
-                            name: '',
-                            email: '',
-                            phone: '',
-                            message: '',
-                        };
-                        this.errors = []
+                    .then((response) => {
+                        if (response.data.success == true) {
+                            Swal.close()
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Contact us query raised',
+                                text: 'Thanks, Message Received! We Will Reply You Soon.',
+                            })
+                            this.contact_us = {
+                                name: '',
+                                email: '',
+                                phone: '',
+                                message: '',
+                            };
+                            this.errors = []
 
-                    }
-                    else{
-                        Swal.close()
-                        this.errors = response.data.errors
-                    }
-                });
+                        } else {
+                            Swal.close()
+                            this.errors = response.data.errors
+                        }
+                    });
             }
         }
     };

@@ -15,7 +15,7 @@
                     <div class="list__card">
                         <div class="list__card-image-container">
                             <div class="list__card-image">
-                                <img src="/website/assets/images/Icon awesome-question-circle.svg"></div>
+                                <img src="/website/assets/images/Icon-awesome-question-circle.svg"></div>
                         </div>
                         <div class="list__card-content">
                             <h3 class="h5 list__card-title">Lorem ipsum</h3>
@@ -53,7 +53,7 @@
                 <div class="services-box">
                     <div class="list__card">
                         <div class="list__card-image-container">
-                            <div class="list__card-image"><img src="/website/assets/images/Group 1361.svg"></div>
+                            <div class="list__card-image"><img src="/website/assets/images/Group1361.svg"></div>
                         </div>
                         <div class="list__card-content">
                             <h3 class="h5 list__card-title">
@@ -74,7 +74,7 @@
                 <div class="services-box">
                     <div class="list__card">
                         <div class="list__card-image-container">
-                            <div class="list__card-image"><img src="/website/assets/images/Group 1361.svg"></div>
+                            <div class="list__card-image"><img src="/website/assets/images/Group1361.svg"></div>
                         </div>
                         <div class="list__card-content">
                             <h3 class="h5 list__card-title">
@@ -95,7 +95,7 @@
                 <div class="services-box">
                     <div class="list__card">
                         <div class="list__card-image-container">
-                            <div class="list__card-image"><img src="/website/assets/images/Group 1361.svg"></div>
+                            <div class="list__card-image"><img src="/website/assets/images/Group1361.svg"></div>
                         </div>
                         <div class="list__card-content">
                             <h3 class="h5 list__card-title">
@@ -116,7 +116,7 @@
                 <div class="services-box">
                     <div class="list__card">
                         <div class="list__card-image-container">
-                            <div class="list__card-image"><img src="/website/assets/images/Group 1361.svg"></div>
+                            <div class="list__card-image"><img src="/website/assets/images/Group1361.svg"></div>
                         </div>
                         <div class="list__card-content">
                             <h3 class="h5 list__card-title">

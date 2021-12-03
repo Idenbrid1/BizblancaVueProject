@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('website')}}/assets/images/BizBlancaRound.svg" />
     <link rel="stylesheet" href="{{asset('website')}}/assets/css/bootstrap/bootstarp.min.css" />
     <link rel="stylesheet" href="{{asset('website')}}/assets/css/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{asset('website')}}/assets/css/style.css" />
@@ -14,14 +15,10 @@
     <link rel="stylesheet" href="{{asset('website')}}/assets/css/fontawesome/css/all.css">
     <script src="{{asset('website')}}/assets/css/fontawesome/js/all.js"></script>
     <script src="{{asset('website')}}/assets/js/jquery-3.5.1.min.js"></script>
-    <!-- <script src="{{asset('website')}}/assets/js/bootstrap/popper.min.js"></script>
-    <script src="{{asset('website')}}/assets/js/bootstrap/bootstrap.min.js"></script> -->
     <script src="{{asset('website')}}/assets/js/swiper/swiper-bundle.min.js"></script>
     <script src="{{asset('website')}}/assets/js/main.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-
-
 </head> 
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">

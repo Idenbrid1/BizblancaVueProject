@@ -67,7 +67,10 @@
                                             <h2 class="site-heading mb-0">News</h2>
                                         </div>
                                         <p class="pt-1 pb-2 mb-0">
-                                            <span class="news-text">See the latest information on BizBlanca</span>
+                                            <span class="news-text">We keep the bizers updated with Information
+                                                Technology services and ever-lasting benefits. <br />Take a look at some
+                                                of
+                                                the recent posts of BizBlanca on our social sites. </span>
                                         </p>
                                     </div>
                                 </div>
@@ -79,13 +82,15 @@
                                             <div class="eventdate"><strong>06</strong> Jun</div>
                                             <div class="news-card-day">
                                                 <div class="blog-title">
-                                                    <span>Tons of Companies joining</span>
+                                                    <span>We are IT-Jobs Provider</span>
                                                 </div>
                                             </div>
                                             <p class="blog-description line-text-3">
-                                                Hundreds of Companies using the BizBlanca platform. Many
-                                                companies are joining the BizBlanca Community because of
-                                                our Human Resource and Service set of standards.
+                                                Since 2020 BizBlanca has pioneered specialist recruitment, sourcing
+                                                knowledgeable, skilled professionals for jobs across Pakistan. Our
+                                                experts recruit across the IT sector, so whether you are looking to hire
+                                                your next head of development, or urgently require supply managers, we
+                                                can help you.
                                             </p>
                                             <a class="blog-news-btn" href="#">Read More
                                                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
@@ -218,15 +223,14 @@
                         <div class="heading-div mb-3">
                             <div class="mr-2 title-effect"></div>
                             <h2 class="site-heading mb-0">
-                                We are an IT recruiting expertise
+                                We are IT-Jobs Provider
                             </h2>
                         </div>
                         <p class="body--lg">
-                            Since 2020 IDNEBRID has pioneered specialist recruitment, sourcing
-                            knowledgeable, skilled professionals for jobs across Pakistan. Our
-                            experts recruit across IT sector, so whether you are looking to
-                            hire your next head of development, or urgently require supply
-                            managers, we can help you.
+                            Since 2020 BizBlanca has pioneered specialist recruitment, sourcing knowledgeable, skilled
+                            professionals for jobs across Pakistan. Our experts recruit across the IT sector, so whether
+                            you are looking to hire your next head of development, or urgently require supply managers,
+                            we can help you.
                         </p>
                     </div>
                 </div>
@@ -238,8 +242,9 @@
                         <div id="content-faq-head">
                             <a href="./comming.html" class="job-head">
                                 <div>
-                                    <h2>Looking for a job?</h2>
-                                    <p>Top quality IT career changes for life-winners</p>
+                                    <h2>Looking for a Job?</h2>
+                                    <p>We connect job searchers with reputable software houses as well as provide a
+                                        platform for them to easily seek employment.</p>
                                     <span class="text-center btn-look">View more Detail
                                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
                                 </div>
@@ -247,7 +252,7 @@
                         </div>
                         <div class="content-faq-anker parent">
                             <div class="child bg-one">
-                                <a href="#"><span class="looking-h">Looking for a job?</span></a>
+                                <a href="#"><span class="looking-h">Looking For Employees?</span></a>
                             </div>
                         </div>
                     </div>
@@ -257,7 +262,8 @@
                                 <div id="videos-section">
                                     <h2>Looking for employees?</h2>
                                     <p>
-                                        Hire top-quality, specialized and ready-to-work IT employees
+                                        We find the most suitable employees within your budget that fulfill your
+                                        requirements and work with dedication.
                                     </p>
                                     <span class="text-center btn-look">View more Detail
                                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
@@ -283,13 +289,10 @@
                                 <h2 class="site-heading mb-0">IT job ke liye, BizBlanca</h2>
                             </div>
                             <p class="pt-2">
-                                Get scouted or headhunted by companies you never imagined you
-                                could work for. With BizBlanca, it's not just a dream. Bizblanca
-                                is an indispensable platform for reliable career advancement. We
-                                carefully select candidates who have certain qualifications and
-                                do not compromise on quality. We call these candidates,
-                                "Bizers," who then go on to receive job offers from the most
-                                succesful and well-known companies in Pakistan.
+                                Get scouted or headhunted by companies you never imagined you could work for. With
+                                BizBlanca, it's not just a dream. We are an indispensable platform for reliable career
+                                advancement. We carefully select candidates who have certain qualifications and do not
+                                compromise on quality.
                             </p>
                             <img src="/website/assets/images/Group1492.png" alt="blog-img" width="100%" />
                         </div>
@@ -302,7 +305,7 @@
             <div class="container">
                 <div class="heading-div mb-3">
                     <div class="mr-2 title-effect"></div>
-                    <h2 class="site-heading mb-0">What's happening</h2>
+                    <h2 class="site-heading mb-0">Learn more About BizBlanca</h2>
                 </div>
                 <p>
                     Get scouted or headhunted by companies you never imagined you could
@@ -318,13 +321,13 @@
                             <div class="list__card-content">
                                 <h3 class="h5 list__card-title">FAQS</h3>
                                 <p class="list__card-description body--sm">
-                                    Here are answers to frequently asked questions about BizBlanca. Please refer to it.
-                                    If you don’t find the question you’re looking for, from the Contact Us section you
-                                    can send your inquires to the BizBlanca business team directly.
+                                    We have enlisted some Frequently Asked Questions about us and our services. Take a
+                                    brief look at these FAQs and gather some reliable knowledge.
                                 </p>
-                            </div> <a tabindex="0" href="/tools/reed-salary-guides-2021"
-                                class="list__card-link minor-button-right">Read more
-                                <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                            <router-link :to="{ name: 'Faq' }" tabindex="0" class="list__card-link minor-button-right">
+                                Read more
+                                <i aria-hidden="true" class="fa fa-long-arrow-right"></i></router-link>
                         </div>
                     </div>
                     <div class="services-box">
@@ -333,15 +336,12 @@
                                 <div class="list__card-image"><img src="/website/assets/images/Group-1360.png"></div>
                             </div>
                             <div class="list__card-content">
-                                <h3 class="h5 list__card-title">Social Media of BizBlanca</h3>
+                                <h3 class="h5 list__card-title">Social Media</h3>
                                 <p class="list__card-description body--sm">
-                                    BizBlanca receives job posts from many IT companies every day. In addition, We
-                                    received CVs from many candidates too. BizBlanca also conducts headhunting and has
-                                    excellent human resources in our DB that are not even in the market. Stay updated on
-                                    BizBlanca social media.
+                                    We are connected worldwide through social media platforms like Facebook, Instagram,
+                                    and Linkedin.
                                 </p>
-                            </div> <a tabindex="0" href="/tools/reed-salary-guides-2021"
-                                class="list__card-link minor-button-right">Read more
+                            </div> <a href="#" tabindex="0" class="list__card-link minor-button-right">Read more
                                 <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
@@ -352,17 +352,16 @@
                             </div>
                             <div class="list__card-content">
                                 <h3 class="h5 list__card-title">
-                                    BizBlanca ONLINE SALON information
+                                    Online Suggestions
                                 </h3>
                                 <p class="list__card-description body--sm">
-                                    In this webinar, our BizBlanca Business Development Executive Mujtaba gives you an
-                                    eye opening speech for career with BizBlanca. For companies, we are guiding our top
-                                    tips for you to use on interviewing candidates to get the most out of your time with
-                                    applicant.
+                                    The Business Development Executive Mujtaba Tariq provides you with eye-opening
+                                    suggestions for your career with BizBlanca.
                                 </p>
-                            </div> <a tabindex="0" href="/tools/reed-salary-guides-2021"
+                            </div>
+                            <router-link :to="{ name: 'ContactUs' }" tabindex="0"
                                 class="list__card-link minor-button-right">Read more
-                                <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
+                                <i aria-hidden="true" class="fa fa-long-arrow-right"></i></router-link>
                         </div>
                     </div>
                 </div>
@@ -391,19 +390,17 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 movie-wrap-text">
-                                    <div class="video-tag">Client</div>
+                                    <div class="video-tag">Company</div>
                                     <h3 class="carousel__item-client">
-                                        Bespoke IT Solutions Ltd
+                                        IDENBRID INC.
                                     </h3>
                                     <p class="video-description pt-3">
-                                        Lorem Ipsum is simply dummy text of the printing and
-                                        typesetting industry. Lorem Ipsum has been the industry's
-                                        standard dummy text ever since the 1500s, when an unknown
-                                        printer took a galley of type and scrambled it to make a
-                                        type specimen book.
+                                        We believe in change with IT for a better life. Till now, we have hired number
+                                        of candidates with expert IT skills. Review more about us and get motivated.
                                     </p>
                                     <div id="contact-section" class="col-12 anker-list d-flex w-100 pt-2 mt-4 px-0">
-                                        <a href="#" class="videoview-list-anker">Read More
+                                        <a href="https://idenbrid.com" target="_blank" class="videoview-list-anker">Read
+                                            More
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
@@ -430,19 +427,17 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 movie-wrap-text">
-                                    <div class="video-tag">Client</div>
+                                    <div class="video-tag">Company</div>
                                     <h3 class="carousel__item-client">
-                                        Bespoke IT Solutions Ltd
+                                        IDENRBID JP
                                     </h3>
                                     <p class="video-description pt-3">
-                                        Lorem Ipsum is simply dummy text of the printing and
-                                        typesetting industry. Lorem Ipsum has been the industry's
-                                        standard dummy text ever since the 1500s, when an unknown
-                                        printer took a galley of type and scrambled it to make a
-                                        type specimen book.
+                                        We believe in change with IT for a better life. Till now, we have hired number
+                                        of candidates with expert IT skills. Review more about us and get motivated.
                                     </p>
                                     <div id="contact-section" class="col-12 anker-list d-flex w-100 pt-2 mt-4 px-0">
-                                        <a href="#" class="videoview-list-anker">Read More
+                                        <a href="https://idenbrid.com/jp" target="_blank"
+                                            class="videoview-list-anker">Read More
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
@@ -462,11 +457,11 @@
                                 <div class="col-12 pb-4 px-2">
                                     <div class="heading-div mb-3">
                                         <div class="mr-2 title-effect"></div>
-                                        <h2 class="site-heading mb-0">Contact Us</h2>
+                                        <h2 class="site-heading mb-0">Any queries in your mind?</h2>
                                     </div>
                                     <p style="color: #081351">
-                                        Please complete the form with your enquiry for the Bizblanca
-                                        team and we will respond to you as soon as possible.
+                                        No worries, we are here for you. Fill in the details and one of our support team
+                                        members will reach out to you soon.
                                     </p>
                                 </div>
                                 <div class="col-12 px-2">

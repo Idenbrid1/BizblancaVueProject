@@ -22,8 +22,8 @@
                             class="seprate-line"></span>
                     </li>
                     <li>
-                        <a href="#testimonials-section" class="secondaymenu" id="secondary-anker-4">Testimonials</a><span
-                            class="seprate-line"></span>
+                        <a href="#testimonials-section" class="secondaymenu"
+                            id="secondary-anker-4">Testimonials</a><span class="seprate-line"></span>
                     </li>
                     <li>
                         <a href="#testimonials-section" class="secondaymenu" id="secondary-anker-5">Our People</a>
@@ -49,14 +49,13 @@
                         <div class="col-12 col-md-6 left-content">
                             <div>
                                 <h1>
-                                    BizBlanca builds IT recruitment community that can source
-                                    excellent talents to the market.
+                                    BizBlanca builds an IT recruitment community that helps to explore the candidate’s
+                                    skills.
                                 </h1>
                                 <p>
-                                    Under the mission of reducing mismatches in changing jobs,
-                                    BizBlanca supports job-hunting activities that allow job
-                                    seekers to work for the next company for a long time based on
-                                    your background and can surely step up.
+                                    Under the mission of reducing mismatches in changing jobs, BizBlanca supports
+                                    job-hunting activities that allow job seekers to work for the next company for a
+                                    long time based on their background and can surely step up.
                                 </p>
                                 <a href="#" class="align-self-start">Signup Now</a>
                             </div>
@@ -69,17 +68,16 @@
                     </div>
                 </section>
                 <h1 class="msg-heading">
-                    Be scouted and headhunted by the top IT companies of Pakistan
+                    Upgrade and change your career with style now!
                 </h1>
                 <section class="col-12 cards-info-container p-md-0 px-1">
                     <div class="row no-gutters cards-info-wrap container">
                         <span>Upgrade and change your career with style Get scouted by the best
                             companies in Pakistan</span>
                         <p class="offers-job-para">
-                            In the coming era, it is important to know your own market value.
-                            Recieve job and offers and uncover your potential, your value in
-                            the industry. Widen your career options and take a look at which
-                            top companies want to hire you.
+                            The future is of Information Technology and Automation. And before that time comes, we all
+                            should be individually well aware of our worth & value in the market. For this, join
+                            Bizblanca to receive job offers and uncover your potential & value in the industry.
                         </p>
                         <div class="cards-info col-12 col-md-4">
                             <img src="/website/assets/images/happy.svg" class="card-happy-img" alt="img" />
@@ -166,10 +164,9 @@
                 </div>
                 <h2>We are ready to provide expertises in 20 specialist sectors</h2>
                 <p>
-                    We have expertises in 20 specialist sectors, from Project Manager to
-                    Developers. We want to partner with experienced IT recruitment team in
-                    these, and other, sectors across Pakistan to build successful
-                    partnership and improve more lives through work.
+                    We have expertise in 20 specialist sectors, from Project Manager to Developers. We want to partner
+                    with an experienced IT recruitment team in these, and other, sectors across Pakistan to build
+                    successful partnerships and improve more lives through work
                 </p>
                 <div class="row no-gutters">
                     <div class="col-6 col-md-3">
@@ -298,10 +295,9 @@
                                     <span class="upload-text">Upload</span>
                                     <h3 class="your-cv-online-text">your cv online</h3>
                                     <p class="content_para">
-                                        Your CV is the first impression recruiters have of you. Most
-                                        of the candidates still have a CV that looks like this. Are
-                                        you one of them? If you are, there is an opportunity to turn
-                                        it into a CV that will get you the WOW effect...
+                                        Your CV is the first impression recruiters have of you. Most of the candidates
+                                        still have a CV that looks like this. Are you one of them? If you are, there is
+                                        an opportunity to turn it into a CV that will get you the job.
                                     </p>
                                 </div>
                             </div>
@@ -456,7 +452,8 @@
 
                                 <div class="col-md-6 movie-wrap">
                                     <div class="movie-inner">
-                                        <video controls src="/website/assets/videos/Bizblanca.mp4" width="100%" height="280px">
+                                        <video controls src="/website/assets/videos/Bizblanca.mp4" width="100%"
+                                            height="280px">
                                         </video>
                                     </div>
                                 </div>
@@ -515,7 +512,7 @@
             CompanyNavbar,
             CandidateNavbar,
         },
-         created() {
+        created() {
             this.checkRole()
         },
         mounted() {

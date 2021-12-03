@@ -9,77 +9,93 @@
                     <li>
                         <h1>General</h1>
                         <p>
-                            www.bizblanca.com(“the Website”) is a job site operated by Idenbrid Corporation.This privacy
-                            policy
-                            explains how we use the personal information we collect about you when you use the
-                            Website.If you
-                            register on the Website as a recruiter and/or advertiser and provide us with personal data,
-                            we will
-                            process such personal data on the basis that it is necessary to do so in order to perform
-                            the
-                            contract you enter into with us. Registration with and use of the Website for job seekers
-                            and/or
-                            receive career advice is free. We will process your personal data on the basis set out below
-                            as it
-                            is in our legitimate interests to do so following your registration.
+                            Each time you access the BizBlanca site or mobile application, you are deemed to accept the
+                            terms & conditions interpret them well, and utilize the application accordingly. Any
+                            violation or breaching of our terms & conditions might lead you to face legal concerns.
                         </p>
                     </li>
                     <li>
-                        <h1>What Information do we collect about you?</h1>
+                        <h1>Your Use of This Site</h1>
                         <p>
-                            We collect personal data about you when you register with the Website. We do so in order to
-                            provide you with the recruitment services that are available through the Website as well as
-                            for other administrative purposes. <br />The personal data that we collect includes your
-                            name,
-                            email address and telephone number. If you are a work seeker we will also ask for details of
-                            the kind of work you are looking for and your preferred work location. If you decide to
-                            upload or create a CV, cover letter, personal statement or other similar document or
-                            information we will keep that information for as long your account is active with the
-                            Website. If you decide to make any purchase on or through the Website, we may ask you for
-                            the details needed to process any payment that is required by the relevant third party
-                            course provider. If you choose to take any assessments available through the Website we will
-                            also maintaina record of your responses to and results of those assessments.
+                            You may only use the Website for lawful purposes while seeking employment, purchasing
+                            training courses, recruiting staff, or advertising your brand. You must not seek to
+                            undermine the security and information of the Website in any situation. You must not attempt
+                            to access, change, or delete any unlawful information in particular. Any information you
+                            provide to the Website is strictly your responsibility. You are responsible for ensuring
+                            that all information supplied by you is true, accurate, up-to-date, and not misleading,
+                            deceiving, illegal, offensive, or spam. All the information, data, and files you put into
+                            our site must be error-free and protected from any threats or viruses that might damage our
+                            system or site. We retain the right, at our absolute discretion, to delete any information
+                            provided by you from the Website at any time and for any reason without explaining.
                         </p>
                     </li>
                     <li>
-                        <h1>What do we do with your personal data?</h1>
+                        <h1>Information Submitted By You.</h1>
                         <p>
-                            By registering with the Website it is understood that work seekers are actively soliciting
-                            contact from prospective employers and recruiters about opportunities which match the work
-                            seekers’ fields of interest. If you are a work seeker we will therefore make your personal
-                            data available to recruiters and employers <br /> who use the Website to find suitable
-                            employees
-                            for specific roles that they are seeking to fill. We will also share your personal data
-                            within our main company Idenbrid Corporation and any present or future sister companies, to
-                            facilitate your search for work. Although the primary purpose of the Website is to allow
-                            work seekers, prospective employers and recruiters to find each other, work seekers have the
-                            ability to control the extent to which your personal data is shared with other recruiters
-                            and prospective employers through the contact preferences section of the “MyPage” section on
-                            the Website. For job seekers, we will use your personal data to provide you with the
-                            recruitment services that we provide, to manage your account and to email you about
-                            recruitment services which, for job seekers, includes job alerts, and emails we feel are
-                            relevant to your field of interest.
+                            We will use the information you provide to assist with the recruiting process and related
+                            administrative duties, as well as to make purchasing training courses through this website.
+                            We will process any data which you provide in completing the online registration or
+                            application forms, assessments, or personal details which you complete or provide to us
+                            utilizing the site in conformity with relevant data protection legislation. we go over more
+                            about your data in our Privacy Policy. Please note that all Third Party recruitment agencies
+                            have agreed to our Terms and Conditions and if they are found suspicious in breaching of the
+                            Terms and Conditions, they will be prevented from using our services. Transfer outside
+                            Pakistan: Personal information comprising of your CV may be accessed through the
+                            BizBlanca.com database by third parties outside Pakistan. This could happen, for instance,
+                            if you apply for a vacancy where the employer is based outside of the country.
                         </p>
                     </li>
                     <li>
-                        <h1>Marketing</h1>
+                        <h1>Content Rights</h1>
                         <p>
-                            In the event that you register on the Website as a work seeker we will only send you
-                            information which relates to our recruitment services unless you specifically opt in to
-                            receiving marketing material about other products and services through the contact
-                            preferences section of your account. If you consent to receive marketing material using your
-                            contact preferences you may change your mind at any time.<br /> You can also amend the
-                            contact
-                            preferences in your account to stop us from contacting you in connection with the
-                            recruitment services or courses available through the Website for which you register when
-                            you set up your account.
+                            International copyright, software, and trademark laws protect the rights in material on the
+                            Website, and you need to use the Website in a way that does not infringe on these rights.
+                            You are allowed to use and copy the website material for your purposes only, not for any
+                            commercial or business objective.
                         </p>
                     </li>
                     <li>
-                        <h1>How do you unsubscribe from future mailings?</h1>
+                        <h1>Security & Passwords</h1>
                         <p>
-                            If you have a BizBlanca jobseeker account, you can stop receiving emails by updating your
-                            preferences in your MyPage account settings.
+                            To register or sign in to the Website, you will need to use a username and password. It is
+                            only you who is going to be answerable for the proper and legal use of your password. And
+                            you must not disclose your secret information to any other person. If you ever feel that
+                            your password has been leaked or accessed by someone else, you must notify us as quickly as
+                            possible. Afterward, We accept no liability for any unauthorized or improper use or
+                            disclosure of any password.
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Termination</h1>
+                        <p>
+                            We may terminate your registration and/or deny access to the Website or any part of it
+                            (including any services, goods, or information available on or through the Website) at any
+                            time with no need to give or explain to you a reason for doing so.
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Liability</h1>
+                        <p>
+                            We accept no liability for any loss arising from your use of the Website and we hereby
+                            exclude any such liability, whether in contract or otherwise. All claims, warranties, and
+                            conditions about the Website are explicitly disclaimed. You undertake to hold us harmless
+                            from any costs, expenses, claims, losses, liabilities, or procedures resulting from your use
+                            or abuse of the Website. Ping us as quickly as possible if any person tries to make a false
+                            claim or threatens you from using our website.
+                        </p>
+                    </li>
+                    <li>
+                        <h1>Choice of Law and Jurisdiction.</h1>
+                        <p>
+                            The use of the Website and any agreements entered into through the Website are to be
+                            governed by and construed by Pakistani law. The courts of Pakistan are to have exclusive
+                            jurisdiction to settle any dispute arising out of or in connection with the use of the
+                            Website or any agreement made through the Website. Some of the goods or services offered
+                            through the Website may not be lawful or may otherwise not be permitted in certain countries
+                            outside Pakistan. If any illegal attempt made to order, receive, purchase, or otherwise
+                            benefit from any such goods or services, we will not accept any liability for any losses
+                            suffered by you in using the Website, which you would not have suffered had you been
+                            accessing the Website as a Pakistan resident.
                         </p>
                     </li>
                 </ul>

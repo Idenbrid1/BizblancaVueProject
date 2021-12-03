@@ -2078,6 +2078,9 @@ a, button {
 	color: #000000;
 	font-weight: 600;
 	line-height: inherit;
+	text-align: center;
+	display: block;
+	width: 100%;
 }
 .card-happy-img {
 	width: 52px;
