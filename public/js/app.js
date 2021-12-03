@@ -4365,55 +4365,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -4453,6 +4404,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4857,6 +4835,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var epic_spinners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! epic-spinners */ "./node_modules/epic-spinners/src/lib.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -15107,36 +15115,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -29901,17 +29879,59 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _vm._m(0),
+      _c(
+        "header",
+        {
+          staticClass: "_secondary-header-nav p-0",
+          attrs: { id: "secondary-header-nav" },
+        },
+        [
+          _c("div", { staticClass: "p-0 m-auto" }, [
+            _c("ul", [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "secondaymenu",
+                      attrs: { to: "/about-us", id: "secondary-anker" },
+                    },
+                    [_vm._v("About Us")]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "seprate-line" }),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
+            ]),
+          ]),
+        ]
+      ),
       _vm._v(" "),
-      _vm._m(1),
+      _vm._m(6),
       _vm._v(" "),
-      _vm._m(2),
+      _vm._m(7),
       _vm._v(" "),
-      _vm._m(3),
+      _vm._m(8),
       _vm._v(" "),
-      _vm._m(4),
+      _vm._m(9),
       _vm._v(" "),
-      _vm._m(5),
+      _vm._m(10),
+      _vm._v(" "),
+      _vm._m(11),
     ],
     1
   )
@@ -29921,47 +29941,150 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#process-section", id: "secondary-anker" },
+        },
+        [_vm._v("Process")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#videos", id: "secondary-anker-2" },
+        },
+        [_vm._v("Videos")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#certificate-section", id: "secondary-anker-3" },
+        },
+        [_vm._v("Certificate")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#testimonials-section", id: "secondary-anker-4" },
+        },
+        [_vm._v("Testimonials")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#testimonials-section", id: "secondary-anker-5" },
+        },
+        [_vm._v("Our People")]
+      ),
+      _vm._v(" "),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#sign-up-now", id: "secondary-anker-5" },
+        },
+        [_vm._v("Signup Now")]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("section", { staticClass: "candidate-section pt-5 p-md-0" }, [
       _c("div", { staticClass: "row no-gutters" }, [
-        _c("section", { staticClass: "col-12 candidate-landing-section" }, [
-          _c("div", { staticClass: "row m-0 banner-candidate" }, [
-            _c("div", { staticClass: "col-12 col-md-6 left-content" }, [
-              _c("div", [
-                _c("h1", [
-                  _vm._v(
-                    "\n                BizBlanca builds IT recruitment community that can source\n                excellent talents to the market.\n              "
+        _c(
+          "section",
+          {
+            staticClass: "col-12 candidate-landing-section",
+            attrs: { id: "about-us" },
+          },
+          [
+            _c("div", { staticClass: "row m-0 banner-candidate" }, [
+              _c("div", { staticClass: "col-12 col-md-6 left-content" }, [
+                _c("div", [
+                  _c("h1", [
+                    _vm._v(
+                      "\n                                BizBlanca builds IT recruitment community that can source\n                                excellent talents to the market.\n                            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                                Under the mission of reducing mismatches in changing jobs,\n                                BizBlanca supports job-hunting activities that allow job\n                                seekers to work for the next company for a long time based on\n                                your background and can surely step up.\n                            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "align-self-start", attrs: { href: "#" } },
+                    [_vm._v("Signup Now")]
                   ),
                 ]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "\n                Under the mission of reducing mismatches in changing jobs,\n                BizBlanca supports job-hunting activities that allow job\n                seekers to work for the next company for a long time based on\n                your background and can surely step up.\n              "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "align-self-start", attrs: { href: "#" } },
-                  [_vm._v("Signup Now")]
-                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-6 p-0 right-image" }, [
+                _c("img", {
+                  staticClass: "candiate-banner-d",
+                  attrs: {
+                    src: "/website/assets/images/candidate-banner-m.png",
+                    alt: "img",
+                  },
+                }),
               ]),
             ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-md-6 p-0 right-image" }, [
-              _c("img", {
-                staticClass: "candiate-banner-d",
-                attrs: {
-                  src: "/website/assets/images/candidate-banner-m.png",
-                  alt: "img",
-                },
-              }),
-            ]),
-          ]),
-        ]),
+          ]
+        ),
         _vm._v(" "),
         _c("h1", { staticClass: "msg-heading" }, [
           _vm._v(
-            "\n        Be scouted and headhunted by the top IT companies of Pakistan\n      "
+            "\n                Be scouted and headhunted by the top IT companies of Pakistan\n            "
           ),
         ]),
         _vm._v(" "),
@@ -29975,13 +30098,13 @@ var staticRenderFns = [
               [
                 _c("span", [
                   _vm._v(
-                    "Upgrade and change your career with style Get scouted by the best\n            companies in Pakistan"
+                    "Upgrade and change your career with style Get scouted by the best\n                        companies in Pakistan"
                   ),
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "offers-job-para" }, [
                   _vm._v(
-                    "\n            In the coming era, it is important to know your own market value.\n            Recieve job and offers and uncover your potential, your value in\n            the industry. Widen your career options and take a look at which\n            top companies want to hire you.\n          "
+                    "\n                        In the coming era, it is important to know your own market value.\n                        Recieve job and offers and uncover your potential, your value in\n                        the industry. Widen your career options and take a look at which\n                        top companies want to hire you.\n                    "
                   ),
                 ]),
                 _vm._v(" "),
@@ -29996,13 +30119,13 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("h3", [
                     _vm._v(
-                      "\n              More than 75% of the job offers on BizBlanca pay 100,000PKR or\n              more.\n            "
+                      "\n                            More than 75% of the job offers on BizBlanca pay 100,000PKR or\n                            more.\n                        "
                     ),
                   ]),
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "\n              We have over 300 job posts for high- paying, professional-level\n              jobs which can set you up for life.\n            "
+                      "\n                            We have over 300 job posts for high- paying, professional-level\n                            jobs which can set you up for life.\n                        "
                     ),
                   ]),
                 ]),
@@ -30018,13 +30141,13 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("h3", [
                     _vm._v(
-                      "\n              With around 200 companies, we select the best companies across\n              the country\n            "
+                      "\n                            With around 200 companies, we select the best companies across\n                            the country\n                        "
                     ),
                   ]),
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "\n              We only work with the top companies of Pakistan to bring you job\n              offers that will give your career a big boost.\n            "
+                      "\n                            We only work with the top companies of Pakistan to bring you job\n                            offers that will give your career a big boost.\n                        "
                     ),
                   ]),
                 ]),
@@ -30046,7 +30169,7 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "\n              We are job hunting specialists and our team of experts will\n              support your career upgrade with dedication and consistency.\n            "
+                      "\n                            We are job hunting specialists and our team of experts will\n                            support your career upgrade with dedication and consistency.\n                        "
                     ),
                   ]),
                 ]),
@@ -30067,13 +30190,15 @@ var staticRenderFns = [
       "section",
       {
         staticClass: "career-upgrade-process container",
-        attrs: { id: "process" },
+        attrs: { id: "process-section" },
       },
       [
         _c("div", { staticClass: "content-career-steps" }, [
           _c("h2", { staticClass: "heading-div" }, [
             _c("div", { staticClass: "mr-2 title-effect" }),
-            _vm._v("\n        The career upgrade process\n      "),
+            _vm._v(
+              "\n                The career upgrade process\n            "
+            ),
           ]),
           _vm._v(" "),
           _c("p", [_vm._v("Follow these steps for career success")]),
@@ -30118,7 +30243,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "\n              Become a top-ranking candidate, a.k.a a “Bizer’, and recieve job\n              offers\n            "
+                    "\n                            Become a top-ranking candidate, a.k.a a “Bizer’, and recieve job\n                            offers\n                        "
                   ),
                 ]),
               ]),
@@ -30143,7 +30268,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "\n              Attend a job interview and introduce yourself to your dream\n              company\n            "
+                    "\n                            Attend a job interview and introduce yourself to your dream\n                            company\n                        "
                   ),
                 ]),
               ]),
@@ -30183,7 +30308,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "\n        We have expertises in 20 specialist sectors, from Project Manager to\n        Developers. We want to partner with experienced IT recruitment team in\n        these, and other, sectors across Pakistan to build successful\n        partnership and improve more lives through work.\n      "
+              "\n                We have expertises in 20 specialist sectors, from Project Manager to\n                Developers. We want to partner with experienced IT recruitment team in\n                these, and other, sectors across Pakistan to build successful\n                partnership and improve more lives through work.\n            "
             ),
           ]),
           _vm._v(" "),
@@ -30433,66 +30558,75 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "bg-Grey" }, [
-      _c("section", { staticClass: "upload-your-cv container" }, [
-        _c("div", { staticClass: "row no-gutters" }, [
-          _c("div", { staticClass: "col-12 col-md-6 cv-upload" }, [
-            _c("h3", { staticClass: "heading-div" }, [
-              _c("div", { staticClass: "mr-2 title-effect" }),
-              _vm._v("\n            What's Next...\n          "),
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n            We're here to help you take your next step in the world of work,\n            wherever or whatever it is.\n          "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "#" } }, [_vm._v("Upload your CV")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "reply-img" }, [
-              _c("img", {
-                attrs: {
-                  src: "/website/assets/images/reply.svg",
-                  alt: "reply",
-                },
-              }),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-md-6 resume-upload" }, [
-            _c("div", { staticClass: "row no-gutters" }, [
-              _c("div", { staticClass: "col-12 col-md-8" }, [
+      _c(
+        "section",
+        {
+          staticClass: "upload-your-cv container",
+          attrs: { id: "certificate-section" },
+        },
+        [
+          _c("div", { staticClass: "row no-gutters" }, [
+            _c("div", { staticClass: "col-12 col-md-6 cv-upload" }, [
+              _c("h3", { staticClass: "heading-div" }, [
+                _c("div", { staticClass: "mr-2 title-effect" }),
+                _vm._v(
+                  "\n                        What's Next...\n                    "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        We're here to help you take your next step in the world of work,\n                        wherever or whatever it is.\n                    "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Upload your CV")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "reply-img" }, [
                 _c("img", {
                   attrs: {
-                    height: "250",
-                    width: "235",
-                    src: "/website/assets/images/resume.svg",
-                    alt: "img",
+                    src: "/website/assets/images/reply.svg",
+                    alt: "reply",
                   },
                 }),
               ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c("div", [
-                  _c("span", { staticClass: "upload-text" }, [
-                    _vm._v("Upload"),
-                  ]),
-                  _vm._v(" "),
-                  _c("h3", { staticClass: "your-cv-online-text" }, [
-                    _vm._v("your cv online"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "content_para" }, [
-                    _vm._v(
-                      "\n                  Your CV is the first impression recruiters have of you. Most\n                  of the candidates still have a CV that looks like this. Are\n                  you one of them? If you are, there is an opportunity to turn\n                  it into a CV that will get you the WOW effect...\n                "
-                    ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-6 resume-upload" }, [
+              _c("div", { staticClass: "row no-gutters" }, [
+                _c("div", { staticClass: "col-12 col-md-8" }, [
+                  _c("img", {
+                    attrs: {
+                      height: "250",
+                      width: "235",
+                      src: "/website/assets/images/resume.svg",
+                      alt: "img",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-12 col-md-4" }, [
+                  _c("div", [
+                    _c("span", { staticClass: "upload-text" }, [
+                      _vm._v("Upload"),
+                    ]),
+                    _vm._v(" "),
+                    _c("h3", { staticClass: "your-cv-online-text" }, [
+                      _vm._v("your cv online"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content_para" }, [
+                      _vm._v(
+                        "\n                                    Your CV is the first impression recruiters have of you. Most\n                                    of the candidates still have a CV that looks like this. Are\n                                    you one of them? If you are, there is an opportunity to turn\n                                    it into a CV that will get you the WOW effect...\n                                "
+                      ),
+                    ]),
                   ]),
                 ]),
               ]),
             ]),
           ]),
-        ]),
-      ]),
+        ]
+      ),
       _vm._v(" "),
       _c(
         "section",
@@ -30524,7 +30658,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "payment-descrp-d" }, [
                 _vm._v(
-                  "\n            At BizBlanca, we have a Payment Partnership with Bizers who have\n            BizBlanca Certification in order to eliminate the anxiety about\n            salary that many people have. This is a mechanism that allows you\n            to concentrate on your work stress-free by having our company\n            intervene and take over the work of receiving salary so that the\n            company you work for will pay your salary smoothly when you work\n            through BizBlanca.\n          "
+                  "\n                        At BizBlanca, we have a Payment Partnership with Bizers who have\n                        BizBlanca Certification in order to eliminate the anxiety about\n                        salary that many people have. This is a mechanism that allows you\n                        to concentrate on your work stress-free by having our company\n                        intervene and take over the work of receiving salary so that the\n                        company you work for will pay your salary smoothly when you work\n                        through BizBlanca.\n                    "
                 ),
               ]),
             ]),
@@ -30532,7 +30666,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", { staticClass: "payment-descrp-m" }, [
             _vm._v(
-              "\n        At BizBlanca, we have a Payment Partnership with Bizers who have\n        BizBlanca Certification in order to eliminate the anxiety about salary\n        that many people have. This is a mechanism that allows you to\n        concentrate on your work stress-free by having our company intervene\n        and take over the work of receiving salary so that the company you\n        work for will pay your salary smoothly when you work through\n        BizBlanca.\n      "
+              "\n                At BizBlanca, we have a Payment Partnership with Bizers who have\n                BizBlanca Certification in order to eliminate the anxiety about salary\n                that many people have. This is a mechanism that allows you to\n                concentrate on your work stress-free by having our company intervene\n                and take over the work of receiving salary so that the company you\n                work for will pay your salary smoothly when you work through\n                BizBlanca.\n            "
             ),
           ]),
         ]
@@ -30547,12 +30681,12 @@ var staticRenderFns = [
       "section",
       {
         staticClass: "success-stories container",
-        attrs: { id: "Testimonials" },
+        attrs: { id: "testimonials-section" },
       },
       [
         _c("h3", { staticClass: "heading-div my-md-5" }, [
           _c("div", { staticClass: "mr-2 title-effect" }),
-          _vm._v("\n      BizBlanca's Success Stories\n    "),
+          _vm._v("\n            BizBlanca's Success Stories\n        "),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "swiper success-stories-swiper" }, [
@@ -30579,7 +30713,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
-                    "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    "\n                            After being scouted and hired by my company through BizBlanca, I\n                            have become an accomplished and multifaceted technology leader\n                            with 4 years of exceptional expertise in the provisions of\n                            Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n                            as Backend Development (Php Laravel). I am now working as a team\n                            leader in a multi-national company where I direct and lead a\n                            professional team under my supervision and I also manage\n                            client-based projects efficiently. I was unhappy, underpaid and\n                            underperforming in my previous job but this career transition\n                            allowed me to become the best version of myself. Signing up to\n                            BizBlanca allowed me to sit back and be hired by the right\n                            company that have appreciated and understood my value and worth.\n                        "
                   ),
                 ]),
               ]),
@@ -30607,7 +30741,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
-                    "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    "\n                            After being scouted and hired by my company through BizBlanca, I\n                            have become an accomplished and multifaceted technology leader\n                            with 4 years of exceptional expertise in the provisions of\n                            Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n                            as Backend Development (Php Laravel). I am now working as a team\n                            leader in a multi-national company where I direct and lead a\n                            professional team under my supervision and I also manage\n                            client-based projects efficiently. I was unhappy, underpaid and\n                            underperforming in my previous job but this career transition\n                            allowed me to become the best version of myself. Signing up to\n                            BizBlanca allowed me to sit back and be hired by the right\n                            company that have appreciated and understood my value and worth.\n                        "
                   ),
                 ]),
               ]),
@@ -30635,7 +30769,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
-                    "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    "\n                            After being scouted and hired by my company through BizBlanca, I\n                            have become an accomplished and multifaceted technology leader\n                            with 4 years of exceptional expertise in the provisions of\n                            Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n                            as Backend Development (Php Laravel). I am now working as a team\n                            leader in a multi-national company where I direct and lead a\n                            professional team under my supervision and I also manage\n                            client-based projects efficiently. I was unhappy, underpaid and\n                            underperforming in my previous job but this career transition\n                            allowed me to become the best version of myself. Signing up to\n                            BizBlanca allowed me to sit back and be hired by the right\n                            company that have appreciated and understood my value and worth.\n                        "
                   ),
                 ]),
               ]),
@@ -30663,7 +30797,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
-                    "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    "\n                            After being scouted and hired by my company through BizBlanca, I\n                            have become an accomplished and multifaceted technology leader\n                            with 4 years of exceptional expertise in the provisions of\n                            Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n                            as Backend Development (Php Laravel). I am now working as a team\n                            leader in a multi-national company where I direct and lead a\n                            professional team under my supervision and I also manage\n                            client-based projects efficiently. I was unhappy, underpaid and\n                            underperforming in my previous job but this career transition\n                            allowed me to become the best version of myself. Signing up to\n                            BizBlanca allowed me to sit back and be hired by the right\n                            company that have appreciated and understood my value and worth.\n                        "
                   ),
                 ]),
               ]),
@@ -30712,7 +30846,7 @@ var staticRenderFns = [
                             staticStyle: { "background-color": "#fff" },
                           }),
                           _vm._v(
-                            "\n                  Vidoes\n                "
+                            "\n                                    Vidoes\n                                "
                           ),
                         ]
                       ),
@@ -30743,14 +30877,14 @@ var staticRenderFns = [
                         },
                         [
                           _vm._v(
-                            "\n                  CEO Message for Candidates\n                "
+                            "\n                                    CEO Message for Candidates\n                                "
                           ),
                         ]
                       ),
                       _vm._v(" "),
                       _c("p", { staticClass: "ceo-msg-description pt-3" }, [
                         _vm._v(
-                          "\n                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                  Quibusdam non earum impedit commodi tempora sequi? Eligendi\n                  fugit facere eveniet incidunt, tempora maiores esse\n                  doloremque rerum fugiat ducimus velit veniam possimus.\n                "
+                          "\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                                    Quibusdam non earum impedit commodi tempora sequi? Eligendi\n                                    fugit facere eveniet incidunt, tempora maiores esse\n                                    doloremque rerum fugiat ducimus velit veniam possimus.\n                                "
                         ),
                       ]),
                       _vm._v(" "),
@@ -30769,7 +30903,9 @@ var staticRenderFns = [
                               attrs: { href: "./comming.html" },
                             },
                             [
-                              _vm._v("Read More\n                    "),
+                              _vm._v(
+                                "Read More\n                                        "
+                              ),
                               _c("i", {
                                 staticClass: "fa fa-long-arrow-right",
                                 attrs: { "aria-hidden": "true" },
@@ -30794,7 +30930,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "resume-builder container", attrs: { id: "signupnow" } },
+      { staticClass: "resume-builder container", attrs: { id: "sign-up-now" } },
       [
         _c("div", { staticClass: "row no-gutters resume-builder-row" }, [
           _c("div", { staticClass: "col-12 col-md-3" }, [
@@ -30818,7 +30954,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-12 col-md-9 p-2" }, [
             _c("p", [
               _vm._v(
-                "\n          If you would like to be part of us, please sign up and upload your\n          resume. Your career journey will begin with us.\n        "
+                "\n                    If you would like to be part of us, please sign up and upload your\n                    resume. Your career journey will begin with us.\n                "
               ),
             ]),
             _vm._v(" "),
@@ -30853,11 +30989,119 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [_c("WebsiteNavbar"), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1)],
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      _c(
+        "header",
+        {
+          staticClass: "_secondary-header-nav p-0",
+          attrs: { id: "secondary-header-nav" },
+        },
+        [
+          _c("div", { staticClass: "p-0 m-auto" }, [
+            _c("ul", [
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "secondaymenu",
+                      attrs: { to: "/contact-us", id: "secondary-anker-5" },
+                    },
+                    [_vm._v("Contact")]
+                  ),
+                ],
+                1
+              ),
+            ]),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(4),
+      _vm._v(" "),
+      _vm._m(5),
+    ],
     1
   )
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#why-bizblanca", id: "secondary-anker" },
+        },
+        [_vm._v("Why BizBlanca")]
+      ),
+      _vm._v(" "),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#flow-of-use", id: "secondary-anker-3" },
+        },
+        [_vm._v("Flow of Use")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#faq-section", id: "secondary-anker-4" },
+        },
+        [_vm._v("FAQS")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#testimonals-section", id: "secondary-anker-5" },
+        },
+        [_vm._v("Testimonials")]
+      ),
+      _vm._v(" "),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -31222,150 +31466,205 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "company-testimonial container" }, [
-        _c("h4", { staticClass: "heading-div testimonials-text" }, [
-          _c("div", { staticClass: "mr-2 title-effect" }),
-          _vm._v("\n                Testimonials\n            "),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row no-gutters" }, [
-          _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonial-card testimonial-card-1" }, [
-              _c("img", {
-                staticClass: "testimonial-card-img",
-                attrs: {
-                  src: "/website/assets/images/Group 1386.png",
-                  alt: "1",
-                },
-              }),
-              _vm._v(" "),
-              _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("Before"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("After"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
-                ),
-              ]),
-            ]),
+      _c(
+        "div",
+        {
+          staticClass: "company-testimonial container",
+          attrs: { id: "testimonals-section" },
+        },
+        [
+          _c("h4", { staticClass: "heading-div testimonials-text" }, [
+            _c("div", { staticClass: "mr-2 title-effect" }),
+            _vm._v("\n                Testimonials\n            "),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonial-card testimonial-card-2" }, [
-              _c("img", {
-                staticClass: "testimonial-card-img",
-                attrs: {
-                  src: "/website/assets/images/Group 1385.png",
-                  alt: "2",
-                },
-              }),
-              _vm._v(" "),
-              _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("Before"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("After"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
-                ),
-              ]),
+          _c("div", { staticClass: "row no-gutters" }, [
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "testimonial-card testimonial-card-1" },
+                [
+                  _c("img", {
+                    staticClass: "testimonial-card-img",
+                    attrs: {
+                      src: "/website/assets/images/Group 1386.png",
+                      alt: "1",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("Before"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("After"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "testimonial-card testimonial-card-2" },
+                [
+                  _c("img", {
+                    staticClass: "testimonial-card-img",
+                    attrs: {
+                      src: "/website/assets/images/Group 1385.png",
+                      alt: "2",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("Before"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("After"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "testimonial-card testimonial-card-3" },
+                [
+                  _c("img", {
+                    staticClass: "testimonial-card-img",
+                    attrs: {
+                      src: "/website/assets/images/Group 1391.png",
+                      alt: "2",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("Before"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("After"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "testimonial-card testimonial-card-4" },
+                [
+                  _c("img", {
+                    staticClass: "testimonial-card-img",
+                    attrs: {
+                      src: "/website/assets/images/Group 1394.png",
+                      alt: "3",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("Before"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("After"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
             ]),
           ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonial-card testimonial-card-3" }, [
-              _c("img", {
-                staticClass: "testimonial-card-img",
-                attrs: {
-                  src: "/website/assets/images/Group 1391.png",
-                  alt: "2",
-                },
-              }),
-              _vm._v(" "),
-              _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("Before"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("After"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
-                ),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonial-card testimonial-card-4" }, [
-              _c("img", {
-                staticClass: "testimonial-card-img",
-                attrs: {
-                  src: "/website/assets/images/Group 1394.png",
-                  alt: "3",
-                },
-              }),
-              _vm._v(" "),
-              _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("Before"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("After"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
-                ),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
+        ]
+      ),
       _vm._v(" "),
       _c(
         "div",
@@ -31392,7 +31691,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass: "company-faqs container px-2",
-          attrs: { id: "faqs-sec" },
+          attrs: { id: "faq-section" },
         },
         [
           _c("h4", { staticClass: "my-2 heading-div" }, [
@@ -31477,6 +31776,8 @@ var render = function () {
       _vm._v(" "),
       _vm._m(5),
       _vm._v(" "),
+      _vm._m(6),
+      _vm._v(" "),
       _c(
         "section",
         { staticClass: "sixth-section py-5", attrs: { id: "contact" } },
@@ -31486,7 +31787,7 @@ var render = function () {
               _c("div", { staticClass: "col-md-6 col-12 w-100 p-0 pr-md-5" }, [
                 _c("form", { attrs: { action: "" } }, [
                   _c("div", { staticClass: "row m-0" }, [
-                    _vm._m(6),
+                    _vm._m(7),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-12 px-2" }, [
                       _c("div", { staticClass: "form-group" }, [
@@ -31750,7 +32051,7 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _vm._m(7),
+              _vm._m(8),
             ]),
           ]),
         ]
@@ -31760,6 +32061,95 @@ var render = function () {
   )
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "header",
+      {
+        staticClass: "_secondary-header-nav p-0",
+        attrs: { id: "secondary-header-nav" },
+      },
+      [
+        _c("div", { staticClass: "p-0 m-auto" }, [
+          _c("ul", [
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#news", id: "secondary-anker" },
+                },
+                [_vm._v("News")]
+              ),
+              _vm._v(" "),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#expertise", id: "secondary-anker" },
+                },
+                [_vm._v("Looking for A job")]
+              ),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#expertise", id: "secondary-anker-2" },
+                },
+                [_vm._v("Looking for Employees")]
+              ),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#happening", id: "secondary-anker-3" },
+                },
+                [_vm._v("FAQ")]
+              ),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#video", id: "secondary-anker-4" },
+                },
+                [_vm._v("Videos")]
+              ),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#contact", id: "secondary-anker-5" },
+                },
+                [_vm._v("Contact")]
+              ),
+            ]),
+          ]),
+        ]),
+      ]
+    )
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -56580,8 +56970,6 @@ var render = function () {
         1
       ),
     ]),
-    _vm._v(" "),
-    _vm._m(8),
   ])
 }
 var staticRenderFns = [
@@ -56693,95 +57081,6 @@ var staticRenderFns = [
         _vm._v(" Contact"),
       ]),
     ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "header",
-      {
-        staticClass: "_secondary-header-nav p-0",
-        attrs: { id: "secondary-header-nav" },
-      },
-      [
-        _c("div", { staticClass: "p-0 m-auto" }, [
-          _c("ul", [
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#news", id: "secondary-anker" },
-                },
-                [_vm._v("News")]
-              ),
-              _vm._v(" "),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#expertise", id: "secondary-anker" },
-                },
-                [_vm._v("Looking for A job")]
-              ),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#expertise", id: "secondary-anker-2" },
-                },
-                [_vm._v("Looking for Employees")]
-              ),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#happening", id: "secondary-anker-3" },
-                },
-                [_vm._v("FAQ")]
-              ),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#video", id: "secondary-anker-4" },
-                },
-                [_vm._v("Videos")]
-              ),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#contact", id: "secondary-anker-5" },
-                },
-                [_vm._v("Contact")]
-              ),
-            ]),
-          ]),
-        ]),
-      ]
-    )
   },
 ]
 render._withStripped = true

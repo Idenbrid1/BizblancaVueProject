@@ -1,6 +1,33 @@
 <template>
     <div>
         <WebsiteNavbar />
+        <!-- seconday-Navigation -->
+        <header class="_secondary-header-nav p-0" id="secondary-header-nav">
+            <div class="p-0 m-auto">
+                <ul>
+                    <li>
+                        <a href="#why-bizblanca" class="secondaymenu" id="secondary-anker">Why BizBlanca</a>
+                        <span class="seprate-line"></span>
+                    </li>
+                    <li>
+                        <a href="#flow-of-use" class="secondaymenu" id="secondary-anker-3">Flow of Use</a><span
+                            class="seprate-line"></span>
+                    </li>
+                    <li>
+                        <a href="#faq-section" class="secondaymenu" id="secondary-anker-4">FAQS</a><span
+                            class="seprate-line"></span>
+                    </li>
+                    <li>
+                        <a href="#testimonals-section" class="secondaymenu" id="secondary-anker-5">Testimonials</a>
+                        <span class="seprate-line"></span>
+                    </li>
+                    <li>
+                        <router-link to="/contact-us" class="secondaymenu" id="secondary-anker-5">Contact</router-link>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- company section -->
         <div class="company-banner w-100 row no-gutters" id="why-bizblanca">
             <div class="banner-sec-2 col-12 col-lg-6 px-2">
                 <div class="left-box-banner">
@@ -210,7 +237,7 @@
                     </div>
                 </div>
             </div>
-            <div class="company-testimonial container">
+            <div class="company-testimonial container" id="testimonals-section">
                 <h4 class="heading-div testimonials-text">
                     <div class="mr-2 title-effect"></div>
                     Testimonials
@@ -303,7 +330,7 @@
                     <img class="flow-photo w-100" src="/website/assets/images/Group 1687.svg" alt="" />
                 </div>
             </div>
-            <div class="company-faqs container px-2" id="faqs-sec">
+            <div class="company-faqs container px-2" id="faq-section">
                 <h4 class="my-2 heading-div">
                     <div class="mr-2 title-effect"></div>
                     FAQS
