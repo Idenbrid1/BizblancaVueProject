@@ -21,7 +21,7 @@
                         </label>
                     </div>
                     <div class="dashboard-msgs-container">
-                        <div class="msg-wrap">
+                        <div class="msg-wrap" @click="ShowMessageError()">
                             <div class="msg-user-name">
                                 <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
                                 <p class="msg-time-date">10/08/2021, 09:10 am</p>
@@ -30,10 +30,11 @@
                                 JOB FOR MERN STACK DEVELOPER
                             </router-link>
                             <p class="msg-description">
-                                Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I have expertise in...
+                                Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I
+                                have expertise in...
                             </p>
                         </div>
-                        <div class="msg-wrap">
+                        <div class="msg-wrap" @click="ShowMessageError()">
                             <div class="msg-user-name">
                                 <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
                                 <p class="msg-time-date">10/08/2021, 09:10 am</p>
@@ -42,10 +43,11 @@
                                 JOB FOR MERN STACK DEVELOPER
                             </router-link>
                             <p class="msg-description">
-                                Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I have expertise in...
+                                Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I
+                                have expertise in...
                             </p>
                         </div>
-                        <div class="msg-wrap">
+                        <div class="msg-wrap" @click="ShowMessageError()">
                             <div class="msg-user-name">
                                 <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
                                 <p class="msg-time-date">10/08/2021, 09:10 am</p>
@@ -54,11 +56,12 @@
                                 JOB FOR MERN STACK DEVELOPER
                             </router-link>
                             <p class="msg-description">
-                                Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I have expertise in...
+                                Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I
+                                have expertise in...
                             </p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <!---- ------------------------------>
                 <!-- <div class="product-search-box">
@@ -213,11 +216,14 @@
                         <div class="job-list-wrap">
                             <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
-                            <div class="row m-0 justify-content-start" >
-                                <div class="candidate-single" v-if="index < wishlist.length" v-for="(item, index) in wishlist" :key="index">
+                            <div class="row m-0 justify-content-start">
+                                <div class="candidate-single" v-if="index < wishlist.length"
+                                    v-for="(item, index) in wishlist" :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/profile/'+item.candidate.profile_image+')'}"></div>
+                                            <div class="candidate-photo"
+                                                :style="{ backgroundImage: 'url(/storage/images/candidates/profile/'+item.candidate.profile_image+')'}">
+                                            </div>
                                             <div class="candidate-header mt-2 ml-2">
                                                 <h6 class="candidate-name mb-0">{{item.candidate.full_name}}</h6>
                                             </div>
@@ -235,7 +241,9 @@
                                                 <div class="hide-line-1">{{item.candidate.experience}} Years</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1" v-for="(skills, index) in item.candidate.candidate_skills" :key="index">{{skills.name}}, </div>
+                                                <div class="hide-line-1"
+                                                    v-for="(skills, index) in item.candidate.candidate_skills"
+                                                    :key="index">{{skills.name}}, </div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
                                                 <div class="hide-line-1">{{item.candidate.city}}</div>
@@ -244,8 +252,13 @@
                                         </ul>
 
                                         <ul class="candidate-list-fav">
-                                            <li class="w-100"><router-link class="job-view-btn w-100" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: item.candidate.id } }">View Profile</router-link></li>
-                                            <li><a @click="removeToWishList(item.id)" class="candidate-wishlist-btn ml-2"><i class="fas fa-heart"></i></a>
+                                            <li class="w-100">
+                                                <router-link class="job-view-btn w-100" data-toggle="collapse"
+                                                    :to="{ name: 'CandidateDetail', params: { id: item.candidate.id } }">
+                                                    View Profile</router-link>
+                                            </li>
+                                            <li><a @click="removeToWishList(item.id)"
+                                                    class="candidate-wishlist-btn ml-2"><i class="fas fa-heart"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -256,7 +269,8 @@
                     </div>
                     <div class="show-more-anker">
                         <!-- <router-link class="show-more-common" to="/candidate-dashboard">Show more</router-link> -->
-                        <p class="notify-unread-msgs">You have <span>{{wishlist.length}}</span> candidates in wishlist</p>
+                        <p class="notify-unread-msgs">You have <span>{{wishlist.length}}</span> candidates in wishlist
+                        </p>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
@@ -536,7 +550,7 @@
     export default {
         data() {
             return {
-               wishlist: [],
+                wishlist: [],
             }
         },
         mounted() {
@@ -558,22 +572,30 @@
         components: {
             WebsiteNavbar,
             CompanyNavbar,
-            
+
         },
         methods: {
-            getCompanyWishList(){
+            getCompanyWishList() {
                 axios.get('get-company-wish-list')
                     .then((response) => {
                         this.wishlist = response.data.wish_listed
                     });
             },
-            removeToWishList(id){
-                axios.get('/remove-to-wish-list/'+id)
-                .then((response) => {
-                    this.getCompanyWishList()
-                });
+            removeToWishList(id) {
+                axios.get('/remove-to-wish-list/' + id)
+                    .then((response) => {
+                        this.getCompanyWishList()
+                    });
+            },
+            ShowMessageError() {
+                Swal.fire(
+                    'UnderDevelopment',
+                    'Chat Functionality UnderDevelopment',
+                    'info'
+                );
             },
         },
+
     };
 
 </script>

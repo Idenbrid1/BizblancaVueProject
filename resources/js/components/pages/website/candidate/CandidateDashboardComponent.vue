@@ -21,7 +21,7 @@
                         </label>
                     </div>
                     <div class="dashboard-msgs-container">
-                        <div class="msg-wrap">
+                        <div class="msg-wrap" @click="ShowMessageError()">
                             <div class="msg-user-name">
                                 <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
                                 <p class="msg-time-date">10/08/2021, 09:10 am</p>
@@ -34,7 +34,7 @@
                                 have expertise in...
                             </p>
                         </div>
-                        <div class="msg-wrap">
+                        <div class="msg-wrap" @click="ShowMessageError()">
                             <div class="msg-user-name">
                                 <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
                                 <p class="msg-time-date">10/08/2021, 09:10 am</p>
@@ -47,7 +47,7 @@
                                 have expertise in...
                             </p>
                         </div>
-                        <div class="msg-wrap">
+                        <div class="msg-wrap" @click="ShowMessageError()">
                             <div class="msg-user-name">
                                 <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
                                 <p class="msg-time-date">10/08/2021, 09:10 am</p>
@@ -645,6 +645,13 @@
                     .then((response) => {
                         this.searchData = response.data
                     });
+            },
+            ShowMessageError() {
+                Swal.fire(
+                    'UnderDevelopment',
+                    'Chat Functionality UnderDevelopment',
+                    'info'
+                );
             },
         },
     };

@@ -6871,6 +6871,9 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/candidate-keyword-search/' + this.record.keyword).then(function (response) {
         _this3.searchData = response.data;
       });
+    },
+    ShowMessageError: function ShowMessageError() {
+      Swal.fire('UnderDevelopment', 'Chat Functionality UnderDevelopment', 'info');
     }
   }
 });
@@ -13159,6 +13162,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -13202,6 +13219,9 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/remove-to-wish-list/' + id).then(function (response) {
         _this2.getCompanyWishList();
       });
+    },
+    ShowMessageError: function ShowMessageError() {
+      Swal.fire('UnderDevelopment', 'Chat Functionality UnderDevelopment', 'info');
     }
   }
 });
@@ -34791,7 +34811,14 @@ var render = function () {
             _c("div", { staticClass: "dashboard-msgs-container" }, [
               _c(
                 "div",
-                { staticClass: "msg-wrap" },
+                {
+                  staticClass: "msg-wrap",
+                  on: {
+                    click: function ($event) {
+                      return _vm.ShowMessageError()
+                    },
+                  },
+                },
                 [
                   _vm._m(1),
                   _vm._v(" "),
@@ -34819,7 +34846,14 @@ var render = function () {
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "msg-wrap" },
+                {
+                  staticClass: "msg-wrap",
+                  on: {
+                    click: function ($event) {
+                      return _vm.ShowMessageError()
+                    },
+                  },
+                },
                 [
                   _vm._m(2),
                   _vm._v(" "),
@@ -34847,7 +34881,14 @@ var render = function () {
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "msg-wrap" },
+                {
+                  staticClass: "msg-wrap",
+                  on: {
+                    click: function ($event) {
+                      return _vm.ShowMessageError()
+                    },
+                  },
+                },
                 [
                   _vm._m(3),
                   _vm._v(" "),
@@ -50891,7 +50932,14 @@ var render = function () {
               _c("div", { staticClass: "dashboard-msgs-container" }, [
                 _c(
                   "div",
-                  { staticClass: "msg-wrap" },
+                  {
+                    staticClass: "msg-wrap",
+                    on: {
+                      click: function ($event) {
+                        return _vm.ShowMessageError()
+                      },
+                    },
+                  },
                   [
                     _vm._m(1),
                     _vm._v(" "),
@@ -50910,7 +50958,7 @@ var render = function () {
                     _vm._v(" "),
                     _c("p", { staticClass: "msg-description" }, [
                       _vm._v(
-                        "\n                            Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I have expertise in...\n                        "
+                        "\n                            Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I\n                            have expertise in...\n                        "
                       ),
                     ]),
                   ],
@@ -50919,7 +50967,14 @@ var render = function () {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "msg-wrap" },
+                  {
+                    staticClass: "msg-wrap",
+                    on: {
+                      click: function ($event) {
+                        return _vm.ShowMessageError()
+                      },
+                    },
+                  },
                   [
                     _vm._m(2),
                     _vm._v(" "),
@@ -50938,7 +50993,7 @@ var render = function () {
                     _vm._v(" "),
                     _c("p", { staticClass: "msg-description" }, [
                       _vm._v(
-                        "\n                            Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I have expertise in...\n                        "
+                        "\n                            Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I\n                            have expertise in...\n                        "
                       ),
                     ]),
                   ],
@@ -50947,7 +51002,14 @@ var render = function () {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "msg-wrap" },
+                  {
+                    staticClass: "msg-wrap",
+                    on: {
+                      click: function ($event) {
+                        return _vm.ShowMessageError()
+                      },
+                    },
+                  },
                   [
                     _vm._m(3),
                     _vm._v(" "),
@@ -50966,7 +51028,7 @@ var render = function () {
                     _vm._v(" "),
                     _c("p", { staticClass: "msg-description" }, [
                       _vm._v(
-                        "\n                            Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I have expertise in...\n                        "
+                        "\n                            Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I\n                            have expertise in...\n                        "
                       ),
                     ]),
                   ],
@@ -51143,7 +51205,11 @@ var render = function () {
                                                 },
                                               },
                                             },
-                                            [_vm._v("View Profile")]
+                                            [
+                                              _vm._v(
+                                                "\n                                                View Profile"
+                                              ),
+                                            ]
                                           ),
                                         ],
                                         1
@@ -51187,7 +51253,7 @@ var render = function () {
                 _c("p", { staticClass: "notify-unread-msgs" }, [
                   _vm._v("You have "),
                   _c("span", [_vm._v(_vm._s(_vm.wishlist.length))]),
-                  _vm._v(" candidates in wishlist"),
+                  _vm._v(" candidates in wishlist\n                    "),
                 ]),
               ]),
             ]),
