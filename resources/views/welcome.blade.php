@@ -17,7 +17,7 @@
     <!-- <script src="{{asset('website')}}/assets/js/bootstrap/popper.min.js"></script>
     <script src="{{asset('website')}}/assets/js/bootstrap/bootstrap.min.js"></script> -->
     <script src="{{asset('website')}}/assets/js/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="{{asset('website')}}/assets/js/main.js"></script> -->
+    <script src="{{asset('website')}}/assets/js/main.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 

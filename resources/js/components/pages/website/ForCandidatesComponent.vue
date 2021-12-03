@@ -495,7 +495,6 @@
         </div>
     </div>
 </template>
-<script src="/website/assets/js/swiper/swiper-bundle.min.js"></script>
 <script>
     import WebsiteNavbar from './partials/navbar.vue';
     export default {
