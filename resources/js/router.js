@@ -14,6 +14,7 @@ import CompanyProfile from './components/pages/website/company/CompanyProfileCom
 import CompanyPostJob from './components/pages/website/company/CompanyPostJobComponent.vue';
 import CompanyDetail from './components/pages/website/company/CompanyDetailComponent.vue';
 import CompanyDashboard from './components/pages/website/company/CompanyDashboardComponent.vue';
+import CompanyAccountSetting from './components/pages/website/company/CompanyAccountSettingComponent.vue';
 import JobAppliedCandidates from './components/pages/website/company/JobAppliedCandidatesComponent.vue';
 import CandidateDetail from './components/pages/website/candidate/CandidateDetailComponent.vue';
 import CandidateSearch from './components/pages/website/company/CandidateSearchComponent.vue';
@@ -116,6 +117,11 @@ const router = new VueRouter({
             path: '/company-detail/:id',
             name: 'CompanyDetail',
             component: CompanyDetail
+        },
+        {
+            path: '/company-account-setting',
+            name: 'CompanyAccountSetting',
+            component: CompanyAccountSetting
         },
         {
             path: '/job-applied-candidates/:id',
