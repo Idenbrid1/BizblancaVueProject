@@ -19,6 +19,7 @@ import JobAppliedCandidates from './components/pages/website/company/JobAppliedC
 import CandidateDetail from './components/pages/website/candidate/CandidateDetailComponent.vue';
 import CandidateSearch from './components/pages/website/company/CandidateSearchComponent.vue';
 import CandidateDashboard from './components/pages/website/candidate/CandidateDashboardComponent.vue';
+import CandidateAccountSetting from './components/pages/website/candidate/CandidateAccountSettingComponent.vue';
 import CompanySearch from './components/pages/website/candidate/CompanySearchComponent.vue';
 import CompanyChat from './components/pages/website/company/CompanyChatComponent.vue';
 import JobSearch from './components/pages/website/candidate/JobSearchComponent.vue';
@@ -122,6 +123,11 @@ const router = new VueRouter({
             path: '/company-account-setting',
             name: 'CompanyAccountSetting',
             component: CompanyAccountSetting
+        },
+        {
+            path: '/candidate-account-setting',
+            name: 'CandidateAccountSetting',
+            component: CandidateAccountSetting
         },
         {
             path: '/job-applied-candidates/:id',
