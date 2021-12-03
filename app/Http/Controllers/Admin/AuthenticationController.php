@@ -175,6 +175,7 @@ class AuthenticationController extends Controller
                     {
                         Auth::login($User, true);
                     }
+                    Auth::login($User);
                     return response()->json([
                         "message" =>"Login Successfully!",
                         'success' => true,

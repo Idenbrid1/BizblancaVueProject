@@ -18,6 +18,7 @@ use App\Models\CandidateAppliedJob;
 use App\Models\CompanyWishList;
 use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Mail;
 use PDF;
@@ -492,5 +493,54 @@ class CompanyController extends Controller
                 'success' => false,
             ]);
         }
+    }
+
+    public function settingPassword(Request $request)
+    {
+        $attributeNames = [
+            'current_password' => 'Password',
+            'new_password' => 'New Password',
+            'confirm_password' => 'Confirm Password',
+        ];
+
+        $messages = [
+            'current_password' => 'Password',
+            'new_password' => 'New Password',
+            'confirm_password' => 'Confirm Password',
+        ];
+
+        $rules = array(
+            'current_password'          => 'required|min:6',
+            'new_password'          => 'required|min:6',
+            'confirm_password'  => 'required|same:new_password',
+        );
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        $validator->setAttributeNames($attributeNames);
+
+        if ($validator->fails()){
+            return response()->json([
+                'errors' => $validator->errors(),
+                'success' => false,
+            ], 200);
+        }
+        else
+        {
+            if(Hash::check($request->current_password, Auth::user()->password)){
+                $user = User::find(Auth::user()->id)->update(['password'=> Hash::make($request->new_password)]);
+                if($request->active == true){
+                    $user = User::find(Auth::user()->id)->update(['status'=> 'Inactive']);
+                }
+                return response()->json([
+                    'message' => true,
+                ], 200);
+            }else{
+                return response()->json([
+                    'message' => false,
+                ], 200);
+            }
+        }
+        
     }
 }

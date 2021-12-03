@@ -164,6 +164,7 @@ Route::post('/update/newsletter', [App\Http\Controllers\Website\Candidate\Profil
         Route::get('get-company-wish-list', [App\Http\Controllers\Company\CompanyController::class, 'getCompanyWishList']);
         Route::get('/remove-to-wish-list/{id}', [App\Http\Controllers\Company\CompanyController::class, 'removeToWishList']);
         Route::get('/add-to-wish-list/{candidate_id}', [App\Http\Controllers\Company\CompanyController::class, 'addToWishList']);
+        Route::post('/company-setting-password', [App\Http\Controllers\Company\CompanyController::class, 'settingPassword']);
 
 		// Route::get('/home', [App\Http\Controllers\Website\Company\HomeController::class, 'showDashboardPage'])->name('home');
 		// Route::get('/profile', [App\Http\Controllers\Website\Company\ProfileController::class, 'show'])->name('profile.show');
