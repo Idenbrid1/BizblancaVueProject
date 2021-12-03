@@ -18,22 +18,16 @@ use Auth;
 class CommonController extends Controller
 {
     public function jobSearch(Request $request)
-    {
-        // https://titanwolf.org/Network/Articles/Article?AID=adeca128-52e3-4859-bc75-489b06bed0d1#gsc.tab=0 FOR VIDEO
-        if($request->gender)
+    { 
+        if($request->title)
         {
-            if($request->gender == 'All')
-            {
-                $jobposts = JobPost::where('status', 'Active')->with('Company')->get();
-            }
-            else{
-                $jobposts = JobPost::where('gender', $request->gender)->with('Company')->get();
-            }
+            $jobposts = JobPost::query()->where('title', 'LIKE', "%{$request->title}%")->with('Company')->get();
+            $jobposts = $jobposts->where('status', 'Active');
         }
         else{
             $jobposts = JobPost::where('status', 'Active')->with('Company')->get();
         }
-        $fields = ['experience', 'job_type', 'qualification_level', 'salary_range', 'shift'];
+        $fields = ['experience', 'job_type', 'qualification_level', 'salary_range', 'shift', 'gender'];
         foreach($fields as $field){
             if(!empty($request->$field)){
                 $jobposts = $jobposts->where($field, $request->$field);
@@ -58,7 +52,6 @@ class CommonController extends Controller
     {
         $candidates = Candidate::query()->with(['CandidateSkills'])
                                         ->where('full_name', 'LIKE', "%{$keyword}%") 
-                                        // ->orWhere('city', 'LIKE', "%{$keyword}%") 
                                         ->get();
         $user = User::find(Auth::user()->id);
         $company = Company::where('user_id', $user->id)->first();

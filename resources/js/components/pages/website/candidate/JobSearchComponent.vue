@@ -80,8 +80,8 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="">Occupation</label>
-                                        <input type="text" placeholder="Search by Occupation" name="" id="" class="form-control" />
+                                        <label for="">Occupation / Job Title</label>
+                                        <input type="text" v-model="record.title" placeholder="Search by Occupation" name="" id="" class="form-control" />
                                     </div>
                                     <div class="col-12 conditioncheck">
                                         <input name='gender' value="Male" v-model="record.gender" type="radio"
@@ -108,7 +108,7 @@
                 <!---- ------------------------------>
                 <div class="product-search-box">
                     <label class="search-box-h">
-                        Keyword Search
+                        Company Search
                     </label>
                     <div class="col-md-12 search-container">
                         <form>
@@ -124,29 +124,9 @@
                         </form>
                     </div>
                 </div>
-                <div class="candidate border-0">
+                <div class="candidate border-0" v-if="keywordSearchShow == false">
                     <!-- Job List Toolbar Start -->
                     <div>
-                        <!-- <div class="job-list-toolbar">
-                            <ul class="job-pagination pagination-center ">
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                            aria-hidden="true"></i> Previous 20</a></li>
-                                <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                            aria-hidden="true"></i> Next 20</a></li>
-                            </ul>
-                            <div class="job-filter">
-                                <select class="job-select">
-                                    <option>Search order by</option>
-                                    <option>Top Rated</option>
-                                    <option>Most Popular</option>
-                                </select>
-                            </div>
-                        </div> -->
-                        <!-- Job List Toolbar End -->
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap p-0">
                             <div class="job-list m-0 mb-3" v-if="index < searchData.length" v-for="(item, index) in jobToShow"
@@ -215,29 +195,88 @@
 
                                 </div>
                             </div>
-                            <!-- </div> -->
+                            <div v-if="this.showError == true">Data Not Found</div>
                         </div>
                     </div>
                     <div class="text-center" v-if="searchData.length">
                         <button class="load-more-btn mx-auto" v-if="searchData.length != jobToShow && totalJobs > jobToShow " @click="jobToShow += 2">Load more</button>
                     </div>
                 </div>
+                <div class="job-list-wrap mt-3 p-0" v-if="keywordSearchShow == true">
+                    <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
+                    <!-- Job List Start -->
+                    <div class="job-list m-0 mb-3"  v-if="index < searchData.length" v-for="(item, index) in companiesToShow"
+                        :key="index">
+                        <div class="company-logo col-auto py-2">
+                            <img :src="'/storage/images/companies/'+searchData[index].logo" alt="Company Logo"/>
+                            <span class="company-h line-clamp-1">{{searchData[index].company_name}}</span>
+                        </div>
+                        <div class="job-list-content col">
+                            <div class="job-header">
+                                <h6 class="job-title mb-0">{{searchData[index].company_name}}</h6>
+                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i>
+                                             <i class="fa fa-star" aria-hidden="true"></i> -->
+
+                                <div class="d-flex align-items-center">
+                                    <span class="job-post-date">20 hours ago </span>
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+
+                            <p class="job-description">{{searchData[index].description}}</p>
+                            <div class="job-content-wrap">
+                                <div class="job-dynamic-values">
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                            <span>{{searchData[index].created_at | moment("YYYY-MM-DD")}}</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/experience-job.svg" alt="">
+                                            <span>{{searchData[index].experience}}</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/money-job.svg" alt="">
+                                            <span>{{searchData[index].salary_range}}</span>
+                                        </li>
+                                        <li>
+                                            <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
+                                                alt="img">
+                                            <span>{{searchData[index].location}}</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                            <span>{{searchData[index].shift}}</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/switch-job.svg" alt="">
+                                            <span>{{searchData[index].job_type}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="job-list-fav m-0">
+                                    <li>
+                                        <router-link class="job-view-btn" data-toggle="collapse"
+                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].id } }">View</router-link>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div v-if="this.showError == true">Data Not Found</div>
+                    <div class="text-center" v-if="searchData.length">
+                        <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow && totalCompanies > companiesToShow" @click="companiesToShow += 2">Load more</button>
+                    </div>
+                </div>
                 <!-- Job List Wrap Start -->
-                <!-- Pagination Start -->
-                <!-- <div class="bottom-pagination">
-                    <ul class="job-pagination pagination-center ">
-                        <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                    aria-hidden="true"></i> Previous 20</a></li>
-                        <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                        <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                    aria-hidden="true"></i> Next 20</a></li>
-                    </ul>
-                    <div class="job-search-count my-3">1 to 20 Results (out of 10,000 results in total)</div>
-                </div> -->
-                <!-- Pagination End -->
             </div>
             <div class="common-sidebar">
                 <br><br>
@@ -510,8 +549,6 @@
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CandidateNavbar from '../partials/CandidateNavbar.vue';
-    import pagination from 'laravel-vue-pagination'
-    import Multiselect from 'vue-multiselect'
     export default {
         data() {
             return {
@@ -524,19 +561,15 @@
                     gender: '',
                     location: '',
                     keyword: '',
-                    // skills: '',
+                    title: '',
                 },
-                // options: [
-                //     { name: 'Javascript', language: 'JavaScript' },
-                //     { name: 'Adonis', language: 'Adonis' },
-                //     { name: 'Rails', language: 'Ruby' },
-                //     { name: 'Sinatra', language: 'Ruby' },
-                //     { name: 'Laravel', language: 'PHP' },
-                //     { name: 'Phoenix', language: 'Elixir' }
-                // ],
                 searchData: [],
                 totalJobs: 0,
-                jobToShow: 2
+                jobToShow: 2,
+                companiesToShow: 2,
+                totalCompanies: 0,
+                showError: false,
+                keywordSearchShow: false,
             }
         },
         mounted() {
@@ -555,8 +588,6 @@
         components: {
             WebsiteNavbar,
             CandidateNavbar,
-            Multiselect,
-            pagination,
         },
         methods: {
             search() {
@@ -565,24 +596,23 @@
                     this.searchData = []
                     this.searchData = response.data
                     this.totalJobs = this.searchData.length
+                    if(response.data.length == 0){
+                        this.showError = true
+                    }
                 });
             },
             keywordSearch() {
-                axios.get('/job-keyword-search/'+this.record.keyword)
+                axios.get('/companies-keyword-search/'+this.record.keyword)
                 .then((response) => {
                     this.searchData = []
                     this.searchData = response.data
                     this.totalJobs = this.searchData.length
+                    this.keywordSearchShow = true
+                    if(response.data.length == 0){
+                        this.showError = true
+                    }
                 });
             },
-            // addSkill (newTag) {
-            //     const tag = {
-            //         name: newTag,
-            //         code: newTag
-            //     }
-            //     this.options.push(tag)
-            //     this.record.skills.push(tag)
-            // },
             clearSearch() {
                 this.record = {
                     experience: '',
@@ -596,8 +626,10 @@
                     skills: '',
                 };
                 this.searchData = [],
-                    this.totalJobs = 0,
-                    this.jobToShow = 2
+                this.totalJobs = 0,
+                this.jobToShow = 2,
+                this.showError = false
+                this.keywordSearchShow = false
             }
         },
     };

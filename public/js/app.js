@@ -10862,10 +10862,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
-/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
-/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
-/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_4__);
 //
 //
 //
@@ -11374,8 +11370,45 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -11390,20 +11423,16 @@ __webpack_require__.r(__webpack_exports__);
         qualification_level: '',
         gender: '',
         location: '',
-        keyword: '' // skills: '',
-
+        keyword: '',
+        title: ''
       },
-      // options: [
-      //     { name: 'Javascript', language: 'JavaScript' },
-      //     { name: 'Adonis', language: 'Adonis' },
-      //     { name: 'Rails', language: 'Ruby' },
-      //     { name: 'Sinatra', language: 'Ruby' },
-      //     { name: 'Laravel', language: 'PHP' },
-      //     { name: 'Phoenix', language: 'Elixir' }
-      // ],
       searchData: [],
       totalJobs: 0,
-      jobToShow: 2
+      jobToShow: 2,
+      companiesToShow: 2,
+      totalCompanies: 0,
+      showError: false,
+      keywordSearchShow: false
     };
   },
   mounted: function mounted() {
@@ -11421,9 +11450,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Multiselect: (vue_multiselect__WEBPACK_IMPORTED_MODULE_4___default()),
-    pagination: (laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default())
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   methods: {
     search: function search() {
@@ -11433,25 +11460,26 @@ __webpack_require__.r(__webpack_exports__);
         _this.searchData = [];
         _this.searchData = response.data;
         _this.totalJobs = _this.searchData.length;
+
+        if (response.data.length == 0) {
+          _this.showError = true;
+        }
       });
     },
     keywordSearch: function keywordSearch() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/job-keyword-search/' + this.record.keyword).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/companies-keyword-search/' + this.record.keyword).then(function (response) {
         _this2.searchData = [];
         _this2.searchData = response.data;
         _this2.totalJobs = _this2.searchData.length;
+        _this2.keywordSearchShow = true;
+
+        if (response.data.length == 0) {
+          _this2.showError = true;
+        }
       });
     },
-    // addSkill (newTag) {
-    //     const tag = {
-    //         name: newTag,
-    //         code: newTag
-    //     }
-    //     this.options.push(tag)
-    //     this.record.skills.push(tag)
-    // },
     clearSearch: function clearSearch() {
       this.record = {
         experience: '',
@@ -11464,7 +11492,8 @@ __webpack_require__.r(__webpack_exports__);
         keyword: '',
         skills: ''
       };
-      this.searchData = [], this.totalJobs = 0, this.jobToShow = 2;
+      this.searchData = [], this.totalJobs = 0, this.jobToShow = 2, this.showError = false;
+      this.keywordSearchShow = false;
     }
   }
 });
@@ -46573,7 +46602,38 @@ var render = function () {
                       ),
                     ]),
                     _vm._v(" "),
-                    _vm._m(0),
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Occupation / Job Title"),
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.record.title,
+                            expression: "record.title",
+                          },
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          placeholder: "Search by Occupation",
+                          name: "",
+                          id: "",
+                        },
+                        domProps: { value: _vm.record.title },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.record, "title", $event.target.value)
+                          },
+                        },
+                      }),
+                    ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-12 conditioncheck" }, [
                       _c("input", {
@@ -46700,12 +46760,12 @@ var render = function () {
           _vm._v(" "),
           _c("div", { staticClass: "product-search-box" }, [
             _c("label", { staticClass: "search-box-h" }, [
-              _vm._v("\n                    Keyword Search\n                "),
+              _vm._v("\n                    Company Search\n                "),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-md-12 search-container" }, [
               _c("form", [
-                _vm._m(1),
+                _vm._m(0),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -46768,220 +46828,509 @@ var render = function () {
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "candidate border-0" }, [
-            _c("div", [
-              _c(
-                "div",
-                { staticClass: "job-list-wrap p-0" },
-                _vm._l(_vm.jobToShow, function (item, index) {
-                  return index < _vm.searchData.length
-                    ? _c(
-                        "div",
-                        { key: index, staticClass: "job-list m-0 mb-3" },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "company-logo col-auto py-2" },
-                            [
-                              _c("img", {
-                                attrs: {
-                                  src:
-                                    "/storage/images/companies/" +
-                                    _vm.searchData[index].company.logo,
-                                  alt: "Company Logo",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                { staticClass: "company-h line-clamp-1" },
-                                [
-                                  _vm._v(
-                                    _vm._s(
-                                      _vm.searchData[index].company.company_name
-                                    )
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "job-list-content col" }, [
-                            _c("div", { staticClass: "job-header" }, [
-                              _c("h6", { staticClass: "job-title mb-0" }, [
-                                _vm._v(_vm._s(_vm.searchData[index].title)),
-                              ]),
-                              _vm._v(" "),
-                              _vm._m(2, true),
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "job-description" }, [
-                              _vm._v(_vm._s(_vm.searchData[index].description)),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "job-content-wrap" }, [
-                              _c("div", { staticClass: "job-dynamic-values" }, [
-                                _c("ul", [
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/calendar-job.svg",
-                                        alt: "img",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("moment")(
-                                            _vm.searchData[index].created_at,
-                                            "YYYY-MM-DD"
-                                          )
-                                        )
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/experience-job.svg",
-                                        alt: "",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(_vm.searchData[index].experience)
-                                      ),
-                                    ]),
-                                  ]),
-                                ]),
-                                _vm._v(" "),
-                                _c("ul", [
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/money-job.svg",
-                                        alt: "",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm.searchData[index].salary_range
-                                        )
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("li", [
-                                    _c("img", {
-                                      staticStyle: { margin: "0px 3px" },
-                                      attrs: {
-                                        height: "16px",
-                                        width: "10px",
-                                        src: "/website/assets/images/pin.svg",
-                                        alt: "img",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(_vm.searchData[index].location)
-                                      ),
-                                    ]),
-                                  ]),
-                                ]),
-                                _vm._v(" "),
-                                _c("ul", [
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/suitcase-job.svg",
-                                        alt: "",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(_vm.searchData[index].shift)
-                                      ),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("li", [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "/website/assets/images/switch-job.svg",
-                                        alt: "",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(_vm.searchData[index].job_type)
-                                      ),
-                                    ]),
-                                  ]),
-                                ]),
-                              ]),
-                              _vm._v(" "),
-                              _c("ul", { staticClass: "job-list-fav m-0" }, [
+          _vm.keywordSearchShow == false
+            ? _c("div", { staticClass: "candidate border-0" }, [
+                _c("div", [
+                  _c(
+                    "div",
+                    { staticClass: "job-list-wrap p-0" },
+                    [
+                      _vm._l(_vm.jobToShow, function (item, index) {
+                        return index < _vm.searchData.length
+                          ? _c(
+                              "div",
+                              { key: index, staticClass: "job-list m-0 mb-3" },
+                              [
                                 _c(
-                                  "li",
+                                  "div",
+                                  { staticClass: "company-logo col-auto py-2" },
                                   [
+                                    _c("img", {
+                                      attrs: {
+                                        src:
+                                          "/storage/images/companies/" +
+                                          _vm.searchData[index].company.logo,
+                                        alt: "Company Logo",
+                                      },
+                                    }),
+                                    _vm._v(" "),
                                     _c(
-                                      "router-link",
-                                      {
-                                        staticClass: "job-view-btn",
-                                        attrs: {
-                                          "data-toggle": "collapse",
-                                          to: {
-                                            name: "JobDetail",
-                                            params: {
-                                              id: _vm.searchData[index].id,
+                                      "span",
+                                      { staticClass: "company-h line-clamp-1" },
+                                      [
+                                        _vm._v(
+                                          _vm._s(
+                                            _vm.searchData[index].company
+                                              .company_name
+                                          )
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "job-list-content col" },
+                                  [
+                                    _c("div", { staticClass: "job-header" }, [
+                                      _c(
+                                        "h6",
+                                        { staticClass: "job-title mb-0" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(_vm.searchData[index].title)
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(1, true),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "p",
+                                      { staticClass: "job-description" },
+                                      [
+                                        _vm._v(
+                                          _vm._s(
+                                            _vm.searchData[index].description
+                                          )
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "job-content-wrap" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "job-dynamic-values" },
+                                          [
+                                            _c("ul", [
+                                              _c("li", [
+                                                _c("img", {
+                                                  attrs: {
+                                                    src: "/website/assets/images/calendar-job.svg",
+                                                    alt: "img",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("span", [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm._f("moment")(
+                                                        _vm.searchData[index]
+                                                          .created_at,
+                                                        "YYYY-MM-DD"
+                                                      )
+                                                    )
+                                                  ),
+                                                ]),
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("li", [
+                                                _c("img", {
+                                                  attrs: {
+                                                    src: "/website/assets/images/experience-job.svg",
+                                                    alt: "",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("span", [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.searchData[index]
+                                                        .experience
+                                                    )
+                                                  ),
+                                                ]),
+                                              ]),
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("ul", [
+                                              _c("li", [
+                                                _c("img", {
+                                                  attrs: {
+                                                    src: "/website/assets/images/money-job.svg",
+                                                    alt: "",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("span", [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.searchData[index]
+                                                        .salary_range
+                                                    )
+                                                  ),
+                                                ]),
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("li", [
+                                                _c("img", {
+                                                  staticStyle: {
+                                                    margin: "0px 3px",
+                                                  },
+                                                  attrs: {
+                                                    height: "16px",
+                                                    width: "10px",
+                                                    src: "/website/assets/images/pin.svg",
+                                                    alt: "img",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("span", [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.searchData[index]
+                                                        .location
+                                                    )
+                                                  ),
+                                                ]),
+                                              ]),
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("ul", [
+                                              _c("li", [
+                                                _c("img", {
+                                                  attrs: {
+                                                    src: "/website/assets/images/suitcase-job.svg",
+                                                    alt: "",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("span", [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.searchData[index]
+                                                        .shift
+                                                    )
+                                                  ),
+                                                ]),
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("li", [
+                                                _c("img", {
+                                                  attrs: {
+                                                    src: "/website/assets/images/switch-job.svg",
+                                                    alt: "",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("span", [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.searchData[index]
+                                                        .job_type
+                                                    )
+                                                  ),
+                                                ]),
+                                              ]),
+                                            ]),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "ul",
+                                          { staticClass: "job-list-fav m-0" },
+                                          [
+                                            _c(
+                                              "li",
+                                              [
+                                                _c(
+                                                  "router-link",
+                                                  {
+                                                    staticClass: "job-view-btn",
+                                                    attrs: {
+                                                      "data-toggle": "collapse",
+                                                      to: {
+                                                        name: "JobDetail",
+                                                        params: {
+                                                          id: _vm.searchData[
+                                                            index
+                                                          ].id,
+                                                        },
+                                                      },
+                                                    },
+                                                  },
+                                                  [_vm._v("View")]
+                                                ),
+                                              ],
+                                              1
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            )
+                          : _vm._e()
+                      }),
+                      _vm._v(" "),
+                      this.showError == true
+                        ? _c("div", [_vm._v("Data Not Found")])
+                        : _vm._e(),
+                    ],
+                    2
+                  ),
+                ]),
+                _vm._v(" "),
+                _vm.searchData.length
+                  ? _c("div", { staticClass: "text-center" }, [
+                      _vm.searchData.length != _vm.jobToShow &&
+                      _vm.totalJobs > _vm.jobToShow
+                        ? _c(
+                            "button",
+                            {
+                              staticClass: "load-more-btn mx-auto",
+                              on: {
+                                click: function ($event) {
+                                  _vm.jobToShow += 2
+                                },
+                              },
+                            },
+                            [_vm._v("Load more")]
+                          )
+                        : _vm._e(),
+                    ])
+                  : _vm._e(),
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.keywordSearchShow == true
+            ? _c(
+                "div",
+                { staticClass: "job-list-wrap mt-3 p-0" },
+                [
+                  _vm._l(_vm.companiesToShow, function (item, index) {
+                    return index < _vm.searchData.length
+                      ? _c(
+                          "div",
+                          { key: index, staticClass: "job-list m-0 mb-3" },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "company-logo col-auto py-2" },
+                              [
+                                _c("img", {
+                                  attrs: {
+                                    src:
+                                      "/storage/images/companies/" +
+                                      _vm.searchData[index].logo,
+                                    alt: "Company Logo",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "company-h line-clamp-1" },
+                                  [
+                                    _vm._v(
+                                      _vm._s(_vm.searchData[index].company_name)
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "job-list-content col" }, [
+                              _c("div", { staticClass: "job-header" }, [
+                                _c("h6", { staticClass: "job-title mb-0" }, [
+                                  _vm._v(
+                                    _vm._s(_vm.searchData[index].company_name)
+                                  ),
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(2, true),
+                              ]),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "job-description" }, [
+                                _vm._v(
+                                  _vm._s(_vm.searchData[index].description)
+                                ),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "job-content-wrap" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "job-dynamic-values" },
+                                  [
+                                    _c("ul", [
+                                      _c("li", [
+                                        _c("img", {
+                                          attrs: {
+                                            src: "/website/assets/images/calendar-job.svg",
+                                            alt: "img",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm._f("moment")(
+                                                _vm.searchData[index]
+                                                  .created_at,
+                                                "YYYY-MM-DD"
+                                              )
+                                            )
+                                          ),
+                                        ]),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("li", [
+                                        _c("img", {
+                                          attrs: {
+                                            src: "/website/assets/images/experience-job.svg",
+                                            alt: "",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.searchData[index].experience
+                                            )
+                                          ),
+                                        ]),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("ul", [
+                                      _c("li", [
+                                        _c("img", {
+                                          attrs: {
+                                            src: "/website/assets/images/money-job.svg",
+                                            alt: "",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.searchData[index].salary_range
+                                            )
+                                          ),
+                                        ]),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("li", [
+                                        _c("img", {
+                                          staticStyle: { margin: "0px 3px" },
+                                          attrs: {
+                                            height: "16px",
+                                            width: "10px",
+                                            src: "/website/assets/images/pin.svg",
+                                            alt: "img",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.searchData[index].location
+                                            )
+                                          ),
+                                        ]),
+                                      ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("ul", [
+                                      _c("li", [
+                                        _c("img", {
+                                          attrs: {
+                                            src: "/website/assets/images/suitcase-job.svg",
+                                            alt: "",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", [
+                                          _vm._v(
+                                            _vm._s(_vm.searchData[index].shift)
+                                          ),
+                                        ]),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("li", [
+                                        _c("img", {
+                                          attrs: {
+                                            src: "/website/assets/images/switch-job.svg",
+                                            alt: "",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.searchData[index].job_type
+                                            )
+                                          ),
+                                        ]),
+                                      ]),
+                                    ]),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("ul", { staticClass: "job-list-fav m-0" }, [
+                                  _c(
+                                    "li",
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "job-view-btn",
+                                          attrs: {
+                                            "data-toggle": "collapse",
+                                            to: {
+                                              name: "CompanyDetail",
+                                              params: {
+                                                id: _vm.searchData[index].id,
+                                              },
                                             },
                                           },
                                         },
-                                      },
-                                      [_vm._v("View")]
-                                    ),
-                                  ],
-                                  1
-                                ),
+                                        [_vm._v("View")]
+                                      ),
+                                    ],
+                                    1
+                                  ),
+                                ]),
                               ]),
                             ]),
-                          ]),
-                        ]
-                      )
-                    : _vm._e()
-                }),
-                0
-              ),
-            ]),
-            _vm._v(" "),
-            _vm.searchData.length
-              ? _c("div", { staticClass: "text-center" }, [
-                  _vm.searchData.length != _vm.jobToShow &&
-                  _vm.totalJobs > _vm.jobToShow
-                    ? _c(
-                        "button",
-                        {
-                          staticClass: "load-more-btn mx-auto",
-                          on: {
-                            click: function ($event) {
-                              _vm.jobToShow += 2
-                            },
-                          },
-                        },
-                        [_vm._v("Load more")]
-                      )
+                          ]
+                        )
+                      : _vm._e()
+                  }),
+                  _vm._v(" "),
+                  this.showError == true
+                    ? _c("div", [_vm._v("Data Not Found")])
                     : _vm._e(),
-                ])
-              : _vm._e(),
-          ]),
+                  _vm._v(" "),
+                  _vm.searchData.length
+                    ? _c("div", { staticClass: "text-center" }, [
+                        _vm.searchData.length != _vm.companiesToShow &&
+                        _vm.totalCompanies > _vm.companiesToShow
+                          ? _c(
+                              "button",
+                              {
+                                staticClass: "load-more-btn mx-auto",
+                                on: {
+                                  click: function ($event) {
+                                    _vm.companiesToShow += 2
+                                  },
+                                },
+                              },
+                              [_vm._v("Load more")]
+                            )
+                          : _vm._e(),
+                      ])
+                    : _vm._e(),
+                ],
+                2
+              )
+            : _vm._e(),
         ]),
         _vm._v(" "),
         _vm._m(3),
@@ -46995,28 +47344,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6" }, [
-      _c("label", { attrs: { for: "" } }, [_vm._v("Occupation")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: {
-          type: "text",
-          placeholder: "Search by Occupation",
-          name: "",
-          id: "",
-        },
-      }),
+    return _c("div", [
+      _c("label", { staticClass: "keyword-input-title" }, [
+        _vm._v("Keyword Search"),
+      ]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("label", { staticClass: "keyword-input-title" }, [
-        _vm._v("Keyword Search"),
-      ]),
+    return _c("div", { staticClass: "d-flex align-items-center" }, [
+      _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
+      _vm._v(" "),
+      _c("i", { staticClass: "far fa-heart" }),
     ])
   },
   function () {
