@@ -598,6 +598,8 @@
                     this.totalJobs = this.searchData.length
                     if(response.data.length == 0){
                         this.showError = true
+                    }else{
+                        this.showError = false
                     }
                 });
             },
@@ -610,6 +612,8 @@
                     this.keywordSearchShow = true
                     if(response.data.length == 0){
                         this.showError = true
+                    }else{
+                        this.showError = false
                     }
                 });
             },

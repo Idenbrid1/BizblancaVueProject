@@ -55,6 +55,7 @@ class CommonController extends Controller
                                         ->get();
         $user = User::find(Auth::user()->id);
         $company = Company::where('user_id', $user->id)->first();
+        $candidate_with_wishlist = [];
         foreach($candidates as $candidate)
         {
             if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
