@@ -16318,7 +16318,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    font-family: 'Red Hat Display', sans-serif;\n}\n.form-field {\n    display: flex;\n    flex-wrap: wrap;\n    margin-bottom: 1.5em;\n}\n.companyForm {\n    background-color: #fff;\n    border-radius: 5px;\n    border: 1px solid rgb(201, 201, 201);\n    border-top: 5px solid #081351;\n    padding: 25px;\n}\n.Companycustomtoggle .toggle-off,\n.Companycustomtoggle .toggle-on {\n    padding-right: 0px;\n    padding-left: 0px;\n}\n\n/*  */\n.companycustomLabel {\n    font-size: 16px;\n    font-weight: bold;\n    align-self: center;\n    flex-shrink: 0;\n    flex-basis: 100%;\n    width: 100%;\n    text-align: right;\n    margin-right: 20px;\n}\n@media (min-width: 768px) {\n.companycustomLabel {\n        flex-basis: 150px;\n        width: 150px;\n}\n}\n.CompanycustomInput {\n    border: 1px solid #d9dbdd;\n    flex-grow: 1;\n    font-size: 1.1rem;\n    font-weight: 300;\n    border-radius: 5px;\n    padding: 10px;\n}\n\n/*  */\n.actionUpdateBtn {\n    background-color: #081351;\n}\n.actionBackBtn {\n    background-color: #303030;\n}\n.actionUpdateBtn,\n.actionBackBtn {\n    color: white;\n    width: 22.5%;\n    border: none;\n    padding: 8.8px;\n    border-radius: 5px;\n}\n.companyTitle {\n    display: flex;\n    align-items: center;\n}\n.companyTitle>hr {\n    height: 2px;\n    width: 100%;\n    max-width: 36%;\n    background-color: #081351;\n}\n.companytitleText {\n    width: -webkit-max-content;\n    width: -moz-max-content;\n    width: max-content;\n    font-size: 30px;\n    color: #081351;\n    font-weight: bold;\n}\n.company-setting-p {\n    font-size: 16px;\n    color: #757575;\n    margin-bottom: 1.5rem;\n}\n@media screen and (min-width: 786px) {\n.companysetting {\n        max-width: 750px;\n}\n}\n@media screen and (max-width:786px) {\n.companycustomLabel {\n        text-align: left;\n        font-size: 14px;\n        margin-bottom: 5px;\n}\n.actionUpdateBtn,\n    .actionBackBtn {\n        width: 42.5%;\n}\n.CompanycustomInput {\n        font-size: 12px;\n        padding: 5px 10px;\n}\n.comapnytitleText {\n        font-size: 18px;\n}\n.companyTitle>hr {\n        max-width: 28%;\n}\n}\n.toggle.ios,\n.toggle-on.ios,\n.toggle-off.ios {\n    border-radius: 20px;\n}\n.toggle.ios .toggle-handle {\n    border-radius: 20px;\n}\n.toggle.android {\n    border-radius: 0px;\n}\n.toggle.android .toggle-handle {\n    border-radius: 0px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    font-family: 'Red Hat Display', sans-serif;\n}\n.form-field {\n    display: flex;\n    flex-wrap: wrap;\n    margin-bottom: 1.5em;\n}\n.company-form {\n    background-color: #fff;\n    border-radius: 5px;\n    border: 1px solid rgb(201, 201, 201);\n    border-top: 5px solid #081351;\n    padding: 25px;\n}\n.company-custom-toggle .toggle-off,\n.company-custom-toggle .toggle-on {\n    padding-right: 0px;\n    padding-left: 0px;\n}\n\n/*  */\n.company-custom-label {\n    font-size: 16px;\n    font-weight: bold;\n    align-self: center;\n    flex-shrink: 0;\n    flex-basis: 100%;\n    width: 100%;\n    text-align: right;\n    margin-right: 20px;\n}\n@media (min-width: 768px) {\n.company-custom-label {\n        flex-basis: 150px;\n        width: 150px;\n}\n}\n.company-custom-input {\n    border: 1px solid #d9dbdd;\n    flex-grow: 1;\n    font-size: 1.1rem;\n    font-weight: 300;\n    border-radius: 5px;\n    padding: 10px;\n}\n\n/*  */\n.action-update-btn {\n    background-color: #081351;\n}\n.actionBackBtn {\n    background-color: #303030;\n}\n.action-update-btn,\n.actionBackBtn {\n    color: white;\n    width: 22.5%;\n    border: none;\n    padding: 8.8px;\n    border-radius: 5px;\n}\n.company-title {\n    display: flex;\n    align-items: center;\n}\n.company-title>hr {\n    height: 2px;\n    width: 100%;\n    max-width: 36%;\n    background-color: #081351;\n}\n.company-title-text {\n    width: -webkit-max-content;\n    width: -moz-max-content;\n    width: max-content;\n    font-size: 30px;\n    color: #081351;\n    font-weight: bold;\n}\n.company-setting-p {\n    font-size: 16px;\n    color: #757575;\n    margin-bottom: 1.5rem;\n}\n@media screen and (min-width: 786px) {\n.company-setting {\n        max-width: 750px;\n}\n}\n@media screen and (max-width:786px) {\n.company-custom-label {\n        text-align: left;\n        font-size: 14px;\n        margin-bottom: 5px;\n}\n.action-update-btn,\n    .actionBackBtn {\n        width: 42.5%;\n}\n.company-custom-input {\n        font-size: 12px;\n        padding: 10px 10px;\n}\n.comapnytitleText {\n        font-size: 18px;\n}\n.company-title>hr {\n        max-width: 28%;\n}\n}\n.toggle.ios,\n.toggle-on.ios,\n.toggle-off.ios {\n    border-radius: 20px;\n}\n.toggle.ios .toggle-handle {\n    border-radius: 20px;\n}\n.toggle.android {\n    border-radius: 0px;\n}\n.toggle.android .toggle-handle {\n    border-radius: 0px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16366,7 +16366,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    font-family: 'Red Hat Display', sans-serif;\n}\n.form-field {\n    display: flex;\n    flex-wrap: wrap;\n    margin-bottom: 1.5em;\n}\n.companyForm {\n    background-color: #fff;\n    border-radius: 5px;\n    border: 1px solid rgb(201, 201, 201);\n    border-top: 5px solid #081351;\n    padding: 25px;\n}\n.Companycustomtoggle .toggle-off,\n.Companycustomtoggle .toggle-on {\n    padding-right: 0px;\n    padding-left: 0px;\n}\n\n/*  */\n.companycustomLabel {\n    font-size: 16px;\n    font-weight: bold;\n    align-self: center;\n    flex-shrink: 0;\n    flex-basis: 100%;\n    width: 100%;\n    text-align: right;\n    margin-right: 20px;\n}\n@media (min-width: 768px) {\n.companycustomLabel {\n        flex-basis: 150px;\n        width: 150px;\n}\n}\n.CompanycustomInput {\n    border: 1px solid #d9dbdd;\n    flex-grow: 1;\n    font-size: 1.1rem;\n    font-weight: 300;\n    border-radius: 5px;\n    padding: 10px;\n}\n\n/*  */\n.actionUpdateBtn {\n    background-color: #081351;\n}\n.actionBackBtn {\n    background-color: #303030;\n}\n.actionUpdateBtn,\n.actionBackBtn {\n    color: white;\n    width: 22.5%;\n    border: none;\n    padding: 8.8px;\n    border-radius: 5px;\n}\n.companyTitle {\n    display: flex;\n    align-items: center;\n}\n.companyTitle>hr {\n    height: 2px;\n    width: 100%;\n    max-width: 36%;\n    background-color: #081351;\n}\n.companytitleText {\n    width: -webkit-max-content;\n    width: -moz-max-content;\n    width: max-content;\n    font-size: 30px;\n    color: #081351;\n    font-weight: bold;\n}\n.company-setting-p {\n    font-size: 16px;\n    color: #757575;\n    margin-bottom: 1.5rem;\n}\n@media screen and (min-width: 786px) {\n.companysetting {\n        max-width: 750px;\n}\n}\n@media screen and (max-width:786px) {\n.companycustomLabel {\n        text-align: left;\n        font-size: 14px;\n        margin-bottom: 5px;\n}\n.actionUpdateBtn,\n    .actionBackBtn {\n        width: 42.5%;\n}\n.CompanycustomInput {\n        font-size: 12px;\n        padding: 5px 10px;\n}\n.comapnytitleText {\n        font-size: 18px;\n}\n.companyTitle>hr {\n        max-width: 28%;\n}\n}\n.toggle.ios,\n.toggle-on.ios,\n.toggle-off.ios {\n    border-radius: 20px;\n}\n.toggle.ios .toggle-handle {\n    border-radius: 20px;\n}\n.toggle.android {\n    border-radius: 0px;\n}\n.toggle.android .toggle-handle {\n    border-radius: 0px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    font-family: 'Red Hat Display', sans-serif;\n}\n.form-field {\n    display: flex;\n    flex-wrap: wrap;\n    margin-bottom: 1.5em;\n}\n.company-form {\n    background-color: #fff;\n    border-radius: 5px;\n    border: 1px solid rgb(201, 201, 201);\n    border-top: 5px solid #081351;\n    padding: 25px;\n}\n.company-custom-toggle .toggle-off,\n.company-custom-toggle .toggle-on {\n    padding-right: 0px;\n    padding-left: 0px;\n}\n\n/*  */\n.company-custom-label {\n    font-size: 16px;\n    font-weight: bold;\n    align-self: center;\n    flex-shrink: 0;\n    flex-basis: 100%;\n    width: 100%;\n    text-align: right;\n    margin-right: 20px;\n}\n@media (min-width: 768px) {\n.company-custom-label {\n        flex-basis: 150px;\n        width: 150px;\n}\n}\n.company-custom-input {\n    border: 1px solid #d9dbdd;\n    flex-grow: 1;\n    font-size: 1.1rem;\n    font-weight: 300;\n    border-radius: 5px;\n    padding: 10px;\n}\n\n/*  */\n.action-update-btn {\n    background-color: #081351;\n}\n.actionBackBtn {\n    background-color: #303030;\n}\n.action-update-btn,\n.actionBackBtn {\n    color: white;\n    width: 22.5%;\n    border: none;\n    padding: 8.8px;\n    border-radius: 5px;\n}\n.company-title {\n    display: flex;\n    align-items: center;\n}\n.company-title>hr {\n    height: 2px;\n    width: 100%;\n    max-width: 36%;\n    background-color: #081351;\n}\n.company-title-text {\n    width: -webkit-max-content;\n    width: -moz-max-content;\n    width: max-content;\n    font-size: 30px;\n    color: #081351;\n    font-weight: bold;\n}\n.company-setting-p {\n    font-size: 16px;\n    color: #757575;\n    margin-bottom: 1.5rem;\n}\n@media screen and (min-width: 786px) {\n.company-setting {\n        max-width: 750px;\n}\n}\n@media screen and (max-width:786px) {\n.company-custom-label {\n        text-align: left;\n        font-size: 14px;\n        margin-bottom: 5px;\n}\n.action-update-btn,\n    .actionBackBtn {\n        width: 42.5%;\n}\n.company-custom-input {\n        font-size: 12px;\n        padding: 10px 10px;\n}\n.comapnytitleText {\n        font-size: 18px;\n}\n.company-title>hr {\n        max-width: 28%;\n}\n}\n.toggle.ios,\n.toggle-on.ios,\n.toggle-off.ios {\n    border-radius: 20px;\n}\n.toggle.ios .toggle-handle {\n    border-radius: 20px;\n}\n.toggle.android {\n    border-radius: 0px;\n}\n.toggle.android .toggle-handle {\n    border-radius: 0px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -34326,11 +34326,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container companysetting py-5" }, [
-      _c("div", { staticClass: "companyTitle mb-3" }, [
+    return _c("div", { staticClass: "container company-setting py-5" }, [
+      _c("div", { staticClass: "company-title mb-3" }, [
         _c("hr", { staticClass: "ml-0" }),
         _vm._v(" "),
-        _c("div", { staticClass: "companytitleText" }, [_vm._v("Settings")]),
+        _c("div", { staticClass: "company-title-text" }, [_vm._v("Settings")]),
         _vm._v(" "),
         _c("hr", { staticClass: "mr-0" }),
       ]),
@@ -34341,20 +34341,20 @@ var staticRenderFns = [
         ),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "companyForm" }, [
+      _c("div", { staticClass: "company-form" }, [
         _c("form", [
           _c("div", { staticClass: "form-field" }, [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "email" },
               },
               [_vm._v("Email:")]
             ),
             _vm._v(" "),
             _c("input", {
-              staticClass: "CompanycustomInput",
+              staticClass: "company-custom-input",
               attrs: {
                 id: "email",
                 required: "",
@@ -34368,14 +34368,14 @@ var staticRenderFns = [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "password" },
               },
               [_vm._v("Password:")]
             ),
             _vm._v(" "),
             _c("input", {
-              staticClass: "CompanycustomInput",
+              staticClass: "company-custom-input",
               attrs: {
                 name: "password",
                 type: "password",
@@ -34388,14 +34388,14 @@ var staticRenderFns = [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "newpassword" },
               },
               [_vm._v("New Password:")]
             ),
             _vm._v(" "),
             _c("input", {
-              staticClass: "CompanycustomInput",
+              staticClass: "company-custom-input",
               attrs: {
                 name: "newpassword",
                 type: "password",
@@ -34408,14 +34408,14 @@ var staticRenderFns = [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "confirmpassword" },
               },
               [_vm._v("Confirm\n                        Password:")]
             ),
             _vm._v(" "),
             _c("input", {
-              staticClass: "CompanycustomInput",
+              staticClass: "company-custom-input",
               attrs: {
                 name: "confirmpassword",
                 type: "password",
@@ -34424,11 +34424,11 @@ var staticRenderFns = [
             }),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-field Companycustomtoggle" }, [
+          _c("div", { staticClass: "form-field company-custom-toggle" }, [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "account" },
               },
               [_vm._v("Activate Account:")]
@@ -34448,7 +34448,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form-group text-center m-0" }, [
-            _c("button", { staticClass: "actionUpdateBtn" }, [
+            _c("button", { staticClass: "action-update-btn" }, [
               _vm._v("Update"),
             ]),
             _vm._v(" "),
@@ -49944,11 +49944,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container companysetting py-5" }, [
-      _c("div", { staticClass: "companyTitle mb-3" }, [
+    return _c("div", { staticClass: "container company-setting py-5" }, [
+      _c("div", { staticClass: "company-title mb-3" }, [
         _c("hr", { staticClass: "ml-0" }),
         _vm._v(" "),
-        _c("div", { staticClass: "companytitleText" }, [_vm._v("Settings")]),
+        _c("div", { staticClass: "company-title-text" }, [_vm._v("Settings")]),
         _vm._v(" "),
         _c("hr", { staticClass: "mr-0" }),
       ]),
@@ -49959,20 +49959,20 @@ var staticRenderFns = [
         ),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "companyForm" }, [
+      _c("div", { staticClass: "company-form" }, [
         _c("form", [
           _c("div", { staticClass: "form-field" }, [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "email" },
               },
               [_vm._v("Email:")]
             ),
             _vm._v(" "),
             _c("input", {
-              staticClass: "CompanycustomInput",
+              staticClass: "company-custom-input",
               attrs: {
                 id: "email",
                 required: "",
@@ -49986,14 +49986,14 @@ var staticRenderFns = [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "password" },
               },
               [_vm._v("Password:")]
             ),
             _vm._v(" "),
             _c("input", {
-              staticClass: "CompanycustomInput",
+              staticClass: "company-custom-input",
               attrs: {
                 name: "password",
                 type: "password",
@@ -50006,14 +50006,14 @@ var staticRenderFns = [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "newpassword" },
               },
               [_vm._v("New Password:")]
             ),
             _vm._v(" "),
             _c("input", {
-              staticClass: "CompanycustomInput",
+              staticClass: "company-custom-input",
               attrs: {
                 name: "newpassword",
                 type: "password",
@@ -50026,14 +50026,14 @@ var staticRenderFns = [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "confirmpassword" },
               },
               [_vm._v("Confirm\n                        Password:")]
             ),
             _vm._v(" "),
             _c("input", {
-              staticClass: "CompanycustomInput",
+              staticClass: "company-custom-input",
               attrs: {
                 name: "confirmpassword",
                 type: "password",
@@ -50042,11 +50042,11 @@ var staticRenderFns = [
             }),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-field Companycustomtoggle" }, [
+          _c("div", { staticClass: "form-field company-custom-toggle" }, [
             _c(
               "label",
               {
-                staticClass: "label--required companycustomLabel",
+                staticClass: "label--required company-custom-label",
                 attrs: { for: "account" },
               },
               [_vm._v("Activate Account:")]
@@ -50066,7 +50066,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form-group text-center m-0" }, [
-            _c("button", { staticClass: "actionUpdateBtn" }, [
+            _c("button", { staticClass: "action-update-btn" }, [
               _vm._v("Update"),
             ]),
             _vm._v(" "),
