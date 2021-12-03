@@ -14904,7 +14904,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -14954,13 +14953,14 @@ __webpack_require__.r(__webpack_exports__);
           Swal.close();
           _this2.errors = [];
 
-          _this2.getCompanyProfileData(); // $('#basicInfoModal').modal('hide')
+          _this2.getCompanyProfileData();
 
-
+          $('#basicInfoModal').modal('hide');
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Company Updated Successfully'
+            text: 'Basic Information Updated Successfully',
+            timer: 1500
           });
         }
       });
@@ -14998,10 +14998,12 @@ __webpack_require__.r(__webpack_exports__);
           _this3.getCompanyProfileData();
 
           Swal.close();
+          $('#SocialMediaModal').modal('hide');
           Swal.fire({
             icon: 'success',
             title: 'Updated',
-            text: 'Company Updated Successfully'
+            text: 'Social Updated Successfully',
+            timer: 1500
           });
         }
       })["catch"](function (err) {});
@@ -55302,6 +55304,7 @@ var render = function () {
         {
           staticClass: "modal fade basicInfoModal",
           attrs: {
+            id: "basicInfoModal",
             tabindex: "-1",
             role: "dialog",
             "aria-labelledby": "myLargeModalLabel",
@@ -55946,6 +55949,7 @@ var render = function () {
         {
           staticClass: "modal fade SocialMediaModal",
           attrs: {
+            id: "SocialMediaModal",
             tabindex: "-1",
             role: "dialog",
             "aria-labelledby": "myLargeModalLabel",
