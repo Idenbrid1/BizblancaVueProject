@@ -4362,8 +4362,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -30648,7 +30646,7 @@ var staticRenderFns = [
                 _vm._v("BizBlanca Certification and Payment Partnership"),
               ]),
               _vm._v(" "),
-              _c("p", [
+              _c("p", { staticStyle: { "font-weight": "500" } }, [
                 _vm._v(
                   "Are you worried about your work? Everyone has some worries."
                 ),
@@ -30852,13 +30850,10 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-6 movie-wrap" }, [
                       _c("div", { staticClass: "movie-inner" }, [
-                        _c("iframe", {
+                        _c("video", {
                           attrs: {
-                            src: "https://www.youtube.com/embed/djqoRNnDqFU",
-                            frameborder: "0",
-                            allow:
-                              "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-                            allowfullscreen: "",
+                            controls: "",
+                            src: "/website/assets/videos/Bizblanca.mp4",
                             width: "100%",
                             height: "280px",
                           },

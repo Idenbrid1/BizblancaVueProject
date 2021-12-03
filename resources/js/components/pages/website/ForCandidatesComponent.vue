@@ -310,7 +310,7 @@
                     </div>
                     <div class="col-9">
                         <h3>BizBlanca Certification and Payment Partnership</h3>
-                        <p>Are you worried about your work? Everyone has some worries.</p>
+                        <p style="font-weight:500;">Are you worried about your work? Everyone has some worries.</p>
                         <p class="payment-descrp-d">
                             At BizBlanca, we have a Payment Partnership with Bizers who have
                             BizBlanca Certification in order to eliminate the anxiety about
@@ -450,10 +450,8 @@
 
                                 <div class="col-md-6 movie-wrap">
                                     <div class="movie-inner">
-                                        <iframe src="https://www.youtube.com/embed/djqoRNnDqFU" frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen="" width="100%" height="280px">
-                                        </iframe>
+                                        <video controls src="/website/assets/videos/Bizblanca.mp4" width="100%" height="280px">
+                                        </video>
                                     </div>
                                 </div>
                                 <div class="col-md-6 movie-wrap-text">
