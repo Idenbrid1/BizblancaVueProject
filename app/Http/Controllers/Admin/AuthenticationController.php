@@ -312,8 +312,7 @@ class AuthenticationController extends Controller
                 try{
                     $transaction = DB::transaction(function () use ($request, $userExist) {
                         $user = User::where('email', $userExist->email)->first();
-                        // $userExist->delete();
-
+                        PasswordReset::where('token', $request->token)->delete();
                         $request->request->add([
                             'password' => Hash::make($request->password),
                         ]);

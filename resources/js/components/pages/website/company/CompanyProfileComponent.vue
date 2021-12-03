@@ -271,8 +271,7 @@
 
         <!-- Modal BasicInfo  -->
         <!-- Large modal -->
-        <div class="modal fade basicInfoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+        <div class="modal fade basicInfoModal" id="basicInfoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="basicinformationForm">
                     <div class="modal-content p-0">
@@ -397,7 +396,7 @@
             </div>
         </div>
 
-        <div class="modal fade SocialMediaModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        <div class="modal fade SocialMediaModal" id="SocialMediaModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="socialmediaForm">
@@ -540,11 +539,12 @@
                             Swal.close()
                             this.errors = []
                             this.getCompanyProfileData()
-                            // $('#basicInfoModal').modal('hide')
+                            $('#basicInfoModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Company Updated Successfully',
+                                text: 'Basic Information Updated Successfully',
+                                timer: 1500
                             })
                         }
                     })
@@ -578,10 +578,12 @@
                             this.errors = []
                             this.getCompanyProfileData()
                             Swal.close()
+                            $('#SocialMediaModal').modal('hide')
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Company Updated Successfully',
+                                text: 'Social Updated Successfully',
+                                timer: 1500
                             })
                         }
                     })

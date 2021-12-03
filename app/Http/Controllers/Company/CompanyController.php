@@ -123,8 +123,8 @@ class CompanyController extends Controller
                 $file->move($location,$imagefilename);
                 File::delete($location.$company->profile_gallery);
             }
+            $company->profile_gallery = implode(',', $galleryfilenamearray);
         }
-        $company->profile_gallery = implode(',', $galleryfilenamearray);
         if($request->file('companyVideo')) 
         {   
             $file = $request->file('companyVideo');
