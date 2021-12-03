@@ -495,8 +495,10 @@
                                     </div>
                                 </div>
                                 <div class="col-12 px-2 py-4">
-                                    <looping-rhombuses-spinner :animation-duration="1800" :size="40" color="#081351" v-if="spinnerSubmit == true"/>
-                                    <a @click.prevent="submitContactUs()" class="contact-submit-anker" v-if="spinnerSubmit == false">Send</a>
+                                    <looping-rhombuses-spinner :animation-duration="1800" :size="40" color="#081351"
+                                        v-if="spinnerSubmit == true" />
+                                    <a @click.prevent="submitContactUs()" class="contact-submit-anker"
+                                        v-if="spinnerSubmit == false">Send</a>
                                 </div>
                             </div>
                         </form>
@@ -532,7 +534,9 @@
     import WebsiteNavbar from './partials/navbar.vue';
     import CompanyNavbar from './partials/CompanyNavbar.vue';
     import CandidateNavbar from './partials/CandidateNavbar.vue';
-    import { LoopingRhombusesSpinner  } from 'epic-spinners'
+    import {
+        LoopingRhombusesSpinner
+    } from 'epic-spinners'
     export default {
         data() {
             return {
@@ -551,7 +555,7 @@
             WebsiteNavbar,
             CompanyNavbar,
             CandidateNavbar,
-            LoopingRhombusesSpinner ,
+            LoopingRhombusesSpinner,
         },
         created() {
             this.checkRole()
@@ -641,41 +645,39 @@
             expireTodayJobs() {
                 axios.get('expire-today-jobs')
             },
-            submitContactUs(){
+            submitContactUs() {
                 this.spinnerSubmit = true
                 Swal.fire({
-                    text:  'Please Wait...',
+                    text: 'Please Wait...',
                     didOpen: () => {
                         Swal.showLoading()
                     },
                 })
                 axios.post('/submit-contact-us', this.contact_us)
-                .then((response) => {
-                    if(response.data.success == true)
-                    {
-                        Swal.close()
-                        Swal.fire({
-                            icon:  'success',
-                            title: 'Contact us query raised',
-                            text:  'Please wait we will contact you as soon as possible! THANKS',
-                        })
-                        this.contact_us = {
-                            name: '',
-                            email: '',
-                            phone: '',
-                            message: '',
-                        };
-                        this.errors = []
-                        this.spinnerSubmit = false
+                    .then((response) => {
+                        if (response.data.success == true) {
+                            Swal.close()
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Contact us query raised',
+                                text: 'Please wait we will contact you as soon as possible! THANKS',
+                            })
+                            this.contact_us = {
+                                name: '',
+                                email: '',
+                                phone: '',
+                                message: '',
+                            };
+                            this.errors = []
+                            this.spinnerSubmit = false
 
-                    }
-                    else{
-                        Swal.close()
-                        this.errors = response.data.errors
-                        this.spinnerSubmit = false
+                        } else {
+                            Swal.close()
+                            this.errors = response.data.errors
+                            this.spinnerSubmit = false
 
-                    }
-                });
+                        }
+                    });
             }
         }
     };
