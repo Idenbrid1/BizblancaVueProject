@@ -22,12 +22,13 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Experience</label>
-                                        <input class="form-control" v-model="record.experience" id="cusSelectbox"
+                                        <input class="form-control" placeholder="Search by Experience" v-model="record.experience" id="cusSelectbox"
                                             type="number">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Salary Range</label>
                                         <select name="salary_range" v-model="record.salary_range" class="form-control">
+                                            <option disabled selected>Select Salary Range</option>
                                             <option value="10000-20000">10000 - 20000 </option>
                                             <option value="20000-30000">20000 - 30000</option>
                                             <option value="30000-40000">30000 - 40000</option>
@@ -43,6 +44,7 @@
                                     <div class="col-md-6">
                                         <label for="">Shift</label>
                                         <select name="shift" v-model="record.shift" class="form-control">
+                                            <option disabled selected>Select Shift</option>
                                             <option value="Night">Night</option>
                                             <option value="Morning">Morning</option>
                                             <option value="Afternoon">Afternoon</option>
@@ -57,6 +59,7 @@
                                     <div class="col-md-6">
                                         <label for="">Job Type</label>
                                         <select name="job_type" v-model="record.job_type" class="form-control">
+                                            <option disabled selected>Job Type</option>
                                             <option value="Full Time">Full Time</option>
                                             <option value="Part Time">Part Time</option>
                                             <option value="Internship">Internship</option>
@@ -69,28 +72,17 @@
                                         <label for="">Qualifications & Technicalities</label>
                                         <select name="qualification_level" v-model="record.qualification_level"
                                             class="form-control">
+                                            <option disabled selected>Select Qualifications</option>
                                             <option value="Metric">Metric</option>
                                             <option value="Intermediate">Intermediate</option>
                                             <option value="Graduation">Graduation</option>
                                             <option value="Masters">Masters</option>
                                         </select>
                                     </div>
-                                    <!-- <div class="col-md-6">
-                                        <label for="">Skills</label>
-                                        <multiselect 
-                                            v-model="record.skills"
-                                            track-by="name"
-                                            label="name"
-                                            placeholder="Select one"
-                                            :options="options"
-                                            :searchable="true"
-                                            :allow-empty="false"
-                                            @tag="addSkill"
-                                            :multiple="true" 
-                                            :taggable="true">
-                                            
-                                        </multiselect>
-                                    </div> -->
+                                    <div class="col-md-6">
+                                        <label for="">Occupation</label>
+                                        <input type="text" placeholder="Search by Occupation" name="" id="" class="form-control" />
+                                    </div>
                                     <div class="col-12 conditioncheck">
                                         <input name='gender' value="Male" v-model="record.gender" type="radio"
                                             class="keeplogin-checkbox" id="male">

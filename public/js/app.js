@@ -11372,14 +11372,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -11494,6 +11486,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_3__);
+//
+//
+//
+//
 //
 //
 //
@@ -46236,7 +46232,11 @@ var render = function () {
                           },
                         ],
                         staticClass: "form-control",
-                        attrs: { id: "cusSelectbox", type: "number" },
+                        attrs: {
+                          placeholder: "Search by Experience",
+                          id: "cusSelectbox",
+                          type: "number",
+                        },
                         domProps: { value: _vm.record.experience },
                         on: {
                           input: function ($event) {
@@ -46292,6 +46292,12 @@ var render = function () {
                           },
                         },
                         [
+                          _c(
+                            "option",
+                            { attrs: { disabled: "", selected: "" } },
+                            [_vm._v("Select Salary Range")]
+                          ),
+                          _vm._v(" "),
                           _c("option", { attrs: { value: "10000-20000" } }, [
                             _vm._v("10000 - 20000 "),
                           ]),
@@ -46372,6 +46378,12 @@ var render = function () {
                           },
                         },
                         [
+                          _c(
+                            "option",
+                            { attrs: { disabled: "", selected: "" } },
+                            [_vm._v("Select Shift")]
+                          ),
+                          _vm._v(" "),
                           _c("option", { attrs: { value: "Night" } }, [
                             _vm._v("Night"),
                           ]),
@@ -46462,6 +46474,12 @@ var render = function () {
                           },
                         },
                         [
+                          _c(
+                            "option",
+                            { attrs: { disabled: "", selected: "" } },
+                            [_vm._v("Job Type")]
+                          ),
+                          _vm._v(" "),
                           _c("option", { attrs: { value: "Full Time" } }, [
                             _vm._v("Full Time"),
                           ]),
@@ -46528,6 +46546,12 @@ var render = function () {
                           },
                         },
                         [
+                          _c(
+                            "option",
+                            { attrs: { disabled: "", selected: "" } },
+                            [_vm._v("Select Qualifications")]
+                          ),
+                          _vm._v(" "),
                           _c("option", { attrs: { value: "Metric" } }, [
                             _vm._v("Metric"),
                           ]),
@@ -46546,6 +46570,8 @@ var render = function () {
                         ]
                       ),
                     ]),
+                    _vm._v(" "),
+                    _vm._m(0),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-12 conditioncheck" }, [
                       _c("input", {
@@ -46677,7 +46703,7 @@ var render = function () {
             _vm._v(" "),
             _c("div", { staticClass: "col-md-12 search-container" }, [
               _c("form", [
-                _vm._m(0),
+                _vm._m(1),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -46784,7 +46810,7 @@ var render = function () {
                                 _vm._v(_vm._s(_vm.searchData[index].title)),
                               ]),
                               _vm._v(" "),
-                              _vm._m(1, true),
+                              _vm._m(2, true),
                             ]),
                             _vm._v(" "),
                             _c("p", { staticClass: "job-description" }, [
@@ -46956,13 +46982,31 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _vm._m(2),
+        _vm._m(3),
       ]),
     ],
     1
   )
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-6" }, [
+      _c("label", { attrs: { for: "" } }, [_vm._v("Occupation")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: {
+          type: "text",
+          placeholder: "Search by Occupation",
+          name: "",
+          id: "",
+        },
+      }),
+    ])
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -47640,7 +47684,11 @@ var render = function () {
                           },
                         ],
                         staticClass: "form-control",
-                        attrs: { id: "cusSelectbox", type: "number" },
+                        attrs: {
+                          placeholder: "Search by Experience",
+                          id: "cusSelectbox",
+                          type: "number",
+                        },
                         domProps: { value: _vm.record.working_experience },
                         on: {
                           input: function ($event) {
@@ -47670,7 +47718,11 @@ var render = function () {
                           },
                         ],
                         staticClass: "form-control",
-                        attrs: { id: "cusSelectbox", type: "text" },
+                        attrs: {
+                          placeholder: "Search by City",
+                          id: "cusSelectbox",
+                          type: "text",
+                        },
                         domProps: { value: _vm.record.city },
                         on: {
                           input: function ($event) {
@@ -47685,13 +47737,13 @@ var render = function () {
                     _vm._v(" "),
                     _c(
                       "div",
-                      { staticClass: "col-12 col-md-12" },
+                      { staticClass: "col-12 col-md-6" },
                       [
                         _c("label", { attrs: { for: "" } }, [_vm._v("Skills")]),
                         _vm._v(" "),
                         _c("multiselect", {
                           attrs: {
-                            placeholder: "Select one",
+                            placeholder: "Search by Skills",
                             label: "name",
                             "track-by": "name",
                             options: _vm.options,
@@ -47828,7 +47880,7 @@ var render = function () {
                   staticClass: "form-control",
                   attrs: {
                     type: "text",
-                    placeholder: "* Includes All Keywords",
+                    placeholder: "* Search by Name, Shift, City or Designation",
                     name: "search",
                   },
                   domProps: { value: _vm.record.keyword },
