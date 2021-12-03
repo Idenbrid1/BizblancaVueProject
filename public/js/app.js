@@ -12417,6 +12417,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -12429,7 +12439,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      isRole: ''
+      record: {
+        current_password: '',
+        new_password: '',
+        confirm_password: '',
+        active: 0
+      },
+      isRole: '',
+      errors: []
     };
   },
   created: function created() {
@@ -12442,6 +12459,27 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
         if (response.data.success) {
           _this.isRole = response.data.role;
+        }
+      });
+    },
+    companySettingPassword: function companySettingPassword() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('company-setting-password', this.record).then(function (response) {
+        if (response.data.success == false) {
+          _this2.errors = response.data.errors;
+        } else {
+          if (response.data.message == true) {
+            Swal.fire({
+              icon: 'success',
+              title: 'Password Updated!😎'
+            });
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Current Password Not Matched!'
+            });
+          }
         }
       });
     }
@@ -50507,7 +50545,252 @@ var render = function () {
         ? _c("span", [_c("CandidateNavbar")], 1)
         : _vm._e(),
       _vm._v(" "),
-      _vm._m(0),
+      _c("div", { staticClass: "container company-setting py-5" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-left  company-setting-p" }, [
+          _vm._v(
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean\n            commodo ligula eget dolor. Aenean masa. Cum sociis natoque penatibus et magnis dis parturient monten.\n        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "company-form" }, [
+          _c("form", [
+            _c("div", { staticClass: "form-field" }, [
+              _c(
+                "label",
+                {
+                  staticClass: "label--required company-custom-label",
+                  attrs: { for: "password" },
+                },
+                [_vm._v("Current Password:")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.record.current_password,
+                    expression: "record.current_password",
+                  },
+                ],
+                staticClass: "company-custom-input",
+                attrs: {
+                  name: "password",
+                  type: "password",
+                  placeholder: "Enter Password",
+                },
+                domProps: { value: _vm.record.current_password },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.record,
+                      "current_password",
+                      $event.target.value
+                    )
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("small", [
+                _vm.errors.current_password != null
+                  ? _c("span", { staticClass: "text-danger" }, [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(_vm.errors.current_password[0]) +
+                          "\n                            "
+                      ),
+                    ])
+                  : _vm._e(),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-field" }, [
+              _c(
+                "label",
+                {
+                  staticClass: "label--required company-custom-label",
+                  attrs: { for: "newpassword" },
+                },
+                [_vm._v("New Password:")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.record.new_password,
+                    expression: "record.new_password",
+                  },
+                ],
+                staticClass: "company-custom-input",
+                attrs: {
+                  name: "newpassword",
+                  type: "password",
+                  placeholder: "Enter new password",
+                },
+                domProps: { value: _vm.record.new_password },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.record, "new_password", $event.target.value)
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("small", [
+                _vm.errors.new_password != null
+                  ? _c("span", { staticClass: "text-danger" }, [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(_vm.errors.new_password[0]) +
+                          "\n                            "
+                      ),
+                    ])
+                  : _vm._e(),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-field" }, [
+              _c(
+                "label",
+                {
+                  staticClass: "label--required company-custom-label",
+                  attrs: { for: "confirmpassword" },
+                },
+                [_vm._v("Confirm\n                        Password:")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.record.confirm_password,
+                    expression: "record.confirm_password",
+                  },
+                ],
+                staticClass: "company-custom-input",
+                attrs: {
+                  name: "confirmpassword",
+                  type: "password",
+                  placeholder: "Enter confirm password",
+                },
+                domProps: { value: _vm.record.confirm_password },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.record,
+                      "confirm_password",
+                      $event.target.value
+                    )
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("small", [
+                _vm.errors.confirm_password != null
+                  ? _c("span", { staticClass: "text-danger" }, [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(_vm.errors.confirm_password[0]) +
+                          "\n                            "
+                      ),
+                    ])
+                  : _vm._e(),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-field company-custom-toggle" }, [
+              _c(
+                "label",
+                {
+                  staticClass: "label--required company-custom-label",
+                  attrs: { for: "account" },
+                },
+                [_vm._v("DeActivate Account:")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.record.active,
+                    expression: "record.active",
+                  },
+                ],
+                staticClass: "customtoggle",
+                attrs: {
+                  type: "checkbox",
+                  checked: "",
+                  "data-toggle": "toggle",
+                  "data-style": "ios",
+                  "data-on": "Activate",
+                  "data-off": "Deactivate",
+                },
+                domProps: {
+                  checked: Array.isArray(_vm.record.active)
+                    ? _vm._i(_vm.record.active, null) > -1
+                    : _vm.record.active,
+                },
+                on: {
+                  change: function ($event) {
+                    var $$a = _vm.record.active,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = null,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 &&
+                          _vm.$set(_vm.record, "active", $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          _vm.$set(
+                            _vm.record,
+                            "active",
+                            $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                          )
+                      }
+                    } else {
+                      _vm.$set(_vm.record, "active", $$c)
+                    }
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group text-center m-0" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "action-update-btn",
+                  on: {
+                    click: function ($event) {
+                      $event.preventDefault()
+                      return _vm.companySettingPassword()
+                    },
+                  },
+                },
+                [_vm._v("Update")]
+              ),
+              _vm._v(" "),
+              _c("button", { staticClass: "actionBackBtn" }, [_vm._v("Back")]),
+            ]),
+          ]),
+        ]),
+      ]),
     ],
     1
   )
@@ -50517,136 +50800,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container company-setting py-5" }, [
-      _c("div", { staticClass: "company-title mb-3" }, [
-        _c("hr", { staticClass: "ml-0" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "company-title-text" }, [_vm._v("Settings")]),
-        _vm._v(" "),
-        _c("hr", { staticClass: "mr-0" }),
-      ]),
+    return _c("div", { staticClass: "company-title mb-3" }, [
+      _c("hr", { staticClass: "ml-0" }),
       _vm._v(" "),
-      _c("div", { staticClass: "text-left  company-setting-p" }, [
-        _vm._v(
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean\n            commodo ligula eget dolor. Aenean masa. Cum sociis natoque penatibus et magnis dis parturient monten.\n        "
-        ),
-      ]),
+      _c("div", { staticClass: "company-title-text" }, [_vm._v("Settings")]),
       _vm._v(" "),
-      _c("div", { staticClass: "company-form" }, [
-        _c("form", [
-          _c("div", { staticClass: "form-field" }, [
-            _c(
-              "label",
-              {
-                staticClass: "label--required company-custom-label",
-                attrs: { for: "email" },
-              },
-              [_vm._v("Email:")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "company-custom-input",
-              attrs: {
-                id: "email",
-                required: "",
-                type: "email",
-                placeholder: "Enter Email",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-field" }, [
-            _c(
-              "label",
-              {
-                staticClass: "label--required company-custom-label",
-                attrs: { for: "password" },
-              },
-              [_vm._v("Password:")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "company-custom-input",
-              attrs: {
-                name: "password",
-                type: "password",
-                placeholder: "Enter Password",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-field" }, [
-            _c(
-              "label",
-              {
-                staticClass: "label--required company-custom-label",
-                attrs: { for: "newpassword" },
-              },
-              [_vm._v("New Password:")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "company-custom-input",
-              attrs: {
-                name: "newpassword",
-                type: "password",
-                placeholder: "Enter new password",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-field" }, [
-            _c(
-              "label",
-              {
-                staticClass: "label--required company-custom-label",
-                attrs: { for: "confirmpassword" },
-              },
-              [_vm._v("Confirm\n                        Password:")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "company-custom-input",
-              attrs: {
-                name: "confirmpassword",
-                type: "password",
-                placeholder: "Enter confirm password",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-field company-custom-toggle" }, [
-            _c(
-              "label",
-              {
-                staticClass: "label--required company-custom-label",
-                attrs: { for: "account" },
-              },
-              [_vm._v("Activate Account:")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "customtoggle",
-              attrs: {
-                type: "checkbox",
-                checked: "",
-                "data-toggle": "toggle",
-                "data-style": "ios",
-                "data-on": "Activate",
-                "data-off": "Deactivate",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group text-center m-0" }, [
-            _c("button", { staticClass: "action-update-btn" }, [
-              _vm._v("Update"),
-            ]),
-            _vm._v(" "),
-            _c("button", { staticClass: "actionBackBtn" }, [_vm._v("Back")]),
-          ]),
-        ]),
-      ]),
+      _c("hr", { staticClass: "mr-0" }),
     ])
   },
 ]
