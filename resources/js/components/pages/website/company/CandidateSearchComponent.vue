@@ -23,7 +23,7 @@
                                 <div class="row m-0">
                                     <div class="col-md-6">
                                         <label>Experience</label>
-                                        <input class="form-control" v-model="record.working_experience"
+                                        <input class="form-control" placeholder="Search by Experience" v-model="record.working_experience"
                                             id="cusSelectbox" type="number">
                                     </div>
                                     <!-- <div class="col-md-6">
@@ -38,7 +38,7 @@
                                     </div> -->
                                     <div class="col-md-6">
                                         <label>City</label>
-                                        <input class="form-control" v-model="record.city" id="cusSelectbox" type="text">
+                                        <input class="form-control" placeholder="Search by City" v-model="record.city" id="cusSelectbox" type="text">
                                     </div>
                                     <!-- <div class="col-md-6">
                                         <label>Area</label>
@@ -60,13 +60,17 @@
                                             <option value="Sri Lanka">Sri Lanka</option>
                                         </select>
                                     </div> -->
-                                    <div class="col-12 col-md-12">
+                                    <div class="col-12 col-md-6">
                                         <label for="">Skills</label>
-                                        <multiselect v-model="record.skills" placeholder="Select one" label="name"
+                                        <multiselect v-model="record.skills" placeholder="Search by Skills" label="name"
                                             track-by="name" :options="options" :searchable="true" :multiple="true"
                                             :taggable="true" @tag="addSkill">
                                         </multiselect>
                                     </div>
+                                    <!-- <div class="col-12 col-md-6">
+                                        <label for="">Occupation</label>
+                                        <input type="text" name="" placeholder="Search by Occupation" class="form-control"/>
+                                    </div> -->
                                     <div class="col-12 conditioncheck">
                                         <input name='gender' v-model="record.gender" value="Male" type="radio"
                                             class="keeplogin-checkbox" id="male">
@@ -97,7 +101,7 @@
                     <div class="col-md-12 search-container">
                         <form>
                             <div> <label class="keyword-input-title">Keyword Search</label></div>
-                            <input class="form-control" type="text" placeholder="* Includes All Keywords" name="search"
+                            <input class="form-control" type="text" placeholder="* Search by Name, Shift, City or Designation" name="search"
                                 v-model="record.keyword">
                             <div class="keyword-search-ankers">
                                 <button type="submit" @click.prevent="keywordSearch()"
