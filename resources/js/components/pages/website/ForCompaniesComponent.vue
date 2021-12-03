@@ -251,7 +251,7 @@
                 <div class="row no-gutters">
                     <div class="col-12 col-lg-6">
                         <div class="testimonial-card testimonial-card-1">
-                            <img class="testimonial-card-img" src="/website/assets/images/Group 1386.png" alt="1" />
+                            <img class="testimonial-card-img" src="/website/assets/images/Group1386.png" alt="1" />
                             <h1 class="mt-4">Tech World</h1>
                             <div class="testimonial-card-box my-1">Before</div>
                             <div class="testimonial-card-box-content my-1">
@@ -270,7 +270,7 @@
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="testimonial-card testimonial-card-2">
-                            <img class="testimonial-card-img" src="/website/assets/images/Group 1385.png" alt="2" />
+                            <img class="testimonial-card-img" src="/website/assets/images/Group1385.png" alt="2" />
                             <h1 class="mt-4">Tech World</h1>
                             <div class="testimonial-card-box my-1">Before</div>
                             <div class="testimonial-card-box-content my-1">
@@ -289,7 +289,7 @@
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="testimonial-card testimonial-card-3">
-                            <img class="testimonial-card-img" src="/website/assets/images/Group 1391.png" alt="2" />
+                            <img class="testimonial-card-img" src="/website/assets/images/Group1391.png" alt="2" />
                             <h1 class="mt-4">Tech World</h1>
                             <div class="testimonial-card-box my-1">Before</div>
                             <div class="testimonial-card-box-content my-1">
@@ -308,7 +308,7 @@
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="testimonial-card testimonial-card-4">
-                            <img class="testimonial-card-img" src="/website/assets/images/Group 1394.png" alt="3" />
+                            <img class="testimonial-card-img" src="/website/assets/images/Group1394.png" alt="3" />
                             <h1 class="mt-4">Tech World</h1>
                             <div class="testimonial-card-box my-1">Before</div>
                             <div class="testimonial-card-box-content my-1">
@@ -333,7 +333,7 @@
                         <div class="mr-2 title-effect"></div>
                         Flow of use
                     </h4>
-                    <img class="flow-photo w-100" src="/website/assets/images/Group 1687.svg" alt="" />
+                    <img class="flow-photo w-100" src="/website/assets/images/Group1687.svg" alt="" />
                 </div>
             </div>
             <div class="company-faqs container px-2" id="faq-section">

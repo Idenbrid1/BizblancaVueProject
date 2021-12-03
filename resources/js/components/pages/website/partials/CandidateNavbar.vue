@@ -11,23 +11,27 @@
                         <router-link :to="{ name: 'CandidateProfile' }" class="secondaymenu" :class="this.$route.path == '/candidate-profile' ? 'candidate-active' : ''" id="secondary-anker">Profile</router-link><span
                             class="seprate-line"></span>
                     </li>
-                    <li>
+                    <!-- <li>
                         <router-link :to="{ name: 'CompanyChat' }" class="secondaymenu" :class="this.$route.path == '/company-chat' ? 'candidate-active' : ''" id="secondary-anker-2">Messages</router-link><span
                             class="seprate-line"></span>
-                    </li>
+                    </li> -->
                     <li>
                         <router-link :to="{ name: 'JobSearch' }" class="secondaymenu" :class="this.$route.path == '/job-search' ? 'candidate-active' : ''" id="secondary-anker-3">Job Search</router-link><span
                             class="seprate-line"></span>
                     </li>
                     <li>
+                        <router-link :to="{ name: 'CandidateAccountSetting' }" class="secondaymenu" :class="this.$route.path == '/candidate-account-setting' ? 'candidate-active' : ''" id="secondary-anker-2">Setting</router-link>
+                        <span class="seprate-line"></span>
+                    </li>
+                    <li>
                         <router-link :to="{ name: 'CompanySearch' }" class="secondaymenu" :class="this.$route.path == '/company-search' ? 'candidate-active' : ''" id="secondary-anker-4">Companies Search</router-link>
                     </li>
+                    
                 </ul>
             </div>
         </header>
 </template>
 <script>
-import axios from 'axios';
     export default {
         data() {
             return {

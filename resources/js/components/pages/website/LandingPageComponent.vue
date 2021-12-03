@@ -140,7 +140,7 @@
                                     <!--  -->
                                     <div class="swiper-slide single-blog-wrap">
                                         <div class="single-blog">
-                                            <img src="/website/assets/images/Artboard 4-100.jpg" alt="blog-img" />
+                                            <img src="/website/assets/images/Artboard4-100.jpg" alt="blog-img" />
                                             <div class="eventdate"><strong>07</strong> Aug</div>
                                             <div class="news-card-day">
                                                 <div class="blog-title">
@@ -162,7 +162,7 @@
                                     <!--  -->
                                     <div class="swiper-slide single-blog-wrap">
                                         <div class="single-blog">
-                                            <img src="/website/assets/images/Artboard 7-100.jpg" alt="blog-img" />
+                                            <img src="/website/assets/images/Artboard7-100.jpg" alt="blog-img" />
                                             <div class="eventdate"><strong>09</strong> Aug</div>
                                             <div class="news-card-day">
                                                 <div class="blog-title">
@@ -184,7 +184,7 @@
                                     <!--  -->
                                     <div class="swiper-slide single-blog-wrap">
                                         <div class="single-blog">
-                                            <img src="/website/assets/images/Artboard 5-100.jpg" alt="blog-img" />
+                                            <img src="/website/assets/images/Artboard5-100.jpg" alt="blog-img" />
                                             <div class="eventdate"><strong>11</strong> Aug</div>
                                             <div class="news-card-day">
                                                 <div class="blog-title">
@@ -291,7 +291,7 @@
                                 "Bizers," who then go on to receive job offers from the most
                                 succesful and well-known companies in Pakistan.
                             </p>
-                            <img src="/website/assets/images/Group 1492.png" alt="blog-img" width="100%" />
+                            <img src="/website/assets/images/Group1492.png" alt="blog-img" width="100%" />
                         </div>
                         <a href="#" class="process-btn m-auto">Register as a job seeker</a>
                     </div>
@@ -313,7 +313,7 @@
                         <div class="list__card">
                             <div class="list__card-image-container">
                                 <div class="list__card-image">
-                                    <img src="/website/assets/images/Icon awesome-question-circle.svg"></div>
+                                    <img src="/website/assets/images/Icon-awesome-question-circle.svg"></div>
                             </div>
                             <div class="list__card-content">
                                 <h3 class="h5 list__card-title">FAQS</h3>
@@ -348,7 +348,7 @@
                     <div class="services-box">
                         <div class="list__card">
                             <div class="list__card-image-container">
-                                <div class="list__card-image"><img src="/website/assets/images/Group 1361.svg"></div>
+                                <div class="list__card-image"><img src="/website/assets/images/Group1361.svg"></div>
                             </div>
                             <div class="list__card-content">
                                 <h3 class="h5 list__card-title">
