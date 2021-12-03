@@ -55,15 +55,11 @@
                         <h1 class="need-help-title">Need Help?</h1>
                         <div class="help-queries-wrap">
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. What is BizBlanca?</h4>
+                                <p>
+                                    BizBlanca is a job-search portal for IT professionals that connects job seekers with
+                                    reputable IT companies across the country and helps them discover jobs that
+                                    perfectly fit their needs.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -71,15 +67,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Is BizBlanca Different From Others?</h4>
+                                <p>
+                                    Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a
+                                    dream-come-true platform for applicants who enjoy coding and managing businesses
+                                    using advanced IT technologies.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -87,15 +79,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. Can I Get An IT Job In This Pandemic?</h4>
+                                <p>
+                                    Bravo! You've come to the right place to look for IT jobs from the comfort of your
+                                    own home. You don’t need to roam here & there physically to find a job now. Simply
+                                    create an account on our website and search for your ideal job.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -103,15 +91,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?</h4>
+                                <p>
+                                    You certainly can! Let's make it modest to begin your IT career. We've got you
+                                    covered with our IT recruitment expertise and are always ready to help you out with
+                                    the finest available services. Just ping us!
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -119,15 +103,61 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Can I Get A Job?</h4>
+                                <p>
+                                    Bizblanca encourages and supports people who are keen to work in the IT field. All
+                                    you have to do is create & submit a well-optimized CV and wait for the recruiter to
+                                    contact you after applying.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. How To Succeed An IT Interview?</h4>
+                                <p>
+                                    Getting a job interview is an excellent beginning step to your IT career, but
+                                    remember that it's just "half the fight. To succeed in an interview and get the job,
+                                    you need to:
+                                    Make Time For Practice
+                                    Get Well Dressed.
+                                    Thoroughly Research About The Company
+                                    Be Authentic & Fully Confident
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. What IT Jobs Do You Provide?</h4>
+                                <p>
+                                    Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX
+                                    Designer, Database Administrator, and many other IT jobs are available on our site.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?</h4>
+                                <p>
+                                    Focus on your strength and how to convey them. Build a personal brand, tailor your
+                                    application materials to each position you apply to, and optimize organic keywords
+                                    for your application materials.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. Is BizBlanca Providing Online Home Jobs?</h4>
+                                <p>
+                                    Bizblanca supports all employees, whether they work remotely or in the workplace. It
+                                    gives you the most efficient way to apply for employment.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -143,15 +173,11 @@
                         <h1 class="need-help-title">Need Help?</h1>
                         <div class="help-queries-wrap">
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. What is BizBlanca?</h4>
+                                <p>
+                                    BizBlanca is a job-search portal for IT professionals that connects job seekers with
+                                    reputable IT companies across the country and helps them discover jobs that
+                                    perfectly fit their needs.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -159,15 +185,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Is BizBlanca Different From Others?</h4>
+                                <p>
+                                    Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a
+                                    dream-come-true platform for applicants who enjoy coding and managing businesses
+                                    using advanced IT technologies.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -175,15 +197,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. Can I Get An IT Job In This Pandemic?</h4>
+                                <p>
+                                    Bravo! You've come to the right place to look for IT jobs from the comfort of your
+                                    own home. You don’t need to roam here & there physically to find a job now. Simply
+                                    create an account on our website and search for your ideal job.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -191,15 +209,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?</h4>
+                                <p>
+                                    You certainly can! Let's make it modest to begin your IT career. We've got you
+                                    covered with our IT recruitment expertise and are always ready to help you out with
+                                    the finest available services. Just ping us!
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -207,15 +221,61 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Can I Get A Job?</h4>
+                                <p>
+                                    Bizblanca encourages and supports people who are keen to work in the IT field. All
+                                    you have to do is create & submit a well-optimized CV and wait for the recruiter to
+                                    contact you after applying.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. How To Succeed An IT Interview?</h4>
+                                <p>
+                                    Getting a job interview is an excellent beginning step to your IT career, but
+                                    remember that it's just "half the fight. To succeed in an interview and get the job,
+                                    you need to:
+                                    Make Time For Practice
+                                    Get Well Dressed.
+                                    Thoroughly Research About The Company
+                                    Be Authentic & Fully Confident
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. What IT Jobs Do You Provide?</h4>
+                                <p>
+                                    Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX
+                                    Designer, Database Administrator, and many other IT jobs are available on our site.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?</h4>
+                                <p>
+                                    Focus on your strength and how to convey them. Build a personal brand, tailor your
+                                    application materials to each position you apply to, and optimize organic keywords
+                                    for your application materials.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. Is BizBlanca Providing Online Home Jobs?</h4>
+                                <p>
+                                    Bizblanca supports all employees, whether they work remotely or in the workplace. It
+                                    gives you the most efficient way to apply for employment.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -231,15 +291,11 @@
                         <h1 class="need-help-title">Need Help?</h1>
                         <div class="help-queries-wrap">
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. What is BizBlanca?</h4>
+                                <p>
+                                    BizBlanca is a job-search portal for IT professionals that connects job seekers with
+                                    reputable IT companies across the country and helps them discover jobs that
+                                    perfectly fit their needs.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -247,15 +303,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Is BizBlanca Different From Others?</h4>
+                                <p>
+                                    Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a
+                                    dream-come-true platform for applicants who enjoy coding and managing businesses
+                                    using advanced IT technologies.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -263,15 +315,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. Can I Get An IT Job In This Pandemic?</h4>
+                                <p>
+                                    Bravo! You've come to the right place to look for IT jobs from the comfort of your
+                                    own home. You don’t need to roam here & there physically to find a job now. Simply
+                                    create an account on our website and search for your ideal job.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -279,15 +327,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?</h4>
+                                <p>
+                                    You certainly can! Let's make it modest to begin your IT career. We've got you
+                                    covered with our IT recruitment expertise and are always ready to help you out with
+                                    the finest available services. Just ping us!
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -295,15 +339,61 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Can I Get A Job?</h4>
+                                <p>
+                                    Bizblanca encourages and supports people who are keen to work in the IT field. All
+                                    you have to do is create & submit a well-optimized CV and wait for the recruiter to
+                                    contact you after applying.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. How To Succeed An IT Interview?</h4>
+                                <p>
+                                    Getting a job interview is an excellent beginning step to your IT career, but
+                                    remember that it's just "half the fight. To succeed in an interview and get the job,
+                                    you need to:
+                                    Make Time For Practice
+                                    Get Well Dressed.
+                                    Thoroughly Research About The Company
+                                    Be Authentic & Fully Confident
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. What IT Jobs Do You Provide?</h4>
+                                <p>
+                                    Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX
+                                    Designer, Database Administrator, and many other IT jobs are available on our site.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?</h4>
+                                <p>
+                                    Focus on your strength and how to convey them. Build a personal brand, tailor your
+                                    application materials to each position you apply to, and optimize organic keywords
+                                    for your application materials.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. Is BizBlanca Providing Online Home Jobs?</h4>
+                                <p>
+                                    Bizblanca supports all employees, whether they work remotely or in the workplace. It
+                                    gives you the most efficient way to apply for employment.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -319,15 +409,11 @@
                         <h1 class="need-help-title">Need Help?</h1>
                         <div class="help-queries-wrap">
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. What is BizBlanca?</h4>
+                                <p>
+                                    BizBlanca is a job-search portal for IT professionals that connects job seekers with
+                                    reputable IT companies across the country and helps them discover jobs that
+                                    perfectly fit their needs.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -335,15 +421,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Is BizBlanca Different From Others?</h4>
+                                <p>
+                                    Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a
+                                    dream-come-true platform for applicants who enjoy coding and managing businesses
+                                    using advanced IT technologies.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -351,15 +433,16 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How To Succeed An IT Interview?</h4>
+                                <p>
+                                    Getting a job interview is an excellent beginning step to your IT career, but
+                                    remember that it's just "half the fight. To succeed in an interview and get the job,
+                                    you need to:
+                                    Make Time For Practice
+                                    Get Well Dressed.
+                                    Thoroughly Research About The Company
+                                    Be Authentic & Fully Confident
+
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -367,15 +450,10 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. What IT Jobs Do You Provide?</h4>
+                                <p>
+                                    Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX
+                                    Designer, Database Administrator, and many other IT jobs are available on our site.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -383,15 +461,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?</h4>
+                                <p>
+                                    Focus on your strength and how to convey them. Build a personal brand, tailor your
+                                    application materials to each position you apply to, and optimize organic keywords
+                                    for your application materials.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -407,15 +481,11 @@
                         <h1 class="need-help-title">Need Help?</h1>
                         <div class="help-queries-wrap">
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. What is BizBlanca?</h4>
+                                <p>
+                                    BizBlanca is a job-search portal for IT professionals that connects job seekers with
+                                    reputable IT companies across the country and helps them discover jobs that
+                                    perfectly fit their needs.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -423,15 +493,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Is BizBlanca Different From Others?</h4>
+                                <p>
+                                    Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a
+                                    dream-come-true platform for applicants who enjoy coding and managing businesses
+                                    using advanced IT technologies.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -439,15 +505,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. Can I Get An IT Job In This Pandemic?</h4>
+                                <p>
+                                    Bravo! You've come to the right place to look for IT jobs from the comfort of your
+                                    own home. You don’t need to roam here & there physically to find a job now. Simply
+                                    create an account on our website and search for your ideal job.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -455,15 +517,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?</h4>
+                                <p>
+                                    You certainly can! Let's make it modest to begin your IT career. We've got you
+                                    covered with our IT recruitment expertise and are always ready to help you out with
+                                    the finest available services. Just ping us!
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -471,15 +529,61 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Can I Get A Job?</h4>
+                                <p>
+                                    Bizblanca encourages and supports people who are keen to work in the IT field. All
+                                    you have to do is create & submit a well-optimized CV and wait for the recruiter to
+                                    contact you after applying.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. How To Succeed An IT Interview?</h4>
+                                <p>
+                                    Getting a job interview is an excellent beginning step to your IT career, but
+                                    remember that it's just "half the fight. To succeed in an interview and get the job,
+                                    you need to:
+                                    Make Time For Practice
+                                    Get Well Dressed.
+                                    Thoroughly Research About The Company
+                                    Be Authentic & Fully Confident
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. What IT Jobs Do You Provide?</h4>
+                                <p>
+                                    Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX
+                                    Designer, Database Administrator, and many other IT jobs are available on our site.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?</h4>
+                                <p>
+                                    Focus on your strength and how to convey them. Build a personal brand, tailor your
+                                    application materials to each position you apply to, and optimize organic keywords
+                                    for your application materials.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. Is BizBlanca Providing Online Home Jobs?</h4>
+                                <p>
+                                    Bizblanca supports all employees, whether they work remotely or in the workplace. It
+                                    gives you the most efficient way to apply for employment.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -495,15 +599,11 @@
                         <h1 class="need-help-title">Need Help?</h1>
                         <div class="help-queries-wrap">
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. What is BizBlanca?</h4>
+                                <p>
+                                    BizBlanca is a job-search portal for IT professionals that connects job seekers with
+                                    reputable IT companies across the country and helps them discover jobs that
+                                    perfectly fit their needs.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -511,15 +611,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Is BizBlanca Different From Others?</h4>
+                                <p>
+                                    Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a
+                                    dream-come-true platform for applicants who enjoy coding and managing businesses
+                                    using advanced IT technologies.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -527,15 +623,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. Can I Get An IT Job In This Pandemic?</h4>
+                                <p>
+                                    Bravo! You've come to the right place to look for IT jobs from the comfort of your
+                                    own home. You don’t need to roam here & there physically to find a job now. Simply
+                                    create an account on our website and search for your ideal job.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -543,15 +635,11 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?</h4>
+                                <p>
+                                    You certainly can! Let's make it modest to begin your IT career. We've got you
+                                    covered with our IT recruitment expertise and are always ready to help you out with
+                                    the finest available services. Just ping us!
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
@@ -559,15 +647,61 @@
                                 </div>
                             </div>
                             <div class="help-queries">
-                                <h4>Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has
-                                    been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                    took a
-                                    galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five
-                                    centuries.
+                                <h4>Q. How Can I Get A Job?</h4>
+                                <p>
+                                    Bizblanca encourages and supports people who are keen to work in the IT field. All
+                                    you have to do is create & submit a well-optimized CV and wait for the recruiter to
+                                    contact you after applying.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. How To Succeed An IT Interview?</h4>
+                                <p>
+                                    Getting a job interview is an excellent beginning step to your IT career, but
+                                    remember that it's just "half the fight. To succeed in an interview and get the job,
+                                    you need to:
+                                    Make Time For Practice
+                                    Get Well Dressed.
+                                    Thoroughly Research About The Company
+                                    Be Authentic & Fully Confident
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. What IT Jobs Do You Provide?</h4>
+                                <p>
+                                    Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX
+                                    Designer, Database Administrator, and many other IT jobs are available on our site.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?</h4>
+                                <p>
+                                    Focus on your strength and how to convey them. Build a personal brand, tailor your
+                                    application materials to each position you apply to, and optimize organic keywords
+                                    for your application materials.
+                                </p>
+                                <div>
+                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
+                                            class="fas fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="help-queries">
+                                <h4>Q. Is BizBlanca Providing Online Home Jobs?</h4>
+                                <p>
+                                    Bizblanca supports all employees, whether they work remotely or in the workplace. It
+                                    gives you the most efficient way to apply for employment.
                                 </p>
                                 <div>
                                     <a class="read-more-descrp" href="">Read More &nbsp;<i
