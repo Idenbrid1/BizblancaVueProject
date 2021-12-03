@@ -71,6 +71,7 @@ a, button {
 	background-color: #fff;
 	border-radius: 5px;
 	position: relative;
+	height: 100%;
 }
 .left-login, .left-register {
 	background: #081351 0% 0% no-repeat padding-box;
