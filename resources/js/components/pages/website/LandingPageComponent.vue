@@ -1,13 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <span v-if="this.isRole == 'company'">
-            <CompanyNavbar />
-        </span>
-        <span v-if="this.isRole == 'candidate'">
-            <CandidateNavbar />
-        </span>
-                <!-- seconday-Navigation -->
+        <!-- seconday-Navigation -->
         <header class="_secondary-header-nav p-0" id="secondary-header-nav">
             <div class="p-0 m-auto">
                 <ul>
@@ -37,6 +31,12 @@
                 </ul>
             </div>
         </header>
+        <span v-if="this.isRole == 'company'">
+            <CompanyNavbar />
+        </span>
+        <span v-if="this.isRole == 'candidate'">
+            <CandidateNavbar />
+        </span>
         <!-- Hero Banner Section -->
         <section class="main-hero-banner py-5">
             <div class="container">
@@ -386,7 +386,8 @@
                                 </div>
                                 <div class="col-md-6 movie-wrap">
                                     <div class="movie-inner">
-                                        <video controls src="/website/assets/videos/Bizblanca.mp4" width="100%" height="280px"></video>
+                                        <video controls src="/website/assets/videos/Bizblanca.mp4" width="100%"
+                                            height="280px"></video>
                                     </div>
                                 </div>
                                 <div class="col-md-6 movie-wrap-text">
@@ -423,7 +424,8 @@
                                 </div>
                                 <div class="col-md-6 movie-wrap">
                                     <div class="movie-inner">
-                                        <video controls src="/website/assets/videos/Bizblanca.mp4" width="100%" height="280px">
+                                        <video controls src="/website/assets/videos/Bizblanca.mp4" width="100%"
+                                            height="280px">
                                         </video>
                                     </div>
                                 </div>

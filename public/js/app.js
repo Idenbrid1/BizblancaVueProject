@@ -3866,7 +3866,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
+/* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4363,12 +4373,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      isRole: ''
+    };
   },
   components: {
-    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  created: function created() {
+    this.checkRole();
   },
   mounted: function mounted() {
     var swiper = new Swiper(".success-stories-swiper", {
@@ -4384,6 +4404,17 @@ __webpack_require__.r(__webpack_exports__);
         prevEl: ".swiper-button-prev"
       }
     });
+  },
+  methods: {
+    checkRole: function checkRole() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+        if (response.data.success) {
+          _this.isRole = response.data.role;
+        }
+      });
+    }
   }
 });
 
@@ -4400,7 +4431,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
+/* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4764,12 +4805,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      isRole: ''
+    };
   },
   components: {
-    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  created: function created() {
+    this.checkRole();
   },
   mounted: function mounted() {
     var swiper = new Swiper(".help-slider", {
@@ -4807,6 +4858,17 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
     });
+  },
+  methods: {
+    checkRole: function checkRole() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+        if (response.data.success) {
+          _this.isRole = response.data.role;
+        }
+      });
+    }
   }
 });
 
@@ -4831,6 +4893,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var epic_spinners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! epic-spinners */ "./node_modules/epic-spinners/src/lib.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
 //
 //
 //
@@ -29917,6 +29981,14 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
+      this.isRole == "company"
+        ? _c("span", [_c("CompanyNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      this.isRole == "candidate"
+        ? _c("span", [_c("CandidateNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
       _vm._m(6),
       _vm._v(" "),
       _vm._m(7),
@@ -31021,6 +31093,14 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
+      this.isRole == "company"
+        ? _c("span", [_c("CompanyNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      this.isRole == "candidate"
+        ? _c("span", [_c("CandidateNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
       _vm._m(4),
       _vm._v(" "),
       _vm._m(5),
@@ -31749,6 +31829,8 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
       this.isRole == "company"
         ? _c("span", [_c("CompanyNavbar")], 1)
         : _vm._e(),
@@ -31756,8 +31838,6 @@ var render = function () {
       this.isRole == "candidate"
         ? _c("span", [_c("CandidateNavbar")], 1)
         : _vm._e(),
-      _vm._v(" "),
-      _vm._m(0),
       _vm._v(" "),
       _vm._m(1),
       _vm._v(" "),

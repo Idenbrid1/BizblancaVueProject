@@ -35,6 +35,12 @@
                 </ul>
             </div>
         </header>
+        <span v-if="this.isRole == 'company'">
+            <CompanyNavbar />
+        </span>
+        <span v-if="this.isRole == 'candidate'">
+            <CandidateNavbar />
+        </span>
         <!-- Hero Banner Section -->
         <section class="candidate-section pt-5 p-md-0">
             <div class="row no-gutters">
@@ -494,13 +500,23 @@
     </div>
 </template>
 <script>
+    import axios from 'axios';
     import WebsiteNavbar from './partials/navbar.vue';
+    import CompanyNavbar from './partials/CompanyNavbar.vue';
+    import CandidateNavbar from './partials/CandidateNavbar.vue';
     export default {
         data() {
-            return {};
+            return {
+                isRole: '',
+            };
         },
         components: {
             WebsiteNavbar,
+            CompanyNavbar,
+            CandidateNavbar,
+        },
+         created() {
+            this.checkRole()
         },
         mounted() {
             var swiper = new Swiper(".success-stories-swiper", {
@@ -517,6 +533,16 @@
                 },
             });
         },
+        methods: {
+            checkRole() {
+                axios.get('navbar-check-roles')
+                    .then((response) => {
+                        if (response.data.success) {
+                            this.isRole = response.data.role
+                        }
+                    });
+            },
+        }
     };
 
 </script>
