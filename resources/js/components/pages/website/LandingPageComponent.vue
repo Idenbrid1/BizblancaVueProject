@@ -356,10 +356,7 @@
                                 </div>
                                 <div class="col-md-6 movie-wrap">
                                     <div class="movie-inner">
-                                        <iframe src="https://www.youtube.com/embed/MjWJ2deIOkg" frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen="" width="100%" height="280px">
-                                        </iframe>
+                                        <video controls src="/website/assets/videos/Bizblanca.mp4" width="100%" height="280px"></video>
                                     </div>
                                 </div>
                                 <div class="col-md-6 movie-wrap-text">
@@ -396,10 +393,8 @@
                                 </div>
                                 <div class="col-md-6 movie-wrap">
                                     <div class="movie-inner">
-                                        <iframe src="https://www.youtube.com/embed/6NMLf3-ePbQ" frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen="" width="100%" height="280px">
-                                        </iframe>
+                                        <video controls src="/website/assets/videos/Bizblanca.mp4" width="100%" height="280px">
+                                        </video>
                                     </div>
                                 </div>
                                 <div class="col-md-6 movie-wrap-text">

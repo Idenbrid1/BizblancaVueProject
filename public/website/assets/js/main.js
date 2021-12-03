@@ -28,14 +28,14 @@ function closeProfileTab() {
 }
 
 
-let NavBarToggle = 0;
+var _NavBarToggler = 0;
 
 function ShowNavbar() {
-    if (NavBarToggle == 0) {
+    if (_NavBarToggler == 0) {
         document.getElementById("nav-lists").classList.add("_Menus-show");
-        NavBarToggle++
+        _NavBarToggler++
     } else {
-        NavBarToggle = 0;
+        _NavBarToggler = 0;
         document.getElementById("nav-lists").classList.remove("_Menus-show");
     }
 }

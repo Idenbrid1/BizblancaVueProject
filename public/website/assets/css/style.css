@@ -464,11 +464,11 @@ a, button {
 .main-navigation .menu-item {
 	color: #000000;
 	font-size: 16px;
+	padding: 5px;
+	border-radius: 5px;
 }
 .activeCompany {
-	padding: 5px;
 	background: #FFDE59 0% 0% no-repeat padding-box;
-	border-radius: 5px;
 	color: #fff !important;
 	font-size: 15px;
 }
