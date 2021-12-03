@@ -180,6 +180,7 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <span class="show-result-msg" v-if="this.showError == true">Data Not Found</span>
                             </div>
                             <!-- </div> -->
                         </div>
@@ -501,6 +502,7 @@
                 searchData: '',
                 candidateToShow: 3,
                 totalcandidates: 0,
+                showError: false,
             }
         },
         mounted() {
@@ -538,6 +540,7 @@
                     .then((response) => {
                         this.searchData = response.data
                         this.totalcandidates = this.searchData.length
+                        
                     });
             },
             search() {
@@ -545,6 +548,11 @@
                     .then((response) => {
                         this.searchData = response.data
                         this.totalcandidates = this.searchData.length
+                        if(response.data.length == 0){
+                            this.showError = true
+                        }else{
+                            this.showError = false
+                        }
                     });
             },
             keywordSearch() {
@@ -552,6 +560,11 @@
                 .then((response) => {
                     this.searchData = response.data
                     this.totalcandidates = this.searchData.length
+                    if(response.data.length == 0){
+                        this.showError = true
+                    }else{
+                        this.showError = false
+                    }
                 });
             },
             addToWishList(id){

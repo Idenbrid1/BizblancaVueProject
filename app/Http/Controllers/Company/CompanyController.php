@@ -524,7 +524,7 @@ class CompanyController extends Controller
                 'errors' => $validator->errors(),
                 'success' => false,
             ], 200);
-        }
+        } 
         else
         {
             if(Hash::check($request->current_password, Auth::user()->password)){
