@@ -14,10 +14,12 @@ import CompanyProfile from './components/pages/website/company/CompanyProfileCom
 import CompanyPostJob from './components/pages/website/company/CompanyPostJobComponent.vue';
 import CompanyDetail from './components/pages/website/company/CompanyDetailComponent.vue';
 import CompanyDashboard from './components/pages/website/company/CompanyDashboardComponent.vue';
+import CompanyAccountSetting from './components/pages/website/company/CompanyAccountSettingComponent.vue';
 import JobAppliedCandidates from './components/pages/website/company/JobAppliedCandidatesComponent.vue';
 import CandidateDetail from './components/pages/website/candidate/CandidateDetailComponent.vue';
 import CandidateSearch from './components/pages/website/company/CandidateSearchComponent.vue';
 import CandidateDashboard from './components/pages/website/candidate/CandidateDashboardComponent.vue';
+import CandidateAccountSetting from './components/pages/website/candidate/CandidateAccountSettingComponent.vue';
 import CompanySearch from './components/pages/website/candidate/CompanySearchComponent.vue';
 import CompanyChat from './components/pages/website/company/CompanyChatComponent.vue';
 import JobSearch from './components/pages/website/candidate/JobSearchComponent.vue';
@@ -116,6 +118,16 @@ const router = new VueRouter({
             path: '/company-detail/:id',
             name: 'CompanyDetail',
             component: CompanyDetail
+        },
+        {
+            path: '/company-account-setting',
+            name: 'CompanyAccountSetting',
+            component: CompanyAccountSetting
+        },
+        {
+            path: '/candidate-account-setting',
+            name: 'CandidateAccountSetting',
+            component: CandidateAccountSetting
         },
         {
             path: '/job-applied-candidates/:id',

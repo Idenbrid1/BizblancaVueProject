@@ -110,36 +110,6 @@
                 </ul>
             </div>
         </header>
-        <!-- seconday-Navigation -->
-        <header class="_secondary-header-nav p-0" id="secondary-header-nav">
-            <div class="p-0 m-auto">
-                <ul>
-                    <li>
-                        <a href="#news" class="secondaymenu" id="secondary-anker">News</a>
-                        <span class="seprate-line"></span>
-                    </li>
-                    <li>
-                        <a href="#expertise" class="secondaymenu" id="secondary-anker">Looking for A job</a><span
-                            class="seprate-line"></span>
-                    </li>
-                    <li>
-                        <a href="#expertise" class="secondaymenu" id="secondary-anker-2">Looking for Employees</a><span
-                            class="seprate-line"></span>
-                    </li>
-                    <li>
-                        <a href="#happening" class="secondaymenu" id="secondary-anker-3">FAQ</a><span
-                            class="seprate-line"></span>
-                    </li>
-                    <li>
-                        <a href="#video" class="secondaymenu" id="secondary-anker-4">Videos</a><span
-                            class="seprate-line"></span>
-                    </li>
-                    <li>
-                        <a href="#contact" class="secondaymenu" id="secondary-anker-5">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
     </div>
 </template>
 <script>

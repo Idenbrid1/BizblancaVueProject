@@ -1,73 +1,4 @@
 
-//  side nav
-$(document).ready(function () {
-
-    let count = 0;
-    $('#humburger-menu').on('click', (e) => {
-        if (count == 0) {
-            $('.hidden-nav').fadeIn(100);
-            count = 1;
-        } else {
-            $('.hidden-nav').fadeOut(100);
-            count = 0;
-        }
-    });
-});
-
-function removeExperience(e) {
-    let targetvalue = e.target;
-    $(targetvalue).parent().parent().parent().remove();
-}
-
-function openProfileTab() {
-    document.getElementById("Profile-tab-mobile-nav").style.left = "0%";
-}
-
-function closeProfileTab() {
-    document.getElementById("Profile-tab-mobile-nav").style.left = "-100%";
-}
-
-
-let NavBarToggle = 0;
-
-function ShowNavbar() {
-    if (NavBarToggle == 0) {
-        document.getElementById("nav-lists").classList.add("_Menus-show");
-        NavBarToggle++
-    } else {
-        NavBarToggle = 0;
-        document.getElementById("nav-lists").classList.remove("_Menus-show");
-    }
-}
-var swiper = new Swiper(".help-slider", {
-    cssMode: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
-    breakpoints: {
-        640: {
-            slidesPerView: 1,
-        },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-        },
-        1224: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-        },
-    },
-});
 var swiper = new Swiper(".processslider", {
     slidesPerView: 1,
     spaceBetween: 1,
@@ -191,3 +122,44 @@ var swiper = new Swiper(".logoslider", {
         disableOnInteraction: false,
     },
 });
+
+//  side nav
+$(document).ready(function () {
+
+    let count = 0;
+    $('#humburger-menu').on('click', (e) => {
+        if (count == 0) {
+            $('.hidden-nav').fadeIn(100);
+            count = 1;
+        } else {
+            $('.hidden-nav').fadeOut(100);
+            count = 0;
+        }
+    });
+});
+
+function removeExperience(e) {
+    let targetvalue = e.target;
+    $(targetvalue).parent().parent().parent().remove();
+}
+
+function openProfileTab() {
+    document.getElementById("Profile-tab-mobile-nav").style.left = "0%";
+}
+
+function closeProfileTab() {
+    document.getElementById("Profile-tab-mobile-nav").style.left = "-100%";
+}
+
+
+var _NavBarToggler = 0;
+
+function ShowNavbar() {
+    if (_NavBarToggler == 0) {
+        document.getElementById("nav-lists").classList.add("_Menus-show");
+        _NavBarToggler++
+    } else {
+        _NavBarToggler = 0;
+        document.getElementById("nav-lists").classList.remove("_Menus-show");
+    }
+}

@@ -464,11 +464,11 @@ a, button {
 .main-navigation .menu-item {
 	color: #000000;
 	font-size: 16px;
+	padding: 5px;
+	border-radius: 5px;
 }
 .activeCompany {
-	padding: 5px;
 	background: #FFDE59 0% 0% no-repeat padding-box;
-	border-radius: 5px;
 	color: #fff !important;
 	font-size: 15px;
 }
@@ -2054,7 +2054,8 @@ a, button {
 	border-radius: 3px;
 	color: #fff;
 	padding: 13px 30px;
-	font-size: 13px;
+	font-size: 16px;
+	font-weight: bold;
 }
 .cards-info-wrap {
 	justify-content: space-between;
@@ -2194,11 +2195,13 @@ a, button {
 .cv-upload>a {
 	display: flex;
 	background-color: #081351;
-	color: #fff;
+	color: #ffffff;
 	border-radius: 5px;
 	width: fit-content;
-	padding: 10px 30px;
+	padding: 15px 40px;
 	margin-top: 20px;
+	font-size: 16px;
+	font-weight: bold;
 }
 .resume-upload {
 	display: flex;
@@ -2241,7 +2244,7 @@ a, button {
 .certifications-and-payments>.row>.col-9>p {
 	font-size: 16px;
 }
-.paymentDescrpM {
+.payment-descrp-m {
 	font-size: 13px;
 	display: none;
 }

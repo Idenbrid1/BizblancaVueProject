@@ -3866,53 +3866,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
+/* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
 //
 //
 //
@@ -4415,12 +4373,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      isRole: ''
+    };
   },
   components: {
-    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  created: function created() {
+    this.checkRole();
   },
   mounted: function mounted() {
     var swiper = new Swiper(".success-stories-swiper", {
@@ -4436,6 +4404,17 @@ __webpack_require__.r(__webpack_exports__);
         prevEl: ".swiper-button-prev"
       }
     });
+  },
+  methods: {
+    checkRole: function checkRole() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+        if (response.data.success) {
+          _this.isRole = response.data.role;
+        }
+      });
+    }
   }
 });
 
@@ -4452,7 +4431,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
+/* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4790,12 +4805,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      isRole: ''
+    };
   },
   components: {
-    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  created: function created() {
+    this.checkRole();
   },
   mounted: function mounted() {
     var swiper = new Swiper(".help-slider", {
@@ -4833,6 +4858,17 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
     });
+  },
+  methods: {
+    checkRole: function checkRole() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+        if (response.data.success) {
+          _this.isRole = response.data.role;
+        }
+      });
+    }
   }
 });
 
@@ -4857,6 +4893,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var epic_spinners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! epic-spinners */ "./node_modules/epic-spinners/src/lib.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5948,6 +6011,110 @@ __webpack_require__.r(__webpack_exports__);
     WebsiteNavbar: _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
+/* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  data: function data() {
+    return {
+      isRole: ''
+    };
+  },
+  created: function created() {
+    this.checkRole();
+  },
+  methods: {
+    checkRole: function checkRole() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+        if (response.data.success) {
+          _this.isRole = response.data.role;
+        }
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -12090,6 +12257,110 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+/* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
+/* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CompanyNavbar: _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  data: function data() {
+    return {
+      isRole: ''
+    };
+  },
+  created: function created() {
+    this.checkRole();
+  },
+  methods: {
+    checkRole: function checkRole() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+        if (response.data.success) {
+          _this.isRole = response.data.role;
+        }
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyChatComponent.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyChatComponent.vue?vue&type=script&lang=js& ***!
@@ -15255,36 +15526,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -15395,10 +15636,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/website/LandingPageComponent.vue */ "./resources/js/components/pages/website/LandingPageComponent.vue");
 /* harmony import */ var _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/website/ForCompaniesComponent.vue */ "./resources/js/components/pages/website/ForCompaniesComponent.vue");
 /* harmony import */ var _components_pages_website_ForCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/website/ForCandidatesComponent.vue */ "./resources/js/components/pages/website/ForCandidatesComponent.vue");
@@ -15411,20 +15652,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_website_company_CompanyPostJobComponent_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/pages/website/company/CompanyPostJobComponent.vue */ "./resources/js/components/pages/website/company/CompanyPostJobComponent.vue");
 /* harmony import */ var _components_pages_website_company_CompanyDetailComponent_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/pages/website/company/CompanyDetailComponent.vue */ "./resources/js/components/pages/website/company/CompanyDetailComponent.vue");
 /* harmony import */ var _components_pages_website_company_CompanyDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/pages/website/company/CompanyDashboardComponent.vue */ "./resources/js/components/pages/website/company/CompanyDashboardComponent.vue");
-/* harmony import */ var _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/pages/website/company/JobAppliedCandidatesComponent.vue */ "./resources/js/components/pages/website/company/JobAppliedCandidatesComponent.vue");
-/* harmony import */ var _components_pages_website_candidate_CandidateDetailComponent_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/pages/website/candidate/CandidateDetailComponent.vue */ "./resources/js/components/pages/website/candidate/CandidateDetailComponent.vue");
-/* harmony import */ var _components_pages_website_company_CandidateSearchComponent_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/pages/website/company/CandidateSearchComponent.vue */ "./resources/js/components/pages/website/company/CandidateSearchComponent.vue");
-/* harmony import */ var _components_pages_website_candidate_CandidateDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/pages/website/candidate/CandidateDashboardComponent.vue */ "./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue");
-/* harmony import */ var _components_pages_website_candidate_CompanySearchComponent_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/pages/website/candidate/CompanySearchComponent.vue */ "./resources/js/components/pages/website/candidate/CompanySearchComponent.vue");
-/* harmony import */ var _components_pages_website_company_CompanyChatComponent_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/pages/website/company/CompanyChatComponent.vue */ "./resources/js/components/pages/website/company/CompanyChatComponent.vue");
-/* harmony import */ var _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/pages/website/candidate/JobSearchComponent.vue */ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue");
-/* harmony import */ var _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/pages/website/candidate/JobDetailComponent.vue */ "./resources/js/components/pages/website/candidate/JobDetailComponent.vue");
-/* harmony import */ var _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/pages/admin/PackagePlansComponent.vue */ "./resources/js/components/pages/admin/PackagePlansComponent.vue");
-/* harmony import */ var _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/pages/website/ContactUsComponent.vue */ "./resources/js/components/pages/website/ContactUsComponent.vue");
-/* harmony import */ var _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/pages/website/TermsConditionComponent.vue */ "./resources/js/components/pages/website/TermsConditionComponent.vue");
-/* harmony import */ var _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/pages/website/FaqComponent.vue */ "./resources/js/components/pages/website/FaqComponent.vue");
-/* harmony import */ var _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/pages/website/PrivacyPolicyComponent.vue */ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue");
-/* harmony import */ var _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/pages/website/ServicesComponent.vue */ "./resources/js/components/pages/website/ServicesComponent.vue");
+/* harmony import */ var _components_pages_website_company_CompanyAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/pages/website/company/CompanyAccountSettingComponent.vue */ "./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue");
+/* harmony import */ var _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/pages/website/company/JobAppliedCandidatesComponent.vue */ "./resources/js/components/pages/website/company/JobAppliedCandidatesComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_CandidateDetailComponent_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/pages/website/candidate/CandidateDetailComponent.vue */ "./resources/js/components/pages/website/candidate/CandidateDetailComponent.vue");
+/* harmony import */ var _components_pages_website_company_CandidateSearchComponent_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/pages/website/company/CandidateSearchComponent.vue */ "./resources/js/components/pages/website/company/CandidateSearchComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_CandidateDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/pages/website/candidate/CandidateDashboardComponent.vue */ "./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_CandidateAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/pages/website/candidate/CandidateAccountSettingComponent.vue */ "./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_CompanySearchComponent_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/pages/website/candidate/CompanySearchComponent.vue */ "./resources/js/components/pages/website/candidate/CompanySearchComponent.vue");
+/* harmony import */ var _components_pages_website_company_CompanyChatComponent_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/pages/website/company/CompanyChatComponent.vue */ "./resources/js/components/pages/website/company/CompanyChatComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/pages/website/candidate/JobSearchComponent.vue */ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/pages/website/candidate/JobDetailComponent.vue */ "./resources/js/components/pages/website/candidate/JobDetailComponent.vue");
+/* harmony import */ var _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/pages/admin/PackagePlansComponent.vue */ "./resources/js/components/pages/admin/PackagePlansComponent.vue");
+/* harmony import */ var _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/pages/website/ContactUsComponent.vue */ "./resources/js/components/pages/website/ContactUsComponent.vue");
+/* harmony import */ var _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/pages/website/TermsConditionComponent.vue */ "./resources/js/components/pages/website/TermsConditionComponent.vue");
+/* harmony import */ var _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/pages/website/FaqComponent.vue */ "./resources/js/components/pages/website/FaqComponent.vue");
+/* harmony import */ var _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/pages/website/PrivacyPolicyComponent.vue */ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue");
+/* harmony import */ var _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/pages/website/ServicesComponent.vue */ "./resources/js/components/pages/website/ServicesComponent.vue");
 
 
 
@@ -15454,8 +15697,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_27__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_28__["default"]);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_28__["default"]({
+
+
+vue__WEBPACK_IMPORTED_MODULE_29__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_30__["default"]);
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_30__["default"]({
   linkExactActiveClass: 'active',
   routes: [{
     path: "*",
@@ -15522,15 +15767,23 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_28__["default"]({
   }, {
     path: '/candidate-detail/:id',
     name: 'CandidateDetail',
-    component: _components_pages_website_candidate_CandidateDetailComponent_vue__WEBPACK_IMPORTED_MODULE_14__["default"]
+    component: _components_pages_website_candidate_CandidateDetailComponent_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
   }, {
     path: '/company-detail/:id',
     name: 'CompanyDetail',
     component: _components_pages_website_company_CompanyDetailComponent_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
   }, {
+    path: '/company-account-setting',
+    name: 'CompanyAccountSetting',
+    component: _components_pages_website_company_CompanyAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
+  }, {
+    path: '/candidate-account-setting',
+    name: 'CandidateAccountSetting',
+    component: _components_pages_website_candidate_CandidateAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_18__["default"]
+  }, {
     path: '/job-applied-candidates/:id',
     name: 'JobAppliedCandidates',
-    component: _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
+    component: _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_14__["default"]
   }, {
     path: '/company-dashboard',
     name: 'CompanyDashboard',
@@ -15538,31 +15791,31 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_28__["default"]({
   }, {
     path: '/contact-us',
     name: 'ContactUs',
-    component: _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_22__["default"]
+    component: _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_24__["default"]
   }, {
     path: '/privacy-policy',
     name: 'PrivacyPolicy',
-    component: _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_25__["default"]
+    component: _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_27__["default"]
   }, {
     path: '/terms-condition',
     name: 'TermsCondition',
-    component: _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_23__["default"]
+    component: _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_25__["default"]
   }, {
     path: '/services',
     name: 'Services',
-    component: _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_26__["default"]
+    component: _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_28__["default"]
   }, {
     path: '/faq',
     name: 'Faq',
-    component: _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_24__["default"]
+    component: _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_26__["default"]
   }, {
     path: '/company-chat',
     name: 'CompanyChat',
-    component: _components_pages_website_company_CompanyChatComponent_vue__WEBPACK_IMPORTED_MODULE_18__["default"]
+    component: _components_pages_website_company_CompanyChatComponent_vue__WEBPACK_IMPORTED_MODULE_20__["default"]
   }, {
     path: '/candidate-dashboard',
     name: 'CandidateDashboard',
-    component: _components_pages_website_candidate_CandidateDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_16__["default"]
+    component: _components_pages_website_candidate_CandidateDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_17__["default"]
   }, {
     path: '/candidate-reset-password',
     name: 'CandidateResetPassword',
@@ -15574,23 +15827,23 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_28__["default"]({
   }, {
     path: '/candidate-search',
     name: 'CandidateSearch',
-    component: _components_pages_website_company_CandidateSearchComponent_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
+    component: _components_pages_website_company_CandidateSearchComponent_vue__WEBPACK_IMPORTED_MODULE_16__["default"]
   }, {
     path: '/company-search',
     name: 'CompanySearch',
-    component: _components_pages_website_candidate_CompanySearchComponent_vue__WEBPACK_IMPORTED_MODULE_17__["default"]
+    component: _components_pages_website_candidate_CompanySearchComponent_vue__WEBPACK_IMPORTED_MODULE_19__["default"]
   }, {
     path: '/job-search',
     name: 'JobSearch',
-    component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_19__["default"]
+    component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_21__["default"]
   }, {
     path: '/job-detail/:id',
     name: 'JobDetail',
-    component: _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_20__["default"]
+    component: _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_22__["default"]
   }, {
     path: '/package-plans',
     name: 'PackagePlans',
-    component: _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_21__["default"]
+    component: _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_23__["default"]
   }]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
@@ -16077,6 +16330,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.trinity-rings-spinner[data-v-e647c0
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    font-family: 'Red Hat Display', sans-serif;\n}\n.form-field {\n    display: flex;\n    flex-wrap: wrap;\n    margin-bottom: 1.5em;\n}\n.company-form {\n    background-color: #fff;\n    border-radius: 5px;\n    border: 1px solid rgb(201, 201, 201);\n    border-top: 5px solid #081351;\n    padding: 25px;\n}\n.company-custom-toggle .toggle-off,\n.company-custom-toggle .toggle-on {\n    padding-right: 0px;\n    padding-left: 0px;\n}\n\n/*  */\n.company-custom-label {\n    font-size: 16px;\n    font-weight: bold;\n    align-self: center;\n    flex-shrink: 0;\n    flex-basis: 100%;\n    width: 100%;\n    text-align: right;\n    margin-right: 20px;\n}\n@media (min-width: 768px) {\n.company-custom-label {\n        flex-basis: 150px;\n        width: 150px;\n}\n}\n.company-custom-input {\n    border: 1px solid #d9dbdd;\n    flex-grow: 1;\n    font-size: 1.1rem;\n    font-weight: 300;\n    border-radius: 5px;\n    padding: 10px;\n}\n\n/*  */\n.action-update-btn {\n    background-color: #081351;\n}\n.actionBackBtn {\n    background-color: #303030;\n}\n.action-update-btn,\n.actionBackBtn {\n    color: white;\n    width: 22.5%;\n    border: none;\n    padding: 8.8px;\n    border-radius: 5px;\n}\n.company-title {\n    display: flex;\n    align-items: center;\n}\n.company-title>hr {\n    height: 2px;\n    width: 100%;\n    max-width: 36%;\n    background-color: #081351;\n}\n.company-title-text {\n    width: -webkit-max-content;\n    width: -moz-max-content;\n    width: max-content;\n    font-size: 30px;\n    color: #081351;\n    font-weight: bold;\n}\n.company-setting-p {\n    font-size: 16px;\n    color: #757575;\n    margin-bottom: 1.5rem;\n}\n@media screen and (min-width: 786px) {\n.company-setting {\n        max-width: 750px;\n}\n}\n@media screen and (max-width:786px) {\n.company-custom-label {\n        text-align: left;\n        font-size: 14px;\n        margin-bottom: 5px;\n}\n.action-update-btn,\n    .actionBackBtn {\n        width: 42.5%;\n}\n.company-custom-input {\n        font-size: 12px;\n        padding: 10px 10px;\n}\n.comapnytitleText {\n        font-size: 18px;\n}\n.company-title>hr {\n        max-width: 28%;\n}\n}\n.toggle.ios,\n.toggle-on.ios,\n.toggle-off.ios {\n    border-radius: 20px;\n}\n.toggle.ios .toggle-handle {\n    border-radius: 20px;\n}\n.toggle.android {\n    border-radius: 0px;\n}\n.toggle.android .toggle-handle {\n    border-radius: 0px;\n}\n\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateProfileComponent.vue?vue&type=style&index=0&lang=css&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateProfileComponent.vue?vue&type=style&index=0&lang=css& ***!
@@ -16095,6 +16372,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n@media (min-width: 1200px) {\n.container {\n        max-width: 1100px !important;\n}\n.profileLabel,\n    .profile-info-list>li {\n        height: 54px;\n}\n.profile-label {\n        width: 140px;\n}\n}\n\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n* {\n    font-family: 'Red Hat Display', sans-serif;\n}\n.form-field {\n    display: flex;\n    flex-wrap: wrap;\n    margin-bottom: 1.5em;\n}\n.company-form {\n    background-color: #fff;\n    border-radius: 5px;\n    border: 1px solid rgb(201, 201, 201);\n    border-top: 5px solid #081351;\n    padding: 25px;\n}\n.company-custom-toggle .toggle-off,\n.company-custom-toggle .toggle-on {\n    padding-right: 0px;\n    padding-left: 0px;\n}\n\n/*  */\n.company-custom-label {\n    font-size: 16px;\n    font-weight: bold;\n    align-self: center;\n    flex-shrink: 0;\n    flex-basis: 100%;\n    width: 100%;\n    text-align: right;\n    margin-right: 20px;\n}\n@media (min-width: 768px) {\n.company-custom-label {\n        flex-basis: 150px;\n        width: 150px;\n}\n}\n.company-custom-input {\n    border: 1px solid #d9dbdd;\n    flex-grow: 1;\n    font-size: 1.1rem;\n    font-weight: 300;\n    border-radius: 5px;\n    padding: 10px;\n}\n\n/*  */\n.action-update-btn {\n    background-color: #081351;\n}\n.actionBackBtn {\n    background-color: #303030;\n}\n.action-update-btn,\n.actionBackBtn {\n    color: white;\n    width: 22.5%;\n    border: none;\n    padding: 8.8px;\n    border-radius: 5px;\n}\n.company-title {\n    display: flex;\n    align-items: center;\n}\n.company-title>hr {\n    height: 2px;\n    width: 100%;\n    max-width: 36%;\n    background-color: #081351;\n}\n.company-title-text {\n    width: -webkit-max-content;\n    width: -moz-max-content;\n    width: max-content;\n    font-size: 30px;\n    color: #081351;\n    font-weight: bold;\n}\n.company-setting-p {\n    font-size: 16px;\n    color: #757575;\n    margin-bottom: 1.5rem;\n}\n@media screen and (min-width: 786px) {\n.company-setting {\n        max-width: 750px;\n}\n}\n@media screen and (max-width:786px) {\n.company-custom-label {\n        text-align: left;\n        font-size: 14px;\n        margin-bottom: 5px;\n}\n.action-update-btn,\n    .actionBackBtn {\n        width: 42.5%;\n}\n.company-custom-input {\n        font-size: 12px;\n        padding: 10px 10px;\n}\n.comapnytitleText {\n        font-size: 18px;\n}\n.company-title>hr {\n        max-width: 28%;\n}\n}\n.toggle.ios,\n.toggle-on.ios,\n.toggle-off.ios {\n    border-radius: 20px;\n}\n.toggle.ios .toggle-handle {\n    border-radius: 20px;\n}\n.toggle.android {\n    border-radius: 0px;\n}\n.toggle.android .toggle-handle {\n    border-radius: 0px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19437,6 +19738,36 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateProfileComponent.vue?vue&type=style&index=0&lang=css&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateProfileComponent.vue?vue&type=style&index=0&lang=css& ***!
@@ -19464,6 +19795,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateProfileComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CompanyAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CompanyAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CompanyAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -23038,6 +23399,47 @@ component.options.__file = "resources/js/components/pages/website/TermsCondition
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _CandidateAccountSettingComponent_vue_vue_type_template_id_54bb736d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d& */ "./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d&");
+/* harmony import */ var _CandidateAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CandidateAccountSettingComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _CandidateAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _CandidateAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CandidateAccountSettingComponent_vue_vue_type_template_id_54bb736d___WEBPACK_IMPORTED_MODULE_0__.render,
+  _CandidateAccountSettingComponent_vue_vue_type_template_id_54bb736d___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue":
 /*!*****************************************************************************************!*\
   !*** ./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue ***!
@@ -23315,6 +23717,47 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/pages/website/company/CandidateSearchComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _CompanyAccountSettingComponent_vue_vue_type_template_id_f40c8a0e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CompanyAccountSettingComponent.vue?vue&type=template&id=f40c8a0e& */ "./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=template&id=f40c8a0e&");
+/* harmony import */ var _CompanyAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CompanyAccountSettingComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _CompanyAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _CompanyAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CompanyAccountSettingComponent_vue_vue_type_template_id_f40c8a0e___WEBPACK_IMPORTED_MODULE_0__.render,
+  _CompanyAccountSettingComponent_vue_vue_type_template_id_f40c8a0e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -23953,6 +24396,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateAccountSettingComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************!*\
   !*** ./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue?vue&type=script&lang=js& ***!
@@ -24062,6 +24521,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateSearchComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateSearchComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CandidateSearchComponent.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateSearchComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CompanyAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CompanyAccountSettingComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CompanyAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -24482,6 +24957,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader/dist/cjs.js!../../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/candidate/CandidateProfileComponent.vue?vue&type=style&index=0&lang=css&":
 /*!************************************************************************************************************************!*\
   !*** ./resources/js/components/pages/website/candidate/CandidateProfileComponent.vue?vue&type=style&index=0&lang=css& ***!
@@ -24491,6 +24979,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateProfileComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader/dist/cjs.js!../../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateProfileComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateProfileComponent.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CompanyAccountSettingComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader/dist/cjs.js!../../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=style&index=0&lang=css&");
 
 
 /***/ }),
@@ -25423,6 +25924,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d&":
+/*!*****************************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d& ***!
+  \*****************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_template_id_54bb736d___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_template_id_54bb736d___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_template_id_54bb736d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue?vue&type=template&id=45aee5f4&":
 /*!************************************************************************************************************************!*\
   !*** ./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue?vue&type=template&id=45aee5f4& ***!
@@ -25538,6 +26056,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateSearchComponent_vue_vue_type_template_id_7081f00e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateSearchComponent_vue_vue_type_template_id_7081f00e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateSearchComponent.vue?vue&type=template&id=7081f00e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CandidateSearchComponent.vue?vue&type=template&id=7081f00e&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=template&id=f40c8a0e&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=template&id=f40c8a0e& ***!
+  \*************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CompanyAccountSettingComponent_vue_vue_type_template_id_f40c8a0e___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CompanyAccountSettingComponent_vue_vue_type_template_id_f40c8a0e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CompanyAccountSettingComponent_vue_vue_type_template_id_f40c8a0e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CompanyAccountSettingComponent.vue?vue&type=template&id=f40c8a0e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=template&id=f40c8a0e&");
 
 
 /***/ }),
@@ -29935,17 +30470,67 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _vm._m(0),
+      _c(
+        "header",
+        {
+          staticClass: "_secondary-header-nav p-0",
+          attrs: { id: "secondary-header-nav" },
+        },
+        [
+          _c("div", { staticClass: "p-0 m-auto" }, [
+            _c("ul", [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "secondaymenu",
+                      attrs: { to: "/about-us", id: "secondary-anker" },
+                    },
+                    [_vm._v("About Us")]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "seprate-line" }),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
+            ]),
+          ]),
+        ]
+      ),
       _vm._v(" "),
-      _vm._m(1),
+      this.isRole == "company"
+        ? _c("span", [_c("CompanyNavbar")], 1)
+        : _vm._e(),
       _vm._v(" "),
-      _vm._m(2),
+      this.isRole == "candidate"
+        ? _c("span", [_c("CandidateNavbar")], 1)
+        : _vm._e(),
       _vm._v(" "),
-      _vm._m(3),
+      _vm._m(6),
       _vm._v(" "),
-      _vm._m(4),
+      _vm._m(7),
       _vm._v(" "),
-      _vm._m(5),
+      _vm._m(8),
+      _vm._v(" "),
+      _vm._m(9),
+      _vm._v(" "),
+      _vm._m(10),
+      _vm._v(" "),
+      _vm._m(11),
     ],
     1
   )
@@ -29955,47 +30540,150 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#process-section", id: "secondary-anker" },
+        },
+        [_vm._v("Process")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#videos", id: "secondary-anker-2" },
+        },
+        [_vm._v("Videos")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#certificate-section", id: "secondary-anker-3" },
+        },
+        [_vm._v("Certificate")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#testimonials-section", id: "secondary-anker-4" },
+        },
+        [_vm._v("Testimonials")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#testimonials-section", id: "secondary-anker-5" },
+        },
+        [_vm._v("Our People")]
+      ),
+      _vm._v(" "),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#sign-up-now", id: "secondary-anker-5" },
+        },
+        [_vm._v("Signup Now")]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("section", { staticClass: "candidate-section pt-5 p-md-0" }, [
       _c("div", { staticClass: "row no-gutters" }, [
-        _c("section", { staticClass: "col-12 candidate-landing-section" }, [
-          _c("div", { staticClass: "row m-0 banner-candidate" }, [
-            _c("div", { staticClass: "col-12 col-md-6 left-content" }, [
-              _c("div", [
-                _c("h1", [
-                  _vm._v(
-                    "\n                BizBlanca builds IT recruitment community that can source\n                excellent talents to the market.\n              "
+        _c(
+          "section",
+          {
+            staticClass: "col-12 candidate-landing-section",
+            attrs: { id: "about-us" },
+          },
+          [
+            _c("div", { staticClass: "row m-0 banner-candidate" }, [
+              _c("div", { staticClass: "col-12 col-md-6 left-content" }, [
+                _c("div", [
+                  _c("h1", [
+                    _vm._v(
+                      "\n                                BizBlanca builds IT recruitment community that can source\n                                excellent talents to the market.\n                            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                                Under the mission of reducing mismatches in changing jobs,\n                                BizBlanca supports job-hunting activities that allow job\n                                seekers to work for the next company for a long time based on\n                                your background and can surely step up.\n                            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "align-self-start", attrs: { href: "#" } },
+                    [_vm._v("Signup Now")]
                   ),
                 ]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "\n                Under the mission of reducing mismatches in changing jobs,\n                BizBlanca supports job-hunting activities that allow job\n                seekers to work for the next company for a long time based on\n                your background and can surely step up.\n              "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "align-self-start", attrs: { href: "#" } },
-                  [_vm._v("Signup Now")]
-                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-6 p-0 right-image" }, [
+                _c("img", {
+                  staticClass: "candiate-banner-d",
+                  attrs: {
+                    src: "/website/assets/images/candidate-banner-m.png",
+                    alt: "img",
+                  },
+                }),
               ]),
             ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-md-6 p-0 right-image" }, [
-              _c("img", {
-                staticClass: "candiate-banner-d",
-                attrs: {
-                  src: "/website/assets/images/candidate-banner-m.png",
-                  alt: "img",
-                },
-              }),
-            ]),
-          ]),
-        ]),
+          ]
+        ),
         _vm._v(" "),
         _c("h1", { staticClass: "msg-heading" }, [
           _vm._v(
-            "\n        Be scouted and headhunted by the top IT companies of Pakistan\n      "
+            "\n                Be scouted and headhunted by the top IT companies of Pakistan\n            "
           ),
         ]),
         _vm._v(" "),
@@ -30009,13 +30697,13 @@ var staticRenderFns = [
               [
                 _c("span", [
                   _vm._v(
-                    "Upgrade and change your career with style Get scouted by the best\n            companies in Pakistan"
+                    "Upgrade and change your career with style Get scouted by the best\n                        companies in Pakistan"
                   ),
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "offers-job-para" }, [
                   _vm._v(
-                    "\n            In the coming era, it is important to know your own market value.\n            Recieve job and offers and uncover your potential, your value in\n            the industry. Widen your career options and take a look at which\n            top companies want to hire you.\n          "
+                    "\n                        In the coming era, it is important to know your own market value.\n                        Recieve job and offers and uncover your potential, your value in\n                        the industry. Widen your career options and take a look at which\n                        top companies want to hire you.\n                    "
                   ),
                 ]),
                 _vm._v(" "),
@@ -30030,13 +30718,13 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("h3", [
                     _vm._v(
-                      "\n              More than 75% of the job offers on BizBlanca pay 100,000PKR or\n              more.\n            "
+                      "\n                            More than 75% of the job offers on BizBlanca pay 100,000PKR or\n                            more.\n                        "
                     ),
                   ]),
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "\n              We have over 300 job posts for high- paying, professional-level\n              jobs which can set you up for life.\n            "
+                      "\n                            We have over 300 job posts for high- paying, professional-level\n                            jobs which can set you up for life.\n                        "
                     ),
                   ]),
                 ]),
@@ -30052,13 +30740,13 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("h3", [
                     _vm._v(
-                      "\n              With around 200 companies, we select the best companies across\n              the country\n            "
+                      "\n                            With around 200 companies, we select the best companies across\n                            the country\n                        "
                     ),
                   ]),
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "\n              We only work with the top companies of Pakistan to bring you job\n              offers that will give your career a big boost.\n            "
+                      "\n                            We only work with the top companies of Pakistan to bring you job\n                            offers that will give your career a big boost.\n                        "
                     ),
                   ]),
                 ]),
@@ -30080,7 +30768,7 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "\n              We are job hunting specialists and our team of experts will\n              support your career upgrade with dedication and consistency.\n            "
+                      "\n                            We are job hunting specialists and our team of experts will\n                            support your career upgrade with dedication and consistency.\n                        "
                     ),
                   ]),
                 ]),
@@ -30101,13 +30789,15 @@ var staticRenderFns = [
       "section",
       {
         staticClass: "career-upgrade-process container",
-        attrs: { id: "process" },
+        attrs: { id: "process-section" },
       },
       [
         _c("div", { staticClass: "content-career-steps" }, [
           _c("h2", { staticClass: "heading-div" }, [
             _c("div", { staticClass: "mr-2 title-effect" }),
-            _vm._v("\n        The career upgrade process\n      "),
+            _vm._v(
+              "\n                The career upgrade process\n            "
+            ),
           ]),
           _vm._v(" "),
           _c("p", [_vm._v("Follow these steps for career success")]),
@@ -30152,7 +30842,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "\n              Become a top-ranking candidate, a.k.a a “Bizer’, and recieve job\n              offers\n            "
+                    "\n                            Become a top-ranking candidate, a.k.a a “Bizer’, and recieve job\n                            offers\n                        "
                   ),
                 ]),
               ]),
@@ -30177,7 +30867,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "\n              Attend a job interview and introduce yourself to your dream\n              company\n            "
+                    "\n                            Attend a job interview and introduce yourself to your dream\n                            company\n                        "
                   ),
                 ]),
               ]),
@@ -30217,7 +30907,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "\n        We have expertises in 20 specialist sectors, from Project Manager to\n        Developers. We want to partner with experienced IT recruitment team in\n        these, and other, sectors across Pakistan to build successful\n        partnership and improve more lives through work.\n      "
+              "\n                We have expertises in 20 specialist sectors, from Project Manager to\n                Developers. We want to partner with experienced IT recruitment team in\n                these, and other, sectors across Pakistan to build successful\n                partnership and improve more lives through work.\n            "
             ),
           ]),
           _vm._v(" "),
@@ -30467,66 +31157,75 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "bg-Grey" }, [
-      _c("section", { staticClass: "upload-your-cv container" }, [
-        _c("div", { staticClass: "row no-gutters" }, [
-          _c("div", { staticClass: "col-12 col-md-6 cv-upload" }, [
-            _c("h3", { staticClass: "heading-div" }, [
-              _c("div", { staticClass: "mr-2 title-effect" }),
-              _vm._v("\n            What's Next...\n          "),
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n            We're here to help you take your next step in the world of work,\n            wherever or whatever it is.\n          "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "#" } }, [_vm._v("Upload your CV")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "reply-img" }, [
-              _c("img", {
-                attrs: {
-                  src: "/website/assets/images/reply.svg",
-                  alt: "reply",
-                },
-              }),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-md-6 resume-upload" }, [
-            _c("div", { staticClass: "row no-gutters" }, [
-              _c("div", { staticClass: "col-12 col-md-8" }, [
+      _c(
+        "section",
+        {
+          staticClass: "upload-your-cv container",
+          attrs: { id: "certificate-section" },
+        },
+        [
+          _c("div", { staticClass: "row no-gutters" }, [
+            _c("div", { staticClass: "col-12 col-md-6 cv-upload" }, [
+              _c("h3", { staticClass: "heading-div" }, [
+                _c("div", { staticClass: "mr-2 title-effect" }),
+                _vm._v(
+                  "\n                        What's Next...\n                    "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        We're here to help you take your next step in the world of work,\n                        wherever or whatever it is.\n                    "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Upload your CV")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "reply-img" }, [
                 _c("img", {
                   attrs: {
-                    height: "250",
-                    width: "235",
-                    src: "/website/assets/images/resume.svg",
-                    alt: "img",
+                    src: "/website/assets/images/reply.svg",
+                    alt: "reply",
                   },
                 }),
               ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c("div", [
-                  _c("span", { staticClass: "upload-text" }, [
-                    _vm._v("Upload"),
-                  ]),
-                  _vm._v(" "),
-                  _c("h3", { staticClass: "your-cv-online-text" }, [
-                    _vm._v("your cv online"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "content_para" }, [
-                    _vm._v(
-                      "\n                  Your CV is the first impression recruiters have of you. Most\n                  of the candidates still have a CV that looks like this. Are\n                  you one of them? If you are, there is an opportunity to turn\n                  it into a CV that will get you the WOW effect...\n                "
-                    ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-6 resume-upload" }, [
+              _c("div", { staticClass: "row no-gutters" }, [
+                _c("div", { staticClass: "col-12 col-md-8" }, [
+                  _c("img", {
+                    attrs: {
+                      height: "250",
+                      width: "235",
+                      src: "/website/assets/images/resume.svg",
+                      alt: "img",
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-12 col-md-4" }, [
+                  _c("div", [
+                    _c("span", { staticClass: "upload-text" }, [
+                      _vm._v("Upload"),
+                    ]),
+                    _vm._v(" "),
+                    _c("h3", { staticClass: "your-cv-online-text" }, [
+                      _vm._v("your cv online"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "content_para" }, [
+                      _vm._v(
+                        "\n                                    Your CV is the first impression recruiters have of you. Most\n                                    of the candidates still have a CV that looks like this. Are\n                                    you one of them? If you are, there is an opportunity to turn\n                                    it into a CV that will get you the WOW effect...\n                                "
+                      ),
+                    ]),
                   ]),
                 ]),
               ]),
             ]),
           ]),
-        ]),
-      ]),
+        ]
+      ),
       _vm._v(" "),
       _c(
         "section",
@@ -30550,7 +31249,7 @@ var staticRenderFns = [
                 _vm._v("BizBlanca Certification and Payment Partnership"),
               ]),
               _vm._v(" "),
-              _c("p", [
+              _c("p", { staticStyle: { "font-weight": "500" } }, [
                 _vm._v(
                   "Are you worried about your work? Everyone has some worries."
                 ),
@@ -30558,7 +31257,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "payment-descrp-d" }, [
                 _vm._v(
-                  "\n            At BizBlanca, we have a Payment Partnership with Bizers who have\n            BizBlanca Certification in order to eliminate the anxiety about\n            salary that many people have. This is a mechanism that allows you\n            to concentrate on your work stress-free by having our company\n            intervene and take over the work of receiving salary so that the\n            company you work for will pay your salary smoothly when you work\n            through BizBlanca.\n          "
+                  "\n                        At BizBlanca, we have a Payment Partnership with Bizers who have\n                        BizBlanca Certification in order to eliminate the anxiety about\n                        salary that many people have. This is a mechanism that allows you\n                        to concentrate on your work stress-free by having our company\n                        intervene and take over the work of receiving salary so that the\n                        company you work for will pay your salary smoothly when you work\n                        through BizBlanca.\n                    "
                 ),
               ]),
             ]),
@@ -30566,7 +31265,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", { staticClass: "payment-descrp-m" }, [
             _vm._v(
-              "\n        At BizBlanca, we have a Payment Partnership with Bizers who have\n        BizBlanca Certification in order to eliminate the anxiety about salary\n        that many people have. This is a mechanism that allows you to\n        concentrate on your work stress-free by having our company intervene\n        and take over the work of receiving salary so that the company you\n        work for will pay your salary smoothly when you work through\n        BizBlanca.\n      "
+              "\n                At BizBlanca, we have a Payment Partnership with Bizers who have\n                BizBlanca Certification in order to eliminate the anxiety about salary\n                that many people have. This is a mechanism that allows you to\n                concentrate on your work stress-free by having our company intervene\n                and take over the work of receiving salary so that the company you\n                work for will pay your salary smoothly when you work through\n                BizBlanca.\n            "
             ),
           ]),
         ]
@@ -30581,12 +31280,12 @@ var staticRenderFns = [
       "section",
       {
         staticClass: "success-stories container",
-        attrs: { id: "Testimonials" },
+        attrs: { id: "testimonials-section" },
       },
       [
         _c("h3", { staticClass: "heading-div my-md-5" }, [
           _c("div", { staticClass: "mr-2 title-effect" }),
-          _vm._v("\n      BizBlanca's Success Stories\n    "),
+          _vm._v("\n            BizBlanca's Success Stories\n        "),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "swiper success-stories-swiper" }, [
@@ -30613,7 +31312,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
-                    "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    "\n                            After being scouted and hired by my company through BizBlanca, I\n                            have become an accomplished and multifaceted technology leader\n                            with 4 years of exceptional expertise in the provisions of\n                            Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n                            as Backend Development (Php Laravel). I am now working as a team\n                            leader in a multi-national company where I direct and lead a\n                            professional team under my supervision and I also manage\n                            client-based projects efficiently. I was unhappy, underpaid and\n                            underperforming in my previous job but this career transition\n                            allowed me to become the best version of myself. Signing up to\n                            BizBlanca allowed me to sit back and be hired by the right\n                            company that have appreciated and understood my value and worth.\n                        "
                   ),
                 ]),
               ]),
@@ -30641,7 +31340,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
-                    "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    "\n                            After being scouted and hired by my company through BizBlanca, I\n                            have become an accomplished and multifaceted technology leader\n                            with 4 years of exceptional expertise in the provisions of\n                            Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n                            as Backend Development (Php Laravel). I am now working as a team\n                            leader in a multi-national company where I direct and lead a\n                            professional team under my supervision and I also manage\n                            client-based projects efficiently. I was unhappy, underpaid and\n                            underperforming in my previous job but this career transition\n                            allowed me to become the best version of myself. Signing up to\n                            BizBlanca allowed me to sit back and be hired by the right\n                            company that have appreciated and understood my value and worth.\n                        "
                   ),
                 ]),
               ]),
@@ -30669,7 +31368,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
-                    "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    "\n                            After being scouted and hired by my company through BizBlanca, I\n                            have become an accomplished and multifaceted technology leader\n                            with 4 years of exceptional expertise in the provisions of\n                            Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n                            as Backend Development (Php Laravel). I am now working as a team\n                            leader in a multi-national company where I direct and lead a\n                            professional team under my supervision and I also manage\n                            client-based projects efficiently. I was unhappy, underpaid and\n                            underperforming in my previous job but this career transition\n                            allowed me to become the best version of myself. Signing up to\n                            BizBlanca allowed me to sit back and be hired by the right\n                            company that have appreciated and understood my value and worth.\n                        "
                   ),
                 ]),
               ]),
@@ -30697,7 +31396,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", { staticClass: "candidate-success-descrp" }, [
                   _vm._v(
-                    "\n              After being scouted and hired by my company through BizBlanca, I\n              have become an accomplished and multifaceted technology leader\n              with 4 years of exceptional expertise in the provisions of\n              Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n              as Backend Development (Php Laravel). I am now working as a team\n              leader in a multi-national company where I direct and lead a\n              professional team under my supervision and I also manage\n              client-based projects efficiently. I was unhappy, underpaid and\n              underperforming in my previous job but this career transition\n              allowed me to become the best version of myself. Signing up to\n              BizBlanca allowed me to sit back and be hired by the right\n              company that have appreciated and understood my value and worth.\n            "
+                    "\n                            After being scouted and hired by my company through BizBlanca, I\n                            have become an accomplished and multifaceted technology leader\n                            with 4 years of exceptional expertise in the provisions of\n                            Frontend Development (HTML, CSS, BOOTSTRAP, React js), as well\n                            as Backend Development (Php Laravel). I am now working as a team\n                            leader in a multi-national company where I direct and lead a\n                            professional team under my supervision and I also manage\n                            client-based projects efficiently. I was unhappy, underpaid and\n                            underperforming in my previous job but this career transition\n                            allowed me to become the best version of myself. Signing up to\n                            BizBlanca allowed me to sit back and be hired by the right\n                            company that have appreciated and understood my value and worth.\n                        "
                   ),
                 ]),
               ]),
@@ -30746,7 +31445,7 @@ var staticRenderFns = [
                             staticStyle: { "background-color": "#fff" },
                           }),
                           _vm._v(
-                            "\n                  Vidoes\n                "
+                            "\n                                    Vidoes\n                                "
                           ),
                         ]
                       ),
@@ -30754,13 +31453,10 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-6 movie-wrap" }, [
                       _c("div", { staticClass: "movie-inner" }, [
-                        _c("iframe", {
+                        _c("video", {
                           attrs: {
-                            src: "https://www.youtube.com/embed/djqoRNnDqFU",
-                            frameborder: "0",
-                            allow:
-                              "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-                            allowfullscreen: "",
+                            controls: "",
+                            src: "/website/assets/videos/Bizblanca.mp4",
                             width: "100%",
                             height: "280px",
                           },
@@ -30777,14 +31473,14 @@ var staticRenderFns = [
                         },
                         [
                           _vm._v(
-                            "\n                  CEO Message for Candidates\n                "
+                            "\n                                    CEO Message for Candidates\n                                "
                           ),
                         ]
                       ),
                       _vm._v(" "),
                       _c("p", { staticClass: "ceo-msg-description pt-3" }, [
                         _vm._v(
-                          "\n                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                  Quibusdam non earum impedit commodi tempora sequi? Eligendi\n                  fugit facere eveniet incidunt, tempora maiores esse\n                  doloremque rerum fugiat ducimus velit veniam possimus.\n                "
+                          "\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                                    Quibusdam non earum impedit commodi tempora sequi? Eligendi\n                                    fugit facere eveniet incidunt, tempora maiores esse\n                                    doloremque rerum fugiat ducimus velit veniam possimus.\n                                "
                         ),
                       ]),
                       _vm._v(" "),
@@ -30803,7 +31499,9 @@ var staticRenderFns = [
                               attrs: { href: "./comming.html" },
                             },
                             [
-                              _vm._v("Read More\n                    "),
+                              _vm._v(
+                                "Read More\n                                        "
+                              ),
                               _c("i", {
                                 staticClass: "fa fa-long-arrow-right",
                                 attrs: { "aria-hidden": "true" },
@@ -30828,7 +31526,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "resume-builder container", attrs: { id: "signupnow" } },
+      { staticClass: "resume-builder container", attrs: { id: "sign-up-now" } },
       [
         _c("div", { staticClass: "row no-gutters resume-builder-row" }, [
           _c("div", { staticClass: "col-12 col-md-3" }, [
@@ -30852,7 +31550,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-12 col-md-9 p-2" }, [
             _c("p", [
               _vm._v(
-                "\n          If you would like to be part of us, please sign up and upload your\n          resume. Your career journey will begin with us.\n        "
+                "\n                    If you would like to be part of us, please sign up and upload your\n                    resume. Your career journey will begin with us.\n                "
               ),
             ]),
             _vm._v(" "),
@@ -30887,11 +31585,127 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [_c("WebsiteNavbar"), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1)],
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      _c(
+        "header",
+        {
+          staticClass: "_secondary-header-nav p-0",
+          attrs: { id: "secondary-header-nav" },
+        },
+        [
+          _c("div", { staticClass: "p-0 m-auto" }, [
+            _c("ul", [
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "secondaymenu",
+                      attrs: { to: "/contact-us", id: "secondary-anker-5" },
+                    },
+                    [_vm._v("Contact")]
+                  ),
+                ],
+                1
+              ),
+            ]),
+          ]),
+        ]
+      ),
+      _vm._v(" "),
+      this.isRole == "company"
+        ? _c("span", [_c("CompanyNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      this.isRole == "candidate"
+        ? _c("span", [_c("CandidateNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      _vm._m(4),
+      _vm._v(" "),
+      _vm._m(5),
+    ],
     1
   )
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#why-bizblanca", id: "secondary-anker" },
+        },
+        [_vm._v("Why BizBlanca")]
+      ),
+      _vm._v(" "),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#flow-of-use", id: "secondary-anker-3" },
+        },
+        [_vm._v("Flow of Use")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#faq-section", id: "secondary-anker-4" },
+        },
+        [_vm._v("FAQS")]
+      ),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "secondaymenu",
+          attrs: { href: "#testimonals-section", id: "secondary-anker-5" },
+        },
+        [_vm._v("Testimonials")]
+      ),
+      _vm._v(" "),
+      _c("span", { staticClass: "seprate-line" }),
+    ])
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -31256,150 +32070,205 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "company-testimonial container" }, [
-        _c("h4", { staticClass: "heading-div testimonials-text" }, [
-          _c("div", { staticClass: "mr-2 title-effect" }),
-          _vm._v("\n                Testimonials\n            "),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row no-gutters" }, [
-          _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonial-card testimonial-card-1" }, [
-              _c("img", {
-                staticClass: "testimonial-card-img",
-                attrs: {
-                  src: "/website/assets/images/Group 1386.png",
-                  alt: "1",
-                },
-              }),
-              _vm._v(" "),
-              _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("Before"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("After"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
-                ),
-              ]),
-            ]),
+      _c(
+        "div",
+        {
+          staticClass: "company-testimonial container",
+          attrs: { id: "testimonals-section" },
+        },
+        [
+          _c("h4", { staticClass: "heading-div testimonials-text" }, [
+            _c("div", { staticClass: "mr-2 title-effect" }),
+            _vm._v("\n                Testimonials\n            "),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonial-card testimonial-card-2" }, [
-              _c("img", {
-                staticClass: "testimonial-card-img",
-                attrs: {
-                  src: "/website/assets/images/Group 1385.png",
-                  alt: "2",
-                },
-              }),
-              _vm._v(" "),
-              _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("Before"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("After"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
-                ),
-              ]),
+          _c("div", { staticClass: "row no-gutters" }, [
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "testimonial-card testimonial-card-1" },
+                [
+                  _c("img", {
+                    staticClass: "testimonial-card-img",
+                    attrs: {
+                      src: "/website/assets/images/Group 1386.png",
+                      alt: "1",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("Before"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("After"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "testimonial-card testimonial-card-2" },
+                [
+                  _c("img", {
+                    staticClass: "testimonial-card-img",
+                    attrs: {
+                      src: "/website/assets/images/Group 1385.png",
+                      alt: "2",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("Before"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("After"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "testimonial-card testimonial-card-3" },
+                [
+                  _c("img", {
+                    staticClass: "testimonial-card-img",
+                    attrs: {
+                      src: "/website/assets/images/Group 1391.png",
+                      alt: "2",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("Before"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("After"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "testimonial-card testimonial-card-4" },
+                [
+                  _c("img", {
+                    staticClass: "testimonial-card-img",
+                    attrs: {
+                      src: "/website/assets/images/Group 1394.png",
+                      alt: "3",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("Before"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonial-card-box my-1" }, [
+                    _vm._v("After"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "testimonial-card-box-content my-1" },
+                    [
+                      _vm._v(
+                        "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
             ]),
           ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonial-card testimonial-card-3" }, [
-              _c("img", {
-                staticClass: "testimonial-card-img",
-                attrs: {
-                  src: "/website/assets/images/Group 1391.png",
-                  alt: "2",
-                },
-              }),
-              _vm._v(" "),
-              _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("Before"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("After"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
-                ),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-lg-6" }, [
-            _c("div", { staticClass: "testimonial-card testimonial-card-4" }, [
-              _c("img", {
-                staticClass: "testimonial-card-img",
-                attrs: {
-                  src: "/website/assets/images/Group 1394.png",
-                  alt: "3",
-                },
-              }),
-              _vm._v(" "),
-              _c("h1", { staticClass: "mt-4" }, [_vm._v("Tech World")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("Before"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld is a leading cybersecurity and engineering solutions\n                            company with vast experience in multiple services such as\n                            security product\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box my-1" }, [
-                _vm._v("After"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonial-card-box-content my-1" }, [
-                _vm._v(
-                  "\n                            TechWorld now have more services such as malware research and\n                            managed services for customers around the globe and with the\n                            services of BizBlanca could get more better resource for their\n                            research work and future goals.\n                        "
-                ),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
+        ]
+      ),
       _vm._v(" "),
       _c(
         "div",
@@ -31426,7 +32295,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass: "company-faqs container px-2",
-          attrs: { id: "faqs-sec" },
+          attrs: { id: "faq-section" },
         },
         [
           _c("h4", { staticClass: "my-2 heading-div" }, [
@@ -31491,6 +32360,8 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
       this.isRole == "company"
         ? _c("span", [_c("CompanyNavbar")], 1)
         : _vm._e(),
@@ -31498,8 +32369,6 @@ var render = function () {
       this.isRole == "candidate"
         ? _c("span", [_c("CandidateNavbar")], 1)
         : _vm._e(),
-      _vm._v(" "),
-      _vm._m(0),
       _vm._v(" "),
       _vm._m(1),
       _vm._v(" "),
@@ -31511,6 +32380,8 @@ var render = function () {
       _vm._v(" "),
       _vm._m(5),
       _vm._v(" "),
+      _vm._m(6),
+      _vm._v(" "),
       _c(
         "section",
         { staticClass: "sixth-section py-5", attrs: { id: "contact" } },
@@ -31520,7 +32391,7 @@ var render = function () {
               _c("div", { staticClass: "col-md-6 col-12 w-100 p-0 pr-md-5" }, [
                 _c("form", { attrs: { action: "" } }, [
                   _c("div", { staticClass: "row m-0" }, [
-                    _vm._m(6),
+                    _vm._m(7),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-12 px-2" }, [
                       _c("div", { staticClass: "form-group" }, [
@@ -31784,7 +32655,7 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _vm._m(7),
+              _vm._m(8),
             ]),
           ]),
         ]
@@ -31794,6 +32665,95 @@ var render = function () {
   )
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "header",
+      {
+        staticClass: "_secondary-header-nav p-0",
+        attrs: { id: "secondary-header-nav" },
+      },
+      [
+        _c("div", { staticClass: "p-0 m-auto" }, [
+          _c("ul", [
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#news", id: "secondary-anker" },
+                },
+                [_vm._v("News")]
+              ),
+              _vm._v(" "),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#expertise", id: "secondary-anker" },
+                },
+                [_vm._v("Looking for A job")]
+              ),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#expertise", id: "secondary-anker-2" },
+                },
+                [_vm._v("Looking for Employees")]
+              ),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#happening", id: "secondary-anker-3" },
+                },
+                [_vm._v("FAQ")]
+              ),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#video", id: "secondary-anker-4" },
+                },
+                [_vm._v("Videos")]
+              ),
+              _c("span", { staticClass: "seprate-line" }),
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "secondaymenu",
+                  attrs: { href: "#contact", id: "secondary-anker-5" },
+                },
+                [_vm._v("Contact")]
+              ),
+            ]),
+          ]),
+        ]),
+      ]
+    )
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -32576,13 +33536,10 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-6 movie-wrap" }, [
                     _c("div", { staticClass: "movie-inner" }, [
-                      _c("iframe", {
+                      _c("video", {
                         attrs: {
-                          src: "https://www.youtube.com/embed/MjWJ2deIOkg",
-                          frameborder: "0",
-                          allow:
-                            "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-                          allowfullscreen: "",
+                          controls: "",
+                          src: "/website/assets/videos/Bizblanca.mp4",
                           width: "100%",
                           height: "280px",
                         },
@@ -32660,13 +33617,10 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-6 movie-wrap" }, [
                     _c("div", { staticClass: "movie-inner" }, [
-                      _c("iframe", {
+                      _c("video", {
                         attrs: {
-                          src: "https://www.youtube.com/embed/6NMLf3-ePbQ",
-                          frameborder: "0",
-                          allow:
-                            "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-                          allowfullscreen: "",
+                          controls: "",
+                          src: "/website/assets/videos/Bizblanca.mp4",
                           width: "100%",
                           height: "280px",
                         },
@@ -33350,6 +34304,184 @@ var staticRenderFns = [
                 "\n                        If you have a BizBlanca jobseeker account, you can stop receiving emails by updating your\n                        preferences in your MyPage account settings.\n                    "
               ),
             ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d&":
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      this.isRole == "company"
+        ? _c("span", [_c("CompanyNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      this.isRole == "candidate"
+        ? _c("span", [_c("CandidateNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      _vm._m(0),
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container company-setting py-5" }, [
+      _c("div", { staticClass: "company-title mb-3" }, [
+        _c("hr", { staticClass: "ml-0" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "company-title-text" }, [_vm._v("Settings")]),
+        _vm._v(" "),
+        _c("hr", { staticClass: "mr-0" }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "text-left  company-setting-p" }, [
+        _vm._v(
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean\n            commodo ligula eget dolor. Aenean masa. Cum sociis natoque penatibus et magnis dis parturient monten.\n        "
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "company-form" }, [
+        _c("form", [
+          _c("div", { staticClass: "form-field" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "email" },
+              },
+              [_vm._v("Email:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "company-custom-input",
+              attrs: {
+                id: "email",
+                required: "",
+                type: "email",
+                placeholder: "Enter Email",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-field" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "password" },
+              },
+              [_vm._v("Password:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "company-custom-input",
+              attrs: {
+                name: "password",
+                type: "password",
+                placeholder: "Enter Password",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-field" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "newpassword" },
+              },
+              [_vm._v("New Password:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "company-custom-input",
+              attrs: {
+                name: "newpassword",
+                type: "password",
+                placeholder: "Enter new password",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-field" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "confirmpassword" },
+              },
+              [_vm._v("Confirm\n                        Password:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "company-custom-input",
+              attrs: {
+                name: "confirmpassword",
+                type: "password",
+                placeholder: "Enter confirm password",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-field company-custom-toggle" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "account" },
+              },
+              [_vm._v("Activate Account:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "customtoggle",
+              attrs: {
+                type: "checkbox",
+                checked: "",
+                "data-toggle": "toggle",
+                "data-style": "ios",
+                "data-on": "Activate",
+                "data-off": "Deactivate",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group text-center m-0" }, [
+            _c("button", { staticClass: "action-update-btn" }, [
+              _vm._v("Update"),
+            ]),
+            _vm._v(" "),
+            _c("button", { staticClass: "actionBackBtn" }, [_vm._v("Back")]),
           ]),
         ]),
       ]),
@@ -49114,6 +50246,184 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=template&id=f40c8a0e&":
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyAccountSettingComponent.vue?vue&type=template&id=f40c8a0e& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("WebsiteNavbar"),
+      _vm._v(" "),
+      this.isRole == "company"
+        ? _c("span", [_c("CompanyNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      this.isRole == "candidate"
+        ? _c("span", [_c("CandidateNavbar")], 1)
+        : _vm._e(),
+      _vm._v(" "),
+      _vm._m(0),
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container company-setting py-5" }, [
+      _c("div", { staticClass: "company-title mb-3" }, [
+        _c("hr", { staticClass: "ml-0" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "company-title-text" }, [_vm._v("Settings")]),
+        _vm._v(" "),
+        _c("hr", { staticClass: "mr-0" }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "text-left  company-setting-p" }, [
+        _vm._v(
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean\n            commodo ligula eget dolor. Aenean masa. Cum sociis natoque penatibus et magnis dis parturient monten.\n        "
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "company-form" }, [
+        _c("form", [
+          _c("div", { staticClass: "form-field" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "email" },
+              },
+              [_vm._v("Email:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "company-custom-input",
+              attrs: {
+                id: "email",
+                required: "",
+                type: "email",
+                placeholder: "Enter Email",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-field" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "password" },
+              },
+              [_vm._v("Password:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "company-custom-input",
+              attrs: {
+                name: "password",
+                type: "password",
+                placeholder: "Enter Password",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-field" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "newpassword" },
+              },
+              [_vm._v("New Password:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "company-custom-input",
+              attrs: {
+                name: "newpassword",
+                type: "password",
+                placeholder: "Enter new password",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-field" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "confirmpassword" },
+              },
+              [_vm._v("Confirm\n                        Password:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "company-custom-input",
+              attrs: {
+                name: "confirmpassword",
+                type: "password",
+                placeholder: "Enter confirm password",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-field company-custom-toggle" }, [
+            _c(
+              "label",
+              {
+                staticClass: "label--required company-custom-label",
+                attrs: { for: "account" },
+              },
+              [_vm._v("Activate Account:")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "customtoggle",
+              attrs: {
+                type: "checkbox",
+                checked: "",
+                "data-toggle": "toggle",
+                "data-style": "ios",
+                "data-on": "Activate",
+                "data-off": "Deactivate",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group text-center m-0" }, [
+            _c("button", { staticClass: "action-update-btn" }, [
+              _vm._v("Update"),
+            ]),
+            _vm._v(" "),
+            _c("button", { staticClass: "actionBackBtn" }, [_vm._v("Back")]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyChatComponent.vue?vue&type=template&id=656e69e4&":
 /*!******************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/company/CompanyChatComponent.vue?vue&type=template&id=656e69e4& ***!
@@ -56932,8 +58242,6 @@ var render = function () {
         1
       ),
     ]),
-    _vm._v(" "),
-    _vm._m(8),
   ])
 }
 var staticRenderFns = [
@@ -57045,95 +58353,6 @@ var staticRenderFns = [
         _vm._v(" Contact"),
       ]),
     ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "header",
-      {
-        staticClass: "_secondary-header-nav p-0",
-        attrs: { id: "secondary-header-nav" },
-      },
-      [
-        _c("div", { staticClass: "p-0 m-auto" }, [
-          _c("ul", [
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#news", id: "secondary-anker" },
-                },
-                [_vm._v("News")]
-              ),
-              _vm._v(" "),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#expertise", id: "secondary-anker" },
-                },
-                [_vm._v("Looking for A job")]
-              ),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#expertise", id: "secondary-anker-2" },
-                },
-                [_vm._v("Looking for Employees")]
-              ),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#happening", id: "secondary-anker-3" },
-                },
-                [_vm._v("FAQ")]
-              ),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#video", id: "secondary-anker-4" },
-                },
-                [_vm._v("Videos")]
-              ),
-              _c("span", { staticClass: "seprate-line" }),
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "secondaymenu",
-                  attrs: { href: "#contact", id: "secondary-anker-5" },
-                },
-                [_vm._v("Contact")]
-              ),
-            ]),
-          ]),
-        ]),
-      ]
-    )
   },
 ]
 render._withStripped = true
@@ -77460,7 +78679,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 

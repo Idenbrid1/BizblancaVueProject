@@ -5,6 +5,10 @@
     .site-heading {
         font-size: 20px;
     }
+    .left-content>div>a{
+        font-size: 13px;
+        padding: 7px 16px;
+    }
     .rm0 {
         border-radius: 0px !important;   
     }
@@ -834,7 +838,7 @@
         letter-spacing: 1px;
     }
 
-    .paymentDescrpM {
+    .payment-descrp-m {
         font-size: 13px;
         display: block;
     }
@@ -873,9 +877,10 @@
         color: #fff;
         border-radius: 5px;
         width: fit-content;
-        padding: 8px 20px;
+        padding: 7px 15px;
         margin-top: 20px;
         font-size: 12px;
+        font-weight: bold;
     }
 
     .resume-upload>img {
