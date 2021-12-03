@@ -1798,6 +1798,7 @@ a, button {
 	display: flex;
 	align-items: center;
 	margin-top: 10px;
+	padding-left: 10px;
 }
 .candidate-list-fav>li {
 	display: flex;
@@ -1837,11 +1838,12 @@ a, button {
     margin: 0px;
 	/* transform: rotate(-34deg); */
 }
-.job-post-ions {
+.job-post-icons {
 	display: block;
+	color: #757575 !important;
 }
-.job-post-ions>i {
-	color: #757575;
+.job-post-icons>i {
+	color: #757575 !important;
 	margin: 0px 5px;
 	padding-top: 15px;
 }
@@ -2367,6 +2369,10 @@ a, button {
 	}
 	.job-list-fav, .candidate-list-fav {
 		padding: 0px;
+
+	}
+	.job-list-fav{
+		align-self: flex-end;
 	}
 	.job-list-meta, .candidate-list-meta {
 		padding: 0px;
@@ -3430,6 +3436,7 @@ a, button {
 	}
 	.job-list-fav li {
 		margin-top: 10px;
+
 	}
 	.job-list-content {
 		padding: 0px 10px;
@@ -5123,6 +5130,14 @@ progress {
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
+}
+.show-result-msg{
+	font-size: 32px;
+    font-weight: 600;
+    color: #000000;
+	display: block;
+	width: 100%;
+    text-align: center;
 }
 /* job-detail-info */
 

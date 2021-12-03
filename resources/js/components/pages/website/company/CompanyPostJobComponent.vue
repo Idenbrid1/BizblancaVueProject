@@ -79,20 +79,20 @@
                                 </div>
                                 <ul class="job-list-fav m-0">
                                     <li><a v-if="!item.deleted_at" @click="deleteJobPost(item.id)" title="Delete Job"
-                                            class="job-post-ions title-tip"><i class="fas fa-trash-alt"></i></a></li>
+                                            class="job-post-icons title-tip"><i class="fas fa-trash-alt"></i></a></li>
                                     <li><a v-if="!item.deleted_at" @click="editJobPost(item.id)"
-                                            class="job-post-ions title-tip" title="Edit View"><i class="fas fa-edit"></i></a></li>
+                                            class="job-post-icons title-tip" title="Edit View"><i class="fas fa-edit"></i></a></li>
                                     <li>
                                         <router-link v-if="!item.deleted_at"
                                             :to="{ name: 'JobDetail', params: { id: item.id } }" data-toggle="collapse"
-                                            class="job-post-ions title-tip" title="Job View">
+                                            class="job-post-icons title-tip" title="Job View">
                                             <i class="fas fa-eye"></i>
                                         </router-link>
                                     </li>
                                     <li>
                                         <router-link v-if="!item.deleted_at"
                                             :to="{ name: 'JobAppliedCandidates', params: { id: item.id } }"
-                                            data-toggle="collapse" title="Applied Candidates" class="job-post-ions title-tip">
+                                            data-toggle="collapse" title="Applied Candidates" class="job-post-icons title-tip">
                                             <i class="fas fa-users"></i>
                                         </router-link>
                                     </li>

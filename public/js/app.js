@@ -15306,8 +15306,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -15336,7 +15334,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -15361,6 +15363,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
 //
 //
 //
@@ -32093,7 +32099,7 @@ var staticRenderFns = [
                   _c("img", {
                     staticClass: "testimonial-card-img",
                     attrs: {
-                      src: "/website/assets/images/Group 1386.png",
+                      src: "/website/assets/images/Group1386.png",
                       alt: "1",
                     },
                   }),
@@ -32139,7 +32145,7 @@ var staticRenderFns = [
                   _c("img", {
                     staticClass: "testimonial-card-img",
                     attrs: {
-                      src: "/website/assets/images/Group 1385.png",
+                      src: "/website/assets/images/Group1385.png",
                       alt: "2",
                     },
                   }),
@@ -32185,7 +32191,7 @@ var staticRenderFns = [
                   _c("img", {
                     staticClass: "testimonial-card-img",
                     attrs: {
-                      src: "/website/assets/images/Group 1391.png",
+                      src: "/website/assets/images/Group1391.png",
                       alt: "2",
                     },
                   }),
@@ -32231,7 +32237,7 @@ var staticRenderFns = [
                   _c("img", {
                     staticClass: "testimonial-card-img",
                     attrs: {
-                      src: "/website/assets/images/Group 1394.png",
+                      src: "/website/assets/images/Group1394.png",
                       alt: "3",
                     },
                   }),
@@ -32287,7 +32293,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("img", {
               staticClass: "flow-photo w-100",
-              attrs: { src: "/website/assets/images/Group 1687.svg", alt: "" },
+              attrs: { src: "/website/assets/images/Group1687.svg", alt: "" },
             }),
           ]),
         ]
@@ -32995,7 +33001,7 @@ var staticRenderFns = [
                           _c("div", { staticClass: "single-blog" }, [
                             _c("img", {
                               attrs: {
-                                src: "/website/assets/images/Artboard 4-100.jpg",
+                                src: "/website/assets/images/Artboard4-100.jpg",
                                 alt: "blog-img",
                               },
                             }),
@@ -33048,7 +33054,7 @@ var staticRenderFns = [
                           _c("div", { staticClass: "single-blog" }, [
                             _c("img", {
                               attrs: {
-                                src: "/website/assets/images/Artboard 7-100.jpg",
+                                src: "/website/assets/images/Artboard7-100.jpg",
                                 alt: "blog-img",
                               },
                             }),
@@ -33103,7 +33109,7 @@ var staticRenderFns = [
                           _c("div", { staticClass: "single-blog" }, [
                             _c("img", {
                               attrs: {
-                                src: "/website/assets/images/Artboard 5-100.jpg",
+                                src: "/website/assets/images/Artboard5-100.jpg",
                                 alt: "blog-img",
                               },
                             }),
@@ -33325,7 +33331,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("img", {
                 attrs: {
-                  src: "/website/assets/images/Group 1492.png",
+                  src: "/website/assets/images/Group1492.png",
                   alt: "blog-img",
                   width: "100%",
                 },
@@ -33372,7 +33378,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "list__card-image" }, [
                     _c("img", {
                       attrs: {
-                        src: "/website/assets/images/Icon awesome-question-circle.svg",
+                        src: "/website/assets/images/Icon-awesome-question-circle.svg",
                       },
                     }),
                   ]),
@@ -33457,7 +33463,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "list__card-image-container" }, [
                   _c("div", { staticClass: "list__card-image" }, [
                     _c("img", {
-                      attrs: { src: "/website/assets/images/Group 1361.svg" },
+                      attrs: { src: "/website/assets/images/Group1361.svg" },
                     }),
                   ]),
                 ]),
@@ -48205,7 +48211,9 @@ var render = function () {
                       }),
                       _vm._v(" "),
                       this.showError == true
-                        ? _c("div", [_vm._v("Data Not Found")])
+                        ? _c("span", { staticClass: "show-result-msg" }, [
+                            _vm._v("Data Not Found"),
+                          ])
                         : _vm._e(),
                     ],
                     2
@@ -48439,7 +48447,9 @@ var render = function () {
                   }),
                   _vm._v(" "),
                   this.showError == true
-                    ? _c("div", [_vm._v("Data Not Found")])
+                    ? _c("span", { staticClass: "show-result-msg" }, [
+                        _vm._v("Data Not Found"),
+                      ])
                     : _vm._e(),
                   _vm._v(" "),
                   _vm.searchData.length
@@ -52196,7 +52206,7 @@ var render = function () {
                             ? _c(
                                 "a",
                                 {
-                                  staticClass: "job-post-ions title-tip",
+                                  staticClass: "job-post-icons title-tip",
                                   attrs: { title: "Delete Job" },
                                   on: {
                                     click: function ($event) {
@@ -52214,7 +52224,7 @@ var render = function () {
                             ? _c(
                                 "a",
                                 {
-                                  staticClass: "job-post-ions title-tip",
+                                  staticClass: "job-post-icons title-tip",
                                   attrs: { title: "Edit View" },
                                   on: {
                                     click: function ($event) {
@@ -52234,7 +52244,7 @@ var render = function () {
                               ? _c(
                                   "router-link",
                                   {
-                                    staticClass: "job-post-ions title-tip",
+                                    staticClass: "job-post-icons title-tip",
                                     attrs: {
                                       to: {
                                         name: "JobDetail",
@@ -52258,7 +52268,7 @@ var render = function () {
                               ? _c(
                                   "router-link",
                                   {
-                                    staticClass: "job-post-ions title-tip",
+                                    staticClass: "job-post-icons title-tip",
                                     attrs: {
                                       to: {
                                         name: "JobAppliedCandidates",
@@ -57267,15 +57277,10 @@ var render = function () {
                 {
                   staticClass: "secondaymenu",
                   class:
-                    this.$route.path == "/company-chat"
-                      ? "candidate-active"
-                      : "",
-                  attrs: {
-                    to: { name: "CompanyChat" },
-                    id: "secondary-anker-2",
-                  },
+                    this.$route.path == "/job-search" ? "candidate-active" : "",
+                  attrs: { to: { name: "JobSearch" }, id: "secondary-anker-3" },
                 },
-                [_vm._v("Messages")]
+                [_vm._v("Job Search")]
               ),
               _c("span", { staticClass: "seprate-line" }),
             ],
@@ -57290,11 +57295,17 @@ var render = function () {
                 {
                   staticClass: "secondaymenu",
                   class:
-                    this.$route.path == "/job-search" ? "candidate-active" : "",
-                  attrs: { to: { name: "JobSearch" }, id: "secondary-anker-3" },
+                    this.$route.path == "/candidate-account-setting"
+                      ? "candidate-active"
+                      : "",
+                  attrs: {
+                    to: { name: "CandidateAccountSetting" },
+                    id: "secondary-anker-2",
+                  },
                 },
-                [_vm._v("Job Search")]
+                [_vm._v("Setting")]
               ),
+              _vm._v(" "),
               _c("span", { staticClass: "seprate-line" }),
             ],
             1
@@ -57413,13 +57424,15 @@ var render = function () {
                 {
                   staticClass: "secondaymenu",
                   class:
-                    this.$route.path == "/company-chat" ? "company-active" : "",
+                    this.$route.path == "/candidate-search"
+                      ? "company-active"
+                      : "",
                   attrs: {
-                    to: { name: "CompanyChat" },
-                    id: "secondary-anker-2",
+                    to: { name: "CandidateSearch" },
+                    id: "secondary-anker-3",
                   },
                 },
-                [_vm._v("Messages")]
+                [_vm._v("Candidate Search")]
               ),
               _c("span", { staticClass: "seprate-line" }),
             ],
@@ -57434,16 +57447,17 @@ var render = function () {
                 {
                   staticClass: "secondaymenu",
                   class:
-                    this.$route.path == "/candidate-search"
-                      ? "company-active"
+                    this.$route.path == "/company-account-setting"
+                      ? "candidate-active"
                       : "",
                   attrs: {
-                    to: { name: "CandidateSearch" },
-                    id: "secondary-anker-3",
+                    to: { name: "CompanyAccountSetting" },
+                    id: "secondary-anker-2",
                   },
                 },
-                [_vm._v("Candidate Search")]
+                [_vm._v("Setting")]
               ),
+              _vm._v(" "),
               _c("span", { staticClass: "seprate-line" }),
             ],
             1
