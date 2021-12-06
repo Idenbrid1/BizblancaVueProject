@@ -76,131 +76,17 @@
                                 </div>
                                 <div class="swiper-wrapper">
                                     <!--  -->
-                                    <div class="swiper-slide single-blog-wrap">
+                                    <div class="swiper-slide single-blog-wrap" v-for="(item, index) in news" :key="index">
                                         <div class="single-blog">
-                                            <img src="/website/assets/images/meeting-2-update.png" alt="blog-img" />
-                                            <div class="eventdate"><strong>06</strong> Jun</div>
+                                            <img :src="'/storage/images/news/'+item.image" alt="blog-img" />
+                                            <div class="eventdate"><strong>{{ item.created_at | moment("d")}}</strong> {{ item.created_at | moment("MMM")}}</div>
                                             <div class="news-card-day">
                                                 <div class="blog-title">
-                                                    <span>We are IT-Jobs Provider</span>
+                                                    <span>{{item.title}}</span>
                                                 </div>
                                             </div>
                                             <p class="blog-description line-text-3">
-                                                Since 2020 BizBlanca has pioneered specialist recruitment, sourcing
-                                                knowledgeable, skilled professionals for jobs across Pakistan. Our
-                                                experts recruit across the IT sector, so whether you are looking to hire
-                                                your next head of development, or urgently require supply managers, we
-                                                can help you.
-                                            </p>
-                                            <a class="blog-news-btn" href="#">Read More
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                    <!--  -->
-                                    <div class="swiper-slide single-blog-wrap">
-                                        <div class="single-blog">
-                                            <img src="/website/assets/images/candidate-image.png" alt="blog-img" />
-                                            <div class="eventdate"><strong>03</strong> Aug</div>
-                                            <div class="news-card-day">
-                                                <div class="blog-title">
-                                                    <span>Bizer of the Month</span>
-                                                </div>
-                                            </div>
-                                            <p class="blog-description line-text-3">
-                                                M. Basit Ali declared bizer of the month after securing
-                                                a great job opportunity in a very reputable company in
-                                                Lahore. The road was not easy but Basit overcame all the
-                                                hurdles and became one of the highest earning bizer from
-                                                BizBlanca as a Senior Bizer.
-                                            </p>
-                                            <a class="blog-news-btn" href="#">Read More
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                    <!--  -->
-                                    <div class="swiper-slide single-blog-wrap">
-                                        <div class="single-blog">
-                                            <img src="/website/assets/images/meeting-image-update.png" alt="blog-img" />
-                                            <div class="eventdate"><strong>01</strong> Aug</div>
-                                            <div class="news-card-day">
-                                                <div class="blog-title">
-                                                    <span>BizBlanca Team’s Visit</span>
-                                                </div>
-                                            </div>
-                                            <p class="blog-description line-text-3">
-                                                Our Business Leaders from BizBlanca went on a Business
-                                                Visit to TechnoGeneics for a MoU event discussion.
-                                                TechnoGenics is one the leading Cyber Security company
-                                                based in Lahore working with US clients. All such
-                                                companies are promoting Pakistan’s IT services and
-                                                making us all proud.
-                                            </p>
-                                            <a class="blog-news-btn" href="#">Read More
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                    <!--  -->
-                                    <div class="swiper-slide single-blog-wrap">
-                                        <div class="single-blog">
-                                            <img src="/website/assets/images/Artboard4-100.jpg" alt="blog-img" />
-                                            <div class="eventdate"><strong>07</strong> Aug</div>
-                                            <div class="news-card-day">
-                                                <div class="blog-title">
-                                                    <span> BizBlanca Team Party</span>
-                                                </div>
-                                            </div>
-                                            <p class="blog-description line-text-3">
-                                                Idenbrid Inc. is throwing a big party for BizBlanca’s
-                                                Development Team at Royal Palm. From project managers to
-                                                associates all are invited. Everyone will be given
-                                                special appreciation. The CEO and CFO are chief guests
-                                                and will make speeches as well.
-                                            </p>
-                                            <a class="blog-news-btn" href="#">Read More
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                    <!--  -->
-                                    <div class="swiper-slide single-blog-wrap">
-                                        <div class="single-blog">
-                                            <img src="/website/assets/images/Artboard7-100.jpg" alt="blog-img" />
-                                            <div class="eventdate"><strong>09</strong> Aug</div>
-                                            <div class="news-card-day">
-                                                <div class="blog-title">
-                                                    <span>Fastest Growing HR Database</span>
-                                                </div>
-                                            </div>
-                                            <p class="blog-description line-text-3">
-                                                Many Tech Tycoons predict that BizBlanca will become one
-                                                of the biggest human resources databases of the IT
-                                                sector in Pakistan soon. From Executive to Fresh IT
-                                                professionals all are joining the BizBlanca family to be
-                                                part of the bigger picture.
-                                            </p>
-                                            <a class="blog-news-btn" href="#">Read More
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                    <!--  -->
-                                    <div class="swiper-slide single-blog-wrap">
-                                        <div class="single-blog">
-                                            <img src="/website/assets/images/Artboard5-100.jpg" alt="blog-img" />
-                                            <div class="eventdate"><strong>11</strong> Aug</div>
-                                            <div class="news-card-day">
-                                                <div class="blog-title">
-                                                    <span>One in a million approach</span>
-                                                </div>
-                                            </div>
-                                            <p class="blog-description line-text-3">
-                                                Hundreds of resumes are received daily but only some are
-                                                able to become bizers and join reputable companies in
-                                                Pakistan which shows how much BizBlanca focuses on Human
-                                                Resource quality by all means.
+                                                {{item.description}}
                                             </p>
                                             <a class="blog-news-btn" href="#">Read More
                                                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
@@ -571,6 +457,7 @@
                 },
                 errors: [],
                 spinnerSubmit: false,
+                news: '',
             };
         },
         components: {
@@ -581,6 +468,7 @@
         },
         created() {
             this.checkRole()
+            this.getNews()
         },
         mounted() {
             var swiper = new Swiper(".blogs-swiper", {
@@ -662,6 +550,12 @@
                         if (response.data.success) {
                             this.isRole = response.data.role
                         }
+                    });
+            },
+            getNews() {
+                axios.get('/landingpage/news')
+                    .then((response) => {
+                        this.news = response.data
                     });
             },
             expireTodayJobs() {

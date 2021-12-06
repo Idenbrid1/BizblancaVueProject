@@ -2,6 +2,11 @@
 
 <head>
     <title>Bizblanca - Job</title>
+    @if (Auth::check()) 
+        <meta name="user_id" content="{{ Auth::user()->id }}" />
+    @else
+        <meta name="user_id" content="false" />
+    @endif
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />

@@ -11,18 +11,21 @@ import router from './router';
 import App from './components/pages/website/MainApp.vue';
 Vue.use(require('vue-moment'));
 
+Vue.prototype.$userId = document.querySelector("meta[name='user_id']").getAttribute('content');
+
+
 import Multiselect from 'vue-multiselect'
 Vue.component('multiselect', Multiselect)
 
 // https://www.npmjs.com/package/vue-timeago
 import VueTimeago from 'vue-timeago'
 Vue.use(VueTimeago, {
-  name: 'Timeago', // Component name, `Timeago` by default
-  locale: 'en', // Default locale
-  locales: {
-    'zh-CN': require('date-fns/locale/zh_cn'),
-    ja: require('date-fns/locale/ja')
-  }
+    name: 'Timeago', // Component name, `Timeago` by default
+    locale: 'en', // Default locale
+    locales: {
+        'zh-CN': require('date-fns/locale/zh_cn'),
+        ja: require('date-fns/locale/ja')
+    }
 })
 
 /**
@@ -50,5 +53,16 @@ const app = new Vue({
     components: {
         App,
     },
-    
+    // data(){
+    //     return {
+    //         isAuth: false,
+    //     }
+    // },
+    // created() {
+    //     axios.get('check-auth')
+    //     .then((response) => {
+    //         this.isAuth = response.data.isAuth
+    //     });
+    // },
+
 });

@@ -5464,120 +5464,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -5594,7 +5480,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         message: ''
       },
       errors: [],
-      spinnerSubmit: false
+      spinnerSubmit: false,
+      news: ''
     };
   },
   components: {
@@ -5605,6 +5492,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   created: function created() {
     this.checkRole();
+    this.getNews();
   },
   mounted: function mounted() {
     var _this = this;
@@ -5690,11 +5578,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
     },
+    getNews: function getNews() {
+      var _this3 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/landingpage/news').then(function (response) {
+        _this3.news = response.data;
+      });
+    },
     expireTodayJobs: function expireTodayJobs() {
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('expire-today-jobs');
     },
     submitContactUs: function submitContactUs() {
-      var _this3 = this;
+      var _this4 = this;
 
       this.spinnerSubmit = true;
       Swal.fire({
@@ -5711,18 +5606,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             title: 'Contact us query raised',
             text: 'Please wait we will contact you as soon as possible! THANKS'
           });
-          _this3.contact_us = {
+          _this4.contact_us = {
             name: '',
             email: '',
             phone: '',
             message: ''
           };
-          _this3.errors = [];
-          _this3.spinnerSubmit = false;
+          _this4.errors = [];
+          _this4.spinnerSubmit = false;
         } else {
           Swal.close();
-          _this3.errors = response.data.errors;
-          _this3.spinnerSubmit = false;
+          _this4.errors = response.data.errors;
+          _this4.spinnerSubmit = false;
         }
       });
     }
@@ -11718,7 +11613,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -15808,6 +15702,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"
 
 
 Vue.use(__webpack_require__(/*! vue-moment */ "./node_modules/vue-moment/dist/vue-moment.js"));
+Vue.prototype.$userId = document.querySelector("meta[name='user_id']").getAttribute('content');
 
 Vue.component('multiselect', (vue_multiselect__WEBPACK_IMPORTED_MODULE_2___default())); // https://www.npmjs.com/package/vue-timeago
 
@@ -15844,7 +15739,18 @@ var app = new Vue({
   el: '#app',
   components: {
     App: _components_pages_website_MainApp_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-  }
+  } // data(){
+  //     return {
+  //         isAuth: false,
+  //     }
+  // },
+  // created() {
+  //     axios.get('check-auth')
+  //     .then((response) => {
+  //         this.isAuth = response.data.isAuth
+  //     });
+  // },
+
 });
 
 /***/ }),
@@ -33032,15 +32938,110 @@ var render = function () {
       _vm._v(" "),
       _vm._m(1),
       _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
+      _c(
+        "section",
+        { staticClass: "main-home-section py-5", attrs: { id: "news" } },
+        [
+          _c("div", { staticClass: "row m-0" }, [
+            _c("div", { staticClass: "col-12 p-0 first-section" }, [
+              _c(
+                "section",
+                { staticClass: "container", attrs: { id: "news-section" } },
+                [
+                  _c("div", { attrs: { id: "blogs-section-scroll" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "swiper-container blogs-swiper" },
+                      [
+                        _vm._m(2),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "swiper-wrapper" },
+                          _vm._l(_vm.news, function (item, index) {
+                            return _c(
+                              "div",
+                              {
+                                key: index,
+                                staticClass: "swiper-slide single-blog-wrap",
+                              },
+                              [
+                                _c("div", { staticClass: "single-blog" }, [
+                                  _c("img", {
+                                    attrs: {
+                                      src: "/storage/images/news/" + item.image,
+                                      alt: "blog-img",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "eventdate" }, [
+                                    _c("strong", [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("moment")(item.created_at, "d")
+                                        )
+                                      ),
+                                    ]),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(
+                                          _vm._f("moment")(
+                                            item.created_at,
+                                            "MMM"
+                                          )
+                                        )
+                                    ),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "news-card-day" }, [
+                                    _c("div", { staticClass: "blog-title" }, [
+                                      _c("span", [_vm._v(_vm._s(item.title))]),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "blog-description line-text-3",
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                            " +
+                                          _vm._s(item.description) +
+                                          "\n                                        "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._m(3, true),
+                                ]),
+                              ]
+                            )
+                          }),
+                          0
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "swiper-button-prev" }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "swiper-button-next" }),
+                      ]
+                    ),
+                  ]),
+                ]
+              ),
+            ]),
+          ]),
+        ]
+      ),
       _vm._v(" "),
       _vm._m(4),
       _vm._v(" "),
+      _vm._m(5),
+      _vm._v(" "),
       _c("section", { staticClass: "bg-Grey", attrs: { id: "happening" } }, [
         _c("div", { staticClass: "container" }, [
-          _vm._m(5),
+          _vm._m(6),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -33054,9 +33055,9 @@ var render = function () {
                 "div",
                 { staticClass: "list__card" },
                 [
-                  _vm._m(6),
-                  _vm._v(" "),
                   _vm._m(7),
+                  _vm._v(" "),
+                  _vm._m(8),
                   _vm._v(" "),
                   _c(
                     "router-link",
@@ -33079,16 +33080,16 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(8),
+            _vm._m(9),
             _vm._v(" "),
             _c("div", { staticClass: "services-box" }, [
               _c(
                 "div",
                 { staticClass: "list__card" },
                 [
-                  _vm._m(9),
-                  _vm._v(" "),
                   _vm._m(10),
+                  _vm._v(" "),
+                  _vm._m(11),
                   _vm._v(" "),
                   _c(
                     "router-link",
@@ -33112,7 +33113,7 @@ var render = function () {
         ]),
       ]),
       _vm._v(" "),
-      _vm._m(11),
+      _vm._m(12),
       _vm._v(" "),
       _c(
         "section",
@@ -33123,7 +33124,7 @@ var render = function () {
               _c("div", { staticClass: "col-md-6 col-12 w-100 p-0 pr-md-5" }, [
                 _c("form", { attrs: { action: "" } }, [
                   _c("div", { staticClass: "row m-0" }, [
-                    _vm._m(12),
+                    _vm._m(13),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-12 px-2" }, [
                       _c("div", { staticClass: "form-group" }, [
@@ -33387,7 +33388,7 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _vm._m(13),
+              _vm._m(14),
             ]),
           ]),
         ]
@@ -33526,377 +33527,39 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "main-home-section py-5", attrs: { id: "news" } },
-      [
-        _c("div", { staticClass: "row m-0" }, [
-          _c("div", { staticClass: "col-12 p-0 first-section" }, [
-            _c(
-              "section",
-              { staticClass: "container", attrs: { id: "news-section" } },
-              [
-                _c("div", { attrs: { id: "blogs-section-scroll" } }, [
-                  _c("div", { staticClass: "swiper-container blogs-swiper" }, [
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-md-12 text-left" }, [
-                        _c("div", { staticClass: "heading-div" }, [
-                          _c("div", { staticClass: "mr-2 title-effect" }),
-                          _vm._v(" "),
-                          _c("h2", { staticClass: "site-heading mb-0" }, [
-                            _vm._v("News"),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "pt-1 pb-2 mb-0" }, [
-                          _c("span", { staticClass: "news-text" }, [
-                            _vm._v(
-                              "We keep the bizers updated with Information\n                                            Technology services and ever-lasting benefits. "
-                            ),
-                            _c("br"),
-                            _vm._v(
-                              "Take a look at some\n                                            of\n                                            the recent posts of BizBlanca on our social sites. "
-                            ),
-                          ]),
-                        ]),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "swiper-wrapper" }, [
-                      _c(
-                        "div",
-                        { staticClass: "swiper-slide single-blog-wrap" },
-                        [
-                          _c("div", { staticClass: "single-blog" }, [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/meeting-2-update.png",
-                                alt: "blog-img",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "eventdate" }, [
-                              _c("strong", [_vm._v("06")]),
-                              _vm._v(" Jun"),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "news-card-day" }, [
-                              _c("div", { staticClass: "blog-title" }, [
-                                _c("span", [_vm._v("We are IT-Jobs Provider")]),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              { staticClass: "blog-description line-text-3" },
-                              [
-                                _vm._v(
-                                  "\n                                            Since 2020 BizBlanca has pioneered specialist recruitment, sourcing\n                                            knowledgeable, skilled professionals for jobs across Pakistan. Our\n                                            experts recruit across the IT sector, so whether you are looking to hire\n                                            your next head of development, or urgently require supply managers, we\n                                            can help you.\n                                        "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "blog-news-btn",
-                                attrs: { href: "#" },
-                              },
-                              [
-                                _vm._v(
-                                  "Read More\n                                            "
-                                ),
-                                _c("i", {
-                                  staticClass: "fa fa-long-arrow-right",
-                                  attrs: { "aria-hidden": "true" },
-                                }),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "swiper-slide single-blog-wrap" },
-                        [
-                          _c("div", { staticClass: "single-blog" }, [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/candidate-image.png",
-                                alt: "blog-img",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "eventdate" }, [
-                              _c("strong", [_vm._v("03")]),
-                              _vm._v(" Aug"),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "news-card-day" }, [
-                              _c("div", { staticClass: "blog-title" }, [
-                                _c("span", [_vm._v("Bizer of the Month")]),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              { staticClass: "blog-description line-text-3" },
-                              [
-                                _vm._v(
-                                  "\n                                            M. Basit Ali declared bizer of the month after securing\n                                            a great job opportunity in a very reputable company in\n                                            Lahore. The road was not easy but Basit overcame all the\n                                            hurdles and became one of the highest earning bizer from\n                                            BizBlanca as a Senior Bizer.\n                                        "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "blog-news-btn",
-                                attrs: { href: "#" },
-                              },
-                              [
-                                _vm._v(
-                                  "Read More\n                                            "
-                                ),
-                                _c("i", {
-                                  staticClass: "fa fa-long-arrow-right",
-                                  attrs: { "aria-hidden": "true" },
-                                }),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "swiper-slide single-blog-wrap" },
-                        [
-                          _c("div", { staticClass: "single-blog" }, [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/meeting-image-update.png",
-                                alt: "blog-img",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "eventdate" }, [
-                              _c("strong", [_vm._v("01")]),
-                              _vm._v(" Aug"),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "news-card-day" }, [
-                              _c("div", { staticClass: "blog-title" }, [
-                                _c("span", [_vm._v("BizBlanca Team’s Visit")]),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              { staticClass: "blog-description line-text-3" },
-                              [
-                                _vm._v(
-                                  "\n                                            Our Business Leaders from BizBlanca went on a Business\n                                            Visit to TechnoGeneics for a MoU event discussion.\n                                            TechnoGenics is one the leading Cyber Security company\n                                            based in Lahore working with US clients. All such\n                                            companies are promoting Pakistan’s IT services and\n                                            making us all proud.\n                                        "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "blog-news-btn",
-                                attrs: { href: "#" },
-                              },
-                              [
-                                _vm._v(
-                                  "Read More\n                                            "
-                                ),
-                                _c("i", {
-                                  staticClass: "fa fa-long-arrow-right",
-                                  attrs: { "aria-hidden": "true" },
-                                }),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "swiper-slide single-blog-wrap" },
-                        [
-                          _c("div", { staticClass: "single-blog" }, [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/Artboard4-100.jpg",
-                                alt: "blog-img",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "eventdate" }, [
-                              _c("strong", [_vm._v("07")]),
-                              _vm._v(" Aug"),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "news-card-day" }, [
-                              _c("div", { staticClass: "blog-title" }, [
-                                _c("span", [_vm._v(" BizBlanca Team Party")]),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              { staticClass: "blog-description line-text-3" },
-                              [
-                                _vm._v(
-                                  "\n                                            Idenbrid Inc. is throwing a big party for BizBlanca’s\n                                            Development Team at Royal Palm. From project managers to\n                                            associates all are invited. Everyone will be given\n                                            special appreciation. The CEO and CFO are chief guests\n                                            and will make speeches as well.\n                                        "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "blog-news-btn",
-                                attrs: { href: "#" },
-                              },
-                              [
-                                _vm._v(
-                                  "Read More\n                                            "
-                                ),
-                                _c("i", {
-                                  staticClass: "fa fa-long-arrow-right",
-                                  attrs: { "aria-hidden": "true" },
-                                }),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "swiper-slide single-blog-wrap" },
-                        [
-                          _c("div", { staticClass: "single-blog" }, [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/Artboard7-100.jpg",
-                                alt: "blog-img",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "eventdate" }, [
-                              _c("strong", [_vm._v("09")]),
-                              _vm._v(" Aug"),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "news-card-day" }, [
-                              _c("div", { staticClass: "blog-title" }, [
-                                _c("span", [
-                                  _vm._v("Fastest Growing HR Database"),
-                                ]),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              { staticClass: "blog-description line-text-3" },
-                              [
-                                _vm._v(
-                                  "\n                                            Many Tech Tycoons predict that BizBlanca will become one\n                                            of the biggest human resources databases of the IT\n                                            sector in Pakistan soon. From Executive to Fresh IT\n                                            professionals all are joining the BizBlanca family to be\n                                            part of the bigger picture.\n                                        "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "blog-news-btn",
-                                attrs: { href: "#" },
-                              },
-                              [
-                                _vm._v(
-                                  "Read More\n                                            "
-                                ),
-                                _c("i", {
-                                  staticClass: "fa fa-long-arrow-right",
-                                  attrs: { "aria-hidden": "true" },
-                                }),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "swiper-slide single-blog-wrap" },
-                        [
-                          _c("div", { staticClass: "single-blog" }, [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/Artboard5-100.jpg",
-                                alt: "blog-img",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "eventdate" }, [
-                              _c("strong", [_vm._v("11")]),
-                              _vm._v(" Aug"),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "news-card-day" }, [
-                              _c("div", { staticClass: "blog-title" }, [
-                                _c("span", [
-                                  _vm._v("One in a million approach"),
-                                ]),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              { staticClass: "blog-description line-text-3" },
-                              [
-                                _vm._v(
-                                  "\n                                            Hundreds of resumes are received daily but only some are\n                                            able to become bizers and join reputable companies in\n                                            Pakistan which shows how much BizBlanca focuses on Human\n                                            Resource quality by all means.\n                                        "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "blog-news-btn",
-                                attrs: { href: "#" },
-                              },
-                              [
-                                _vm._v(
-                                  "Read More\n                                            "
-                                ),
-                                _c("i", {
-                                  staticClass: "fa fa-long-arrow-right",
-                                  attrs: { "aria-hidden": "true" },
-                                }),
-                              ]
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "swiper-button-prev" }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "swiper-button-next" }),
-                  ]),
-                ]),
-              ]
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12 text-left" }, [
+        _c("div", { staticClass: "heading-div" }, [
+          _c("div", { staticClass: "mr-2 title-effect" }),
+          _vm._v(" "),
+          _c("h2", { staticClass: "site-heading mb-0" }, [_vm._v("News")]),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "pt-1 pb-2 mb-0" }, [
+          _c("span", { staticClass: "news-text" }, [
+            _vm._v(
+              "We keep the bizers updated with Information\n                                            Technology services and ever-lasting benefits. "
+            ),
+            _c("br"),
+            _vm._v(
+              "Take a look at some\n                                            of\n                                            the recent posts of BizBlanca on our social sites. "
             ),
           ]),
         ]),
-      ]
-    )
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { staticClass: "blog-news-btn", attrs: { href: "#" } }, [
+      _vm._v("Read More\n                                            "),
+      _c("i", {
+        staticClass: "fa fa-long-arrow-right",
+        attrs: { "aria-hidden": "true" },
+      }),
+    ])
   },
   function () {
     var _vm = this
@@ -79687,7 +79350,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
+module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 
