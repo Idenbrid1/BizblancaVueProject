@@ -6,6 +6,7 @@ use App\Models\Company;
 use App\Models\CompanyWishList;
 use App\Models\ContactUs;
 use App\Models\JobPost;
+use App\Models\News;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Package;
@@ -235,5 +236,10 @@ class CommonController extends Controller
                 ]);
             }
         }
+    }
+
+    public function getNews()
+    {
+        return News::where('status', 'Approved')->get();
     }
 }

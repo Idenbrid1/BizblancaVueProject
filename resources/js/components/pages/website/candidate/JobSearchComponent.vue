@@ -129,8 +129,7 @@
                     <div>
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap p-0">
-                            <div class="job-list m-0 mb-3" v-if="index < searchData.length" v-for="(item, index) in jobToShow"
-                                :key="index">
+                            <div class="job-list m-0 mb-3" v-if="index < searchData.length" v-for="(item, index) in jobToShow" :key="index">
                                 <div class="company-logo col-auto py-2">
                                     <img :src="'/storage/images/companies/'+searchData[index].company.logo"
                                         alt="Company Logo">
