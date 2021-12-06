@@ -3841,6 +3841,140 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5816,15 +5950,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../website/partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -29600,15 +29725,63 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
+                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
                       ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. How Is BizBlanca Different From Others?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. Can I Get An IT Job In This Pandemic?"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bravo! You've come to the right place to look for IT jobs from the comfort of your\n                                own home. You don’t need to roam here & there physically to find a job now. Simply\n                                create an account on our website and search for your ideal job.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29630,13 +29803,85 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                You certainly can! Let's make it modest to begin your IT career. We've got you\n                                covered with our IT recruitment expertise and are always ready to help you out with\n                                the finest available services. Just ping us!\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How Can I Get A Job?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bizblanca encourages and supports people who are keen to work in the IT field. All\n                                you have to do is create & submit a well-optimized CV and wait for the recruiter to\n                                contact you after applying.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29658,13 +29903,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29685,42 +29930,12 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
+                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29759,15 +29974,63 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
+                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
                       ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. How Is BizBlanca Different From Others?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. Can I Get An IT Job In This Pandemic?"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bravo! You've come to the right place to look for IT jobs from the comfort of your\n                                own home. You don’t need to roam here & there physically to find a job now. Simply\n                                create an account on our website and search for your ideal job.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29789,13 +30052,85 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                You certainly can! Let's make it modest to begin your IT career. We've got you\n                                covered with our IT recruitment expertise and are always ready to help you out with\n                                the finest available services. Just ping us!\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How Can I Get A Job?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bizblanca encourages and supports people who are keen to work in the IT field. All\n                                you have to do is create & submit a well-optimized CV and wait for the recruiter to\n                                contact you after applying.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29817,13 +30152,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29844,42 +30179,12 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
+                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29918,15 +30223,63 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
+                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
                       ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. How Is BizBlanca Different From Others?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. Can I Get An IT Job In This Pandemic?"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bravo! You've come to the right place to look for IT jobs from the comfort of your\n                                own home. You don’t need to roam here & there physically to find a job now. Simply\n                                create an account on our website and search for your ideal job.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29948,13 +30301,85 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                You certainly can! Let's make it modest to begin your IT career. We've got you\n                                covered with our IT recruitment expertise and are always ready to help you out with\n                                the finest available services. Just ping us!\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How Can I Get A Job?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bizblanca encourages and supports people who are keen to work in the IT field. All\n                                you have to do is create & submit a well-optimized CV and wait for the recruiter to\n                                contact you after applying.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -29976,13 +30401,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30003,42 +30428,12 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
+                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30077,15 +30472,85 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
+                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
                       ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. How Is BizBlanca Different From Others?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30107,97 +30572,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30236,15 +30617,63 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
+                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
                       ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. How Is BizBlanca Different From Others?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. Can I Get An IT Job In This Pandemic?"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bravo! You've come to the right place to look for IT jobs from the comfort of your\n                                own home. You don’t need to roam here & there physically to find a job now. Simply\n                                create an account on our website and search for your ideal job.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30266,13 +30695,85 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                You certainly can! Let's make it modest to begin your IT career. We've got you\n                                covered with our IT recruitment expertise and are always ready to help you out with\n                                the finest available services. Just ping us!\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How Can I Get A Job?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bizblanca encourages and supports people who are keen to work in the IT field. All\n                                you have to do is create & submit a well-optimized CV and wait for the recruiter to\n                                contact you after applying.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30294,13 +30795,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30321,42 +30822,12 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
+                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30395,15 +30866,63 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
+                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
                       ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. How Is BizBlanca Different From Others?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. Can I Get An IT Job In This Pandemic?"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bravo! You've come to the right place to look for IT jobs from the comfort of your\n                                own home. You don’t need to roam here & there physically to find a job now. Simply\n                                create an account on our website and search for your ideal job.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30425,13 +30944,85 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                You certainly can! Let's make it modest to begin your IT career. We've got you\n                                covered with our IT recruitment expertise and are always ready to help you out with\n                                the finest available services. Just ping us!\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How Can I Get A Job?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Bizblanca encourages and supports people who are keen to work in the IT field. All\n                                you have to do is create & submit a well-optimized CV and wait for the recruiter to\n                                contact you after applying.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30453,13 +31044,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
+                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30480,42 +31071,12 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
+                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. Lorem Ipsum is simply dummy text of the printing and typesetting industry?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem\n                                Ipsum has\n                                been\n                                the industry's standard dummy text ever since the 1500s, when an unknown printer\n                                took a\n                                galley\n                                of type and scrambled it to make a type specimen book. It has survived not only five\n                                centuries.\n                            "
+                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -34133,11 +34694,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "pacakges-plan-container container" }, [
       _c("div", { staticClass: "get-free-trial" }, [
-        _c("h2", [_vm._v("What we offer to companies?")]),
+        _c("h2", [_vm._v("Services We Offer To Companies")]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum\n                dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+            "\n                At BizBlanca, companies secure opportunities to get connected with loyal & committed candidates that\n                perfectly fit their requirements. We offer a wide range of services to the companies which they can\n                avail after subscribing to our package.\n            "
           ),
         ]),
       ]),
@@ -34157,12 +34718,12 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "list__card-content" }, [
               _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v("Lorem ipsum"),
+                _vm._v("Web Developers"),
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "list__card-description body--sm" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                  "\n                            We connect you with highly-skilled and expert web developers that create fast-loading\n                            and user-friendly sites.\n                        "
                 ),
               ]),
             ]),
@@ -34199,12 +34760,12 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "list__card-content" }, [
               _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v("Lorem ipsum"),
+                _vm._v("App Developers"),
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "list__card-description body--sm" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                  "\n                            If you require employees who can develop create mobile apps, we will find them for you.\n                        "
                 ),
               ]),
             ]),
@@ -34242,13 +34803,13 @@ var staticRenderFns = [
             _c("div", { staticClass: "list__card-content" }, [
               _c("h3", { staticClass: "h5 list__card-title" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum\n                        "
+                  "\n                            AI Developer\n                        "
                 ),
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "list__card-description body--sm" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                  "\n                            If you require employees who can develop create mobile apps, we will find them for you.\n                        "
                 ),
               ]),
             ]),
@@ -79126,7 +79687,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 
