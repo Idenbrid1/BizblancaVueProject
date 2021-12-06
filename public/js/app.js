@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -15531,6 +15530,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var epic_spinners__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! epic-spinners */ "./node_modules/epic-spinners/src/lib.js");
 //
 //
 //
@@ -15657,6 +15657,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -15664,14 +15666,18 @@ __webpack_require__.r(__webpack_exports__);
       record: {
         email: ''
       },
-      errors: []
+      errors: [],
+      spinnerSubmit: false
     };
   },
-  created: function created() {},
+  components: {
+    LoopingRhombusesSpinner: epic_spinners__WEBPACK_IMPORTED_MODULE_1__.LoopingRhombusesSpinner
+  },
   methods: {
     subscribe: function subscribe() {
       var _this = this;
 
+      this.spinnerSubmit = true;
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/footer/news_letter', this.record).then(function (response) {
         if (response.data.success == true) {
           Swal.fire({
@@ -15680,8 +15686,10 @@ __webpack_require__.r(__webpack_exports__);
             text: 'Successfully Subscribed Newsletter! Thanks'
           });
           _this.errors = [];
+          _this.spinnerSubmit = false;
         } else {
           _this.errors = response.data.errors;
+          _this.spinnerSubmit = false;
         }
       });
     }
@@ -58452,20 +58460,33 @@ var render = function () {
               : _vm._e(),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "footer__sign-up" }, [
-            _c(
-              "a",
-              {
-                staticClass: "mail-subscribe-btn mt-3",
-                on: {
-                  click: function ($event) {
-                    return _vm.subscribe()
-                  },
-                },
-              },
-              [_vm._v("Subscribe")]
-            ),
-          ]),
+          _c(
+            "div",
+            { staticClass: "footer__sign-up" },
+            [
+              _vm.spinnerSubmit == true
+                ? _c("looping-rhombuses-spinner", {
+                    attrs: {
+                      "animation-duration": 1800,
+                      size: 40,
+                      color: "#ffffff",
+                    },
+                  })
+                : _c(
+                    "a",
+                    {
+                      staticClass: "mail-subscribe-btn mt-3",
+                      on: {
+                        click: function ($event) {
+                          return _vm.subscribe()
+                        },
+                      },
+                    },
+                    [_vm._v("Subscribe")]
+                  ),
+            ],
+            1
+          ),
         ]),
       ]),
       _vm._v(" "),
@@ -79762,5 +79783,3 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 	
 /******/ })()
 ;
-=======
->>>>>>> 675b3bac3670ccf112eefe49bcca30b4e12851ad
