@@ -85,7 +85,8 @@
                         </span>
                     </small>
                     <div class="footer__sign-up">
-                        <a class="mail-subscribe-btn mt-3" @click="subscribe()">Subscribe</a>
+                        <looping-rhombuses-spinner :animation-duration="1800" :size="40" color="#ffffff" v-if="spinnerSubmit == true" />
+                        <a v-else class="mail-subscribe-btn mt-3" @click="subscribe()">Subscribe</a>
                     </div>
                 </div>
             </div>
@@ -126,6 +127,9 @@
 </template>
 <script>
     import axios from 'axios';
+    import {
+        LoopingRhombusesSpinner
+    } from 'epic-spinners'
     export default {
         data() {
             return {
@@ -133,13 +137,16 @@
                     email: '',
                 },
                 errors: [],
+                spinnerSubmit: false,
+
             };
         },
-        created() {
-            
+        components: {
+            LoopingRhombusesSpinner,
         },
         methods: {
             subscribe() {
+                this.spinnerSubmit = true
                 axios.post('/footer/news_letter', this.record)
                 .then((response) => {
                     if(response.data.success == true){
@@ -149,8 +156,11 @@
                             text: 'Successfully Subscribed Newsletter! Thanks',
                         })
                         this.errors = []
+                        this.spinnerSubmit = false
                     }else{
                         this.errors = response.data.errors
+                        this.spinnerSubmit = false
+
                     }
                 });
             },

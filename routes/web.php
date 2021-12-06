@@ -140,16 +140,8 @@ Route::middleware('auth')->group(function(){
 
 
 //website routes//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-Route::prefix('candidate')->name('candidate.')->group(function(){
-    Route::get('/index', [App\Http\Controllers\Website\Candidate\HomeController::class, 'index'])->name('index');
-
-});
-Route::post('/update/newsletter', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'saveNewsLetter'])->name('saveNewsLetter');
 //samad
 // Route::prefix('company')->name('company.')->group(function(){
-    // Route::get('/index', [App\Http\Controllers\Website\Company\HomeController::class, 'index'])->name('index');
-
     Route::middleware('auth')->group(function(){
         Route::get('get-company-profile', [App\Http\Controllers\Company\CompanyController::class, 'getCompanyProfile']);
         Route::post('/update/company-basicinformation', [App\Http\Controllers\Company\CompanyController::class, 'updateCompanyBasicInformation'])->name('profile.updateBasicInformationCompany');
@@ -287,8 +279,10 @@ Route::prefix('admin')->name('admin.')->group(function(){
             Route::post('/store', [App\Http\Controllers\Admin\PackagesController::class, 'store'])->name('store');
             Route::get('/edit/{id}', [App\Http\Controllers\Admin\PackagesController::class, 'edit'])->name('edit');
             Route::post('/update/{id}', [App\Http\Controllers\Admin\PackagesController::class, 'update'])->name('update');
-            // Route::get('/show/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'show'])->name('show');
-            // Route::get('/destroy/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'destroy'])->name('destroy');
+        });
+         // ===================================NEWS LETTER=======================================
+         Route::prefix('news_letter')->name('news_letter.')->group(function(){
+            Route::get('/list', [App\Http\Controllers\Admin\NewsLetterController::class, 'list'])->name('list');
         });
     });
 
