@@ -33154,18 +33154,15 @@ var render = function () {
                       [
                         _vm._m(2),
                         _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "swiper-wrapper" },
-                          _vm._l(_vm.news, function (item, index) {
-                            return _c(
-                              "div",
-                              {
-                                key: index,
-                                staticClass: "swiper-slide single-blog-wrap",
-                              },
-                              [
-                                _c("div", { staticClass: "single-blog" }, [
+                        _c("div", { staticClass: "swiper-wrapper" }, [
+                          _c(
+                            "div",
+                            { staticClass: "swiper-slide single-blog-wrap" },
+                            _vm._l(_vm.news, function (item, index) {
+                              return _c(
+                                "div",
+                                { key: index, staticClass: "single-blog" },
+                                [
                                   _c("img", {
                                     attrs: {
                                       src: "/storage/images/news/" + item.image,
@@ -33214,12 +33211,12 @@ var render = function () {
                                   ),
                                   _vm._v(" "),
                                   _vm._m(3, true),
-                                ]),
-                              ]
-                            )
-                          }),
-                          0
-                        ),
+                                ]
+                              )
+                            }),
+                            0
+                          ),
+                        ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "swiper-button-prev" }),
                         _vm._v(" "),
