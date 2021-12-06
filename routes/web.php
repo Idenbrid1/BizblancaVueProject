@@ -66,6 +66,7 @@ Route::post('/complete-reset-password', [App\Http\Controllers\Admin\Authenticati
 Route::get('expire-today-jobs', [App\Http\Controllers\CommonController::class, 'expireTodayJobs']);
 Route::post('/submit-contact-us', [App\Http\Controllers\CommonController::class, 'contactUs']);
 Route::get('/landingpage/news', [App\Http\Controllers\CommonController::class, 'getNews']);
+Route::post('/footer/news_letter', [App\Http\Controllers\CommonController::class, 'newsLetter']);
 
 //samad 
 Route::get('/login', function () {
