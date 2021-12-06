@@ -429,6 +429,8 @@ a, button {
 	text-align: center;
 	font-size: 20px;
 	font-weight: 600;
+	display: block;
+	width: fit-content;
 }
 .mail-subscribe-btn:hover {
 	background-color: #FFDE59;
