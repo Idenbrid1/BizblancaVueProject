@@ -7,6 +7,7 @@ use App\Models\CompanyWishList;
 use App\Models\ContactUs;
 use App\Models\JobPost;
 use App\Models\News;
+use App\Models\NewsLetter;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Package;
@@ -241,5 +242,41 @@ class CommonController extends Controller
     public function getNews()
     {
         return News::where('status', 'Approved')->get();
+    }
+
+    public function newsLetter(Request $request)
+    {
+        $attributeNames = [
+            'email' => 'Email',
+        ];
+        $messages = [
+            // 'text.unique_with' => 'This Company Already Exist!',
+        ];
+        $rules = [
+            'email' => 'required|email',
+        ];
+        $validator = Validator::make($request->all(), $rules, $messages);
+        $validator->setAttributeNames($attributeNames);
+        if($validator->fails()){
+            return response()->json([
+                'success' => false,
+                'errors' => $validator->errors(),
+            ]);
+        }
+        else
+        {
+            $news_letter = NewsLetter::create([
+                'email' => $request->email,
+            ]);
+            if($news_letter){
+                return response()->json([
+                    'success' => true,
+                ]);
+            }else{
+                return response()->json([
+                    'success' => false,
+                ]);
+            }
+        }
     }
 }

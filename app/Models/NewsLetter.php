@@ -9,8 +9,9 @@ class NewsLetter extends Model
 {
     use HasFactory;
 
+    protected $table = 'news_letter';
+
     protected $fillable =[
         'email',
-        'status',
     ];
 }
