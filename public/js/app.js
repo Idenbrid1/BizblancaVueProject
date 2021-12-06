@@ -6223,10 +6223,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
-/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
-/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
-/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_4__);
 //
 //
 //
@@ -6776,48 +6772,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-
-
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {
-      options: [{
-        name: 'Javascript',
-        language: 'JavaScript'
-      }, {
-        name: 'Adonis',
-        language: 'Adonis'
-      }, {
-        name: 'Rails',
-        language: 'Ruby'
-      }, {
-        name: 'Sinatra',
-        language: 'Ruby'
-      }, {
-        name: 'Laravel',
-        language: 'PHP'
-      }, {
-        name: 'Phoenix',
-        language: 'Elixir'
-      }],
-      record: {
-        working_experience: '',
-        city: '',
-        gender: '',
-        keyword: '',
-        skills: []
-      },
-      searchData: {}
-    };
+    return {};
   },
   mounted: function mounted() {
     var swiper = new Swiper(".bizer-ranking-slider", {
@@ -6832,46 +6792,12 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
   },
-  created: function created() {
-    this.getCandidate();
-  },
+  created: function created() {},
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Multiselect: (vue_multiselect__WEBPACK_IMPORTED_MODULE_4___default()),
-    pagination: (laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default())
+    CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   methods: {
-    addSkill: function addSkill(newTag) {
-      var tag = {
-        name: newTag,
-        code: newTag
-      };
-      this.options.push(tag);
-      this.record.skills.push(tag);
-    },
-    getCandidate: function getCandidate() {
-      var _this = this;
-
-      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-candidates-search?page=' + page).then(function (response) {
-        _this.searchData = response.data;
-      });
-    },
-    search: function search() {
-      var _this2 = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/candidate-search', this.record).then(function (response) {
-        _this2.searchData = response;
-      });
-    },
-    keywordSearch: function keywordSearch() {
-      var _this3 = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/candidate-keyword-search/' + this.record.keyword).then(function (response) {
-        _this3.searchData = response.data;
-      });
-    },
     ShowMessageError: function ShowMessageError() {
       Swal.fire('UnderDevelopment', 'Chat Functionality UnderDevelopment', 'info');
     }
@@ -23626,17 +23552,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _CandidateDashboardComponent_vue_vue_type_template_id_45aee5f4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CandidateDashboardComponent.vue?vue&type=template&id=45aee5f4& */ "./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue?vue&type=template&id=45aee5f4&");
 /* harmony import */ var _CandidateDashboardComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CandidateDashboardComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue?vue&type=script&lang=js&");
-/* harmony import */ var vue_multiselect_dist_vue_multiselect_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
-;
 
 
 /* normalize component */
-
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _CandidateDashboardComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _CandidateDashboardComponent_vue_vue_type_template_id_45aee5f4___WEBPACK_IMPORTED_MODULE_0__.render,
   _CandidateDashboardComponent_vue_vue_type_template_id_45aee5f4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -34840,26 +34764,18 @@ var render = function () {
                 [
                   _vm._m(1),
                   _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "msg-title",
-                      attrs: { to: "/company-dashboard" },
-                    },
-                    [
-                      _vm._v(
-                        "\n                            JOB FOR MERN STACK DEVELOPER\n                        "
-                      ),
-                    ]
-                  ),
+                  _c("a", { staticClass: "msg-title" }, [
+                    _vm._v(
+                      "\n                            JOB FOR MERN STACK DEVELOPER\n                        "
+                    ),
+                  ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "msg-description" }, [
                     _vm._v(
                       "\n                            Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I\n                            have expertise in...\n                        "
                     ),
                   ]),
-                ],
-                1
+                ]
               ),
               _vm._v(" "),
               _c(
@@ -34875,26 +34791,18 @@ var render = function () {
                 [
                   _vm._m(2),
                   _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "msg-title",
-                      attrs: { to: "/company-dashboard" },
-                    },
-                    [
-                      _vm._v(
-                        "\n                            JOB FOR MERN STACK DEVELOPER\n                        "
-                      ),
-                    ]
-                  ),
+                  _c("a", { staticClass: "msg-title" }, [
+                    _vm._v(
+                      "\n                            JOB FOR MERN STACK DEVELOPER\n                        "
+                    ),
+                  ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "msg-description" }, [
                     _vm._v(
                       "\n                            Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I\n                            have expertise in...\n                        "
                     ),
                   ]),
-                ],
-                1
+                ]
               ),
               _vm._v(" "),
               _c(
@@ -34910,26 +34818,18 @@ var render = function () {
                 [
                   _vm._m(3),
                   _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "msg-title",
-                      attrs: { to: "/company-dashboard" },
-                    },
-                    [
-                      _vm._v(
-                        "\n                            JOB FOR MERN STACK DEVELOPER\n                        "
-                      ),
-                    ]
-                  ),
+                  _c("a", { staticClass: "msg-title" }, [
+                    _vm._v(
+                      "\n                            JOB FOR MERN STACK DEVELOPER\n                        "
+                    ),
+                  ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "msg-description" }, [
                     _vm._v(
                       "\n                            Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I\n                            have expertise in...\n                        "
                     ),
                   ]),
-                ],
-                1
+                ]
               ),
             ]),
           ]),
@@ -35055,18 +34955,6 @@ var render = function () {
               1
             ),
           ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "bottom-pagination" },
-            [
-              _c("pagination", {
-                attrs: { data: _vm.searchData },
-                on: { "pagination-change-page": _vm.getCandidate },
-              }),
-            ],
-            1
-          ),
         ]),
         _vm._v(" "),
         _vm._m(14),

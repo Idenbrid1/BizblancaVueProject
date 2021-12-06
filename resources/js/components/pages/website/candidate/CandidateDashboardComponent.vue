@@ -26,9 +26,9 @@
                                 <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
                                 <p class="msg-time-date">10/08/2021, 09:10 am</p>
                             </div>
-                            <router-link to="/company-dashboard" class="msg-title">
+                            <a class="msg-title">
                                 JOB FOR MERN STACK DEVELOPER
-                            </router-link>
+                            </a>
                             <p class="msg-description">
                                 Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I
                                 have expertise in...
@@ -39,9 +39,9 @@
                                 <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
                                 <p class="msg-time-date">10/08/2021, 09:10 am</p>
                             </div>
-                            <router-link to="/company-dashboard" class="msg-title">
+                            <a class="msg-title">
                                 JOB FOR MERN STACK DEVELOPER
-                            </router-link>
+                            </a>
                             <p class="msg-description">
                                 Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I
                                 have expertise in...
@@ -52,9 +52,9 @@
                                 <h2><i class="far fa-building"></i> BizBlanca Admin</h2>
                                 <p class="msg-time-date">10/08/2021, 09:10 am</p>
                             </div>
-                            <router-link to="/company-dashboard" class="msg-title">
+                            <a class="msg-title">
                                 JOB FOR MERN STACK DEVELOPER
-                            </router-link>
+                            </a>
                             <p class="msg-description">
                                 Respected sir, My name is Muhammad Ahmad and I am graduated from Superior University, I
                                 have expertise in...
@@ -279,11 +279,6 @@
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
-                <!-- Pagination Start -->
-                <div class="bottom-pagination">
-                    <pagination :data="searchData" @pagination-change-page="getCandidate"></pagination>
-                </div>
-                <!-- Pagination End -->
             </div>
             <div class="common-sidebar">
                 <br><br>
@@ -552,49 +547,14 @@
         </div>
     </div>
 </template>
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CandidateNavbar from '../partials/CandidateNavbar.vue';
-    import pagination from 'laravel-vue-pagination';
-    import Multiselect from 'vue-multiselect'
     export default {
         data() {
             return {
-                options: [{
-                        name: 'Javascript',
-                        language: 'JavaScript'
-                    },
-                    {
-                        name: 'Adonis',
-                        language: 'Adonis'
-                    },
-                    {
-                        name: 'Rails',
-                        language: 'Ruby'
-                    },
-                    {
-                        name: 'Sinatra',
-                        language: 'Ruby'
-                    },
-                    {
-                        name: 'Laravel',
-                        language: 'PHP'
-                    },
-                    {
-                        name: 'Phoenix',
-                        language: 'Elixir'
-                    }
-                ],
-                record: {
-                    working_experience: '',
-                    city: '',
-                    gender: '',
-                    keyword: '',
-                    skills: [],
-                },
-                searchData: {},
+               
             }
         },
         mounted() {
@@ -611,41 +571,13 @@
             });
         },
         created() {
-            this.getCandidate()
+            
         },
         components: {
             WebsiteNavbar,
             CandidateNavbar,
-            Multiselect,
-            pagination,
         },
         methods: {
-            addSkill(newTag) {
-                const tag = {
-                    name: newTag,
-                    code: newTag
-                }
-                this.options.push(tag)
-                this.record.skills.push(tag)
-            },
-            getCandidate(page = 1) {
-                axios.get('/get-candidates-search?page=' + page)
-                    .then((response) => {
-                        this.searchData = response.data
-                    });
-            },
-            search() {
-                axios.post('/candidate-search', this.record)
-                    .then((response) => {
-                        this.searchData = response
-                    });
-            },
-            keywordSearch() {
-                axios.get('/candidate-keyword-search/' + this.record.keyword)
-                    .then((response) => {
-                        this.searchData = response.data
-                    });
-            },
             ShowMessageError() {
                 Swal.fire(
                     'UnderDevelopment',
