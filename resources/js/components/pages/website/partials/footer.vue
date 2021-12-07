@@ -85,8 +85,8 @@
                         </span>
                     </small>
                     <div class="footer__sign-up">
-                        <looping-rhombuses-spinner :animation-duration="1800" :size="40" color="#ffffff" v-if="spinnerSubmit == true" />
-                        <a v-else class="mail-subscribe-btn mt-3" @click="subscribe()">Subscribe</a>
+                        <looping-rhombuses-spinner :animation-duration="1800" :size="120" color="#ffffff" v-if="spinnerSubmit == true" />
+                        <a v-else class="mail-subscribe-btn" @click="subscribe()">Subscribe</a>
                     </div>
                 </div>
             </div>

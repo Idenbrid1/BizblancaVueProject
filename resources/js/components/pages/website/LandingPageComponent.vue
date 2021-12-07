@@ -76,10 +76,11 @@
                                 </div>
                                 <div class="swiper-wrapper">
                                     <!--  -->
-                                    <div class="swiper-slide single-blog-wrap">
-                                        <div class="single-blog" v-for="(item, index) in news" :key="index">
+                                    <div class="swiper-slide single-blog-wrap" v-for="(item, index) in news" :key="index">
+                                        <div class="single-blog">
                                             <img :src="'/storage/images/news/'+item.image" alt="blog-img" />
-                                            <div class="eventdate"><strong>{{ item.created_at | moment("d")}}</strong> {{ item.created_at | moment("MMM")}}</div>
+                                            <div class="eventdate"><strong>{{ item.created_at | moment("d")}}</strong>
+                                                {{ item.created_at | moment("MMM")}}</div>
                                             <div class="news-card-day">
                                                 <div class="blog-title">
                                                     <span>{{item.title}}</span>
@@ -436,7 +437,6 @@
         </section>
     </div>
 </template>
-<script src="/website/assets/js/swiper/swiper-bundle.min.js"></script>
 <script>
     import axios from 'axios';
     import WebsiteNavbar from './partials/navbar.vue';
@@ -474,7 +474,7 @@
             var swiper = new Swiper(".blogs-swiper", {
                 slidesPerView: 1,
                 spaceBetween: 1,
-                centeredSlides: true,
+                // centeredSlides: true,
                 loop: true,
                 autoplay: {
                     delay: 2500,
@@ -544,6 +544,9 @@
             }, 5000)
         },
         methods: {
+            runswiper(){
+
+            },
             checkRole() {
                 axios.get('navbar-check-roles')
                     .then((response) => {
@@ -557,6 +560,7 @@
                     .then((response) => {
                         this.news = response.data
                     });
+                    
             },
             expireTodayJobs() {
                 axios.get('expire-today-jobs')
