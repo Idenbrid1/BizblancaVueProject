@@ -86,5 +86,9 @@ class Candidate extends Model
     {
         return $this->hasMany(CandidateProjects::class, 'candidate_id','id');
     }
+    Public function WishListed()
+    {
+        return $this->hasMany(CandidateWishList::class, 'company_id', 'id');
+    }
     
 }

@@ -3204,8 +3204,7 @@ a, button {
 .candidate-wishlist-btn {
 	background-color: #081351;
 	border-radius: 5px;
-	color: #FFFFFF;
-
+	color: #FFFFFF !important;
 	font-size: 14px;
 	min-height: 100%;
 	display: flex;

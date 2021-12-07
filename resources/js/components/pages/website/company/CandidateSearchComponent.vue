@@ -23,8 +23,8 @@
                                 <div class="row m-0">
                                     <div class="col-md-6">
                                         <label>Experience</label>
-                                        <input class="form-control" placeholder="Search by Experience" v-model="record.working_experience"
-                                            id="cusSelectbox" type="number">
+                                        <input class="form-control" placeholder="Search by Experience"
+                                            v-model="record.working_experience" id="cusSelectbox" type="number">
                                     </div>
                                     <!-- <div class="col-md-6">
                                         <label>Education</label>
@@ -38,7 +38,8 @@
                                     </div> -->
                                     <div class="col-md-6">
                                         <label>City</label>
-                                        <input class="form-control" placeholder="Search by City" v-model="record.city" id="cusSelectbox" type="text">
+                                        <input class="form-control" placeholder="Search by City" v-model="record.city"
+                                            id="cusSelectbox" type="text">
                                     </div>
                                     <!-- <div class="col-md-6">
                                         <label>Area</label>
@@ -101,7 +102,7 @@
                     <div class="col-md-12 search-container">
                         <form>
                             <div> <label class="keyword-input-title">Keyword Search</label></div>
-                            <input class="form-control" type="text" placeholder="* Search by Name, Shift, City or Designation" name="search"
+                            <input class="form-control" type="text" placeholder="* Search by Name" name="search"
                                 v-model="record.keyword">
                             <div class="keyword-search-ankers">
                                 <button type="submit" @click.prevent="keywordSearch()"
@@ -118,41 +119,25 @@
                     </label>
                     <!-- Job List Toolbar Start -->
                     <div>
-                        <!-- <div class="job-list-toolbar">
-                            <ul class="job-pagination pagination-center ">
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                            aria-hidden="true"></i> Previous 20</a></li>
-                                <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                            aria-hidden="true"></i> Next 20</a></li>
-                            </ul>
-                            <div class="job-filter">
-                                <select class="job-select">
-                                    <option>Search order by</option>
-                                    <option>Top Rated</option>
-                                    <option>Most Popular</option>
-                                </select>
-                            </div>
-                        </div> -->
-                        <!-- Job List Toolbar End -->
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap">
                             <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
                             <div class="row m-0 justify-content-start">
-                                <div class="candidate-single" v-if="index < searchData.length" v-for="(item, index) in candidateToShow"
-                                    :key="index">
+                                <div class="candidate-single" v-if="index < searchData.length" v-for="(item, index) in candidateToShow" :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo" :style="{ backgroundImage: 'url(/storage/images/candidates/profile/'+searchData[index].candidate.profile_image+')'}"></div>
+                                            <div class="candidate-photo"
+                                                :style="{ backgroundImage: 'url(/storage/images/candidates/profile/'+searchData[index].candidate.profile_image+')'}">
+                                            </div>
                                             <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">{{searchData[index].candidate.full_name}}</h6>
+                                                <h6 class="candidate-name mb-0">
+                                                    {{searchData[index].candidate.full_name}}</h6>
                                             </div>
                                         </div>
                                         <!-- <span class="job-post-date">20 hours ago</span> -->
+                                        <timeago class="job-post-date" :datetime="searchData[index].created_at">
+                                        </timeago>
                                         <p class="candidate-description my-1">{{searchData[index].candidate.bio}}</p>
                                         <ul class="candidate-list-meta">
                                             <li><i class="fas fa-venus-mars"></i>
@@ -162,20 +147,29 @@
                                                 <div class="hide-line-1">BSSE</div>
                                             </li> -->
                                             <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">{{searchData[index].candidate.experience}} Years</div>
+                                                <div class="hide-line-1">{{searchData[index].candidate.experience}}
+                                                    Years</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-user-cog"></i>
-                                                <div class="hide-line-1" v-for="(skills, index) in searchData[index].candidate.candidate_skills" :key="index">{{skills.name}},</div>
+                                                <div class="hide-line-1"
+                                                    v-for="(skills, index) in searchData[index].candidate.candidate_skills"
+                                                    :key="index">{{skills.name}},</div>
                                             </li>
                                             <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
                                                 <div class="hide-line-1">{{searchData[index].candidate.city}}</div>
                                             </li>
 
                                         </ul>
-
                                         <ul class="candidate-list-fav">
-                                            <li class="w-100"><router-link class="job-view-btn w-100" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: searchData[index].candidate.id } }">View Profile</router-link></li>
-                                            <li><a @click="addToWishList(searchData[index].candidate.id)" class="candidate-wishlist-btn ml-2 "><i :class="searchData[index].is_wish_listed == false ? 'far fa-heart' : 'fas fa-heart'" ></i></a></li>
+                                            <li class="w-100">
+                                                <router-link class="job-view-btn w-100" data-toggle="collapse"
+                                                    :to="{ name: 'CandidateDetail', params: { id: searchData[index].candidate.id } }">
+                                                    View Profile</router-link>
+                                            </li>
+                                            <li>
+                                                <a v-if="searchData[index].is_wish_listed == false" @click="addToWishList(searchData[index].candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="far fa-heart"></i></a>
+                                                <a v-else @click="removeToWishList(searchData[index].candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="fas fa-heart"></i></a>
+                                            </li>
                                             <!-- <li v-if="searchData[index].is_wish_listed == true"><a @click="addToWishList(searchData[index].candidate.id)" class="">liked</a></li> -->
                                         </ul>
                                     </div>
@@ -188,7 +182,9 @@
                 </div>
                 <!-- Job List Wrap Start -->
                 <div class="text-center" v-if="searchData.length">
-                    <button class="load-more-btn mx-auto" v-if="searchData.length != candidateToShow && totalcandidates > candidateToShow" @click="candidateToShow += 3">Load more</button>
+                    <button class="load-more-btn mx-auto"
+                        v-if="searchData.length != candidateToShow && totalcandidates > candidateToShow"
+                        @click="candidateToShow += 3">Load more</button>
                 </div>
             </div>
             <div class="common-sidebar">
@@ -540,7 +536,7 @@
                     .then((response) => {
                         this.searchData = response.data
                         this.totalcandidates = this.searchData.length
-                        
+
                     });
             },
             search() {
@@ -548,32 +544,42 @@
                     .then((response) => {
                         this.searchData = response.data
                         this.totalcandidates = this.searchData.length
-                        if(response.data.length == 0){
+                        if (response.data.length == 0) {
                             this.showError = true
-                        }else{
+                        } else {
                             this.showError = false
                         }
                     });
             },
             keywordSearch() {
-                axios.get('/candidate-keyword-search/'+this.record.keyword)
-                .then((response) => {
-                    this.searchData = response.data
-                    this.totalcandidates = this.searchData.length
-                    if(response.data.length == 0){
-                        this.showError = true
-                    }else{
-                        this.showError = false
-                    }
-                });
+                this.searchData = '';
+                this.candidateToShow = 3;
+                this.totalcandidates = 0;
+                if (this.record.keyword == '') {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Field Empty',
+                    })
+                } else {
+                    axios.get('/candidate-keyword-search/' + this.record.keyword)
+                        .then((response) => {
+                            this.searchData = response.data
+                            this.totalcandidates = this.searchData.length
+                            if (response.data.length == 0) {
+                                this.showError = true
+                            } else {
+                                this.showError = false
+                            }
+                        });
+                }
             },
-            addToWishList(id){
-                axios.get('/add-to-wish-list/'+id)
-                .then((response) => {
-                    
-                });
+            addToWishList(id) {
+                axios.get('/add-to-wish-list/' + id)
             },
-            clearSearch(){
+            removeToWishList(id){
+                axios.get('/remove-to-wish-list/' + id)
+            },
+            clearSearch() {
                 this.record = {
                     working_experience: '',
                     city: '',
@@ -585,7 +591,7 @@
                 this.candidateToShow = 3;
                 this.totalcandidates = 0;
             },
-            
+
         },
     };
 

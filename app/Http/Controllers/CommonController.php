@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Models\Candidate;
 use App\Models\CandidateSkill;
+use App\Models\CandidateWishList;
 use App\Models\Company;
 use App\Models\CompanyWishList;
 use App\Models\ContactUs;
@@ -35,9 +36,15 @@ class CommonController extends Controller
                 $jobposts = $jobposts->where($field, $request->$field);
             }
         }
+        foreach($jobposts as $jp){
+            $final_arr[] = $jp;
+        }
         if($jobposts)
         {
-            return $jobposts;
+            return response()->json([
+                'jobposts'  => $final_arr,
+                'count'     => count($final_arr),
+            ]);
         }
         else{
             return JobPost::with('Company')->random();
@@ -53,7 +60,7 @@ class CommonController extends Controller
     public function candidateKeywordSearch($keyword)
     {
         $candidates = Candidate::query()->with(['CandidateSkills'])
-                                        ->where('full_name', 'LIKE', "%{$keyword}%") 
+                                        ->where('full_name', 'LIKE', "%{$keyword}%")
                                         ->get();
         $user = User::find(Auth::user()->id);
         $company = Company::where('user_id', $user->id)->first();
@@ -77,9 +84,28 @@ class CommonController extends Controller
     }
     public function companyKeywordSearch($keyword)
     {
-        return Company::query()
+        $companies = Company::query()
             ->where('company_name', 'LIKE', "%{$keyword}%") 
             ->get();
+        $user = User::find(Auth::user()->id);
+        $candidate = Candidate::where('user_id', $user->id)->first();
+        $company_with_wishlist = [];
+        foreach($companies as $company)
+        {
+            if(CandidateWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+            {
+                $company_with_wishlist[] = array(
+                    'company'=>$company,
+                    'is_wish_listed'=>true,
+                );
+            }else{
+                $company_with_wishlist[] = array(
+                    'company'=>$company,
+                    'is_wish_listed'=>false,
+                );
+            }
+        }
+        return $company_with_wishlist;
     }
     public function candidateSearch(Request $request)
     { 

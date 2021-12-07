@@ -28,7 +28,7 @@
                                     <div class="col-md-6">
                                         <label for="">Salary Range</label>
                                         <select name="salary_range" v-model="record.salary_range" class="form-control">
-                                            <option disabled selected>Select Salary Range</option>
+                                            <option value="" disabled selected>Select Salary Range</option>
                                             <option value="10000-20000">10000 - 20000 </option>
                                             <option value="20000-30000">20000 - 30000</option>
                                             <option value="30000-40000">30000 - 40000</option>
@@ -44,7 +44,7 @@
                                     <div class="col-md-6">
                                         <label for="">Shift</label>
                                         <select name="shift" v-model="record.shift" class="form-control">
-                                            <option disabled selected>Select Shift</option>
+                                            <option value="" disabled selected>Select Shift</option>
                                             <option value="Night">Night</option>
                                             <option value="Morning">Morning</option>
                                             <option value="Afternoon">Afternoon</option>
@@ -59,7 +59,7 @@
                                     <div class="col-md-6">
                                         <label for="">Job Type</label>
                                         <select name="job_type" v-model="record.job_type" class="form-control">
-                                            <option disabled selected>Job Type</option>
+                                            <option value="" disabled selected>Job Type</option>
                                             <option value="Full Time">Full Time</option>
                                             <option value="Part Time">Part Time</option>
                                             <option value="Internship">Internship</option>
@@ -72,7 +72,7 @@
                                         <label for="">Qualifications & Technicalities</label>
                                         <select name="qualification_level" v-model="record.qualification_level"
                                             class="form-control">
-                                            <option disabled selected>Select Qualifications</option>
+                                            <option value="" disabled selected>Select Qualifications</option>
                                             <option value="Metric">Metric</option>
                                             <option value="Intermediate">Intermediate</option>
                                             <option value="Graduation">Graduation</option>
@@ -129,7 +129,7 @@
                     <div>
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap p-0">
-                            <div class="job-list m-0 mb-3" v-if="index < searchData.length" v-for="(item, index) in jobToShow" :key="index">
+                            <div class="job-list m-0 mb-3" v-if="index < totalJobs" v-for="(item, index) in jobToShow" :key="index">
                                 <div class="company-logo col-auto py-2">
                                     <img :src="'/storage/images/companies/'+searchData[index].company.logo"
                                         alt="Company Logo">
@@ -144,8 +144,8 @@
                                              <i class="fa fa-star" aria-hidden="true"></i>
                                              <i class="fa fa-star" aria-hidden="true"></i> -->
                                         <div class="d-flex align-items-center">
-                                            <span class="job-post-date">20 hours ago </span>
-                                            <i class="far fa-heart"></i>
+                                            <timeago class="job-post-date" :datetime="searchData[index].created_at"></timeago>
+                                            <!-- <i class="far fa-heart"></i> -->
                                         </div>
                                     </div>
 
@@ -197,22 +197,21 @@
                             <span class="show-result-msg" v-if="this.showError == true">Data Not Found</span>
                         </div>
                     </div>
-                    <div class="text-center" v-if="searchData.length">
-                        <button class="load-more-btn mx-auto" v-if="searchData.length != jobToShow && totalJobs > jobToShow " @click="jobToShow += 2">Load more</button>
+                    <div class="text-center" v-if="totalJobs">
+                        <button class="load-more-btn mx-auto" v-if="totalJobs != jobToShow && totalJobs > jobToShow " @click="jobToShow += 2">Load more</button>
                     </div>
                 </div>
                 <div class="job-list-wrap mt-3 p-0" v-if="keywordSearchShow == true">
                     <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
-                    <div class="job-list m-0 mb-3"  v-if="index < searchData.length" v-for="(item, index) in companiesToShow"
-                        :key="index">
+                    <div class="job-list m-0 mb-3"  v-if="index < searchData.length" v-for="(item, index) in companiesToShow" :key="index">
                         <div class="company-logo col-auto py-2">
-                            <img :src="'/storage/images/companies/'+searchData[index].logo" alt="Company Logo"/>
-                            <span class="company-h line-clamp-1">{{searchData[index].company_name}}</span>
+                            <img :src="'/storage/images/companies/'+searchData[index].company.logo" alt="Company Logo"/>
+                            <span class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">{{searchData[index].company_name}}</h6>
+                                <h6 class="job-title mb-0">{{searchData[index].company.company_name}}</h6>
                                 <!-- <i class="fa fa-star" aria-hidden="true"></i>
                                              <i class="fa fa-star" aria-hidden="true"></i>
                                              <i class="fa fa-star" aria-hidden="true"></i>
@@ -220,50 +219,51 @@
                                              <i class="fa fa-star" aria-hidden="true"></i> -->
 
                                 <div class="d-flex align-items-center">
-                                    <span class="job-post-date">20 hours ago </span>
-                                    <i class="far fa-heart"></i>
+                                    <timeago class="job-post-date" :datetime="searchData[index].company.created_at"></timeago>
+                                    <a v-if="searchData[index].is_wish_listed == false" @click="addToWishList(searchData[index].company.id)"><i class="far fa-heart"></i></a>
+                                    <a v-else @click="removeToWishList(searchData[index].company.id)"><i class="fas fa-heart"></i></a>
+
                                 </div>
                             </div>
 
-                            <p class="job-description">{{searchData[index].description}}</p>
+                            <p class="job-description">{{searchData[index].company.description}}</p>
                             <div class="job-content-wrap">
                                 <div class="job-dynamic-values">
                                     <ul>
                                         <li>
                                             <img src="/website/assets/images/calendar-job.svg" alt="img">
-                                            <span>{{searchData[index].created_at | moment("YYYY-MM-DD")}}</span>
+                                            <span>{{searchData[index].company.created_at | moment("YYYY-MM-DD")}}</span>
                                         </li>
                                         <li>
                                             <img src="/website/assets/images/experience-job.svg" alt="">
-                                            <span>{{searchData[index].experience}}</span>
+                                            <span>{{searchData[index].company.experience}}</span>
                                         </li>
                                     </ul>
                                     <ul>
                                         <li>
                                             <img src="/website/assets/images/money-job.svg" alt="">
-                                            <span>{{searchData[index].salary_range}}</span>
+                                            <span>{{searchData[index].company.salary_range}}</span>
                                         </li>
                                         <li>
                                             <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
                                                 alt="img">
-                                            <span>{{searchData[index].location}}</span>
+                                            <span>{{searchData[index].company.location}}</span>
                                         </li>
                                     </ul>
                                     <ul>
                                         <li>
                                             <img src="/website/assets/images/suitcase-job.svg" alt="">
-                                            <span>{{searchData[index].shift}}</span>
+                                            <span>{{searchData[index].company.shift}}</span>
                                         </li>
                                         <li>
                                             <img src="/website/assets/images/switch-job.svg" alt="">
-                                            <span>{{searchData[index].job_type}}</span>
+                                            <span>{{searchData[index].company.job_type}}</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <ul class="job-list-fav m-0">
                                     <li>
-                                        <router-link class="job-view-btn" data-toggle="collapse"
-                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].id } }">View</router-link>
+                                        <router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'CompanyDetail', params: { id: searchData[index].company.id } }">View</router-link>
                                     </li>
                                 </ul>
                             </div>
@@ -271,8 +271,8 @@
                         </div>
                     </div>
                     <span class="show-result-msg" v-if="this.showError == true">Data Not Found</span>
-                    <div class="text-center" v-if="searchData.length">
-                        <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow && totalCompanies > companiesToShow" @click="companiesToShow += 2">Load more</button>
+                    <div class="text-center" v-if="searchData.length > 0">
+                        <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow" @click="companiesToShow += 2">Load more</button>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
@@ -593,8 +593,8 @@
                 axios.post('/job-search', this.record)
                 .then((response) => {
                     this.searchData = []
-                    this.searchData = response.data
-                    this.totalJobs = this.searchData.length
+                    this.searchData = response.data.jobposts
+                    this.totalJobs = response.data.count
                     if(response.data.length == 0){
                         this.showError = true
                     }else{
@@ -602,12 +602,25 @@
                     }
                 });
             },
+            addToWishList(id) {
+                axios.get('candidate/add-to-wish-list/' + id)
+            },
+            removeToWishList(id){
+                axios.get('candidate/remove-to-wish-list/' + id)
+            },
             keywordSearch() {
+                this.searchData = [];
+                this.totalJobs = 0;
+                this.jobToShow = 2;
+                this.companiesToShow = 2;
+                this.totalCompanies = 0;
+                this.showError = false;
+                this.keywordSearchShow = false;
                 axios.get('/companies-keyword-search/'+this.record.keyword)
                 .then((response) => {
                     this.searchData = []
                     this.searchData = response.data
-                    this.totalJobs = this.searchData.length
+                    this.totalJobs = response.length
                     this.keywordSearchShow = true
                     if(response.data.length == 0){
                         this.showError = true

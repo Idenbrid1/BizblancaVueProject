@@ -15,6 +15,7 @@ use File;
 use Validator;
 use App;
 use App\Models\CandidateAppliedJob;
+use App\Models\CandidateWishList;
 use App\Models\CompanyWishList;
 use App\Models\User;
 use Carbon\Carbon;
@@ -484,7 +485,9 @@ class CompanyController extends Controller
 
     public function removeToWishList($id)
     {
-        if(CompanyWishList::find($id)->delete()){
+        $user = User::find(Auth::user()->id);
+        $company = Company::where('user_id', $user->id)->first();
+        if(CompanyWishList::where(['candidate_id'=> $id, 'company_id'=> $company->id])->delete()){
             return response()->json([
                 'success' => true,
             ]);
