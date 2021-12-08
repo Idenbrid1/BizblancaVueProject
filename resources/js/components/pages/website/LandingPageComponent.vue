@@ -76,7 +76,8 @@
                                 </div>
                                 <div class="swiper-wrapper">
                                     <!--  -->
-                                    <div class="swiper-slide single-blog-wrap" v-for="(item, index) in news" :key="index">
+                                    <div class="swiper-slide single-blog-wrap" v-for="(item, index) in news"
+                                        :key="index">
                                         <div class="single-blog">
                                             <img :src="'/storage/images/news/'+item.image" alt="blog-img" />
                                             <div class="eventdate"><strong>{{ item.created_at | moment("d")}}</strong>
@@ -467,13 +468,13 @@
             LoopingRhombusesSpinner,
         },
         created() {
-            this.checkRole()
-            this.getNews()
+            this.checkRole();
         },
         mounted() {
+            this.getNews();
             var swiper = new Swiper(".blogs-swiper", {
-                slidesPerView: 1,
-                spaceBetween: 1,
+                slidesPerView: 3.5,
+                spaceBetween: 5,
                 // centeredSlides: true,
                 loop: true,
                 autoplay: {
@@ -544,7 +545,7 @@
             }, 5000)
         },
         methods: {
-            runswiper(){
+            runswiper() {
 
             },
             checkRole() {
@@ -560,7 +561,7 @@
                     .then((response) => {
                         this.news = response.data
                     });
-                    
+
             },
             expireTodayJobs() {
                 axios.get('expire-today-jobs')

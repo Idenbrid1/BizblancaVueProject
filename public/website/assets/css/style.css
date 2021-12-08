@@ -16,7 +16,10 @@ body {
 	box-shadow: 0px 0px 15px #D9DBDD;
 	/* padding: 50px; */
 	margin-top: 30px;
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
+}
+.register-container{
+	margin-top: 30px;
 }
 a, button {
 	cursor: pointer !important;
@@ -1365,12 +1368,6 @@ a, button {
 	}
 }
 /*-----------------home end style---------------------------------- */
-
-/* 
-.user-profile-container {
-    min-width: 1050px;
-} */
-
 .user-profile-container {
 	display: flex;
 	justify-content: space-between;
@@ -4043,7 +4040,6 @@ a, button {
 
 .profile-wrapper {
 	background: #fff;
-	padding-bottom: 80px;
 	display: flex;
 	justify-content: center;
 }
@@ -5178,6 +5174,7 @@ progress {
 	height: 200px;
 	background-size: 100% 100%;
 	border-radius: 5px;
+	background: #081351;
 }
 .candidate-send-msg {
 	margin-top: 5px;
@@ -5506,8 +5503,8 @@ progress {
 	font-weight: 500;
 }
 .msg-title {
-	text-decoration: underline;
-	color: #0645AD;
+	text-decoration: underline !important;
+	color: #0645AD !important;
 	font-size: 500;
 	font-size: 16px;
 }

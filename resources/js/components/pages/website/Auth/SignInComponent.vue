@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <div class="container py-2 py-md-5">
+        <div class="container py-2">
             <div class="login-page-container container p-0">
                 <form method="POST" @submit.prevent="Login">
                     <div class="row m-0">

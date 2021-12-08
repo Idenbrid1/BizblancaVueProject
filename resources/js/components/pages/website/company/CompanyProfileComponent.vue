@@ -2,7 +2,7 @@
     <div>
         <WebsiteNavbar />
         <CompanyNavbar />
-        <div class="profile-wrapper mt-5">
+        <div class="profile-wrapper">
             <div class="row m-0 container px-1">
                 <div class="col-12 p-0">
                     <div v-if="this.profile.package_id == 0 && this.profile.package.title == 'Free'"

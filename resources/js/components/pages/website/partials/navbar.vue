@@ -105,7 +105,7 @@
                     </li>
                     <li class="header-block-link">
                             <router-link v-if="this.isAuth == false" class="postjob-desktop-btn mr-2" data-toggle="collapse" :to="{ name: 'Signin' }">
-                            <i class="fal fa-briefcase" aria-hidden="true"></i>Posts a job</router-link>
+                            <i class="fas fa-briefcase" aria-hidden="true"></i>&nbsp;Posts a job</router-link>
                     </li>
                 </ul>
             </div>
