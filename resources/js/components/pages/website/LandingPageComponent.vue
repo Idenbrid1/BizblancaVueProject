@@ -76,8 +76,7 @@
                                 </div>
                                 <div class="swiper-wrapper">
                                     <!--  -->
-                                    <div class="swiper-slide single-blog-wrap" v-for="(item, index) in news"
-                                        :key="index">
+                                    <div class="swiper-slide single-blog-wrap" v-for="(item, index) in news" :key="index">
                                         <div class="single-blog">
                                             <img :src="'/storage/images/news/'+item.image" alt="blog-img" />
                                             <div class="eventdate"><strong>{{ item.created_at | moment("d")}}</strong>
@@ -469,53 +468,10 @@
         },
         created() {
             this.checkRole();
+            this.getNews();
         },
         mounted() {
-            this.getNews();
-            var swiper = new Swiper(".blogs-swiper", {
-                slidesPerView: 3.5,
-                spaceBetween: 5,
-                // centeredSlides: true,
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                breakpoints: {
-                    360: {
-                        slidesPerView: 2,
-                        centeredSlides: false,
-                        spaceBetween: 1,
-                    },
-                    640: {
-                        slidesPerView: 2,
-                    },
-                    768: {
-                        slidesPerView: 2.5,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 3.5,
-                        spaceBetween: 30,
-                    },
-                    1224: {
-                        slidesPerView: 3.5,
-                        spaceBetween: 5,
-                    },
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-            });
+            this.swiperInit()
             var swiper = new Swiper(".video-slider", {
                 slidesPerView: 1,
                 breakpoints: {
@@ -545,8 +501,53 @@
             }, 5000)
         },
         methods: {
-            runswiper() {
-
+            swiperInit() {
+                this.$nextTick(function() {
+                    var swiper = new Swiper(".blogs-swiper", {
+                        slidesPerView: 3.5,
+                        spaceBetween: 5,
+                        // centeredSlides: true,
+                        loop: true,
+                        autoplay: {
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                        breakpoints: {
+                            360: {
+                                slidesPerView: 2,
+                                centeredSlides: false,
+                                spaceBetween: 1,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                            },
+                            768: {
+                                slidesPerView: 2.5,
+                                spaceBetween: 20,
+                            },
+                            1024: {
+                                slidesPerView: 3.5,
+                                spaceBetween: 30,
+                            },
+                            1224: {
+                                slidesPerView: 3.5,
+                                spaceBetween: 5,
+                            },
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
+                    });
+                })
             },
             checkRole() {
                 axios.get('navbar-check-roles')
@@ -558,10 +559,10 @@
             },
             getNews() {
                 axios.get('/landingpage/news')
-                    .then((response) => {
-                        this.news = response.data
-                    });
-
+                .then((response) => {
+                    this.news = response.data
+                    this.swiperInit()
+                });
             },
             expireTodayJobs() {
                 axios.get('expire-today-jobs')
@@ -596,7 +597,6 @@
                             Swal.close()
                             this.errors = response.data.errors
                             this.spinnerSubmit = false
-
                         }
                     });
             }
