@@ -445,8 +445,9 @@ a, button {
 }
 #main-header {
 	display: flex;
-	padding: 10px 0px;
+	padding: 20px 40px;
 	border-bottom: 1px solid #C8C8C8;
+	align-content: center;
 }
 #main-header .bizblanca-logo {
 	margin-right: 15px;
@@ -575,11 +576,6 @@ a, button {
 	/* height: 50px; */
 	color: #081351 !important;
 	/* font-weight: bold; */
-}
-#main-header {
-	display: flex;
-	padding: 10px 40px;
-	border-bottom: 1px solid #C8C8C8;
 }
 .log-site {
 	width: 170px;

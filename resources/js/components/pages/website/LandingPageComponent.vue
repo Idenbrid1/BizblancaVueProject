@@ -628,7 +628,8 @@
     width: 100vw;
     overflow: hidden;
     position: fixed;
-    z-index: 10000
+    z-index: 10000;
+    opacity: 0.6;
 }
 .spinner {
     width: 10em;
