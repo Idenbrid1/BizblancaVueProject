@@ -1148,7 +1148,7 @@ a, button {
 }
 @media only screen and (max-width: 758px) {
 	.looking-h {
-		padding: 20px 0px;
+		padding: 36px 0px;
 	}
 	.parent {
 		height: 240px;
@@ -1394,6 +1394,7 @@ a, button {
 	.condition-search-feilds {
 		width: 100%;
 	}
+	
 	.common-sidebar {
 		width: 100%;
 	}
@@ -5739,5 +5740,34 @@ progress {
 .list-services .list__card-content {
 	align-items: center;
 	justify-content: space-between;
+}
+.list__services-company{
+	margin-top: 20px;
+}
+.services-company-box{
+	display: flex;
+	position: relative;
+	align-items: center;
+	margin: 30px 0px;
+}
+.services-company-box>.card-service-img{
+	width: 150px;
+	height: 150px;
+	background: #081351 0% 0% no-repeat padding-box;
+	border-radius: 100%;
+}
+.services-company-box>.content-service{
+	width: 300px;
+	margin-left: 30px;
+}
+.services-company-box>.content-service>p{
+	margin: 0px;
+	color: #000000;
+	font-size: 16px;
+}
+.services-company-box>.content-service>h2{
+	color: #000000;
+	font-size: 32px;
+	font-weight: bold;
 }
 /* services */

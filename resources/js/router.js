@@ -155,6 +155,11 @@ const router = new VueRouter({
             component: TermsCondition
         },
         {
+            path: '/about-us',
+            name: 'AboutUs',
+            component: AboutUs
+        },
+        {
             path: '/services',
             name: 'Services',
             component: Services

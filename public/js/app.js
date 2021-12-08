@@ -3622,359 +3622,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5979,6 +5626,132 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -6771,14 +6544,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -6838,6 +6603,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16125,6 +15898,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_30__["default"]({
     path: '/terms-condition',
     name: 'TermsCondition',
     component: _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_25__["default"]
+  }, {
+    path: '/about-us',
+    name: 'AboutUs',
+    component: AboutUs
   }, {
     path: '/services',
     name: 'Services',
@@ -29970,108 +29747,6 @@ var staticRenderFns = [
                       ),
                     ]),
                   ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
                 ]),
               ]),
             ]
@@ -30093,11 +29768,13 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
+                    _c("h4", [
+                      _vm._v("Q. What payment methods do you accept?"),
+                    ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
+                        "\n                                You can purchase on our website using a debit or credit card. We additionally offer\n                                support for Paypal, Amazon Pay, Apple Pay, and Google Play. You can choose these\n                                payment methods at checkout.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30118,12 +29795,12 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v("Q. How Is BizBlanca Different From Others?"),
+                      _vm._v("Q. Which currency will I be charged in?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
+                        "\n                                We currently only support charging our customers in their local currency, PKR.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30143,113 +29820,11 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v("Q. Can I Get An IT Job In This Pandemic?"),
-                    ]),
+                    _c("h4", [_vm._v("Q. When is my credit card charged?")]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Bravo! You've come to the right place to look for IT jobs from the comfort of your\n                                own home. You don’t need to roam here & there physically to find a job now. Simply\n                                create an account on our website and search for your ideal job.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                You certainly can! Let's make it modest to begin your IT career. We've got you\n                                covered with our IT recruitment expertise and are always ready to help you out with\n                                the finest available services. Just ping us!\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. How Can I Get A Job?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bizblanca encourages and supports people who are keen to work in the IT field. All\n                                you have to do is create & submit a well-optimized CV and wait for the recruiter to\n                                contact you after applying.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
+                        "\n                                Just before statements are mailed out, credit cards are charged. The charge's\n                                outcomes are immediately contained in the statement.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30271,39 +29846,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
+                        "Q. What happens if I am unable to pay my bill by the due date?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
+                        "\n                                Accounts that are overdue for payment may have their services suspended at any time\n                                and without warning. The longer you've been late, the more probable this is to\n                                happen.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30342,63 +29891,15 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v("Q. How Is BizBlanca Different From Others?"),
+                      _vm._v(
+                        "Q. If my credit card is lost or stolen, what should I do?"
+                      ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v("Q. Can I Get An IT Job In This Pandemic?"),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bravo! You've come to the right place to look for IT jobs from the comfort of your\n                                own home. You don’t need to roam here & there physically to find a job now. Simply\n                                create an account on our website and search for your ideal job.\n                            "
+                        "\n                                Not only should you notify your bank, but you should also notify us by withdrawing\n                                or altering the card details in the Account Control Center.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30420,85 +29921,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?"
+                        "Q. What should I do if my credit card has been charged incorrectly?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                You certainly can! Let's make it modest to begin your IT career. We've got you\n                                covered with our IT recruitment expertise and are always ready to help you out with\n                                the finest available services. Just ping us!\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. How Can I Get A Job?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bizblanca encourages and supports people who are keen to work in the IT field. All\n                                you have to do is create & submit a well-optimized CV and wait for the recruiter to\n                                contact you after applying.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
+                        "\n                                We'll gladly post refunds and modifications to the cards that we've processed.\n                                Before arguing the charges with your bank, it is preferable for everyone if you\n                                contact us and enable us to make the necessary adjustments.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30520,13 +29949,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
+                        "Q. How soon do I have to provide a refund request after making a payment?"
                       ),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
+                        "\n                                Payments done through BizBlanca are refundable. You will have to request within 3-4\n                                working days to get your payment back.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30547,12 +29976,38 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
+                      _vm._v("Q. How long does it take to receive a refund?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
+                        "\n                                Refunds can take 9-14 business days to complete. Be patient, and wait for the right\n                                time to come.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. Is there any charge for giving refunds?"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                No. refunding process is free of cost and you can do it anytime. But refunding is\n                                not an option for accepting security deposits or pre-authorized expenses. So you\n                                must verify and provide a valid reason for refunds.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30591,11 +30046,15 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
+                    _c("h4", [
+                      _vm._v(
+                        "Q. Can I post for several jobs at the same time?"
+                      ),
+                    ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
+                        "\n                                By subscribing to our pricing plans, you can avail of services of posting multiple\n                                jobs at a time. The greater plan you choose, the more job posts you can do.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30616,60 +30075,12 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v("Q. How Is BizBlanca Different From Others?"),
+                      _vm._v("Q. Can I apply multiple times for a job?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
+                        "\n                                Yes, there are no limitations to applying for a job. If you are not short-listed for\n                                an interview, you can apply for that job again too.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30690,14 +30101,12 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v(
-                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
-                      ),
+                      _vm._v("Q. What kind of service response can I expect?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
+                        "\n                                Our support team is always here for your help. We typically reply within 24 hours\n                                and always give a satisfying response.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30736,217 +30145,13 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v("Q. How Is BizBlanca Different From Others?"),
+                      _vm._v("Q. I didn’t get an email. What should I do?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v("Q. Can I Get An IT Job In This Pandemic?"),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bravo! You've come to the right place to look for IT jobs from the comfort of your\n                                own home. You don’t need to roam here & there physically to find a job now. Simply\n                                create an account on our website and search for your ideal job.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                You certainly can! Let's make it modest to begin your IT career. We've got you\n                                covered with our IT recruitment expertise and are always ready to help you out with\n                                the finest available services. Just ping us!\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. How Can I Get A Job?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bizblanca encourages and supports people who are keen to work in the IT field. All\n                                you have to do is create & submit a well-optimized CV and wait for the recruiter to\n                                contact you after applying.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What IT Jobs Do You Provide?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Support Specialist, Computer Programmer, Web Developer, IT Technician, UI/UX\n                                Designer, Database Administrator, and many other IT jobs are available on our site.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Focus on your strength and how to convey them. Build a personal brand, tailor your\n                                application materials to each position you apply to, and optimize organic keywords\n                                for your application materials.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
+                        "\n                                If you did not receive the confirmation or support email from us, you should check\n                                your junk or spam folder.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -30985,139 +30190,27 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "help-queries-wrap" }, [
                   _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. What is BizBlanca?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                BizBlanca is a job-search portal for IT professionals that connects job seekers with\n                                reputable IT companies across the country and helps them discover jobs that\n                                perfectly fit their needs.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v("Q. How Is BizBlanca Different From Others?"),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Unlike other job searching platforms, BizBlanca supports the IT sector only. It's a\n                                dream-come-true platform for applicants who enjoy coding and managing businesses\n                                using advanced IT technologies.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v("Q. Can I Get An IT Job In This Pandemic?"),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bravo! You've come to the right place to look for IT jobs from the comfort of your\n                                own home. You don’t need to roam here & there physically to find a job now. Simply\n                                create an account on our website and search for your ideal job.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [
-                      _vm._v(
-                        "Q. I Am Tired Of Looking For IT jobs. Can I Get One Here?"
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                You certainly can! Let's make it modest to begin your IT career. We've got you\n                                covered with our IT recruitment expertise and are always ready to help you out with\n                                the finest available services. Just ping us!\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
-                    _c("h4", [_vm._v("Q. How Can I Get A Job?")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                                Bizblanca encourages and supports people who are keen to work in the IT field. All\n                                you have to do is create & submit a well-optimized CV and wait for the recruiter to\n                                contact you after applying.\n                            "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "read-more-descrp",
-                          attrs: { href: "" },
-                        },
-                        [
-                          _vm._v("Read More  "),
-                          _c("i", { staticClass: "fas fa-angle-down" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [_vm._v("Q. How To Succeed An IT Interview?")]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                Make Time For Practice\n                                Get Well Dressed.\n                                Thoroughly Research About The Company\n                                Be Authentic & Fully Confident\n                            "
+                        "\n                                Getting a job interview is an excellent beginning step to your IT career, but\n                                remember that it's just \"half the fight. To succeed in an interview and get the job,\n                                you need to:\n                                "
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        " Make Time For Practice\n                                "
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        " Get Well Dressed.\n                                "
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        " Thoroughly Research About The Company\n                                "
+                      ),
+                      _c("br"),
+                      _vm._v(
+                        " Be Authentic & Fully Confident\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -31163,7 +30256,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
                       _vm._v(
-                        "Q. There Are Already So Many Candidates. How Can I Stand Out For The Job?"
+                        "Q. There are already so many candidates. How can I stand out for the job?"
                       ),
                     ]),
                     _vm._v(" "),
@@ -31190,12 +30283,38 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("div", { staticClass: "help-queries" }, [
                     _c("h4", [
-                      _vm._v("Q. Is BizBlanca Providing Online Home Jobs?"),
+                      _vm._v("Q. What Type of job posts can I apply for?"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                                Bizblanca supports all employees, whether they work remotely or in the workplace. It\n                                gives you the most efficient way to apply for employment.\n                            "
+                        "\n                                At BizBlanca, we provide a platform to seek jobs and hire employees related to I.T\n                                field only. So your job post must be relevant to Information Technology.\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "read-more-descrp",
+                          attrs: { href: "" },
+                        },
+                        [
+                          _vm._v("Read More  "),
+                          _c("i", { staticClass: "fas fa-angle-down" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "help-queries" }, [
+                    _c("h4", [
+                      _vm._v("Q. I didn’t get an email. What should I do?"),
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n                                If you did not receive the confirmation or support email from us, you should check\n                                your junk or spam folder.\n                            "
                       ),
                     ]),
                     _vm._v(" "),
@@ -34599,7 +33718,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "list__card-description body--sm" }, [
                 _vm._v(
-                  "\n                            We connect you with highly-skilled and expert web developers that create fast-loading\n                            and user-friendly sites.\n                        "
+                  "\n                            A web developer knows HTML, CSS, JavaScript, and PHP. He is an expert in troubleshooting\n                            website problems and also monitors website traffic. We connect you with highly-skilled\n                            and expert web developers that create fast-loading and user-friendly sites.\n                        "
                 ),
               ]),
             ]),
@@ -34608,10 +33727,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "list__card-link minor-button-right",
-                attrs: {
-                  tabindex: "0",
-                  href: "/tools/reed-salary-guides-2021",
-                },
+                attrs: { tabindex: "0", href: "" },
               },
               [
                 _vm._v("Read more\n                        "),
@@ -34641,7 +33757,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "list__card-description body--sm" }, [
                 _vm._v(
-                  "\n                            If you require employees who can develop create mobile apps, we will find them for you.\n                        "
+                  "\n                            An application developer is typically responsible for coding, designing, and managing\n                            the application. He’ll also make sure that the app runs smoothly. If you require\n                            employees who can develop and create mobile apps, we will find them for you.\n                        "
                 ),
               ]),
             ]),
@@ -34650,10 +33766,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "list__card-link minor-button-right",
-                attrs: {
-                  tabindex: "0",
-                  href: "/tools/reed-salary-guides-2021",
-                },
+                attrs: { tabindex: "0", href: "" },
               },
               [
                 _vm._v("Read more\n                        "),
@@ -34685,7 +33798,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "list__card-description body--sm" }, [
                 _vm._v(
-                  "\n                            If you require employees who can develop create mobile apps, we will find them for you.\n                        "
+                  "\n                            AI developers help to answer complex business concerns with AI-developed software. He\n                            designs a streamlined architecture of data management & transformation. For companies\n                            that require to automate their business procedures, we connect them with proficient AI\n                            Developers.\n                        "
                 ),
               ]),
             ]),
@@ -34694,10 +33807,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "list__card-link minor-button-right",
-                attrs: {
-                  tabindex: "0",
-                  href: "/tools/reed-salary-guides-2021",
-                },
+                attrs: { tabindex: "0", href: "" },
               },
               [
                 _vm._v("Read more\n                        "),
@@ -34723,13 +33833,13 @@ var staticRenderFns = [
             _c("div", { staticClass: "list__card-content" }, [
               _c("h3", { staticClass: "h5 list__card-title" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum\n                        "
+                  "\n                            IT Infrastructure\n                        "
                 ),
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "list__card-description body--sm" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                  "\n                            IT infrastructure engineers are in charge of the security of computer systems and data\n                            exchanges across applications. If you want to manage the security of computer systems\n                            and inter-application information transfers within a business, we help you hire an IT\n                            Infrastructure Engineer.\n                        "
                 ),
               ]),
             ]),
@@ -34738,10 +33848,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "list__card-link minor-button-right",
-                attrs: {
-                  tabindex: "0",
-                  href: "/tools/reed-salary-guides-2021",
-                },
+                attrs: { tabindex: "0", href: "" },
               },
               [
                 _vm._v("Read more\n                        "),
@@ -34767,13 +33874,13 @@ var staticRenderFns = [
             _c("div", { staticClass: "list__card-content" }, [
               _c("h3", { staticClass: "h5 list__card-title" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum\n                        "
+                  "\n                            Digital Marketer\n                        "
                 ),
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "list__card-description body--sm" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                  "\n                            A Digital Marketer is responsible to ensure that the audience finds your website easily,\n                            as well as driving more organic traffic. To grow and advertise your business, we help\n                            you in recruiting Digital Marketers and SEO Experts that fit your requirements.\n                        "
                 ),
               ]),
             ]),
@@ -34782,10 +33889,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "list__card-link minor-button-right",
-                attrs: {
-                  tabindex: "0",
-                  href: "/tools/reed-salary-guides-2021",
-                },
+                attrs: { tabindex: "0", href: "" },
               },
               [
                 _vm._v("Read more\n                        "),
@@ -34811,13 +33915,13 @@ var staticRenderFns = [
             _c("div", { staticClass: "list__card-content" }, [
               _c("h3", { staticClass: "h5 list__card-title" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum\n                        "
+                  "\n                            ECommerce\n                        "
                 ),
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "list__card-description body--sm" }, [
                 _vm._v(
-                  "\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                            elitjhjk. Lorem is ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetuer\n                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet.\n                        "
+                  "\n                            Ecommerce developers are crucial in ensuring that potential clients can explore your\n                            eCommerce site with ease and find out what products you sell or purchase. If your\n                            company wants to sell products online, we connect you with a skilled and dedicated\n                            ECommerce Developer.\n                        "
                 ),
               ]),
             ]),
@@ -34826,10 +33930,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "list__card-link minor-button-right",
-                attrs: {
-                  tabindex: "0",
-                  href: "/tools/reed-salary-guides-2021",
-                },
+                attrs: { tabindex: "0", href: "" },
               },
               [
                 _vm._v("Read more\n                        "),
@@ -34839,6 +33940,257 @@ var staticRenderFns = [
                 }),
               ]
             ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-box" }, [
+          _c("div", { staticClass: "list__card" }, [
+            _c("div", { staticClass: "list__card-image-container" }, [
+              _c("div", { staticClass: "list__card-image" }, [
+                _c("img", {
+                  attrs: { src: "/website/assets/images/Group1361.svg" },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list__card-content" }, [
+              _c("h3", { staticClass: "h5 list__card-title" }, [
+                _vm._v(
+                  "\n                            Data Science Expert\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "list__card-description body--sm" }, [
+                _vm._v(
+                  "\n                            Data scientists use their experience in a range of data niches to support organizations\n                            in interpreting and managing data and solving complex concerns. To keep your business\n                            data & information in a secured and backup environment, we provide applications of Data\n                            Science Experts.\n                        "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "list__card-link minor-button-right",
+                attrs: { tabindex: "0", href: "" },
+              },
+              [
+                _vm._v("Read more\n                        "),
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-box" }, [
+          _c("div", { staticClass: "list__card" }, [
+            _c("div", { staticClass: "list__card-image-container" }, [
+              _c("div", { staticClass: "list__card-image" }, [
+                _c("img", {
+                  attrs: { src: "/website/assets/images/Group1361.svg" },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list__card-content" }, [
+              _c("h3", { staticClass: "h5 list__card-title" }, [
+                _vm._v(
+                  "\n                            CMS Developer\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "list__card-description body--sm" }, [
+                _vm._v(
+                  "\n                            CMS developer manages both structured & unstructured content like software, strategies,\n                            and security to utilize it in a precise manner. If you need to create CMS-based\n                            websites, we can link you with reputable and advanced CMS Developers.\n                        "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "list__card-link minor-button-right",
+                attrs: { tabindex: "0", href: "" },
+              },
+              [
+                _vm._v("Read more\n                        "),
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-box" }, [
+          _c("div", { staticClass: "list__card" }, [
+            _c("div", { staticClass: "list__card-image-container" }, [
+              _c("div", { staticClass: "list__card-image" }, [
+                _c("img", {
+                  attrs: { src: "/website/assets/images/Group1361.svg" },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list__card-content" }, [
+              _c("h3", { staticClass: "h5 list__card-title" }, [
+                _vm._v(
+                  "\n                            CMS Developer\n                        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "list__card-description body--sm" }, [
+                _vm._v(
+                  "\n                            CMS developer manages both structured & unstructured content like software, strategies,\n                            and security to utilize it in a precise manner. If you need to create CMS-based\n                            websites, we can link you with reputable and advanced CMS Developers.\n                        "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "list__card-link minor-button-right",
+                attrs: { tabindex: "0", href: "" },
+              },
+              [
+                _vm._v("Read more\n                        "),
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "list__services-company row no-gutters" }, [
+        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
+          _c("div", { staticClass: "card-service-img" }, [
+            _c("img", { attrs: { src: "", alt: "" } }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-service" }, [
+            _c("h2", [_vm._v("Service No. 1")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Provide a streamlined application reviewing procedure that makes it easy to shortlist the\n                        candidates."
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
+          _c("div", { staticClass: "card-service-img" }, [
+            _c("img", { attrs: { src: "", alt: "" } }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-service" }, [
+            _c("h2", [_vm._v("Service No. 2")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v("Provide direct linking with the candidate’s detail "),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
+          _c("div", { staticClass: "card-service-img" }, [
+            _c("img", { attrs: { src: "", alt: "" } }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-service" }, [
+            _c("h2", [_vm._v("Service No. 3")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                " Confer support with arranging interviews and ensuring follow-up."
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
+          _c("div", { staticClass: "card-service-img" }, [
+            _c("img", { attrs: { src: "", alt: "" } }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-service" }, [
+            _c("h2", [_vm._v("Service No. 4")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Offer a platform where the you can perform end-to-end communication with the applicants."
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
+          _c("div", { staticClass: "card-service-img" }, [
+            _c("img", { attrs: { src: "", alt: "" } }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-service" }, [
+            _c("h2", [_vm._v("Service No. 5")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Offer scout connections options to keep in touch with the employees. "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
+          _c("div", { staticClass: "card-service-img" }, [
+            _c("img", { attrs: { src: "", alt: "" } }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-service" }, [
+            _c("h2", [_vm._v("Service No. 6")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Give expert advice on your job description and the salary you should offer."
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
+          _c("div", { staticClass: "card-service-img" }, [
+            _c("img", { attrs: { src: "", alt: "" } }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-service" }, [
+            _c("h2", [_vm._v("Service No. 7")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Through our packages, we provide a wide range of safety and screening tests."
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
+          _c("div", { staticClass: "card-service-img" }, [
+            _c("img", { attrs: { src: "", alt: "" } }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-service" }, [
+            _c("h2", [_vm._v("Service No. 8")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Provide Proper Guidance on offer negotiation and counteroffer scenarios to save your time & money"
+              ),
+            ]),
           ]),
         ]),
       ]),
@@ -79842,7 +79194,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 

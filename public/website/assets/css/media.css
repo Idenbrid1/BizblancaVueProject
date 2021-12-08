@@ -1,6 +1,25 @@
 /* for common mobile devices */
 @media screen and (max-width:769px) {
-
+    .list__services-company{
+        margin-top: 30px;
+    }
+    .services-company-box{
+        margin: 20px 0px;
+    }
+    .services-company-box>.card-service-img{
+        width: 80px;
+        height: 80px;
+    }
+    .services-company-box>.content-service{
+        width: 253px;
+        margin-left: 15px;
+    }
+    .services-company-box>.content-service>p{
+        font-size: 12px;
+    }
+    .services-company-box>.content-service>h2{
+        font-size: 20px;
+    }
     .video-heading,
     .site-heading {
         font-size: 20px;
@@ -1102,6 +1121,9 @@
     .left-content>div{
         width: 450px;
     }
+    .looking-h {
+		padding: 1% 0px !important;
+	}
 }
 @media screen and (max-width:993px) {
     .heading-ankers>li>h6 {
