@@ -5739,7 +5739,10 @@ progress {
 }
 .list-services .list__card-content {
 	align-items: center;
-	justify-content: space-between;
+	/* justify-content: space-between; */
+}
+.news-letter-sub{
+	height: 50px;
 }
 .list__services-company{
 	margin-top: 20px;
@@ -5755,6 +5758,9 @@ progress {
 	height: 150px;
 	background: #081351 0% 0% no-repeat padding-box;
 	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .services-company-box>.content-service{
 	width: 300px;
@@ -5769,5 +5775,10 @@ progress {
 	color: #000000;
 	font-size: 32px;
 	font-weight: bold;
+}
+.mp-icon{
+	width: 50px;
+	height: 57px;
+	filter: invert(85%) sepia(42%) saturate(620%) hue-rotate(349deg) brightness(101%) contrast(101%);
 }
 /* services */

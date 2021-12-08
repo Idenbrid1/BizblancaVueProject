@@ -78,7 +78,7 @@
                         <h3 class="h4 m-0">NEWS LETTER</h3>
                     </div>
                     <p>Please enter your email to subscribe our news letter!</p>
-                    <input type="email" class="form-control pl-2" placeholder="Enter Email" maxlength="50" v-model="record.email" required="">
+                    <input type="email" class="form-control news-letter-sub pl-2" placeholder="Enter Email" maxlength="50" v-model="record.email" required="">
                     <small>
                         <span v-if="errors.email != null" class="text-danger">
                             {{errors.email[0]}}

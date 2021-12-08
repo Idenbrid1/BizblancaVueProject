@@ -26,9 +26,8 @@
                                 website problems and also monitors website traffic. We connect you with highly-skilled
                                 and expert web developers that create fast-loading and user-friendly sites.
                             </p>
-                        </div> 
-                        <!-- <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
-                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a> -->
+                        </div> <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
+                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="services-box">
@@ -43,9 +42,8 @@
                                 the application. He’ll also make sure that the app runs smoothly. If you require
                                 employees who can develop and create mobile apps, we will find them for you.
                             </p>
-                        </div> 
-                        <!-- <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
-                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a> -->
+                        </div> <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
+                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="services-box">
@@ -63,9 +61,8 @@
                                 that require to automate their business procedures, we connect them with proficient AI
                                 Developers.
                             </p>
-                        </div> 
-                        <!-- <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
-                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a> -->
+                        </div> <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
+                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="services-box">
@@ -83,9 +80,8 @@
                                 and inter-application information transfers within a business, we help you hire an IT
                                 Infrastructure Engineer.
                             </p>
-                        </div> 
-                        <!-- <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
-                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a> -->
+                        </div> <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
+                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="services-box">
@@ -102,9 +98,8 @@
                                 as well as driving more organic traffic. To grow and advertise your business, we help
                                 you in recruiting Digital Marketers and SEO Experts that fit your requirements.
                             </p>
-                        </div> 
-                        <!-- <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
-                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a> -->
+                        </div> <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
+                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="services-box">
@@ -122,9 +117,8 @@
                                 company wants to sell products online, we connect you with a skilled and dedicated
                                 ECommerce Developer.
                             </p>
-                        </div> 
-                        <!-- <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
-                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a> -->
+                        </div> <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
+                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="services-box">
@@ -142,9 +136,8 @@
                                 data & information in a secured and backup environment, we provide applications of Data
                                 Science Experts.
                             </p>
-                        </div> 
-                        <!-- <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
-                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a> -->
+                        </div> <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
+                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="services-box">
@@ -161,9 +154,8 @@
                                 and security to utilize it in a precise manner. If you need to create CMS-based
                                 websites, we can link you with reputable and advanced CMS Developers.
                             </p>
-                        </div> 
-                        <!-- <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
-                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a> -->
+                        </div> <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
+                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="services-box">
@@ -180,16 +172,15 @@
                                 and security to utilize it in a precise manner. If you need to create CMS-based
                                 websites, we can link you with reputable and advanced CMS Developers.
                             </p>
-                        </div> 
-                        <!-- <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
-                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a> -->
+                        </div> <a tabindex="0" href="" class="list__card-link minor-button-right">Read more
+                            <i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="list__services-company row no-gutters">
                 <div class="services-company-box col-12 col-md-6">
                     <div class="card-service-img">
-                        <img class="mp-icon" src="/website/assets/images/megaphone.svg" alt="">
+                        <img src="/website/assets/images/megaphone.svg" alt="img">
                     </div>
                     <div class="content-service">
                         <h2>Service No. 1</h2>
@@ -199,7 +190,7 @@
                 </div>
                 <div class="services-company-box col-12 col-md-6">
                     <div class="card-service-img">
-                        <img class="mp-icon" src="/website/assets/images/megaphone.svg" alt="">
+                        <img src="/website/assets/images/megaphone.svg" alt="img">
                     </div>
                     <div class="content-service">
                         <h2>Service No. 2</h2>
@@ -208,7 +199,7 @@
                 </div>
                 <div class="services-company-box col-12 col-md-6">
                     <div class="card-service-img">
-                        <img class="mp-icon" src="/website/assets/images/megaphone.svg" alt="">
+                        <img src="/website/assets/images/megaphone.svg" alt="img">
                     </div>
                     <div class="content-service">
                         <h2>Service No. 3</h2>
@@ -217,7 +208,7 @@
                 </div>
                 <div class="services-company-box col-12 col-md-6">
                     <div class="card-service-img">
-                        <img class="mp-icon" src="/website/assets/images/megaphone.svg" alt="">
+                        <img src="/website/assets/images/megaphone.svg" alt="img">
                     </div>
                     <div class="content-service">
                         <h2>Service No. 4</h2>
@@ -226,7 +217,7 @@
                 </div>
                 <div class="services-company-box col-12 col-md-6">
                     <div class="card-service-img">
-                        <img class="mp-icon" src="/website/assets/images/megaphone.svg" alt="">
+                        <img src="/website/assets/images/megaphone.svg" alt="img">
                     </div>
                     <div class="content-service">
                         <h2>Service No. 5</h2>
@@ -235,7 +226,7 @@
                 </div>
                 <div class="services-company-box col-12 col-md-6">
                     <div class="card-service-img">
-                        <img class="mp-icon" src="/website/assets/images/megaphone.svg" alt="">
+                        <img src="/website/assets/images/megaphone.svg" alt="img">
                     </div>
                     <div class="content-service">
                         <h2>Service No. 6</h2>
@@ -244,7 +235,7 @@
                 </div>
                 <div class="services-company-box col-12 col-md-6">
                     <div class="card-service-img">
-                        <img class="mp-icon" src="/website/assets/images/megaphone.svg" alt="">
+                        <img src="/website/assets/images/megaphone.svg" alt="img">
                     </div>
                     <div class="content-service">
                         <h2>Service No. 7</h2>
@@ -253,7 +244,7 @@
                 </div>
                 <div class="services-company-box col-12 col-md-6">
                     <div class="card-service-img">
-                        <img class="mp-icon" src="/website/assets/images/megaphone.svg" alt="">
+                        <img src="/website/assets/images/megaphone.svg" alt="img">
                     </div>
                     <div class="content-service">
                         <h2>Service No. 8</h2>

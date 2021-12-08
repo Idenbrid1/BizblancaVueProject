@@ -1,5 +1,11 @@
 <template>
     <div>
+        <!-- spinner -->
+        <div class="parent">
+            <span class="text_loading">BizBlanca<br>Loading....</span>
+            <div class="spinner" style="font-size:16px"></div>
+        </div>
+        <!-- End -->
         <WebsiteNavbar />
         <!-- seconday-Navigation -->
         <header class="_secondary-header-nav p-0" id="secondary-header-nav">
@@ -503,6 +509,7 @@
         methods: {
             swiperInit() {
                 this.$nextTick(function() {
+                    $('.parent').fadeOut();
                     var swiper = new Swiper(".blogs-swiper", {
                         slidesPerView: 3.5,
                         spaceBetween: 5,
@@ -604,3 +611,45 @@
     };
 
 </script>
+<style scoped>
+.text_loading {
+    color: #f1f1f1;
+    position: fixed;
+    z-index: 200000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.parent {
+    background: #050115;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    z-index: 10000
+}
+.spinner {
+    width: 10em;
+    height: 10em;
+    border-top: .5em solid #d5fff7;
+    border-right: .5em solid transparent;
+    animation: spinner .4s linear infinite;
+    border-radius: 50%;
+    margin: auto
+}
+.head {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin-left: 8.5em;
+    margin-top: .5em;
+    background-color: #d5fff7
+}
+@keyframes spinner {
+    to {
+        transform: rotate(360deg)
+    }
+}
+</style>

@@ -29,6 +29,7 @@ import ContactUs from './components/pages/website/ContactUsComponent.vue';
 import TermsCondition from './components/pages/website/TermsConditionComponent.vue';
 import Faq from './components/pages/website/FaqComponent.vue';
 import PrivacyPolicy from './components/pages/website/PrivacyPolicyComponent.vue';
+import AboutUs from './components/pages/website/AboutUsComponent.vue';
 import Services from './components/pages/website/ServicesComponent.vue';
 
 Vue.use(VueRouter);
