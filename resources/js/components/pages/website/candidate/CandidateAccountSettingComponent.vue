@@ -19,34 +19,44 @@
             <div class="company-form">
                 <form>
                     <div class="form-field">
-                        <label for="email" class="label--required company-custom-label">Email:</label>
-                        <input id="email" required="" type="email"
-                            class="company-custom-input" placeholder="Enter Email">
-                    </div>
-                    <div class="form-field">
-                        <label for="password" class="label--required company-custom-label">Password:</label>
-                        <input name="password" type="password"
+                        <label for="password" class="label--required company-custom-label">Current Password:</label>
+                        <input name="password" v-model="record.current_password" type="password"
                             class="company-custom-input" placeholder="Enter Password" />
+                            <small>
+                                <span v-if="errors.current_password != null" class="text-danger">
+                                    {{errors.current_password[0]}}
+                                </span>
+                            </small>
                     </div>
                     <div class="form-field">
                         <label for="newpassword" class="label--required company-custom-label">New Password:</label>
-                        <input name="newpassword" type="password" class="company-custom-input"
+                        <input name="newpassword" v-model="record.new_password" type="password" class="company-custom-input"
                             placeholder="Enter new password" />
+                            <small>
+                                <span v-if="errors.new_password != null" class="text-danger">
+                                    {{errors.new_password[0]}}
+                                </span>
+                            </small>
                     </div>
                     <div class="form-field">
                         <label for="confirmpassword" class="label--required company-custom-label">Confirm
                             Password:</label>
-                        <input name="confirmpassword" type="password"
+                        <input name="confirmpassword" type="password" v-model="record.confirm_password"
                             class="company-custom-input" placeholder="Enter confirm password" />
+                            <small>
+                                <span v-if="errors.confirm_password != null" class="text-danger">
+                                    {{errors.confirm_password[0]}}
+                                </span>
+                            </small>
                     </div>
                     <div class="form-field company-custom-toggle">
-                        <label for="account" class="label--required company-custom-label">Activate Account:</label>
-                        <input type="checkbox" checked data-toggle="toggle" class="customtoggle" data-style="ios"
+                        <label for="account" class="label--required company-custom-label">DeActivate Account:</label>
+                        <input type="checkbox" checked data-toggle="toggle" class="customtoggle" v-model="record.active" data-style="ios"
                             data-on="Activate" data-off="Deactivate">
                     </div>
                     <div class="form-group text-center m-0">
-                        <button class="action-update-btn">Update</button>
-                        <button class="actionBackBtn">Back</button>
+                        <button class="action-update-btn" @click.prevent="candidateSettingPassword()">Update</button>
+                        <button class="actionBackBtn" @click.prevent="clearForm()">Clear Form</button>
                     </div>
                 </form>
             </div>
@@ -66,7 +76,14 @@
         },
         data() {
             return {
+                record: {
+                    current_password: '',
+                    new_password: '',
+                    confirm_password: '',
+                    active: 0,
+                },
                 isRole: '',
+                errors: [],
             };
         },
         created() {
@@ -75,11 +92,41 @@
         methods: {
             checkRole() {
                 axios.get('navbar-check-roles')
-                    .then((response) => {
-                        if (response.data.success) {
-                            this.isRole = response.data.role
+                .then((response) => {
+                    if (response.data.success) {
+                        this.isRole = response.data.role
+                    }
+                });
+            },
+            clearForm(){
+                this.record = {
+                    current_password: '',
+                    new_password: '',
+                    confirm_password: '',
+                    active: 0,
+                }
+                this.errors = []
+            },
+            candidateSettingPassword() {
+                axios.post('candidate-setting-password', this.record)
+                .then((response) => {
+                    if (response.data.success == false) {
+                        this.errors = response.data.errors     
+                    }else{
+                        if(response.data.message == true){
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Password Updated!😎',
+                            })
+                            this.clearForm()
+                        }else{
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Current Password Not Matched!',
+                            })
                         }
-                    });
+                    }
+                });
             },
         },
 

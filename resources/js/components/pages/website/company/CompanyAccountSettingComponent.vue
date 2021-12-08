@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group text-center m-0">
                         <button class="action-update-btn" @click.prevent="companySettingPassword()">Update</button>
-                        <button class="actionBackBtn">Back</button>
+                        <button class="actionBackBtn" @click.prevent="clearForm()">Clear Form</button>
                     </div>
                 </form>
             </div>
@@ -97,6 +97,15 @@
                         this.isRole = response.data.role
                     }
                 });
+            },
+            clearForm(){
+                this.record = {
+                    current_password: '',
+                    new_password: '',
+                    confirm_password: '',
+                    active: 0,
+                }
+                this.errors = []
             },
             companySettingPassword() {
                 axios.post('company-setting-password', this.record)

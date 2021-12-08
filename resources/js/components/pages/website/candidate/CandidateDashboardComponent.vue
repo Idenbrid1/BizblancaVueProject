@@ -55,20 +55,6 @@
                     </div>
 
                 </div>
-                <!---- ------------------------------>
-                <!-- <div class="product-search-box">
-                    <label class="search-box-h">
-                        Keyword Search
-                    </label>
-                    <div class="col-md-12 search-container">
-                        <form action="/">
-                            <div> <label class="keyword-input-title">Keyword Search</label></div>
-                            <input type="text" placeholder="* Includes All Keywords" name="search">
-                            <button type="submit" @click.prevent="keywordSearch()" class="keyword-search-btn">Search</button>
-                            <button type="submit" @click.prevent="clearSearch()" class="keyword-search-btn">Clear</button>
-                        </form>
-                    </div>
-                </div> -->
                 <div class="candidate">
                     <label class="candidate-tagline">
                         Recommended Jobs 
@@ -76,26 +62,6 @@
                     </label>
                     <!-- Job List Toolbar Start -->
                     <div>
-                        <!-- <div class="job-list-toolbar">
-                            <ul class="job-pagination pagination-center ">
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                            aria-hidden="true"></i> Previous 20</a></li>
-                                <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                            aria-hidden="true"></i> Next 20</a></li>
-                            </ul>
-                            <div class="job-filter">
-                                <select class="job-select">
-                                    <option>Search order by</option>
-                                    <option>Top Rated</option>
-                                    <option>Most Popular</option>
-                                </select>
-                            </div>
-                        </div> -->
-                        <!-- Job List Toolbar End -->
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap p-0">
                             <div class="job-list">
@@ -106,11 +72,6 @@
                                 <div class="job-list-content col">
                                     <div class="job-header">
                                         <h6 class="job-title mb-0">Data Analyst</h6>
-                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i> -->
                                         <div class="d-flex align-items-center">
                                             <span class="job-post-date">20 hours ago </span>
                                             <i class="far fa-heart"></i>
@@ -177,26 +138,6 @@
                     </label>
                     <!-- Job List Toolbar Start -->
                     <div>
-                        <!-- <div class="job-list-toolbar">
-                            <ul class="job-pagination pagination-center ">
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-left"
-                                            aria-hidden="true"></i> Previous 20</a></li>
-                                <li class="job-page-item active"><a class="job-page-link" href="#">1</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">2</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">3</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#">4</a></li>
-                                <li class="job-page-item"><a class="job-page-link" href="#"><i class="fa fa-angle-right"
-                                            aria-hidden="true"></i> Next 20</a></li>
-                            </ul>
-                            <div class="job-filter">
-                                <select class="job-select">
-                                    <option>Search order by</option>
-                                    <option>Top Rated</option>
-                                    <option>Most Popular</option>
-                                </select>
-                            </div>
-                        </div> -->
-                        <!-- Job List Toolbar End -->
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap p-0">
                             <div class="job-list">
@@ -207,11 +148,6 @@
                                 <div class="job-list-content col">
                                     <div class="job-header">
                                         <h6 class="job-title mb-0">Data Analyst</h6>
-                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i> -->
                                         <div class="d-flex align-items-center">
                                             <span class="job-post-date">20 hours ago </span>
                                             <i class="far fa-heart"></i>
@@ -266,8 +202,8 @@
                         </div>
                     </div>
                     <div class="show-more-anker">
-                        <router-link class="show-more-common" to="/candidate-dashboard">Show more</router-link>
-                        <p class="notify-unread-msgs">You have <span>12</span> unread messages</p>
+                        <!-- <router-link class="show-more-common" to="/candidate-dashboard">Show more</router-link> -->
+                        <p class="notify-unread-msgs">You have <span>{{wishlist.length}}</span> unread messages</p>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
@@ -299,7 +235,7 @@
                         </div>
                     </div>
                     <div class="divider">
-                        <hr />
+                        <hr/>
                     </div>
                     <div class="side-card h-300 shadow-sm">
                         <div class="side-card-title text-center text-white">New Govt Jobs</div>
@@ -546,7 +482,7 @@
     export default {
         data() {
             return {
-               
+               wishlist: [],
             }
         },
         mounted() {
@@ -563,13 +499,19 @@
             });
         },
         created() {
-            
+            this.getCandidateWishList()
         },
         components: {
             WebsiteNavbar,
             CandidateNavbar,
         },
         methods: {
+            getCandidateWishList() {
+                axios.get('get-candidate-wish-list')
+                    .then((response) => {
+                        this.wishlist = response.data
+                    });
+            },
             ShowMessageError() {
                 Swal.fire(
                     'UnderDevelopment',

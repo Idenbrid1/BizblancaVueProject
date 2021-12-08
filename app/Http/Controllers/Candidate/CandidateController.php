@@ -12,11 +12,14 @@ use App\Models\CandidateExperience;
 use App\Models\CandidateLanguage;
 use App\Models\CandidateProjects;
 use App\Models\CandidateSkill;
+use App\Models\CandidateWishList;
 use App\Models\JobPost;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use File;
 use Validator;
+use Hash;
 use Illuminate\Support\Facades\Mail;
 
 class CandidateController extends Controller
@@ -421,5 +424,95 @@ class CandidateController extends Controller
                 'already_applied'   => false,
             ]); 
         }
+    }
+
+    public function settingPassword(Request $request)
+    {
+        $attributeNames = [
+            'current_password' => 'Password',
+            'new_password' => 'New Password',
+            'confirm_password' => 'Confirm Password',
+        ];
+
+        $messages = [
+            'current_password' => 'Password',
+            'new_password' => 'New Password',
+            'confirm_password' => 'Confirm Password',
+        ];
+
+        $rules = array(
+            'current_password'          => 'required|min:6',
+            'new_password'          => 'required|min:6',
+            'confirm_password'  => 'required|same:new_password',
+        );
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        $validator->setAttributeNames($attributeNames);
+
+        if ($validator->fails()){
+            return response()->json([
+                'errors' => $validator->errors(),
+                'success' => false,
+            ], 200);
+        } 
+        else
+        {
+            if(Hash::check($request->current_password, Auth::user()->password)){
+                $user = User::find(Auth::user()->id)->update(['password'=> Hash::make($request->new_password)]);
+                if($request->active == true){
+                    $user = User::find(Auth::user()->id)->update(['status'=> 'Inactive']);
+                }
+                return response()->json([
+                    'message' => true,
+                ], 200);
+            }else{
+                return response()->json([
+                    'message' => false,
+                ], 200);
+            }
+        }
+        
+    }
+
+    public function addToWishList($company_id)
+    {
+        $user = User::find(Auth::user()->id);
+        $candidate = Candidate::where('user_id', $user->id)->first();
+        $candidatewishlist = CandidateWishList::create([
+            'company_id' => $company_id,
+            'candidate_id' => $candidate->id,
+        ]);
+        if($candidatewishlist){
+            return response()->json([
+                'success' => true,
+            ]);
+        }else{
+            return response()->json([
+                'success' => false,
+            ]);
+        }
+    }
+
+    public function removeToWishList($id)
+    {
+        $user = User::find(Auth::user()->id);
+        $candidate = Candidate::where('user_id', $user->id)->first();
+        if(company_id::where(['company_id'=> $id, 'candidate_id'=> $candidate->id])->delete()){
+            return response()->json([
+                'success' => true,
+            ]);
+        }else{
+            return response()->json([
+                'success' => false,
+            ]);
+        }
+    }
+
+    public function getCandidateWishList()
+    {
+        $user_id = Auth::user()->id;
+        $candidate = Candidate::where('user_id', $user_id)->first();
+        return CandidateWishList::where('candidate_id', $candidate->id)->with(['Company'])->get();
     }
 }
