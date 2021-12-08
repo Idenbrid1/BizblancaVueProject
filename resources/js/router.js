@@ -34,7 +34,7 @@ import Services from './components/pages/website/ServicesComponent.vue';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    linkExactActiveClass: 'active',
+    linkExactActiveClass: 'font-weight-bold',
     routes: [
         {   path: "*", 
             component: LandingPage 
@@ -122,22 +122,62 @@ const router = new VueRouter({
         {
             path: '/company-account-setting',
             name: 'CompanyAccountSetting',
-            component: CompanyAccountSetting
+            component: CompanyAccountSetting,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-company-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
         },
         {
             path: '/candidate-account-setting',
             name: 'CandidateAccountSetting',
-            component: CandidateAccountSetting
+            component: CandidateAccountSetting,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-candidate-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
         },
         {
             path: '/job-applied-candidates/:id',
             name: 'JobAppliedCandidates',
-            component: JobAppliedCandidates
+            component: JobAppliedCandidates,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-candidate-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
         },
         {
             path: '/company-dashboard',
             name: 'CompanyDashboard',
-            component: CompanyDashboard
+            component: CompanyDashboard,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-company-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
         },
         {
             path: '/contact-us',
@@ -167,12 +207,22 @@ const router = new VueRouter({
         {
             path: '/company-chat',
             name: 'CompanyChat',
-            component: CompanyChat
+            component: CompanyChat,            
         },
         {
             path: '/candidate-dashboard',
             name: 'CandidateDashboard',
-            component: CandidateDashboard
+            component: CandidateDashboard,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-candidate-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
         },
         {
             path: '/candidate-reset-password',
@@ -197,7 +247,17 @@ const router = new VueRouter({
         {
             path: '/job-search',
             name: 'JobSearch',
-            component: JobSearch
+            component: JobSearch,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-candidate-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
         },
         {
             path: '/job-detail/:id',
@@ -207,7 +267,17 @@ const router = new VueRouter({
         {
             path: '/package-plans',
             name: 'PackagePlans',
-            component: PackagePlans
+            component: PackagePlans,
+            beforeEnter: (to, from, next) => { 
+                axios.get('check-company-role')
+                .then((response) => {
+                    if (response.data.success == true) {
+                        next()
+                    } else {
+                        next('/signin')
+                    }
+                });
+            }
         },
     ]
 });

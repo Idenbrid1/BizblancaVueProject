@@ -5464,7 +5464,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 
 
@@ -5493,54 +5492,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   created: function created() {
     this.checkRole();
+    this.getNews();
   },
   mounted: function mounted() {
     var _this = this;
 
-    this.getNews();
-    var swiper = new Swiper(".blogs-swiper", _defineProperty({
-      slidesPerView: 3.5,
-      spaceBetween: 5,
-      // centeredSlides: true,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      breakpoints: {
-        360: {
-          slidesPerView: 2,
-          centeredSlides: false,
-          spaceBetween: 1
-        },
-        640: {
-          slidesPerView: 2
-        },
-        768: {
-          slidesPerView: 2.5,
-          spaceBetween: 20
-        },
-        1024: {
-          slidesPerView: 3.5,
-          spaceBetween: 30
-        },
-        1224: {
-          slidesPerView: 3.5,
-          spaceBetween: 5
-        }
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      }
-    }, "autoplay", {
-      delay: 3000,
-      disableOnInteraction: false
-    }));
+    this.swiperInit();
     var swiper = new Swiper(".video-slider", {
       slidesPerView: 1,
       breakpoints: {
@@ -5570,7 +5527,53 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }, 5000);
   },
   methods: {
-    runswiper: function runswiper() {},
+    swiperInit: function swiperInit() {
+      this.$nextTick(function () {
+        var swiper = new Swiper(".blogs-swiper", _defineProperty({
+          slidesPerView: 3.5,
+          spaceBetween: 5,
+          // centeredSlides: true,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+          },
+          breakpoints: {
+            360: {
+              slidesPerView: 2,
+              centeredSlides: false,
+              spaceBetween: 1
+            },
+            640: {
+              slidesPerView: 2
+            },
+            768: {
+              slidesPerView: 2.5,
+              spaceBetween: 20
+            },
+            1024: {
+              slidesPerView: 3.5,
+              spaceBetween: 30
+            },
+            1224: {
+              slidesPerView: 3.5,
+              spaceBetween: 5
+            }
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+          }
+        }, "autoplay", {
+          delay: 3000,
+          disableOnInteraction: false
+        }));
+      });
+    },
     checkRole: function checkRole() {
       var _this2 = this;
 
@@ -5585,6 +5588,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/landingpage/news').then(function (response) {
         _this3.news = response.data;
+
+        _this3.swiperInit();
       });
     },
     expireTodayJobs: function expireTodayJobs() {
@@ -6771,14 +6776,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -6838,6 +6835,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -12184,7 +12189,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -16026,7 +16030,7 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_29__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_30__["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_30__["default"]({
-  linkExactActiveClass: 'active',
+  linkExactActiveClass: 'font-weight-bold',
   routes: [{
     path: "*",
     component: _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -16100,19 +16104,55 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_30__["default"]({
   }, {
     path: '/company-account-setting',
     name: 'CompanyAccountSetting',
-    component: _components_pages_website_company_CompanyAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
+    component: _components_pages_website_company_CompanyAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
+    beforeEnter: function beforeEnter(to, from, next) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
+        if (response.data.success == true) {
+          next();
+        } else {
+          next('/signin');
+        }
+      });
+    }
   }, {
     path: '/candidate-account-setting',
     name: 'CandidateAccountSetting',
-    component: _components_pages_website_candidate_CandidateAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_18__["default"]
+    component: _components_pages_website_candidate_CandidateAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
+    beforeEnter: function beforeEnter(to, from, next) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
+        if (response.data.success == true) {
+          next();
+        } else {
+          next('/signin');
+        }
+      });
+    }
   }, {
     path: '/job-applied-candidates/:id',
     name: 'JobAppliedCandidates',
-    component: _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_14__["default"]
+    component: _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
+    beforeEnter: function beforeEnter(to, from, next) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
+        if (response.data.success == true) {
+          next();
+        } else {
+          next('/signin');
+        }
+      });
+    }
   }, {
     path: '/company-dashboard',
     name: 'CompanyDashboard',
-    component: _components_pages_website_company_CompanyDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
+    component: _components_pages_website_company_CompanyDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
+    beforeEnter: function beforeEnter(to, from, next) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
+        if (response.data.success == true) {
+          next();
+        } else {
+          next('/signin');
+        }
+      });
+    }
   }, {
     path: '/contact-us',
     name: 'ContactUs',
@@ -16140,7 +16180,16 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_30__["default"]({
   }, {
     path: '/candidate-dashboard',
     name: 'CandidateDashboard',
-    component: _components_pages_website_candidate_CandidateDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_17__["default"]
+    component: _components_pages_website_candidate_CandidateDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
+    beforeEnter: function beforeEnter(to, from, next) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
+        if (response.data.success == true) {
+          next();
+        } else {
+          next('/signin');
+        }
+      });
+    }
   }, {
     path: '/candidate-reset-password',
     name: 'CandidateResetPassword',
@@ -16160,7 +16209,16 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_30__["default"]({
   }, {
     path: '/job-search',
     name: 'JobSearch',
-    component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_21__["default"]
+    component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_21__["default"],
+    beforeEnter: function beforeEnter(to, from, next) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
+        if (response.data.success == true) {
+          next();
+        } else {
+          next('/signin');
+        }
+      });
+    }
   }, {
     path: '/job-detail/:id',
     name: 'JobDetail',
@@ -16168,7 +16226,16 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_30__["default"]({
   }, {
     path: '/package-plans',
     name: 'PackagePlans',
-    component: _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_23__["default"]
+    component: _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_23__["default"],
+    beforeEnter: function beforeEnter(to, from, next) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
+        if (response.data.success == true) {
+          next();
+        } else {
+          next('/signin');
+        }
+      });
+    }
   }]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
@@ -50321,9 +50388,10 @@ var render = function () {
                                     },
                                     [
                                       _vm._v(
-                                        _vm._s(
-                                          _vm.searchData[index].candidate.bio
-                                        )
+                                        " " +
+                                          _vm._s(
+                                            _vm.searchData[index].candidate.bio
+                                          )
                                       ),
                                     ]
                                   ),
@@ -50342,10 +50410,11 @@ var render = function () {
                                           { staticClass: "hide-line-1" },
                                           [
                                             _vm._v(
-                                              _vm._s(
-                                                _vm.searchData[index].candidate
-                                                  .gender
-                                              )
+                                              " " +
+                                                _vm._s(
+                                                  _vm.searchData[index]
+                                                    .candidate.gender
+                                                )
                                             ),
                                           ]
                                         ),
@@ -50362,10 +50431,11 @@ var render = function () {
                                           { staticClass: "hide-line-1" },
                                           [
                                             _vm._v(
-                                              _vm._s(
-                                                _vm.searchData[index].candidate
-                                                  .experience
-                                              ) +
+                                              " " +
+                                                _vm._s(
+                                                  _vm.searchData[index]
+                                                    .candidate.experience
+                                                ) +
                                                 "\n                                                Years"
                                             ),
                                           ]
@@ -50392,7 +50462,9 @@ var render = function () {
                                                 },
                                                 [
                                                   _vm._v(
-                                                    _vm._s(skills.name) + ","
+                                                    " " +
+                                                      _vm._s(skills.name) +
+                                                      ","
                                                   ),
                                                 ]
                                               )
@@ -50412,10 +50484,11 @@ var render = function () {
                                           { staticClass: "hide-line-1" },
                                           [
                                             _vm._v(
-                                              _vm._s(
-                                                _vm.searchData[index].candidate
-                                                  .city
-                                              )
+                                              " " +
+                                                _vm._s(
+                                                  _vm.searchData[index]
+                                                    .candidate.city
+                                                )
                                             ),
                                           ]
                                         ),

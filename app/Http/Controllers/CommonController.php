@@ -155,7 +155,10 @@ class CommonController extends Controller
                     );
                 }
             }
-            return $candidate_with_wishlist;
+            foreach($candidate_with_wishlist as $cww){
+                $final_arr[] = $cww;
+            }
+            return $final_arr;
         }
         else{
             $user = User::find(Auth::user()->id);
