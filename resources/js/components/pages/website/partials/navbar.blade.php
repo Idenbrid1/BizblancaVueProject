@@ -26,7 +26,7 @@
             </li>
             <li class="saved-jobs">
                <a href="#" title="Shortlisted jobs" class="header-block-link">
-                  <span class="fal fa-briefcase"></span>
+                  <span class="fas fa-briefcase"></span>
 
                   <span class="saved-jobs-text" data-bind="text: savedJobsText">Posts a job</span>
                </a>

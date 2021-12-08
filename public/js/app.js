@@ -5464,6 +5464,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -5492,14 +5493,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   created: function created() {
     this.checkRole();
-    this.getNews();
   },
   mounted: function mounted() {
     var _this = this;
 
+    this.getNews();
     var swiper = new Swiper(".blogs-swiper", _defineProperty({
-      slidesPerView: 1,
-      spaceBetween: 1,
+      slidesPerView: 3.5,
+      spaceBetween: 5,
       // centeredSlides: true,
       loop: true,
       autoplay: {
@@ -6244,14 +6245,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -12595,14 +12588,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -27930,7 +27915,7 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _c("div", { staticClass: "container py-2 py-md-5" }, [
+      _c("div", { staticClass: "container py-2" }, [
         _c("div", { staticClass: "login-page-container container p-0" }, [
           _c(
             "form",
@@ -28310,7 +28295,7 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _c("div", { staticClass: "register-container py-3 mt-5" }, [
+      _c("div", { staticClass: "register-container py-2" }, [
         _c("div", { staticClass: "container p-0" }, [
           _c("div", { staticClass: "login-wrapper row m-0" }, [
             _vm._m(0),
@@ -35170,7 +35155,7 @@ var render = function () {
       _c("CandidateNavbar"),
       _vm._v(" "),
       _c("div", { staticClass: "container user-profile-container cont-flex" }, [
-        _c("div", { staticClass: "condition-search-feilds p-0" }, [
+        _c("div", { staticClass: "condition-search-feilds" }, [
           _c("div", { staticClass: "product_accordion_container" }, [
             _vm._m(0),
             _vm._v(" "),
@@ -35404,8 +35389,7 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("label", { staticClass: "search-box-h", attrs: { for: "first" } }, [
-        _vm._v("\n                        Message\n                        "),
-        _vm._v(" "),
+        _vm._v("\n                        Message "),
         _c("i", { staticClass: "far fa-comment-alt" }),
       ]),
     ])
@@ -51631,8 +51615,7 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("label", { staticClass: "search-box-h", attrs: { for: "first" } }, [
-        _vm._v("\n                        Message\n                        "),
-        _vm._v(" "),
+        _vm._v("\n                        Message "),
         _c("i", { staticClass: "far fa-comment-alt" }),
       ]),
     ])
@@ -55337,7 +55320,7 @@ var render = function () {
       _vm._v(" "),
       _c("CompanyNavbar"),
       _vm._v(" "),
-      _c("div", { staticClass: "profile-wrapper mt-5" }, [
+      _c("div", { staticClass: "profile-wrapper" }, [
         _c("div", { staticClass: "row m-0 container px-1" }, [
           _c("div", { staticClass: "col-12 p-0" }, [
             this.profile.package_id == 0 && this.profile.package.title == "Free"
@@ -59148,10 +59131,10 @@ var render = function () {
                         },
                         [
                           _c("i", {
-                            staticClass: "fal fa-briefcase",
+                            staticClass: "fas fa-briefcase",
                             attrs: { "aria-hidden": "true" },
                           }),
-                          _vm._v("Posts a job"),
+                          _vm._v(" Posts a job"),
                         ]
                       )
                     : _vm._e(),

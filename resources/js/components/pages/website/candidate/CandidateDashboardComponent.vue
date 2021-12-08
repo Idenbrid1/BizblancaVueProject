@@ -4,20 +4,12 @@
         <CandidateNavbar />
 
         <div class="container user-profile-container cont-flex">
-            <div class="condition-search-feilds p-0">
+            <div class="condition-search-feilds">
                 <div class="product_accordion_container">
                     <div>
                         <input class="product_accordion" type="checkbox" name="accordion" id="first" checked>
                         <label class="search-box-h" for="first">
-                            Message
-                            <!-- <span class="chevron">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <polyline points="6 9 12 15 18 9"></polyline>
-                                </svg>
-                            </span> -->
-                            <i class="far fa-comment-alt"></i>
+                            Message&nbsp;<i class="far fa-comment-alt"></i>
                         </label>
                     </div>
                     <div class="dashboard-msgs-container">

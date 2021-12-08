@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <div class="register-container py-3 mt-5">
+        <div class="register-container py-2">
             <div class="container p-0">
                 <div class="login-wrapper row m-0">
                     <section class="col-md-4 col-12 p-0 v-on-d">
