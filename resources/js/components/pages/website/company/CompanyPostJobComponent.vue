@@ -37,7 +37,7 @@
                                     <!-- <i v-if="!item.deleted_at" class="far fa-heart"></i> -->
                                     <div style="over-flow:hidden;">
                                         <p v-if="item.deleted_at" :class="!item.deleted_at ? '' : 'job-deleted-mark'">
-                                        DELETED</p>
+                                            DELETED</p>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,8 @@
                                     <li><a v-if="!item.deleted_at" @click="deleteJobPost(item.id)" title="Delete Job"
                                             class="job-post-icons title-tip"><i class="fas fa-trash-alt"></i></a></li>
                                     <li><a v-if="!item.deleted_at" @click="editJobPost(item.id)"
-                                            class="job-post-icons title-tip" title="Edit View"><i class="fas fa-edit"></i></a></li>
+                                            class="job-post-icons title-tip" title="Edit View"><i
+                                                class="fas fa-edit"></i></a></li>
                                     <li>
                                         <router-link v-if="!item.deleted_at"
                                             :to="{ name: 'JobDetail', params: { id: item.id } }" data-toggle="collapse"
@@ -92,7 +93,8 @@
                                     <li>
                                         <router-link v-if="!item.deleted_at"
                                             :to="{ name: 'JobAppliedCandidates', params: { id: item.id } }"
-                                            data-toggle="collapse" title="Applied Candidates" class="job-post-icons title-tip">
+                                            data-toggle="collapse" title="Applied Candidates"
+                                            class="job-post-icons title-tip">
                                             <i class="fas fa-users"></i>
                                         </router-link>
                                     </li>
@@ -117,18 +119,35 @@
                             <p class="card-title">If you have any further queries, please contact us without any
                                 hesitation.</p>
                             <ul class="social-btns center-block">
-                                <li><button class="btn btn-whatsapp"><img
-                                            src="/website/assets/images/whatsapp-quaries.svg"><span>+92 306 404
-                                            1221</span></button></li>
-                                <li><button class="btn btn-facebook"><img
-                                            src="/website/assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+923064041221"
+                                        class="btn btn-whatsapp">
+                                        <img src="/website/assets/images/whatsapp-quaries.svg">
+                                        <span>+92 306 404 1221</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-linkedin"><img
-                                            src="/website/assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/bizblanca/"
+                                        class="btn btn-facebook">
+                                        <img src="/website/assets/images/facebook-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-google"><img
-                                            src="/website/assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/bizblanca/"
+                                        class="btn btn-linkedin">
+                                        <img src="/website/assets/images/linkdine-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/bizblanca/"
+                                        class="btn btn-google">
+                                        <img src="/website/assets/images/gmail-quaries.svg">
+                                        <span>bizer@bizblanca.com</span>
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -343,7 +362,8 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade PostNewJobModal" id="PostNewJobModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal fade PostNewJobModal" id="PostNewJobModal" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <form id="formData">
                     <div class="modal-content p-0">

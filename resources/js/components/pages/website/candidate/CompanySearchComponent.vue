@@ -48,10 +48,10 @@
                 <div class="job-list-wrap mt-3 p-0">
                     <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
-                    <div class="job-list m-0 mb-3"  v-if="index < searchData.length" v-for="(item, index) in companiesToShow"
-                        :key="index">
+                    <div class="job-list m-0 mb-3" v-if="index < searchData.length"
+                        v-for="(item, index) in companiesToShow" :key="index">
                         <div class="company-logo col-auto py-2">
-                            <img :src="'/storage/images/companies/'+searchData[index].logo" alt="Company Logo"/>
+                            <img :src="'/storage/images/companies/'+searchData[index].logo" alt="Company Logo" />
                             <span class="company-h line-clamp-1">{{searchData[index].company_name}}</span>
                         </div>
                         <div class="job-list-content col">
@@ -88,8 +88,8 @@
                                             <span>{{searchData[index].salary_range}}</span>
                                         </li>
                                         <li>
-                                            <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
-                                                alt="img">
+                                            <img height="16px" width="10px" style="margin:0px 3px;"
+                                                src="/website/assets/images/pin.svg" alt="img">
                                             <span>{{searchData[index].location}}</span>
                                         </li>
                                     </ul>
@@ -107,7 +107,8 @@
                                 <ul class="job-list-fav m-0">
                                     <li>
                                         <router-link class="job-view-btn" data-toggle="collapse"
-                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].id } }">View</router-link>
+                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].id } }">View
+                                        </router-link>
                                     </li>
                                 </ul>
                             </div>
@@ -115,8 +116,10 @@
                         </div>
                     </div>
 
-                   <div class="text-center" v-if="searchData.length">
-                        <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow && totalCompanies > companiesToShow" @click="companiesToShow += 2">Load more</button>
+                    <div class="text-center" v-if="searchData.length">
+                        <button class="load-more-btn mx-auto"
+                            v-if="searchData.length != companiesToShow && totalCompanies > companiesToShow"
+                            @click="companiesToShow += 2">Load more</button>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
@@ -145,18 +148,35 @@
                             <p class="card-title">If you have any further queries, please contact us without any
                                 hesitation.</p>
                             <ul class="social-btns center-block">
-                                <li><button class="btn btn-whatsapp"><img
-                                            src="/website/assets/images/whatsapp-quaries.svg"><span>+92 306 404
-                                            1221</span></button></li>
-                                <li><button class="btn btn-facebook"><img
-                                            src="/website/assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+923064041221"
+                                        class="btn btn-whatsapp">
+                                        <img src="/website/assets/images/whatsapp-quaries.svg">
+                                        <span>+92 306 404 1221</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-linkedin"><img
-                                            src="/website/assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/bizblanca/"
+                                        class="btn btn-facebook">
+                                        <img src="/website/assets/images/facebook-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-google"><img
-                                            src="/website/assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/bizblanca/"
+                                        class="btn btn-linkedin">
+                                        <img src="/website/assets/images/linkdine-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/bizblanca/"
+                                        class="btn btn-google">
+                                        <img src="/website/assets/images/gmail-quaries.svg">
+                                        <span>bizer@bizblanca.com</span>
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -422,7 +442,7 @@
                     keyword: '',
                 };
                 this.companiesToShow = 2,
-                this.searchData = ''
+                    this.searchData = ''
             }
         },
     };

@@ -124,7 +124,8 @@
                             <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                             <!-- Job List Start -->
                             <div class="row m-0 justify-content-start">
-                                <div class="candidate-single" v-if="index < searchData.length" v-for="(item, index) in candidateToShow" :key="index">
+                                <div class="candidate-single" v-if="index < searchData.length"
+                                    v-for="(item, index) in candidateToShow" :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
                                             <div class="candidate-photo"
@@ -166,8 +167,13 @@
                                                     View Profile</router-link>
                                             </li>
                                             <li>
-                                                <a v-if="searchData[index].is_wish_listed == false" @click="addToWishList(searchData[index].candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="far fa-heart"></i></a>
-                                                <a v-else @click="removeToWishList(searchData[index].candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="fas fa-heart"></i></a>
+                                                <a v-if="searchData[index].is_wish_listed == false"
+                                                    @click="addToWishList(searchData[index].candidate.id)"
+                                                    class="candidate-wishlist-btn ml-2 "><i
+                                                        class="far fa-heart"></i></a>
+                                                <a v-else @click="removeToWishList(searchData[index].candidate.id)"
+                                                    class="candidate-wishlist-btn ml-2 "><i
+                                                        class="fas fa-heart"></i></a>
                                             </li>
                                             <!-- <li v-if="searchData[index].is_wish_listed == true"><a @click="addToWishList(searchData[index].candidate.id)" class="">liked</a></li> -->
                                         </ul>
@@ -195,21 +201,36 @@
                             <p class="card-title">If you have any further queries, please contact us without any
                                 hesitation.</p>
                             <ul class="social-btns center-block">
-                                <li><button class="btn btn-whatsapp"><img
-                                            src="/website/assets/images/whatsapp-quaries.svg"><span>+92 306
-                                            404 1221</span></button></li>
-                                <li><button class="btn btn-facebook"><img
-                                            src="/website/assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+923064041221"
+                                        class="btn btn-whatsapp">
+                                        <img src="/website/assets/images/whatsapp-quaries.svg">
+                                        <span>+92 306 404 1221</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-linkedin"><img
-                                            src="/website/assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/bizblanca/"
+                                        class="btn btn-facebook">
+                                        <img src="/website/assets/images/facebook-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-google"><img
-                                            src="/website/assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/bizblanca/"
+                                        class="btn btn-linkedin">
+                                        <img src="/website/assets/images/linkdine-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/bizblanca/"
+                                        class="btn btn-google">
+                                        <img src="/website/assets/images/gmail-quaries.svg">
+                                        <span>bizer@bizblanca.com</span>
+                                    </a>
                                 </li>
 
                             </ul>
-
                         </div>
                     </div>
                     <div class="divider">
@@ -575,7 +596,7 @@
             addToWishList(id) {
                 axios.get('/add-to-wish-list/' + id)
             },
-            removeToWishList(id){
+            removeToWishList(id) {
                 axios.get('/remove-to-wish-list/' + id)
             },
             clearSearch() {

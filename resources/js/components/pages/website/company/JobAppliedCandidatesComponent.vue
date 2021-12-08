@@ -30,7 +30,9 @@
                                 <div class="candidate-single">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo" :style="{ 'background-image': 'url(/storage/images/candidates/' + item.candidates.profile_image + ')' }"></div>
+                                            <div class="candidate-photo"
+                                                :style="{ 'background-image': 'url(/storage/images/candidates/' + item.candidates.profile_image + ')' }">
+                                            </div>
                                             <div class="candidate-header mt-2 ml-2">
                                                 <h6 class="candidate-name mb-0">{{item.candidates.full_name}}</h6>
                                             </div>
@@ -57,8 +59,13 @@
                                         </ul>
 
                                         <ul class="candidate-list-fav">
-                                            <li class="w-100"><router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: item.candidates.id } }">View Profile</router-link></li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i class="far fa-heart"></i></a>
+                                            <li class="w-100">
+                                                <router-link class="job-view-btn" data-toggle="collapse"
+                                                    :to="{ name: 'CandidateDetail', params: { id: item.candidates.id } }">
+                                                    View Profile</router-link>
+                                            </li>
+                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
+                                                        class="far fa-heart"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -78,18 +85,35 @@
                             <p class="card-title">If you have any further queries, please contact us without any
                                 hesitation.</p>
                             <ul class="social-btns center-block">
-                                <li><button class="btn btn-whatsapp"><img
-                                            src="/website/assets/images/whatsapp-quaries.svg"><span>+92 306 404
-                                            1221</span></button></li>
-                                <li><button class="btn btn-facebook"><img
-                                            src="/website/assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+923064041221"
+                                        class="btn btn-whatsapp">
+                                        <img src="/website/assets/images/whatsapp-quaries.svg">
+                                        <span>+92 306 404 1221</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-linkedin"><img
-                                            src="/website/assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/bizblanca/"
+                                        class="btn btn-facebook">
+                                        <img src="/website/assets/images/facebook-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-google"><img
-                                            src="/website/assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/bizblanca/"
+                                        class="btn btn-linkedin">
+                                        <img src="/website/assets/images/linkdine-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/bizblanca/"
+                                        class="btn btn-google">
+                                        <img src="/website/assets/images/gmail-quaries.svg">
+                                        <span>bizer@bizblanca.com</span>
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
