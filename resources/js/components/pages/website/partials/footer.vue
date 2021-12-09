@@ -104,8 +104,8 @@
                         class="seprate-line"></span>
                     <router-link :to="{ name: 'Services' }" class="nav__item">Services</router-link><span
                         class="seprate-line"></span>
-                    <a target="_blank" href="#" class="nav__item">Blogs</a><span class="seprate-line"></span>
-                    <a class="nav__item" href="#">Sitemap</a>
+                    <router-link :to="{ name: 'BlogDetail' }" class="nav__item">Blogs</router-link><span class="seprate-line"></span>
+                    <router-link class="nav__item" :to="{ name: 'AboutUs' }">Sitemap</router-link>
                 </div>
             </div>
         </div>
