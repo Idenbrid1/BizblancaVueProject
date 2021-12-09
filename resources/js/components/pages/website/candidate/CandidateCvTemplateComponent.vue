@@ -14,12 +14,12 @@
                                 <p>Muhammad Ahmad</p>
                             </li>
                             <li class="v-on-d"><img src="/website/assets/images/pin-job.svg" alt="img">Lahore</li>
-                            <li class="v-on-d"><a @click="download()"><i class="far fa-heart"></i>Add to Wishlist</a></li>
+                            <li class="v-on-d"><a @click="download()"><i class="fas fa-download"></i> Download</a></li>
                         </ul>
                         <p class="candidate-designation">Frontend Developer</p>
                         <ul class="v-on-m m-0 p-0 pt-2 candidate-detail-list-m">
                             <li><img src="/website/assets/images/pin-job.svg" alt="">Lahore</li>
-                            <li><i class="far fa-heart"></i> Add to Wishlist</li>
+                             <li><a @click="download()"><i class="fas fa-download"></i> Download</a></li>
                         </ul>
                     </div>
                     <p class="detail-label"><i class="fas fa-user pr-2"></i> Detailed Information</p>

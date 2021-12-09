@@ -314,7 +314,7 @@ class CommonController extends Controller
     public function downloadcv()
     {
        
-        $pdf = PDF::loadView('pdf.cv_template')->setPaper('a4', 'landscape');
-        return $pdf->download('cv_template.pdf');
+        $pdf = PDF::loadView('pdf.cv_template')->setPaper('a4', 'portrait');
+        return $pdf->stream('cv_template.pdf');
     }
 }
