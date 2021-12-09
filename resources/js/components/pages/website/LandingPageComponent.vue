@@ -51,8 +51,8 @@
                         <h2>IT job ke liye</h2>
                         <h1 class="mb-4">BizBlanca</h1>
                         <div class="d-flex banner-buttons">
-                            <a class="btn btn-black hero-banner-btn-job mr-2" href="#">Looking for a Jobs</a>
-                            <a class="btn btn-black hero-banner-btn-employee" href="#">Looking for Employees</a>
+                            <router-link :to="{ name: 'JobSearch' }" class="btn btn-black hero-banner-btn-job mr-2">Looking for a Jobs</router-link>
+                            <router-link :to="{ name: 'CandidateSearch' }"  class="btn btn-black hero-banner-btn-employee" href="#">Looking for Employees</router-link>
                         </div>
                     </div>
                 </div>

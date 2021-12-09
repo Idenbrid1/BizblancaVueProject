@@ -32819,7 +32819,42 @@ var render = function () {
         ? _c("span", [_c("CandidateNavbar")], 1)
         : _vm._e(),
       _vm._v(" "),
-      _vm._m(2),
+      _c("section", { staticClass: "main-hero-banner py-5" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-10 m-auto" }, [
+              _c("h2", [_vm._v("IT job ke liye")]),
+              _vm._v(" "),
+              _c("h1", { staticClass: "mb-4" }, [_vm._v("BizBlanca")]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "d-flex banner-buttons" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-black hero-banner-btn-job mr-2",
+                      attrs: { to: { name: "JobSearch" } },
+                    },
+                    [_vm._v("Looking for a Jobs")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-black hero-banner-btn-employee",
+                      attrs: { to: { name: "CandidateSearch" }, href: "#" },
+                    },
+                    [_vm._v("Looking for Employees")]
+                  ),
+                ],
+                1
+              ),
+            ]),
+          ]),
+        ]),
+      ]),
       _vm._v(" "),
       _c(
         "section",
@@ -32836,7 +32871,7 @@ var render = function () {
                       "div",
                       { staticClass: "swiper-container blogs-swiper" },
                       [
-                        _vm._m(3),
+                        _vm._m(2),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -32897,7 +32932,7 @@ var render = function () {
                                     ]
                                   ),
                                   _vm._v(" "),
-                                  _vm._m(4, true),
+                                  _vm._m(3, true),
                                 ]),
                               ]
                             )
@@ -32918,13 +32953,13 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _vm._m(5),
+      _vm._m(4),
       _vm._v(" "),
-      _vm._m(6),
+      _vm._m(5),
       _vm._v(" "),
       _c("section", { staticClass: "bg-Grey", attrs: { id: "happening" } }, [
         _c("div", { staticClass: "container" }, [
-          _vm._m(7),
+          _vm._m(6),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -32938,9 +32973,9 @@ var render = function () {
                 "div",
                 { staticClass: "list__card" },
                 [
-                  _vm._m(8),
+                  _vm._m(7),
                   _vm._v(" "),
-                  _vm._m(9),
+                  _vm._m(8),
                   _vm._v(" "),
                   _c(
                     "router-link",
@@ -32963,16 +32998,16 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(10),
+            _vm._m(9),
             _vm._v(" "),
             _c("div", { staticClass: "services-box" }, [
               _c(
                 "div",
                 { staticClass: "list__card" },
                 [
-                  _vm._m(11),
+                  _vm._m(10),
                   _vm._v(" "),
-                  _vm._m(12),
+                  _vm._m(11),
                   _vm._v(" "),
                   _c(
                     "router-link",
@@ -32996,7 +33031,7 @@ var render = function () {
         ]),
       ]),
       _vm._v(" "),
-      _vm._m(13),
+      _vm._m(12),
       _vm._v(" "),
       _c(
         "section",
@@ -33007,7 +33042,7 @@ var render = function () {
               _c("div", { staticClass: "col-md-6 col-12 w-100 p-0 pr-md-5" }, [
                 _c("form", { attrs: { action: "" } }, [
                   _c("div", { staticClass: "row m-0" }, [
-                    _vm._m(14),
+                    _vm._m(13),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-12 px-2" }, [
                       _c("div", { staticClass: "form-group" }, [
@@ -33271,7 +33306,7 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _vm._m(15),
+              _vm._m(14),
             ]),
           ]),
         ]
@@ -33386,42 +33421,6 @@ var staticRenderFns = [
         ]),
       ]
     )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "main-hero-banner py-5" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-10 m-auto" }, [
-            _c("h2", [_vm._v("IT job ke liye")]),
-            _vm._v(" "),
-            _c("h1", { staticClass: "mb-4" }, [_vm._v("BizBlanca")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "d-flex banner-buttons" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn-black hero-banner-btn-job mr-2",
-                  attrs: { href: "#" },
-                },
-                [_vm._v("Looking for a Jobs")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn-black hero-banner-btn-employee",
-                  attrs: { href: "#" },
-                },
-                [_vm._v("Looking for Employees")]
-              ),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
   },
   function () {
     var _vm = this
