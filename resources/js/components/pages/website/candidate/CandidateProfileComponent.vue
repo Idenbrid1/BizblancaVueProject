@@ -1297,11 +1297,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="row mt-3">
-                            <div id='addAnOtherJobBtn' class="col-lg-12 btn addNewButton">
-                                <i class="fas fa-plus mr-1"></i> Add Another Job
-                            </div>
-                        </div> -->
                                 <div class="row mt-4">
                                     <div class="col-lg-12 modelBtnContainer">
                                         <button @click.prevent="updateCurrentJob()"
@@ -2384,12 +2379,20 @@
                     })
             },
             addMoreEducation() {
-                this.addMoreDBEducation = true
+                if(this.profile.candidate_education.length == 3){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'limit',
+                        text: 'Education Already Exist!🥺',
+                    })
+                    this.addMoreDBEducation = false
+                }else{
+                    this.addMoreDBEducation = true
+                }
             },
             clearEducationArray() {
                 this.getCandidateDashboardData()
                 this.education_push_array = {
-                    // school_type: '',
                     school_name: '',
                     start_date: '',
                     end_date: '',
@@ -2404,55 +2407,8 @@
                         Swal.showLoading()
                     },
                 })
-                if (this.education_push_array.school_name) {
-                    this.profile.candidate_education.push({
-                        // school_type: this.education_push_array.school_type,
-                        school_name: this.education_push_array.school_name,
-                        start_date: this.education_push_array.start_date,
-                        end_date: this.education_push_array.end_date,
-                        department: this.education_push_array.department,
-                    })
-                }
-                axios.post('/update/education', this.profile.candidate_education)
-                    .then((res) => {
-                        if (res.data.success == false) {
-                            this.errors = res.data.errors
-                            Swal.close()
-                        } else {
-                            this.errors = []
-                            this.getCandidateDashboardData()
-                            $('#EducationModal').modal('hide')
-                            Swal.close()
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Updated',
-                                text: 'Candidate Updated Successfully',
-                                timer: 1500
-                            })
-                            this.education_push_array = {
-                                // school_type: '',
-                                school_name: '',
-                                start_date: '',
-                                end_date: '',
-                                department: '',
-                            }
-                            this.addMoreDBEducation = false
-                        }
-                    })
-                    .catch((err) => {
-
-                    })
-            },
-            addToEducationRecord() {
-                if (this.education_push_array.school_name == '') {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Fill!',
-                    })
-                    return false
-                } else {
-                    if (this.existEducationArray() == true) {
+                if(this.profile.candidate_education.length != 3){
+                    if (this.education_push_array.school_name) {
                         this.profile.candidate_education.push({
                             // school_type: this.education_push_array.school_type,
                             school_name: this.education_push_array.school_name,
@@ -2460,24 +2416,85 @@
                             end_date: this.education_push_array.end_date,
                             department: this.education_push_array.department,
                         })
+                    }
+                }
+                axios.post('/update/education', this.profile.candidate_education)
+                .then((res) => {
+                    if (res.data.success == false) {
+                        this.errors = res.data.errors
+                        Swal.close()
+                    } else {
+                        this.errors = []
+                        this.getCandidateDashboardData()
+                        $('#EducationModal').modal('hide')
+                        Swal.close()
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Updated',
+                            text: 'Candidate Updated Successfully',
+                            timer: 1500
+                        })
                         this.education_push_array = {
-                            // school_type: '',
                             school_name: '',
                             start_date: '',
                             end_date: '',
                             department: '',
                         }
-                    } else {
+                        this.addMoreDBEducation = false
+                    }
+                })
+            },
+            addToEducationRecord() {
+                if(this.profile.candidate_education.length == 3){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'limit',
+                        text: 'Limit Exceeded',
+                    })
+                }else{
+                    if (this.education_push_array.school_name == '') {
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: 'Education Already Exist!🥺',
+                            text: 'Please Fill!',
                         })
+                        this.addMoreDBEducation = false
+                        return false;
+                    } else {
+                        if (this.existEducationArray() == true) {
+                            this.profile.candidate_education.push({
+                                school_name: this.education_push_array.school_name,
+                                start_date: this.education_push_array.start_date,
+                                end_date: this.education_push_array.end_date,
+                                department: this.education_push_array.department,
+                            })
+                            if(this.profile.candidate_education.length == 3){
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Limit Exceeded',
+                                })
+                                this.addMoreDBEducation = false
+                                return false;
+                            }
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Education Already Exist!🥺',
+                            })
+                            this.addMoreDBEducation = true
+                        }
                     }
                 }
             },
             deleteEducationArray(index) {
                 this.$delete(this.profile.candidate_education, index);
+                this.education_push_array = {
+                    school_name: '',
+                    start_date: '',
+                    end_date: '',
+                    department: '',
+                }
             },
             existEducationArray() {
                 if (this.profile.candidate_education.find(item => item.school_name === this.education_push_array.school_name)) {
@@ -2489,7 +2506,6 @@
             removeAddMoreArrayEducation() {
                 this.addMoreDBEducation = false
                 this.education_push_array = {
-                    // school_type: '',
                     school_name: '',
                     start_date: '',
                     end_date: '',
@@ -2497,7 +2513,15 @@
                 }
             },
             addMoreLanguage() {
-                this.addMoreDBLanguage = true
+                if(this.profile.candidate_language.length == 5){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Limit Exceeded',
+                    })
+                    this.addMoreDBLanguage = false
+                }else{
+                    this.addMoreDBLanguage = true
+                }
             },
             clearLanguageArray() {
                 this.getCandidateDashboardData()
@@ -2514,15 +2538,17 @@
                         Swal.showLoading()
                     },
                 })
-                if (this.language_push_array.name) {
-                    this.profile.candidate_language.push({
-                        name: this.language_push_array.name,
-                        level: this.language_push_array.level,
-                    })
-                    this.addMoreDBLanguage = false
-                    this.language_push_array = {
-                        name: '',
-                        level: '',
+                if(this.profile.candidate_language.length != 5){
+                    if(this.language_push_array.name) {
+                        this.profile.candidate_language.push({
+                            name: this.language_push_array.name,
+                            level: this.language_push_array.level,
+                        })
+                        this.addMoreDBLanguage = false
+                        this.language_push_array = {
+                            name: '',
+                            level: '',
+                        }
                     }
                 }
                 axios.post('/update/language', this.profile.candidate_language)
@@ -2548,39 +2574,51 @@
                             this.addMoreDBLanguage = false
                         }
                     })
-                    .catch((err) => {
-
-                    })
             },
             addToLanguageRecord() {
-                if (this.language_push_array.name == '') {
+                if(this.profile.candidate_language.length == 5){
                     Swal.fire({
                         icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Fill!',
+                        title: 'Limit Exceeded',
                     })
-                    return false
-                } else {
-                    if (this.existLanguageArray() == true) {
-                        this.profile.candidate_language.push({
-                            name: this.language_push_array.name,
-                            level: this.language_push_array.level,
-                        })
-                        this.language_push_array = {
-                            name: '',
-                            level: '',
-                        }
-                    } else {
+                }else{
+                    if (this.language_push_array.name == '') {
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: 'Language Already Exist!🥺',
+                            text: 'Please Fill!',
                         })
+                        return false
+                    } else {
+                        if (this.existLanguageArray() == true) {
+                            this.profile.candidate_language.push({
+                                name: this.language_push_array.name,
+                                level: this.language_push_array.level,
+                            })
+                            if(this.profile.candidate_language.length == 5){
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Limit Exceeded',
+                                })
+                                this.addMoreDBLanguage = false
+                                return false;
+                            }
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Language Already Exist!🥺',
+                            })
+                        }
                     }
                 }
             },
             deleteLanguageArray(index) {
                 this.$delete(this.profile.candidate_language, index);
+                this.language_push_array = {
+                    name: '',
+                    level: '',
+                }
             },
             existLanguageArray() {
                 if (this.profile.candidate_language.find(item => item.name === this.language_push_array.name)) {
@@ -2605,7 +2643,15 @@
                 this.addMoreDBAward = false
             },
             addMoreAward() {
-                this.addMoreDBAward = true
+                if(this.profile.candidate_awards.length == 3){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Limit Exceeded',
+                    })
+                    this.addMoreDBAward = false
+                }else{
+                    this.addMoreDBAward = true
+                }
             },
             updateAward() {
                 swal.fire({
@@ -2614,15 +2660,17 @@
                         Swal.showLoading()
                     },
                 })
-                if (this.award_push_array.name) {
-                    this.profile.candidate_awards.push({
-                        name: this.award_push_array.name,
-                        date: this.award_push_array.date,
-                    })
-                    this.addMoreDBAward = false
-                    this.award_push_array = {
-                        name: '',
-                        date: '',
+                if(this.profile.candidate_awards.length != 3){
+                    if (this.award_push_array.name) {
+                        this.profile.candidate_awards.push({
+                            name: this.award_push_array.name,
+                            date: this.award_push_array.date,
+                        })
+                        this.addMoreDBAward = false
+                        this.award_push_array = {
+                            name: '',
+                            date: '',
+                        }
                     }
                 }
                 axios.post('/update/award', this.profile.candidate_awards)
@@ -2648,43 +2696,50 @@
                             this.addMoreDBAward = false
                         }
                     })
-                    .catch((err) => {
-
-                    })
             },
             addToAwardRecord() {
-                if (this.award_push_array.name == '') {
+                if(this.profile.candidate_awards.length == 3){
                     Swal.fire({
                         icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Fill!',
+                        title: 'Limit Exceeded',
                     })
-                    return false
-                } else {
-                    if (this.existAwardArray() == true) {
-                        this.profile.candidate_awards.push({
-                            name: this.award_push_array.name,
-                            date: this.award_push_array.date,
-                        })
-                        if(this.profile.candidate_awards.length == 3){
-                            Swal.fire({
-                                icon: 'info',
-                                title: 'You can only add 3 awards',
-                            })    
-                        }else{
-                            this.award_push_array = {
-                                name: '',
-                                date: '',
-                            }
-                        }
-                    } else {
+                }else{
+                    if (this.award_push_array.name == '') {
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: 'Award Already Exist!🥺',
+                            text: 'Please Fill!',
                         })
+                        return false
+                    } else {
+                        if (this.existAwardArray() == true) {
+                            this.profile.candidate_awards.push({
+                                name: this.award_push_array.name,
+                                date: this.award_push_array.date,
+                            })
+                            if(this.profile.candidate_awards.length == 3){
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'You can only add 3 awards',
+                                })    
+                                this.addMoreDBAward = false
+                                return false;
+                            }else{
+                                this.award_push_array = {
+                                    name: '',
+                                    date: '',
+                                }
+                            }
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Award Already Exist!🥺',
+                            })
+                        }
                     }
                 }
+                
             },
             deleteAwardArray(index) {
                 this.$delete(this.profile.candidate_awards, index);
@@ -2733,31 +2788,28 @@
                     }
                 }
                 axios.post('/update/skill', this.profile.candidate_skills)
-                    .then((res) => {
-                        if (res.data.success == false) {
-                            this.errors = res.data.errors
-                            Swal.close()
-                        } else {
-                            this.errors = []
-                            this.getCandidateDashboardData()
-                            Swal.close()
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Updated',
-                                text: 'Candidate Updated Successfully',
-                                timer: 1500
-                            })
-                            $('#SkillsModal').modal('hide')
-                            this.skill_push_array = {
-                                name: '',
-                                level: '',
-                            }
-                            this.addMoreDBSkill = false
+                .then((res) => {
+                    if (res.data.success == false) {
+                        this.errors = res.data.errors
+                        Swal.close()
+                    } else {
+                        this.errors = []
+                        this.getCandidateDashboardData()
+                        Swal.close()
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Updated',
+                            text: 'Candidate Updated Successfully',
+                            timer: 1500
+                        })
+                        $('#SkillsModal').modal('hide')
+                        this.skill_push_array = {
+                            name: '',
+                            level: '',
                         }
-                    })
-                    .catch((err) => {
-
-                    })
+                        this.addMoreDBSkill = false
+                    }
+                })
             },
             addToSkillRecord() {
                 if (this.skill_push_array.name == '') {
@@ -2804,7 +2856,7 @@
                 }
             },
             workingCurrentlyYes() {
-                this.isWorkingCurrently = false
+                this.isWorkingCurrently = true
                 this.profile.job_end_date = ''
                 this.profile.job_start_date = ''
                 this.profile.current_position = ''
@@ -2815,7 +2867,7 @@
 
             },
             workingCurrentlyNo() {
-                this.isWorkingCurrently = true
+                this.isWorkingCurrently = false
             },
             updateCurrentJob() {
                 swal.fire({
@@ -2921,9 +2973,6 @@
                             this.addMoreDBWorkExperience = false
                         }
                     })
-                    .catch((err) => {
-
-                    })
             },
             addToWorkExperienceRecord() {
                 if (this.work_experience_push_array.company_name == '') {
@@ -2963,8 +3012,7 @@
                 this.$delete(this.profile.candidate_experience, index);
             },
             existWorkExperienceArray() {
-                if (this.profile.candidate_experience.find(item => item.company_name === this.work_experience_push_array
-                        .company_name)) {
+                if (this.profile.candidate_experience.find(item => item.company_name === this.work_experience_push_array.company_name)) {
                     return false;
                 } else {
                     return true;
@@ -3043,9 +3091,6 @@
                             }
                             this.addMoreDBProject = false
                         }
-                    })
-                    .catch((err) => {
-
                     })
             },
             addToProjectRecord() {

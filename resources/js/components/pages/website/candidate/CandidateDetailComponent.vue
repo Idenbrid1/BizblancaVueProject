@@ -21,12 +21,12 @@
                                 <p>{{data.full_name}}</p>
                             </li>
                             <li class="v-on-d"><img src="/website/assets/images/pin-job.svg" alt=""> {{data.city}}</li>
-                            <li class="v-on-d"><i class="far fa-heart"></i> Add to Wishlist</li>
+                            <!-- <li class="v-on-d"><i class="far fa-heart"></i> Add to Wishlist</li> -->
                         </ul>
                         <p class="candidate-designation">{{data.bio}}</p>
                         <ul class="v-on-m m-0 p-0 pt-2 candidate-detail-list-m">
                             <li><img src="/website/assets/images/pin-job.svg" alt=""> {{data.city}}</li>
-                            <li><i class="far fa-heart"></i> Add to Wishlist</li>
+                            <!-- <li><i class="far fa-heart"></i> Add to Wishlist</li> -->
                         </ul>
                     </div>
                     <p class="detail-label"><i class="fas fa-user pr-2"></i> Detailed Information</p>
@@ -105,14 +105,14 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="row no-gutters portfolio-detail-title candidate-profile-detail">
+                <!-- <ul class="row no-gutters portfolio-detail-title candidate-profile-detail">
                     <li class="col-12 col-md-3 candidate-detail-label">PORTFOLIO:</li>
                     <li class="col-12 col-md-9 candidate-detail-info">
                         <ul class="candidate-info">
                             <li><a href="" target="_blank">https://www.behance.net/abdullahnasir8</a></li>
                         </ul>
                     </li>
-                </ul>
+                </ul> -->
                 <ul class="row no-gutters projects-detail-title candidate-profile-detail">
                     <li class="col-12 col-md-3 candidate-detail-label">PROJECTS:</li>
                     <li class="col-12 col-md-9 candidate-detail-info">

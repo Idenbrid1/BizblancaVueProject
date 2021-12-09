@@ -260,16 +260,6 @@ const router = new VueRouter({
             path: '/job-search',
             name: 'JobSearch',
             component: JobSearch,
-            beforeEnter: (to, from, next) => { 
-                axios.get('check-candidate-role')
-                .then((response) => {
-                    if (response.data.success == true) {
-                        next()
-                    } else {
-                        next('/signin')
-                    }
-                });
-            }
         },
         {
             path: '/job-detail/:id',

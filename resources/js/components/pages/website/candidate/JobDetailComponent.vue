@@ -107,7 +107,7 @@
                 <!-- Job List Wrap Start -->
                 <div class="job-list-wrap">
                     <!-- Job List Start -->
-                    <div class="job-list" v-for="(item, index) in related_job" :key="index">
+                    <div class="job-list" v-for="(item, index) in related_job.filter(i=>i.id != data.id)" :key="index">
                         <div class="company-logo col-auto py-2">
                             <img :src="'/storage/images/companies/'+item.company.logo" alt="Company Logo">
                             <span class="company-h">{{item.company.comapny_name}}</span>
@@ -121,13 +121,10 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i> -->
                                 <div class="d-flex align-items-center">
-                                    <span class="job-post-date">20 hours ago </span>
-                                    <i class="far fa-heart"></i>
+                                    <timeago class="job-post-date" :datetime="item.created_at"></timeago>
+                                    <!-- <i class="far fa-heart"></i> -->
                                 </div>
                             </div>
-                            <span class="job-post-date">
-                                <timeago :datetime="item.created_at"></timeago>
-                            </span>
                             <p class="job-description">{{item.description}}</p>
                             <div class="job-content-wrap">
                                 <div class="job-dynamic-values">
@@ -217,7 +214,8 @@
                     title: 'Oops...🧐',
                     confirmButtonText: 'Understood!',
                     text: 'Please login before apply to any job!',
-                    footer: '<a href="/#/signin">Login?</a>'
+                    footer: '<a href="/#/signin">Login?</a>',
+                    timer: 1500
                 })
             },
             checkAuth(){
