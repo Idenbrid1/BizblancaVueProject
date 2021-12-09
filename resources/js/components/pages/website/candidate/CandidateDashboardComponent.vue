@@ -57,7 +57,7 @@
                 </div>
                 <div class="candidate">
                     <label class="candidate-tagline">
-                        Recommended Jobs 
+                        Recommended Jobs
                         <i class="fas fa-briefcase"></i>
                     </label>
                     <!-- Job List Toolbar Start -->
@@ -78,7 +78,9 @@
                                         </div>
                                     </div>
 
-                                    <p class="job-description">As a Data Scientist, you will be in a central position as you will be evangelizing data and our methodologies to other functional analysts and other stakeholders in the company.</p>
+                                    <p class="job-description">As a Data Scientist, you will be in a central position as
+                                        you will be evangelizing data and our methodologies to other functional analysts
+                                        and other stakeholders in the company.</p>
                                     <div class="job-content-wrap">
                                         <div class="job-dynamic-values">
                                             <ul>
@@ -97,8 +99,8 @@
                                                     <span>80K to 100K</span>
                                                 </li>
                                                 <li>
-                                                    <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
-                                                        alt="img">
+                                                    <img height="16px" width="10px" style="margin:0px 3px;"
+                                                        src="/website/assets/images/pin.svg" alt="img">
                                                     <span>Lahore, Pakistan</span>
                                                 </li>
                                             </ul>
@@ -115,7 +117,8 @@
                                         </div>
                                         <ul class="job-list-fav m-0">
                                             <li>
-                                                <router-link to="/candidate-dashboard" class="job-view-btn">View</router-link>
+                                                <router-link to="/candidate-dashboard" class="job-view-btn">View
+                                                </router-link>
                                             </li>
                                         </ul>
                                     </div>
@@ -154,7 +157,9 @@
                                         </div>
                                     </div>
 
-                                    <p class="job-description">As a Data Scientist, you will be in a central position as you will be evangelizing data and our methodologies to other functional analysts and other stakeholders in the company.</p>
+                                    <p class="job-description">As a Data Scientist, you will be in a central position as
+                                        you will be evangelizing data and our methodologies to other functional analysts
+                                        and other stakeholders in the company.</p>
                                     <div class="job-content-wrap">
                                         <div class="job-dynamic-values">
                                             <ul>
@@ -173,8 +178,8 @@
                                                     <span>80K to 100K</span>
                                                 </li>
                                                 <li>
-                                                    <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
-                                                        alt="img">
+                                                    <img height="16px" width="10px" style="margin:0px 3px;"
+                                                        src="/website/assets/images/pin.svg" alt="img">
                                                     <span>Lahore, Pakistan</span>
                                                 </li>
                                             </ul>
@@ -191,7 +196,8 @@
                                         </div>
                                         <ul class="job-list-fav m-0">
                                             <li>
-                                                <router-link to="/candidate-dashboard" class="job-view-btn">View</router-link>
+                                                <router-link to="/candidate-dashboard" class="job-view-btn">View
+                                                </router-link>
                                             </li>
                                         </ul>
                                     </div>
@@ -217,25 +223,40 @@
                             <p class="card-title">If you have any further queries, please contact us without any
                                 hesitation.</p>
                             <ul class="social-btns center-block">
-                                <li><button class="btn btn-whatsapp"><img
-                                            src="/website/assets/images/whatsapp-quaries.svg"><span>+92 306
-                                            404 1221</span></button></li>
-                                <li><button class="btn btn-facebook"><img
-                                            src="/website/assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+923064041221"
+                                        class="btn btn-whatsapp">
+                                        <img src="/website/assets/images/whatsapp-quaries.svg">
+                                        <span>+92 306 404 1221</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-linkedin"><img
-                                            src="/website/assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/bizblanca/"
+                                        class="btn btn-facebook">
+                                        <img src="/website/assets/images/facebook-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-google"><img
-                                            src="/website/assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/bizblanca/"
+                                        class="btn btn-linkedin">
+                                        <img src="/website/assets/images/linkdine-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/bizblanca/"
+                                        class="btn btn-google">
+                                        <img src="/website/assets/images/gmail-quaries.svg">
+                                        <span>bizer@bizblanca.com</span>
+                                    </a>
                                 </li>
 
                             </ul>
-
                         </div>
                     </div>
                     <div class="divider">
-                        <hr/>
+                        <hr />
                     </div>
                     <div class="side-card h-300 shadow-sm">
                         <div class="side-card-title text-center text-white">New Govt Jobs</div>
@@ -303,7 +324,7 @@
                                             <h3 class="name">Natasha Anjum</h3>
                                             <p class="title">Laravel Developer</p>
                                             <div class="position-box">
-                                                <img src="/website//website/assets/images/position-crown.svg">
+                                                <img src="/website/assets/images/position-crown.svg">
                                                 <h3 class="position-number">1st</h3>
                                             </div>
                                             <p class="description line-clamp-3">I have learned a lot of things in my
@@ -482,7 +503,7 @@
     export default {
         data() {
             return {
-               wishlist: [],
+                wishlist: [],
             }
         },
         mounted() {

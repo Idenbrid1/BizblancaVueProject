@@ -445,8 +445,9 @@ a, button {
 }
 #main-header {
 	display: flex;
-	padding: 10px 0px;
+	padding: 20px 40px;
 	border-bottom: 1px solid #C8C8C8;
+	align-content: center;
 }
 #main-header .bizblanca-logo {
 	margin-right: 15px;
@@ -575,11 +576,6 @@ a, button {
 	/* height: 50px; */
 	color: #081351 !important;
 	/* font-weight: bold; */
-}
-#main-header {
-	display: flex;
-	padding: 10px 40px;
-	border-bottom: 1px solid #C8C8C8;
 }
 .log-site {
 	width: 170px;
@@ -1415,7 +1411,6 @@ a, button {
 	}
 }
 /* USER-PROFILE */
-
 .product_accordion+.search-box-h span {
 	display: none;
 }
@@ -1942,66 +1937,7 @@ a, button {
 	flex: 1 1 auto;
 	padding: 1rem;
 }
-.social-btns {
-	font-size: 12px;
-	list-style: none;
-	padding: 0px;
-	max-width: 80%;
-	margin: auto;
-}
-.conditioncheck {
-	text-align: center;
-	margin: 13px 0px;
-}
-.social-btns li {
-	margin-bottom: 5px;
-}
-.social-btns li i {
-	font-size: 22px;
-}
-.social-btns span {
-	padding: 4px 0px 0px 10px;
-	font-size: 16px;
-}
-.social-btns .btn-whatsapp {
-	background-color: #4CAF50;
-	border-color: #4CAF50;
-	color: #ffffff;
-	min-width: 100%;
-	border-radius: 20px;
-	flex-direction: column;
-	padding: 2px;
-}
-.social-btns .btn-whatsapp:hover {
-	color: #ffffff;
-	background-color: #293b75;
-}
-.social-btns .btn-facebook {
-	background-color: #00a8fa;
-	border-color: #048cce;
-	color: #ffffff;
-	min-width: 100%;
-	border-radius: 20px;
-	flex-direction: column;
-	padding: 2px;
-}
-.social-btns .btn-facebook:hover {
-	color: #ffffff;
-	background-color: #048cce;
-}
-.social-btns .btn-linkedin {
-	background-color: #00629e;
-	border-color: #044a75;
-	color: #ffffff;
-	min-width: 100%;
-	border-radius: 20px;
-	flex-direction: column;
-	padding: 2px;
-}
-.social-btns .btn-linkedin:hover {
-	color: #ffffff;
-	background-color: #044a75;
-}
+
 /* candidate style */
 
 .candidate-landing-section {
@@ -3294,8 +3230,6 @@ a, button {
 	font-size: 12px;
 	list-style: none;
 	padding: 0px;
-	max-width: 80%;
-	margin: auto;
 }
 .conditioncheck {
 	text-align: center;
@@ -3310,11 +3244,13 @@ a, button {
 	background-color: #4CAF50;
 	border-color: #4CAF50;
 	color: #ffffff;
-	min-width: 100%;
+	width: 100%;
 	border-radius: 20px;
-	flex-direction: column;
-	padding: 2px;
+	display:flex;
+	justify-content:flex-start;
+	padding: 5px 5px;
 }
+
 .social-btns .btn-whatsapp:hover {
 	color: #ffffff;
 	background-color: #293b75;
@@ -3323,10 +3259,11 @@ a, button {
 	background-color: #00a8fa;
 	border-color: #048cce;
 	color: #ffffff;
-	min-width: 100%;
+	width: 100%;
 	border-radius: 20px;
-	flex-direction: column;
-	padding: 2px;
+	display:flex;
+	justify-content:flex-start;
+	padding: 5px 5px;
 }
 .social-btns .btn-facebook:hover {
 	color: #ffffff;
@@ -3336,10 +3273,11 @@ a, button {
 	background-color: #00629e;
 	border-color: #044a75;
 	color: #ffffff;
-	min-width: 100%;
+	width: 100%;
 	border-radius: 20px;
-	flex-direction: column;
-	padding: 2px;
+	display:flex;
+	justify-content:flex-start;
+	padding: 5px 5px;
 }
 .social-btns .btn-linkedin:hover {
 	color: #ffffff;
@@ -3349,14 +3287,22 @@ a, button {
 	background-color: #df270b;
 	border-color: #a01b03;
 	color: #ffffff;
-	min-width: 100%;
+	width: 100%;
 	border-radius: 20px;
-	flex-direction: column;
-	padding: 2px;
+	display:flex;
+	justify-content:flex-start;
+	padding: 5px 5px;
 }
 .social-btns .btn-google:hover {
 	color: #ffffff;
 	background-color: #a01b03;
+}
+.social-btns .btn-whatsapp span,
+.social-btns .btn-facebook span,
+.social-btns .btn-linkedin span,
+.social-btns .btn-google span
+{
+	padding-left: 10px;
 }
 /* candidate style */
 
@@ -5743,6 +5689,7 @@ progress {
 }
 .news-letter-sub{
 	height: 50px;
+	margin-bottom: 10px;
 }
 .list__services-company{
 	margin-top: 20px;
@@ -5782,3 +5729,49 @@ progress {
 	filter: invert(85%) sepia(42%) saturate(620%) hue-rotate(349deg) brightness(101%) contrast(101%);
 }
 /* services */
+/* about-us */
+.bizlanca-about-wrap{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 40px;
+}
+.bizlanca-about-wrap>img{
+	width: 500px;
+	height: 387px;
+}
+.bizlanca-about-wrap>.about-info{
+	width: 535px;
+}
+.bizlanca-about-wrap>.about-info>h1{
+	font-size: 32px;
+	color:#000000;
+	font-weight: bold;
+}
+.bizlanca-about-wrap>.about-info>p{
+	font-size: 16px;
+	color:#757575;
+}
+.about-comp-info{
+	text-align: center;
+	margin-top: 40px;
+}
+.about-comp-info>h2{
+	font-size: 32px;
+	color:#000000;
+	font-weight: bold;
+}
+.about-comp-info>p{
+	font-size: 16px;
+	color:#757575;
+}
+.our-goals-wrap{
+	background: #D6DDFF;
+	height: 500px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	clip-path: polygon(57% 13%, 67% 13%, 83% 8%, 100% 0%, 100% 100%, 0% 100%, 0 0, 0 0, 0 0, 38% 10%);
+}
+/* about-us */

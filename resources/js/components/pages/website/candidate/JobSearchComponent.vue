@@ -22,8 +22,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Experience</label>
-                                        <input class="form-control" placeholder="Search by Experience" v-model="record.experience" id="cusSelectbox"
-                                            type="number">
+                                        <input class="form-control" placeholder="Search by Experience"
+                                            v-model="record.experience" id="cusSelectbox" type="number">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Salary Range</label>
@@ -81,7 +81,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Occupation / Job Title</label>
-                                        <input type="text" v-model="record.title" placeholder="Search by Occupation" name="" id="" class="form-control" />
+                                        <input type="text" v-model="record.title" placeholder="Search by Occupation"
+                                            name="" id="" class="form-control" />
                                     </div>
                                     <div class="col-12 conditioncheck">
                                         <input name='gender' value="Male" v-model="record.gender" type="radio"
@@ -129,11 +130,13 @@
                     <div>
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap p-0">
-                            <div class="job-list m-0 mb-3" v-if="index < totalJobs" v-for="(item, index) in jobToShow" :key="index">
+                            <div class="job-list m-0 mb-3" v-if="index < totalJobs" v-for="(item, index) in jobToShow"
+                                :key="index">
                                 <div class="company-logo col-auto py-2">
                                     <img :src="'/storage/images/companies/'+searchData[index].company.logo"
                                         alt="Company Logo">
-                                    <span class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
+                                    <span
+                                        class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
                                 </div>
                                 <div class="job-list-content col">
                                     <div class="job-header">
@@ -144,7 +147,8 @@
                                              <i class="fa fa-star" aria-hidden="true"></i>
                                              <i class="fa fa-star" aria-hidden="true"></i> -->
                                         <div class="d-flex align-items-center">
-                                            <timeago class="job-post-date" :datetime="searchData[index].created_at"></timeago>
+                                            <timeago class="job-post-date" :datetime="searchData[index].created_at">
+                                            </timeago>
                                             <!-- <i class="far fa-heart"></i> -->
                                         </div>
                                     </div>
@@ -168,8 +172,8 @@
                                                     <span>{{searchData[index].salary_range}}</span>
                                                 </li>
                                                 <li>
-                                                    <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
-                                                        alt="img">
+                                                    <img height="16px" width="10px" style="margin:0px 3px;"
+                                                        src="/website/assets/images/pin.svg" alt="img">
                                                     <span>{{searchData[index].location}}</span>
                                                 </li>
                                             </ul>
@@ -187,7 +191,8 @@
                                         <ul class="job-list-fav m-0">
                                             <li>
                                                 <router-link class="job-view-btn" data-toggle="collapse"
-                                                    :to="{ name: 'JobDetail', params: { id: searchData[index].id } }">View</router-link>
+                                                    :to="{ name: 'JobDetail', params: { id: searchData[index].id } }">
+                                                    View</router-link>
                                             </li>
                                         </ul>
                                     </div>
@@ -198,15 +203,18 @@
                         </div>
                     </div>
                     <div class="text-center" v-if="totalJobs">
-                        <button class="load-more-btn mx-auto" v-if="totalJobs != jobToShow && totalJobs > jobToShow " @click="jobToShow += 2">Load more</button>
+                        <button class="load-more-btn mx-auto" v-if="totalJobs != jobToShow && totalJobs > jobToShow "
+                            @click="jobToShow += 2">Load more</button>
                     </div>
                 </div>
                 <div class="job-list-wrap mt-3 p-0" v-if="keywordSearchShow == true">
                     <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
-                    <div class="job-list m-0 mb-3"  v-if="index < searchData.length" v-for="(item, index) in companiesToShow" :key="index">
+                    <div class="job-list m-0 mb-3" v-if="index < searchData.length"
+                        v-for="(item, index) in companiesToShow" :key="index">
                         <div class="company-logo col-auto py-2">
-                            <img :src="'/storage/images/companies/'+searchData[index].company.logo" alt="Company Logo"/>
+                            <img :src="'/storage/images/companies/'+searchData[index].company.logo"
+                                alt="Company Logo" />
                             <span class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
                         </div>
                         <div class="job-list-content col">
@@ -219,9 +227,13 @@
                                              <i class="fa fa-star" aria-hidden="true"></i> -->
 
                                 <div class="d-flex align-items-center">
-                                    <timeago class="job-post-date" :datetime="searchData[index].company.created_at"></timeago>
-                                    <a v-if="searchData[index].is_wish_listed == false" @click="addToWishList(searchData[index].company.id)"><i class="far fa-heart"></i></a>
-                                    <a v-else @click="removeToWishList(searchData[index].company.id)"><i class="fas fa-heart"></i></a>
+                                    <timeago class="job-post-date" :datetime="searchData[index].company.created_at">
+                                    </timeago>
+                                    <a v-if="searchData[index].is_wish_listed == false"
+                                        @click="addToWishList(searchData[index].company.id)"><i
+                                            class="far fa-heart"></i></a>
+                                    <a v-else @click="removeToWishList(searchData[index].company.id)"><i
+                                            class="fas fa-heart"></i></a>
 
                                 </div>
                             </div>
@@ -245,8 +257,8 @@
                                             <span>{{searchData[index].company.salary_range}}</span>
                                         </li>
                                         <li>
-                                            <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
-                                                alt="img">
+                                            <img height="16px" width="10px" style="margin:0px 3px;"
+                                                src="/website/assets/images/pin.svg" alt="img">
                                             <span>{{searchData[index].company.location}}</span>
                                         </li>
                                     </ul>
@@ -263,7 +275,9 @@
                                 </div>
                                 <ul class="job-list-fav m-0">
                                     <li>
-                                        <router-link class="job-view-btn" data-toggle="collapse" :to="{ name: 'CompanyDetail', params: { id: searchData[index].company.id } }">View</router-link>
+                                        <router-link class="job-view-btn" data-toggle="collapse"
+                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].company.id } }">
+                                            View</router-link>
                                     </li>
                                 </ul>
                             </div>
@@ -272,7 +286,8 @@
                     </div>
                     <span class="show-result-msg" v-if="this.showError == true">Data Not Found</span>
                     <div class="text-center" v-if="searchData.length > 0">
-                        <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow" @click="companiesToShow += 2">Load more</button>
+                        <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow"
+                            @click="companiesToShow += 2">Load more</button>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
@@ -286,21 +301,35 @@
                             <p class="card-title">If you have any further queries, please contact us without any
                                 hesitation.</p>
                             <ul class="social-btns center-block">
-                                <li><button class="btn btn-whatsapp"><img
-                                            src="/website/assets/images/whatsapp-quaries.svg"><span>+92 306
-                                            404 1221</span></button></li>
-                                <li><button class="btn btn-facebook"><img
-                                            src="/website/assets/images/facebook-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+923064041221"
+                                        class="btn btn-whatsapp">
+                                        <img src="/website/assets/images/whatsapp-quaries.svg">
+                                        <span>+92 306 404 1221</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-linkedin"><img
-                                            src="/website/assets/images/linkdine-quaries.svg"><span>@BizBlanca</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/bizblanca/"
+                                        class="btn btn-facebook">
+                                        <img src="/website/assets/images/facebook-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
-                                <li><button class="btn btn-google"><img
-                                            src="/website/assets/images/gmail-quaries.svg"><span>bizer@bizblanca.com</span></button>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/bizblanca/"
+                                        class="btn btn-linkedin">
+                                        <img src="/website/assets/images/linkdine-quaries.svg">
+                                        <span>@BizBlanca</span>
+                                    </a>
                                 </li>
-
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/bizblanca/"
+                                        class="btn btn-google">
+                                        <img src="/website/assets/images/gmail-quaries.svg">
+                                        <span>bizer@bizblanca.com</span>
+                                    </a>
+                                </li>
                             </ul>
-
                         </div>
                     </div>
                     <div class="divider">
@@ -591,21 +620,21 @@
         methods: {
             search() {
                 axios.post('/job-search', this.record)
-                .then((response) => {
-                    this.searchData = []
-                    this.searchData = response.data.jobposts
-                    this.totalJobs = response.data.count
-                    if(response.data.length == 0){
-                        this.showError = true
-                    }else{
-                        this.showError = false
-                    }
-                });
+                    .then((response) => {
+                        this.searchData = []
+                        this.searchData = response.data.jobposts
+                        this.totalJobs = response.data.count
+                        if (response.data.length == 0) {
+                            this.showError = true
+                        } else {
+                            this.showError = false
+                        }
+                    });
             },
             addToWishList(id) {
                 axios.get('candidate/add-to-wish-list/' + id)
             },
-            removeToWishList(id){
+            removeToWishList(id) {
                 axios.get('candidate/remove-to-wish-list/' + id)
             },
             keywordSearch() {
@@ -616,18 +645,18 @@
                 this.totalCompanies = 0;
                 this.showError = false;
                 this.keywordSearchShow = false;
-                axios.get('/companies-keyword-search/'+this.record.keyword)
-                .then((response) => {
-                    this.searchData = []
-                    this.searchData = response.data
-                    this.totalJobs = response.length
-                    this.keywordSearchShow = true
-                    if(response.data.length == 0){
-                        this.showError = true
-                    }else{
-                        this.showError = false
-                    }
-                });
+                axios.get('/companies-keyword-search/' + this.record.keyword)
+                    .then((response) => {
+                        this.searchData = []
+                        this.searchData = response.data
+                        this.totalJobs = response.length
+                        this.keywordSearchShow = true
+                        if (response.data.length == 0) {
+                            this.showError = true
+                        } else {
+                            this.showError = false
+                        }
+                    });
             },
             clearSearch() {
                 this.record = {
@@ -642,9 +671,9 @@
                     skills: '',
                 };
                 this.searchData = [],
-                this.totalJobs = 0,
-                this.jobToShow = 2,
-                this.showError = false
+                    this.totalJobs = 0,
+                    this.jobToShow = 2,
+                    this.showError = false
                 this.keywordSearchShow = false
             }
         },

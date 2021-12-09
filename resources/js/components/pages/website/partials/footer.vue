@@ -78,14 +78,16 @@
                         <h3 class="h4 m-0">NEWS LETTER</h3>
                     </div>
                     <p>Please enter your email to subscribe our news letter!</p>
-                    <input type="email" class="form-control news-letter-sub pl-2" placeholder="Enter Email" maxlength="50" v-model="record.email" required="">
+                    <input type="email" class="form-control news-letter-sub pl-2" placeholder="Enter Email"
+                        maxlength="50" v-model="record.email" required="">
                     <small>
                         <span v-if="errors.email != null" class="text-danger">
                             {{errors.email[0]}}
                         </span>
                     </small>
                     <div class="footer__sign-up">
-                        <looping-rhombuses-spinner :animation-duration="1800" :size="120" color="#ffffff" v-if="spinnerSubmit == true" />
+                        <looping-rhombuses-spinner :animation-duration="1800" :size="120" color="#ffffff"
+                            v-if="spinnerSubmit == true" />
                         <a v-else class="mail-subscribe-btn" @click="subscribe()">Subscribe</a>
                     </div>
                 </div>
@@ -109,16 +111,19 @@
         </div>
         <div class="copyright-main">
             <div class="container company-rights py-1">
-                <a href="https://idenbrid.com/">
+                <a target="_blank" href="https://idenbrid.com/">
                     support@bizblanca.com</a>
-                <a href="https://idenbrid.com/">
+                <a target="_blank" href="https://idenbrid.com/">
                     © IDENBRID INC.™, 2021. All rights reserved.</a>
                 <ul class="social-icons-footer">
-                    <li><a href="https://www.facebook.com/bizblanca/"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/bizblanca/"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=+923404913508"><i
-                                class="fab fa-whatsapp-square"></i></a></li>
-                    <li><a href="https://www.instagram.com/bizblanca/"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/bizblanca/">
+                    <i class="fab fa-facebook-square"></i></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/company/bizblanca/">
+                    <i class="fab fa-linkedin"></i></a></li>
+                    <li><a target="_blank" href="https://api.whatsapp.com/send?phone=+923064041221">
+                    <i class="fab fa-whatsapp-square"></i></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/bizblanca/">
+                    <i class="fab fa-instagram-square"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -148,21 +153,21 @@
             subscribe() {
                 this.spinnerSubmit = true
                 axios.post('/footer/news_letter', this.record)
-                .then((response) => {
-                    if(response.data.success == true){
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Subscribe',
-                            text: 'Successfully Subscribed Newsletter! Thanks',
-                        })
-                        this.errors = []
-                        this.spinnerSubmit = false
-                    }else{
-                        this.errors = response.data.errors
-                        this.spinnerSubmit = false
+                    .then((response) => {
+                        if (response.data.success == true) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Subscribe',
+                                text: 'Successfully Subscribed Newsletter! Thanks',
+                            })
+                            this.errors = []
+                            this.spinnerSubmit = false
+                        } else {
+                            this.errors = response.data.errors
+                            this.spinnerSubmit = false
 
-                    }
-                });
+                        }
+                    });
             },
         }
     };

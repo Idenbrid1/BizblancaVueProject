@@ -2351,222 +2351,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -6373,6 +6157,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -10783,6 +10588,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -11682,6 +11507,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -11807,6 +11661,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_3__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -13231,6 +13106,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -13548,6 +13438,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
 /* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
 /* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -15455,6 +15365,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -15623,6 +15557,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var epic_spinners__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! epic-spinners */ "./node_modules/epic-spinners/src/lib.js");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16819,7 +16758,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.text_loading[data-v-284a2b3e] {\r\n    color: #f1f1f1;\r\n    position: fixed;\r\n    z-index: 200000;\r\n    left: 50%;\r\n    top: 50%;\r\n    transform: translate(-50%, -50%)\n}\n.parent[data-v-284a2b3e] {\r\n    background: #050115;\r\n    display: flex;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    overflow: hidden;\r\n    position: fixed;\r\n    z-index: 10000\n}\n.spinner[data-v-284a2b3e] {\r\n    width: 10em;\r\n    height: 10em;\r\n    border-top: .5em solid #d5fff7;\r\n    border-right: .5em solid transparent;\r\n    -webkit-animation: spinner-data-v-284a2b3e .4s linear infinite;\r\n            animation: spinner-data-v-284a2b3e .4s linear infinite;\r\n    border-radius: 50%;\r\n    margin: auto\n}\n.head[data-v-284a2b3e] {\r\n    width: 1em;\r\n    height: 1em;\r\n    border-radius: 50%;\r\n    margin-left: 8.5em;\r\n    margin-top: .5em;\r\n    background-color: #d5fff7\n}\n@-webkit-keyframes spinner-data-v-284a2b3e {\nto {\r\n        transform: rotate(360deg)\n}\n}\n@keyframes spinner-data-v-284a2b3e {\nto {\r\n        transform: rotate(360deg)\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.text_loading[data-v-284a2b3e] {\n    color: #f1f1f1;\n    position: fixed;\n    z-index: 200000;\n    left: 50%;\n    top: 50%;\n    transform: translate(-50%, -50%)\n}\n.parent[data-v-284a2b3e] {\n    background: #050115;\n    display: flex;\n    height: 100vh;\n    width: 100vw;\n    overflow: hidden;\n    position: fixed;\n    z-index: 10000;\n    opacity: 0.6;\n}\n.spinner[data-v-284a2b3e] {\n    width: 10em;\n    height: 10em;\n    border-top: .5em solid #d5fff7;\n    border-right: .5em solid transparent;\n    -webkit-animation: spinner-data-v-284a2b3e .4s linear infinite;\n            animation: spinner-data-v-284a2b3e .4s linear infinite;\n    border-radius: 50%;\n    margin: auto\n}\n.head[data-v-284a2b3e] {\n    width: 1em;\n    height: 1em;\n    border-radius: 50%;\n    margin-left: 8.5em;\n    margin-top: .5em;\n    background-color: #d5fff7\n}\n@-webkit-keyframes spinner-data-v-284a2b3e {\nto {\n        transform: rotate(360deg)\n}\n}\n@keyframes spinner-data-v-284a2b3e {\nto {\n        transform: rotate(360deg)\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27894,9 +27833,11 @@ var render = function () {
       _vm._v(" "),
       _c("CompanyNavbar"),
       _vm._v(" "),
-      _c("h1", { staticClass: "pricing-plan-title" }, [_vm._v("Services")]),
+      _c("h1", { staticClass: "pricing-plan-title" }, [_vm._v("About Us")]),
       _vm._v(" "),
       _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
     ],
     1
   )
@@ -27906,552 +27847,58 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "pacakges-plan-container container" }, [
-      _c("div", { staticClass: "get-free-trial" }, [
-        _c("h2", [_vm._v("Services We Offer To Companies")]),
+    return _c("section", { staticClass: "about-us-container container" }, [
+      _c("div", { staticClass: "bizlanca-about-wrap" }, [
+        _c("img", {
+          attrs: { src: "/website/assets/images/about-us.png", alt: "img" },
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "about-info" }, [
+          _c("h1", [_vm._v("Lorem ipsum dolor sit amet, consectetuer.")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+            ),
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "" } }, [
+            _vm._v("READ MORE   "),
+            _c("i", { staticClass: "fas fa-arrow-right" }),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "about-comp-info" }, [
+        _c("h2", [_vm._v("Lorem ipsum dolor sit amet, consectetuer.")]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "\n                At BizBlanca, companies secure opportunities to get connected with loyal & committed candidates that\n                perfectly fit their requirements. We offer a wide range of services to the companies which they can\n                avail after subscribing to our package.\n            "
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum\n                dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor\n                sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit\n                amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
           ),
         ]),
       ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "list-services" }, [
-        _c("div", { staticClass: "services-box" }, [
-          _c("div", { staticClass: "list__card" }, [
-            _c("div", { staticClass: "list__card-image-container" }, [
-              _c("div", { staticClass: "list__card-image" }, [
-                _c("img", {
-                  attrs: {
-                    src: "/website/assets/images/Icon-awesome-question-circle.svg",
-                  },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "list__card-content" }, [
-              _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v("Web Developers"),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "list__card-description body--sm" }, [
-                _vm._v(
-                  "\n                            A web developer knows HTML, CSS, JavaScript, and PHP. He is an expert in troubleshooting\n                            website problems and also monitors website traffic. We connect you with highly-skilled\n                            and expert web developers that create fast-loading and user-friendly sites.\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "list__card-link minor-button-right",
-                attrs: { tabindex: "0", href: "" },
-              },
-              [
-                _vm._v("Read more\n                        "),
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-box" }, [
-          _c("div", { staticClass: "list__card" }, [
-            _c("div", { staticClass: "list__card-image-container" }, [
-              _c("div", { staticClass: "list__card-image" }, [
-                _c("img", {
-                  attrs: { src: "/website/assets/images/Group-1360.png" },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "list__card-content" }, [
-              _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v("App Developers"),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "list__card-description body--sm" }, [
-                _vm._v(
-                  "\n                            An application developer is typically responsible for coding, designing, and managing\n                            the application. He’ll also make sure that the app runs smoothly. If you require\n                            employees who can develop and create mobile apps, we will find them for you.\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "list__card-link minor-button-right",
-                attrs: { tabindex: "0", href: "" },
-              },
-              [
-                _vm._v("Read more\n                        "),
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-box" }, [
-          _c("div", { staticClass: "list__card" }, [
-            _c("div", { staticClass: "list__card-image-container" }, [
-              _c("div", { staticClass: "list__card-image" }, [
-                _c("img", {
-                  attrs: { src: "/website/assets/images/Group1361.svg" },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "list__card-content" }, [
-              _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v(
-                  "\n                            AI Developer\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "list__card-description body--sm" }, [
-                _vm._v(
-                  "\n                            AI developers help to answer complex business concerns with AI-developed software. He\n                            designs a streamlined architecture of data management & transformation. For companies\n                            that require to automate their business procedures, we connect them with proficient AI\n                            Developers.\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "list__card-link minor-button-right",
-                attrs: { tabindex: "0", href: "" },
-              },
-              [
-                _vm._v("Read more\n                        "),
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-box" }, [
-          _c("div", { staticClass: "list__card" }, [
-            _c("div", { staticClass: "list__card-image-container" }, [
-              _c("div", { staticClass: "list__card-image" }, [
-                _c("img", {
-                  attrs: { src: "/website/assets/images/Group1361.svg" },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "list__card-content" }, [
-              _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v(
-                  "\n                            IT Infrastructure\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "list__card-description body--sm" }, [
-                _vm._v(
-                  "\n                            IT infrastructure engineers are in charge of the security of computer systems and data\n                            exchanges across applications. If you want to manage the security of computer systems\n                            and inter-application information transfers within a business, we help you hire an IT\n                            Infrastructure Engineer.\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "list__card-link minor-button-right",
-                attrs: { tabindex: "0", href: "" },
-              },
-              [
-                _vm._v("Read more\n                        "),
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-box" }, [
-          _c("div", { staticClass: "list__card" }, [
-            _c("div", { staticClass: "list__card-image-container" }, [
-              _c("div", { staticClass: "list__card-image" }, [
-                _c("img", {
-                  attrs: { src: "/website/assets/images/Group1361.svg" },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "list__card-content" }, [
-              _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v(
-                  "\n                            Digital Marketer\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "list__card-description body--sm" }, [
-                _vm._v(
-                  "\n                            A Digital Marketer is responsible to ensure that the audience finds your website easily,\n                            as well as driving more organic traffic. To grow and advertise your business, we help\n                            you in recruiting Digital Marketers and SEO Experts that fit your requirements.\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "list__card-link minor-button-right",
-                attrs: { tabindex: "0", href: "" },
-              },
-              [
-                _vm._v("Read more\n                        "),
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-box" }, [
-          _c("div", { staticClass: "list__card" }, [
-            _c("div", { staticClass: "list__card-image-container" }, [
-              _c("div", { staticClass: "list__card-image" }, [
-                _c("img", {
-                  attrs: { src: "/website/assets/images/Group1361.svg" },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "list__card-content" }, [
-              _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v(
-                  "\n                            ECommerce\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "list__card-description body--sm" }, [
-                _vm._v(
-                  "\n                            Ecommerce developers are crucial in ensuring that potential clients can explore your\n                            eCommerce site with ease and find out what products you sell or purchase. If your\n                            company wants to sell products online, we connect you with a skilled and dedicated\n                            ECommerce Developer.\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "list__card-link minor-button-right",
-                attrs: { tabindex: "0", href: "" },
-              },
-              [
-                _vm._v("Read more\n                        "),
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-box" }, [
-          _c("div", { staticClass: "list__card" }, [
-            _c("div", { staticClass: "list__card-image-container" }, [
-              _c("div", { staticClass: "list__card-image" }, [
-                _c("img", {
-                  attrs: { src: "/website/assets/images/Group1361.svg" },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "list__card-content" }, [
-              _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v(
-                  "\n                            Data Science Expert\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "list__card-description body--sm" }, [
-                _vm._v(
-                  "\n                            Data scientists use their experience in a range of data niches to support organizations\n                            in interpreting and managing data and solving complex concerns. To keep your business\n                            data & information in a secured and backup environment, we provide applications of Data\n                            Science Experts.\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "list__card-link minor-button-right",
-                attrs: { tabindex: "0", href: "" },
-              },
-              [
-                _vm._v("Read more\n                        "),
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-box" }, [
-          _c("div", { staticClass: "list__card" }, [
-            _c("div", { staticClass: "list__card-image-container" }, [
-              _c("div", { staticClass: "list__card-image" }, [
-                _c("img", {
-                  attrs: { src: "/website/assets/images/Group1361.svg" },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "list__card-content" }, [
-              _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v(
-                  "\n                            CMS Developer\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "list__card-description body--sm" }, [
-                _vm._v(
-                  "\n                            CMS developer manages both structured & unstructured content like software, strategies,\n                            and security to utilize it in a precise manner. If you need to create CMS-based\n                            websites, we can link you with reputable and advanced CMS Developers.\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "list__card-link minor-button-right",
-                attrs: { tabindex: "0", href: "" },
-              },
-              [
-                _vm._v("Read more\n                        "),
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-box" }, [
-          _c("div", { staticClass: "list__card" }, [
-            _c("div", { staticClass: "list__card-image-container" }, [
-              _c("div", { staticClass: "list__card-image" }, [
-                _c("img", {
-                  attrs: { src: "/website/assets/images/Group1361.svg" },
-                }),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "list__card-content" }, [
-              _c("h3", { staticClass: "h5 list__card-title" }, [
-                _vm._v(
-                  "\n                            CMS Developer\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "list__card-description body--sm" }, [
-                _vm._v(
-                  "\n                            CMS developer manages both structured & unstructured content like software, strategies,\n                            and security to utilize it in a precise manner. If you need to create CMS-based\n                            websites, we can link you with reputable and advanced CMS Developers.\n                        "
-                ),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "list__card-link minor-button-right",
-                attrs: { tabindex: "0", href: "" },
-              },
-              [
-                _vm._v("Read more\n                        "),
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" },
-                }),
-              ]
-            ),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "list__services-company row no-gutters" }, [
-        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
-          _c("div", { staticClass: "card-service-img" }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/megaphone.svg",
-                alt: "img",
-              },
-            }),
-          ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "our-goals-wrap" }, [
+      _c("div", { staticClass: "bizlanca-about-wrap container" }, [
+        _c("div", { staticClass: "about-info" }, [
+          _c("h1", [_vm._v("Our Goal")]),
           _vm._v(" "),
-          _c("div", { staticClass: "content-service" }, [
-            _c("h2", [_vm._v("Service No. 1")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Provide a streamlined application reviewing procedure that makes it easy to shortlist the\n                        candidates."
-              ),
-            ]),
+          _c("p", [
+            _vm._v(
+              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem\n                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+            ),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
-          _c("div", { staticClass: "card-service-img" }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/megaphone.svg",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-service" }, [
-            _c("h2", [_vm._v("Service No. 2")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("Provide direct linking with the candidate’s detail "),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
-          _c("div", { staticClass: "card-service-img" }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/megaphone.svg",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-service" }, [
-            _c("h2", [_vm._v("Service No. 3")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                " Confer support with arranging interviews and ensuring follow-up."
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
-          _c("div", { staticClass: "card-service-img" }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/megaphone.svg",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-service" }, [
-            _c("h2", [_vm._v("Service No. 4")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Offer a platform where the you can perform end-to-end communication with the applicants."
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
-          _c("div", { staticClass: "card-service-img" }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/megaphone.svg",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-service" }, [
-            _c("h2", [_vm._v("Service No. 5")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Offer scout connections options to keep in touch with the employees. "
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
-          _c("div", { staticClass: "card-service-img" }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/megaphone.svg",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-service" }, [
-            _c("h2", [_vm._v("Service No. 6")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Give expert advice on your job description and the salary you should offer."
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
-          _c("div", { staticClass: "card-service-img" }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/megaphone.svg",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-service" }, [
-            _c("h2", [_vm._v("Service No. 7")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Through our packages, we provide a wide range of safety and screening tests."
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "services-company-box col-12 col-md-6" }, [
-          _c("div", { staticClass: "card-service-img" }, [
-            _c("img", {
-              attrs: {
-                src: "/website/assets/images/megaphone.svg",
-                alt: "img",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-service" }, [
-            _c("h2", [_vm._v("Service No. 8")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Provide Proper Guidance on offer negotiation and counteroffer scenarios to save your time & money"
-              ),
-            ]),
-          ]),
-        ]),
+        _c("img", {
+          attrs: { src: "/website/assets/images/our-goal.svg", alt: "img" },
+        }),
       ]),
     ])
   },
@@ -35779,7 +35226,7 @@ var render = function () {
                     _vm._v(" "),
                     _c("p", { staticClass: "job-description" }, [
                       _vm._v(
-                        "As a Data Scientist, you will be in a central position as you will be evangelizing data and our methodologies to other functional analysts and other stakeholders in the company."
+                        "As a Data Scientist, you will be in a central position as\n                                    you will be evangelizing data and our methodologies to other functional analysts\n                                    and other stakeholders in the company."
                       ),
                     ]),
                     _vm._v(" "),
@@ -35796,7 +35243,11 @@ var render = function () {
                                 staticClass: "job-view-btn",
                                 attrs: { to: "/candidate-dashboard" },
                               },
-                              [_vm._v("View")]
+                              [
+                                _vm._v(
+                                  "View\n                                            "
+                                ),
+                              ]
                             ),
                           ],
                           1
@@ -35840,7 +35291,7 @@ var render = function () {
                     _vm._v(" "),
                     _c("p", { staticClass: "job-description" }, [
                       _vm._v(
-                        "As a Data Scientist, you will be in a central position as you will be evangelizing data and our methodologies to other functional analysts and other stakeholders in the company."
+                        "As a Data Scientist, you will be in a central position as\n                                    you will be evangelizing data and our methodologies to other functional analysts\n                                    and other stakeholders in the company."
                       ),
                     ]),
                     _vm._v(" "),
@@ -35857,7 +35308,11 @@ var render = function () {
                                 staticClass: "job-view-btn",
                                 attrs: { to: "/candidate-dashboard" },
                               },
-                              [_vm._v("View")]
+                              [
+                                _vm._v(
+                                  "View\n                                            "
+                                ),
+                              ]
                             ),
                           ],
                           1
@@ -35957,7 +35412,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "candidate-tagline" }, [
-      _vm._v("\n                    Recommended Jobs \n                    "),
+      _vm._v("\n                    Recommended Jobs\n                    "),
       _c("i", { staticClass: "fas fa-briefcase" }),
     ])
   },
@@ -36195,49 +35650,91 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("ul", { staticClass: "social-btns center-block" }, [
               _c("li", [
-                _c("button", { staticClass: "btn btn-whatsapp" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-whatsapp",
                     attrs: {
-                      src: "/website/assets/images/whatsapp-quaries.svg",
+                      target: "_blank",
+                      href: "https://api.whatsapp.com/send?phone=+923064041221",
                     },
-                  }),
-                  _c("span", [
-                    _vm._v(
-                      "+92 306\n                                        404 1221"
-                    ),
-                  ]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/whatsapp-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("+92 306 404 1221")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-facebook" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-facebook",
                     attrs: {
-                      src: "/website/assets/images/facebook-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.facebook.com/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/facebook-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-linkedin" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-linkedin",
                     attrs: {
-                      src: "/website/assets/images/linkdine-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.linkedin.com/company/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/linkdine-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-google" }, [
-                  _c("img", {
-                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
-                  }),
-                  _c("span", [_vm._v("bizer@bizblanca.com")]),
-                ]),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-google",
+                    attrs: {
+                      target: "_blank",
+                      href: "https://www.instagram.com/bizblanca/",
+                    },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/gmail-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("bizer@bizblanca.com")]),
+                  ]
+                ),
               ]),
             ]),
           ]),
@@ -36365,7 +35862,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "position-box" }, [
                       _c("img", {
                         attrs: {
-                          src: "/website//website/assets/images/position-crown.svg",
+                          src: "/website/assets/images/position-crown.svg",
                         },
                       }),
                       _vm._v(" "),
@@ -47337,7 +46834,11 @@ var render = function () {
                                         },
                                       },
                                     },
-                                    [_vm._v("View")]
+                                    [
+                                      _vm._v(
+                                        "View\n                                    "
+                                      ),
+                                    ]
                                   ),
                                 ],
                                 1
@@ -47424,49 +46925,91 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("ul", { staticClass: "social-btns center-block" }, [
               _c("li", [
-                _c("button", { staticClass: "btn btn-whatsapp" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-whatsapp",
                     attrs: {
-                      src: "/website/assets/images/whatsapp-quaries.svg",
+                      target: "_blank",
+                      href: "https://api.whatsapp.com/send?phone=+923064041221",
                     },
-                  }),
-                  _c("span", [
-                    _vm._v(
-                      "+92 306 404\n                                        1221"
-                    ),
-                  ]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/whatsapp-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("+92 306 404 1221")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-facebook" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-facebook",
                     attrs: {
-                      src: "/website/assets/images/facebook-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.facebook.com/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/facebook-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-linkedin" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-linkedin",
                     attrs: {
-                      src: "/website/assets/images/linkdine-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.linkedin.com/company/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/linkdine-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-google" }, [
-                  _c("img", {
-                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
-                  }),
-                  _c("span", [_vm._v("bizer@bizblanca.com")]),
-                ]),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-google",
+                    attrs: {
+                      target: "_blank",
+                      href: "https://www.instagram.com/bizblanca/",
+                    },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/gmail-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("bizer@bizblanca.com")]),
+                  ]
+                ),
               ]),
             ]),
           ]),
@@ -49335,7 +48878,11 @@ var render = function () {
                                                       },
                                                     },
                                                   },
-                                                  [_vm._v("View")]
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                                View"
+                                                    ),
+                                                  ]
                                                 ),
                                               ],
                                               1
@@ -49642,7 +49189,11 @@ var render = function () {
                                             },
                                           },
                                         },
-                                        [_vm._v("View")]
+                                        [
+                                          _vm._v(
+                                            "\n                                        View"
+                                          ),
+                                        ]
                                       ),
                                     ],
                                     1
@@ -49725,49 +49276,91 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("ul", { staticClass: "social-btns center-block" }, [
               _c("li", [
-                _c("button", { staticClass: "btn btn-whatsapp" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-whatsapp",
                     attrs: {
-                      src: "/website/assets/images/whatsapp-quaries.svg",
+                      target: "_blank",
+                      href: "https://api.whatsapp.com/send?phone=+923064041221",
                     },
-                  }),
-                  _c("span", [
-                    _vm._v(
-                      "+92 306\n                                        404 1221"
-                    ),
-                  ]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/whatsapp-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("+92 306 404 1221")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-facebook" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-facebook",
                     attrs: {
-                      src: "/website/assets/images/facebook-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.facebook.com/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/facebook-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-linkedin" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-linkedin",
                     attrs: {
-                      src: "/website/assets/images/linkdine-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.linkedin.com/company/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/linkdine-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-google" }, [
-                  _c("img", {
-                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
-                  }),
-                  _c("span", [_vm._v("bizer@bizblanca.com")]),
-                ]),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-google",
+                    attrs: {
+                      target: "_blank",
+                      href: "https://www.instagram.com/bizblanca/",
+                    },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/gmail-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("bizer@bizblanca.com")]),
+                  ]
+                ),
               ]),
             ]),
           ]),
@@ -50951,49 +50544,91 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("ul", { staticClass: "social-btns center-block" }, [
               _c("li", [
-                _c("button", { staticClass: "btn btn-whatsapp" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-whatsapp",
                     attrs: {
-                      src: "/website/assets/images/whatsapp-quaries.svg",
+                      target: "_blank",
+                      href: "https://api.whatsapp.com/send?phone=+923064041221",
                     },
-                  }),
-                  _c("span", [
-                    _vm._v(
-                      "+92 306\n                                        404 1221"
-                    ),
-                  ]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/whatsapp-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("+92 306 404 1221")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-facebook" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-facebook",
                     attrs: {
-                      src: "/website/assets/images/facebook-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.facebook.com/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/facebook-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-linkedin" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-linkedin",
                     attrs: {
-                      src: "/website/assets/images/linkdine-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.linkedin.com/company/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/linkdine-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-google" }, [
-                  _c("img", {
-                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
-                  }),
-                  _c("span", [_vm._v("bizer@bizblanca.com")]),
-                ]),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-google",
+                    attrs: {
+                      target: "_blank",
+                      href: "https://www.instagram.com/bizblanca/",
+                    },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/gmail-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("bizer@bizblanca.com")]),
+                  ]
+                ),
               ]),
             ]),
           ]),
@@ -52323,49 +51958,91 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("ul", { staticClass: "social-btns center-block" }, [
               _c("li", [
-                _c("button", { staticClass: "btn btn-whatsapp" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-whatsapp",
                     attrs: {
-                      src: "/website/assets/images/whatsapp-quaries.svg",
+                      target: "_blank",
+                      href: "https://api.whatsapp.com/send?phone=+923064041221",
                     },
-                  }),
-                  _c("span", [
-                    _vm._v(
-                      "+92 306\n                                        404 1221"
-                    ),
-                  ]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/whatsapp-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("+92 306 404 1221")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-facebook" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-facebook",
                     attrs: {
-                      src: "/website/assets/images/facebook-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.facebook.com/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/facebook-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-linkedin" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-linkedin",
                     attrs: {
-                      src: "/website/assets/images/linkdine-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.linkedin.com/company/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/linkdine-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-google" }, [
-                  _c("img", {
-                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
-                  }),
-                  _c("span", [_vm._v("bizer@bizblanca.com")]),
-                ]),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-google",
+                    attrs: {
+                      target: "_blank",
+                      href: "https://www.instagram.com/bizblanca/",
+                    },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/gmail-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("bizer@bizblanca.com")]),
+                  ]
+                ),
               ]),
             ]),
           ]),
@@ -52493,7 +52170,7 @@ var staticRenderFns = [
                     _c("div", { staticClass: "position-box" }, [
                       _c("img", {
                         attrs: {
-                          src: "/website//website/assets/images/position-crown.svg",
+                          src: "/website/assets/images/position-crown.svg",
                         },
                       }),
                       _vm._v(" "),
@@ -53502,7 +53179,7 @@ var render = function () {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                    DELETED"
+                                    "\n                                        DELETED"
                                   ),
                                 ]
                               )
@@ -55271,49 +54948,91 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("ul", { staticClass: "social-btns center-block" }, [
               _c("li", [
-                _c("button", { staticClass: "btn btn-whatsapp" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-whatsapp",
                     attrs: {
-                      src: "/website/assets/images/whatsapp-quaries.svg",
+                      target: "_blank",
+                      href: "https://api.whatsapp.com/send?phone=+923064041221",
                     },
-                  }),
-                  _c("span", [
-                    _vm._v(
-                      "+92 306 404\n                                        1221"
-                    ),
-                  ]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/whatsapp-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("+92 306 404 1221")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-facebook" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-facebook",
                     attrs: {
-                      src: "/website/assets/images/facebook-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.facebook.com/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/facebook-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-linkedin" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-linkedin",
                     attrs: {
-                      src: "/website/assets/images/linkdine-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.linkedin.com/company/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/linkdine-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-google" }, [
-                  _c("img", {
-                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
-                  }),
-                  _c("span", [_vm._v("bizer@bizblanca.com")]),
-                ]),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-google",
+                    attrs: {
+                      target: "_blank",
+                      href: "https://www.instagram.com/bizblanca/",
+                    },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/gmail-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("bizer@bizblanca.com")]),
+                  ]
+                ),
               ]),
             ]),
           ]),
@@ -57975,7 +57694,11 @@ var render = function () {
                                         },
                                       },
                                     },
-                                    [_vm._v("View Profile")]
+                                    [
+                                      _vm._v(
+                                        "\n                                                View Profile"
+                                      ),
+                                    ]
                                   ),
                                 ],
                                 1
@@ -58085,49 +57808,91 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("ul", { staticClass: "social-btns center-block" }, [
               _c("li", [
-                _c("button", { staticClass: "btn btn-whatsapp" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-whatsapp",
                     attrs: {
-                      src: "/website/assets/images/whatsapp-quaries.svg",
+                      target: "_blank",
+                      href: "https://api.whatsapp.com/send?phone=+923064041221",
                     },
-                  }),
-                  _c("span", [
-                    _vm._v(
-                      "+92 306 404\n                                        1221"
-                    ),
-                  ]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/whatsapp-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("+92 306 404 1221")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-facebook" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-facebook",
                     attrs: {
-                      src: "/website/assets/images/facebook-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.facebook.com/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/facebook-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-linkedin" }, [
-                  _c("img", {
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-linkedin",
                     attrs: {
-                      src: "/website/assets/images/linkdine-quaries.svg",
+                      target: "_blank",
+                      href: "https://www.linkedin.com/company/bizblanca/",
                     },
-                  }),
-                  _c("span", [_vm._v("@BizBlanca")]),
-                ]),
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/linkdine-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("@BizBlanca")]),
+                  ]
+                ),
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("button", { staticClass: "btn btn-google" }, [
-                  _c("img", {
-                    attrs: { src: "/website/assets/images/gmail-quaries.svg" },
-                  }),
-                  _c("span", [_vm._v("bizer@bizblanca.com")]),
-                ]),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-google",
+                    attrs: {
+                      target: "_blank",
+                      href: "https://www.instagram.com/bizblanca/",
+                    },
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/gmail-quaries.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("bizer@bizblanca.com")]),
+                  ]
+                ),
               ]),
             ]),
           ]),
@@ -59328,21 +59093,32 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "copyright-main" }, [
       _c("div", { staticClass: "container company-rights py-1" }, [
-        _c("a", { attrs: { href: "https://idenbrid.com/" } }, [
-          _vm._v("\n                support@bizblanca.com"),
-        ]),
+        _c(
+          "a",
+          { attrs: { target: "_blank", href: "https://idenbrid.com/" } },
+          [_vm._v("\n                support@bizblanca.com")]
+        ),
         _vm._v(" "),
-        _c("a", { attrs: { href: "https://idenbrid.com/" } }, [
-          _vm._v(
-            "\n                © IDENBRID INC.™, 2021. All rights reserved."
-          ),
-        ]),
+        _c(
+          "a",
+          { attrs: { target: "_blank", href: "https://idenbrid.com/" } },
+          [
+            _vm._v(
+              "\n                © IDENBRID INC.™, 2021. All rights reserved."
+            ),
+          ]
+        ),
         _vm._v(" "),
         _c("ul", { staticClass: "social-icons-footer" }, [
           _c("li", [
             _c(
               "a",
-              { attrs: { href: "https://www.facebook.com/bizblanca/" } },
+              {
+                attrs: {
+                  target: "_blank",
+                  href: "https://www.facebook.com/bizblanca/",
+                },
+              },
               [_c("i", { staticClass: "fab fa-facebook-square" })]
             ),
           ]),
@@ -59351,7 +59127,10 @@ var staticRenderFns = [
             _c(
               "a",
               {
-                attrs: { href: "https://www.linkedin.com/company/bizblanca/" },
+                attrs: {
+                  target: "_blank",
+                  href: "https://www.linkedin.com/company/bizblanca/",
+                },
               },
               [_c("i", { staticClass: "fab fa-linkedin" })]
             ),
@@ -59362,7 +59141,8 @@ var staticRenderFns = [
               "a",
               {
                 attrs: {
-                  href: "https://api.whatsapp.com/send?phone=+923404913508",
+                  target: "_blank",
+                  href: "https://api.whatsapp.com/send?phone=+923064041221",
                 },
               },
               [_c("i", { staticClass: "fab fa-whatsapp-square" })]
@@ -59372,7 +59152,12 @@ var staticRenderFns = [
           _c("li", [
             _c(
               "a",
-              { attrs: { href: "https://www.instagram.com/bizblanca/" } },
+              {
+                attrs: {
+                  target: "_blank",
+                  href: "https://www.instagram.com/bizblanca/",
+                },
+              },
               [_c("i", { staticClass: "fab fa-instagram-square" })]
             ),
           ]),
@@ -80210,7 +79995,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 
