@@ -16045,7 +16045,7 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_30__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_31__["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_31__["default"]({
-  linkExactActiveClass: 'font-weight-bold',
+  // linkExactActiveClass: 'font-weight-bold',
   routes: [{
     path: "*",
     component: _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -16147,7 +16147,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_31__["default"]({
     name: 'JobAppliedCandidates',
     component: _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {

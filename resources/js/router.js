@@ -35,7 +35,7 @@ import Services from './components/pages/website/ServicesComponent.vue';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    linkExactActiveClass: 'font-weight-bold',
+    // linkExactActiveClass: 'font-weight-bold',
     routes: [
         {   path: "*", 
             component: LandingPage 
@@ -155,7 +155,7 @@ const router = new VueRouter({
             name: 'JobAppliedCandidates',
             component: JobAppliedCandidates,
             beforeEnter: (to, from, next) => { 
-                axios.get('check-candidate-role')
+                axios.get('check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
