@@ -1,7 +1,7 @@
 <template>
     <div>
         <router-view></router-view>
-        <WebsiteFooter/>
+        <WebsiteFooter v-if="this.$route.path !== '/candidate-cv'"/>
     </div>
 </template>
 <script>

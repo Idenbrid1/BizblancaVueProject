@@ -22,6 +22,7 @@ import CandidateDashboard from './components/pages/website/candidate/CandidateDa
 import CandidateAccountSetting from './components/pages/website/candidate/CandidateAccountSettingComponent.vue';
 import CompanySearch from './components/pages/website/candidate/CompanySearchComponent.vue';
 import CompanyChat from './components/pages/website/company/CompanyChatComponent.vue';
+import CandidateCvTemplate from './components/pages/website/candidate/CandidateCvTemplateComponent.vue';
 import JobSearch from './components/pages/website/candidate/JobSearchComponent.vue';
 import JobDetail from './components/pages/website/candidate/JobDetailComponent.vue';
 import PackagePlans from './components/pages/admin/PackagePlansComponent.vue';
@@ -184,6 +185,11 @@ const router = new VueRouter({
             path: '/contact-us',
             name: 'ContactUs',
             component: ContactUs
+        },
+        {
+            path: '/candidate-cv',
+            name: 'CandidateCvTemplate',
+            component: CandidateCvTemplate
         },
         {
             path: '/privacy-policy',
