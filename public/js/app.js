@@ -5471,7 +5471,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         var swiper = new Swiper(".blogs-swiper", _defineProperty({
           slidesPerView: 3.5,
           spaceBetween: 5,
-          // centeredSlides: true,
+          centeredSlides: true,
           loop: true,
           autoplay: {
             delay: 2500,

@@ -513,7 +513,7 @@
                     var swiper = new Swiper(".blogs-swiper", {
                         slidesPerView: 3.5,
                         spaceBetween: 5,
-                        // centeredSlides: true,
+                        centeredSlides: true,
                         loop: true,
                         autoplay: {
                             delay: 2500,
