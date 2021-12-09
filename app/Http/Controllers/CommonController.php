@@ -64,50 +64,76 @@ class CommonController extends Controller
         $candidates = Candidate::query()->with(['CandidateSkills'])
                                         ->where('full_name', 'LIKE', "%{$keyword}%")
                                         ->get();
-        $user = User::find(Auth::user()->id);
-        $company = Company::where('user_id', $user->id)->first();
-        $candidate_with_wishlist = [];
-        foreach($candidates as $candidate)
-        {
-            if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+        if(Auth::check()){
+            $user = User::find(Auth::user()->id);
+            $company = Company::where('user_id', $user->id)->first();
+            $candidate_with_wishlist = [];
+            foreach($candidates as $candidate)
             {
-                $candidate_with_wishlist[] = array(
-                    'candidate'=>$candidate,
-                    'is_wish_listed'=>true,
-                );
-            }else{
+                if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+                {
+                    $candidate_with_wishlist[] = array(
+                        'candidate'=>$candidate,
+                        'is_wish_listed'=>true,
+                    );
+                }else{
+                    $candidate_with_wishlist[] = array(
+                        'candidate'=>$candidate,
+                        'is_wish_listed'=>false,
+                    );
+                }
+            }
+            return $candidate_with_wishlist;
+        }else{
+            $candidate_with_wishlist = [];
+            foreach($candidates as $candidate)
+            {
                 $candidate_with_wishlist[] = array(
                     'candidate'=>$candidate,
                     'is_wish_listed'=>false,
                 );
             }
+            return $candidate_with_wishlist;
         }
-        return $candidate_with_wishlist;
+        
     }
     public function companyKeywordSearch($keyword)
     {
         $companies = Company::query()
             ->where('company_name', 'LIKE', "%{$keyword}%") 
             ->get();
-        $user = User::find(Auth::user()->id);
-        $candidate = Candidate::where('user_id', $user->id)->first();
-        $company_with_wishlist = [];
-        foreach($companies as $company)
-        {
-            if(CandidateWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+        if(Auth::check()){
+            $user = User::find(Auth::user()->id);
+            $candidate = Candidate::where('user_id', $user->id)->first();
+            $company_with_wishlist = [];
+            foreach($companies as $company)
             {
-                $company_with_wishlist[] = array(
-                    'company'=>$company,
-                    'is_wish_listed'=>true,
-                );
-            }else{
+                if(CandidateWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+                {
+                    $company_with_wishlist[] = array(
+                        'company'=>$company,
+                        'is_wish_listed'=>true,
+                    );
+                }else{
+                    $company_with_wishlist[] = array(
+                        'company'=>$company,
+                        'is_wish_listed'=>false,
+                    );
+                }
+            }
+            return $company_with_wishlist;
+        }else{
+            $company_with_wishlist = [];
+            foreach($companies as $company)
+            {
                 $company_with_wishlist[] = array(
                     'company'=>$company,
                     'is_wish_listed'=>false,
                 );
             }
+            return $company_with_wishlist;
         }
-        return $company_with_wishlist;
+        
     }
     public function candidateSearch(Request $request)
     { 
@@ -136,52 +162,78 @@ class CommonController extends Controller
                 $candidate_skills_lists = $candidate_skills_lists->where($field, $request->$field);
             }
         }
-        if(count($candidate_skills_lists) > 0)
-        {
-            // return $candidate_skills_lists;
-            $user = User::find(Auth::user()->id);
-            $company = Company::where('user_id', $user->id)->first();
-            // $candidates = Candidate::get();
-            foreach($candidate_skills_lists as $key=>$candidate)
+        if(Auth::check()){
+            if(count($candidate_skills_lists) > 0)
             {
-                if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+                $user = User::find(Auth::user()->id);
+                $company = Company::where('user_id', $user->id)->first();
+                foreach($candidate_skills_lists as $key=>$candidate)
                 {
-                    $candidate_with_wishlist[$key] = array(
-                        'candidate'=>$candidate,
-                        'is_wish_listed'=>true,
-                    );
-                }else{
+                    if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+                    {
+                        $candidate_with_wishlist[$key] = array(
+                            'candidate'=>$candidate,
+                            'is_wish_listed'=>true,
+                        );
+                    }else{
+                        $candidate_with_wishlist[$key] = array(
+                            'candidate'=>$candidate,
+                            'is_wish_listed'=>false,
+                        );
+                    }
+                }
+                foreach($candidate_with_wishlist as $cww){
+                    $final_arr[] = $cww;
+                }
+                return $final_arr;
+            }
+            else{
+                $user = User::find(Auth::user()->id);
+                $company = Company::where('user_id', $user->id)->first();
+                $candidates = Candidate::get();
+                foreach($candidates as $candidate)
+                {
+                    if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+                    {
+                        $candidate_with_wishlist[] = array(
+                            'candidate'=>$candidate,
+                            'is_wish_listed'=>true,
+                        );
+                    }else{
+                        $candidate_with_wishlist[] = array(
+                            'candidate'=>$candidate,
+                            'is_wish_listed'=>false,
+                        );
+                    }
+                }
+                return $candidate_with_wishlist;
+            }
+        }else{
+            if(count($candidate_skills_lists) > 0)
+            {
+                foreach($candidate_skills_lists as $key=>$candidate)
+                {
                     $candidate_with_wishlist[$key] = array(
                         'candidate'=>$candidate,
                         'is_wish_listed'=>false,
                     );
                 }
+                foreach($candidate_with_wishlist as $cww){
+                    $final_arr[] = $cww;
+                }
+                return $final_arr;
             }
-            foreach($candidate_with_wishlist as $cww){
-                $final_arr[] = $cww;
-            }
-            return $final_arr;
-        }
-        else{
-            $user = User::find(Auth::user()->id);
-            $company = Company::where('user_id', $user->id)->first();
-            $candidates = Candidate::get();
-            foreach($candidates as $candidate)
-            {
-                if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+            else{
+                $candidates = Candidate::get();
+                foreach($candidates as $candidate)
                 {
-                    $candidate_with_wishlist[] = array(
-                        'candidate'=>$candidate,
-                        'is_wish_listed'=>true,
-                    );
-                }else{
                     $candidate_with_wishlist[] = array(
                         'candidate'=>$candidate,
                         'is_wish_listed'=>false,
                     );
                 }
-            }
-            return $candidate_with_wishlist;
+                return $candidate_with_wishlist;
+            }   
         }
     }
     public function getCandidateSearch()
@@ -313,8 +365,12 @@ class CommonController extends Controller
 
     public function downloadcv()
     {
-       
         $pdf = PDF::loadView('pdf.cv_template')->setPaper('a4', 'landscape');
         return $pdf->download('cv_template.pdf');
+    }
+
+    public function getJobs()
+    {
+        return JobPost::where('status', 'Active')->with(['Company'])->orderBy('created_at', 'DESC')->get(); 
     }
 }

@@ -68,6 +68,7 @@ Route::post('/submit-contact-us', [App\Http\Controllers\CommonController::class,
 Route::get('/landingpage/news', [App\Http\Controllers\CommonController::class, 'getNews']);
 Route::post('/footer/news_letter', [App\Http\Controllers\CommonController::class, 'newsLetter']);
 Route::get('/download-cv/', [App\Http\Controllers\CommonController::class, 'downloadcv']);
+Route::get('get-jobs', [App\Http\Controllers\CommonController::class, 'getJobs']);
 
 //samad 
 Route::get('/login', function () {

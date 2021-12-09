@@ -9290,11 +9290,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 
@@ -9430,12 +9425,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       })["catch"](function (err) {});
     },
     addMoreEducation: function addMoreEducation() {
-      this.addMoreDBEducation = true;
+      if (this.profile.candidate_education.length == 3) {
+        Swal.fire({
+          icon: 'error',
+          title: 'limit',
+          text: 'Education Already Exist!🥺'
+        });
+        this.addMoreDBEducation = false;
+      } else {
+        this.addMoreDBEducation = true;
+      }
     },
     clearEducationArray: function clearEducationArray() {
       this.getCandidateDashboardData();
       this.education_push_array = {
-        // school_type: '',
         school_name: '',
         start_date: '',
         end_date: '',
@@ -9453,14 +9456,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
 
-      if (this.education_push_array.school_name) {
-        this.profile.candidate_education.push({
-          // school_type: this.education_push_array.school_type,
-          school_name: this.education_push_array.school_name,
-          start_date: this.education_push_array.start_date,
-          end_date: this.education_push_array.end_date,
-          department: this.education_push_array.department
-        });
+      if (this.profile.candidate_education.length != 3) {
+        if (this.education_push_array.school_name) {
+          this.profile.candidate_education.push({
+            // school_type: this.education_push_array.school_type,
+            school_name: this.education_push_array.school_name,
+            start_date: this.education_push_array.start_date,
+            end_date: this.education_push_array.end_date,
+            department: this.education_push_array.department
+          });
+        }
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/education', this.profile.candidate_education).then(function (res) {
@@ -9481,7 +9486,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             timer: 1500
           });
           _this3.education_push_array = {
-            // school_type: '',
             school_name: '',
             start_date: '',
             end_date: '',
@@ -9489,43 +9493,60 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           };
           _this3.addMoreDBEducation = false;
         }
-      })["catch"](function (err) {});
+      });
     },
     addToEducationRecord: function addToEducationRecord() {
-      if (this.education_push_array.school_name == '') {
+      if (this.profile.candidate_education.length == 3) {
         Swal.fire({
           icon: 'error',
-          title: 'Oops...',
-          text: 'Please Fill!'
+          title: 'limit',
+          text: 'Limit Exceeded'
         });
-        return false;
       } else {
-        if (this.existEducationArray() == true) {
-          this.profile.candidate_education.push({
-            // school_type: this.education_push_array.school_type,
-            school_name: this.education_push_array.school_name,
-            start_date: this.education_push_array.start_date,
-            end_date: this.education_push_array.end_date,
-            department: this.education_push_array.department
-          });
-          this.education_push_array = {
-            // school_type: '',
-            school_name: '',
-            start_date: '',
-            end_date: '',
-            department: ''
-          };
-        } else {
+        if (this.education_push_array.school_name == '') {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Education Already Exist!🥺'
+            text: 'Please Fill!'
           });
+          this.addMoreDBEducation = false;
+          return false;
+        } else {
+          if (this.existEducationArray() == true) {
+            this.profile.candidate_education.push({
+              school_name: this.education_push_array.school_name,
+              start_date: this.education_push_array.start_date,
+              end_date: this.education_push_array.end_date,
+              department: this.education_push_array.department
+            });
+
+            if (this.profile.candidate_education.length == 3) {
+              Swal.fire({
+                icon: 'error',
+                title: 'Limit Exceeded'
+              });
+              this.addMoreDBEducation = false;
+              return false;
+            }
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Education Already Exist!🥺'
+            });
+            this.addMoreDBEducation = true;
+          }
         }
       }
     },
     deleteEducationArray: function deleteEducationArray(index) {
       this.$delete(this.profile.candidate_education, index);
+      this.education_push_array = {
+        school_name: '',
+        start_date: '',
+        end_date: '',
+        department: ''
+      };
     },
     existEducationArray: function existEducationArray() {
       var _this4 = this;
@@ -9541,7 +9562,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     removeAddMoreArrayEducation: function removeAddMoreArrayEducation() {
       this.addMoreDBEducation = false;
       this.education_push_array = {
-        // school_type: '',
         school_name: '',
         start_date: '',
         end_date: '',
@@ -9549,7 +9569,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       };
     },
     addMoreLanguage: function addMoreLanguage() {
-      this.addMoreDBLanguage = true;
+      if (this.profile.candidate_language.length == 5) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Limit Exceeded'
+        });
+        this.addMoreDBLanguage = false;
+      } else {
+        this.addMoreDBLanguage = true;
+      }
     },
     clearLanguageArray: function clearLanguageArray() {
       this.getCandidateDashboardData();
@@ -9569,16 +9597,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
 
-      if (this.language_push_array.name) {
-        this.profile.candidate_language.push({
-          name: this.language_push_array.name,
-          level: this.language_push_array.level
-        });
-        this.addMoreDBLanguage = false;
-        this.language_push_array = {
-          name: '',
-          level: ''
-        };
+      if (this.profile.candidate_language.length != 5) {
+        if (this.language_push_array.name) {
+          this.profile.candidate_language.push({
+            name: this.language_push_array.name,
+            level: this.language_push_array.level
+          });
+          this.addMoreDBLanguage = false;
+          this.language_push_array = {
+            name: '',
+            level: ''
+          };
+        }
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/language', this.profile.candidate_language).then(function (res) {
@@ -9604,37 +9634,53 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           };
           _this5.addMoreDBLanguage = false;
         }
-      })["catch"](function (err) {});
+      });
     },
     addToLanguageRecord: function addToLanguageRecord() {
-      if (this.language_push_array.name == '') {
+      if (this.profile.candidate_language.length == 5) {
         Swal.fire({
           icon: 'error',
-          title: 'Oops...',
-          text: 'Please Fill!'
+          title: 'Limit Exceeded'
         });
-        return false;
       } else {
-        if (this.existLanguageArray() == true) {
-          this.profile.candidate_language.push({
-            name: this.language_push_array.name,
-            level: this.language_push_array.level
-          });
-          this.language_push_array = {
-            name: '',
-            level: ''
-          };
-        } else {
+        if (this.language_push_array.name == '') {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Language Already Exist!🥺'
+            text: 'Please Fill!'
           });
+          return false;
+        } else {
+          if (this.existLanguageArray() == true) {
+            this.profile.candidate_language.push({
+              name: this.language_push_array.name,
+              level: this.language_push_array.level
+            });
+
+            if (this.profile.candidate_language.length == 5) {
+              Swal.fire({
+                icon: 'error',
+                title: 'Limit Exceeded'
+              });
+              this.addMoreDBLanguage = false;
+              return false;
+            }
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Language Already Exist!🥺'
+            });
+          }
         }
       }
     },
     deleteLanguageArray: function deleteLanguageArray(index) {
       this.$delete(this.profile.candidate_language, index);
+      this.language_push_array = {
+        name: '',
+        level: ''
+      };
     },
     existLanguageArray: function existLanguageArray() {
       var _this6 = this;
@@ -9663,7 +9709,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.addMoreDBAward = false;
     },
     addMoreAward: function addMoreAward() {
-      this.addMoreDBAward = true;
+      if (this.profile.candidate_awards.length == 3) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Limit Exceeded'
+        });
+        this.addMoreDBAward = false;
+      } else {
+        this.addMoreDBAward = true;
+      }
     },
     updateAward: function updateAward() {
       var _this7 = this;
@@ -9675,16 +9729,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
 
-      if (this.award_push_array.name) {
-        this.profile.candidate_awards.push({
-          name: this.award_push_array.name,
-          date: this.award_push_array.date
-        });
-        this.addMoreDBAward = false;
-        this.award_push_array = {
-          name: '',
-          date: ''
-        };
+      if (this.profile.candidate_awards.length != 3) {
+        if (this.award_push_array.name) {
+          this.profile.candidate_awards.push({
+            name: this.award_push_array.name,
+            date: this.award_push_array.date
+          });
+          this.addMoreDBAward = false;
+          this.award_push_array = {
+            name: '',
+            date: ''
+          };
+        }
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/award', this.profile.candidate_awards).then(function (res) {
@@ -9710,40 +9766,49 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           };
           _this7.addMoreDBAward = false;
         }
-      })["catch"](function (err) {});
+      });
     },
     addToAwardRecord: function addToAwardRecord() {
-      if (this.award_push_array.name == '') {
+      if (this.profile.candidate_awards.length == 3) {
         Swal.fire({
           icon: 'error',
-          title: 'Oops...',
-          text: 'Please Fill!'
+          title: 'Limit Exceeded'
         });
-        return false;
       } else {
-        if (this.existAwardArray() == true) {
-          this.profile.candidate_awards.push({
-            name: this.award_push_array.name,
-            date: this.award_push_array.date
-          });
-
-          if (this.profile.candidate_awards.length == 3) {
-            Swal.fire({
-              icon: 'info',
-              title: 'You can only add 3 awards'
-            });
-          } else {
-            this.award_push_array = {
-              name: '',
-              date: ''
-            };
-          }
-        } else {
+        if (this.award_push_array.name == '') {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Award Already Exist!🥺'
+            text: 'Please Fill!'
           });
+          return false;
+        } else {
+          if (this.existAwardArray() == true) {
+            this.profile.candidate_awards.push({
+              name: this.award_push_array.name,
+              date: this.award_push_array.date
+            });
+
+            if (this.profile.candidate_awards.length == 3) {
+              Swal.fire({
+                icon: 'error',
+                title: 'You can only add 3 awards'
+              });
+              this.addMoreDBAward = false;
+              return false;
+            } else {
+              this.award_push_array = {
+                name: '',
+                date: ''
+              };
+            }
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Award Already Exist!🥺'
+            });
+          }
         }
       }
     },
@@ -9824,7 +9889,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           };
           _this9.addMoreDBSkill = false;
         }
-      })["catch"](function (err) {});
+      });
     },
     addToSkillRecord: function addToSkillRecord() {
       if (this.skill_push_array.name == '') {
@@ -9875,7 +9940,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       };
     },
     workingCurrentlyYes: function workingCurrentlyYes() {
-      this.isWorkingCurrently = false;
+      this.isWorkingCurrently = true;
       this.profile.job_end_date = '';
       this.profile.job_start_date = '';
       this.profile.current_position = '';
@@ -9885,7 +9950,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.profile.current_salary = '';
     },
     workingCurrentlyNo: function workingCurrentlyNo() {
-      this.isWorkingCurrently = true;
+      this.isWorkingCurrently = false;
     },
     updateCurrentJob: function updateCurrentJob() {
       var _axios$post,
@@ -9995,7 +10060,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           };
           _this12.addMoreDBWorkExperience = false;
         }
-      })["catch"](function (err) {});
+      });
     },
     addToWorkExperienceRecord: function addToWorkExperienceRecord() {
       if (this.work_experience_push_array.company_name == '') {
@@ -10123,7 +10188,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           };
           _this14.addMoreDBProject = false;
         }
-      })["catch"](function (err) {});
+      });
     },
     addToProjectRecord: function addToProjectRecord() {
       if (this.project_push_array.name == '' && this.project_push_array.link == '') {
@@ -11017,9 +11082,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
  // import CompanyNavbar from '../partials/CompanyNavbar.vue';
 
@@ -11052,7 +11114,8 @@ __webpack_require__.r(__webpack_exports__);
         title: 'Oops...🧐',
         confirmButtonText: 'Understood!',
         text: 'Please login before apply to any job!',
-        footer: '<a href="/#/signin">Login?</a>'
+        footer: '<a href="/#/signin">Login?</a>',
+        timer: 1500
       });
     },
     checkAuth: function checkAuth() {
@@ -11690,14 +11753,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -11717,11 +11772,12 @@ __webpack_require__.r(__webpack_exports__);
       },
       searchData: [],
       totalJobs: 0,
-      jobToShow: 2,
-      companiesToShow: 2,
+      jobToShow: 10,
+      companiesToShow: 10,
       totalCompanies: 0,
       showError: false,
-      keywordSearchShow: false
+      keywordSearchShow: false,
+      is_auth: false
     };
   },
   mounted: function mounted() {
@@ -11741,19 +11797,41 @@ __webpack_require__.r(__webpack_exports__);
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     CandidateNavbar: _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
+  created: function created() {
+    this.checkAuth();
+    this.getJobs();
+  },
   methods: {
-    search: function search() {
+    getJobs: function getJobs() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/job-search', this.record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('get-jobs').then(function (response) {
         _this.searchData = [];
-        _this.searchData = response.data.jobposts;
-        _this.totalJobs = response.data.count;
+        _this.searchData = response.data;
+        _this.totalJobs = response.data.length;
+      });
+    },
+    checkAuth: function checkAuth() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-auth').then(function (response) {
+        if (response.data.isAuth == true) {
+          _this2.is_auth = response.data.isAuth;
+        }
+      });
+    },
+    search: function search() {
+      var _this3 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/job-search', this.record).then(function (response) {
+        _this3.searchData = [];
+        _this3.searchData = response.data.jobposts;
+        _this3.totalJobs = response.data.count;
 
         if (response.data.length == 0) {
-          _this.showError = true;
+          _this3.showError = true;
         } else {
-          _this.showError = false;
+          _this3.showError = false;
         }
       });
     },
@@ -11764,7 +11842,7 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('candidate/remove-to-wish-list/' + id);
     },
     keywordSearch: function keywordSearch() {
-      var _this2 = this;
+      var _this4 = this;
 
       this.searchData = [];
       this.totalJobs = 0;
@@ -11774,15 +11852,15 @@ __webpack_require__.r(__webpack_exports__);
       this.showError = false;
       this.keywordSearchShow = false;
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/companies-keyword-search/' + this.record.keyword).then(function (response) {
-        _this2.searchData = [];
-        _this2.searchData = response.data;
-        _this2.totalJobs = response.length;
-        _this2.keywordSearchShow = true;
+        _this4.searchData = [];
+        _this4.searchData = response.data;
+        _this4.totalJobs = response.length;
+        _this4.keywordSearchShow = true;
 
         if (response.data.length == 0) {
-          _this2.showError = true;
+          _this4.showError = true;
         } else {
-          _this2.showError = false;
+          _this4.showError = false;
         }
       });
     },
@@ -12299,7 +12377,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -12333,8 +12410,9 @@ __webpack_require__.r(__webpack_exports__);
         keyword: '',
         skills: []
       },
+      is_auth: false,
       searchData: '',
-      candidateToShow: 3,
+      candidateToShow: 10,
       totalcandidates: 0,
       showError: false
     };
@@ -12354,6 +12432,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.getCandidate();
+    this.checkAuth();
   },
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -12361,6 +12440,15 @@ __webpack_require__.r(__webpack_exports__);
     Multiselect: (vue_multiselect__WEBPACK_IMPORTED_MODULE_3___default())
   },
   methods: {
+    checkAuth: function checkAuth() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-auth').then(function (response) {
+        if (response.data.isAuth == true) {
+          _this.is_auth = response.data.isAuth;
+        }
+      });
+    },
     addSkill: function addSkill(newTag) {
       var tag = {
         name: newTag,
@@ -12370,30 +12458,30 @@ __webpack_require__.r(__webpack_exports__);
       this.record.skills.push(tag);
     },
     getCandidate: function getCandidate() {
-      var _this = this;
+      var _this2 = this;
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-candidates-search?page=' + page).then(function (response) {
-        _this.searchData = response.data;
-        _this.totalcandidates = _this.searchData.length;
+        _this2.searchData = response.data;
+        _this2.totalcandidates = _this2.searchData.length;
       });
     },
     search: function search() {
-      var _this2 = this;
+      var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/candidate-search', this.record).then(function (response) {
-        _this2.searchData = response.data;
-        _this2.totalcandidates = _this2.searchData.length;
+        _this3.searchData = response.data;
+        _this3.totalcandidates = _this3.searchData.length;
 
         if (response.data.length == 0) {
-          _this2.showError = true;
+          _this3.showError = true;
         } else {
-          _this2.showError = false;
+          _this3.showError = false;
         }
       });
     },
     keywordSearch: function keywordSearch() {
-      var _this3 = this;
+      var _this4 = this;
 
       this.searchData = '';
       this.candidateToShow = 3;
@@ -12406,19 +12494,30 @@ __webpack_require__.r(__webpack_exports__);
         });
       } else {
         axios__WEBPACK_IMPORTED_MODULE_0___default().get('/candidate-keyword-search/' + this.record.keyword).then(function (response) {
-          _this3.searchData = response.data;
-          _this3.totalcandidates = _this3.searchData.length;
+          _this4.searchData = response.data;
+          _this4.totalcandidates = _this4.searchData.length;
 
           if (response.data.length == 0) {
-            _this3.showError = true;
+            _this4.showError = true;
           } else {
-            _this3.showError = false;
+            _this4.showError = false;
           }
         });
       }
     },
     addToWishList: function addToWishList(id) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/add-to-wish-list/' + id);
+      if (this.is_auth == true) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('/add-to-wish-list/' + id);
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...🧐',
+          confirmButtonText: 'Understood!',
+          text: 'Please login before apply to any job!',
+          footer: '<a href="/#/signin">Login?</a>',
+          timer: 1500
+        });
+      }
     },
     removeToWishList: function removeToWishList(id) {
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/remove-to-wish-list/' + id);
@@ -13350,32 +13449,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -16396,16 +16469,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_32__["default"]({
   }, {
     path: '/job-search',
     name: 'JobSearch',
-    component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_22__["default"],
-    beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
-        if (response.data.success == true) {
-          next();
-        } else {
-          next('/signin');
-        }
-      });
-    }
+    component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_22__["default"]
   }, {
     path: '/job-detail/:id',
     name: 'JobDetail',
@@ -33193,9 +33257,165 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _vm._m(4),
+      _c("section", { staticClass: "bg-Grey", attrs: { id: "expertise" } }, [
+        _vm._m(4),
+        _vm._v(" "),
+        _c("div", { staticClass: "container fourth-section" }, [
+          _c("div", { staticClass: "row m-0" }, [
+            _c(
+              "div",
+              {
+                staticClass: "col-12 col-md-6 p-0",
+                attrs: { id: "content-faq-anker" },
+              },
+              [
+                _c(
+                  "div",
+                  { attrs: { id: "content-faq-head" } },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "job-head",
+                        attrs: { to: { name: "JobSearch" } },
+                      },
+                      [
+                        _c("div", [
+                          _c("h2", [_vm._v("Looking for a Job?")]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "We connect job searchers with reputable software houses as well as provide a\n                                    platform for them to easily seek employment."
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "text-center btn-look" }, [
+                            _vm._v(
+                              "View more Detail\n                                    "
+                            ),
+                            _c("i", {
+                              staticClass: "fa fa-long-arrow-right",
+                              attrs: { "aria-hidden": "true" },
+                            }),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "content-faq-anker parent" }, [
+                  _c(
+                    "div",
+                    { staticClass: "child bg-one" },
+                    [
+                      _c(
+                        "router-link",
+                        { attrs: { to: { name: "JobSearch" } } },
+                        [
+                          _c("span", { staticClass: "looking-h" }, [
+                            _vm._v("Looking For Jobs?"),
+                          ]),
+                        ]
+                      ),
+                    ],
+                    1
+                  ),
+                ]),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-12 col-md-6 p-0",
+                attrs: { id: "social-media-anker" },
+              },
+              [
+                _c(
+                  "div",
+                  { attrs: { id: "social-media-head" } },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "employee-head",
+                        attrs: { to: { name: "CandidateSearch" } },
+                      },
+                      [
+                        _c("div", { attrs: { id: "videos-section" } }, [
+                          _c("h2", [_vm._v("Looking for employees?")]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                                    We find the most suitable employees within your budget that fulfill your\n                                    requirements and work with dedication.\n                                "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "text-center btn-look" }, [
+                            _vm._v(
+                              "View more Detail\n                                    "
+                            ),
+                            _c("i", {
+                              staticClass: "fa fa-long-arrow-right",
+                              attrs: { "aria-hidden": "true" },
+                            }),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "parent right social-media-anker" }, [
+                  _c(
+                    "div",
+                    { staticClass: "child bg-two" },
+                    [
+                      _c(
+                        "router-link",
+                        { attrs: { to: { name: "CandidateSearch" } } },
+                        [
+                          _c("span", { staticClass: "looking-h" }, [
+                            _vm._v("Looking for Employees?"),
+                          ]),
+                        ]
+                      ),
+                    ],
+                    1
+                  ),
+                ]),
+              ]
+            ),
+          ]),
+        ]),
+      ]),
       _vm._v(" "),
-      _vm._m(5),
+      _c("section", { staticClass: "py-5" }, [
+        _c("div", { staticClass: "third-sections" }, [
+          _c("div", { staticClass: "container" }, [
+            _c(
+              "div",
+              { staticClass: "row" },
+              [
+                _vm._m(5),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "process-btn m-auto",
+                    attrs: { to: { name: "Signup" } },
+                  },
+                  [_vm._v("Register as a job seeker")]
+                ),
+              ],
+              1
+            ),
+          ]),
+        ]),
+      ]),
       _vm._v(" "),
       _c("section", { staticClass: "bg-Grey", attrs: { id: "happening" } }, [
         _c("div", { staticClass: "container" }, [
@@ -33704,178 +33924,54 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "bg-Grey", attrs: { id: "expertise" } },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "list__title-container row" }, [
-            _c("div", { staticClass: "col-md-12" }, [
-              _c("div", { staticClass: "heading-div mb-3" }, [
-                _c("div", { staticClass: "mr-2 title-effect" }),
-                _vm._v(" "),
-                _c("h2", { staticClass: "site-heading mb-0" }, [
-                  _vm._v(
-                    "\n                            We are IT-Jobs Provider\n                        "
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "body--lg" }, [
-                _vm._v(
-                  "\n                        Since 2020 BizBlanca has pioneered specialist recruitment, sourcing knowledgeable, skilled\n                        professionals for jobs across Pakistan. Our experts recruit across the IT sector, so whether\n                        you are looking to hire your next head of development, or urgently require supply managers,\n                        we can help you.\n                    "
-                ),
-              ]),
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "list__title-container row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "heading-div mb-3" }, [
+            _c("div", { staticClass: "mr-2 title-effect" }),
+            _vm._v(" "),
+            _c("h2", { staticClass: "site-heading mb-0" }, [
+              _vm._v(
+                "\n                            We are IT-Jobs Provider\n                        "
+              ),
             ]),
           ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "container fourth-section" }, [
-          _c("div", { staticClass: "row m-0" }, [
-            _c(
-              "div",
-              {
-                staticClass: "col-12 col-md-6 p-0",
-                attrs: { id: "content-faq-anker" },
-              },
-              [
-                _c("div", { attrs: { id: "content-faq-head" } }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "job-head",
-                      attrs: { href: "./comming.html" },
-                    },
-                    [
-                      _c("div", [
-                        _c("h2", [_vm._v("Looking for a Job?")]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "We connect job searchers with reputable software houses as well as provide a\n                                    platform for them to easily seek employment."
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "text-center btn-look" }, [
-                          _vm._v(
-                            "View more Detail\n                                    "
-                          ),
-                          _c("i", {
-                            staticClass: "fa fa-long-arrow-right",
-                            attrs: { "aria-hidden": "true" },
-                          }),
-                        ]),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "content-faq-anker parent" }, [
-                  _c("div", { staticClass: "child bg-one" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("span", { staticClass: "looking-h" }, [
-                        _vm._v("Looking For Employees?"),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "col-12 col-md-6 p-0",
-                attrs: { id: "social-media-anker" },
-              },
-              [
-                _c("div", { attrs: { id: "social-media-head" } }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "employee-head",
-                      attrs: { href: "./comming.html" },
-                    },
-                    [
-                      _c("div", { attrs: { id: "videos-section" } }, [
-                        _c("h2", [_vm._v("Looking for employees?")]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "\n                                    We find the most suitable employees within your budget that fulfill your\n                                    requirements and work with dedication.\n                                "
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "text-center btn-look" }, [
-                          _vm._v(
-                            "View more Detail\n                                    "
-                          ),
-                          _c("i", {
-                            staticClass: "fa fa-long-arrow-right",
-                            attrs: { "aria-hidden": "true" },
-                          }),
-                        ]),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "parent right social-media-anker" }, [
-                  _c("div", { staticClass: "child bg-two" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("span", { staticClass: "looking-h" }, [
-                        _vm._v("Looking for employees?"),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-              ]
+          _vm._v(" "),
+          _c("p", { staticClass: "body--lg" }, [
+            _vm._v(
+              "\n                        Since 2020 BizBlanca has pioneered specialist recruitment, sourcing knowledgeable, skilled\n                        professionals for jobs across Pakistan. Our experts recruit across the IT sector, so whether\n                        you are looking to hire your next head of development, or urgently require supply managers,\n                        we can help you.\n                    "
             ),
           ]),
         ]),
-      ]
-    )
+      ]),
+    ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "py-5" }, [
-      _c("div", { staticClass: "third-sections" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-12 pb-5 third-inner-sec" }, [
-              _c("div", { staticClass: "heading-div mb-3" }, [
-                _c("div", { staticClass: "mr-2 title-effect" }),
-                _vm._v(" "),
-                _c("h2", { staticClass: "site-heading mb-0" }, [
-                  _vm._v("IT job ke liye, BizBlanca"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "pt-2" }, [
-                _vm._v(
-                  "\n                            Get scouted or headhunted by companies you never imagined you could work for. With\n                            BizBlanca, it's not just a dream. We are an indispensable platform for reliable career\n                            advancement. We carefully select candidates who have certain qualifications and do not\n                            compromise on quality.\n                        "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("img", {
-                attrs: {
-                  src: "/website/assets/images/Group1492.png",
-                  alt: "blog-img",
-                  width: "100%",
-                },
-              }),
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              { staticClass: "process-btn m-auto", attrs: { href: "#" } },
-              [_vm._v("Register as a job seeker")]
-            ),
-          ]),
+    return _c("div", { staticClass: "col-md-12 pb-5 third-inner-sec" }, [
+      _c("div", { staticClass: "heading-div mb-3" }, [
+        _c("div", { staticClass: "mr-2 title-effect" }),
+        _vm._v(" "),
+        _c("h2", { staticClass: "site-heading mb-0" }, [
+          _vm._v("IT job ke liye, BizBlanca"),
         ]),
       ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "pt-2" }, [
+        _vm._v(
+          "\n                            Get scouted or headhunted by companies you never imagined you could work for. With\n                            BizBlanca, it's not just a dream. We are an indispensable platform for reliable career\n                            advancement. We carefully select candidates who have certain qualifications and do not\n                            compromise on quality.\n                        "
+        ),
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: {
+          src: "/website/assets/images/Group1492.png",
+          alt: "blog-img",
+          width: "100%",
+        },
+      }),
     ])
   },
   function () {
@@ -36972,8 +37068,6 @@ var render = function () {
                   }),
                   _vm._v(" " + _vm._s(_vm.data.city)),
                 ]),
-                _vm._v(" "),
-                _vm._m(1),
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "candidate-designation" }, [
@@ -36993,13 +37087,11 @@ var render = function () {
                     }),
                     _vm._v(" " + _vm._s(_vm.data.city)),
                   ]),
-                  _vm._v(" "),
-                  _vm._m(2),
                 ]
               ),
             ]),
             _vm._v(" "),
-            _vm._m(3),
+            _vm._m(1),
           ]),
         ]),
         _vm._v(" "),
@@ -37272,8 +37364,6 @@ var render = function () {
             ]
           ),
           _vm._v(" "),
-          _vm._m(4),
-          _vm._v(" "),
           _c(
             "ul",
             {
@@ -37338,55 +37428,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "v-on-d" }, [
-      _c("i", { staticClass: "far fa-heart" }),
-      _vm._v(" Add to Wishlist"),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("i", { staticClass: "far fa-heart" }),
-      _vm._v(" Add to Wishlist"),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("p", { staticClass: "detail-label" }, [
       _c("i", { staticClass: "fas fa-user pr-2" }),
       _vm._v(" Detailed Information"),
     ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "ul",
-      {
-        staticClass:
-          "row no-gutters portfolio-detail-title candidate-profile-detail",
-      },
-      [
-        _c("li", { staticClass: "col-12 col-md-3 candidate-detail-label" }, [
-          _vm._v("PORTFOLIO:"),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
-          _c("ul", { staticClass: "candidate-info" }, [
-            _c("li", [
-              _c("a", { attrs: { href: "", target: "_blank" } }, [
-                _vm._v("https://www.behance.net/abdullahnasir8"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]
-    )
   },
 ]
 render._withStripped = true
@@ -48418,154 +48463,162 @@ var render = function () {
             _c(
               "div",
               { staticClass: "job-list-wrap" },
-              _vm._l(_vm.related_job, function (item, index) {
-                return _c("div", { key: index, staticClass: "job-list" }, [
-                  _c("div", { staticClass: "company-logo col-auto py-2" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/storage/images/companies/" + item.company.logo,
-                        alt: "Company Logo",
-                      },
-                    }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "company-h" }, [
-                      _vm._v(_vm._s(item.company.comapny_name)),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "job-list-content col" }, [
-                    _c("div", { staticClass: "job-header" }, [
-                      _c("h6", { staticClass: "job-title mb-0" }, [
-                        _vm._v(_vm._s(item.title)),
-                      ]),
+              _vm._l(
+                _vm.related_job.filter(function (i) {
+                  return i.id != _vm.data.id
+                }),
+                function (item, index) {
+                  return _c("div", { key: index, staticClass: "job-list" }, [
+                    _c("div", { staticClass: "company-logo col-auto py-2" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/storage/images/companies/" + item.company.logo,
+                          alt: "Company Logo",
+                        },
+                      }),
                       _vm._v(" "),
-                      _vm._m(2, true),
+                      _c("span", { staticClass: "company-h" }, [
+                        _vm._v(_vm._s(item.company.comapny_name)),
+                      ]),
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "span",
-                      { staticClass: "job-post-date" },
-                      [_c("timeago", { attrs: { datetime: item.created_at } })],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "job-description" }, [
-                      _vm._v(_vm._s(item.description)),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "job-content-wrap" }, [
-                      _c("div", { staticClass: "job-dynamic-values" }, [
-                        _c("ul", [
-                          _c("li", [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/calendar-job.svg",
-                                alt: "img",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("span", [
-                              _vm._v(
-                                _vm._s(
-                                  _vm._f("moment")(
-                                    item.created_at,
-                                    "YYYY-MM-DD"
-                                  )
-                                )
-                              ),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/experience-job.svg",
-                                alt: "",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("span", [_vm._v(_vm._s(item.experience))]),
-                          ]),
+                    _c("div", { staticClass: "job-list-content col" }, [
+                      _c("div", { staticClass: "job-header" }, [
+                        _c("h6", { staticClass: "job-title mb-0" }, [
+                          _vm._v(_vm._s(item.title)),
                         ]),
                         _vm._v(" "),
-                        _c("ul", [
-                          _c("li", [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/money-job.svg",
-                                alt: "",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("span", [_vm._v(_vm._s(item.salary_range))]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", [
-                            _c("img", {
-                              staticStyle: { margin: "0px 3px" },
-                              attrs: {
-                                height: "16px",
-                                width: "10px",
-                                src: "/website/assets/images/pin.svg",
-                                alt: "img",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("span", [_vm._v(_vm._s(item.location))]),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("ul", [
-                          _c("li", [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/suitcase-job.svg",
-                                alt: "",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("span", [_vm._v(_vm._s(item.shift))]),
-                          ]),
-                          _vm._v(" "),
-                          _c("li", [
-                            _c("img", {
-                              attrs: {
-                                src: "/website/assets/images/switch-job.svg",
-                                alt: "",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("span", [_vm._v(_vm._s(item.salary_type))]),
-                          ]),
-                        ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("ul", { staticClass: "job-list-fav m-0" }, [
                         _c(
-                          "li",
+                          "div",
+                          { staticClass: "d-flex align-items-center" },
                           [
-                            _c(
-                              "router-link",
-                              {
-                                staticClass: "job-view-btn",
-                                attrs: {
-                                  "data-toggle": "collapse",
-                                  to: {
-                                    name: "JobDetail",
-                                    params: { id: item.id },
-                                  },
-                                },
-                              },
-                              [_vm._v("View")]
-                            ),
+                            _c("timeago", {
+                              staticClass: "job-post-date",
+                              attrs: { datetime: item.created_at },
+                            }),
                           ],
                           1
                         ),
                       ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "job-description" }, [
+                        _vm._v(_vm._s(item.description)),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "job-content-wrap" }, [
+                        _c("div", { staticClass: "job-dynamic-values" }, [
+                          _c("ul", [
+                            _c("li", [
+                              _c("img", {
+                                attrs: {
+                                  src: "/website/assets/images/calendar-job.svg",
+                                  alt: "img",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("span", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm._f("moment")(
+                                      item.created_at,
+                                      "YYYY-MM-DD"
+                                    )
+                                  )
+                                ),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c("li", [
+                              _c("img", {
+                                attrs: {
+                                  src: "/website/assets/images/experience-job.svg",
+                                  alt: "",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("span", [_vm._v(_vm._s(item.experience))]),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("ul", [
+                            _c("li", [
+                              _c("img", {
+                                attrs: {
+                                  src: "/website/assets/images/money-job.svg",
+                                  alt: "",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("span", [_vm._v(_vm._s(item.salary_range))]),
+                            ]),
+                            _vm._v(" "),
+                            _c("li", [
+                              _c("img", {
+                                staticStyle: { margin: "0px 3px" },
+                                attrs: {
+                                  height: "16px",
+                                  width: "10px",
+                                  src: "/website/assets/images/pin.svg",
+                                  alt: "img",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("span", [_vm._v(_vm._s(item.location))]),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("ul", [
+                            _c("li", [
+                              _c("img", {
+                                attrs: {
+                                  src: "/website/assets/images/suitcase-job.svg",
+                                  alt: "",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("span", [_vm._v(_vm._s(item.shift))]),
+                            ]),
+                            _vm._v(" "),
+                            _c("li", [
+                              _c("img", {
+                                attrs: {
+                                  src: "/website/assets/images/switch-job.svg",
+                                  alt: "",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("span", [_vm._v(_vm._s(item.salary_type))]),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("ul", { staticClass: "job-list-fav m-0" }, [
+                          _c(
+                            "li",
+                            [
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "job-view-btn",
+                                  attrs: {
+                                    "data-toggle": "collapse",
+                                    to: {
+                                      name: "JobDetail",
+                                      params: { id: item.id },
+                                    },
+                                  },
+                                },
+                                [_vm._v("View")]
+                              ),
+                            ],
+                            1
+                          ),
+                        ]),
+                      ]),
                     ]),
-                  ]),
-                ])
-              }),
+                  ])
+                }
+              ),
               0
             ),
           ]
@@ -48634,16 +48687,6 @@ var staticRenderFns = [
       ]),
     ])
   },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex align-items-center" }, [
-      _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
-      _vm._v(" "),
-      _c("i", { staticClass: "far fa-heart" }),
-    ])
-  },
 ]
 render._withStripped = true
 
@@ -48672,7 +48715,7 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _c("CandidateNavbar"),
+      _vm.is_auth == true ? _c("CandidateNavbar") : _vm._e(),
       _vm._v(" "),
       _c("div", { staticClass: "container user-profile-container cont-flex" }, [
         _c("div", { staticClass: "condition-search-feilds" }, [
@@ -49236,75 +49279,79 @@ var render = function () {
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "product-search-box" }, [
-            _c("label", { staticClass: "search-box-h" }, [
-              _vm._v("\n                    Company Search\n                "),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-12 search-container" }, [
-              _c("form", [
-                _vm._m(0),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.record.keyword,
-                      expression: "record.keyword",
-                    },
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    placeholder: "* Includes All Keywords",
-                    name: "search",
-                  },
-                  domProps: { value: _vm.record.keyword },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.record, "keyword", $event.target.value)
-                    },
-                  },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "keyword-search-ankers" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "keyword-search-btn",
-                      attrs: { type: "submit" },
-                      on: {
-                        click: function ($event) {
-                          $event.preventDefault()
-                          return _vm.keywordSearch()
-                        },
-                      },
-                    },
-                    [_vm._v("Search")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "keyword-clear-btn",
-                      attrs: { type: "submit" },
-                      on: {
-                        click: function ($event) {
-                          $event.preventDefault()
-                          return _vm.clearSearch()
-                        },
-                      },
-                    },
-                    [_vm._v("Clear")]
+          _vm.is_auth == true
+            ? _c("div", { staticClass: "product-search-box" }, [
+                _c("label", { staticClass: "search-box-h" }, [
+                  _vm._v(
+                    "\n                    Company Search\n                "
                   ),
                 ]),
-              ]),
-            ]),
-          ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-12 search-container" }, [
+                  _c("form", [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.record.keyword,
+                          expression: "record.keyword",
+                        },
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        placeholder: "* Includes All Keywords",
+                        name: "search",
+                      },
+                      domProps: { value: _vm.record.keyword },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.record, "keyword", $event.target.value)
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "keyword-search-ankers" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "keyword-search-btn",
+                          attrs: { type: "submit" },
+                          on: {
+                            click: function ($event) {
+                              $event.preventDefault()
+                              return _vm.keywordSearch()
+                            },
+                          },
+                        },
+                        [_vm._v("Search")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "keyword-clear-btn",
+                          attrs: { type: "submit" },
+                          on: {
+                            click: function ($event) {
+                              $event.preventDefault()
+                              return _vm.clearSearch()
+                            },
+                          },
+                        },
+                        [_vm._v("Clear")]
+                      ),
+                    ]),
+                  ]),
+                ]),
+              ])
+            : _vm._e(),
           _vm._v(" "),
           _vm.keywordSearchShow == false
             ? _c("div", { staticClass: "candidate border-0" }, [
@@ -49589,7 +49636,7 @@ var render = function () {
                               staticClass: "load-more-btn mx-auto",
                               on: {
                                 click: function ($event) {
-                                  _vm.jobToShow += 2
+                                  _vm.jobToShow += 10
                                 },
                               },
                             },
@@ -49601,7 +49648,7 @@ var render = function () {
               ])
             : _vm._e(),
           _vm._v(" "),
-          _vm.keywordSearchShow == true
+          _vm.keywordSearchShow == true && _vm.is_auth == true
             ? _c(
                 "div",
                 { staticClass: "job-list-wrap mt-3 p-0" },
@@ -49892,7 +49939,7 @@ var render = function () {
                                 staticClass: "load-more-btn mx-auto",
                                 on: {
                                   click: function ($event) {
-                                    _vm.companiesToShow += 2
+                                    _vm.companiesToShow += 10
                                   },
                                 },
                               },
@@ -50562,7 +50609,7 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _c("CompanyNavbar"),
+      _vm.isAuth == true ? _c("CompanyNavbar") : _vm._e(),
       _vm._v(" "),
       _c("div", { staticClass: "container user-profile-container cont-flex" }, [
         _c("div", { staticClass: "condition-search-feilds" }, [
@@ -51164,7 +51211,7 @@ var render = function () {
                         staticClass: "load-more-btn mx-auto",
                         on: {
                           click: function ($event) {
-                            _vm.candidateToShow += 3
+                            _vm.candidateToShow += 10
                           },
                         },
                       },
@@ -53549,7 +53596,17 @@ var render = function () {
                         _vm._v(_vm._s(item.title)),
                       ]),
                       _vm._v(" "),
-                      _vm._m(2, true),
+                      _c(
+                        "div",
+                        { staticClass: "d-flex align-items-center" },
+                        [
+                          _c("timeago", {
+                            staticClass: "job-post-date",
+                            attrs: { datetime: item.created_at },
+                          }),
+                        ],
+                        1
+                      ),
                     ]),
                     _vm._v(" "),
                     _c("p", { staticClass: "job-description" }, [
@@ -53671,8 +53728,6 @@ var render = function () {
               }),
               0
             ),
-            _vm._v(" "),
-            _c("div", { staticClass: "bottom-pagination" }),
           ]
         ),
       ]),
@@ -53729,16 +53784,6 @@ var staticRenderFns = [
           "\n                    This section is jobs by this same company you are standing on section offered by other companies\n                    of same position you are looking for and may or may not better option then this job post and\n                    also you can check these jobs.\n                "
         ),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex align-items-center" }, [
-      _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
-      _vm._v(" "),
-      _c("i", { staticClass: "far fa-heart" }),
     ])
   },
 ]

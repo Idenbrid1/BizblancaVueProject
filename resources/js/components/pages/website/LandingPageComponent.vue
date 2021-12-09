@@ -133,7 +133,7 @@
                 <div class="row m-0">
                     <div class="col-12 col-md-6 p-0" id="content-faq-anker">
                         <div id="content-faq-head">
-                            <a href="./comming.html" class="job-head">
+                            <router-link :to="{ name: 'JobSearch' }" class="job-head">
                                 <div>
                                     <h2>Looking for a Job?</h2>
                                     <p>We connect job searchers with reputable software houses as well as provide a
@@ -141,17 +141,17 @@
                                     <span class="text-center btn-look">View more Detail
                                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                         <div class="content-faq-anker parent">
                             <div class="child bg-one">
-                                <a href="#"><span class="looking-h">Looking For Employees?</span></a>
+                                <router-link :to="{ name: 'JobSearch' }"><span class="looking-h">Looking For Jobs?</span></router-link>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 p-0" id="social-media-anker">
                         <div id="social-media-head">
-                            <a href="./comming.html" class="employee-head">
+                            <router-link :to="{ name: 'CandidateSearch' }" class="employee-head">
                                 <div id="videos-section">
                                     <h2>Looking for employees?</h2>
                                     <p>
@@ -161,11 +161,11 @@
                                     <span class="text-center btn-look">View more Detail
                                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                         <div class="parent right social-media-anker">
                             <div class="child bg-two">
-                                <a href="#"><span class="looking-h">Looking for employees?</span></a>
+                                <router-link :to="{ name: 'CandidateSearch' }"><span class="looking-h">Looking for Employees?</span></router-link>
                             </div>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                             </p>
                             <img src="/website/assets/images/Group1492.png" alt="blog-img" width="100%" />
                         </div>
-                        <a href="#" class="process-btn m-auto">Register as a job seeker</a>
+                        <router-link :to="{ name: 'Signup' }" class="process-btn m-auto">Register as a job seeker</router-link>
                     </div>
                 </div>
             </div>

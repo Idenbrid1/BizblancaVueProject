@@ -97,21 +97,6 @@
                         {{data.description}}
                     </p>
                 </div>
-                <!-- <div class="px-2">
-                    <h1 class="post_new_job_title">About i2c</h1>
-                    <p class="post_new_job_descrp">
-                        i2c’s mission is to empower our clients to create differentiated payment and banking experiences
-                        for consumers and businesses around the world. We build the payment technology and services
-                        global brands, financial institutions, corporations, and governments need to deliver
-                        high-impact, personalized payments and commerce solutions that build loyalty and engage today’s
-                        consumers in new ways, creating more profitable relationships. i2c’s highly-configurable,
-                        cloud-based Agile Processing payments platform provides unparalleled flexibility, agility, and
-                        reliability so companies can quickly and cost-effectively deploy differentiated, feature-rich
-                        credit, debit, and prepaid programs anywhere in the world. Our customers rely on us to support
-                        the highly-differentiated needs of cardholders in 216 countries and territories across 24 time
-                        zones.
-                    </p>
-                </div> -->
                 <div class="px-2" v-if="data.profile_video">
                     <h1 class="post_new_job_title">Profile Video</h1>
                     <video controls :src="'/storage/images/companies/'+data.profile_video" class="CompanyProfileVideo"></video>
@@ -126,78 +111,67 @@
                 </div>
                 <!-- Job List Wrap Start -->
                <div class="job-list-wrap p-0">
-                            <div class="job-list" v-for="(item, index) in data.jobs" :key="index">
-                                <div class="company-logo col-auto py-2">
-                                    <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo">
-                                    <span class="company-h line-clamp-1">{{item.title}}</span>
-                                </div>
-                                <div class="job-list-content col">
-                                    <div class="job-header">
-                                        <h6 class="job-title mb-0">{{item.title}}</h6>
-                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i> -->
-                                        <div class="d-flex align-items-center">
-                                            <span class="job-post-date">20 hours ago </span>
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                    </div>
-
-                                    <p class="job-description">{{item.description}}</p>
-                                    <div class="job-content-wrap">
-                                        <div class="job-dynamic-values">
-                                            <ul>
-                                                <li>
-                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
-                                                    <span>{{item.created_at | moment("YYYY-MM-DD")}}</span>
-                                                </li>
-                                                <li>
-                                                    <img src="/website/assets/images/experience-job.svg" alt="">
-                                                    <span>{{item.experience}}</span>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <img src="/website/assets/images/money-job.svg" alt="">
-                                                    <span>{{item.salary_range}}</span>
-                                                </li>
-                                                <li>
-                                                    <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
-                                                        alt="img">
-                                                    <span>{{item.location}}</span>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
-                                                    <span>{{item.shift}}</span>
-                                                </li>
-                                                <li>
-                                                    <img src="/website/assets/images/switch-job.svg" alt="">
-                                                    <span>{{item.job_type}}</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <ul class="job-list-fav m-0">
-                                            <li>
-                                                <router-link class="job-view-btn" data-toggle="collapse"
-                                                    :to="{ name: 'JobDetail', params: { id: item.id } }">View</router-link>
-                                            </li>
-                                        </ul>
-                                    </div>
-
+                    <div class="job-list" v-for="(item, index) in data.jobs" :key="index">
+                        <div class="company-logo col-auto py-2">
+                            <img :src="'/storage/images/companies/'+item.bannar" alt="Company Logo">
+                            <span class="company-h line-clamp-1">{{item.title}}</span>
+                        </div>
+                        <div class="job-list-content col">
+                            <div class="job-header">
+                                <h6 class="job-title mb-0">{{item.title}}</h6>
+                                <div class="d-flex align-items-center">
+                                    <timeago class="job-post-date" :datetime="item.created_at"></timeago>
                                 </div>
                             </div>
-                            <!-- </div> -->
+
+                            <p class="job-description">{{item.description}}</p>
+                            <div class="job-content-wrap">
+                                <div class="job-dynamic-values">
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
+                                            <span>{{item.created_at | moment("YYYY-MM-DD")}}</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/experience-job.svg" alt="">
+                                            <span>{{item.experience}}</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/money-job.svg" alt="">
+                                            <span>{{item.salary_range}}</span>
+                                        </li>
+                                        <li>
+                                            <img height="16px" width="10px" style="margin:0px 3px;" src="/website/assets/images/pin.svg"
+                                                alt="img">
+                                            <span>{{item.location}}</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
+                                            <span>{{item.shift}}</span>
+                                        </li>
+                                        <li>
+                                            <img src="/website/assets/images/switch-job.svg" alt="">
+                                            <span>{{item.job_type}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="job-list-fav m-0">
+                                    <li>
+                                        <router-link class="job-view-btn" data-toggle="collapse"
+                                            :to="{ name: 'JobDetail', params: { id: item.id } }">View</router-link>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
-                <!-- Job List Wrap Start -->
-                <!-- Pagination Start -->
-                <div class="bottom-pagination">
-                    <!-- <pagination></pagination> -->
+                    </div>
+                    <!-- </div> -->
                 </div>
-                <!-- Pagination End -->
+                <!-- Job List Wrap Start -->
             </div>
         </div>
     </div>

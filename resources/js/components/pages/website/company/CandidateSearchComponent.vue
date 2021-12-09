@@ -1,8 +1,7 @@
 <template>
     <div>
-        <WebsiteNavbar />
-        <CompanyNavbar />
-
+        <WebsiteNavbar/>
+        <CompanyNavbar v-if="isAuth == true"/>
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
@@ -189,7 +188,7 @@
                 <div class="text-center" v-if="searchData.length">
                     <button class="load-more-btn mx-auto"
                         v-if="searchData.length != candidateToShow && totalcandidates > candidateToShow"
-                        @click="candidateToShow += 3">Load more</button>
+                        @click="candidateToShow += 10">Load more</button>
                 </div>
             </div>
             <div class="common-sidebar">
@@ -515,8 +514,9 @@
                     keyword: '',
                     skills: [],
                 },
+                is_auth: false,
                 searchData: '',
-                candidateToShow: 3,
+                candidateToShow: 10,
                 totalcandidates: 0,
                 showError: false,
             }
@@ -536,6 +536,7 @@
         },
         created() {
             this.getCandidate()
+            this.checkAuth()
         },
         components: {
             WebsiteNavbar,
@@ -543,6 +544,14 @@
             Multiselect,
         },
         methods: {
+            checkAuth(){
+                axios.get('check-auth')
+                .then((response) => {
+                    if(response.data.isAuth == true){
+                        this.is_auth = response.data.isAuth
+                    }
+                });
+            },
             addSkill(newTag) {
                 const tag = {
                     name: newTag,
@@ -594,7 +603,18 @@
                 }
             },
             addToWishList(id) {
-                axios.get('/add-to-wish-list/' + id)
+                if(this.is_auth == true){
+                    axios.get('/add-to-wish-list/' + id)
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...🧐',
+                        confirmButtonText: 'Understood!',
+                        text: 'Please login before apply to any job!',
+                        footer: '<a href="/#/signin">Login?</a>',
+                        timer: 1500
+                    })
+                }
             },
             removeToWishList(id) {
                 axios.get('/remove-to-wish-list/' + id)

@@ -35,7 +35,7 @@ class Company extends Model
 
     public function Jobs()
     {
-        return $this->hasMany(JobPost::class, 'company_id','id') ;
+        return $this->hasMany(JobPost::class, 'company_id','id')->orderBy('created_at', 'DESC') ;
     }
 
     public function Package()

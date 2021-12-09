@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <CandidateNavbar />
+        <CandidateNavbar v-if="is_auth == true"/>
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 <!---- ------------------------------>
-                <div class="product-search-box">
+                <div class="product-search-box" v-if="is_auth == true">
                     <label class="search-box-h">
                         Company Search
                     </label>
@@ -130,8 +130,7 @@
                     <div>
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap p-0">
-                            <div class="job-list m-0 mb-3" v-if="index < totalJobs" v-for="(item, index) in jobToShow"
-                                :key="index">
+                            <div class="job-list m-0 mb-3" v-if="index < totalJobs" v-for="(item, index) in jobToShow" :key="index">
                                 <div class="company-logo col-auto py-2">
                                     <img :src="'/storage/images/companies/'+searchData[index].company.logo"
                                         alt="Company Logo">
@@ -141,15 +140,8 @@
                                 <div class="job-list-content col">
                                     <div class="job-header">
                                         <h6 class="job-title mb-0">{{searchData[index].title}}</h6>
-                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i> -->
                                         <div class="d-flex align-items-center">
-                                            <timeago class="job-post-date" :datetime="searchData[index].created_at">
-                                            </timeago>
-                                            <!-- <i class="far fa-heart"></i> -->
+                                            <timeago class="job-post-date" :datetime="searchData[index].created_at"></timeago>
                                         </div>
                                     </div>
 
@@ -204,10 +196,10 @@
                     </div>
                     <div class="text-center" v-if="totalJobs">
                         <button class="load-more-btn mx-auto" v-if="totalJobs != jobToShow && totalJobs > jobToShow "
-                            @click="jobToShow += 2">Load more</button>
+                            @click="jobToShow += 10">Load more</button>
                     </div>
                 </div>
-                <div class="job-list-wrap mt-3 p-0" v-if="keywordSearchShow == true">
+                <div class="job-list-wrap mt-3 p-0" v-if="keywordSearchShow == true && is_auth == true">
                     <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
                     <div class="job-list m-0 mb-3" v-if="index < searchData.length"
@@ -287,7 +279,7 @@
                     <span class="show-result-msg" v-if="this.showError == true">Data Not Found</span>
                     <div class="text-center" v-if="searchData.length > 0">
                         <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow"
-                            @click="companiesToShow += 2">Load more</button>
+                            @click="companiesToShow += 10">Load more</button>
                     </div>
                 </div>
                 <!-- Job List Wrap Start -->
@@ -593,11 +585,12 @@
                 },
                 searchData: [],
                 totalJobs: 0,
-                jobToShow: 2,
-                companiesToShow: 2,
+                jobToShow: 10,
+                companiesToShow: 10,
                 totalCompanies: 0,
                 showError: false,
                 keywordSearchShow: false,
+                is_auth: false,
             }
         },
         mounted() {
@@ -617,7 +610,27 @@
             WebsiteNavbar,
             CandidateNavbar,
         },
+        created(){
+            this.checkAuth()
+            this.getJobs()
+        },
         methods: {
+            getJobs(){
+                axios.get('get-jobs')
+                .then((response) => {
+                    this.searchData = []
+                    this.searchData = response.data
+                    this.totalJobs = response.data.length
+                });
+            },
+            checkAuth(){
+                axios.get('check-auth')
+                .then((response) => {
+                    if(response.data.isAuth == true){
+                        this.is_auth = response.data.isAuth
+                    }
+                });
+            },
             search() {
                 axios.post('/job-search', this.record)
                     .then((response) => {
@@ -671,9 +684,9 @@
                     skills: '',
                 };
                 this.searchData = [],
-                    this.totalJobs = 0,
-                    this.jobToShow = 2,
-                    this.showError = false
+                this.totalJobs = 0,
+                this.jobToShow = 2,
+                this.showError = false
                 this.keywordSearchShow = false
             }
         },
