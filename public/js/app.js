@@ -6289,7 +6289,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -35398,30 +35397,7 @@ var render = function () {
               _vm._v("Frontend Developer"),
             ]),
             _vm._v(" "),
-            _c(
-              "ul",
-              { staticClass: "v-on-m m-0 p-0 pt-2 candidate-detail-list-m" },
-              [
-                _vm._m(3),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      on: {
-                        click: function ($event) {
-                          return _vm.download()
-                        },
-                      },
-                    },
-                    [
-                      _c("i", { staticClass: "fas fa-download" }),
-                      _vm._v(" Download"),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
+            _vm._m(3),
           ]),
           _vm._v(" "),
           _vm._m(4),
@@ -35467,12 +35443,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("img", {
-        attrs: { src: "/website/assets/images/pin-job.svg", alt: "" },
-      }),
-      _vm._v("Lahore"),
-    ])
+    return _c(
+      "ul",
+      { staticClass: "v-on-m m-0 p-0 pt-2 candidate-detail-list-m" },
+      [
+        _c("li", [
+          _c("img", {
+            attrs: { src: "/website/assets/images/pin-job.svg", alt: "" },
+          }),
+          _vm._v("Lahore"),
+        ]),
+      ]
+    )
   },
   function () {
     var _vm = this

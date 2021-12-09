@@ -19,7 +19,6 @@
                         <p class="candidate-designation">Frontend Developer</p>
                         <ul class="v-on-m m-0 p-0 pt-2 candidate-detail-list-m">
                             <li><img src="/website/assets/images/pin-job.svg" alt="">Lahore</li>
-                             <li><a @click="download()"><i class="fas fa-download"></i> Download</a></li>
                         </ul>
                     </div>
                     <p class="detail-label"><i class="fas fa-user pr-2"></i> Detailed Information</p>
