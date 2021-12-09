@@ -18,6 +18,8 @@ use Illuminate\Http\Request;
 use DB;
 use Validator;
 use Auth;
+use PDF;
+
 class CommonController extends Controller
 {
     public function jobSearch(Request $request)
@@ -307,5 +309,12 @@ class CommonController extends Controller
                 ]);
             }
         }
+    }
+
+    public function downloadcv()
+    {
+       
+        $pdf = PDF::loadView('pdf.cv_template')->setPaper('a4', 'landscape');
+        return $pdf->download('cv_template.pdf');
     }
 }

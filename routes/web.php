@@ -67,6 +67,7 @@ Route::get('expire-today-jobs', [App\Http\Controllers\CommonController::class, '
 Route::post('/submit-contact-us', [App\Http\Controllers\CommonController::class, 'contactUs']);
 Route::get('/landingpage/news', [App\Http\Controllers\CommonController::class, 'getNews']);
 Route::post('/footer/news_letter', [App\Http\Controllers\CommonController::class, 'newsLetter']);
+Route::get('/download-cv/', [App\Http\Controllers\CommonController::class, 'downloadcv']);
 
 //samad 
 Route::get('/login', function () {
