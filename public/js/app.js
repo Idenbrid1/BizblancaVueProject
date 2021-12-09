@@ -58919,18 +58919,20 @@ var render = function () {
             _c("span", { staticClass: "seprate-line" }),
             _vm._v(" "),
             _c(
-              "a",
+              "router-link",
               {
                 staticClass: "nav__item",
-                attrs: { target: "_blank", href: "#" },
+                attrs: { to: { name: "BlogDetail" } },
               },
               [_vm._v("Blogs")]
             ),
             _c("span", { staticClass: "seprate-line" }),
             _vm._v(" "),
-            _c("a", { staticClass: "nav__item", attrs: { href: "#" } }, [
-              _vm._v("Sitemap"),
-            ]),
+            _c(
+              "router-link",
+              { staticClass: "nav__item", attrs: { to: { name: "AboutUs" } } },
+              [_vm._v("Sitemap")]
+            ),
           ],
           1
         ),
@@ -59296,7 +59298,7 @@ var render = function () {
               _c(
                 "a",
                 { staticClass: "register-mbl-btn mr-2", attrs: { href: "#" } },
-                [_vm._v("Register CV")]
+                [_vm._v("Create CV")]
               ),
               _vm._v(" "),
               this.isAuth == false
@@ -59518,7 +59520,7 @@ var render = function () {
                             staticClass: "fas fa-address-book",
                             attrs: { "aria-hidden": "true" },
                           }),
-                          _vm._v("  Register CV"),
+                          _vm._v("Create CV"),
                         ]
                       )
                     : _vm._e(),
