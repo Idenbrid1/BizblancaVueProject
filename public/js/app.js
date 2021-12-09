@@ -6142,6 +6142,164 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  components: {},
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue?vue&type=script&lang=js& ***!
@@ -15978,10 +16136,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/website/LandingPageComponent.vue */ "./resources/js/components/pages/website/LandingPageComponent.vue");
 /* harmony import */ var _components_pages_website_ForCompaniesComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/website/ForCompaniesComponent.vue */ "./resources/js/components/pages/website/ForCompaniesComponent.vue");
 /* harmony import */ var _components_pages_website_ForCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/website/ForCandidatesComponent.vue */ "./resources/js/components/pages/website/ForCandidatesComponent.vue");
@@ -16002,15 +16160,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_website_candidate_CandidateAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/pages/website/candidate/CandidateAccountSettingComponent.vue */ "./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue");
 /* harmony import */ var _components_pages_website_candidate_CompanySearchComponent_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/pages/website/candidate/CompanySearchComponent.vue */ "./resources/js/components/pages/website/candidate/CompanySearchComponent.vue");
 /* harmony import */ var _components_pages_website_company_CompanyChatComponent_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/pages/website/company/CompanyChatComponent.vue */ "./resources/js/components/pages/website/company/CompanyChatComponent.vue");
-/* harmony import */ var _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/pages/website/candidate/JobSearchComponent.vue */ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue");
-/* harmony import */ var _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/pages/website/candidate/JobDetailComponent.vue */ "./resources/js/components/pages/website/candidate/JobDetailComponent.vue");
-/* harmony import */ var _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/pages/admin/PackagePlansComponent.vue */ "./resources/js/components/pages/admin/PackagePlansComponent.vue");
-/* harmony import */ var _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/pages/website/ContactUsComponent.vue */ "./resources/js/components/pages/website/ContactUsComponent.vue");
-/* harmony import */ var _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/pages/website/TermsConditionComponent.vue */ "./resources/js/components/pages/website/TermsConditionComponent.vue");
-/* harmony import */ var _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/pages/website/FaqComponent.vue */ "./resources/js/components/pages/website/FaqComponent.vue");
-/* harmony import */ var _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/pages/website/PrivacyPolicyComponent.vue */ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue");
-/* harmony import */ var _components_pages_website_AboutUsComponent_vue__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/pages/website/AboutUsComponent.vue */ "./resources/js/components/pages/website/AboutUsComponent.vue");
-/* harmony import */ var _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/pages/website/ServicesComponent.vue */ "./resources/js/components/pages/website/ServicesComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_CandidateCvTemplateComponent_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/pages/website/candidate/CandidateCvTemplateComponent.vue */ "./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/pages/website/candidate/JobSearchComponent.vue */ "./resources/js/components/pages/website/candidate/JobSearchComponent.vue");
+/* harmony import */ var _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/pages/website/candidate/JobDetailComponent.vue */ "./resources/js/components/pages/website/candidate/JobDetailComponent.vue");
+/* harmony import */ var _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/pages/admin/PackagePlansComponent.vue */ "./resources/js/components/pages/admin/PackagePlansComponent.vue");
+/* harmony import */ var _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/pages/website/ContactUsComponent.vue */ "./resources/js/components/pages/website/ContactUsComponent.vue");
+/* harmony import */ var _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/pages/website/TermsConditionComponent.vue */ "./resources/js/components/pages/website/TermsConditionComponent.vue");
+/* harmony import */ var _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/pages/website/FaqComponent.vue */ "./resources/js/components/pages/website/FaqComponent.vue");
+/* harmony import */ var _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/pages/website/PrivacyPolicyComponent.vue */ "./resources/js/components/pages/website/PrivacyPolicyComponent.vue");
+/* harmony import */ var _components_pages_website_AboutUsComponent_vue__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/pages/website/AboutUsComponent.vue */ "./resources/js/components/pages/website/AboutUsComponent.vue");
+/* harmony import */ var _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/pages/website/ServicesComponent.vue */ "./resources/js/components/pages/website/ServicesComponent.vue");
 
 
 
@@ -16043,8 +16202,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_30__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_31__["default"]);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_31__["default"]({
+
+vue__WEBPACK_IMPORTED_MODULE_31__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_32__["default"]);
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_32__["default"]({
   // linkExactActiveClass: 'font-weight-bold',
   routes: [{
     path: "*",
@@ -16171,27 +16331,31 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_31__["default"]({
   }, {
     path: '/contact-us',
     name: 'ContactUs',
-    component: _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_24__["default"]
+    component: _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_25__["default"]
+  }, {
+    path: '/candidate-cv',
+    name: 'CandidateCvTemplate',
+    component: _components_pages_website_candidate_CandidateCvTemplateComponent_vue__WEBPACK_IMPORTED_MODULE_21__["default"]
   }, {
     path: '/privacy-policy',
     name: 'PrivacyPolicy',
-    component: _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_27__["default"]
+    component: _components_pages_website_PrivacyPolicyComponent_vue__WEBPACK_IMPORTED_MODULE_28__["default"]
   }, {
     path: '/terms-condition',
     name: 'TermsCondition',
-    component: _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_25__["default"]
+    component: _components_pages_website_TermsConditionComponent_vue__WEBPACK_IMPORTED_MODULE_26__["default"]
   }, {
     path: '/about-us',
     name: 'AboutUs',
-    component: _components_pages_website_AboutUsComponent_vue__WEBPACK_IMPORTED_MODULE_28__["default"]
+    component: _components_pages_website_AboutUsComponent_vue__WEBPACK_IMPORTED_MODULE_29__["default"]
   }, {
     path: '/services',
     name: 'Services',
-    component: _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_29__["default"]
+    component: _components_pages_website_ServicesComponent_vue__WEBPACK_IMPORTED_MODULE_30__["default"]
   }, {
     path: '/faq',
     name: 'Faq',
-    component: _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_26__["default"]
+    component: _components_pages_website_FaqComponent_vue__WEBPACK_IMPORTED_MODULE_27__["default"]
   }, {
     path: '/company-chat',
     name: 'CompanyChat',
@@ -16228,7 +16392,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_31__["default"]({
   }, {
     path: '/job-search',
     name: 'JobSearch',
-    component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_21__["default"],
+    component: _components_pages_website_candidate_JobSearchComponent_vue__WEBPACK_IMPORTED_MODULE_22__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
         if (response.data.success == true) {
@@ -16241,11 +16405,11 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_31__["default"]({
   }, {
     path: '/job-detail/:id',
     name: 'JobDetail',
-    component: _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_22__["default"]
+    component: _components_pages_website_candidate_JobDetailComponent_vue__WEBPACK_IMPORTED_MODULE_23__["default"]
   }, {
     path: '/package-plans',
     name: 'PackagePlans',
-    component: _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_23__["default"],
+    component: _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_24__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
         if (response.data.success == true) {
@@ -16758,7 +16922,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.text_loading[data-v-284a2b3e] {\r\n    color: #f1f1f1;\r\n    position: fixed;\r\n    z-index: 200000;\r\n    left: 50%;\r\n    top: 50%;\r\n    transform: translate(-50%, -50%)\n}\n.parent-spinner[data-v-284a2b3e] {\r\n    background: #050115;\r\n    display: flex;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    overflow: hidden;\r\n    position: fixed;\r\n    z-index: 10000;\r\n    opacity: 0.6;\n}\n.spinner[data-v-284a2b3e] {\r\n    width: 10em;\r\n    height: 10em;\r\n    border-top: .5em solid #d5fff7;\r\n    border-right: .5em solid transparent;\r\n    -webkit-animation: spinner-data-v-284a2b3e .4s linear infinite;\r\n            animation: spinner-data-v-284a2b3e .4s linear infinite;\r\n    border-radius: 50%;\r\n    margin: auto\n}\n.head[data-v-284a2b3e] {\r\n    width: 1em;\r\n    height: 1em;\r\n    border-radius: 50%;\r\n    margin-left: 8.5em;\r\n    margin-top: .5em;\r\n    background-color: #d5fff7\n}\n@-webkit-keyframes spinner-data-v-284a2b3e {\nto {\r\n        transform: rotate(360deg)\n}\n}\n@keyframes spinner-data-v-284a2b3e {\nto {\r\n        transform: rotate(360deg)\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.text_loading[data-v-284a2b3e] {\n    color: #f1f1f1;\n    position: fixed;\n    z-index: 200000;\n    left: 50%;\n    top: 50%;\n    transform: translate(-50%, -50%)\n}\n.parent-spinner[data-v-284a2b3e] {\n    background: #050115;\n    display: flex;\n    height: 100vh;\n    width: 100vw;\n    overflow: hidden;\n    position: fixed;\n    z-index: 10000;\n    opacity: 0.6;\n}\n.spinner[data-v-284a2b3e] {\n    width: 10em;\n    height: 10em;\n    border-top: .5em solid #d5fff7;\n    border-right: .5em solid transparent;\n    -webkit-animation: spinner-data-v-284a2b3e .4s linear infinite;\n            animation: spinner-data-v-284a2b3e .4s linear infinite;\n    border-radius: 50%;\n    margin: auto\n}\n.head[data-v-284a2b3e] {\n    width: 1em;\n    height: 1em;\n    border-radius: 50%;\n    margin-left: 8.5em;\n    margin-top: .5em;\n    background-color: #d5fff7\n}\n@-webkit-keyframes spinner-data-v-284a2b3e {\nto {\n        transform: rotate(360deg)\n}\n}\n@keyframes spinner-data-v-284a2b3e {\nto {\n        transform: rotate(360deg)\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23946,6 +24110,45 @@ component.options.__file = "resources/js/components/pages/website/candidate/Cand
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _CandidateCvTemplateComponent_vue_vue_type_template_id_c6041afa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CandidateCvTemplateComponent.vue?vue&type=template&id=c6041afa& */ "./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=template&id=c6041afa&");
+/* harmony import */ var _CandidateCvTemplateComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CandidateCvTemplateComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CandidateCvTemplateComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CandidateCvTemplateComponent_vue_vue_type_template_id_c6041afa___WEBPACK_IMPORTED_MODULE_0__.render,
+  _CandidateCvTemplateComponent_vue_vue_type_template_id_c6041afa___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue":
 /*!*****************************************************************************************!*\
   !*** ./resources/js/components/pages/website/candidate/CandidateDashboardComponent.vue ***!
@@ -24931,6 +25134,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateAccountSettingComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateCvTemplateComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateCvTemplateComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateCvTemplateComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -26505,6 +26724,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_template_id_54bb736d___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateAccountSettingComponent_vue_vue_type_template_id_54bb736d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateAccountSettingComponent.vue?vue&type=template&id=54bb736d&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=template&id=c6041afa&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=template&id=c6041afa& ***!
+  \*************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateCvTemplateComponent_vue_vue_type_template_id_c6041afa___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateCvTemplateComponent_vue_vue_type_template_id_c6041afa___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CandidateCvTemplateComponent_vue_vue_type_template_id_c6041afa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CandidateCvTemplateComponent.vue?vue&type=template&id=c6041afa& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=template&id=c6041afa&");
 
 
 /***/ }),
@@ -34030,7 +34266,15 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("router-view"), _vm._v(" "), _c("WebsiteFooter")], 1)
+  return _c(
+    "div",
+    [
+      _c("router-view"),
+      _vm._v(" "),
+      this.$route.path !== "/candidate-cv" ? _c("WebsiteFooter") : _vm._e(),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -35091,6 +35335,452 @@ var staticRenderFns = [
       _c("div", { staticClass: "company-title-text" }, [_vm._v("Settings")]),
       _vm._v(" "),
       _c("hr", { staticClass: "mr-0" }),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=template&id=c6041afa&":
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/pages/website/candidate/CandidateCvTemplateComponent.vue?vue&type=template&id=c6041afa& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "candidate-profile-container container" }, [
+        _c("div", { staticClass: "row no-gutters" }, [
+          _c("div", { staticClass: "col-5 col-md-3" }, [
+            _c("div", { staticClass: "candidate-pic-detail" }, [
+              _c("div", {
+                staticClass: "candidate-detail-img",
+                staticStyle: { "background-image": "url()" },
+              }),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-7 col-md-9 candidate-detail-wrap" }, [
+            _c("div", [
+              _c("ul", { staticClass: "candidate-detail-list" }, [
+                _c("li", [_c("p", [_vm._v("Muhammad Ahmad")])]),
+                _vm._v(" "),
+                _c("li", { staticClass: "v-on-d" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/website/assets/images/pin-job.svg",
+                      alt: "img",
+                    },
+                  }),
+                  _vm._v("Lahore"),
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "v-on-d" }, [
+                  _c("i", { staticClass: "far fa-heart" }),
+                  _vm._v("Add to Wishlist"),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "candidate-designation" }, [
+                _vm._v("Frontend Developer"),
+              ]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "v-on-m m-0 p-0 pt-2 candidate-detail-list-m" },
+                [
+                  _c("li", [
+                    _c("img", {
+                      attrs: {
+                        src: "/website/assets/images/pin-job.svg",
+                        alt: "",
+                      },
+                    }),
+                    _vm._v("Lahore"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("i", { staticClass: "far fa-heart" }),
+                    _vm._v(" Add to Wishlist"),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "detail-label" }, [
+              _c("i", { staticClass: "fas fa-user pr-2" }),
+              _vm._v(" Detailed Information"),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "candidate-profile-detail-wrap" }, [
+          _c("ul", { staticClass: "row no-gutters candidate-profile-detail" }, [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("CONTACT INFORMATION:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c("li", [
+                  _c("span", [_vm._v("Phone:")]),
+                  _vm._v("03164361632"),
+                ]),
+                _vm._v(" "),
+                _c("li", [_c("span", [_vm._v("Address:")]), _vm._v("Lahore")]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("Email:")]),
+                  _c("u", [_vm._v("ahmad.idenbrid@gmail.com")]),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass:
+                "row no-gutters basic-detail-title candidate-profile-detail",
+            },
+            [
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-3 candidate-detail-label" },
+                [_vm._v("BASIC INFORMATION:")]
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-9 candidate-detail-info" },
+                [
+                  _c("ul", { staticClass: "candidate-info" }, [
+                    _c("li", [
+                      _c("span", [_vm._v("Date of Birth:")]),
+                      _vm._v("11/12/1997"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [_c("span", [_vm._v("Gender:")]), _vm._v("Male")]),
+                    _vm._v(" "),
+                    _c("li", [_c("span", [_vm._v("City:")]), _vm._v("Lahore")]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Zip Code:")]),
+                      _vm._v("54000"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("CNIC:")]),
+                      _vm._v("3110297279719"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [_c("span", [_vm._v("Bio:")]), _vm._v("Detail")]),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass:
+                "row no-gutters education-detail-title candidate-profile-detail",
+            },
+            [
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-3 candidate-detail-label" },
+                [_vm._v("EDUCATION:")]
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-9 candidate-detail-info" },
+                [
+                  _c("ul", { staticClass: "candidate-info" }, [
+                    _c("li", [
+                      _c("span", [_vm._v("Intermediate:")]),
+                      _vm._v("2014 to 2016 - Punjab Group of Colleges"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Bachelors:")]),
+                      _vm._v(
+                        "2016 to 2020 - BS (Computer Science) - University of South Asia,\n                            Cantt Campus"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Intermediate:")]),
+                      _vm._v("2014 to 2016 - Punjab Group of Colleges"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Bachelors:")]),
+                      _vm._v(
+                        "2016 to 2020 - BS (Computer Science) - University of South Asia,\n                            Cantt Campus"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Intermediate:")]),
+                      _vm._v("2014 to 2016 - Punjab Group of Colleges"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Bachelors:")]),
+                      _vm._v(
+                        "2016 to 2020 - BS (Computer Science) - University of South Asia,\n                            Cantt Campus"
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass:
+                "row no-gutters work-detail-title candidate-profile-detail",
+            },
+            [
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-3 candidate-detail-label" },
+                [_vm._v("WORK EXPERIENCE:")]
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-9 candidate-detail-info" },
+                [
+                  _c("ul", { staticClass: "candidate-info" }, [
+                    _c("li", [
+                      _c("span", [_vm._v("Powerstar Group Limited:")]),
+                      _vm._v("Graphic Designer - 2 months"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("IDENBRID:")]),
+                      _vm._v("UI/UX Designer - Working"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Powerstar Group Limited:")]),
+                      _vm._v("Graphic Designer - 2 months"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("IDENBRID:")]),
+                      _vm._v("UI/UX Designer - Working"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Powerstar Group Limited:")]),
+                      _vm._v("Graphic Designer - 2 months"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("IDENBRID:")]),
+                      _vm._v("UI/UX Designer - Working"),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass:
+                "row no-gutters awards-detail-title candidate-profile-detail",
+            },
+            [
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-3 candidate-detail-label" },
+                [_vm._v("SKILLS:")]
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-9 candidate-detail-info" },
+                [
+                  _c("ul", { staticClass: "candidate-info" }, [
+                    _c("li", { staticClass: "skills-candidate" }, [
+                      _c("div", [_vm._v("Html")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("Css")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("Laravel")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("JavaScript")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("React")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("NodeJs")]),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass:
+                "row no-gutters awards-detail-title candidate-profile-detail",
+            },
+            [
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-3 candidate-detail-label" },
+                [_vm._v("AWARDS:")]
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-9 candidate-detail-info" },
+                [
+                  _c("ul", { staticClass: "candidate-info" }, [
+                    _c("li", [
+                      _c("span", [
+                        _vm._v("Best Entrepreneurship Gala Seller:"),
+                      ]),
+                      _vm._v("2020"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Brainstorming Champion:")]),
+                      _vm._v("2019"),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", [_vm._v("Brainstorming Champion:")]),
+                      _vm._v("2020"),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass:
+                "row no-gutters language-detail-title candidate-profile-detail",
+            },
+            [
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-3 candidate-detail-label" },
+                [_vm._v("LANGUAGES:")]
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-9 candidate-detail-info" },
+                [
+                  _c("ul", { staticClass: "candidate-info" }, [
+                    _c("li", { staticClass: "skills-candidate" }, [
+                      _c("div", [_vm._v("English")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("Urdu")]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v("German")]),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass:
+                "row no-gutters portfolio-detail-title candidate-profile-detail",
+            },
+            [
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-3 candidate-detail-label" },
+                [_vm._v("PORTFOLIO:")]
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-9 candidate-detail-info" },
+                [
+                  _c("ul", { staticClass: "candidate-info" }, [
+                    _c("li", [
+                      _c("a", { attrs: { href: "", target: "_blank" } }, [
+                        _vm._v("https://www.behance.net/abdullahnasir8"),
+                      ]),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            {
+              staticClass:
+                "row no-gutters projects-detail-title candidate-profile-detail",
+            },
+            [
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-3 candidate-detail-label" },
+                [_vm._v("PROJECTS:")]
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "col-12 col-md-9 candidate-detail-info" },
+                [
+                  _c("ul", { staticClass: "candidate-info" }, [
+                    _c("li", [
+                      _c("a", { attrs: { href: "", target: "_blank" } }, [
+                        _vm._v("https://www.behance.net/abdullahnasir8"),
+                      ]),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+        ]),
+      ]),
     ])
   },
 ]
@@ -58930,7 +59620,7 @@ var render = function () {
             _c(
               "router-link",
               { staticClass: "nav__item", attrs: { to: { name: "AboutUs" } } },
-              [_vm._v("Sitemap")]
+              [_vm._v("About")]
             ),
           ],
           1
@@ -79996,7 +80686,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 
