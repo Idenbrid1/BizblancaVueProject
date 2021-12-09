@@ -29,7 +29,6 @@
                                 <p>Muhammad Ahmad</p>
                             </li>
                             <li class="v-on-d"><img src="/website/assets/images/pin-job.svg" alt="img">Lahore</li>
-                            <li class="v-on-d"><i class="far fa-heart"></i>Add to Wishlist</li>
                         </ul>
                         <p class="candidate-designation">Frontend Developer</p>
                         <ul class="v-on-m m-0 p-0 pt-2 candidate-detail-list-m">
