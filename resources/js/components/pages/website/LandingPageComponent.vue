@@ -145,7 +145,7 @@
                         </div>
                         <div class="content-faq-anker parent">
                             <div class="child bg-one">
-                                <a href="#"><span class="looking-h">Looking For Employees?</span></a>
+                                <a href="#"><span class="looking-h">Looking For Job?</span></a>
                             </div>
                         </div>
                     </div>

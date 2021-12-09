@@ -9294,6 +9294,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -16973,7 +16974,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n@media (min-width: 1200px) {\n.container {\n        max-width: 1100px !important;\n}\n.profileLabel,\n    .profile-info-list>li {\n        height: 54px;\n}\n.profile-label {\n        width: 140px;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n@media (min-width: 1200px) {\n.container {\n        max-width: 1100px !important;\n}\n.profile-label {\n        width: 140px;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17021,7 +17022,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n@media (min-width: 1200px) {\n.container {\n        max-width: 1100px !important;\n}\n.profileLabel,\n    .profile-info-list>li {\n        height: 54px;\n}\n.profile-label {\n        width: 140px;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n@media (min-width: 1200px) {\n.container {\n        max-width: 1100px !important;\n}\n.profile-label {\n        width: 140px;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -33773,7 +33774,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "child bg-one" }, [
                     _c("a", { attrs: { href: "#" } }, [
                       _c("span", { staticClass: "looking-h" }, [
-                        _vm._v("Looking For Employees?"),
+                        _vm._v("Looking For Job?"),
                       ]),
                     ]),
                   ]),
@@ -46077,17 +46078,6 @@ var staticRenderFns = [
             "a",
             {
               staticClass: "nav-link",
-              attrs: { "data-toggle": "tab", href: "#desire-job" },
-            },
-            [_vm._v("Desire job")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
               attrs: { "data-toggle": "tab", href: "#work-experience" },
             },
             [_vm._v("Work Experience")]
@@ -46683,11 +46673,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("li", { staticClass: "profile-label profile-label-border" }, [
-        _c("span", [
-          _vm._v(
-            "No of Persons\n                                                    Managed"
-          ),
-        ]),
+        _c("span", [_vm._v("No of Persons Managed")]),
       ]),
     ])
   },

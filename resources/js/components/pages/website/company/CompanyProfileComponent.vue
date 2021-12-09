@@ -606,12 +606,6 @@
         .container {
             max-width: 1100px !important;
         }
-
-        .profileLabel,
-        .profile-info-list>li {
-            height: 54px;
-        }
-
         .profile-label {
             width: 140px;
         }

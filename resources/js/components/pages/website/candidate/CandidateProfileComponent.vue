@@ -46,9 +46,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#current-job">Current Job</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#desire-job">Desire job</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#work-experience">Work Experience</a>
                                 </li>
@@ -501,8 +501,9 @@
                                                         Position</span></li>
                                                 <li class="profile-label profile-label-border"><span>Current Status</span>
                                                 </li>
-                                                <li class="profile-label profile-label-border"><span>No of Persons
-                                                        Managed</span></li>
+                                                <li class="profile-label profile-label-border">
+                                                    <span>No of Persons Managed</span>
+                                                </li>
                                                 <!-- <li class="profile-label profile-label-border rb0 bbl5"><span>Skills</span></li> -->
                                             </ul>
                                             <ul class="profile-info-list">
@@ -3272,12 +3273,6 @@
         .container {
             max-width: 1100px !important;
         }
-
-        .profileLabel,
-        .profile-info-list>li {
-            height: 54px;
-        }
-
         .profile-label {
             width: 140px;
         }
