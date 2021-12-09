@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- spinner -->
-        <div class="parent">
+        <div class="parent-spinner">
             <span class="text_loading">BizBlanca<br>Loading....</span>
             <div class="spinner" style="font-size:16px"></div>
         </div>
@@ -509,7 +509,7 @@
         methods: {
             swiperInit() {
                 this.$nextTick(function() {
-                    $('.parent').fadeOut();
+                    $('.parent-spinner').fadeOut();
                     var swiper = new Swiper(".blogs-swiper", {
                         slidesPerView: 3.5,
                         spaceBetween: 5,
@@ -621,7 +621,7 @@
     transform: translate(-50%, -50%)
 }
 
-.parent {
+.parent-spinner {
     background: #050115;
     display: flex;
     height: 100vh;
