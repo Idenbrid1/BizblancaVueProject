@@ -5484,6 +5484,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -34733,9 +34734,10 @@ var staticRenderFns = [
           },
         },
         [
-          _c("div", [
-            _c("strong", [_vm._v("01")]),
-            _vm._v("DEC\n                "),
+          _c("div", { staticClass: "news-date" }, [
+            _c("span", [_vm._v("01")]),
+            _vm._v(" "),
+            _c("span", [_vm._v("DEC")]),
           ]),
         ]
       ),

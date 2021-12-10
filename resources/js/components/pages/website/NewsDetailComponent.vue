@@ -7,8 +7,9 @@
             <section class="privacy-policy-container">
                 <div class="news-detail-img"
                     style="background-image:url('/website/assets/images/meeting-image-update.png')">
-                    <div>
-                        <strong>01</strong>DEC
+                    <div class="news-date">
+                        <span>01</span>
+                        <span>DEC</span>
                     </div>
                 </div>
                 <ul class="privacy-policy-queries">
