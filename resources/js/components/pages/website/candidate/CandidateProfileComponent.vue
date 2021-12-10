@@ -2743,6 +2743,10 @@
             },
             deleteAwardArray(index) {
                 this.$delete(this.profile.candidate_awards, index);
+                this.award_push_array = {
+                    name: '',
+                    date: '',
+                }
             },
             existAwardArray() {
                 if (this.profile.candidate_awards.find(item => item.name === this.award_push_array.name)) {
@@ -2759,7 +2763,15 @@
                 }
             },
             addMoreSkill() {
-                this.addMoreDBSkill = true
+                if(this.profile.candidate_skills.length == 10){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Limit Exceeded',
+                    })
+                    this.addMoreDBSkill = false
+                }else{
+                    this.addMoreDBSkill = true
+                }
             },
             clearSkillArray() {
                 this.getCandidateDashboardData()
@@ -2776,15 +2788,17 @@
                         Swal.showLoading()
                     },
                 })
-                if (this.skill_push_array.name) {
-                    this.profile.candidate_skills.push({
-                        name: this.skill_push_array.name,
-                        level: this.skill_push_array.level,
-                    })
-                    this.addMoreDBSkill = false
-                    this.skill_push_array = {
-                        name: '',
-                        level: '',
+                if(this.profile.candidate_skills.length != 10){
+                    if (this.skill_push_array.name) {
+                        this.profile.candidate_skills.push({
+                            name: this.skill_push_array.name,
+                            level: this.skill_push_array.level,
+                        })
+                        this.addMoreDBSkill = false
+                        this.skill_push_array = {
+                            name: '',
+                            level: '',
+                        }
                     }
                 }
                 axios.post('/update/skill', this.profile.candidate_skills)
@@ -2812,34 +2826,53 @@
                 })
             },
             addToSkillRecord() {
-                if (this.skill_push_array.name == '') {
+                if(this.profile.candidate_language.length == 10){
                     Swal.fire({
                         icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Fill!',
+                        title: 'Limit Exceeded',
                     })
-                    return false
-                } else {
-                    if (this.existSkillArray() == true) {
-                        this.profile.candidate_skills.push({
-                            name: this.award_push_array.name,
-                            level: this.award_push_array.level,
-                        })
-                        this.skill_push_array = {
-                            name: '',
-                            level: '',
-                        }
-                    } else {
+                }else{
+                    if (this.skill_push_array.name == '') {
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: 'Skill Already Exist!🥺',
+                            text: 'Please Fill!',
                         })
+                        return false
+                    } else {
+                        if (this.existSkillArray() == true) {
+                            this.profile.candidate_skills.push({
+                                name: this.award_push_array.name,
+                                level: this.award_push_array.level,
+                            })
+                            if(this.profile.candidate_skills.length == 10){
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Limit Exceeded',
+                                })
+                                this.addMoreDBSkill = false
+                                return false;
+                            }
+                            this.skill_push_array = {
+                                name: '',
+                                level: '',
+                            }
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Skill Already Exist!🥺',
+                            })
+                        }
                     }
                 }
             },
             deleteSkillArray(index) {
                 this.$delete(this.profile.candidate_skills, index);
+                this.skill_push_array = {
+                    name: '',
+                    level: '',
+                }
             },
             existSkillArray() {
                 if (this.profile.candidate_skills.find(item => item.name === this.skill_push_array.name)) {
@@ -2864,7 +2897,6 @@
                 this.profile.no_of_persons_managed = ''
                 this.profile.current_working_company = ''
                 this.profile.current_salary = ''
-
             },
             workingCurrentlyNo() {
                 this.isWorkingCurrently = false
@@ -2910,7 +2942,15 @@
                     })
             },
             addMoreWorkExperience() {
-                this.addMoreDBWorkExperience = true
+                if(this.profile.candidate_experience.length == 3){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Limit Exceeded',
+                    })
+                    this.addMoreDBWorkExperience = false
+                }else{
+                    this.addMoreDBWorkExperience = true
+                }
             },
             clearWorkExperienceArray() {
                 this.getCandidateDashboardData()
@@ -2930,21 +2970,23 @@
                         Swal.showLoading()
                     },
                 })
-                if (this.work_experience_push_array.company_name) {
-                    this.profile.candidate_experience.push({
-                        company_name: this.work_experience_push_array.company_name,
-                        designation: this.work_experience_push_array.designation,
-                        end_date: this.work_experience_push_array.end_date,
-                        is_working_currently: this.work_experience_push_array.is_working_currently,
-                        start_date: this.work_experience_push_array.start_date,
-                    })
-                    this.addMoreDBWorkExperience = false
-                    this.work_experience_push_array = {
-                        company_name: '',
-                        designation: '',
-                        end_date: '',
-                        is_working_currently: '',
-                        start_date: '',
+                if(this.profile.candidate_experience.length != 3){
+                    if (this.work_experience_push_array.company_name) {
+                        this.profile.candidate_experience.push({
+                            company_name: this.work_experience_push_array.company_name,
+                            designation: this.work_experience_push_array.designation,
+                            end_date: this.work_experience_push_array.end_date,
+                            is_working_currently: this.work_experience_push_array.is_working_currently,
+                            start_date: this.work_experience_push_array.start_date,
+                        })
+                        this.addMoreDBWorkExperience = false
+                        this.work_experience_push_array = {
+                            company_name: '',
+                            designation: '',
+                            end_date: '',
+                            is_working_currently: '',
+                            start_date: '',
+                        }
                     }
                 }
                 axios.post('/update/experience', this.profile.candidate_experience)
@@ -2975,41 +3017,63 @@
                     })
             },
             addToWorkExperienceRecord() {
-                if (this.work_experience_push_array.company_name == '') {
+                if(this.profile.candidate_experience.length == 3){
                     Swal.fire({
                         icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Fill!',
+                        title: 'Limit Exceeded',
                     })
-                    return false
-                } else {
-                    if (this.existWorkExperienceArray() == true) {
-                        this.profile.candidate_experience.push({
-                            company_name: this.work_experience_push_array.company_name,
-                            designation: this.work_experience_push_array.designation,
-                            end_date: this.work_experience_push_array.end_date,
-                            is_working_currently: this.work_experience_push_array.is_working_currently,
-                            start_date: this.work_experience_push_array.start_date,
-                        })
-                        this.work_experience_push_array = {
-                            company_name: '',
-                            designation: '',
-                            end_date: '',
-                            is_working_currently: '',
-                            start_date: '',
-                        }
-                    } else {
+                }else{
+                    if (this.work_experience_push_array.company_name == '') {
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: 'Work Experience Already Exist!🥺',
-                            timer: 1500
+                            text: 'Please Fill!',
                         })
+                        return false
+                    } else {
+                        if (this.existWorkExperienceArray() == true) {
+                            this.profile.candidate_experience.push({
+                                company_name: this.work_experience_push_array.company_name,
+                                designation: this.work_experience_push_array.designation,
+                                end_date: this.work_experience_push_array.end_date,
+                                is_working_currently: this.work_experience_push_array.is_working_currently,
+                                start_date: this.work_experience_push_array.start_date,
+                            })
+                            if(this.profile.candidate_experience.length == 3){
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Limit Exceeded',
+                                })
+                                this.addMoreDBWorkExperience = false
+                                return false;
+                            }
+                            this.work_experience_push_array = {
+                                company_name: '',
+                                designation: '',
+                                end_date: '',
+                                is_working_currently: '',
+                                start_date: '',
+                            }
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Work Experience Already Exist!🥺',
+                                timer: 1500
+                            })
+                        }
                     }
                 }
             },
             deleteWorkExperienceArray(index) {
                 this.$delete(this.profile.candidate_experience, index);
+                this.work_experience_push_array = {
+                    company_name: '',
+                    designation: '',
+                    end_date: '',
+                    is_working_currently: '',
+                    start_date: '',
+                }
             },
             existWorkExperienceArray() {
                 if (this.profile.candidate_experience.find(item => item.company_name === this.work_experience_push_array.company_name)) {
@@ -3029,7 +3093,15 @@
                 }
             },
             addMoreProject() {
-                this.addMoreDBProject = true
+                if(this.profile.candidate_projects.length == 3){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Limit Exceeded',
+                    })
+                    this.addMoreDBProject = false
+                }else{
+                    this.addMoreDBProject = true
+                }
             },
             clearProjectArray() {
                 this.getCandidateDashboardData()
@@ -3049,21 +3121,23 @@
                         Swal.showLoading()
                     },
                 })
-                if (this.project_push_array.name) {
-                    this.profile.candidate_projects.push({
-                        name: this.project_push_array.name,
-                        link: this.project_push_array.link,
-                        start_date: this.project_push_array.start_date,
-                        end_date: this.project_push_array.end_date,
-                        description: this.project_push_array.description,
-                    })
-                    this.addMoreDBProject = false
-                    this.project_push_array = {
-                        name: '',
-                        link: '',
-                        start_date: '',
-                        end_date: '',
-                        description: '',
+                if(this.profile.candidate_projects.length != 3){
+                    if (this.project_push_array.name) {
+                        this.profile.candidate_projects.push({
+                            name: this.project_push_array.name,
+                            link: this.project_push_array.link,
+                            start_date: this.project_push_array.start_date,
+                            end_date: this.project_push_array.end_date,
+                            description: this.project_push_array.description,
+                        })
+                        this.addMoreDBProject = false
+                        this.project_push_array = {
+                            name: '',
+                            link: '',
+                            start_date: '',
+                            end_date: '',
+                            description: '',
+                        }
                     }
                 }
                 axios.post('/update/project', this.profile.candidate_projects)
@@ -3094,40 +3168,62 @@
                     })
             },
             addToProjectRecord() {
-                if (this.project_push_array.name == '' && this.project_push_array.link == '') {
+                if(this.profile.candidate_projects.length == 3){
                     Swal.fire({
                         icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Fill!',
+                        title: 'Limit Exceeded',
                     })
-                    return false
-                } else {
-                    if (this.existProjectArray() == true) {
-                        this.profile.candidate_projects.push({
-                            name: this.project_push_array.name,
-                            link: this.project_push_array.link,
-                            start_date: this.project_push_array.start_date,
-                            end_date: this.project_push_array.end_date,
-                            description: this.project_push_array.description,
-                        })
-                        this.project_push_array = {
-                            name: '',
-                            link: '',
-                            start_date: '',
-                            end_date: '',
-                            description: '',
-                        }
-                    } else {
+                }else{
+                    if (this.project_push_array.name == '' && this.project_push_array.link == '') {
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: 'Project Already Exist!🥺',
+                            text: 'Please Fill!',
                         })
+                        return false
+                    } else {
+                        if (this.existProjectArray() == true) {
+                            this.profile.candidate_projects.push({
+                                name: this.project_push_array.name,
+                                link: this.project_push_array.link,
+                                start_date: this.project_push_array.start_date,
+                                end_date: this.project_push_array.end_date,
+                                description: this.project_push_array.description,
+                            })
+                            if(this.profile.candidate_projects.length == 3){
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Limit Exceeded',
+                                })
+                                this.addMoreDBProject = false
+                                return false;
+                            }
+                            this.project_push_array = {
+                                name: '',
+                                link: '',
+                                start_date: '',
+                                end_date: '',
+                                description: '',
+                            }
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Project Already Exist!🥺',
+                            })
+                        }
                     }
                 }
             },
             deleteProjectArray(index) {
                 this.$delete(this.profile.candidate_projects, index);
+                this.project_push_array = {
+                    name: '',
+                    link: '',
+                    start_date: '',
+                    end_date: '',
+                    description: '',
+                }
             },
             existProjectArray() {
                 if (this.profile.candidate_projects.find(item => item.name === this.project_push_array.name)) {
