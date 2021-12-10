@@ -5398,21 +5398,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../website/partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../website/partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -5486,16 +5476,96 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      data: {},
+      news: []
+    };
+  },
+  watch: {
+    '$route.path': function $routePath(val, oldVal) {
+      this.init_component();
+    }
   },
   mounted: function mounted() {},
-  created: function created() {},
-  components: {
-    WebsiteNavbar: _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  created: function created() {
+    this.init_component();
+    this.getNews();
   },
-  methods: {}
+  components: {
+    WebsiteNavbar: _website_partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  methods: {
+    swiperInit: function swiperInit() {
+      this.$nextTick(function () {
+        $('.parent-spinner').fadeOut();
+        var swiper = new Swiper(".blogs-swiper", _defineProperty({
+          slidesPerView: 3.5,
+          spaceBetween: 5,
+          centeredSlides: true,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+          },
+          breakpoints: {
+            360: {
+              slidesPerView: 2,
+              centeredSlides: false,
+              spaceBetween: 1
+            },
+            640: {
+              slidesPerView: 2
+            },
+            768: {
+              slidesPerView: 2.5,
+              spaceBetween: 20
+            },
+            1024: {
+              slidesPerView: 3.5,
+              spaceBetween: 30
+            },
+            1224: {
+              slidesPerView: 3.5,
+              spaceBetween: 5
+            }
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+          }
+        }, "autoplay", {
+          delay: 3000,
+          disableOnInteraction: false
+        }));
+      });
+    },
+    init_component: function init_component() {
+      this.getSingleNewsDetail();
+    },
+    getSingleNewsDetail: function getSingleNewsDetail() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-single-news-detail/' + this.$route.params.id).then(function (response) {
+        _this.data = response.data;
+      });
+    },
+    getNews: function getNews() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/landingpage/news').then(function (response) {
+        _this2.news = response.data;
+
+        _this2.swiperInit();
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -6909,26 +6979,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -6968,6 +7018,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     ShowMessageError: function ShowMessageError() {
       Swal.fire('UnderDevelopment', 'Chat Functionality UnderDevelopment', 'info');
+    },
+    removeToWishList: function removeToWishList(id) {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('candidate/remove-to-wish-list/' + id).then(function (response) {
+        _this2.getCandidateWishList();
+      });
     }
   }
 });
@@ -11941,34 +11998,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -12062,8 +12091,8 @@ __webpack_require__.r(__webpack_exports__);
 
       this.searchData = [];
       this.totalJobs = 0;
-      this.jobToShow = 2;
-      this.companiesToShow = 2;
+      this.jobToShow = 10;
+      this.companiesToShow = 9;
       this.totalCompanies = 0;
       this.showError = false;
       this.keywordSearchShow = false;
@@ -12092,7 +12121,7 @@ __webpack_require__.r(__webpack_exports__);
         keyword: '',
         skills: ''
       };
-      this.searchData = [], this.totalJobs = 0, this.jobToShow = 2, this.showError = false;
+      this.searchData = [], this.totalJobs = 0, this.jobToShow = 10, this.showError = false;
       this.keywordSearchShow = false;
     }
   }
@@ -16629,7 +16658,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_33__["default"]({
     name: 'ContactUs',
     component: _components_pages_website_ContactUsComponent_vue__WEBPACK_IMPORTED_MODULE_25__["default"]
   }, {
-    path: '/news-detail',
+    path: '/news-detail/:id',
     name: 'NewsDetail',
     component: _components_pages_website_NewsDetailComponent_vue__WEBPACK_IMPORTED_MODULE_30__["default"]
   }, {
@@ -33483,56 +33512,95 @@ var render = function () {
                                 staticClass: "swiper-slide single-blog-wrap",
                               },
                               [
-                                _c("div", { staticClass: "single-blog" }, [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "/storage/images/news/" + item.image,
-                                      alt: "blog-img",
-                                    },
-                                  }),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "eventdate" }, [
-                                    _c("strong", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("moment")(item.created_at, "d")
-                                        )
-                                      ),
-                                    ]),
-                                    _vm._v(
-                                      "\n                                            " +
-                                        _vm._s(
-                                          _vm._f("moment")(
-                                            item.created_at,
-                                            "MMM"
+                                _c(
+                                  "div",
+                                  { staticClass: "single-blog" },
+                                  [
+                                    _c("img", {
+                                      attrs: {
+                                        src:
+                                          "/storage/images/news/" + item.image,
+                                        alt: "blog-img",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "eventdate" }, [
+                                      _c("strong", [
+                                        _vm._v(
+                                          _vm._s(
+                                            _vm._f("moment")(
+                                              item.created_at,
+                                              "d"
+                                            )
                                           )
-                                        )
-                                    ),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "news-card-day" }, [
-                                    _c("div", { staticClass: "blog-title" }, [
-                                      _c("span", [_vm._v(_vm._s(item.title))]),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "p",
-                                    {
-                                      staticClass:
-                                        "blog-description line-text-3",
-                                    },
-                                    [
+                                        ),
+                                      ]),
                                       _vm._v(
                                         "\n                                            " +
-                                          _vm._s(item.description) +
-                                          "\n                                        "
+                                          _vm._s(
+                                            _vm._f("moment")(
+                                              item.created_at,
+                                              "MMM"
+                                            )
+                                          )
                                       ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _vm._m(3, true),
-                                ]),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "news-card-day" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "blog-title" },
+                                          [
+                                            _c("span", [
+                                              _vm._v(_vm._s(item.title)),
+                                            ]),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "p",
+                                      {
+                                        staticClass:
+                                          "blog-description line-text-3",
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            " +
+                                            _vm._s(item.description) +
+                                            "\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "router-link",
+                                      {
+                                        staticClass: "blog-news-btn",
+                                        attrs: {
+                                          to: {
+                                            name: "NewsDetail",
+                                            params: { id: item.id },
+                                          },
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Read More\n                                            "
+                                        ),
+                                        _c("i", {
+                                          staticClass: "fa fa-long-arrow-right",
+                                          attrs: { "aria-hidden": "true" },
+                                        }),
+                                      ]
+                                    ),
+                                  ],
+                                  1
+                                ),
                               ]
                             )
                           }),
@@ -33553,7 +33621,7 @@ var render = function () {
       ),
       _vm._v(" "),
       _c("section", { staticClass: "bg-Grey", attrs: { id: "expertise" } }, [
-        _vm._m(4),
+        _vm._m(3),
         _vm._v(" "),
         _c("div", { staticClass: "container fourth-section" }, [
           _c("div", { staticClass: "row m-0" }, [
@@ -33695,7 +33763,7 @@ var render = function () {
               "div",
               { staticClass: "row" },
               [
-                _vm._m(5),
+                _vm._m(4),
                 _vm._v(" "),
                 _c(
                   "router-link",
@@ -33714,7 +33782,7 @@ var render = function () {
       _vm._v(" "),
       _c("section", { staticClass: "bg-Grey", attrs: { id: "happening" } }, [
         _c("div", { staticClass: "container" }, [
-          _vm._m(6),
+          _vm._m(5),
           _vm._v(" "),
           _c("p", [
             _vm._v(
@@ -33728,9 +33796,9 @@ var render = function () {
                 "div",
                 { staticClass: "list__card" },
                 [
-                  _vm._m(7),
+                  _vm._m(6),
                   _vm._v(" "),
-                  _vm._m(8),
+                  _vm._m(7),
                   _vm._v(" "),
                   _c(
                     "router-link",
@@ -33753,16 +33821,16 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(9),
+            _vm._m(8),
             _vm._v(" "),
             _c("div", { staticClass: "services-box" }, [
               _c(
                 "div",
                 { staticClass: "list__card" },
                 [
-                  _vm._m(10),
+                  _vm._m(9),
                   _vm._v(" "),
-                  _vm._m(11),
+                  _vm._m(10),
                   _vm._v(" "),
                   _c(
                     "router-link",
@@ -33786,7 +33854,7 @@ var render = function () {
         ]),
       ]),
       _vm._v(" "),
-      _vm._m(12),
+      _vm._m(11),
       _vm._v(" "),
       _c(
         "section",
@@ -33797,7 +33865,7 @@ var render = function () {
               _c("div", { staticClass: "col-md-6 col-12 w-100 p-0 pr-md-5" }, [
                 _c("form", { attrs: { action: "" } }, [
                   _c("div", { staticClass: "row m-0" }, [
-                    _vm._m(13),
+                    _vm._m(12),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-12 px-2" }, [
                       _c("div", { staticClass: "form-group" }, [
@@ -34061,7 +34129,7 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _vm._m(14),
+              _vm._m(13),
             ]),
           ]),
         ]
@@ -34201,18 +34269,6 @@ var staticRenderFns = [
           ]),
         ]),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "blog-news-btn", attrs: { href: "#" } }, [
-      _vm._v("Read More\n                                            "),
-      _c("i", {
-        staticClass: "fa fa-long-arrow-right",
-        attrs: { "aria-hidden": "true" },
-      }),
     ])
   },
   function () {
@@ -34699,12 +34755,46 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _c("CompanyNavbar"),
-      _vm._v(" "),
       _c("h1", { staticClass: "pricing-plan-title" }, [_vm._v("News")]),
       _vm._v(" "),
       _c("div", { staticClass: "pacakges-plan-container container" }, [
-        _vm._m(0),
+        _c("section", { staticClass: "privacy-policy-container" }, [
+          _c(
+            "div",
+            {
+              staticClass: "news-detail-img",
+              style: {
+                backgroundImage:
+                  "url(/storage/images/news/" + _vm.data.image + ")",
+              },
+            },
+            [
+              _c("div", { staticClass: "news-date" }, [
+                _c("span", [
+                  _vm._v(_vm._s(_vm._f("moment")(_vm.data.created_at, "d"))),
+                ]),
+                _vm._v(" "),
+                _c("span", [
+                  _vm._v(_vm._s(_vm._f("moment")(_vm.data.created_at, "MMM"))),
+                ]),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c("ul", { staticClass: "privacy-policy-queries" }, [
+            _c("li", [
+              _c("h1", [_vm._v(_vm._s(_vm.data.title))]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        " +
+                    _vm._s(_vm.data.description) +
+                    "\n                    "
+                ),
+              ]),
+            ]),
+          ]),
+        ]),
         _vm._v(" "),
         _c(
           "section",
@@ -34721,7 +34811,7 @@ var render = function () {
                         "div",
                         { staticClass: "swiper-container blogs-swiper" },
                         [
-                          _vm._m(1),
+                          _vm._m(0),
                           _vm._v(" "),
                           _c(
                             "div",
@@ -34734,70 +34824,97 @@ var render = function () {
                                   staticClass: "swiper-slide single-blog-wrap",
                                 },
                                 [
-                                  _c("div", { staticClass: "single-blog" }, [
-                                    _c("img", {
-                                      attrs: {
-                                        src:
-                                          "/storage/images/news/" + item.image,
-                                        alt: "blog-img",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "eventdate" }, [
-                                      _c("strong", [
-                                        _vm._v(
-                                          _vm._s(
-                                            _vm._f("moment")(
-                                              item.created_at,
-                                              "d"
+                                  _c(
+                                    "div",
+                                    { staticClass: "single-blog" },
+                                    [
+                                      _c("img", {
+                                        attrs: {
+                                          src:
+                                            "/storage/images/news/" +
+                                            item.image,
+                                          alt: "blog-img",
+                                        },
+                                      }),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "eventdate" }, [
+                                        _c("strong", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm._f("moment")(
+                                                item.created_at,
+                                                "d"
+                                              )
                                             )
-                                          )
-                                        ),
-                                      ]),
-                                      _vm._v(
-                                        "\n                                                " +
-                                          _vm._s(
-                                            _vm._f("moment")(
-                                              item.created_at,
-                                              "MMM"
-                                            )
-                                          )
-                                      ),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "news-card-day" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "blog-title" },
-                                          [
-                                            _c("span", [
-                                              _vm._v(_vm._s(item.title)),
-                                            ]),
-                                          ]
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "p",
-                                      {
-                                        staticClass:
-                                          "blog-description line-text-3",
-                                      },
-                                      [
+                                          ),
+                                        ]),
                                         _vm._v(
                                           "\n                                                " +
-                                            _vm._s(item.description) +
-                                            "\n                                            "
+                                            _vm._s(
+                                              _vm._f("moment")(
+                                                item.created_at,
+                                                "MMM"
+                                              )
+                                            )
                                         ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _vm._m(2, true),
-                                  ]),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "news-card-day" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "blog-title" },
+                                            [
+                                              _c("span", [
+                                                _vm._v(_vm._s(item.title)),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "blog-description line-text-3",
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                                " +
+                                              _vm._s(item.description) +
+                                              "\n                                            "
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "blog-news-btn",
+                                          attrs: {
+                                            to: {
+                                              name: "NewsDetail",
+                                              params: { id: item.id },
+                                            },
+                                          },
+                                        },
+                                        [
+                                          _vm._v(
+                                            "Read More\n                                            "
+                                          ),
+                                          _c("i", {
+                                            staticClass:
+                                              "fa fa-long-arrow-right",
+                                            attrs: { "aria-hidden": "true" },
+                                          }),
+                                        ]
+                                      ),
+                                    ],
+                                    1
+                                  ),
                                 ]
                               )
                             }),
@@ -34826,46 +34943,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "privacy-policy-container" }, [
-      _c(
-        "div",
-        {
-          staticClass: "news-detail-img",
-          staticStyle: {
-            "background-image":
-              "url('/website/assets/images/meeting-image-update.png')",
-          },
-        },
-        [
-          _c("div", { staticClass: "news-date" }, [
-            _c("span", [_vm._v("01")]),
-            _vm._v(" "),
-            _c("span", [_vm._v("DEC")]),
-          ]),
-        ]
-      ),
-      _vm._v(" "),
-      _c("ul", { staticClass: "privacy-policy-queries" }, [
-        _c("li", [
-          _c("h1", [
-            _vm._v(
-              "Lorem ipsum dolor sit amet, into consectetuer adipiscing elit. Lorem ipsum dolor sit."
-            ),
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                        Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet,\n                        consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk.\n                        Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet,\n                        consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing\n                        elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit\n                        amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing\n                        elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit\n                        amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer\n                        adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is\n                        ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer\n                        adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem\n                        ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet,\n                        consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk.\n                        Lorem is ipsum dolor sit amet, consectetuer adipiscing elit.\n                    "
-            ),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12 text-left" }, [
         _c("div", { staticClass: "heading-div" }, [
@@ -34876,18 +34953,6 @@ var staticRenderFns = [
           ]),
         ]),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "blog-news-btn", attrs: { href: "#" } }, [
-      _vm._v("Read More\n                                                "),
-      _c("i", {
-        staticClass: "fa fa-long-arrow-right",
-        attrs: { "aria-hidden": "true" },
-      }),
     ])
   },
 ]
@@ -36558,46 +36623,159 @@ var render = function () {
             _vm._m(9),
             _vm._v(" "),
             _c("div", [
-              _c("div", { staticClass: "job-list-wrap p-0" }, [
-                _c("div", { staticClass: "job-list" }, [
-                  _vm._m(10),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "job-list-content col" }, [
-                    _vm._m(11),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "job-description" }, [
-                      _vm._v(
-                        "As a Data Scientist, you will be in a central position as\n                                    you will be evangelizing data and our methodologies to other functional analysts\n                                    and other stakeholders in the company."
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "job-content-wrap" }, [
-                      _vm._m(12),
-                      _vm._v(" "),
-                      _c("ul", { staticClass: "job-list-fav m-0" }, [
-                        _c(
-                          "li",
+              _vm.wishlist.length > 0
+                ? _c("div", { staticClass: "job-list-wrap" }, [
+                    _c(
+                      "div",
+                      { staticClass: "row m-0 justify-content-start" },
+                      _vm._l(_vm.wishlist, function (item, index) {
+                        return _c(
+                          "div",
+                          { key: index, staticClass: "candidate-single" },
                           [
                             _c(
-                              "router-link",
-                              {
-                                staticClass: "job-view-btn",
-                                attrs: { to: "/candidate-dashboard" },
-                              },
+                              "div",
+                              { staticClass: "candidate-list-content" },
                               [
-                                _vm._v(
-                                  "View\n                                            "
+                                _c("div", { staticClass: "candidate-image" }, [
+                                  _c("div", {
+                                    staticClass: "candidate-photo",
+                                    style: {
+                                      backgroundImage:
+                                        "url(/storage/images/companies/profile/" +
+                                        item.company.logo +
+                                        ")",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "candidate-header mt-2 ml-2",
+                                    },
+                                    [
+                                      _c(
+                                        "h6",
+                                        { staticClass: "candidate-name mb-0" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(item.company.company_name)
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass: "candidate-description my-1",
+                                    staticStyle: { "-webkit-line-clamp": "3" },
+                                  },
+                                  [_vm._v(_vm._s(item.company.description))]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "ul",
+                                  { staticClass: "candidate-list-meta h-auto" },
+                                  [
+                                    _c("li", { staticClass: "mt-1" }, [
+                                      _c("i", {
+                                        staticClass: "fas fa-map-marker-alt",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "hide-line-1 pl-2" },
+                                        [_vm._v(_vm._s(item.company.city))]
+                                      ),
+                                    ]),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "ul",
+                                  { staticClass: "candidate-list-fav" },
+                                  [
+                                    _c(
+                                      "li",
+                                      { staticClass: "w-100" },
+                                      [
+                                        _c(
+                                          "router-link",
+                                          {
+                                            staticClass: "job-view-btn w-100",
+                                            attrs: {
+                                              "data-toggle": "collapse",
+                                              to: {
+                                                name: "CompanyDetail",
+                                                params: { id: item.company.id },
+                                              },
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "View\n                                            "
+                                            ),
+                                          ]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c("li", [
+                                      item.is_wish_listed == false
+                                        ? _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "candidate-wishlist-btn ml-2 ",
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.addToWishList(
+                                                    item.company.id
+                                                  )
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "far fa-heart",
+                                              }),
+                                            ]
+                                          )
+                                        : _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "candidate-wishlist-btn ml-2 ",
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.removeToWishList(
+                                                    item.company.id
+                                                  )
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "fas fa-heart",
+                                              }),
+                                            ]
+                                          ),
+                                    ]),
+                                  ]
                                 ),
                               ]
                             ),
-                          ],
-                          1
-                        ),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-              ]),
+                          ]
+                        )
+                      }),
+                      0
+                    ),
+                  ])
+                : _vm._e(),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "show-more-anker" }, [
@@ -36610,7 +36788,7 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _vm._m(13),
+        _vm._m(10),
       ]),
     ],
     1
@@ -36805,102 +36983,6 @@ var staticRenderFns = [
     return _c("label", { staticClass: "candidate-tagline" }, [
       _vm._v("\n                    Whishlist\n                    "),
       _c("i", { staticClass: "fas fa-heart" }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "company-logo col-auto py-2" }, [
-      _c("img", { attrs: { src: "", alt: "Company Logo" } }),
-      _vm._v(" "),
-      _c("span", { staticClass: "company-h line-clamp-1" }, [_vm._v("i2c")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-header" }, [
-      _c("h6", { staticClass: "job-title mb-0" }, [_vm._v("Data Analyst")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "d-flex align-items-center" }, [
-        _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
-        _vm._v(" "),
-        _c("i", { staticClass: "far fa-heart" }),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-dynamic-values" }, [
-      _c("ul", [
-        _c("li", [
-          _c("img", {
-            attrs: {
-              src: "/website/assets/images/calendar-job.svg",
-              alt: "img",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("Aug 23, 2021")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("img", {
-            attrs: {
-              src: "/website/assets/images/experience-job.svg",
-              alt: "",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("3 Years")]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("ul", [
-        _c("li", [
-          _c("img", {
-            attrs: { src: "/website/assets/images/money-job.svg", alt: "" },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("80K to 100K")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("img", {
-            staticStyle: { margin: "0px 3px" },
-            attrs: {
-              height: "16px",
-              width: "10px",
-              src: "/website/assets/images/pin.svg",
-              alt: "img",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("Lahore, Pakistan")]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("ul", [
-        _c("li", [
-          _c("img", {
-            attrs: { src: "/website/assets/images/suitcase-job.svg", alt: "" },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("Morning Shift")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("img", {
-            attrs: { src: "/website/assets/images/switch-job.svg", alt: "" },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("Full Time")]),
-        ]),
-      ]),
     ])
   },
   function () {
@@ -50164,308 +50246,201 @@ var render = function () {
             : _vm._e(),
           _vm._v(" "),
           _vm.keywordSearchShow == true && _vm.is_auth == true
-            ? _c(
-                "div",
-                { staticClass: "job-list-wrap mt-3 p-0" },
-                [
+            ? _c("div", { staticClass: "job-list-wrap" }, [
+                _c(
+                  "div",
+                  { staticClass: "row m-0 justify-content-start" },
                   _vm._l(_vm.companiesToShow, function (item, index) {
                     return index < _vm.searchData.length
                       ? _c(
                           "div",
-                          { key: index, staticClass: "job-list m-0 mb-3" },
+                          { key: index, staticClass: "candidate-single" },
                           [
                             _c(
                               "div",
-                              { staticClass: "company-logo col-auto py-2" },
+                              { staticClass: "candidate-list-content" },
                               [
-                                _c("img", {
-                                  attrs: {
-                                    src:
-                                      "/storage/images/companies/" +
-                                      _vm.searchData[index].company.logo,
-                                    alt: "Company Logo",
-                                  },
-                                }),
+                                _c("div", { staticClass: "candidate-image" }, [
+                                  _c("div", {
+                                    staticClass: "candidate-photo",
+                                    style: {
+                                      backgroundImage:
+                                        "url(/storage/images/companies/profile/" +
+                                        _vm.searchData[index].company.logo +
+                                        ")",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "candidate-header mt-2 ml-2",
+                                    },
+                                    [
+                                      _c(
+                                        "h6",
+                                        { staticClass: "candidate-name mb-0" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.searchData[index].company
+                                                .company_name
+                                            )
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
                                 _vm._v(" "),
                                 _c(
-                                  "span",
-                                  { staticClass: "company-h line-clamp-1" },
+                                  "p",
+                                  {
+                                    staticClass: "candidate-description my-1",
+                                    staticStyle: { "-webkit-line-clamp": "3" },
+                                  },
                                   [
                                     _vm._v(
                                       _vm._s(
                                         _vm.searchData[index].company
-                                          .company_name
+                                          .description
                                       )
                                     ),
                                   ]
                                 ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "job-list-content col" }, [
-                              _c("div", { staticClass: "job-header" }, [
-                                _c("h6", { staticClass: "job-title mb-0" }, [
-                                  _vm._v(
-                                    _vm._s(
-                                      _vm.searchData[index].company.company_name
-                                    )
-                                  ),
-                                ]),
                                 _vm._v(" "),
                                 _c(
-                                  "div",
-                                  { staticClass: "d-flex align-items-center" },
+                                  "ul",
+                                  { staticClass: "candidate-list-meta h-auto" },
                                   [
-                                    _c("timeago", {
-                                      staticClass: "job-post-date",
-                                      attrs: {
-                                        datetime:
-                                          _vm.searchData[index].company
-                                            .created_at,
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _vm.searchData[index].is_wish_listed ==
-                                    false
-                                      ? _c(
-                                          "a",
-                                          {
-                                            on: {
-                                              click: function ($event) {
-                                                return _vm.addToWishList(
-                                                  _vm.searchData[index].company
-                                                    .id
-                                                )
-                                              },
-                                            },
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "far fa-heart",
-                                            }),
-                                          ]
-                                        )
-                                      : _c(
-                                          "a",
-                                          {
-                                            on: {
-                                              click: function ($event) {
-                                                return _vm.removeToWishList(
-                                                  _vm.searchData[index].company
-                                                    .id
-                                                )
-                                              },
-                                            },
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fas fa-heart",
-                                            }),
-                                          ]
-                                        ),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "job-description" }, [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm.searchData[index].company.description
-                                  )
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "job-content-wrap" }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "job-dynamic-values" },
-                                  [
-                                    _c("ul", [
-                                      _c("li", [
-                                        _c("img", {
-                                          attrs: {
-                                            src: "/website/assets/images/calendar-job.svg",
-                                            alt: "img",
-                                          },
-                                        }),
-                                        _vm._v(" "),
-                                        _c("span", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("moment")(
-                                                _vm.searchData[index].company
-                                                  .created_at,
-                                                "YYYY-MM-DD"
-                                              )
-                                            )
-                                          ),
-                                        ]),
-                                      ]),
+                                    _c("li", { staticClass: "mt-1" }, [
+                                      _c("i", {
+                                        staticClass: "fas fa-map-marker-alt",
+                                      }),
                                       _vm._v(" "),
-                                      _c("li", [
-                                        _c("img", {
-                                          attrs: {
-                                            src: "/website/assets/images/experience-job.svg",
-                                            alt: "",
-                                          },
-                                        }),
-                                        _vm._v(" "),
-                                        _c("span", [
+                                      _c(
+                                        "div",
+                                        { staticClass: "hide-line-1 pl-2" },
+                                        [
                                           _vm._v(
                                             _vm._s(
-                                              _vm.searchData[index].company
-                                                .experience
+                                              _vm.searchData[index].company.city
                                             )
                                           ),
-                                        ]),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("ul", [
-                                      _c("li", [
-                                        _c("img", {
-                                          attrs: {
-                                            src: "/website/assets/images/money-job.svg",
-                                            alt: "",
-                                          },
-                                        }),
-                                        _vm._v(" "),
-                                        _c("span", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm.searchData[index].company
-                                                .salary_range
-                                            )
-                                          ),
-                                        ]),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("li", [
-                                        _c("img", {
-                                          staticStyle: { margin: "0px 3px" },
-                                          attrs: {
-                                            height: "16px",
-                                            width: "10px",
-                                            src: "/website/assets/images/pin.svg",
-                                            alt: "img",
-                                          },
-                                        }),
-                                        _vm._v(" "),
-                                        _c("span", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm.searchData[index].company
-                                                .location
-                                            )
-                                          ),
-                                        ]),
-                                      ]),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("ul", [
-                                      _c("li", [
-                                        _c("img", {
-                                          attrs: {
-                                            src: "/website/assets/images/suitcase-job.svg",
-                                            alt: "",
-                                          },
-                                        }),
-                                        _vm._v(" "),
-                                        _c("span", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm.searchData[index].company
-                                                .shift
-                                            )
-                                          ),
-                                        ]),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("li", [
-                                        _c("img", {
-                                          attrs: {
-                                            src: "/website/assets/images/switch-job.svg",
-                                            alt: "",
-                                          },
-                                        }),
-                                        _vm._v(" "),
-                                        _c("span", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm.searchData[index].company
-                                                .job_type
-                                            )
-                                          ),
-                                        ]),
-                                      ]),
+                                        ]
+                                      ),
                                     ]),
                                   ]
                                 ),
                                 _vm._v(" "),
-                                _c("ul", { staticClass: "job-list-fav m-0" }, [
-                                  _c(
-                                    "li",
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          staticClass: "job-view-btn",
-                                          attrs: {
-                                            "data-toggle": "collapse",
-                                            to: {
-                                              name: "CompanyDetail",
-                                              params: {
-                                                id: _vm.searchData[index]
-                                                  .company.id,
+                                _c(
+                                  "ul",
+                                  { staticClass: "candidate-list-fav" },
+                                  [
+                                    _c(
+                                      "li",
+                                      { staticClass: "w-100" },
+                                      [
+                                        _c(
+                                          "router-link",
+                                          {
+                                            staticClass: "job-view-btn w-100",
+                                            attrs: {
+                                              "data-toggle": "collapse",
+                                              to: {
+                                                name: "CompanyDetail",
+                                                params: {
+                                                  id: _vm.searchData[index]
+                                                    .company.id,
+                                                },
                                               },
                                             },
                                           },
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                        View"
+                                          [
+                                            _vm._v(
+                                              "View\n                                    "
+                                            ),
+                                          ]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c("li", [
+                                      _vm.searchData[index].is_wish_listed ==
+                                      false
+                                        ? _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "candidate-wishlist-btn ml-2 ",
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.addToWishList(
+                                                    _vm.searchData[index]
+                                                      .company.id
+                                                  )
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "far fa-heart",
+                                              }),
+                                            ]
+                                          )
+                                        : _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "candidate-wishlist-btn ml-2 ",
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.removeToWishList(
+                                                    _vm.searchData[index]
+                                                      .company.id
+                                                  )
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "fas fa-heart",
+                                              }),
+                                            ]
                                           ),
-                                        ]
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                ]),
-                              ]),
-                            ]),
+                                    ]),
+                                  ]
+                                ),
+                              ]
+                            ),
                           ]
                         )
                       : _vm._e()
                   }),
-                  _vm._v(" "),
-                  this.showError == true
-                    ? _c("span", { staticClass: "show-result-msg" }, [
-                        _vm._v("Data Not Found"),
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.searchData.length > 0
-                    ? _c("div", { staticClass: "text-center" }, [
-                        _vm.searchData.length != _vm.companiesToShow
-                          ? _c(
-                              "button",
-                              {
-                                staticClass: "load-more-btn mx-auto",
-                                on: {
-                                  click: function ($event) {
-                                    _vm.companiesToShow += 10
-                                  },
+                  0
+                ),
+                _vm._v(" "),
+                _vm.searchData.length
+                  ? _c("div", { staticClass: "text-center" }, [
+                      _vm.searchData.length != _vm.companiesToShow &&
+                      _vm.totalCompanies < _vm.companiesToShow
+                        ? _c(
+                            "button",
+                            {
+                              staticClass: "load-more-btn mx-auto",
+                              on: {
+                                click: function ($event) {
+                                  _vm.companiesToShow += 3
                                 },
                               },
-                              [_vm._v("Load more")]
-                            )
-                          : _vm._e(),
-                      ])
-                    : _vm._e(),
-                ],
-                2
-              )
+                            },
+                            [_vm._v("Load more")]
+                          )
+                        : _vm._e(),
+                    ])
+                  : _vm._e(),
+              ])
             : _vm._e(),
         ]),
         _vm._v(" "),

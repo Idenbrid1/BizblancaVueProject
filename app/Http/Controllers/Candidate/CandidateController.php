@@ -498,7 +498,7 @@ class CandidateController extends Controller
     {
         $user = User::find(Auth::user()->id);
         $candidate = Candidate::where('user_id', $user->id)->first();
-        if(company_id::where(['company_id'=> $id, 'candidate_id'=> $candidate->id])->delete()){
+        if(CandidateWishList::where(['company_id'=> $id, 'candidate_id'=> $candidate->id])->delete()){
             return response()->json([
                 'success' => true,
             ]);

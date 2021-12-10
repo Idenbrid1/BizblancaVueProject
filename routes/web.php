@@ -60,6 +60,7 @@ Route::get('get-candidates-search', [App\Http\Controllers\CommonController::clas
 Route::get('/get-single-company-detail/{id}', [App\Http\Controllers\CommonController::class, 'getCompanyDetail']);
 Route::get('/get-single-job-detail/{id}', [App\Http\Controllers\CommonController::class, 'getJobDetail']);
 Route::get('/get-single-candidate-detail/{id}', [App\Http\Controllers\CommonController::class, 'getCandidateDetail']);
+Route::get('/get-single-news-detail/{id}', [App\Http\Controllers\CommonController::class, 'getNewsDetail']);
 Route::post('/reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordPost']);
 Route::get('/reset-password/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPassword']);
 Route::post('/complete-reset-password', [App\Http\Controllers\Admin\AuthenticationController::class, 'resetPasswordFormPost']);

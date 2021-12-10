@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <CandidateNavbar v-if="is_auth == true"/>
+        <CandidateNavbar v-if="is_auth == true" />
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
@@ -130,7 +130,8 @@
                     <div>
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap p-0">
-                            <div class="job-list m-0 mb-3" v-if="index < totalJobs" v-for="(item, index) in jobToShow" :key="index">
+                            <div class="job-list m-0 mb-3" v-if="index < totalJobs" v-for="(item, index) in jobToShow"
+                                :key="index">
                                 <div class="company-logo col-auto py-2">
                                     <img :src="'/storage/images/companies/'+searchData[index].company.logo"
                                         alt="Company Logo">
@@ -141,7 +142,8 @@
                                     <div class="job-header">
                                         <h6 class="job-title mb-0">{{searchData[index].title}}</h6>
                                         <div class="d-flex align-items-center">
-                                            <timeago class="job-post-date" :datetime="searchData[index].created_at"></timeago>
+                                            <timeago class="job-post-date" :datetime="searchData[index].created_at">
+                                            </timeago>
                                         </div>
                                     </div>
 
@@ -199,88 +201,58 @@
                             @click="jobToShow += 10">Load more</button>
                     </div>
                 </div>
-                <div class="job-list-wrap mt-3 p-0" v-if="keywordSearchShow == true && is_auth == true">
-                    <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
+                
+                <div class="job-list-wrap" v-if="keywordSearchShow == true && is_auth == true">
+                    <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
-                    <div class="job-list m-0 mb-3" v-if="index < searchData.length"
-                        v-for="(item, index) in companiesToShow" :key="index">
-                        <div class="company-logo col-auto py-2">
-                            <img :src="'/storage/images/companies/'+searchData[index].company.logo"
-                                alt="Company Logo" />
-                            <span class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
-                        </div>
-                        <div class="job-list-content col">
-                            <div class="job-header">
-                                <h6 class="job-title mb-0">{{searchData[index].company.company_name}}</h6>
-                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i> -->
+                    <div class="row m-0 justify-content-start">
+                        <div class="candidate-single" v-if="index < searchData.length"
+                            v-for="(item, index) in companiesToShow" :key="index">
+                            <div class="candidate-list-content">
+                                <div class="candidate-image">
+                                    <div class="candidate-photo"
+                                        :style="{ backgroundImage: 'url(/storage/images/companies/profile/'+searchData[index].company.logo+')'}">
+                                    </div>
+                                    <div class="candidate-header mt-2 ml-2">
+                                        <h6 class="candidate-name mb-0">{{searchData[index].company.company_name}}</h6>
+                                    </div>
+                                </div>
+                                <!-- <span class="job-post-date">20 hours ago</span> -->
+                                <p class="candidate-description my-1" style="-webkit-line-clamp: 3;">{{searchData[index].company.description}}</p>
+                                <ul class="candidate-list-meta h-auto">
+                                    <!-- <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
+                                        <div class="hide-line-1">{{item.candidate.experience}} Years</div>
+                                    </li> -->
+                                    <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
+                                        <div class="hide-line-1 pl-2">{{searchData[index].company.city}}</div>
+                                    </li>
 
-                                <div class="d-flex align-items-center">
-                                    <timeago class="job-post-date" :datetime="searchData[index].company.created_at">
-                                    </timeago>
-                                    <a v-if="searchData[index].is_wish_listed == false"
+                                </ul>
+                                <ul class="candidate-list-fav">
+                                    <li class="w-100">
+                                        <router-link class="job-view-btn w-100" data-toggle="collapse"
+                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].company.id } }">View
+                                        </router-link>
+                                    </li>
+                                    <li>
+                                    <a class="candidate-wishlist-btn ml-2 " v-if="searchData[index].is_wish_listed == false"
                                         @click="addToWishList(searchData[index].company.id)"><i
                                             class="far fa-heart"></i></a>
-                                    <a v-else @click="removeToWishList(searchData[index].company.id)"><i
+                                    <a class="candidate-wishlist-btn ml-2 " v-else @click="removeToWishList(searchData[index].company.id)"><i
                                             class="fas fa-heart"></i></a>
-
-                                </div>
-                            </div>
-
-                            <p class="job-description">{{searchData[index].company.description}}</p>
-                            <div class="job-content-wrap">
-                                <div class="job-dynamic-values">
-                                    <ul>
-                                        <li>
-                                            <img src="/website/assets/images/calendar-job.svg" alt="img">
-                                            <span>{{searchData[index].company.created_at | moment("YYYY-MM-DD")}}</span>
-                                        </li>
-                                        <li>
-                                            <img src="/website/assets/images/experience-job.svg" alt="">
-                                            <span>{{searchData[index].company.experience}}</span>
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <img src="/website/assets/images/money-job.svg" alt="">
-                                            <span>{{searchData[index].company.salary_range}}</span>
-                                        </li>
-                                        <li>
-                                            <img height="16px" width="10px" style="margin:0px 3px;"
-                                                src="/website/assets/images/pin.svg" alt="img">
-                                            <span>{{searchData[index].company.location}}</span>
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <img src="/website/assets/images/suitcase-job.svg" alt="">
-                                            <span>{{searchData[index].company.shift}}</span>
-                                        </li>
-                                        <li>
-                                            <img src="/website/assets/images/switch-job.svg" alt="">
-                                            <span>{{searchData[index].company.job_type}}</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="job-list-fav m-0">
-                                    <li>
-                                        <router-link class="job-view-btn" data-toggle="collapse"
-                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].company.id } }">
-                                            View</router-link>
                                     </li>
+                                    <!-- -->
                                 </ul>
                             </div>
-
                         </div>
+                        
                     </div>
-                    <span class="show-result-msg" v-if="this.showError == true">Data Not Found</span>
-                    <div class="text-center" v-if="searchData.length > 0">
-                        <button class="load-more-btn mx-auto" v-if="searchData.length != companiesToShow"
-                            @click="companiesToShow += 10">Load more</button>
-                    </div>
+                    <div class="text-center" v-if="searchData.length">
+                            <button class="load-more-btn mx-auto"
+                                v-if="searchData.length != companiesToShow && totalCompanies < companiesToShow"
+                                @click="companiesToShow += 3">Load more</button>
+                        </div>
+                    <!-- </div> -->
                 </div>
                 <!-- Job List Wrap Start -->
             </div>
@@ -610,26 +582,26 @@
             WebsiteNavbar,
             CandidateNavbar,
         },
-        created(){
+        created() {
             this.checkAuth()
             this.getJobs()
         },
         methods: {
-            getJobs(){
+            getJobs() {
                 axios.get('get-jobs')
-                .then((response) => {
-                    this.searchData = []
-                    this.searchData = response.data
-                    this.totalJobs = response.data.length
-                });
+                    .then((response) => {
+                        this.searchData = []
+                        this.searchData = response.data
+                        this.totalJobs = response.data.length
+                    });
             },
-            checkAuth(){
+            checkAuth() {
                 axios.get('check-auth')
-                .then((response) => {
-                    if(response.data.isAuth == true){
-                        this.is_auth = response.data.isAuth
-                    }
-                });
+                    .then((response) => {
+                        if (response.data.isAuth == true) {
+                            this.is_auth = response.data.isAuth
+                        }
+                    });
             },
             search() {
                 axios.post('/job-search', this.record)
@@ -653,8 +625,8 @@
             keywordSearch() {
                 this.searchData = [];
                 this.totalJobs = 0;
-                this.jobToShow = 2;
-                this.companiesToShow = 2;
+                this.jobToShow = 10;
+                this.companiesToShow = 9;
                 this.totalCompanies = 0;
                 this.showError = false;
                 this.keywordSearchShow = false;
@@ -685,7 +657,7 @@
                 };
                 this.searchData = [],
                 this.totalJobs = 0,
-                this.jobToShow = 2,
+                this.jobToShow = 10,
                 this.showError = false
                 this.keywordSearchShow = false
             }

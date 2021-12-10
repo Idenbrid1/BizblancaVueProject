@@ -327,6 +327,11 @@ class CommonController extends Controller
         return News::where('status', 'Approved')->get();
     }
 
+    public function getNewsDetail($id)
+    {
+        return News::find($id);
+    }
+
     public function newsLetter(Request $request)
     {
         $attributeNames = [

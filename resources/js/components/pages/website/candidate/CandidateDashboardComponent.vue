@@ -141,70 +141,50 @@
                     </label>
                     <!-- Job List Toolbar Start -->
                     <div>
-                        <!-- Job List Wrap Start -->
-                        <div class="job-list-wrap p-0">
-                            <div class="job-list">
-                                <div class="company-logo col-auto py-2">
-                                    <img src="" alt="Company Logo">
-                                    <span class="company-h line-clamp-1">i2c</span>
-                                </div>
-                                <div class="job-list-content col">
-                                    <div class="job-header">
-                                        <h6 class="job-title mb-0">Data Analyst</h6>
-                                        <div class="d-flex align-items-center">
-                                            <span class="job-post-date">20 hours ago </span>
-                                            <i class="far fa-heart"></i>
+                        <div class="job-list-wrap" v-if="wishlist.length > 0">
+                            <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
+                            <!-- Job List Start -->
+                            <div class="row m-0 justify-content-start">
+                                <div class="candidate-single" v-for="(item, index) in wishlist" :key="index">
+                                    <div class="candidate-list-content">
+                                        <div class="candidate-image">
+                                            <div class="candidate-photo"
+                                                :style="{ backgroundImage: 'url(/storage/images/companies/profile/'+item.company.logo+')'}">
+                                            </div>
+                                            <div class="candidate-header mt-2 ml-2">
+                                                <h6 class="candidate-name mb-0">{{item.company.company_name}}</h6>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <!-- <span class="job-post-date">20 hours ago</span> -->
+                                        <p class="candidate-description my-1" style="-webkit-line-clamp: 3;">{{item.company.description}}</p>
+                                        <ul class="candidate-list-meta h-auto">
+                                            <!-- <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
+                                                <div class="hide-line-1">{{item.candidate.experience}} Years</div>
+                                            </li> -->
+                                            <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
+                                                <div class="hide-line-1 pl-2">{{item.company.city}}</div>
+                                            </li>
 
-                                    <p class="job-description">As a Data Scientist, you will be in a central position as
-                                        you will be evangelizing data and our methodologies to other functional analysts
-                                        and other stakeholders in the company.</p>
-                                    <div class="job-content-wrap">
-                                        <div class="job-dynamic-values">
-                                            <ul>
-                                                <li>
-                                                    <img src="/website/assets/images/calendar-job.svg" alt="img">
-                                                    <span>Aug 23, 2021</span>
-                                                </li>
-                                                <li>
-                                                    <img src="/website/assets/images/experience-job.svg" alt="">
-                                                    <span>3 Years</span>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <img src="/website/assets/images/money-job.svg" alt="">
-                                                    <span>80K to 100K</span>
-                                                </li>
-                                                <li>
-                                                    <img height="16px" width="10px" style="margin:0px 3px;"
-                                                        src="/website/assets/images/pin.svg" alt="img">
-                                                    <span>Lahore, Pakistan</span>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <img src="/website/assets/images/suitcase-job.svg" alt="">
-                                                    <span>Morning Shift</span>
-                                                </li>
-                                                <li>
-                                                    <img src="/website/assets/images/switch-job.svg" alt="">
-                                                    <span>Full Time</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <ul class="job-list-fav m-0">
-                                            <li>
-                                                <router-link to="/candidate-dashboard" class="job-view-btn">View
+                                        </ul>
+                                        <ul class="candidate-list-fav">
+                                            <li class="w-100">
+                                                <router-link class="job-view-btn w-100" data-toggle="collapse"
+                                                    :to="{ name: 'CompanyDetail', params: { id: item.company.id } }">View
                                                 </router-link>
                                             </li>
+                                            <li>
+                                            <a class="candidate-wishlist-btn ml-2 " v-if="item.is_wish_listed == false"
+                                                @click="addToWishList(item.company.id)"><i
+                                                    class="far fa-heart"></i></a>
+                                            <a class="candidate-wishlist-btn ml-2 " v-else @click="removeToWishList(item.company.id)"><i
+                                                    class="fas fa-heart"></i></a>
+                                            </li>
+                                            <!-- -->
                                         </ul>
                                     </div>
-
                                 </div>
+                                
                             </div>
-                            <!-- </div> -->
                         </div>
                     </div>
                     <div class="show-more-anker">
@@ -539,6 +519,12 @@
                     'Chat Functionality UnderDevelopment',
                     'info'
                 );
+            },
+            removeToWishList(id) {
+                axios.get('candidate/remove-to-wish-list/' + id)
+                .then((response) => {
+                    this.getCandidateWishList()
+                });
             },
         },
     };

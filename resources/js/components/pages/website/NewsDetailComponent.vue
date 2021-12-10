@@ -1,35 +1,21 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <CompanyNavbar />
         <h1 class="pricing-plan-title">News</h1>
         <div class="pacakges-plan-container container">
             <section class="privacy-policy-container">
                 <div class="news-detail-img"
-                    style="background-image:url('/website/assets/images/meeting-image-update.png')">
+                    :style="{ backgroundImage: 'url(/storage/images/news/'+data.image+')'}">
                     <div class="news-date">
-                        <span>01</span>
-                        <span>DEC</span>
+                        <span>{{data.created_at | moment("d")}}</span>
+                        <span>{{data.created_at | moment("MMM")}}</span>
                     </div>
                 </div>
                 <ul class="privacy-policy-queries">
                     <li>
-                        <h1>Lorem ipsum dolor sit amet, into consectetuer adipiscing elit. Lorem ipsum dolor sit.</h1>
+                        <h1>{{data.title}}</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet,
-                            consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk.
-                            Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet,
-                            consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing
-                            elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit
-                            amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit
-                            amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer
-                            adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is
-                            ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer
-                            adipiscing elitjhjk. Lorem is ipsum dolor sit amet, consectetuer adipiscing elit. Lorem
-                            ipsum dolor sit amet, consectetuer adipiscing elitjhjk. Lorem is ipsum dolor sit amet,
-                            consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elitjhjk.
-                            Lorem is ipsum dolor sit amet, consectetuer adipiscing elit.
+                            {{data.description}}
                         </p>
                     </li>
                 </ul>
@@ -67,8 +53,8 @@
                                                 <p class="blog-description line-text-3">
                                                     {{item.description}}
                                                 </p>
-                                                <a class="blog-news-btn" href="#">Read More
-                                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                                <router-link :to="{ name: 'NewsDetail',  params: { id: item.id } }" class="blog-news-btn">Read More
+                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></router-link>
                                             </div>
                                         </div>
                                         <!--  -->
@@ -85,20 +71,96 @@
     </div>
 </template>
 <script>
+    import axios from 'axios';
     import WebsiteNavbar from '../website/partials/navbar.vue';
     export default {
         data() {
             return {
-
+                data: {},
+                news: []
             }
         },
-        mounted() {},
-        created() {},
+        watch: {
+            '$route.path': function (val, oldVal) {
+                this.init_component();
+            }
+        },
+        mounted() {
+
+        },
+        created() {
+            this.init_component();
+            this.getNews();
+        },
         components: {
             WebsiteNavbar,
         },
         methods: {
-
+            swiperInit() {
+                this.$nextTick(function() {
+                    $('.parent-spinner').fadeOut();
+                    var swiper = new Swiper(".blogs-swiper", {
+                        slidesPerView: 3.5,
+                        spaceBetween: 5,
+                        centeredSlides: true,
+                        loop: true,
+                        autoplay: {
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                        breakpoints: {
+                            360: {
+                                slidesPerView: 2,
+                                centeredSlides: false,
+                                spaceBetween: 1,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                            },
+                            768: {
+                                slidesPerView: 2.5,
+                                spaceBetween: 20,
+                            },
+                            1024: {
+                                slidesPerView: 3.5,
+                                spaceBetween: 30,
+                            },
+                            1224: {
+                                slidesPerView: 3.5,
+                                spaceBetween: 5,
+                            },
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
+                    });
+                })
+            },
+            init_component(){
+                this.getSingleNewsDetail();
+            },
+            getSingleNewsDetail() {
+                axios.get('/get-single-news-detail/' + this.$route.params.id)
+                .then((response) => {
+                    this.data = response.data
+                });
+            },
+            getNews() {
+                axios.get('/landingpage/news')
+                .then((response) => {
+                    this.news = response.data
+                    this.swiperInit()
+                });
+            },
         },
     };
 
