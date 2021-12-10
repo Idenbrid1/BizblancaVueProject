@@ -94,14 +94,14 @@
                 <ul class="main-navigation float-right d-flex align-items-center">
                     <li class="header-block-link" >
                         <router-link v-if="this.isAuth == false" class="register-desktop-btn ml-2" data-toggle="collapse" :to="{ name: 'Signin' }">
-                            <i class="fas fa-users"></i> Sign In</router-link>
+                            <i class="fas fa-users"></i>&nbsp;Sign In</router-link>
                         <a v-if="this.isAuth == true" class="register-desktop-btn ml-2" @click="logoutUser()">SignOut</a>
                     </li>
                     <div class="dropdown">
                     </div>
                     <li class="header-block-link">
                         <router-link v-if="this.isAuth == false" class="register-desktop-btn ml-2" data-toggle="collapse" :to="{ name: 'Signin' }">
-                            <i class="fas fa-address-book" aria-hidden="true"></i>Create CV</router-link>
+                            <i class="fas fa-address-book" aria-hidden="true"></i>&nbsp;Create CV</router-link>
                     </li>
                     <li class="header-block-link">
                             <router-link v-if="this.isAuth == false" class="postjob-desktop-btn mr-2" data-toggle="collapse" :to="{ name: 'Signin' }">

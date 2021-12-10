@@ -31,6 +31,7 @@ import TermsCondition from './components/pages/website/TermsConditionComponent.v
 import Faq from './components/pages/website/FaqComponent.vue';
 import PrivacyPolicy from './components/pages/website/PrivacyPolicyComponent.vue';
 import AboutUs from './components/pages/website/AboutUsComponent.vue';
+import NewsDetail from './components/pages/website/NewsDetailComponent.vue';
 import Services from './components/pages/website/ServicesComponent.vue';
 
 Vue.use(VueRouter);
@@ -185,6 +186,11 @@ const router = new VueRouter({
             path: '/contact-us',
             name: 'ContactUs',
             component: ContactUs
+        },
+        {
+            path: '/news-detail',
+            name: 'NewsDetail',
+            component: NewsDetail
         },
         {
             path: '/candidate-cv',
