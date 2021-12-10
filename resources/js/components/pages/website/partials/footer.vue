@@ -105,6 +105,7 @@
                     <router-link :to="{ name: 'Services' }" class="nav__item">Services</router-link><span
                         class="seprate-line"></span>
                     <router-link :to="{ name: 'BlogDetail' }" class="nav__item">Blogs</router-link><span class="seprate-line"></span>
+                    <router-link :to="{ name: 'NewsDetail' }" class="nav__item">News</router-link><span class="seprate-line"></span>
                     <router-link class="nav__item" :to="{ name: 'AboutUs' }">About</router-link>
                 </div>
             </div>

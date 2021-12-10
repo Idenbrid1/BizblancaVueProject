@@ -5775,3 +5775,11 @@ progress {
 	clip-path: polygon(57% 13%, 67% 13%, 83% 8%, 100% 0%, 100% 100%, 0% 100%, 0 0, 0 0, 0 0, 38% 10%);
 }
 /* about-us */
+/* news detail */
+.news-detail-img{
+	height: 647px;
+	width: 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/* news detail */
