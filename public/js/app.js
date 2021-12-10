@@ -9813,6 +9813,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     deleteAwardArray: function deleteAwardArray(index) {
       this.$delete(this.profile.candidate_awards, index);
+      this.award_push_array = {
+        name: '',
+        date: ''
+      };
     },
     existAwardArray: function existAwardArray() {
       var _this8 = this;
@@ -9833,7 +9837,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       };
     },
     addMoreSkill: function addMoreSkill() {
-      this.addMoreDBSkill = true;
+      if (this.profile.candidate_skills.length == 10) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Limit Exceeded'
+        });
+        this.addMoreDBSkill = false;
+      } else {
+        this.addMoreDBSkill = true;
+      }
     },
     clearSkillArray: function clearSkillArray() {
       this.getCandidateDashboardData();
@@ -9853,16 +9865,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
 
-      if (this.skill_push_array.name) {
-        this.profile.candidate_skills.push({
-          name: this.skill_push_array.name,
-          level: this.skill_push_array.level
-        });
-        this.addMoreDBSkill = false;
-        this.skill_push_array = {
-          name: '',
-          level: ''
-        };
+      if (this.profile.candidate_skills.length != 10) {
+        if (this.skill_push_array.name) {
+          this.profile.candidate_skills.push({
+            name: this.skill_push_array.name,
+            level: this.skill_push_array.level
+          });
+          this.addMoreDBSkill = false;
+          this.skill_push_array = {
+            name: '',
+            level: ''
+          };
+        }
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/skill', this.profile.candidate_skills).then(function (res) {
@@ -9891,34 +9905,55 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     addToSkillRecord: function addToSkillRecord() {
-      if (this.skill_push_array.name == '') {
+      if (this.profile.candidate_language.length == 10) {
         Swal.fire({
           icon: 'error',
-          title: 'Oops...',
-          text: 'Please Fill!'
+          title: 'Limit Exceeded'
         });
-        return false;
       } else {
-        if (this.existSkillArray() == true) {
-          this.profile.candidate_skills.push({
-            name: this.award_push_array.name,
-            level: this.award_push_array.level
-          });
-          this.skill_push_array = {
-            name: '',
-            level: ''
-          };
-        } else {
+        if (this.skill_push_array.name == '') {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Skill Already Exist!🥺'
+            text: 'Please Fill!'
           });
+          return false;
+        } else {
+          if (this.existSkillArray() == true) {
+            this.profile.candidate_skills.push({
+              name: this.award_push_array.name,
+              level: this.award_push_array.level
+            });
+
+            if (this.profile.candidate_skills.length == 10) {
+              Swal.fire({
+                icon: 'error',
+                title: 'Limit Exceeded'
+              });
+              this.addMoreDBSkill = false;
+              return false;
+            }
+
+            this.skill_push_array = {
+              name: '',
+              level: ''
+            };
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Skill Already Exist!🥺'
+            });
+          }
         }
       }
     },
     deleteSkillArray: function deleteSkillArray(index) {
       this.$delete(this.profile.candidate_skills, index);
+      this.skill_push_array = {
+        name: '',
+        level: ''
+      };
     },
     existSkillArray: function existSkillArray() {
       var _this10 = this;
@@ -9992,7 +10027,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     addMoreWorkExperience: function addMoreWorkExperience() {
-      this.addMoreDBWorkExperience = true;
+      if (this.profile.candidate_experience.length == 3) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Limit Exceeded'
+        });
+        this.addMoreDBWorkExperience = false;
+      } else {
+        this.addMoreDBWorkExperience = true;
+      }
     },
     clearWorkExperienceArray: function clearWorkExperienceArray() {
       this.getCandidateDashboardData();
@@ -10015,22 +10058,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
 
-      if (this.work_experience_push_array.company_name) {
-        this.profile.candidate_experience.push({
-          company_name: this.work_experience_push_array.company_name,
-          designation: this.work_experience_push_array.designation,
-          end_date: this.work_experience_push_array.end_date,
-          is_working_currently: this.work_experience_push_array.is_working_currently,
-          start_date: this.work_experience_push_array.start_date
-        });
-        this.addMoreDBWorkExperience = false;
-        this.work_experience_push_array = {
-          company_name: '',
-          designation: '',
-          end_date: '',
-          is_working_currently: '',
-          start_date: ''
-        };
+      if (this.profile.candidate_experience.length != 3) {
+        if (this.work_experience_push_array.company_name) {
+          this.profile.candidate_experience.push({
+            company_name: this.work_experience_push_array.company_name,
+            designation: this.work_experience_push_array.designation,
+            end_date: this.work_experience_push_array.end_date,
+            is_working_currently: this.work_experience_push_array.is_working_currently,
+            start_date: this.work_experience_push_array.start_date
+          });
+          this.addMoreDBWorkExperience = false;
+          this.work_experience_push_array = {
+            company_name: '',
+            designation: '',
+            end_date: '',
+            is_working_currently: '',
+            start_date: ''
+          };
+        }
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/experience', this.profile.candidate_experience).then(function (res) {
@@ -10062,41 +10107,65 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     addToWorkExperienceRecord: function addToWorkExperienceRecord() {
-      if (this.work_experience_push_array.company_name == '') {
+      if (this.profile.candidate_experience.length == 3) {
         Swal.fire({
           icon: 'error',
-          title: 'Oops...',
-          text: 'Please Fill!'
+          title: 'Limit Exceeded'
         });
-        return false;
       } else {
-        if (this.existWorkExperienceArray() == true) {
-          this.profile.candidate_experience.push({
-            company_name: this.work_experience_push_array.company_name,
-            designation: this.work_experience_push_array.designation,
-            end_date: this.work_experience_push_array.end_date,
-            is_working_currently: this.work_experience_push_array.is_working_currently,
-            start_date: this.work_experience_push_array.start_date
-          });
-          this.work_experience_push_array = {
-            company_name: '',
-            designation: '',
-            end_date: '',
-            is_working_currently: '',
-            start_date: ''
-          };
-        } else {
+        if (this.work_experience_push_array.company_name == '') {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Work Experience Already Exist!🥺',
-            timer: 1500
+            text: 'Please Fill!'
           });
+          return false;
+        } else {
+          if (this.existWorkExperienceArray() == true) {
+            this.profile.candidate_experience.push({
+              company_name: this.work_experience_push_array.company_name,
+              designation: this.work_experience_push_array.designation,
+              end_date: this.work_experience_push_array.end_date,
+              is_working_currently: this.work_experience_push_array.is_working_currently,
+              start_date: this.work_experience_push_array.start_date
+            });
+
+            if (this.profile.candidate_experience.length == 3) {
+              Swal.fire({
+                icon: 'error',
+                title: 'Limit Exceeded'
+              });
+              this.addMoreDBWorkExperience = false;
+              return false;
+            }
+
+            this.work_experience_push_array = {
+              company_name: '',
+              designation: '',
+              end_date: '',
+              is_working_currently: '',
+              start_date: ''
+            };
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Work Experience Already Exist!🥺',
+              timer: 1500
+            });
+          }
         }
       }
     },
     deleteWorkExperienceArray: function deleteWorkExperienceArray(index) {
       this.$delete(this.profile.candidate_experience, index);
+      this.work_experience_push_array = {
+        company_name: '',
+        designation: '',
+        end_date: '',
+        is_working_currently: '',
+        start_date: ''
+      };
     },
     existWorkExperienceArray: function existWorkExperienceArray() {
       var _this13 = this;
@@ -10120,7 +10189,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       };
     },
     addMoreProject: function addMoreProject() {
-      this.addMoreDBProject = true;
+      if (this.profile.candidate_projects.length == 3) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Limit Exceeded'
+        });
+        this.addMoreDBProject = false;
+      } else {
+        this.addMoreDBProject = true;
+      }
     },
     clearProjectArray: function clearProjectArray() {
       this.getCandidateDashboardData();
@@ -10143,22 +10220,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       });
 
-      if (this.project_push_array.name) {
-        this.profile.candidate_projects.push({
-          name: this.project_push_array.name,
-          link: this.project_push_array.link,
-          start_date: this.project_push_array.start_date,
-          end_date: this.project_push_array.end_date,
-          description: this.project_push_array.description
-        });
-        this.addMoreDBProject = false;
-        this.project_push_array = {
-          name: '',
-          link: '',
-          start_date: '',
-          end_date: '',
-          description: ''
-        };
+      if (this.profile.candidate_projects.length != 3) {
+        if (this.project_push_array.name) {
+          this.profile.candidate_projects.push({
+            name: this.project_push_array.name,
+            link: this.project_push_array.link,
+            start_date: this.project_push_array.start_date,
+            end_date: this.project_push_array.end_date,
+            description: this.project_push_array.description
+          });
+          this.addMoreDBProject = false;
+          this.project_push_array = {
+            name: '',
+            link: '',
+            start_date: '',
+            end_date: '',
+            description: ''
+          };
+        }
       }
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/project', this.profile.candidate_projects).then(function (res) {
@@ -10190,40 +10269,64 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     addToProjectRecord: function addToProjectRecord() {
-      if (this.project_push_array.name == '' && this.project_push_array.link == '') {
+      if (this.profile.candidate_projects.length == 3) {
         Swal.fire({
           icon: 'error',
-          title: 'Oops...',
-          text: 'Please Fill!'
+          title: 'Limit Exceeded'
         });
-        return false;
       } else {
-        if (this.existProjectArray() == true) {
-          this.profile.candidate_projects.push({
-            name: this.project_push_array.name,
-            link: this.project_push_array.link,
-            start_date: this.project_push_array.start_date,
-            end_date: this.project_push_array.end_date,
-            description: this.project_push_array.description
-          });
-          this.project_push_array = {
-            name: '',
-            link: '',
-            start_date: '',
-            end_date: '',
-            description: ''
-          };
-        } else {
+        if (this.project_push_array.name == '' && this.project_push_array.link == '') {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Project Already Exist!🥺'
+            text: 'Please Fill!'
           });
+          return false;
+        } else {
+          if (this.existProjectArray() == true) {
+            this.profile.candidate_projects.push({
+              name: this.project_push_array.name,
+              link: this.project_push_array.link,
+              start_date: this.project_push_array.start_date,
+              end_date: this.project_push_array.end_date,
+              description: this.project_push_array.description
+            });
+
+            if (this.profile.candidate_projects.length == 3) {
+              Swal.fire({
+                icon: 'error',
+                title: 'Limit Exceeded'
+              });
+              this.addMoreDBProject = false;
+              return false;
+            }
+
+            this.project_push_array = {
+              name: '',
+              link: '',
+              start_date: '',
+              end_date: '',
+              description: ''
+            };
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Project Already Exist!🥺'
+            });
+          }
         }
       }
     },
     deleteProjectArray: function deleteProjectArray(index) {
       this.$delete(this.profile.candidate_projects, index);
+      this.project_push_array = {
+        name: '',
+        link: '',
+        start_date: '',
+        end_date: '',
+        description: ''
+      };
     },
     existProjectArray: function existProjectArray() {
       var _this15 = this;
@@ -47389,7 +47492,7 @@ var render = function () {
                               attrs: {
                                 src:
                                   "/storage/images/companies/" +
-                                  _vm.searchData[index].logo,
+                                  _vm.searchData[index].company.logo,
                                 alt: "Company Logo",
                               },
                             }),
@@ -47399,7 +47502,9 @@ var render = function () {
                               { staticClass: "company-h line-clamp-1" },
                               [
                                 _vm._v(
-                                  _vm._s(_vm.searchData[index].company_name)
+                                  _vm._s(
+                                    _vm.searchData[index].company.company_name
+                                  )
                                 ),
                               ]
                             ),
@@ -47410,7 +47515,9 @@ var render = function () {
                           _c("div", { staticClass: "job-header" }, [
                             _c("h6", { staticClass: "job-title mb-0" }, [
                               _vm._v(
-                                _vm._s(_vm.searchData[index].company_name)
+                                _vm._s(
+                                  _vm.searchData[index].company.company_name
+                                )
                               ),
                             ]),
                             _vm._v(" "),
@@ -47418,7 +47525,9 @@ var render = function () {
                           ]),
                           _vm._v(" "),
                           _c("p", { staticClass: "job-description" }, [
-                            _vm._v(_vm._s(_vm.searchData[index].description)),
+                            _vm._v(
+                              _vm._s(_vm.searchData[index].company.description)
+                            ),
                           ]),
                           _vm._v(" "),
                           _c("div", { staticClass: "job-content-wrap" }, [
@@ -47436,7 +47545,8 @@ var render = function () {
                                     _vm._v(
                                       _vm._s(
                                         _vm._f("moment")(
-                                          _vm.searchData[index].created_at,
+                                          _vm.searchData[index].company
+                                            .created_at,
                                           "YYYY-MM-DD"
                                         )
                                       )
@@ -47454,7 +47564,9 @@ var render = function () {
                                   _vm._v(" "),
                                   _c("span", [
                                     _vm._v(
-                                      _vm._s(_vm.searchData[index].experience)
+                                      _vm._s(
+                                        _vm.searchData[index].company.experience
+                                      )
                                     ),
                                   ]),
                                 ]),
@@ -47471,7 +47583,10 @@ var render = function () {
                                   _vm._v(" "),
                                   _c("span", [
                                     _vm._v(
-                                      _vm._s(_vm.searchData[index].salary_range)
+                                      _vm._s(
+                                        _vm.searchData[index].company
+                                          .salary_range
+                                      )
                                     ),
                                   ]),
                                 ]),
@@ -47489,7 +47604,9 @@ var render = function () {
                                   _vm._v(" "),
                                   _c("span", [
                                     _vm._v(
-                                      _vm._s(_vm.searchData[index].location)
+                                      _vm._s(
+                                        _vm.searchData[index].company.location
+                                      )
                                     ),
                                   ]),
                                 ]),
@@ -47505,7 +47622,11 @@ var render = function () {
                                   }),
                                   _vm._v(" "),
                                   _c("span", [
-                                    _vm._v(_vm._s(_vm.searchData[index].shift)),
+                                    _vm._v(
+                                      _vm._s(
+                                        _vm.searchData[index].company.shift
+                                      )
+                                    ),
                                   ]),
                                 ]),
                                 _vm._v(" "),
@@ -47519,7 +47640,9 @@ var render = function () {
                                   _vm._v(" "),
                                   _c("span", [
                                     _vm._v(
-                                      _vm._s(_vm.searchData[index].job_type)
+                                      _vm._s(
+                                        _vm.searchData[index].company.job_type
+                                      )
                                     ),
                                   ]),
                                 ]),
@@ -47539,7 +47662,8 @@ var render = function () {
                                         to: {
                                           name: "CompanyDetail",
                                           params: {
-                                            id: _vm.searchData[index].id,
+                                            id: _vm.searchData[index].company
+                                              .id,
                                           },
                                         },
                                       },

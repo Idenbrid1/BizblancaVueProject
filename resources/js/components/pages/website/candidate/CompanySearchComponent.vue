@@ -51,12 +51,12 @@
                     <div class="job-list m-0 mb-3" v-if="index < searchData.length"
                         v-for="(item, index) in companiesToShow" :key="index">
                         <div class="company-logo col-auto py-2">
-                            <img :src="'/storage/images/companies/'+searchData[index].logo" alt="Company Logo" />
-                            <span class="company-h line-clamp-1">{{searchData[index].company_name}}</span>
+                            <img :src="'/storage/images/companies/'+searchData[index].company.logo" alt="Company Logo" />
+                            <span class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">{{searchData[index].company_name}}</h6>
+                                <h6 class="job-title mb-0">{{searchData[index].company.company_name}}</h6>
                                 <!-- <i class="fa fa-star" aria-hidden="true"></i>
                                              <i class="fa fa-star" aria-hidden="true"></i>
                                              <i class="fa fa-star" aria-hidden="true"></i>
@@ -69,45 +69,45 @@
                                 </div>
                             </div>
 
-                            <p class="job-description">{{searchData[index].description}}</p>
+                            <p class="job-description">{{searchData[index].company.description}}</p>
                             <div class="job-content-wrap">
                                 <div class="job-dynamic-values">
                                     <ul>
                                         <li>
                                             <img src="/website/assets/images/calendar-job.svg" alt="img">
-                                            <span>{{searchData[index].created_at | moment("YYYY-MM-DD")}}</span>
+                                            <span>{{searchData[index].company.created_at | moment("YYYY-MM-DD")}}</span>
                                         </li>
                                         <li>
                                             <img src="/website/assets/images/experience-job.svg" alt="">
-                                            <span>{{searchData[index].experience}}</span>
+                                            <span>{{searchData[index].company.experience}}</span>
                                         </li>
                                     </ul>
                                     <ul>
                                         <li>
                                             <img src="/website/assets/images/money-job.svg" alt="">
-                                            <span>{{searchData[index].salary_range}}</span>
+                                            <span>{{searchData[index].company.salary_range}}</span>
                                         </li>
                                         <li>
                                             <img height="16px" width="10px" style="margin:0px 3px;"
                                                 src="/website/assets/images/pin.svg" alt="img">
-                                            <span>{{searchData[index].location}}</span>
+                                            <span>{{searchData[index].company.location}}</span>
                                         </li>
                                     </ul>
                                     <ul>
                                         <li>
                                             <img src="/website/assets/images/suitcase-job.svg" alt="">
-                                            <span>{{searchData[index].shift}}</span>
+                                            <span>{{searchData[index].company.shift}}</span>
                                         </li>
                                         <li>
                                             <img src="/website/assets/images/switch-job.svg" alt="">
-                                            <span>{{searchData[index].job_type}}</span>
+                                            <span>{{searchData[index].company.job_type}}</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <ul class="job-list-fav m-0">
                                     <li>
                                         <router-link class="job-view-btn" data-toggle="collapse"
-                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].id } }">View
+                                            :to="{ name: 'CompanyDetail', params: { id: searchData[index].company.id } }">View
                                         </router-link>
                                     </li>
                                 </ul>
