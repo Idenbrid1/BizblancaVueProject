@@ -190,7 +190,7 @@ class CandidateController extends Controller
     {
         $user = Auth::user();
         $candidate = Candidate::where('user_id', $user->id)->first();
-        if($request->isWorkingCurrently == 0)
+        if($request->isWorkingCurrently == 1)
         {
             $candidate->current_position = $request->current_position;
             $candidate->current_job = $request->current_position;
