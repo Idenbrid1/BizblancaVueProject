@@ -3,12 +3,24 @@
     .list__services-company{
         margin-top: 30px;
     }
+    .news-detail-img{
+        height: 216px;
+    }
+    .news-date{
+        padding: 10px 20px;
+    }
     .mp-icon{
         width: 35px;
         height: 35px;
     }
     .services-company-box{
         margin: 20px 0px;
+    }
+    .news-date>span:nth-child(1){
+        font-size: 20px;
+    }
+    .news-date>span:nth-child(2){
+        font-size: 12px;
     }
     .services-company-box>.card-service-img{
         width: 80px;

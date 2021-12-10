@@ -5781,5 +5781,25 @@ progress {
 	width: 100%;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	display: flex;
+	justify-content: flex-end;
+}
+.news-date{
+	padding: 0px 30px;
+	height: fit-content;
+	background: #081351 0% 0% no-repeat padding-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+}
+.news-date>span:nth-child(1){
+	font-size: 50px;
+	margin: 0px;
+	padding: 0px;
+}
+.news-date>span:nth-child(2){
+	font-size: 25px;
 }
 /* news detail */

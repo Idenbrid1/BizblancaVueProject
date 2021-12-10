@@ -188,7 +188,7 @@ const router = new VueRouter({
             component: ContactUs
         },
         {
-            path: '/news-detail',
+            path: '/news-detail/:id',
             name: 'NewsDetail',
             component: NewsDetail
         },

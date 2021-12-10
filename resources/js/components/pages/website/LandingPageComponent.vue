@@ -95,8 +95,8 @@
                                             <p class="blog-description line-text-3">
                                                 {{item.description}}
                                             </p>
-                                            <a class="blog-news-btn" href="#">Read More
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                            <router-link :to="{ name: 'NewsDetail',  params: { id: item.id } }" class="blog-news-btn">Read More
+                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></router-link>
                                         </div>
                                     </div>
                                     <!--  -->
