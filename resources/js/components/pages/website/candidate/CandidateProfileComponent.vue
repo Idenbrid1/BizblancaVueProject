@@ -1000,7 +1000,7 @@
                                                     </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="cinic">CNIC</label>
+                                                            <label for="cinic">CNIC <small><b>Without dashes</b></small></label>
                                                             <input name="cnic" type="number" class="form-control"
                                                                 placeholder="Enter Cnic" value="" :max="13"
                                                                 v-model="basic_information_record.cnic" />

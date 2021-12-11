@@ -102,11 +102,11 @@
                                                     </div>
                                                     <div class="login-button">
                                                         <button>Sign Up</button>
-                                                        <a href="#">or<br />
-                                                            Sign up with</a>
+                                                        <!-- <a href="#">or<br />
+                                                            Sign up with</a> -->
                                                     </div>
                                                     <div class="direct-login">
-                                                        <ul class="direct-login-icons">
+                                                        <!-- <ul class="direct-login-icons">
                                                             <li>
                                                                 <a href="#"><img src="/website/assets/images/search.svg"
                                                                         alt="google" /></a>
@@ -126,7 +126,7 @@
                                                                         src="/website/assets/images/github-logo_icon.png"
                                                                         alt="github" /></a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                         <span>Already have an account?
                                                             <router-link data-toggle="collapse"
                                                                 :to="{ name: 'Signin' }">Login</router-link>

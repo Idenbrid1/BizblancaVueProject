@@ -334,28 +334,6 @@
                                             class="fas fa-angle-down"></i></a>
                                 </div>
                             </div>
-                            <div class="help-queries">
-                                <h4>Q. What Type of job posts can I apply for?</h4>
-                                <p>
-                                    At BizBlanca, we provide a platform to seek jobs and hire employees related to I.T
-                                    field only. So your job post must be relevant to Information Technology.
-                                </p>
-                                <div>
-                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
-                                            class="fas fa-angle-down"></i></a>
-                                </div>
-                            </div>
-                            <div class="help-queries">
-                                <h4>Q. I didn’t get an email. What should I do?</h4>
-                                <p>
-                                    If you did not receive the confirmation or support email from us, you should check
-                                    your junk or spam folder.
-                                </p>
-                                <div>
-                                    <a class="read-more-descrp" href="">Read More &nbsp;<i
-                                            class="fas fa-angle-down"></i></a>
-                                </div>
-                            </div>
                         </div>
                     </section>
                 </div>

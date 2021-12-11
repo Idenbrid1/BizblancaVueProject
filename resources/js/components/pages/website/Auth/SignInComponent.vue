@@ -57,11 +57,11 @@
                                     </div>
                                     <div class="login-button">
                                         <button>Login</button>
-                                        <router-link data-toggle="collapse" :to="{ name: 'Signin' }">or<br />
-                                            Sign in with</router-link>
+                                        <!-- <router-link data-toggle="collapse" :to="{ name: 'Signin' }">or<br />
+                                            Sign in with</router-link> -->
                                     </div>
                                     <div class="direct-login">
-                                        <ul class="direct-login-icons">
+                                        <!-- <ul class="direct-login-icons">
                                             <li>
                                                 <a href="#"><img src="/website/assets/images/search.svg"
                                                         alt="google" /></a>
@@ -78,7 +78,7 @@
                                                 <a href="#"><img src="/website/assets/images/github-logo_icon.png"
                                                         alt="github" /></a>
                                             </li>
-                                        </ul>
+                                        </ul> -->
                                         <span>Don't have an account?
                                             <router-link data-toggle="collapse" :to="{ name: 'Signup' }">
                                                 Sign Up</router-link>
