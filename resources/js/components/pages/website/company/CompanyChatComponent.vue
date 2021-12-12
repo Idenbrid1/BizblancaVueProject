@@ -13,7 +13,7 @@
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CompanyNavbar from '../partials/CompanyNavbar.vue';
-    import pagination from 'laravel-vue-pagination';
+    // import pagination from 'laravel-vue-pagination';
     import Multiselect from 'vue-multiselect'
     export default {
         data() {
@@ -73,7 +73,7 @@
             WebsiteNavbar,
             CompanyNavbar,
             Multiselect,
-            pagination,
+            // pagination,
         },
         methods: {
             addSkill(newTag) {
