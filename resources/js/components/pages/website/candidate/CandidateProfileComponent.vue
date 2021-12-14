@@ -90,13 +90,13 @@
                                 <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/settings.svg" alt="TabsIcon"
                                             style="height: 26px;"></a></li>
-                                <li><a @click="openProfileTab()"><img class="icons-tab"
+                                <!-- <li><a @click="openProfileTab()"><img class="icons-tab"
                                             src="/website/assets/images/google-docs.svg" alt="TabsIcon"
-                                            style="height: 26px;"></a></li>
+                                            style="height: 26px;"></a></li> -->
                             </ul>
 
                             <!-- Modal Tab start -->
-                            <div id="ProfileTabMobileNav" class="Profile-tab-mobile-nav" @click="closeProfileTab()">
+                            <div id="Profile-tab-mobile-nav" class="Profile-tab-mobile-nav" @click="closeProfileTab()">
                                 <div class="row no-gutters modal-tab-conatiner">
                                     <div class="icons-modal">
                                         <ul class="mobile-modal-tabs-icons p-0">
@@ -117,8 +117,6 @@
                                             <li><img class="icons-tab" src="/website/assets/images/overtime.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
                                             <li><img class="icons-tab" src="/website/assets/images/settings.svg"
-                                                    alt="TabsIcon" style="height: 26px;"></li>
-                                            <li><img class="icons-tab" src="/website/assets/images/google-docs.svg"
                                                     alt="TabsIcon" style="height: 26px;"></li>
                                         </ul>
                                     </div>
@@ -146,10 +144,10 @@
                                                 <a class="nav-link nav-link" data-toggle="tab"
                                                     href="#current-job">Current Job</a>
                                             </li>
-                                            <li class="nav-item">
+                                            <!-- <li class="nav-item">
                                                 <a class="nav-link nav-link" data-toggle="tab" href="#desire-job">Desire
                                                     job</a>
-                                            </li>
+                                            </li> -->
                                             <li class="nav-item">
                                                 <a class="nav-link nav-link" data-toggle="tab"
                                                     href="#work-experience">Work Experience</a>

@@ -50,7 +50,7 @@
                             </ul>
 
                             <!-- Modal Tab start -->
-                            <div id="ProfileTabMobileNav" class="Profile-tab-mobile-nav" @click="closeProfileTab()">
+                            <div id="Profile-tab-mobile-nav" class="Profile-tab-mobile-nav" @click="closeProfileTab()">
                                 <div class="row no-gutters modal-tab-conatiner">
                                     <div class="icons-modal">
                                         <ul class="mobile-modal-tabs-icons p-0">
