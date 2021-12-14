@@ -2846,6 +2846,13 @@ __webpack_require__.r(__webpack_exports__);
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   methods: {
+    socialLogin: function socialLogin() {
+      Swal.fire({
+        icon: 'info',
+        title: 'Login',
+        text: 'Credentials Not Match'
+      });
+    },
     Login: function Login() {
       var _this = this;
 
@@ -7137,7 +7144,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 //
 //
 //
@@ -7252,35 +7258,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
- // import CompanyNavbar from '../partials/CompanyNavbar.vue';
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      data: {},
-      related_candidate: ''
+      data: {}
     };
   },
   created: function created() {
     this.getSingleCandidateDetail();
-  },
-  components: {
-    WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"] // CompanyNavbar,
-
   },
   methods: {
     getSingleCandidateDetail: function getSingleCandidateDetail() {
@@ -7288,8 +7274,10 @@ __webpack_require__.r(__webpack_exports__);
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-single-candidate-detail/' + this.$route.params.id).then(function (response) {
         _this.data = response.data.job;
-        _this.related_candidate = response.data.related_candidate;
       });
+    },
+    download: function download() {
+      window.open('/download-cv/', '_blank');
     }
   }
 });
@@ -37292,401 +37280,344 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("WebsiteNavbar"),
-      _vm._v(" "),
-      _c("div", { staticClass: "candidate-profile-container container" }, [
-        _c("div", { staticClass: "row no-gutters" }, [
-          _c("div", { staticClass: "col-5 col-md-3" }, [
-            _c("div", { staticClass: "candidate-pic-detail" }, [
-              _vm.data.profile_image
-                ? _c("div", {
-                    staticClass: "candidate-detail-img",
-                    style: {
-                      "background-image":
-                        "url(/storage/images/candidates/profile/" +
-                        _vm.data.profile_image +
-                        ")",
-                    },
-                  })
-                : _c("div", { staticClass: "candidate-detail-img" }, [
-                    _vm._v(" not avaiable"),
-                  ]),
+  return _c("div", [
+    _c("div", { staticClass: "candidate-profile-container container" }, [
+      _c("div", { staticClass: "row no-gutters" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-7 col-md-9 candidate-detail-wrap" }, [
+          _c("div", [
+            _c("ul", { staticClass: "candidate-detail-list" }, [
+              _c("li", [_c("p", [_vm._v(_vm._s(_vm.data.full_name))])]),
               _vm._v(" "),
-              _vm._m(0),
+              _c("li", { staticClass: "v-on-d" }, [
+                _c("img", {
+                  attrs: {
+                    src: "/website/assets/images/pin-job.svg",
+                    alt: "img",
+                  },
+                }),
+                _vm._v(_vm._s(_vm.data.city)),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "v-on-d" }, [
+                _c(
+                  "a",
+                  {
+                    on: {
+                      click: function ($event) {
+                        return _vm.download()
+                      },
+                    },
+                  },
+                  [
+                    _c("i", { staticClass: "fas fa-download" }),
+                    _vm._v(" Download"),
+                  ]
+                ),
+              ]),
             ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-7 col-md-9 candidate-detail-wrap" }, [
-            _c("div", [
-              _c("ul", { staticClass: "candidate-detail-list" }, [
-                _c("li", [_c("p", [_vm._v(_vm._s(_vm.data.full_name))])]),
-                _vm._v(" "),
-                _c("li", { staticClass: "v-on-d" }, [
+            _vm._v(" "),
+            _c("p", { staticClass: "candidate-designation" }, [
+              _vm._v(_vm._s(_vm.data.bio)),
+            ]),
+            _vm._v(" "),
+            _c(
+              "ul",
+              { staticClass: "v-on-m m-0 p-0 pt-2 candidate-detail-list-m" },
+              [
+                _c("li", [
                   _c("img", {
                     attrs: {
                       src: "/website/assets/images/pin-job.svg",
                       alt: "",
                     },
                   }),
-                  _vm._v(" " + _vm._s(_vm.data.city)),
+                  _vm._v(_vm._s(_vm.data.city)),
                 ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _vm._m(1),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "candidate-profile-detail-wrap" }, [
+        _c("ul", { staticClass: "row no-gutters candidate-profile-detail" }, [
+          _c("li", { staticClass: "col-12 col-md-3 candidate-detail-label" }, [
+            _vm._v("CONTACT INFORMATION:"),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+            _c("ul", { staticClass: "candidate-info" }, [
+              _c("li", [
+                _c("span", [_vm._v("Phone:")]),
+                _vm._v(_vm._s(_vm.data.phone)),
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "candidate-designation" }, [
-                _vm._v(_vm._s(_vm.data.bio)),
+              _c("li", [
+                _c("span", [_vm._v("Address:")]),
+                _vm._v(_vm._s(_vm.data.city)),
               ]),
               _vm._v(" "),
-              _c(
-                "ul",
-                { staticClass: "v-on-m m-0 p-0 pt-2 candidate-detail-list-m" },
-                [
-                  _c("li", [
-                    _c("img", {
-                      attrs: {
-                        src: "/website/assets/images/pin-job.svg",
-                        alt: "",
-                      },
-                    }),
-                    _vm._v(" " + _vm._s(_vm.data.city)),
-                  ]),
-                ]
-              ),
+              _c("li", [
+                _c("span", [_vm._v("Email:")]),
+                _c("u", [_vm._v(_vm._s(_vm.data.email))]),
+              ]),
             ]),
-            _vm._v(" "),
-            _vm._m(1),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "candidate-profile-detail-wrap" }, [
-          _c("ul", { staticClass: "row no-gutters candidate-profile-detail" }, [
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters basic-detail-title candidate-profile-detail",
+          },
+          [
             _c(
               "li",
               { staticClass: "col-12 col-md-3 candidate-detail-label" },
-              [_vm._v("CONTACT INFORMATION:")]
+              [_vm._v("BASIC INFORMATION:")]
             ),
             _vm._v(" "),
             _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
               _c("ul", { staticClass: "candidate-info" }, [
                 _c("li", [
-                  _c("span", [_vm._v("Phone:")]),
-                  _vm._v(_vm._s(_vm.data.phone)),
+                  _c("span", [_vm._v("Date of Birth:")]),
+                  _vm._v(_vm._s(_vm.data.date_of_birth)),
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c("span", [_vm._v("Address:")]),
-                  _vm._v(_vm._s(_vm.data.location)),
+                  _c("span", [_vm._v("Gender:")]),
+                  _vm._v(_vm._s(_vm.data.gender)),
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c("span", [_vm._v("Email:")]),
-                  _c("u", [_vm._v(_vm._s(_vm.data.email))]),
+                  _c("span", [_vm._v("City:")]),
+                  _vm._v(_vm._s(_vm.data.city)),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("Zip Code:")]),
+                  _vm._v(_vm._s(_vm.data.zipcode)),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("CNIC:")]),
+                  _vm._v(_vm._s(_vm.data.cnic)),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("span", [_vm._v("Bio:")]),
+                  _vm._v(_vm._s(_vm.data.bio)),
                 ]),
               ]),
             ]),
-          ]),
-          _vm._v(" "),
-          _c(
-            "ul",
-            {
-              staticClass:
-                "row no-gutters basic-detail-title candidate-profile-detail",
-            },
-            [
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters education-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("EDUCATION:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
               _c(
-                "li",
-                { staticClass: "col-12 col-md-3 candidate-detail-label" },
-                [_vm._v("BASIC INFORMATION:")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-9 candidate-detail-info" },
-                [
-                  _c("ul", { staticClass: "candidate-info" }, [
-                    _c("li", [
-                      _c("span", [_vm._v("Date of Birth:")]),
-                      _vm._v(_vm._s(_vm.data.date_of_birth)),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("span", [_vm._v("Gender:")]),
-                      _vm._v(_vm._s(_vm.data.gender)),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("span", [_vm._v("City:")]),
-                      _vm._v(_vm._s(_vm.data.city)),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("span", [_vm._v("Zip Code:")]),
-                      _vm._v(_vm._s(_vm.data.zip_code)),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("span", [_vm._v("CNIC:")]),
-                      _vm._v(_vm._s(_vm.data.cnic)),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("span", [_vm._v("Bio:")]),
-                      _vm._v(_vm._s(_vm.data.bio)),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "ul",
-            {
-              staticClass:
-                "row no-gutters education-detail-title candidate-profile-detail",
-            },
-            [
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-3 candidate-detail-label" },
-                [_vm._v("EDUCATION:")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-9 candidate-detail-info" },
-                [
-                  _c(
-                    "ul",
-                    { staticClass: "candidate-info" },
-                    _vm._l(_vm.data.candidate_education, function (edu, index) {
-                      return _c("li", { key: index }, [
-                        _c("span", [_vm._v(_vm._s(edu.school_type) + ":")]),
-                        _vm._v(
-                          _vm._s(edu.start_date) +
-                            " to " +
-                            _vm._s(edu.end_date) +
-                            " - " +
-                            _vm._s(edu.school_name)
-                        ),
-                      ])
-                    }),
-                    0
-                  ),
-                ]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "ul",
-            {
-              staticClass:
-                "row no-gutters work-detail-title candidate-profile-detail",
-            },
-            [
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-3 candidate-detail-label" },
-                [_vm._v("WORK EXPERIENCE:")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-9 candidate-detail-info" },
-                [
-                  _c(
-                    "ul",
-                    { staticClass: "candidate-info" },
-                    _vm._l(
-                      _vm.data.candidate_experience,
-                      function (com, index) {
-                        return _c("li", { key: index }, [
-                          _c("span", [_vm._v(_vm._s(com.company_name) + ":")]),
-                          _vm._v(
-                            _vm._s(com.designation) +
-                              " - " +
-                              _vm._s(com.start_date) +
-                              " to " +
-                              _vm._s(com.end_date)
-                          ),
-                        ])
-                      }
+                "ul",
+                { staticClass: "candidate-info" },
+                _vm._l(_vm.data.candidate_education, function (edu) {
+                  return _c("li", [
+                    _c("span", [_vm._v(_vm._s(edu.school_name) + ":")]),
+                    _vm._v(
+                      _vm._s(edu.start_date) + " - " + _vm._s(edu.end_date)
                     ),
-                    0
-                  ),
-                ]
+                  ])
+                }),
+                0
               ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "ul",
-            {
-              staticClass:
-                "row no-gutters awards-detail-title candidate-profile-detail",
-            },
-            [
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters work-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("WORK EXPERIENCE:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
               _c(
-                "li",
-                { staticClass: "col-12 col-md-3 candidate-detail-label" },
-                [_vm._v("SKILLS:")]
+                "ul",
+                { staticClass: "candidate-info" },
+                _vm._l(_vm.data.candidate_experience, function (exp) {
+                  return _c(
+                    "li",
+                    [
+                      _c("span", [_vm._v(_vm._s(exp.company_name) + ":")]),
+                      _vm._v(_vm._s(exp.designation) + " - "),
+                      exp.end_date != null
+                        ? _c("timeago", { attrs: { datetime: exp.start_date } })
+                        : _vm._e(),
+                      exp.end_date == null
+                        ? _c(
+                            "p",
+                            { staticStyle: { display: "inline-block" } },
+                            [_vm._v("Currently Working")]
+                          )
+                        : _vm._e(),
+                    ],
+                    1
+                  )
+                }),
+                0
               ),
-              _vm._v(" "),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters awards-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("SKILLS:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c(
+                  "li",
+                  { staticClass: "skills-candidate" },
+                  _vm._l(_vm.data.candidate_skills, function (skill) {
+                    return _c("div", [_vm._v(_vm._s(skill.name))])
+                  }),
+                  0
+                ),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters awards-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("AWARDS:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
               _c(
-                "li",
-                { staticClass: "col-12 col-md-9 candidate-detail-info" },
-                [
-                  _c("ul", { staticClass: "candidate-info" }, [
-                    _c(
-                      "li",
-                      { staticClass: "skills-candidate" },
-                      _vm._l(
-                        _vm.data.candidate_skills,
-                        function (skills, index) {
-                          return _c("div", { key: index }, [
-                            _vm._v(_vm._s(skills.name)),
-                          ])
-                        }
-                      ),
-                      0
-                    ),
-                  ]),
-                ]
+                "ul",
+                { staticClass: "candidate-info" },
+                _vm._l(_vm.data.candidate_awards, function (awd) {
+                  return _c("li", [
+                    _c("span", [_vm._v(_vm._s(awd.name))]),
+                    _vm._v(_vm._s(awd.date)),
+                  ])
+                }),
+                0
               ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "ul",
-            {
-              staticClass:
-                "row no-gutters awards-detail-title candidate-profile-detail",
-            },
-            [
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters language-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("LANGUAGES:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
+              _c("ul", { staticClass: "candidate-info" }, [
+                _c(
+                  "li",
+                  { staticClass: "skills-candidate" },
+                  _vm._l(_vm.data.candidate_language, function (lang) {
+                    return _c("div", [_vm._v(_vm._s(lang.name))])
+                  }),
+                  0
+                ),
+              ]),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "row no-gutters projects-detail-title candidate-profile-detail",
+          },
+          [
+            _c(
+              "li",
+              { staticClass: "col-12 col-md-3 candidate-detail-label" },
+              [_vm._v("PROJECTS:")]
+            ),
+            _vm._v(" "),
+            _c("li", { staticClass: "col-12 col-md-9 candidate-detail-info" }, [
               _c(
-                "li",
-                { staticClass: "col-12 col-md-3 candidate-detail-label" },
-                [_vm._v("AWARDS:")]
+                "ul",
+                { staticClass: "candidate-info" },
+                _vm._l(_vm.data.candidate_projects, function (pro) {
+                  return _c("li", [_c("a", [_vm._v(_vm._s(pro.link))])])
+                }),
+                0
               ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-9 candidate-detail-info" },
-                [
-                  _c(
-                    "ul",
-                    { staticClass: "candidate-info" },
-                    _vm._l(_vm.data.candidate_awards, function (award, index) {
-                      return _c("li", { key: index }, [
-                        _c("span", [_vm._v(_vm._s(award.name) + ":")]),
-                        _vm._v(_vm._s(award.date)),
-                      ])
-                    }),
-                    0
-                  ),
-                ]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "ul",
-            {
-              staticClass:
-                "row no-gutters language-detail-title candidate-profile-detail",
-            },
-            [
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-3 candidate-detail-label" },
-                [_vm._v("LANGUAGES:")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-9 candidate-detail-info" },
-                [
-                  _c("ul", { staticClass: "candidate-info" }, [
-                    _c(
-                      "li",
-                      { staticClass: "skills-candidate" },
-                      _vm._l(
-                        _vm.data.candidate_language,
-                        function (language, index) {
-                          return _c("div", { key: index }, [
-                            _vm._v(_vm._s(language.name)),
-                          ])
-                        }
-                      ),
-                      0
-                    ),
-                  ]),
-                ]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "ul",
-            {
-              staticClass:
-                "row no-gutters projects-detail-title candidate-profile-detail",
-            },
-            [
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-3 candidate-detail-label" },
-                [_vm._v("PROJECTS:")]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "col-12 col-md-9 candidate-detail-info" },
-                [
-                  _c(
-                    "ul",
-                    { staticClass: "candidate-info" },
-                    _vm._l(
-                      _vm.data.candidate_projects,
-                      function (project, index) {
-                        return _c("li", { key: index }, [
-                          _c(
-                            "a",
-                            { attrs: { href: project.link, target: "_blank" } },
-                            [_vm._v(_vm._s(project.name) + ",")]
-                          ),
-                        ])
-                      }
-                    ),
-                    0
-                  ),
-                ]
-              ),
-            ]
-          ),
-        ]),
+            ]),
+          ]
+        ),
       ]),
-    ],
-    1
-  )
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "candidate-send-msg", attrs: { href: "" } }, [
-      _c("img", {
-        staticClass: "ionic-send-msg",
-        attrs: {
-          src: "/website/assets/images/Icon ionic-ios-send.svg",
-          alt: "",
-        },
-      }),
-      _vm._v("\n                        Send Message\n                    "),
+    return _c("div", { staticClass: "col-5 col-md-3" }, [
+      _c("div", { staticClass: "candidate-pic-detail" }, [
+        _c("div", {
+          staticClass: "candidate-detail-img",
+          staticStyle: { "background-image": "url()" },
+        }),
+      ]),
     ])
   },
   function () {
