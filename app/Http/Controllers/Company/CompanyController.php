@@ -327,8 +327,12 @@ class CompanyController extends Controller
     {
         $user = Auth::user();
         $company = Company::where('user_id', $user->id)->first();
-        $jobs = JobPost::where('company_id', $company->id)->orderBy('created_at', 'desc')->withTrashed()->paginate(2);
-        return response()->json($jobs);
+        $jobs = JobPost::where('company_id', $company->id)->with('Company')->orderBy('created_at', 'desc')->withTrashed()->paginate(10);
+        $totaljobs = JobPost::where('company_id', $company->id)->with('Company')->withTrashed()->count();
+        return response()->json([
+            'jobs' => $jobs,
+            'totaljobs' => $totaljobs
+        ]);
     }
 
     public function deleteJobPost($id)

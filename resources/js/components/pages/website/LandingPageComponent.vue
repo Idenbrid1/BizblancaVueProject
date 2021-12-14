@@ -347,7 +347,7 @@
                     <div class="col-md-6 col-12 w-100 p-0 pr-md-5">
                         <form action="">
                             <div class="row m-0">
-                                <div class="col-12 pb-4 px-2">
+                                <div class="col-12 pb-4 px-0">
                                     <div class="heading-div mb-3">
                                         <div class="mr-2 title-effect"></div>
                                         <h2 class="site-heading mb-0">Any queries in your mind?</h2>
@@ -357,7 +357,7 @@
                                         members will reach out to you soon.
                                     </p>
                                 </div>
-                                <div class="col-12 px-2">
+                                <div class="col-12 px-0">
                                     <div class="form-group">
                                         <label for="">Full Name</label>
                                         <input type="text" class="form-control pl-2" v-model="contact_us.name"

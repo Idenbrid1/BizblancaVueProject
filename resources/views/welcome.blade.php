@@ -23,8 +23,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('website')}}/assets/images/BizBlancaRound.svg" />
     <link rel="stylesheet" href="{{asset('website')}}/assets/css/bootstrap/bootstarp.min.css" />
     <link rel="stylesheet" href="{{asset('website')}}/assets/css/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="{{asset('website')}}/assets/css/style.css" />
-    <link rel="stylesheet" href="{{asset('website')}}/assets/css/media.css" />
+    <link rel="stylesheet" href="{{asset('website')}}/assets/css/style.min.css" />
+    <link rel="stylesheet" href="{{asset('website')}}/assets/css/media.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{asset('website')}}/assets/css/fontawesome/css/all.css">
     <script src="{{asset('website')}}/assets/css/fontawesome/js/all.js"></script>
