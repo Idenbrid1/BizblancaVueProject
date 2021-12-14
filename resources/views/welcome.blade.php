@@ -26,14 +26,8 @@
     <link rel="stylesheet" href="{{asset('website')}}/assets/css/style.min.css" />
     <link rel="stylesheet" href="{{asset('website')}}/assets/css/media.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link 
-          rel="stylesheet" 
-          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-          crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="{{asset('website')}}/assets/css/fontawesome/css/all.css">
-    <script src="{{asset('website')}}/assets/css/fontawesome/js/all.js"></script> -->
+    <link rel="stylesheet" href="{{asset('website')}}/assets/css/fontawesome/css/all.css">
+    <script src="{{asset('website')}}/assets/css/fontawesome/js/all.js"></script>
     <script src="{{asset('website')}}/assets/js/jquery-3.5.1.min.js"></script>
     <script src="{{asset('website')}}/assets/js/swiper/swiper-bundle.min.js"></script>
     <script src="{{asset('website')}}/assets/js/main.js"></script>

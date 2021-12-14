@@ -489,6 +489,7 @@
                                     <div class="row no-gutters current-info-tab">
                                         <div class="col-12 col-md-6">
                                             <ul class="profile-labels">
+
                                                 <li class="profile-label profile-label-border rt0 btr5"><span>Currently
                                                         Working</span></li>
                                                 <li class="profile-label profile-label-border"><span>Starting Date</span>
@@ -971,7 +972,7 @@
                                                         <div class="form-group">
                                                             <label for="city">City</label>
                                                             <input name="city" type="text" class="form-control"
-                                                                placeholder="Please City"
+                                                                placeholder="Choose City"
                                                                 v-model="basic_information_record.city" />
                                                             <small>
                                                                 <span v-if="errors_basic_information.city != null"
@@ -1000,7 +1001,7 @@
                                                         <div class="form-group">
                                                             <label for="cinic">CNIC <small><b>Without dashes</b></small></label>
                                                             <input name="cnic" type="number" class="form-control"
-                                                                placeholder="Enter Cnic" value="" :max="13"
+                                                                placeholder="Enter CNIC" value="" :max="13"
                                                                 v-model="basic_information_record.cnic" />
                                                             <small>
                                                                 <span v-if="errors_basic_information.cnic != null"
@@ -1217,7 +1218,7 @@
                                             <div class="subFormFields">
                                                 <div class="row">
                                                     <div class="col-12 col-md-6 form-group">
-                                                        <label for="currentStatus">Current Working</label>
+                                                        <label for="currentStatus">Current Working?</label>
                                                         <div class="form-group m-0">
                                                             <label for="currentStatus">Yes</label>
                                                             <input class="my-1" @change="workingCurrentlyYes()"
@@ -1333,18 +1334,19 @@
                                                     </a>
                                                 </div>
                                                 <div class="row">
-                                                    <!-- <div class="col-12 col-md-6">
+                                                    <div class="col-12 col-md-6">
                                                         <div class="form-group">
-                                                            <label for="institute">Institute Type</label>
+                                                            <label for="institute">Degree Type</label>
                                                             <select name="school_type[]" class="form-control"
                                                                 v-model="educationUpdate.school_type"
                                                                 placeholder="Please Select">
                                                                 <option value="Metric">Metric</option>
                                                                 <option value="Intermediate">Intermediate</option>
                                                                 <option value="Bachelor">Bachelor</option>
+                                                                <option value="Masters">Masters</option>
                                                             </select>
                                                         </div>
-                                                    </div> -->
+                                                    </div>
                                                     <div class="col-12 col-md-6">
                                                         <div class="form-group">
                                                             <label for="school_name">Institute name</label>
@@ -2429,7 +2431,7 @@
                         Swal.fire({
                             icon: 'success',
                             title: 'Updated',
-                            text: 'Candidate Updated Successfully',
+                            text: 'Education Updated Successfully',
                             timer: 1500
                         })
                         this.education_push_array = {
@@ -2562,7 +2564,7 @@
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Language Updated Successfully',
                                 timer: 1500
                             })
                             this.language_push_array = {
@@ -2683,7 +2685,7 @@
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Award Updated Successfully',
                                 timer: 1500
                             })
                             $('#AwardModal').modal('hide')
@@ -2811,7 +2813,7 @@
                         Swal.fire({
                             icon: 'success',
                             title: 'Updated',
-                            text: 'Candidate Updated Successfully',
+                            text: 'Skill Updated Successfully',
                             timer: 1500
                         })
                         $('#SkillsModal').modal('hide')
@@ -2927,7 +2929,7 @@
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Current Job Updated Successfully',
                                 timer: 1500
                             })
                             $('#CurrentJobModal').modal('hide')
@@ -3150,7 +3152,7 @@
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Updated',
-                                text: 'Candidate Updated Successfully',
+                                text: 'Project Updated Successfully',
                                 timer: 1500
                             })
                             $('#ProjectsModal').modal('hide')

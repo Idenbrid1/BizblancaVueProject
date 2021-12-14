@@ -9,7 +9,7 @@
                         <div class="candidate-detail-img" v-if="data.profile_image" :style="{ 'background-image': 'url(/storage/images/candidates/profile/' + data.profile_image + ')' }"></div>
                         <div class="candidate-detail-img" v-else> not avaiable</div>
                         <a class="candidate-send-msg" href="">
-                            <img class="ionic-send-msg" src="/website/assets/images/Icon ionic-ios-send.svg" alt="">
+                            <img class="ionic-send-msg" src="/website/assets/images/Icon-ionic-ios-send.svg" alt="">
                             Send Message
                         </a>
                     </div>
