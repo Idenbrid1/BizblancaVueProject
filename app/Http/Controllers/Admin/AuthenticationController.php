@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Validator;
 use DB;
+use Laravel\Socialite\Facades\Socialite;
+
 
 class AuthenticationController extends Controller
 {
@@ -441,6 +443,35 @@ class AuthenticationController extends Controller
             return response()->json([
                 'isAuth'   => false,
             ]);
+        }
+    }
+
+    public function redirectToGoogle() {
+        return Socialite::driver('google')->redirect();
+    }
+    public function handleGoogleCallback() {
+        try{
+            $user = Socialite::driver('google')->user();
+            //dd($user);
+            $finduser = User::where('email', $user->email)->first();
+            if ($finduser) {
+                Auth::login($finduser);
+                return redirect('/');
+            } else {
+                $newUser = User::create([
+                    'name' => $user->name, 
+                    'email' => $user->email,
+                    'password' => Hash::make(123456789), 
+                    'google_id' => $user->id
+                ]);
+                Auth::login($newUser);
+                return redirect('/');
+                // return redirect()->back();
+            }
+        }
+        catch(Exception $e) {
+            dd($e->getMessage());
+            // return redirect('auth/google');
         }
     }
    

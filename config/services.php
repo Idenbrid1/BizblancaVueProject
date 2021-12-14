@@ -29,5 +29,10 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'google' => [
+        'client_id' => '600723386292-q2oig6ejuvjk015a6t93c6mqcvvejdnq.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'https://bizblanca.com/auth/google/callback',
+    ],
 
 ];
