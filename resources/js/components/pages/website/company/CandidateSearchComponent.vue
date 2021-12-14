@@ -140,22 +140,25 @@
                                         </timeago>
                                         <p class="candidate-description my-1"> {{searchData[index].candidate.bio}}</p>
                                         <ul class="candidate-list-meta">
-                                            <li><i class="fas fa-venus-mars"></i>
+                                            <li>
+                                                <i class="fas fa-venus-mars"></i>
                                                 <div class="hide-line-1"> {{searchData[index].candidate.gender}}</div>
                                             </li>
-                                            <!-- <li class="mt-1"><i class="fas fa-graduation-cap"></i>
+                                            <!-- <li><i class="fas fa-graduation-cap"></i>
                                                 <div class="hide-line-1">BSSE</div>
                                             </li> -->
-                                            <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1"> {{searchData[index].candidate.experience}}
-                                                    Years</div>
+                                            <li>
+                                                <i class="fas fa-envelope-open-text"></i>
+                                                <div class="hide-line-1"> {{searchData[index].candidate.experience}}Years</div>
                                             </li>
-                                            <li class="mt-1"><i class="fas fa-user-cog"></i>
+                                            <li>
+                                                <i class="fas fa-user-cog"></i>
                                                 <div class="hide-line-1"
                                                     v-for="(skills, index) in searchData[index].candidate.candidate_skills"
                                                     :key="index"> {{skills.name}},</div>
                                             </li>
-                                            <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
+                                            <li>
+                                                <i class="fas fa-map-marker-alt"></i>
                                                 <div class="hide-line-1"> {{searchData[index].candidate.city}}</div>
                                             </li>
                                         </ul>

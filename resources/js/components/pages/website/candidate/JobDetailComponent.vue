@@ -215,7 +215,7 @@
                     confirmButtonText: 'Understood!',
                     text: 'Please login before apply to any job!',
                     footer: '<a href="/#/signin">Login?</a>',
-                    timer: 1500
+                    timer: 3000
                 })
             },
             checkAuth(){

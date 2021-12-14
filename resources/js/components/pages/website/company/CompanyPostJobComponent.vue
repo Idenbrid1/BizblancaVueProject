@@ -16,7 +16,7 @@
                 </div>
                 <div class="post_new_job_anker">
                     <a @click="postNewJob()">+ Add More Jobs</a>
-                    <p>Total {{jobs.data.length}} posted jobs this page</p>
+                    <p>Showing {{jobs.data.length}} Of {{totaljobs}} Jobs</p>
                 </div>
 
                 <!-- Job List Wrap Start -->
@@ -25,7 +25,7 @@
                     <div class="job-list mx-0" v-for="(item, index) in jobs.data" :key="index">
                         <div class="company-logo col-auto py-2">
                             <img :src="'/storage/images/companies/'+item.banner" alt="Company Logo" />
-                            <span class="company-h line-clamp-1">Ahmad</span>
+                            <span class="company-h line-clamp-1">{{item.company.company_name}}</span>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
 
-                            <p class="job-description">{{item.job_description}}</p>
+                            <p class="job-description">{{item.description}}</p>
                             <div class="job-content-wrap">
                                 <div class="job-dynamic-values">
                                     <ul>
@@ -712,7 +712,7 @@
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CompanyNavbar from '../partials/CompanyNavbar.vue';
-    // import pagination from 'laravel-vue-pagination';
+    import pagination from 'laravel-vue-pagination';
     export default {
         data() {
             return {
@@ -738,6 +738,7 @@
                     status: 'Active',
                 },
                 max: 2000,
+                totaljobs: '',
                 errors: [],
                 jobs: {},
             };
@@ -745,7 +746,7 @@
         components: {
             WebsiteNavbar,
             CompanyNavbar,
-            // pagination,
+            pagination,
         },
         mounted() {
             var swiper = new Swiper(".bizer-ranking-slider", {
@@ -767,7 +768,8 @@
             getCompanyJobs(page = 1) {
                 axios.get('get-company-jobs?page=' + page)
                     .then((response) => {
-                        this.jobs = response.data
+                        this.jobs = response.data.jobs
+                        this.totaljobs = response.data.totaljobs
                     });
             },
             deleteJobPost(id) {
@@ -958,6 +960,7 @@
                                     title: 'Package Expire',
                                     text: 'Your Package Expire and you not able to post more jobs ',
                                     footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
+                                    timer: 2000,
                                 })
                             } else if (response.data.response == 'pending') {
                                 Swal.fire({
@@ -965,6 +968,7 @@
                                     title: 'Please Wait',
                                     text: 'Please pay your dues to post jobs! Thanks',
                                     footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
+                                    timer: 2000,
                                 })
                             } else {
                                 Swal.fire({
@@ -972,6 +976,7 @@
                                     title: 'Limit Exceeded',
                                     text: 'Your Post Job Limit Exceeded',
                                     footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
+                                    timer: 2000,
                                 })
                             }
                         }
