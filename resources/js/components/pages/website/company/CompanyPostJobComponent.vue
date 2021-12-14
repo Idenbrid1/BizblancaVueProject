@@ -737,7 +737,7 @@
                     job_responsibilities: '',
                     status: 'Active',
                 },
-                max: 255,
+                max: 2000,
                 errors: [],
                 jobs: {},
             };

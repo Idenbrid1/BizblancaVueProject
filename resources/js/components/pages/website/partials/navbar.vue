@@ -69,6 +69,7 @@
                 </ul>
             </div>
         </div>
+        <div class="header-space"></div>
         <!--end-mobile-view-->
         <!--desktop-view-->
         <header id="main-header" class="top-header">

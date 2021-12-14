@@ -610,7 +610,7 @@
                         icon: 'error',
                         title: 'Oops...🧐',
                         confirmButtonText: 'Understood!',
-                        text: 'Please login before apply to any job!',
+                        text: 'Please login before!',
                         footer: '<a href="/#/signin">Login?</a>',
                         timer: 1500
                     })

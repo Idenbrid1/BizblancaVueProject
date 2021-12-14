@@ -369,8 +369,7 @@
                                                         <div class="form-group">
                                                             <label for="description">Description</label>
                                                             <textarea style="height: 100px;"
-                                                                placeholder="Enter Description" id="description"
-                                                                maxlength="255" name="description"
+                                                                placeholder="Enter Description" id="description" name="description"
                                                                 v-model="profile.description"
                                                                 class="form-control"></textarea>
                                                         </div>
