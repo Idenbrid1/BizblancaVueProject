@@ -70,7 +70,9 @@ Route::get('/landingpage/news', [App\Http\Controllers\CommonController::class, '
 Route::post('/footer/news_letter', [App\Http\Controllers\CommonController::class, 'newsLetter']);
 Route::get('/download-cv/', [App\Http\Controllers\CommonController::class, 'downloadcv']);
 Route::get('get-jobs', [App\Http\Controllers\CommonController::class, 'getJobs']);
-
+//GOOGLE LOGIN ROUTES
+Route::get('auth/google', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleGoogleCallback']);
 //samad 
 Route::get('/login', function () {
     return view('website/pages/login');
