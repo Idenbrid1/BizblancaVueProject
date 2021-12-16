@@ -16520,18 +16520,7 @@ var app = new Vue({
   el: '#app',
   components: {
     App: _components_pages_website_MainApp_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-  } // data(){
-  //     return {
-  //         isAuth: false,
-  //     }
-  // },
-  // created() {
-  //     axios.get('check-auth')
-  //     .then((response) => {
-  //         this.isAuth = response.data.isAuth
-  //     });
-  // },
-
+  }
 });
 
 /***/ }),
