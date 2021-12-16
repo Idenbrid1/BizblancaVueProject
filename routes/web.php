@@ -73,6 +73,8 @@ Route::get('get-jobs', [App\Http\Controllers\CommonController::class, 'getJobs']
 //GOOGLE LOGIN ROUTES
 Route::get('auth/google', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleGoogleCallback']);
+Route::post('/user-google-registration', [App\Http\Controllers\Admin\AuthenticationController::class, 'userGoogleRegistration']);
+
 //samad 
 Route::get('/login', function () {
     return view('website/pages/login');
