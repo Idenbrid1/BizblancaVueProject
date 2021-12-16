@@ -53,16 +53,4 @@ const app = new Vue({
     components: {
         App,
     },
-    // data(){
-    //     return {
-    //         isAuth: false,
-    //     }
-    // },
-    // created() {
-    //     axios.get('check-auth')
-    //     .then((response) => {
-    //         this.isAuth = response.data.isAuth
-    //     });
-    // },
-
 });
