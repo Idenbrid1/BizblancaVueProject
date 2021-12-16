@@ -107,6 +107,13 @@
             WebsiteNavbar,
         },
         methods: {
+            socialLogin(){
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Login',
+                    text: 'Credentials Not Match',
+                })
+            },
             Login() {
                 Swal.fire({
                     text: 'Please Wait We SettingUp Your Dashboard',
