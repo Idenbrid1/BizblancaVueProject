@@ -33,6 +33,7 @@ import PrivacyPolicy from './components/pages/website/PrivacyPolicyComponent.vue
 import AboutUs from './components/pages/website/AboutUsComponent.vue';
 import NewsDetail from './components/pages/website/NewsDetailComponent.vue';
 import Services from './components/pages/website/ServicesComponent.vue';
+import SocialLogin from './components/pages/website/SocialLoginComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -191,6 +192,11 @@ const router = new VueRouter({
             path: '/news-detail/:id',
             name: 'NewsDetail',
             component: NewsDetail
+        },
+        {
+            path: '/social-login/:email',
+            name: 'SocialLogin',
+            component: SocialLogin
         },
         {
             path: '/candidate-cv',

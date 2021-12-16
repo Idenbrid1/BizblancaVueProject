@@ -22,7 +22,6 @@ use Validator;
 use DB;
 use Laravel\Socialite\Facades\Socialite;
 
-
 class AuthenticationController extends Controller
 {
     protected  function userRegistration(Request $request)
@@ -452,26 +451,66 @@ class AuthenticationController extends Controller
     public function handleGoogleCallback() {
         try{
             $user = Socialite::driver('google')->user();
-            //dd($user);
+            // dd($user);
             $finduser = User::where('email', $user->email)->first();
             if ($finduser) {
                 Auth::login($finduser);
                 return redirect('/');
             } else {
-                $newUser = User::create([
-                    'name' => $user->name, 
-                    'email' => $user->email,
-                    'password' => Hash::make(123456789), 
-                    'google_id' => $user->id
-                ]);
-                Auth::login($newUser);
-                return redirect('/');
-                // return redirect()->back();
+                return redirect('/#/social-login/'.$user->email);
             }
         }
         catch(Exception $e) {
             dd($e->getMessage());
             // return redirect('auth/google');
+        }
+    }
+
+    public function userGoogleRegistration(Request $request)
+    {
+        $attributeNames = [
+            'email'             => 'Email',
+            'password'          => 'Password',
+            'confirm_password'  => 'Confirm Password',
+        ];
+
+        $messages = [
+            
+        ];
+        if($request->type == 'candidate')
+        {
+            $rules = [
+                'email'             => 'required|unique:users|max:100|email',
+                'name'             => 'required',
+                'phone'             => 'required',
+                'password'          => 'required|min:6',
+                'confirm_password'  => 'required|same:password',
+            ];
+        }
+        if($request->type == 'company')
+        {
+            $rules = [
+                'email'             => 'required|unique:users|max:100|email',
+                'company_name'      => 'required|unique:companies|max:100',
+                'name'              => 'required',
+                'phone'             => 'required',
+                'password'          => 'required|min:6',
+                'confirm_password'  => 'required|same:password',
+            ];
+        }
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+        $validator->setAttributeNames($attributeNames);
+
+        if ($validator->fails()){
+            return response()->json([
+                'success' => false,
+                'errors' => $validator->errors(),
+            ]);
+        }
+        else
+        {
+
         }
     }
    
