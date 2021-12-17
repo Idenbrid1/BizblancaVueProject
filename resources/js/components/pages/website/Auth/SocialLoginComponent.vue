@@ -3,7 +3,7 @@
         <WebsiteNavbar />
         <div class="container py-2">
             <div class="login-page-container container p-0">
-                <form method="POST" @submit.prevent="Login">
+                <form method="POST" @submit.prevent="googleLogin">
                     <div class="row m-0">
                         <div class="col-12 p-0">
                             <section class="login-wrapper row m-0">
@@ -35,6 +35,16 @@
                                                 </span>
                                             </small>
                                         </div>
+                                        <br>
+                                        <div class="form-group" v-if="record.role == 'company'">
+                                            <input type="text" placeholder="Enter Username" required name="company_name"
+                                                id="company_name" v-model="record.company_name"/>
+                                            <small>
+                                                <span v-if="errors.company_name != null" class="text-danger float-left">
+                                                    {{errors.company_name[0]}}
+                                                </span>
+                                            </small>
+                                        </div>
                                         <br />
                                         <ul class="AuthRadioButtons">
                                             <li>
@@ -52,6 +62,11 @@
                                                     As Company
                                                 </label>
                                             </li>
+                                            <small>
+                                                <span v-if="errors.role != null" class="text-danger float-left">
+                                                    {{errors.role[0]}}
+                                                </span>
+                                            </small>
                                         </ul>
                                     </div>
                                     <div class="login-button">
@@ -68,13 +83,17 @@
 </template>
 <script>
     import axios from 'axios';
-    import WebsiteNavbar from '../website/partials/navbar.vue';
+    import WebsiteNavbar from '../partials/navbar.vue';
     export default {
         data() {
             return {
                 record: {
-                    email: this.$route.params.email,
-                    role: ''
+                    id: this.$route.params.id,
+                    role: '',
+                    email: '',
+                    name: '',
+                    social_id: '',
+                    social_name: '',
                 },
                 errors: [],
             };
@@ -82,8 +101,17 @@
         components: {
             WebsiteNavbar,
         },
+        created(){
+            axios.get('/get-social-user-data/'+this.$route.params.id)
+            .then((response) => {
+                this.record.social_name = response.data.social_name 
+                this.record.social_id = response.data.social_id 
+                this.record.email = response.data.email 
+                this.record.name = response.data.name 
+            });
+        },
         methods: {
-            registerCandidate() {
+            googleLogin() {
                 Swal.fire({
                     text: 'Please Wait We SettingUp Things for You! Be Patients',
                     didOpen: () => {
@@ -95,13 +123,18 @@
                         if (response.data.success == false) {
                             Swal.close()
                             this.errors = response.data.errors
-                        } else {
+                        }else {
                             Swal.close()
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'SignUp Successfully',
-                                text: 'Please Verify your self and check you mail or spam box!Thanks',
-                            })
+                            if (response.data.type == 'candidate') {
+                                this.$router.push({
+                                    name: 'CandidateDashboard'
+                                })
+                            }
+                            if (response.data.type == 'company') {
+                                this.$router.push({
+                                    name: 'CompanyDashboard'
+                                })
+                            }
                         }
                     });
             },

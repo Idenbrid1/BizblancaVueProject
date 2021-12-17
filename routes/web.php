@@ -74,6 +74,14 @@ Route::get('get-jobs', [App\Http\Controllers\CommonController::class, 'getJobs']
 Route::get('auth/google', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleGoogleCallback']);
 Route::post('/user-google-registration', [App\Http\Controllers\Admin\AuthenticationController::class, 'userGoogleRegistration']);
+Route::get('get-social-user-data/{id}', [App\Http\Controllers\Admin\AuthenticationController::class, 'getSocialUserData']);
+//GITHUB LOGIN ROUTES
+Route::get('auth/github', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToGithub']);
+Route::get('auth/github/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleGithubCallback']);
+//LINKEDIN LOGIN ROUTES
+Route::get('auth/linkedin', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToLinkedin']);
+Route::get('auth/linkedin/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleLinkedinCallback']);
+
 
 //samad 
 Route::get('/login', function () {

@@ -66,13 +66,13 @@
                                                 <a href="auth/google"><img src="/website/assets/images/search.svg" alt="google" /></a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src="/website/assets/images/facebookLogin.svg" alt="facebook" /></a>
+                                                <a ><img src="/website/assets/images/facebookLogin.svg" alt="facebook" /></a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
+                                                <a href="auth/linkedin"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
+                                                <a href="auth/github"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
                                             </li>
                                         </ul>
                                         <span>Don't have an account?

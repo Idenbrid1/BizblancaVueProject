@@ -34,5 +34,15 @@ return [
         'client_secret' => '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',
         'redirect' => 'https://bizblanca.com/auth/google/callback',
     ],
+    'github' => [
+        'client_id' => '8311b250ab382b37ecc5',
+        'client_secret' => '8211d057596cdea4d249286d4b2eed36afbdfb0c',
+        'redirect' => 'https://bizblanca.com/auth/github/callback',
+    ],
+    'linkedin' => [
+        'client_id' => '86s11w9v6n8x5m',
+        'client_secret' => 'q2vO0O6z93XwuKkb',
+        'redirect' => 'https://bizblanca.com/auth/linkedin/callback',
+    ],
 
 ];
