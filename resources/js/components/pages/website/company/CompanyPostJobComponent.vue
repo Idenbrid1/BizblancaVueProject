@@ -959,7 +959,7 @@
                                     icon: 'error',
                                     title: 'Package Expire',
                                     text: 'Your Package Expire and you not able to post more jobs ',
-                                    footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
+                                    footer: `<router-link :to="{ name: 'package-plans' }">Upgrade Plan</router-link>`,
                                     timer: 2000,
                                 })
                             } else if (response.data.response == 'pending') {
@@ -967,7 +967,7 @@
                                     icon: 'error',
                                     title: 'Please Wait',
                                     text: 'Please pay your dues to post jobs! Thanks',
-                                    footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
+                                    footer: `<router-link :to="{ name: "package-plans" }">Upgrade Plan</router-link>`,
                                     timer: 2000,
                                 })
                             } else {
@@ -975,7 +975,7 @@
                                     icon: 'error',
                                     title: 'Limit Exceeded',
                                     text: 'Your Post Job Limit Exceeded',
-                                    footer: '<a href="/#/package-plans">Upgrade Plan</a> ',
+                                    footer: `<router-link :to="{ name: "package-plans" }">Upgrade Plan</router-link>`,
                                     timer: 2000,
                                 })
                             }

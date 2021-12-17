@@ -23,13 +23,6 @@
                                 <li class="mt-0"><i class="fas tick fa-check-circle"></i>Post Jobs: {{item.job_post}}</li>
                                 <li><i class="fas tick fa-check-circle"></i>Connect: {{item.connect}}</li>
                                 <li><i v-if="item.is_personal_show == 1" class="far cross fa-times-circle"></i><i v-else class="fas tick fa-check-circle"></i>Show Full Info</li>
-                                <!-- <li><i class="fas tick fa-check-circle"></i>Optimize Hashtags</li>
-                                <li><i class="fas tick fa-check-circle"></i>Own Analytics Platform</li>
-                                <li><i class="fas tick fa-check-circle"></i>Chat Support</li>
-                                <li><i class="far cross fa-times-circle"></i>Optimize Hashtags</li>
-                                <li><i class="fas tick fa-check-circle"></i>Unlimited Users</li>
-                                <li><i class="fas tick fa-check-circle"></i>Optimize Hashtags</li>
-                                <li><i class="fas tick fa-check-circle"></i>Unlimited Users</li> -->
                             </ul>
                             <a  @click="buyPackage(item.id)" class="buy-plan-anker">Buy Now</a>
                         </div>
@@ -121,7 +114,6 @@
                 plans: [],
             }
         },
-        mounted() {},
         created() {
             this.getPackagePlans();
         },
