@@ -204,96 +204,96 @@ Route::prefix('faq')->name('faq.')->group(function(){
 
 //adminpanel routes//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Route::prefix('admin')->name('admin.')->group(function(){
-    Route::middleware('guest:admin')->group(function(){
-        Route::get('/login', [App\Http\Controllers\Admin\Auth\LoginController::class, 'showLoginForm'])->name('login');
-		Route::post('/login', [App\Http\Controllers\Admin\Auth\LoginController::class, 'login'])->name('login');
-    });
-    Route::middleware('auth:admin')->group(function(){
-        Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
-        Route::post('/logout', [App\Http\Controllers\Admin\Auth\LoginController::class, 'logout'])->name('logout');
-        Route::get('/list', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('list');
-        Route::get('/deactivated_list', [App\Http\Controllers\Admin\AdminController::class, 'getDeActivatedList'])->name('deactivated_list');
-        Route::get('/edit', [App\Http\Controllers\Admin\AdminController::class, 'edit'])->name('edit');
-        Route::get('/deactivate/{id}', [App\Http\Controllers\Admin\AdminController::class, 'deactivate'])->name('deactivate');
-        Route::post('/setting', [App\Http\Controllers\Admin\AdminController::class, 'updateSetting'])->name('setting');
-        Route::get('/setting', [App\Http\Controllers\Admin\AdminController::class, 'showSettingPage'])->name('setting');
-        Route::get('/setting', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
-        Route::post('/mark-as-read/', [App\Http\Controllers\Admin\DashboardController::class, 'markNotification'])->name('markNotification');
-        Route::get('/admin/fetch_notifications', [App\Http\Controllers\Admin\DashboardController::class, 'fetchNotification'])->name('notification');
-        Route::get('/notification', [App\Http\Controllers\Admin\DashboardController::class, 'notifications'])->name('notifications');
+// Route::prefix('admin')->name('admin.')->group(function(){
+//     Route::middleware('guest:admin')->group(function(){
+//         Route::get('/login', [App\Http\Controllers\Admin\Auth\LoginController::class, 'showLoginForm'])->name('login');
+// 		Route::post('/login', [App\Http\Controllers\Admin\Auth\LoginController::class, 'login'])->name('login');
+//     });
+//     Route::middleware('auth:admin')->group(function(){
+//         Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
+//         Route::post('/logout', [App\Http\Controllers\Admin\Auth\LoginController::class, 'logout'])->name('logout');
+//         Route::get('/list', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('list');
+//         Route::get('/deactivated_list', [App\Http\Controllers\Admin\AdminController::class, 'getDeActivatedList'])->name('deactivated_list');
+//         Route::get('/edit', [App\Http\Controllers\Admin\AdminController::class, 'edit'])->name('edit');
+//         Route::get('/deactivate/{id}', [App\Http\Controllers\Admin\AdminController::class, 'deactivate'])->name('deactivate');
+//         Route::post('/setting', [App\Http\Controllers\Admin\AdminController::class, 'updateSetting'])->name('setting');
+//         Route::get('/setting', [App\Http\Controllers\Admin\AdminController::class, 'showSettingPage'])->name('setting');
+//         Route::get('/setting', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+//         Route::post('/mark-as-read/', [App\Http\Controllers\Admin\DashboardController::class, 'markNotification'])->name('markNotification');
+//         Route::get('/admin/fetch_notifications', [App\Http\Controllers\Admin\DashboardController::class, 'fetchNotification'])->name('notification');
+//         Route::get('/notification', [App\Http\Controllers\Admin\DashboardController::class, 'notifications'])->name('notifications');
 
 
-        Route::prefix('candidate')->name('candidate.')->group(function(){
-            Route::get('index', [App\Http\Controllers\Admin\CandidateController::class, 'index'])->name('index');
-            Route::get('candidate-cv', [App\Http\Controllers\Admin\CandidateController::class, 'candidateCV'])->name('candidatecv');
-            Route::get('create', [App\Http\Controllers\Admin\CandidateController::class, 'create'])->name('create');
-            Route::post('store', [App\Http\Controllers\Admin\CandidateController::class, 'store'])->name('store');
-            Route::get('show/{id}', [App\Http\Controllers\Admin\CandidateController::class, 'show'])->name('show');
-            Route::get('candidate_edit/{id}', [App\Http\Controllers\Admin\CandidateController::class, 'edit'])->name('edit');
-            Route::post('update/{id}', [App\Http\Controllers\Admin\CandidateController::class, 'update'])->name('update');
-            Route::get('destroy/{id}', [App\Http\Controllers\Admin\CandidateController::class, 'destroy'])->name('destroy');
+//         Route::prefix('candidate')->name('candidate.')->group(function(){
+//             Route::get('index', [App\Http\Controllers\Admin\CandidateController::class, 'index'])->name('index');
+//             Route::get('candidate-cv', [App\Http\Controllers\Admin\CandidateController::class, 'candidateCV'])->name('candidatecv');
+//             Route::get('create', [App\Http\Controllers\Admin\CandidateController::class, 'create'])->name('create');
+//             Route::post('store', [App\Http\Controllers\Admin\CandidateController::class, 'store'])->name('store');
+//             Route::get('show/{id}', [App\Http\Controllers\Admin\CandidateController::class, 'show'])->name('show');
+//             Route::get('candidate_edit/{id}', [App\Http\Controllers\Admin\CandidateController::class, 'edit'])->name('edit');
+//             Route::post('update/{id}', [App\Http\Controllers\Admin\CandidateController::class, 'update'])->name('update');
+//             Route::get('destroy/{id}', [App\Http\Controllers\Admin\CandidateController::class, 'destroy'])->name('destroy');
 
-            Route::get('index_imported', [App\Http\Controllers\Admin\CandidateController::class, 'indexImported'])->name('index_imported');
-            Route::get('import', [App\Http\Controllers\Admin\CandidateController::class, 'showImport'])->name('import');
-            Route::post('import', [App\Http\Controllers\Admin\CandidateController::class, 'import'])->name('import');
-        });
+//             Route::get('index_imported', [App\Http\Controllers\Admin\CandidateController::class, 'indexImported'])->name('index_imported');
+//             Route::get('import', [App\Http\Controllers\Admin\CandidateController::class, 'showImport'])->name('import');
+//             Route::post('import', [App\Http\Controllers\Admin\CandidateController::class, 'import'])->name('import');
+//         });
 
-        Route::prefix('company')->name('company.')->group(function(){
-            Route::get('index', [App\Http\Controllers\Admin\CompanyController::class, 'index'])->name('index');
-            Route::get('package-companies', [App\Http\Controllers\Admin\CompanyController::class, 'packageCompanies'])->name('packageCompanies');
-            Route::get('pay-now/{id}', [App\Http\Controllers\Admin\CompanyController::class, 'payNow'])->name('payNow');
-        });
+//         Route::prefix('company')->name('company.')->group(function(){
+//             Route::get('index', [App\Http\Controllers\Admin\CompanyController::class, 'index'])->name('index');
+//             Route::get('package-companies', [App\Http\Controllers\Admin\CompanyController::class, 'packageCompanies'])->name('packageCompanies');
+//             Route::get('pay-now/{id}', [App\Http\Controllers\Admin\CompanyController::class, 'payNow'])->name('payNow');
+//         });
 
-        Route::prefix('contact-us')->name('contact_us.')->group(function(){
-            Route::get('index', [App\Http\Controllers\Admin\ContactUsController::class, 'index'])->name('index');
-            Route::get('reviewed_list', [App\Http\Controllers\Admin\ContactUsController::class, 'indexReviewed'])->name('index_reviewed');
-            Route::get('/contact_us_create', [ContactUsController::class, 'create'])->name('contact_us.create');
-            Route::post('/contact_us_store', [ContactUsController::class, 'store'])->name('contact_us.store');
-            Route::get('/contact_us_show/{id}', [ContactUsController::class, 'show'])->name('contact_us.show');
-            Route::get('/contact_us_edit/{id}', [ContactUsController::class, 'edit'])->name('contact_us.edit');
-            Route::post('/contact_us_update/{id}', [ContactUsController::class, 'update'])->name('contact_us.update');
-            Route::get('/contact_us_update_status/{id}', [ContactUsController::class, 'updateStatus'])->name('contact_us.update_status');
-            Route::get('/contact_us_destroy/{id}', [ContactUsController::class, 'destroy'])->name('contact_us.destroy');
-        });
+//         Route::prefix('contact-us')->name('contact_us.')->group(function(){
+//             Route::get('index', [App\Http\Controllers\Admin\ContactUsController::class, 'index'])->name('index');
+//             Route::get('reviewed_list', [App\Http\Controllers\Admin\ContactUsController::class, 'indexReviewed'])->name('index_reviewed');
+//             Route::get('/contact_us_create', [ContactUsController::class, 'create'])->name('contact_us.create');
+//             Route::post('/contact_us_store', [ContactUsController::class, 'store'])->name('contact_us.store');
+//             Route::get('/contact_us_show/{id}', [ContactUsController::class, 'show'])->name('contact_us.show');
+//             Route::get('/contact_us_edit/{id}', [ContactUsController::class, 'edit'])->name('contact_us.edit');
+//             Route::post('/contact_us_update/{id}', [ContactUsController::class, 'update'])->name('contact_us.update');
+//             Route::get('/contact_us_update_status/{id}', [ContactUsController::class, 'updateStatus'])->name('contact_us.update_status');
+//             Route::get('/contact_us_destroy/{id}', [ContactUsController::class, 'destroy'])->name('contact_us.destroy');
+//         });
 
-        Route::prefix('user')->name('user.')->group(function(){
-            Route::get('/list', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('index');
-            Route::get('/deactive_list', [App\Http\Controllers\Admin\UserController::class, 'getDeActivatedList'])->name('deactivated_list');
-            Route::get('/deactivate/{id}', [App\Http\Controllers\Admin\UserController::class, 'deActivate'])->name('deactivate');
-        });
+//         Route::prefix('user')->name('user.')->group(function(){
+//             Route::get('/list', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('index');
+//             Route::get('/deactive_list', [App\Http\Controllers\Admin\UserController::class, 'getDeActivatedList'])->name('deactivated_list');
+//             Route::get('/deactivate/{id}', [App\Http\Controllers\Admin\UserController::class, 'deActivate'])->name('deactivate');
+//         });
 
-        Route::prefix('news')->name('news.')->group(function(){
-            Route::get('/list', [App\Http\Controllers\Admin\NewsController::class, 'index'])->name('index');
-            Route::get('/create', [App\Http\Controllers\Admin\NewsController::class, 'create'])->name('create');
-            Route::post('/store', [App\Http\Controllers\Admin\NewsController::class, 'store'])->name('store');
-            Route::get('/show/{id}', [App\Http\Controllers\Admin\NewsController::class, 'show'])->name('show');
-            Route::get('/edit/{id}', [App\Http\Controllers\Admin\NewsController::class, 'edit'])->name('edit');
-            Route::post('/update/{id}', [App\Http\Controllers\Admin\NewsController::class, 'update'])->name('update');
-            Route::get('/destroy/{id}', [App\Http\Controllers\Admin\NewsController::class, 'destroy'])->name('destroy');
-        });
-        // ===================================FAQ'S ROUTES=======================================
-        Route::prefix('faqs')->name('faqs.')->group(function(){
-            Route::get('/list', [App\Http\Controllers\Admin\FaqsController::class, 'index'])->name('index');
-            Route::get('/create', [App\Http\Controllers\Admin\FaqsController::class, 'create'])->name('create');
-            Route::post('/store', [App\Http\Controllers\Admin\FaqsController::class, 'store'])->name('store');
-            Route::get('/show/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'show'])->name('show');
-            Route::get('/edit/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'edit'])->name('edit');
-            Route::post('/update/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'update'])->name('update');
-            Route::get('/destroy/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'destroy'])->name('destroy');
-        });
-        // ===================================PAcKAGES ROUTES=======================================
-        Route::prefix('packages')->name('packages.')->group(function(){
-            Route::get('/list', [App\Http\Controllers\Admin\PackagesController::class, 'index'])->name('index');
-            Route::get('/create', [App\Http\Controllers\Admin\PackagesController::class, 'create'])->name('create');
-            Route::post('/store', [App\Http\Controllers\Admin\PackagesController::class, 'store'])->name('store');
-            Route::get('/edit/{id}', [App\Http\Controllers\Admin\PackagesController::class, 'edit'])->name('edit');
-            Route::post('/update/{id}', [App\Http\Controllers\Admin\PackagesController::class, 'update'])->name('update');
-        });
-         // ===================================NEWS LETTER=======================================
-         Route::prefix('news_letter')->name('news_letter.')->group(function(){
-            Route::get('/list', [App\Http\Controllers\Admin\NewsLetterController::class, 'list'])->name('list');
-        });
-    });
+//         Route::prefix('news')->name('news.')->group(function(){
+//             Route::get('/list', [App\Http\Controllers\Admin\NewsController::class, 'index'])->name('index');
+//             Route::get('/create', [App\Http\Controllers\Admin\NewsController::class, 'create'])->name('create');
+//             Route::post('/store', [App\Http\Controllers\Admin\NewsController::class, 'store'])->name('store');
+//             Route::get('/show/{id}', [App\Http\Controllers\Admin\NewsController::class, 'show'])->name('show');
+//             Route::get('/edit/{id}', [App\Http\Controllers\Admin\NewsController::class, 'edit'])->name('edit');
+//             Route::post('/update/{id}', [App\Http\Controllers\Admin\NewsController::class, 'update'])->name('update');
+//             Route::get('/destroy/{id}', [App\Http\Controllers\Admin\NewsController::class, 'destroy'])->name('destroy');
+//         });
+//         // ===================================FAQ'S ROUTES=======================================
+//         Route::prefix('faqs')->name('faqs.')->group(function(){
+//             Route::get('/list', [App\Http\Controllers\Admin\FaqsController::class, 'index'])->name('index');
+//             Route::get('/create', [App\Http\Controllers\Admin\FaqsController::class, 'create'])->name('create');
+//             Route::post('/store', [App\Http\Controllers\Admin\FaqsController::class, 'store'])->name('store');
+//             Route::get('/show/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'show'])->name('show');
+//             Route::get('/edit/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'edit'])->name('edit');
+//             Route::post('/update/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'update'])->name('update');
+//             Route::get('/destroy/{id}', [App\Http\Controllers\Admin\FaqsController::class, 'destroy'])->name('destroy');
+//         });
+//         // ===================================PAcKAGES ROUTES=======================================
+//         Route::prefix('packages')->name('packages.')->group(function(){
+//             Route::get('/list', [App\Http\Controllers\Admin\PackagesController::class, 'index'])->name('index');
+//             Route::get('/create', [App\Http\Controllers\Admin\PackagesController::class, 'create'])->name('create');
+//             Route::post('/store', [App\Http\Controllers\Admin\PackagesController::class, 'store'])->name('store');
+//             Route::get('/edit/{id}', [App\Http\Controllers\Admin\PackagesController::class, 'edit'])->name('edit');
+//             Route::post('/update/{id}', [App\Http\Controllers\Admin\PackagesController::class, 'update'])->name('update');
+//         });
+//          // ===================================NEWS LETTER=======================================
+//          Route::prefix('news_letter')->name('news_letter.')->group(function(){
+//             Route::get('/list', [App\Http\Controllers\Admin\NewsLetterController::class, 'list'])->name('list');
+//         });
+//     });
 
-});
+// });
