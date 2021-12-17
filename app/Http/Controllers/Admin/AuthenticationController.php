@@ -13,6 +13,7 @@ use App\Models\Company;
 use App\Models\Order;
 use App\Models\Package;
 use App\Models\PasswordReset;
+use App\Models\SocialLogin;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +21,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Validator;
 use DB;
+use Str;
 use Laravel\Socialite\Facades\Socialite;
+use App\Mail\MailUserSocialRegisterVerification;
 
 class AuthenticationController extends Controller
 {
@@ -457,7 +460,13 @@ class AuthenticationController extends Controller
                 Auth::login($finduser);
                 return redirect('/');
             } else {
-                return redirect('/#/social-login/'.$user->email);
+                $social_login = SocialLogin::create([
+                    'social_name' => 'google',
+                    'social_id' => $user->id,
+                    'email' => $user->email,
+                    'name' => $user->name,
+                ]);
+                return redirect('/#/social-login/'.$user->id);
             }
         }
         catch(Exception $e) {
@@ -465,43 +474,39 @@ class AuthenticationController extends Controller
             // return redirect('auth/google');
         }
     }
-
+    public function getSocialUserData($id)
+    {
+        return SocialLogin::where('social_id', $id)->first();
+    }
     public function userGoogleRegistration(Request $request)
     {
         $attributeNames = [
             'email'             => 'Email',
-            'password'          => 'Password',
-            'confirm_password'  => 'Confirm Password',
+            'role'          => 'Role',
         ];
 
         $messages = [
             
         ];
-        if($request->type == 'candidate')
+        if($request->role == 'candidate')
         {
             $rules = [
-                'email'             => 'required|unique:users|max:100|email',
+                'email'            => 'required|unique:users|max:100|email',
                 'name'             => 'required',
-                'phone'             => 'required',
-                'password'          => 'required|min:6',
-                'confirm_password'  => 'required|same:password',
+                'role'             => 'required',
             ];
         }
-        if($request->type == 'company')
+        if($request->role == 'company')
         {
             $rules = [
                 'email'             => 'required|unique:users|max:100|email',
                 'company_name'      => 'required|unique:companies|max:100',
                 'name'              => 'required',
-                'phone'             => 'required',
-                'password'          => 'required|min:6',
-                'confirm_password'  => 'required|same:password',
+                'role'              => 'required',
             ];
         }
-
         $validator = Validator::make($request->all(), $rules, $messages);
         $validator->setAttributeNames($attributeNames);
-
         if ($validator->fails()){
             return response()->json([
                 'success' => false,
@@ -510,8 +515,115 @@ class AuthenticationController extends Controller
         }
         else
         {
+            if($request->role == 'candidate')
+            {
+                $random_str = Str::random(8);
+                $user = User::create([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => Hash::make($random_str),
+                    'type' => 'candidate',
+                    'status' => 'Active',
+                ]);
+                $candidate = Candidate::create([
+                    'full_name' => $request->name,
+                    'email' => $request->email,
+                    'user_id' => $user->id,
+                    'status' => 'Active',
+                ]);
+                Auth::login($user);
+                // Mail::to($user->email)->send(new MailUserSocialRegisterVerification($user));
+                return response()->json([
+                    'success' => true,
+                    'type' => 'candidate'
+                ]);
+            }
+            if($request->role == 'company')
+            {
+                $random_str = Str::random(8);
+                $user = User::create([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => Hash::make($random_str),
+                    'type' => 'company',
+                    'status' => 'Active',
+                ]);
+                $package = Package::where('title', 'Free')->first();
+                $company = Company::create([
+                    'full_name' => $request->name,
+                    'company_name' => $request->company_name,
+                    'email' => $request->email,
+                    'user_id' => $user->id,
+                    'package_id' => 1,
 
+                ]);
+                $create_Order = Order::create([
+                    'package_id' => 1,
+                    'company_id' => $company->id,
+                    'user_id' => $user->id,
+                    'start_date' => Carbon::now(),
+                    'status' => 'active',
+                ]);
+                $company->order_id = $create_Order->id;
+                $company->update();
+                Auth::login($user);
+                // Mail::to($user->email)->send(new MailUserSocialRegisterVerification($user));
+                return response()->json([
+                    'success' => true,
+                    'type' => 'company'
+                ]);
+            }
         }
     }
-   
+    //GITHUB
+    public function redirectToGithub() {
+        return Socialite::driver('github')->redirect();
+    }
+    public function handleGithubCallback() {
+        try{
+            $user = Socialite::driver('github')->user();
+            $finduser = User::where('email', $user->email)->first();
+            if ($finduser) {
+                Auth::login($finduser);
+                return redirect('/');
+            } else {
+                $social_login = SocialLogin::create([
+                    'social_name' => 'github',
+                    'social_id' => $user->id,
+                    'email' => $user->email,
+                    'name' => $user->nickname,
+                ]);
+                return redirect('/#/social-login/'.$user->id);
+            }
+        }
+        catch(Exception $e) {
+            dd($e->getMessage());
+        }
+    }
+    //LINKEDIN
+    public function redirectToLinkedin() {
+        return Socialite::driver('linkedin')->redirect();
+    }
+    public function handleLinkedinCallback() {
+        try{
+            $user = Socialite::driver('linkedin')->user();
+            $finduser = User::where('email', $user->email)->first();
+            if ($finduser) {
+                Auth::login($finduser);
+                return redirect('/');
+            } else {
+                $social_login = SocialLogin::create([
+                    'social_name' => 'github',
+                    'social_id' => $user->id,
+                    'email' => $user->email,
+                    'name' => $user->nickname,
+                ]);
+                return redirect('/#/social-login/'.$user->id);
+            }
+        }
+        catch(Exception $e) {
+            dd($e->getMessage());
+        }
+    }
+    
 }

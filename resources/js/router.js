@@ -33,7 +33,7 @@ import PrivacyPolicy from './components/pages/website/PrivacyPolicyComponent.vue
 import AboutUs from './components/pages/website/AboutUsComponent.vue';
 import NewsDetail from './components/pages/website/NewsDetailComponent.vue';
 import Services from './components/pages/website/ServicesComponent.vue';
-import SocialLogin from './components/pages/website/SocialLoginComponent.vue';
+import SocialLogin from './components/pages/website/Auth/SocialLoginComponent.vue';
 
 Vue.use(VueRouter);
 
@@ -194,7 +194,7 @@ const router = new VueRouter({
             component: NewsDetail
         },
         {
-            path: '/social-login/:email',
+            path: '/social-login/:id',
             name: 'SocialLogin',
             component: SocialLogin
         },
