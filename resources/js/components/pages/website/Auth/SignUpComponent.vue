@@ -106,27 +106,20 @@
                                                             Sign up with</a> -->
                                                     </div>
                                                     <div class="direct-login">
-                                                        <!-- <ul class="direct-login-icons">
+                                                        <ul class="direct-login-icons">
                                                             <li>
-                                                                <a href="#"><img src="/website/assets/images/search.svg"
-                                                                        alt="google" /></a>
+                                                                <a href="auth/google"><img src="/website/assets/images/search.svg" alt="google" /></a>
+                                                            </li>
+                                                            <!-- <li>
+                                                                <a ><img src="/website/assets/images/facebookLogin.svg" alt="facebook" /></a>
+                                                            </li> -->
+                                                            <li>
+                                                                <a href="auth/linkedin"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
                                                             </li>
                                                             <li>
-                                                                <a href="#"><img
-                                                                        src="/website/assets/images/facebook_icon.png"
-                                                                        alt="facebook" /></a>
+                                                                <a href="auth/github"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
                                                             </li>
-                                                            <li>
-                                                                <a href="#"><img
-                                                                        src="/website/assets/images/linkedin-round.svg"
-                                                                        alt="linkedin" /></a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#"><img
-                                                                        src="/website/assets/images/github-logo_icon.png"
-                                                                        alt="github" /></a>
-                                                            </li>
-                                                        </ul> -->
+                                                        </ul>
                                                         <span>Already have an account?
                                                             <router-link data-toggle="collapse"
                                                                 :to="{ name: 'Signin' }">Login</router-link>
@@ -231,22 +224,16 @@
                                                     <div class="direct-login">
                                                         <ul class="direct-login-icons">
                                                             <li>
-                                                                <a href="#"><img src="/website/assets/images/search.svg"
-                                                                        alt="google" /></a>
+                                                                <a href="auth/google"><img src="/website/assets/images/search.svg" alt="google" /></a>
+                                                            </li>
+                                                            <!-- <li>
+                                                                <a ><img src="/website/assets/images/facebookLogin.svg" alt="facebook" /></a>
+                                                            </li> -->
+                                                            <li>
+                                                                <a href="auth/linkedin"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
                                                             </li>
                                                             <li>
-                                                                <a href="#"><img
-                                                                        src="/website/assets/images/facebook.svg"
-                                                                        alt="facebook" /></a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#"><img
-                                                                        src="/website/assets/images/linkedin-round.svg"
-                                                                        alt="linkedin" /></a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#"><img src="/website/assets/images/github.svg"
-                                                                        alt="github" /></a>
+                                                                <a href="auth/github"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
                                                             </li>
                                                         </ul>
                                                         <span>Already have an account?

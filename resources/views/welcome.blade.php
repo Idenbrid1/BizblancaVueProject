@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>IT Job in Lahore - IT Jobs In Pakistan - BizBlancab</title>
+    <title>IT Job in Lahore - IT Jobs In Pakistan - BizBlanca</title>
     @if (Auth::check()) 
         <meta name="user_id" content="{{ Auth::user()->id }}" />
     @else
