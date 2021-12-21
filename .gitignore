@@ -3,6 +3,7 @@
 /public/hot
 /public/storage
 package-lock.json
+package-lock.json/
 composer.lock
 /storage/*.key
 /vendor

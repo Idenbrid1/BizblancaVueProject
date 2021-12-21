@@ -19,7 +19,6 @@ Vue.component('multiselect', Multiselect)
 
 // https://www.npmjs.com/package/vue-timeago
 import VueTimeago from 'vue-timeago'
-import { vue } from 'laravel-mix';
 Vue.use(VueTimeago, {
     name: 'Timeago', // Component name, `Timeago` by default
     locale: 'en', // Default locale
@@ -47,11 +46,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-vue.config.productionTip = false;
 
 const app = new Vue({
     el: '#app',
     router,
     components: {App,},
-    template:'<App/>',
 });
