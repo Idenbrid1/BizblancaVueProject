@@ -93,7 +93,7 @@
                                     <li>
                                         <router-link v-if="!item.deleted_at"
                                             :to="{ name: 'JobAppliedCandidates', params: { id: item.id } }"
-                                            data-toggle="collapse" title="Applied Candidates"
+                                            data-toggle="collapse" title="Applicants"
                                             class="job-post-icons title-tip">
                                             <i class="fas fa-users"></i>
                                         </router-link>

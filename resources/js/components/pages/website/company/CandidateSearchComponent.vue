@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar/>
-        <CompanyNavbar v-if="isAuth == true"/>
+        <CompanyNavbar v-if="is_auth == true"/>
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
@@ -149,7 +149,7 @@
                                             </li> -->
                                             <li>
                                                 <i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1"> {{searchData[index].candidate.experience}}Years</div>
+                                                <div class="hide-line-1"> {{searchData[index].candidate.experience}} Years</div>
                                             </li>
                                             <li>
                                                 <i class="fas fa-user-cog"></i>
@@ -620,7 +620,18 @@
                 }
             },
             removeToWishList(id) {
-                axios.get('/remove-to-wish-list/' + id)
+                if(this.is_auth == true){
+                    axios.get('/remove-to-wish-list/' + id)
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...🧐',
+                        confirmButtonText: 'Understood!',
+                        text: 'Please login before!',
+                        footer: '<a href="/#/signin">Login?</a>',
+                        timer: 1500
+                    })
+                }
             },
             clearSearch() {
                 this.record = {

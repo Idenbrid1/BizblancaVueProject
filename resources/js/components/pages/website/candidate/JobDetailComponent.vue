@@ -15,9 +15,9 @@
                         <h1 class="job-title-view">{{data.title}}</h1>
                         <div class="job-apply-ankers">
                             <!-- <a href="" class="add-wishlist-anker">Add to Wishlist</a> -->
-                            <a v-if="is_auth == true && already_applied == false" @click="applyJob()" class="job-apply-anker">Apply Now</a>
-                            <a v-if="is_auth == false" @click="showAlert()" class="job-apply-anker">Apply Now</a>
-                            <a v-if="already_applied == true" @click="alreadyAppliedAlert()" class="job-apply-anker">Apply Now</a>
+                            <a v-if="is_auth == true && already_applied == false && role == 'candidate'" @click="applyJob()" class="job-apply-anker">Apply Now</a>
+                            <a v-if="is_auth == false && role == 'candidate'" @click="showAlert()" class="job-apply-anker">Apply Now</a>
+                            <a v-if="already_applied == true && role == 'candidate'" @click="alreadyAppliedAlert()" class="job-apply-anker">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -59,24 +59,24 @@
                             <h3>Job Description:</h3>
                             <p>{{data.description}}</p>
                         </div>
-                        <div>
+                        <!-- <div>
                             <h3>Job Responsibilities:</h3>
                             <ul>
                                 <li>{{data.job_responsibilities}}</li>
                             </ul>
-                        </div>
+                        </div> -->
                         <div>
                             <h3>Qualification and Technicalities:</h3>
                             <ul>
                                 <li>{{data.qualification_level}}</li>
                             </ul>
                         </div>
-                        <div>
+                        <!-- <div>
                             <h3>Benefits:</h3>
                             <ul>
                                 <li>{{data.benefits}}</li>
                             </ul>
-                        </div>
+                        </div> -->
                         <div class="job-info-visual">
                             <div class="job-info-img"
                                 :style="{ 'background-image': 'url(/storage/images/companies/' + data.company.logo + ')' }">
@@ -190,6 +190,7 @@
                 data: {},
                 related_job: '',
                 is_auth: '',
+                role: '',
                 already_applied: ''
             }
         },
@@ -226,6 +227,10 @@
                         axios.get('/check-already-applied/'+this.data.id)
                         .then((response) => {
                             this.already_applied = response.data.already_applied
+                        });
+                        axios.get('/check-role')
+                        .then((response) => {
+                            this.role = response.data
                         });
                     }
                 });

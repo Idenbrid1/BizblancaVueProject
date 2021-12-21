@@ -52,6 +52,7 @@ Route::get('/get-package-plans', [App\Http\Controllers\CommonController::class, 
 Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCandidateRole']);
 Route::get('check-company-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCompanyRole']);
 Route::get('navbar-check-roles', [App\Http\Controllers\Admin\AuthenticationController::class, 'navbarCheckRole']);
+Route::get('/check-role', [App\Http\Controllers\CommonController::class, 'checkRole']);
 Route::post('/job-search', [App\Http\Controllers\CommonController::class, 'jobSearch']);
 Route::post('/candidate-search', [App\Http\Controllers\CommonController::class, 'candidateSearch']);
 Route::get('/job-keyword-search/{keyword}', [App\Http\Controllers\CommonController::class, 'jobKeywordSearch']);
