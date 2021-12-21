@@ -136,8 +136,7 @@
                                 <div class="company-logo col-auto py-2">
                                     <img :src="'/storage/images/companies/'+searchData[index].company.logo"
                                         alt="Company Logo">
-                                    <span
-                                        class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
+                                    <span class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
                                 </div>
                                 <div class="job-list-content col">
                                     <div class="job-header">
@@ -147,7 +146,6 @@
                                             </timeago>
                                         </div>
                                     </div>
-
                                     <p class="job-description">{{searchData[index].description}}</p>
                                     <div class="job-content-wrap">
                                         <div class="job-dynamic-values">
@@ -166,10 +164,10 @@
                                                     <img src="/website/assets/images/money-job.svg" alt="">
                                                     <span>{{searchData[index].salary_range}}</span>
                                                 </li>
-                                                <li>
+                                                <li class="d-flex align-items-center">
                                                     <img height="16px" width="10px" style="margin:0px 3px;"
                                                         src="/website/assets/images/pin.svg" alt="img">
-                                                    <span>{{searchData[index].location}}</span>
+                                                    <span class="location-company">{{searchData[index].location}}</span>
                                                 </li>
                                             </ul>
                                             <ul>
@@ -187,7 +185,8 @@
                                             <li>
                                                 <router-link class="job-view-btn" data-toggle="collapse"
                                                     :to="{ name: 'JobDetail', params: { id: searchData[index].id } }">
-                                                    View</router-link>
+                                                    View
+                                                </router-link>
                                             </li>
                                         </ul>
                                     </div>
