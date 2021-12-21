@@ -37,7 +37,7 @@
                                         </div>
                                         <br>
                                         <div class="form-group" v-if="record.role == 'company'">
-                                            <input type="text" placeholder="Enter Username" required name="company_name"
+                                            <input type="text" placeholder="Enter Company" required name="company_name"
                                                 id="company_name" v-model="record.company_name"/>
                                             <small>
                                                 <span v-if="errors.company_name != null" class="text-danger float-left">
@@ -112,13 +112,19 @@
         },
         methods: {
             googleLogin() {
-                Swal.fire({
-                    text: 'Please Wait We SettingUp Things for You! Be Patients',
-                    didOpen: () => {
-                        Swal.showLoading()
-                    },
-                })
-                axios.post('/user-google-registration', this.record)
+                if(this.record.role == ''){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Please select role',
+                    })
+                }else{
+                    Swal.fire({
+                        text: 'Please Wait We SettingUp Things for You! Be Patients',
+                        didOpen: () => {
+                            Swal.showLoading()
+                        },
+                    })
+                    axios.post('/user-google-registration', this.record)
                     .then((response) => {
                         if (response.data.success == false) {
                             Swal.close()
@@ -137,6 +143,8 @@
                             }
                         }
                     });
+                }
+                
             },
         }
     };

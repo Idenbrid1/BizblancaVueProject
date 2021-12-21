@@ -65,9 +65,9 @@
                                             <li>
                                                 <a href="auth/google"><img src="/website/assets/images/search.svg" alt="google" /></a>
                                             </li>
-                                            <li>
+                                            <!-- <li>
                                                 <a ><img src="/website/assets/images/facebookLogin.svg" alt="facebook" /></a>
-                                            </li>
+                                            </li> -->
                                             <li>
                                                 <a href="auth/linkedin"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
                                             </li>

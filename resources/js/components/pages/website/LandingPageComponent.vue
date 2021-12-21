@@ -85,8 +85,8 @@
                                     <div class="swiper-slide single-blog-wrap" v-for="(item, index) in news" :key="index">
                                         <div class="single-blog">
                                             <img :src="'/storage/images/news/'+item.image" alt="blog-img" />
-                                            <div class="eventdate"><strong>{{ item.created_at | moment("d")}}</strong>
-                                                {{ item.created_at | moment("MMM")}}</div>
+                                            <!-- <div class="eventdate"><strong>{{ item.created_at | moment("d")}}</strong>
+                                                {{ item.created_at | moment("MMM")}}</div> -->
                                             <div class="news-card-day">
                                                 <div class="blog-title">
                                                     <span>{{item.title}}</span>

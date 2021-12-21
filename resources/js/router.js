@@ -39,7 +39,6 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
     // mode: 'history',
-
     // linkExactActiveClass: 'font-weight-bold',
     routes: [
         {   path: "*", 
