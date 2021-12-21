@@ -127,7 +127,7 @@ class CandidateController extends Controller
         $candidateeducation = CandidateEducation::where('candidate_id', $candidate->id)->delete();
         foreach($request->all() as $education ) {
             $candidateEducation = new CandidateEducation;
-            // $candidateEducation->school_type = $education['school_type'];
+            $candidateEducation->school_type = $education['school_type'];
             $candidateEducation->start_date = $education['start_date'];
             $candidateEducation->end_date = $education['end_date'];
             $candidateEducation->school_name = $education['school_name'];

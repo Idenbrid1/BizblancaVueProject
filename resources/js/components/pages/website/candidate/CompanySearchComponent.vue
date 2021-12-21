@@ -48,8 +48,8 @@
                 <div class="job-list-wrap mt-3 p-0">
                     <!-- <div class="job-search-count mb-3">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
-                    <div class="job-list m-0 mb-3" v-if="index < searchData.length"
-                        v-for="(item, index) in companiesToShow" :key="index">
+                    <div v-if="this.showLoader == true"><paragraphsShimmer style="--shimmer-color: #eee" height="200px" width="200px"/></div>
+                    <div class="job-list m-0 mb-3" v-if="index < searchData.length" v-for="(item, index) in companiesToShow" :key="index">
                         <div class="company-logo col-auto py-2">
                             <img :src="'/storage/images/companies/'+searchData[index].company.logo" alt="Company Logo" />
                             <span class="company-h line-clamp-1">{{searchData[index].company.company_name}}</span>
@@ -398,23 +398,36 @@
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CandidateNavbar from '../partials/CandidateNavbar.vue';
+    import {
+        blockShimmer,
+        circleShimmer,
+        imageShimmer,
+        paragraphsShimmer,
+        sentencesShimmer,
+        textShimmer
+    } from 'vue-shimmer'
     export default {
         props: ['userdetail'],
         data() {
             return {
                 record: {
                     keyword: ''
-
                 },
                 searchData: '',
                 companiesToShow: 2,
                 totalCompanies: 0,
-
+                showLoader: false,
             }
         },
         components: {
             WebsiteNavbar,
             CandidateNavbar,
+            blockShimmer,
+            circleShimmer,
+            imageShimmer,
+            paragraphsShimmer,
+            sentencesShimmer,
+            textShimmer,
         },
         mounted() {
             var swiper = new Swiper(".bizer-ranking-slider", {
@@ -430,11 +443,13 @@
             });
         },
         methods: {
-            keywordSearch() {
+            async keywordSearch() {
+                this.showLoader = true
                 axios.get('/companies-keyword-search/' + this.record.keyword)
                     .then((response) => {
                         this.searchData = response.data
                         this.totalCompanies = this.searchData.length
+                        this.showLoader = false
                     });
             },
             clearSearch() {

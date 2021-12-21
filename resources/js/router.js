@@ -38,7 +38,7 @@ import SocialLogin from './components/pages/website/Auth/SocialLoginComponent.vu
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    mode: 'history',
+    // mode: 'history',
 
     // linkExactActiveClass: 'font-weight-bold',
     routes: [

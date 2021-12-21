@@ -26,7 +26,7 @@
             height: 150px;
             background-size: 100% 100%;
             border-radius: 5px;
-            background: #081351;
+            /* background: #081351; */
         }
 
         .candidate-send-msg {
@@ -205,15 +205,15 @@
                 <div class="candidate-info-box">
                     <div>
                         <div class="candidate-pic-detail">
-                            <div class="candidate-detail-img" style="background-image:url()"></div>
+                            <div class="candidate-detail-img" style="background-image: url('{{public_path('storage/images/candidates/profile/'.$candidate->profile_image)}}')"></div>
                         </div>
                     </div>
                     <div class="candidate-detail-wrap">
                         <div>
                             <ul class="candidate-detail-list">
-                                <li class="candidate-name">Muhammad Ahmad</li>
-                                <li class="candidate-location">Lahore</li>
-                                <p class="candidate-designation">Frontend Developer</p>
+                                <li class="candidate-name">{{$candidate->full_name}}</li>
+                                <li class="candidate-location">{{$candidate->city}}</li>
+                                <p class="candidate-designation">{{$candidate->bio}}</p>
                             </ul>
                         </div>
                         <p class="detail-label">Detailed Information</p>
@@ -221,83 +221,78 @@
                 </div>
                 <div class="candidate-detail-info"><span class="candidate-detail-label">CONTACT INFORMATION:</span>
                     <ul class="candidate-info contact-info">
-                        <li><span>Phone:</span>03164361632</li>
-                        <li><span>Address:</span>Lahore</li>
-                        <li><span>Email:</span><u>ahmad.idenbrid@gmail.com</u></li>
+                        <li><span>Phone:</span>{{$candidate->phone}}</li>
+                        <li><span>Address:</span>{{$candidate->city}}</li>
+                        <li><span>Email:</span><u>{{$candidate->email}}</u></li>
                     </ul>
                 </div>
                 <div class="candidate-detail-info"><span class="candidate-detail-label basic-info">BASIC
                         INFORMATION:</span>
                     <ul class="candidate-info basic-info">
-                        <li><span>Date of Birth:</span>11/12/1997</li>
-                        <li><span>Gender:</span>Male</li>
-                        <li><span>City:</span>Lahore</li>
-                        <li><span>Zip Code:</span>54000</li>
-                        <li><span>CNIC:</span>3110297279719</li>
-                        <li><span>Bio:</span>I am Graduated from University of South Asia,
-                            I have done BS Computer Science. My expertise are UI/UX Designing,
-                            Product Designing,
-                            Graphic Designing,
-                            HTML,
-                            CSS.</li>
+                        <li><span>Date of Birth:</span>{{$candidate->date_of_birth}}</li>
+                        <li><span>Gender:</span>{{$candidate->gender}}</li>
+                        <li><span>City:</span>{{$candidate->city}}</li>
+                        <li><span>Zip Code:</span>{{$candidate->zip_code}}</li>
+                        <li><span>CNIC:</span>{{$candidate->cnic}}</li>
+                        <li><span>Bio:</span>{{$candidate->bio}}</li>
                     </ul>
                 </div>
                 <div class="candidate-detail-info">
                     <span class="candidate-detail-label education-info">EDUCATION:</span>
                     <ul class="candidate-info education-info">
-                        <li>
-                            <span>Intermediate:</span>2014 to 2016 - Punjab Group of Colleges</li>
-                        <li><span>Bachelors:</span>2016 to 2020 - BS (Computer Science) - University of South Asia,
-                            Cantt Campus</li>
-                        <li><span>Intermediate:</span>2014 to 2016 - Punjab Group of Colleges</li>
+                        @foreach($candidate->CandidateEducation as $edu)
+                            <li><span>{{$edu->school_type}}:</span>{{$edu->start_date}} to {{$edu->end_date}} - {{$edu->school_name}}</li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="candidate-detail-info">
                     <span class="candidate-detail-label experience-info">WORK EXPERIENCE:</span>
                     <ul class="candidate-info experience-info">
-                        <li><span>Powerstar Group Limited:</span>Graphic Designer - 2 months</li>
-                        <li><span>Powerstar Group Limited:</span>Graphic Designer - 2 months</li>
-                        <li><span>Powerstar Group Limited:</span>Graphic Designer - 2 months</li>
+                        @foreach($candidate->CandidateExperience as $exp)
+                        <li><span>{{$exp->company_name}}:</span>{{$exp->designation}} - @if($exp->end_date == null)Currently Working @else {{$exp->start_date}} to {{$exp->end_date}} @endif</li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="candidate-detail-info">
                     <span class="candidate-detail-label skills-info">SKILLS:</span>
                     <ul class="candidate-info skills-info">
                         <li class="skills-candidate">
-                            <span>English</span>
-                            <span>Urdu</span>
-                            <span>German</span>
+                            @foreach($candidate->CandidateSkills as $skill)
+                            <span>{{$skill->name}}</span>
+                            @endforeach
                         </li>
                     </ul>
                 </div>
                 <div class="candidate-detail-info">
                     <span class="candidate-detail-label awards-info">AWARDS:</span>
                     <ul class="candidate-info awards-info">
-                        <li><span>Best Entrepreneurship Gala Seller:</span>2020</li>
-                        <li><span>Brainstorming Champion:</span>2019</li>
-                        <li><span>Brainstorming Champion:</span>2020</li>
+                        @foreach($candidate->CandidateAwards as $awd)
+                            <li><span>{{$awd->name}}:</span>{{$awd->date}}</li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="candidate-detail-info">
                     <span class="candidate-detail-label language-info">LANGUAGE:</span>
                     <ul class="candidate-info language-info">
                         <li class="skills-candidate">
-                            <span>English</span>
-                            <span>Urdu</span>
-                            <span>German</span>
+                            @foreach($candidate->CandidateLanguage as $lang)
+                            <span>{{$lang->name}}</span>
+                            @endforeach
                         </li>
                     </ul>
                 </div>
-                <div class="candidate-detail-info">
+                <!-- <div class="candidate-detail-info">
                     <span class="candidate-detail-label portfolio-info">PORTFOLIO:</span>
                     <ul class="candidate-info portfolio-info">
                         <li><a href="" target="_blank">https://www.behance.net/abdullahnasir8</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="candidate-detail-info">
                     <span class="candidate-detail-label project-info">PROJECTS:</span>
                     <ul class="candidate-info project-info">
-                        <li><a href="" target="_blank">https://www.behance.net/abdullahnasir8</a></li>
+                        @foreach($candidate->CandidateProjects as $proj)
+                        <li><a href="" target="_blank">{{$proj->link}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
 

@@ -25,8 +25,11 @@
                     <!--  -->
                     <div class="col-12 p-0 first-section">
                         <section id="news-section" class="container">
+                            <div  v-if="this.showShimmer == true">
+                                <blockShimmer style="--shimmer-color: #eee" height="1000px" width="1000px" />
+                            </div>
                             <!-- swiper blogs -->
-                            <div class="" id="blogs-section-scroll">
+                            <div v-if="this.showShimmer == false" id="blogs-section-scroll">
                                 <div class="swiper-container blogs-swiper">
                                     <div class="row">
                                         <div class="col-md-12 text-left">
@@ -73,17 +76,26 @@
 <script>
     import axios from 'axios';
     import WebsiteNavbar from '../website/partials/navbar.vue';
+    import {
+        blockShimmer,
+        circleShimmer,
+        imageShimmer,
+        paragraphsShimmer,
+        sentencesShimmer,
+        textShimmer
+    } from 'vue-shimmer'
     export default {
         data() {
             return {
                 data: {},
-                news: []
+                news: [],
+                showShimmer: true
             }
         },
         watch: {
             '$route.path': function (val, oldVal) {
                 this.init_component();
-            }
+            },
         },
         mounted() {
 
@@ -94,6 +106,12 @@
         },
         components: {
             WebsiteNavbar,
+            blockShimmer,
+            circleShimmer,
+            imageShimmer,
+            paragraphsShimmer,
+            sentencesShimmer,
+            textShimmer,
         },
         methods: {
             swiperInit() {
@@ -152,12 +170,14 @@
                 axios.get('/get-single-news-detail/' + this.$route.params.id)
                 .then((response) => {
                     this.data = response.data
+                    // this.showShimmer = false 
                 });
             },
             getNews() {
                 axios.get('/landingpage/news')
-                .then((response) => {
+                    .then( async (response) => {
                     this.news = response.data
+                    this.showShimmer = false 
                     this.swiperInit()
                 });
             },

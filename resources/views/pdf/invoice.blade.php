@@ -212,9 +212,7 @@
 
 <body>
     <header class="clearfix">
-        <div id="logo">
-            <img src="{{url('/')}}/website/assets/images/Logo-invoice.png">
-        </div>
+        <div id="logo" style="background-image: url('/website/assets/images/Logo-invoice.png')"></div>
         <div id="company">
             <h2 class="name">© IDENBRID INC.™</h2>
             <div>176-Y, DHA Phase 4, Lahore</div>

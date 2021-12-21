@@ -1,5 +1,6 @@
 <template>
     <div>
+        <WebsiteNavbar />
         <div class="candidate-profile-container container">
             <div class="row no-gutters">
                 <div class="col-5 col-md-3">
@@ -15,7 +16,7 @@
                                 <p>{{data.full_name}}</p>
                             </li>
                             <li class="v-on-d"><img src="/website/assets/images/pin-job.svg" alt="img">{{data.city}}</li>
-                            <li class="v-on-d"><a @click="download()"><i class="fas fa-download"></i> Download</a></li>
+                            <!-- <li class="v-on-d"><a @click="download()"><i class="fas fa-download"></i> Download</a></li> -->
                         </ul>
                         <p class="candidate-designation">{{data.bio}}</p>
                         <ul class="v-on-m m-0 p-0 pt-2 candidate-detail-list-m">
@@ -115,6 +116,7 @@
 </template>
 <script>
     import axios from 'axios';
+    import WebsiteNavbar from '../partials/navbar.vue';
     export default {
         data() {
             return {
@@ -123,6 +125,9 @@
         },
         created() {
             this.getSingleCandidateDetail()
+        },
+        components: {
+            WebsiteNavbar,
         },
         methods: {
             getSingleCandidateDetail() {  

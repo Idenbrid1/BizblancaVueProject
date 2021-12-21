@@ -370,7 +370,9 @@ class CommonController extends Controller
 
     public function downloadcv()
     {
-        $pdf = PDF::loadView('pdf.cv_template')->setPaper('a4', 'portrait');
+        $user = User::find(Auth::user()->id);
+        $candidate = Candidate::where('user_id', $user->id)->first();
+        $pdf = PDF::loadView('pdf.cv_template',compact('candidate'))->setPaper('a4', 'portrait');
         return $pdf->stream('cv_template.pdf');
     }
 

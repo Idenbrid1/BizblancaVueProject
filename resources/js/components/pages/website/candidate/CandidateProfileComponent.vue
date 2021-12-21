@@ -259,7 +259,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="openBasicModal()">Edit</a></li>
                                     </ul>
                                 </div>
@@ -327,7 +327,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="openEducationModal()">Edit</a></li>
                                     </ul>
                                 </div>
@@ -396,7 +396,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="OpenWorkQualificationModal()">Edit</a></li>
                                     </ul>
                                 </div>
@@ -439,7 +439,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="openLanguagesModal()">Edit</a></li>
                                     </ul>
                                 </div>
@@ -480,7 +480,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="openAwardModal()">Edit</a></li>
                                     </ul>
                                 </div>
@@ -574,7 +574,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="openCurrentJobModal()">Edit</a></li>
                                     </ul>
                                 </div>
@@ -635,7 +635,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="OpenDesireJobModal()">Edit</a></li>
                                     </ul>
                                 </div> -->
@@ -710,7 +710,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="openWorkExperienceModal()">Edit</a></li>
                                     </ul>
                                 </div>
@@ -751,7 +751,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="openSkillsModal()">Edit</a></li>
                                     </ul>
                                 </div>
@@ -893,7 +893,7 @@
                                         </div>
                                     </div>
                                     <ul class="view-edit-anker-list">
-                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateDetail', params: { id: profile.id } }">View Profile</router-link></li>
+                                        <li><router-link class="view-anker" data-toggle="collapse" :to="{ name: 'CandidateCvTemplate', params: { id: profile.id } }">View Profile</router-link></li>
                                         <li><a class="view-edit" @click="openProjectModals()">Edit</a></li>
                                     </ul>
                                 </div>
@@ -2363,6 +2363,7 @@
                             Swal.close()
                         } else {
                             this.errors = []
+                            this.errors_basic_information = []
                             this.getCandidateDashboardData()
                             $('#basicInfoModal').modal('hide')
                             Swal.close()

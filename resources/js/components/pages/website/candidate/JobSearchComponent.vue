@@ -129,7 +129,8 @@
                     <!-- Job List Toolbar Start -->
                     <div>
                         <!-- Job List Wrap Start -->
-                        <div class="job-list-wrap p-0">
+                        <div v-if="this.showLoader == true"><paragraphsShimmer style="--shimmer-color: #eee"/></div>
+                        <div v-if="this.showLoader == false" class="job-list-wrap p-0">
                             <div class="job-list m-0 mb-3" v-if="index < totalJobs" v-for="(item, index) in jobToShow"
                                 :key="index">
                                 <div class="company-logo col-auto py-2">
@@ -205,7 +206,8 @@
                 <div class="job-list-wrap" v-if="keywordSearchShow == true && is_auth == true">
                     <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
-                    <div class="row m-0 justify-content-start">
+                    <div v-if="this.showLoader == true"><paragraphsShimmer style="--shimmer-color: #eee" height="200px" width="200px"/></div>
+                    <div v-if="this.showLoader == false" class="row m-0 justify-content-start">
                         <div class="candidate-single" v-if="index < searchData.length"
                             v-for="(item, index) in companiesToShow" :key="index">
                             <div class="candidate-list-content">
@@ -247,11 +249,11 @@
                         </div>
                         
                     </div>
-                    <div class="text-center" v-if="searchData.length">
-                            <button class="load-more-btn mx-auto"
-                                v-if="searchData.length != companiesToShow && totalCompanies < companiesToShow"
-                                @click="companiesToShow += 3">Load more</button>
-                        </div>
+                    <div class="text-center" v-if="this.showLoader == false && searchData.length">
+                        <button class="load-more-btn mx-auto"
+                            v-if="searchData.length != companiesToShow && totalCompanies < companiesToShow"
+                            @click="companiesToShow += 3">Load more</button>
+                    </div>
                     <!-- </div> -->
                 </div>
                 <!-- Job List Wrap Start -->
@@ -541,6 +543,14 @@
     import axios from 'axios';
     import WebsiteNavbar from '../partials/navbar.vue';
     import CandidateNavbar from '../partials/CandidateNavbar.vue';
+    import {
+        blockShimmer,
+        circleShimmer,
+        imageShimmer,
+        paragraphsShimmer,
+        sentencesShimmer,
+        textShimmer
+    } from 'vue-shimmer'
     export default {
         data() {
             return {
@@ -555,6 +565,7 @@
                     keyword: '',
                     title: '',
                 },
+                showLoader: true,
                 searchData: [],
                 totalJobs: 0,
                 jobToShow: 10,
@@ -581,18 +592,25 @@
         components: {
             WebsiteNavbar,
             CandidateNavbar,
+            blockShimmer,
+            circleShimmer,
+            imageShimmer,
+            paragraphsShimmer,
+            sentencesShimmer,
+            textShimmer,
         },
         created() {
             this.checkAuth()
             this.getJobs()
         },
         methods: {
-            getJobs() {
+            async getJobs() {   
                 axios.get('get-jobs')
                     .then((response) => {
                         this.searchData = []
                         this.searchData = response.data
                         this.totalJobs = response.data.length
+                        this.showLoader = false
                     });
             },
             checkAuth() {
@@ -603,7 +621,8 @@
                         }
                     });
             },
-            search() {
+            async search() {
+                this.showLoader = true
                 axios.post('/job-search', this.record)
                     .then((response) => {
                         this.searchData = []
@@ -614,6 +633,7 @@
                         } else {
                             this.showError = false
                         }
+                        this.showLoader = false
                     });
             },
             addToWishList(id) {
@@ -622,7 +642,8 @@
             removeToWishList(id) {
                 axios.get('candidate/remove-to-wish-list/' + id)
             },
-            keywordSearch() {
+            async keywordSearch() {
+                this.showLoader = true
                 this.searchData = [];
                 this.totalJobs = 0;
                 this.jobToShow = 10;
@@ -641,6 +662,7 @@
                         } else {
                             this.showError = false
                         }
+                        this.showLoader = false
                     });
             },
             clearSearch() {
