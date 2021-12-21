@@ -12361,7 +12361,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 
 
@@ -53508,28 +53507,43 @@ var render = function () {
                                                     ]),
                                                   ]),
                                                   _vm._v(" "),
-                                                  _c("li", [
-                                                    _c("img", {
-                                                      staticStyle: {
-                                                        margin: "0px 3px",
-                                                      },
-                                                      attrs: {
-                                                        height: "16px",
-                                                        width: "10px",
-                                                        src: "/website/assets/images/pin.svg",
-                                                        alt: "img",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _c("span", [
-                                                      _vm._v(
-                                                        _vm._s(
-                                                          _vm.searchData[index]
-                                                            .location
-                                                        )
+                                                  _c(
+                                                    "li",
+                                                    {
+                                                      staticClass:
+                                                        "d-flex align-items-center",
+                                                    },
+                                                    [
+                                                      _c("img", {
+                                                        staticStyle: {
+                                                          margin: "0px 3px",
+                                                        },
+                                                        attrs: {
+                                                          height: "16px",
+                                                          width: "10px",
+                                                          src: "/website/assets/images/pin.svg",
+                                                          alt: "img",
+                                                        },
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "span",
+                                                        {
+                                                          staticClass:
+                                                            "location-company",
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              _vm.searchData[
+                                                                index
+                                                              ].location
+                                                            )
+                                                          ),
+                                                        ]
                                                       ),
-                                                    ]),
-                                                  ]),
+                                                    ]
+                                                  ),
                                                 ]),
                                                 _vm._v(" "),
                                                 _c("ul", [
@@ -53602,7 +53616,7 @@ var render = function () {
                                                       },
                                                       [
                                                         _vm._v(
-                                                          "\n                                                View"
+                                                          "\n                                                View\n                                            "
                                                         ),
                                                       ]
                                                     ),
