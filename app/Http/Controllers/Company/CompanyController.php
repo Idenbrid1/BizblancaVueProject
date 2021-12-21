@@ -457,9 +457,25 @@ class CompanyController extends Controller
     public function getAppliedApplicantsList($job_id)
     {
         $candidates = CandidateAppliedJob::where('job_id', $job_id)->with('Candidates')->get();
-        return response()->json([
-            'candidates' => $candidates,
-        ]);
+        $user = User::find(Auth::user()->id);
+        $company = Company::where('user_id', $user->id)->first();
+        $candidate_with_wishlist = [];
+        foreach($candidates as $candidate)
+        {
+            if(CompanyWishList::where(['company_id'=>$company->id, 'candidate_id'=>$candidate->id])->first())
+            {
+                $candidate_with_wishlist[] = array(
+                    'candidate'=>$candidate,
+                    'is_wish_listed'=>true,
+                );
+            }else{
+                $candidate_with_wishlist[] = array(
+                    'candidate'=>$candidate,
+                    'is_wish_listed'=>false,
+                );
+            }
+        }
+        return $candidate_with_wishlist;
     }
 
     public function getCompanyWishList()

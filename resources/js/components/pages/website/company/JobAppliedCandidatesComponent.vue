@@ -16,7 +16,7 @@
                 </div>
                 <div class="post_new_job_anker">
                     <div></div>
-                    <p>Showing 5 results of 123,456 jobs</p>
+                    <p>{{this.data.length}} Applicants</p>
                 </div>
                 <div class="candidate">
                     <label class="candidate-tagline">
@@ -30,30 +30,29 @@
                                 <div class="candidate-single">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo"
-                                                :style="{ 'background-image': 'url(/storage/images/candidates/' + item.candidates.profile_image + ')' }">
+                                            <div class="candidate-photo" :style="{ 'background-image': 'url(/storage/images/candidates/' + item.candidate.candidates.profile_image + ')' }">
                                             </div>
                                             <div class="candidate-header mt-2 ml-2">
-                                                <h6 class="candidate-name mb-0">{{item.candidates.full_name}}</h6>
+                                                <h6 class="candidate-name mb-0">{{item.candidate.candidates.full_name}}</h6>
                                             </div>
                                         </div>
                                         <!-- <span class="job-post-date">20 hours ago</span> -->
-                                        <p class="candidate-description my-1">{{item.candidates.bio}}</p>
+                                        <p class="candidate-description my-1">{{item.candidate.candidates.bio}}</p>
                                         <ul class="candidate-list-meta">
                                             <li><i class="fas fa-venus-mars"></i>
-                                                <div class="hide-line-1">{{item.candidates.gender}}</div>
+                                                <div class="hide-line-1">{{item.candidate.candidates.gender}}</div>
                                             </li>
-                                            <li class="mt-1"><i class="fas fa-graduation-cap"></i>
+                                            <!-- <li class="mt-1"><i class="fas fa-graduation-cap"></i>
                                                 <div class="hide-line-1">BSSE</div>
-                                            </li>
+                                            </li> -->
                                             <li class="mt-1"><i class="fas fa-envelope-open-text"></i>
-                                                <div class="hide-line-1">{{item.candidates.experience}}</div>
+                                                <div class="hide-line-1">{{item.candidate.candidates.experience}} years</div>
                                             </li>
-                                            <li class="mt-1"><i class="fas fa-user-cog"></i>
+                                            <!-- <li class="mt-1"><i class="fas fa-user-cog"></i>
                                                 <div class="hide-line-1">HTML,Bootstrap,CSS,Node JS</div>
-                                            </li>
+                                            </li> -->
                                             <li class="mt-1"><i class="fas fa-map-marker-alt"></i>
-                                                <div class="hide-line-1">{{item.candidates.city}}</div>
+                                                <div class="hide-line-1">{{item.candidate.candidates.city}}</div>
                                             </li>
 
                                         </ul>
@@ -61,11 +60,12 @@
                                         <ul class="candidate-list-fav">
                                             <li class="w-100">
                                                 <router-link class="job-view-btn" data-toggle="collapse"
-                                                    :to="{ name: 'CandidateDetail', params: { id: item.candidates.id } }">
+                                                    :to="{ name: 'CandidateDetail', params: { id: item.candidate.candidates.id } }">
                                                     View Profile</router-link>
                                             </li>
-                                            <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
+                                            <li>
+                                                <a v-if="item.is_wish_listed == false" @click="addToWishList(item.candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="far fa-heart"></i></a>
+                                                <a v-else @click="removeToWishList(item.candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="fas fa-heart"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -363,9 +363,15 @@
         methods: {
             getSingleJobDetail() {
                 axios.get('/get-applied-applicants-list/' + this.$route.params.id)
-                    .then((response) => {
-                        this.data = response.data.candidates
-                    });
+                .then((response) => {
+                    this.data = response.data
+                });
+            },
+            addToWishList(id) {
+                axios.get('/add-to-wish-list/' + id)
+            },
+            removeToWishList(id) {
+                axios.get('/remove-to-wish-list/' + id)
             },
         },
     };

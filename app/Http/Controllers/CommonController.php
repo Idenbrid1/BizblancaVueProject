@@ -38,6 +38,7 @@ class CommonController extends Controller
                 $jobposts = $jobposts->where($field, $request->$field);
             }
         }
+        $final_arr = [];
         foreach($jobposts as $jp){
             $final_arr[] = $jp;
         }
@@ -379,5 +380,10 @@ class CommonController extends Controller
     public function getJobs()
     {
         return JobPost::where('status', 'Active')->with(['Company'])->orderBy('created_at', 'DESC')->get(); 
+    }
+
+    public function checkRole()
+    {
+        return Auth::user()->type;
     }
 }
