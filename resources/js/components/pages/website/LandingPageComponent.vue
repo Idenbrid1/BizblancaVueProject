@@ -1,11 +1,32 @@
 <template>
     <div>
         <!-- spinner -->
-        <div class="parent-spinner">
+        <!-- <div class="parent-spinner">
             <span class="text_loading">BizBlanca<br>Loading....</span>
             <div class="spinner" style="font-size:16px"></div>
-        </div>
+        </div> -->
         <!-- End -->
+        <!--Preloader start here-->
+        <div id="preloader">
+            <div id="rs-preloader" class="rs-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner1"></div>
+                    <div class="txt-loading">
+                        <span data-text-preloader="B" class="letters-loading">B</span>
+                        <span data-text-preloader="I" class="letters-loading">I</span>
+                        <span data-text-preloader="Z" class="letters-loading">Z</span>
+                        <span data-text-preloader="B" class="letters-loading">B</span>
+                        <span data-text-preloader="L" class="letters-loading">L</span>
+                        <span data-text-preloader="A" class="letters-loading">A</span>
+                        <span data-text-preloader="N" class="letters-loading">N</span>
+                        <span data-text-preloader="C" class="letters-loading">C</span>
+                        <span data-text-preloader="A" class="letters-loading">A</span>
+                    </div>
+                    <p class="text-center">Loading...</p>
+                </div>
+            </div>
+        </div>
+        <!--Preloader area end here-->
         <WebsiteNavbar />
         <!-- seconday-Navigation -->
         <header class="_secondary-header-nav p-0" id="secondary-header-nav">
@@ -51,8 +72,11 @@
                         <h2>IT job ke liye</h2>
                         <h1 class="mb-4">BizBlanca</h1>
                         <div class="d-flex banner-buttons">
-                            <router-link :to="{ name: 'JobSearch' }" class="btn btn-black hero-banner-btn-job mr-2">Looking for a Jobs</router-link>
-                            <router-link :to="{ name: 'CandidateSearch' }"  class="btn btn-black hero-banner-btn-employee" href="#">Looking for Employees</router-link>
+                            <router-link :to="{ name: 'JobSearch' }" class="btn btn-black hero-banner-btn-job mr-2">
+                                Looking for a Jobs</router-link>
+                            <router-link :to="{ name: 'CandidateSearch' }"
+                                class="btn btn-black hero-banner-btn-employee" href="#">Looking for Employees
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -82,7 +106,8 @@
                                 </div>
                                 <div class="swiper-wrapper">
                                     <!--  -->
-                                    <div class="swiper-slide single-blog-wrap" v-for="(item, index) in news" :key="index">
+                                    <div class="swiper-slide single-blog-wrap" v-for="(item, index) in news"
+                                        :key="index">
                                         <div class="single-blog">
                                             <img :src="'/storage/images/news/'+item.image" alt="blog-img" />
                                             <!-- <div class="eventdate"><strong>{{ item.created_at | moment("d")}}</strong>
@@ -95,7 +120,8 @@
                                             <p class="blog-description line-text-3">
                                                 {{item.description}}
                                             </p>
-                                            <router-link :to="{ name: 'NewsDetail',  params: { id: item.id } }" class="blog-news-btn">Read More
+                                            <router-link :to="{ name: 'NewsDetail',  params: { id: item.id } }"
+                                                class="blog-news-btn">Read More
                                                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i></router-link>
                                         </div>
                                     </div>
@@ -145,7 +171,8 @@
                         </div>
                         <div class="content-faq-anker parent">
                             <div class="child bg-one">
-                                <router-link :to="{ name: 'JobSearch' }"><span class="looking-h">Looking For Jobs?</span></router-link>
+                                <router-link :to="{ name: 'JobSearch' }"><span class="looking-h">Looking For
+                                        Jobs?</span></router-link>
                             </div>
                         </div>
                     </div>
@@ -165,7 +192,8 @@
                         </div>
                         <div class="parent right social-media-anker">
                             <div class="child bg-two">
-                                <router-link :to="{ name: 'CandidateSearch' }"><span class="looking-h">Looking for Employees?</span></router-link>
+                                <router-link :to="{ name: 'CandidateSearch' }"><span class="looking-h">Looking for
+                                        Employees?</span></router-link>
                             </div>
                         </div>
                     </div>
@@ -189,7 +217,8 @@
                             </p>
                             <img src="/website/assets/images/Group1492.png" alt="blog-img" width="100%" />
                         </div>
-                        <router-link :to="{ name: 'Signup' }" class="process-btn m-auto">Register as a job seeker</router-link>
+                        <router-link :to="{ name: 'Signup' }" class="process-btn m-auto">Register as a job seeker
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -508,8 +537,10 @@
         },
         methods: {
             swiperInit() {
-                this.$nextTick(function() {
-                    $('.parent-spinner').fadeOut();
+                this.$nextTick(function () {
+                    setTimeout(()=>{
+                        $('#preloader').fadeOut();
+                    },2000);
                     var swiper = new Swiper(".blogs-swiper", {
                         slidesPerView: 3.5,
                         spaceBetween: 5,
@@ -566,10 +597,10 @@
             },
             getNews() {
                 axios.get('/api/landingpage/news')
-                .then((response) => {
-                    this.news = response.data
-                    this.swiperInit()
-                });
+                    .then((response) => {
+                        this.news = response.data
+                        this.swiperInit()
+                    });
             },
             expireTodayJobs() {
                 axios.get('api/expire-today-jobs')
@@ -612,45 +643,156 @@
 
 </script>
 <style scoped>
-.text_loading {
-    color: #f1f1f1;
-    position: fixed;
-    z-index: 200000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%)
-}
-
-.parent-spinner {
-    background: #050115;
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: fixed;
-    z-index: 10000;
-    opacity: 0.6;
-}
-.spinner {
-    width: 10em;
-    height: 10em;
-    border-top: .5em solid #d5fff7;
-    border-right: .5em solid transparent;
-    animation: spinner .4s linear infinite;
-    border-radius: 50%;
-    margin: auto
-}
-.head {
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    margin-left: 8.5em;
-    margin-top: .5em;
-    background-color: #d5fff7
-}
-@keyframes spinner {
-    to {
-        transform: rotate(360deg)
+    .text_loading {
+        color: #f1f1f1;
+        position: fixed;
+        z-index: 200000;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
     }
-}
+
+    .parent-spinner {
+        background: #050115;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: fixed;
+        z-index: 10000;
+        opacity: 0.6;
+    }
+
+    .spinner {
+        width: 10em;
+        height: 10em;
+        border-top: .5em solid #d5fff7;
+        border-right: .5em solid transparent;
+        animation: spinner .4s linear infinite;
+        border-radius: 50%;
+        margin: auto
+    }
+
+    .head {
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        margin-left: 8.5em;
+        margin-top: .5em;
+        background-color: #d5fff7
+    }
+
+    @keyframes spinner {
+        to {
+            transform: rotate(360deg)
+        }
+    }
+
+    /* LOADING  */
+.rs-preloader {
+	  align-items: center;
+	  cursor: default;
+	  display: flex;
+	  height: 100%;
+	  justify-content: center;
+	  position: fixed;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  background: #fff;
+	  z-index: 9000;
+	}
+	.rs-preloader .animation-preloader {
+	  z-index: 1000;
+	}
+	.rs-preloader .animation-preloader .spinner1 {
+	  animation: preloaderspinner1 1s infinite linear;
+	  border-radius: 50%;
+	  /* border: 3px solid rgba(0, 0, 0, 0.2);
+	  border-top-color: rgba(255, 255, 255, 0.2); */
+	  border: 3px solid #081351;
+	  border-top-color: rgba(255, 255, 255, 0.2);
+	  height: 9em;
+	  margin: 0 auto 3.5em auto;
+	  width: 9em;
+	}
+	.rs-preloader .animation-preloader .txt-loading {
+	  font: bold 5em "Poppins", sans-serif;
+	  text-align: center;
+	  user-select: none;
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading {
+	  color: rgba(0, 0, 0, 0.2);
+	  position: relative;
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading:before {
+	  animation: letters-loading 4s infinite;
+	  /* color: #000; */
+      color: #081351;
+	  content: attr(data-text-preloader);
+	  left: 0;
+	  opacity: 0;
+	  font-family: "Poppins", sans-serif;
+	  position: absolute;
+	  top: -3px;
+	  transform: rotateY(-90deg);
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+	  animation-delay: 0.2s;
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+	  animation-delay: 0.4s;
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+	  animation-delay: 0.6s;
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+	  animation-delay: 0.8s;
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+	  animation-delay: 1s;
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+	  animation-delay: 1.2s;
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+	  animation-delay: 1.4s;
+	}
+	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before {
+	  animation-delay: 1.6s;
+	}
+	.rs-preloader p {
+	  font-size: 14px;
+	  font-weight: 500;
+	  text-transform: uppercase;
+	  letter-spacing: 8px;
+	  color: #3b3b3b;
+	}
+	@keyframes preloaderspinner1 {
+	  to {
+	    transform: rotateZ(360deg);
+	  }
+	}
+	@keyframes letters-loading {
+	  0%,
+	  75%,
+	  100% {
+	    opacity: 0;
+	    transform: rotateY(-90deg);
+	  }
+	  25%,
+	  50% {
+	    opacity: 1;
+	    transform: rotateY(0deg);
+	  }
+	}
+    @media screen and (max-width:768px) {
+       .rs-preloader .animation-preloader .spinner1{
+           height: 5em;
+           width: 5em;
+       } 
+       .rs-preloader .animation-preloader .txt-loading{
+           font-size: 2em;
+       }
+    }
 </style>
