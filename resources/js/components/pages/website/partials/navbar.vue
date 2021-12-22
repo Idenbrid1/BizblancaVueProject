@@ -127,14 +127,14 @@ import axios from 'axios';
         },
         methods: {
             checkAuth() {
-                axios.get('check-auth')
+                axios.get('/api/check-auth')
                 .then((response) => {
                     this.isAuth = response.data.isAuth
                 });
             },
             logoutUser()
             {
-                axios.get('user-logout')
+                axios.get('/api/user-logout')
                 .then((response) => {
                     if (response.data.success == true) {
                         this.$router.push({ name: 'Signin' })

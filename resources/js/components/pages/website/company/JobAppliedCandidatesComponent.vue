@@ -362,16 +362,16 @@
         },
         methods: {
             getSingleJobDetail() {
-                axios.get('/get-applied-applicants-list/' + this.$route.params.id)
+                axios.get('/api/get-applied-applicants-list/' + this.$route.params.id)
                 .then((response) => {
                     this.data = response.data
                 });
             },
             addToWishList(id) {
-                axios.get('/add-to-wish-list/' + id)
+                axios.get('/api/add-to-wish-list/' + id)
             },
             removeToWishList(id) {
-                axios.get('/remove-to-wish-list/' + id)
+                axios.get('/api/remove-to-wish-list/' + id)
             },
         },
     };

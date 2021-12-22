@@ -514,7 +514,7 @@
         },
         methods: {
             getCompanyProfileData() {
-                axios.get('get-company-profile')
+                axios.get('api/get-company-profile')
                     .then((response) => {
                         this.profile = response.data.company
                         this.order_status = response.data.response
@@ -529,7 +529,7 @@
                 })
                 var $basicinformationForm = $('#basicinformationForm');
                 var data = new FormData(basicinformationForm);
-                axios.post('/update/company-basicinformation', data)
+                axios.post('/api/update/company-basicinformation', data)
                     .then((res) => {
                         if (res.data.success == false) {
                             Swal.close()
@@ -567,7 +567,7 @@
                 }
                 var $socialmediaForm = $('#socialmediaForm');
                 var data = new FormData(socialmediaForm);
-                axios.post('/update/socialmedia', data)
+                axios.post('/api/update/socialmedia', data)
                     .then((res) => {
                         if (res.data.success == false) {
                             Swal.close()

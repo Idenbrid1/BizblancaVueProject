@@ -508,7 +508,7 @@
         },
         methods: {
             getCandidateWishList() {
-                axios.get('get-candidate-wish-list')
+                axios.get('api/get-candidate-wish-list')
                     .then((response) => {
                         this.wishlist = response.data
                     });
@@ -521,7 +521,7 @@
                 );
             },
             removeToWishList(id) {
-                axios.get('candidate/remove-to-wish-list/' + id)
+                axios.get('api/candidate/remove-to-wish-list/' + id)
                 .then((response) => {
                     this.getCandidateWishList()
                 });

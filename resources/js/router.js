@@ -38,12 +38,10 @@ import SocialLogin from './components/pages/website/Auth/SocialLoginComponent.vu
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    // mode: 'history',
+    mode: 'history',
     // linkExactActiveClass: 'font-weight-bold',
     routes: [
-        {   path: "*", 
-            component: LandingPage 
-        },
+        
         {
             path: '/',
             name: 'Landing Page',
@@ -74,7 +72,7 @@ const router = new VueRouter({
             name: 'CandidateProfile',
             component: CandidateProfile,
             beforeEnter: (to, from, next) => { 
-                axios.get('check-candidate-role')
+                axios.get('api/check-candidate-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -89,7 +87,7 @@ const router = new VueRouter({
             name: 'CompanyPostJob',
             component: CompanyPostJob,
             beforeEnter: (to, from, next) => { 
-                axios.get('check-company-role')
+                axios.get('api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -104,7 +102,7 @@ const router = new VueRouter({
             name: 'CompanyProfile',
             component: CompanyProfile,
             beforeEnter: (to, from, next) => { 
-                axios.get('check-company-role')
+                axios.get('api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -129,7 +127,7 @@ const router = new VueRouter({
             name: 'CompanyAccountSetting',
             component: CompanyAccountSetting,
             beforeEnter: (to, from, next) => { 
-                axios.get('check-company-role')
+                axios.get('api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -144,7 +142,7 @@ const router = new VueRouter({
             name: 'CandidateAccountSetting',
             component: CandidateAccountSetting,
             beforeEnter: (to, from, next) => { 
-                axios.get('check-candidate-role')
+                axios.get('api/check-candidate-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -159,7 +157,7 @@ const router = new VueRouter({
             name: 'JobAppliedCandidates',
             component: JobAppliedCandidates,
             beforeEnter: (to, from, next) => { 
-                axios.get('check-company-role')
+                axios.get('api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -174,7 +172,7 @@ const router = new VueRouter({
             name: 'CompanyDashboard',
             component: CompanyDashboard,
             beforeEnter: (to, from, next) => { 
-                axios.get('check-company-role')
+                axios.get('api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -238,8 +236,8 @@ const router = new VueRouter({
             path: '/candidate-dashboard',
             name: 'CandidateDashboard',
             component: CandidateDashboard,
-            beforeEnter: (to, from, next) => { 
-                axios.get('check-candidate-role')
+            beforeEnter: (to, from, next) => {
+                axios.get('api/check-candidate-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -284,7 +282,7 @@ const router = new VueRouter({
             name: 'PackagePlans',
             component: PackagePlans,
             beforeEnter: (to, from, next) => { 
-                axios.get('check-company-role')
+                axios.get('api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()

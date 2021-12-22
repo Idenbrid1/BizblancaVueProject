@@ -85,19 +85,19 @@
                 this.record.skills.push(tag)
             },
             getCandidate(page = 1) {
-                axios.get('/get-candidates-search?page=' + page)
+                axios.get('/api/get-candidates-search?page=' + page)
                     .then((response) => {
                         this.searchData = response.data
                     });
             },
             search() {
-                axios.post('/candidate-search', this.record)
+                axios.post('/api/candidate-search', this.record)
                     .then((response) => {
                         this.searchData = response
                     });
             },
             keywordSearch() {
-                axios.get('/candidate-keyword-search/' + this.record.keyword)
+                axios.get('/api/candidate-keyword-search/' + this.record.keyword)
                     .then((response) => {
                         this.searchData = response.data
                     });

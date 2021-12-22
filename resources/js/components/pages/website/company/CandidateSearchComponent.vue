@@ -548,7 +548,7 @@
         },
         methods: {
             checkAuth(){
-                axios.get('check-auth')
+                axios.get('api/check-auth')
                 .then((response) => {
                     if(response.data.isAuth == true){
                         this.is_auth = response.data.isAuth
@@ -564,7 +564,7 @@
                 this.record.skills.push(tag)
             },
             getCandidate(page = 1) {
-                axios.get('/get-candidates-search?page=' + page)
+                axios.get('/api/get-candidates-search?page=' + page)
                     .then((response) => {
                         this.searchData = response.data
                         this.totalcandidates = this.searchData.length
@@ -572,7 +572,7 @@
                     });
             },
             search() {
-                axios.post('/candidate-search', this.record)
+                axios.post('/api/candidate-search', this.record)
                     .then((response) => {
                         this.searchData = response.data
                         this.totalcandidates = this.searchData.length
@@ -593,7 +593,7 @@
                         title: 'Field Empty',
                     })
                 } else {
-                    axios.get('/candidate-keyword-search/' + this.record.keyword)
+                    axios.get('/api/candidate-keyword-search/' + this.record.keyword)
                         .then((response) => {
                             this.searchData = response.data
                             this.totalcandidates = this.searchData.length
@@ -607,7 +607,7 @@
             },
             addToWishList(id) {
                 if(this.is_auth == true){
-                    axios.get('/add-to-wish-list/' + id)
+                    axios.get('/api/add-to-wish-list/' + id)
                 }else{
                     Swal.fire({
                         icon: 'error',
@@ -621,7 +621,7 @@
             },
             removeToWishList(id) {
                 if(this.is_auth == true){
-                    axios.get('/remove-to-wish-list/' + id)
+                    axios.get('/api/remove-to-wish-list/' + id)
                 }else{
                     Swal.fire({
                         icon: 'error',

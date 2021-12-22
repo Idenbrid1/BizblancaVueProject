@@ -127,7 +127,7 @@
                         Swal.showLoading()
                     },
                 })
-                axios.post('/submit-contact-us', this.contact_us)
+                axios.post('/api/submit-contact-us', this.contact_us)
                     .then((response) => {
                         if (response.data.success == true) {
                             Swal.close()

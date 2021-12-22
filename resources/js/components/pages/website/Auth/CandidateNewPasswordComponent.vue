@@ -77,7 +77,7 @@
                         Swal.showLoading()
                     },
                 })
-                axios.post('/complete-reset-password', this.record)
+                axios.post('/api/complete-reset-password', this.record)
                     .then((response) => {
                         if (response.data.success == false) {
                             Swal.close()

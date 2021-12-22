@@ -16,7 +16,7 @@
                         <div class="job-apply-ankers">
                             <!-- <a href="" class="add-wishlist-anker">Add to Wishlist</a> -->
                             <a v-if="is_auth == true && already_applied == false && role == 'candidate'" @click="applyJob()" class="job-apply-anker">Apply Now</a>
-                            <a v-if="is_auth == false && role == 'candidate'" @click="showAlert()" class="job-apply-anker">Apply Now</a>
+                            <a v-if="is_auth == false" @click="showAlert()" class="job-apply-anker">Apply Now</a>
                             <a v-if="already_applied == true && role == 'candidate'" @click="alreadyAppliedAlert()" class="job-apply-anker">Apply Now</a>
                         </div>
                     </div>
@@ -220,15 +220,15 @@
                 })
             },
             checkAuth(){
-                axios.get('check-auth')
+                axios.get('/api/check-auth')
                 .then((response) => {
                     if(response.data.isAuth == true){
                         this.is_auth = response.data.isAuth
-                        axios.get('/check-already-applied/'+this.data.id)
+                        axios.get('/api/check-already-applied/'+this.data.id)
                         .then((response) => {
                             this.already_applied = response.data.already_applied
                         });
-                        axios.get('/check-role')
+                        axios.get('/api/check-role')
                         .then((response) => {
                             this.role = response.data
                         });
@@ -240,14 +240,14 @@
                 this.checkAuth()
             },
             getSingleJobDetail() {
-                axios.get('/get-single-job-detail/' + this.$route.params.id)
+                axios.get('/api/get-single-job-detail/' + this.$route.params.id)
                     .then((response) => {
                         this.data = response.data.job
                         this.related_job = response.data.related_job
                     });
             },
             applyJob(){
-                axios.get('/apply-job/'+this.data.id)
+                axios.get('/api/apply-job/'+this.data.id)
                 .then((response) => {
                     this.already_applied =  true
                     if(response.data.success == true)

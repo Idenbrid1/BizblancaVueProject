@@ -557,7 +557,7 @@
                 })
             },
             checkRole() {
-                axios.get('navbar-check-roles')
+                axios.get('api/navbar-check-roles')
                     .then((response) => {
                         if (response.data.success) {
                             this.isRole = response.data.role
@@ -565,14 +565,14 @@
                     });
             },
             getNews() {
-                axios.get('/landingpage/news')
+                axios.get('/api/landingpage/news')
                 .then((response) => {
                     this.news = response.data
                     this.swiperInit()
                 });
             },
             expireTodayJobs() {
-                axios.get('expire-today-jobs')
+                axios.get('api/expire-today-jobs')
             },
             submitContactUs() {
                 this.spinnerSubmit = true
@@ -582,7 +582,7 @@
                         Swal.showLoading()
                     },
                 })
-                axios.post('/submit-contact-us', this.contact_us)
+                axios.post('/api/submit-contact-us', this.contact_us)
                     .then((response) => {
                         if (response.data.success == true) {
                             Swal.close()

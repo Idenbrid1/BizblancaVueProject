@@ -2240,7 +2240,7 @@ __webpack_require__.r(__webpack_exports__);
     getPackagePlans: function getPackagePlans() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-package-plans').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/get-package-plans').then(function (response) {
         _this.plans = response.data;
       });
     },
@@ -2264,7 +2264,7 @@ __webpack_require__.r(__webpack_exports__);
               Swal.showLoading();
             }
           });
-          axios__WEBPACK_IMPORTED_MODULE_0___default().get('/buy-package-plan/' + id).then(function (res) {
+          axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/buy-package-plan/' + id).then(function (res) {
             if (res.data.success == false) {
               _this2.errors = res.data.errors;
               Swal.close();
@@ -2287,7 +2287,7 @@ __webpack_require__.r(__webpack_exports__);
                 if (result.isConfirmed) {
                   // axios.get('download-invoice/'+res.data.order_id)
                   // .then((response) => {
-                  window.open('/download-invoice/' + res.data.order_id, '_blank'); // });
+                  window.open('/api/download-invoice/' + res.data.order_id, '_blank'); // });
                 }
               });
             }
@@ -2582,7 +2582,7 @@ __webpack_require__.r(__webpack_exports__);
           Swal.showLoading();
         }
       });
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/complete-reset-password', this.record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/complete-reset-password', this.record).then(function (response) {
         if (response.data.success == false) {
           Swal.close();
           _this.errors = response.data.errors;
@@ -2682,7 +2682,7 @@ __webpack_require__.r(__webpack_exports__);
           Swal.showLoading();
         }
       });
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/reset-password', this.record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/reset-password', this.record).then(function (response) {
         if (response.data.success == false) {
           Swal.close();
           _this.errors = response.data.errors;
@@ -2865,7 +2865,7 @@ __webpack_require__.r(__webpack_exports__);
           Swal.showLoading();
         }
       });
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/user-login', this.record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('api/user-login', this.record).then(function (response) {
         if (response.data.success == false) {
           Swal.close();
           _this.errors = response.data.errors;
@@ -3214,7 +3214,7 @@ __webpack_require__.r(__webpack_exports__);
           Swal.showLoading();
         }
       });
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/user-registration', this.candidate_record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/user-registration', this.candidate_record).then(function (response) {
         if (response.data.success == false) {
           Swal.close();
           _this.errors = response.data.errors;
@@ -3237,7 +3237,7 @@ __webpack_require__.r(__webpack_exports__);
           Swal.showLoading();
         }
       });
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/user-registration', this.company_record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/user-registration', this.company_record).then(function (response) {
         if (response.data.success == false) {
           Swal.close();
           _this2.errors = response.data.errors_company;
@@ -3375,7 +3375,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-social-user-data/' + this.$route.params.id).then(function (response) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/get-social-user-data/' + this.$route.params.id).then(function (response) {
       _this.record.social_name = response.data.social_name;
       _this.record.social_id = response.data.social_id;
       _this.record.email = response.data.email;
@@ -3398,7 +3398,7 @@ __webpack_require__.r(__webpack_exports__);
             Swal.showLoading();
           }
         });
-        axios__WEBPACK_IMPORTED_MODULE_0___default().post('/user-google-registration', this.record).then(function (response) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/user-google-registration', this.record).then(function (response) {
           if (response.data.success == false) {
             Swal.close();
             _this2.errors = response.data.errors;
@@ -3569,7 +3569,7 @@ __webpack_require__.r(__webpack_exports__);
           Swal.showLoading();
         }
       });
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/submit-contact-us', this.contact_us).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/submit-contact-us', this.contact_us).then(function (response) {
         if (response.data.success == true) {
           Swal.close();
           Swal.fire({
@@ -4516,7 +4516,7 @@ __webpack_require__.r(__webpack_exports__);
     checkRole: function checkRole() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/navbar-check-roles').then(function (response) {
         if (response.data.success) {
           _this.isRole = response.data.role;
         }
@@ -4970,7 +4970,7 @@ __webpack_require__.r(__webpack_exports__);
     checkRole: function checkRole() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/navbar-check-roles').then(function (response) {
         if (response.data.success) {
           _this.isRole = response.data.role;
         }
@@ -5559,7 +5559,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     checkRole: function checkRole() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/navbar-check-roles').then(function (response) {
         if (response.data.success) {
           _this2.isRole = response.data.role;
         }
@@ -5568,14 +5568,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     getNews: function getNews() {
       var _this3 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/landingpage/news').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/landingpage/news').then(function (response) {
         _this3.news = response.data;
 
         _this3.swiperInit();
       });
     },
     expireTodayJobs: function expireTodayJobs() {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('expire-today-jobs');
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/expire-today-jobs');
     },
     submitContactUs: function submitContactUs() {
       var _this4 = this;
@@ -5587,7 +5587,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           Swal.showLoading();
         }
       });
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/submit-contact-us', this.contact_us).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/submit-contact-us', this.contact_us).then(function (response) {
         if (response.data.success == true) {
           Swal.close();
           Swal.fire({
@@ -5831,14 +5831,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     getSingleNewsDetail: function getSingleNewsDetail() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default().get('/get-single-news-detail/' + this.$route.params.id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/get-single-news-detail/' + this.$route.params.id).then(function (response) {
         _this.data = response.data; // this.showShimmer = false 
       });
     },
     getNews: function getNews() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default().get('/landingpage/news').then( /*#__PURE__*/function () {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/landingpage/news').then( /*#__PURE__*/function () {
         var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(response) {
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
             while (1) {
@@ -6579,7 +6579,7 @@ __webpack_require__.r(__webpack_exports__);
     checkRole: function checkRole() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/navbar-check-roles').then(function (response) {
         if (response.data.success) {
           _this.isRole = response.data.role;
         }
@@ -6597,7 +6597,7 @@ __webpack_require__.r(__webpack_exports__);
     candidateSettingPassword: function candidateSettingPassword() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('candidate-setting-password', this.record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('api/candidate-setting-password', this.record).then(function (response) {
         if (response.data.success == false) {
           _this2.errors = response.data.errors;
         } else {
@@ -6793,7 +6793,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                axios__WEBPACK_IMPORTED_MODULE_1___default().get('/get-single-candidate-detail/' + _this.$route.params.id).then(function (response) {
+                axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/get-single-candidate-detail/' + _this.$route.params.id).then(function (response) {
                   _this.data = response.data.job;
                   _this.showLoader = false;
                 });
@@ -6807,7 +6807,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     download: function download() {
-      window.open('/download-cv/', '_blank');
+      window.open('/api/download-cv/', '_blank');
     }
   }
 });
@@ -7340,7 +7340,7 @@ __webpack_require__.r(__webpack_exports__);
     getCandidateWishList: function getCandidateWishList() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('get-candidate-wish-list').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/get-candidate-wish-list').then(function (response) {
         _this.wishlist = response.data;
       });
     },
@@ -7350,7 +7350,7 @@ __webpack_require__.r(__webpack_exports__);
     removeToWishList: function removeToWishList(id) {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('candidate/remove-to-wish-list/' + id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/candidate/remove-to-wish-list/' + id).then(function (response) {
         _this2.getCandidateWishList();
       });
     }
@@ -7507,12 +7507,12 @@ __webpack_require__.r(__webpack_exports__);
     getSingleCandidateDetail: function getSingleCandidateDetail() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-single-candidate-detail/' + this.$route.params.id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/get-single-candidate-detail/' + this.$route.params.id).then(function (response) {
         _this.data = response.data.job;
       });
     },
     download: function download() {
-      window.open('/download-cv/', '_blank');
+      window.open('/api/download-cv/', '_blank');
     }
   }
 });
@@ -9857,7 +9857,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     getCandidateDashboardData: function getCandidateDashboardData() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('get-dashboard-profile').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/get-dashboard-profile').then(function (response) {
         _this.profile = response.data.candidate;
         _this.basic_information_record.full_name = response.data.candidate.full_name;
         _this.basic_information_record.gender = response.data.candidate.gender;
@@ -9890,7 +9890,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
       var $basicinformationForm = $('#basicinformationForm');
       var data = new FormData(basicinformationForm);
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/basicinformation', data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/basicinformation', data).then(function (res) {
         if (res.data.success == false) {
           _this2.errors_basic_information = res.data.errors;
           Swal.close();
@@ -9955,7 +9955,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/education', this.profile.candidate_education).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/education', this.profile.candidate_education).then(function (res) {
         if (res.data.success == false) {
           _this3.errors = res.data.errors;
           Swal.close();
@@ -10098,7 +10098,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/language', this.profile.candidate_language).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/language', this.profile.candidate_language).then(function (res) {
         if (res.data.success == false) {
           _this5.errors = res.data.errors;
           Swal.close();
@@ -10230,7 +10230,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/award', this.profile.candidate_awards).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/award', this.profile.candidate_awards).then(function (res) {
         if (res.data.success == false) {
           _this7.errors = res.data.errors;
           Swal.close();
@@ -10367,7 +10367,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/skill', this.profile.candidate_skills).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/skill', this.profile.candidate_skills).then(function (res) {
         if (res.data.success == false) {
           _this9.errors = res.data.errors;
           Swal.close();
@@ -10484,7 +10484,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           Swal.showLoading();
         }
       });
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/current-job', (_axios$post = {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/current-job', (_axios$post = {
         isWorkingCurrently: this.profile.is_working_currently,
         job_end_date: this.profile.job_end_date,
         job_start_date: this.profile.job_start_date,
@@ -10566,7 +10566,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/experience', this.profile.candidate_experience).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/experience', this.profile.candidate_experience).then(function (res) {
         if (res.data.success == false) {
           _this12.errors = res.data.errors;
           Swal.close();
@@ -10728,7 +10728,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/project', this.profile.candidate_projects).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/project', this.profile.candidate_projects).then(function (res) {
         if (res.data.success == false) {
           _this14.errors = res.data.errors;
           Swal.close();
@@ -10848,7 +10848,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
       var $uploadresume = $('#uploadresume');
       var data = new FormData(uploadresume);
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/resume-file', data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/resume-file', data).then(function (res) {
         if (res.data.success == true) {
           Swal.close();
           Swal.fire({
@@ -10885,7 +10885,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
       var $uploadcnic = $('#uploadcnic');
       var data = new FormData(uploadcnic);
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/cnic-file', data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/cnic-file', data).then(function (res) {
         if (res.data.success == true) {
           Swal.close();
           Swal.fire({
@@ -10922,7 +10922,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
       var $uploadexperienceletter = $('#uploadexperienceletter');
       var data = new FormData(uploadexperienceletter);
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/experience-letter-file', data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/experience-letter-file', data).then(function (res) {
         if (res.data.success == true) {
           Swal.close();
           Swal.fire({
@@ -11484,7 +11484,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _this.showLoader = true;
-                axios__WEBPACK_IMPORTED_MODULE_1___default().get('/companies-keyword-search/' + _this.record.keyword).then(function (response) {
+                axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/companies-keyword-search/' + _this.record.keyword).then(function (response) {
                   _this.searchData = response.data;
                   _this.totalCompanies = _this.searchData.length;
                   _this.showLoader = false;
@@ -11744,13 +11744,13 @@ __webpack_require__.r(__webpack_exports__);
     checkAuth: function checkAuth() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-auth').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-auth').then(function (response) {
         if (response.data.isAuth == true) {
           _this.is_auth = response.data.isAuth;
-          axios__WEBPACK_IMPORTED_MODULE_0___default().get('/check-already-applied/' + _this.data.id).then(function (response) {
+          axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-already-applied/' + _this.data.id).then(function (response) {
             _this.already_applied = response.data.already_applied;
           });
-          axios__WEBPACK_IMPORTED_MODULE_0___default().get('/check-role').then(function (response) {
+          axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-role').then(function (response) {
             _this.role = response.data;
           });
         }
@@ -11763,7 +11763,7 @@ __webpack_require__.r(__webpack_exports__);
     getSingleJobDetail: function getSingleJobDetail() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-single-job-detail/' + this.$route.params.id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/get-single-job-detail/' + this.$route.params.id).then(function (response) {
         _this2.data = response.data.job;
         _this2.related_job = response.data.related_job;
       });
@@ -11771,7 +11771,7 @@ __webpack_require__.r(__webpack_exports__);
     applyJob: function applyJob() {
       var _this3 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/apply-job/' + this.data.id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/apply-job/' + this.data.id).then(function (response) {
         _this3.already_applied = true;
 
         if (response.data.success == true) {
@@ -12426,7 +12426,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                axios__WEBPACK_IMPORTED_MODULE_1___default().get('get-jobs').then(function (response) {
+                axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/get-jobs').then(function (response) {
                   _this.searchData = [];
                   _this.searchData = response.data;
                   _this.totalJobs = response.data.length;
@@ -12444,7 +12444,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     checkAuth: function checkAuth() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default().get('check-auth').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/check-auth').then(function (response) {
         if (response.data.isAuth == true) {
           _this2.is_auth = response.data.isAuth;
         }
@@ -12459,7 +12459,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 _this3.showLoader = true;
-                axios__WEBPACK_IMPORTED_MODULE_1___default().post('/job-search', _this3.record).then(function (response) {
+                axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/job-search', _this3.record).then(function (response) {
                   _this3.searchData = [];
                   _this3.searchData = response.data.jobposts;
                   _this3.totalJobs = response.data.count;
@@ -12482,10 +12482,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     addToWishList: function addToWishList(id) {
-      axios__WEBPACK_IMPORTED_MODULE_1___default().get('candidate/add-to-wish-list/' + id);
+      axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/candidate/add-to-wish-list/' + id);
     },
     removeToWishList: function removeToWishList(id) {
-      axios__WEBPACK_IMPORTED_MODULE_1___default().get('candidate/remove-to-wish-list/' + id);
+      axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/candidate/remove-to-wish-list/' + id);
     },
     keywordSearch: function keywordSearch() {
       var _this4 = this;
@@ -12503,7 +12503,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this4.totalCompanies = 0;
                 _this4.showError = false;
                 _this4.keywordSearchShow = false;
-                axios__WEBPACK_IMPORTED_MODULE_1___default().get('/companies-keyword-search/' + _this4.record.keyword).then(function (response) {
+                axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/companies-keyword-search/' + _this4.record.keyword).then(function (response) {
                   _this4.searchData = [];
                   _this4.searchData = response.data;
                   _this4.totalJobs = response.length;
@@ -13108,7 +13108,7 @@ __webpack_require__.r(__webpack_exports__);
     checkAuth: function checkAuth() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-auth').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-auth').then(function (response) {
         if (response.data.isAuth == true) {
           _this.is_auth = response.data.isAuth;
         }
@@ -13126,7 +13126,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-candidates-search?page=' + page).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/get-candidates-search?page=' + page).then(function (response) {
         _this2.searchData = response.data;
         _this2.totalcandidates = _this2.searchData.length;
       });
@@ -13134,7 +13134,7 @@ __webpack_require__.r(__webpack_exports__);
     search: function search() {
       var _this3 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/candidate-search', this.record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/candidate-search', this.record).then(function (response) {
         _this3.searchData = response.data;
         _this3.totalcandidates = _this3.searchData.length;
 
@@ -13158,7 +13158,7 @@ __webpack_require__.r(__webpack_exports__);
           title: 'Field Empty'
         });
       } else {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().get('/candidate-keyword-search/' + this.record.keyword).then(function (response) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/candidate-keyword-search/' + this.record.keyword).then(function (response) {
           _this4.searchData = response.data;
           _this4.totalcandidates = _this4.searchData.length;
 
@@ -13172,7 +13172,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     addToWishList: function addToWishList(id) {
       if (this.is_auth == true) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().get('/add-to-wish-list/' + id);
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/add-to-wish-list/' + id);
       } else {
         Swal.fire({
           icon: 'error',
@@ -13186,7 +13186,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     removeToWishList: function removeToWishList(id) {
       if (this.is_auth == true) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().get('/remove-to-wish-list/' + id);
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/remove-to-wish-list/' + id);
       } else {
         Swal.fire({
           icon: 'error',
@@ -13325,7 +13325,7 @@ __webpack_require__.r(__webpack_exports__);
     checkRole: function checkRole() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('navbar-check-roles').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/navbar-check-roles').then(function (response) {
         if (response.data.success) {
           _this.isRole = response.data.role;
         }
@@ -13343,7 +13343,7 @@ __webpack_require__.r(__webpack_exports__);
     companySettingPassword: function companySettingPassword() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('company-setting-password', this.record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('api/company-setting-password', this.record).then(function (response) {
         if (response.data.success == false) {
           _this2.errors = response.data.errors;
         } else {
@@ -13466,21 +13466,21 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-candidates-search?page=' + page).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/get-candidates-search?page=' + page).then(function (response) {
         _this.searchData = response.data;
       });
     },
     search: function search() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/candidate-search', this.record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/candidate-search', this.record).then(function (response) {
         _this2.searchData = response;
       });
     },
     keywordSearch: function keywordSearch() {
       var _this3 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/candidate-keyword-search/' + this.record.keyword).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/candidate-keyword-search/' + this.record.keyword).then(function (response) {
         _this3.searchData = response.data;
       });
     }
@@ -14089,14 +14089,14 @@ __webpack_require__.r(__webpack_exports__);
     getCompanyWishList: function getCompanyWishList() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('get-company-wish-list').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/get-company-wish-list').then(function (response) {
         _this.wishlist = response.data.wish_listed;
       });
     },
     removeToWishList: function removeToWishList(id) {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/remove-to-wish-list/' + id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/remove-to-wish-list/' + id).then(function (response) {
         _this2.getCompanyWishList();
       });
     },
@@ -14321,7 +14321,7 @@ __webpack_require__.r(__webpack_exports__);
     getSingleCompanyDetail: function getSingleCompanyDetail() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-single-company-detail/' + this.$route.params.id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/get-single-company-detail/' + this.$route.params.id).then(function (response) {
         _this.data = response.data;
       });
     }
@@ -15117,7 +15117,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('get-company-jobs?page=' + page).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/get-company-jobs?page=' + page).then(function (response) {
         _this.jobs = response.data.jobs;
         _this.totaljobs = response.data.totaljobs;
       });
@@ -15135,7 +15135,7 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Yes, delete it!'
       }).then(function (result) {
         if (result.isConfirmed) {
-          axios__WEBPACK_IMPORTED_MODULE_0___default().get('/delete-job-post/' + id).then(function (response) {
+          axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/delete-job-post/' + id).then(function (response) {
             if (response.data.success == true) {
               Swal.fire('Deleted!', 'Your job has been deleted.', 'success');
 
@@ -15163,7 +15163,7 @@ __webpack_require__.r(__webpack_exports__);
         if (result.isConfirmed) {
           var $formData = $('#formData');
           var data = new FormData(formData);
-          axios__WEBPACK_IMPORTED_MODULE_0___default().post('/company/post-job', data).then(function (res) {
+          axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/company/post-job', data).then(function (res) {
             if (res.data.success == false) {
               _this3.errors = res.data.errors;
             } else {
@@ -15206,7 +15206,7 @@ __webpack_require__.r(__webpack_exports__);
     editJobPost: function editJobPost(id) {
       var _this4 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/edit-job-post/' + id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/edit-job-post/' + id).then(function (response) {
         if (response.data.success == true) {
           _this4.record.id = response.data.data.id;
           _this4.record.banner = response.data.data.banner;
@@ -15259,7 +15259,7 @@ __webpack_require__.r(__webpack_exports__);
 
       var $formData = $('#formData');
       var data = new FormData(formData);
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/company/update-post-job', data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/company/update-post-job', data).then(function (res) {
         if (res.data.success == false) {
           _this5.errors = res.data.errors;
         } else {
@@ -15296,7 +15296,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     postNewJob: function postNewJob() {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/check-job-post-limit').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-job-post-limit').then(function (response) {
         if (response.data.success == true) {
           $('#PostNewJobModal').modal('show');
         } else {
@@ -15865,7 +15865,7 @@ __webpack_require__.r(__webpack_exports__);
     getCompanyProfileData: function getCompanyProfileData() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('get-company-profile').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/get-company-profile').then(function (response) {
         _this.profile = response.data.company;
         _this.order_status = response.data.response;
       });
@@ -15881,7 +15881,7 @@ __webpack_require__.r(__webpack_exports__);
       });
       var $basicinformationForm = $('#basicinformationForm');
       var data = new FormData(basicinformationForm);
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/company-basicinformation', data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/company-basicinformation', data).then(function (res) {
         if (res.data.success == false) {
           Swal.close();
           _this2.errors = res.data.errors;
@@ -15924,7 +15924,7 @@ __webpack_require__.r(__webpack_exports__);
 
       var $socialmediaForm = $('#socialmediaForm');
       var data = new FormData(socialmediaForm);
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update/socialmedia', data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/update/socialmedia', data).then(function (res) {
         if (res.data.success == false) {
           Swal.close();
           _this3.errors = res.data.errors;
@@ -16335,15 +16335,15 @@ __webpack_require__.r(__webpack_exports__);
     getSingleJobDetail: function getSingleJobDetail() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get-applied-applicants-list/' + this.$route.params.id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/get-applied-applicants-list/' + this.$route.params.id).then(function (response) {
         _this.data = response.data;
       });
     },
     addToWishList: function addToWishList(id) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/add-to-wish-list/' + id);
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/add-to-wish-list/' + id);
     },
     removeToWishList: function removeToWishList(id) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/remove-to-wish-list/' + id);
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/remove-to-wish-list/' + id);
     }
   }
 });
@@ -16629,7 +16629,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.spinnerSubmit = true;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/footer/news_letter', this.record).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/footer/news_letter', this.record).then(function (response) {
         if (response.data.success == true) {
           Swal.fire({
             icon: 'success',
@@ -16792,14 +16792,14 @@ __webpack_require__.r(__webpack_exports__);
     checkAuth: function checkAuth() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-auth').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-auth').then(function (response) {
         _this.isAuth = response.data.isAuth;
       });
     },
     logoutUser: function logoutUser() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('user-logout').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/user-logout').then(function (response) {
         if (response.data.success == true) {
           _this2.$router.push({
             name: 'Signin'
@@ -16961,12 +16961,9 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_33__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
-  // mode: 'history',
+  mode: 'history',
   // linkExactActiveClass: 'font-weight-bold',
   routes: [{
-    path: "*",
-    component: _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-  }, {
     path: '/',
     name: 'Landing Page',
     component: _components_pages_website_LandingPageComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -16991,7 +16988,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CandidateProfile',
     component: _components_pages_website_candidate_CandidateProfileComponent_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-candidate-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17004,7 +17001,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CompanyPostJob',
     component: _components_pages_website_company_CompanyPostJobComponent_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17017,7 +17014,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CompanyProfile',
     component: _components_pages_website_company_CompanyProfileComponent_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17038,7 +17035,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CompanyAccountSetting',
     component: _components_pages_website_company_CompanyAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17051,7 +17048,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CandidateAccountSetting',
     component: _components_pages_website_candidate_CandidateAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-candidate-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17064,7 +17061,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'JobAppliedCandidates',
     component: _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17077,7 +17074,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CompanyDashboard',
     component: _components_pages_website_company_CompanyDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17130,7 +17127,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CandidateDashboard',
     component: _components_pages_website_candidate_CandidateDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-candidate-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-candidate-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17167,7 +17164,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'PackagePlans',
     component: _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_24__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -52241,7 +52238,7 @@ var render = function () {
                       )
                     : _vm._e(),
                   _vm._v(" "),
-                  _vm.is_auth == false && _vm.role == "candidate"
+                  _vm.is_auth == false
                     ? _c(
                         "a",
                         {

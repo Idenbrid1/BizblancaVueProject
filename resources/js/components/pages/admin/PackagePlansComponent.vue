@@ -123,7 +123,7 @@
         },
         methods: {
             getPackagePlans() {
-                axios.get('/get-package-plans')
+                axios.get('/api/get-package-plans')
                     .then((response) => {
                         this.plans = response.data
                     });
@@ -146,7 +146,7 @@
                                 Swal.showLoading() 
                             },
                         })
-                        axios.get('/buy-package-plan/' + id)
+                        axios.get('/api/buy-package-plan/' + id)
                             .then((res) => {
                                 if (res.data.success == false) {
                                     this.errors = res.data.errors
@@ -170,7 +170,7 @@
                                         if (result.isConfirmed) {
                                             // axios.get('download-invoice/'+res.data.order_id)
                                             // .then((response) => {
-                                                window.open('/download-invoice/' + res.data.order_id, '_blank')
+                                                window.open('/api/download-invoice/' + res.data.order_id, '_blank')
                                             // });
                                         }
                                     })

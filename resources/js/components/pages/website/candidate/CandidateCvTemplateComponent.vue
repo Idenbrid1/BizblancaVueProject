@@ -148,14 +148,14 @@
         },
         methods: {
             async getSingleCandidateDetail() {  
-                axios.get('/get-single-candidate-detail/' + this.$route.params.id)
+                axios.get('/api/get-single-candidate-detail/' + this.$route.params.id)
                 .then((response) => {
                     this.data = response.data.job
                     this.showLoader = false
                 });
             },
             download(){
-                window.open('/download-cv/', '_blank')
+                window.open('/api/download-cv/', '_blank')
             },
         },
     };

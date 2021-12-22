@@ -91,7 +91,7 @@
         },
         methods: {
             checkRole() {
-                axios.get('navbar-check-roles')
+                axios.get('api/navbar-check-roles')
                 .then((response) => {
                     if (response.data.success) {
                         this.isRole = response.data.role
@@ -108,7 +108,7 @@
                 this.errors = []
             },
             candidateSettingPassword() {
-                axios.post('candidate-setting-password', this.record)
+                axios.post('api/candidate-setting-password', this.record)
                 .then((response) => {
                     if (response.data.success == false) {
                         this.errors = response.data.errors     

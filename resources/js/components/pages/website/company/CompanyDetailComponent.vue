@@ -195,7 +195,7 @@
         },
         methods: {
             getSingleCompanyDetail() {
-                axios.get('/get-single-company-detail/'+this.$route.params.id)
+                axios.get('/api/get-single-company-detail/'+this.$route.params.id)
                 .then((response) => {
                     this.data = response.data
                 });

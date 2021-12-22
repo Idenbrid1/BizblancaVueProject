@@ -604,7 +604,7 @@
         },
         methods: {
             async getJobs() {   
-                axios.get('get-jobs')
+                axios.get('api/get-jobs')
                     .then((response) => {
                         this.searchData = []
                         this.searchData = response.data
@@ -613,7 +613,7 @@
                     });
             },
             checkAuth() {
-                axios.get('check-auth')
+                axios.get('api/check-auth')
                     .then((response) => {
                         if (response.data.isAuth == true) {
                             this.is_auth = response.data.isAuth
@@ -622,7 +622,7 @@
             },
             async search() {
                 this.showLoader = true
-                axios.post('/job-search', this.record)
+                axios.post('/api/job-search', this.record)
                     .then((response) => {
                         this.searchData = []
                         this.searchData = response.data.jobposts
@@ -636,10 +636,10 @@
                     });
             },
             addToWishList(id) {
-                axios.get('candidate/add-to-wish-list/' + id)
+                axios.get('api/candidate/add-to-wish-list/' + id)
             },
             removeToWishList(id) {
-                axios.get('candidate/remove-to-wish-list/' + id)
+                axios.get('api/candidate/remove-to-wish-list/' + id)
             },
             async keywordSearch() {
                 this.showLoader = true
@@ -650,7 +650,7 @@
                 this.totalCompanies = 0;
                 this.showError = false;
                 this.keywordSearchShow = false;
-                axios.get('/companies-keyword-search/' + this.record.keyword)
+                axios.get('/api/companies-keyword-search/' + this.record.keyword)
                     .then((response) => {
                         this.searchData = []
                         this.searchData = response.data

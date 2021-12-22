@@ -532,7 +532,7 @@
         },
         methods: {
             checkRole() {
-                axios.get('navbar-check-roles')
+                axios.get('api/navbar-check-roles')
                     .then((response) => {
                         if (response.data.success) {
                             this.isRole = response.data.role

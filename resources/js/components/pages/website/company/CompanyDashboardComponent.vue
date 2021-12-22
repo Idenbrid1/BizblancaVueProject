@@ -583,13 +583,13 @@
         },
         methods: {
             getCompanyWishList() {
-                axios.get('get-company-wish-list')
+                axios.get('api/get-company-wish-list')
                     .then((response) => {
                         this.wishlist = response.data.wish_listed
                     });
             },
             removeToWishList(id) {
-                axios.get('/remove-to-wish-list/' + id)
+                axios.get('/api/remove-to-wish-list/' + id)
                     .then((response) => {
                         this.getCompanyWishList()
                     });
