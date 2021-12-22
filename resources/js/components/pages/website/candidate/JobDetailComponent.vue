@@ -16,7 +16,7 @@
                         <div class="job-apply-ankers">
                             <!-- <a href="" class="add-wishlist-anker">Add to Wishlist</a> -->
                             <a v-if="is_auth == true && already_applied == false && role == 'candidate'" @click="applyJob()" class="job-apply-anker">Apply Now</a>
-                            <a v-if="is_auth == false && role == 'candidate'" @click="showAlert()" class="job-apply-anker">Apply Now</a>
+                            <a v-if="is_auth == false" @click="showAlert()" class="job-apply-anker">Apply Now</a>
                             <a v-if="already_applied == true && role == 'candidate'" @click="alreadyAppliedAlert()" class="job-apply-anker">Apply Now</a>
                         </div>
                     </div>
@@ -213,9 +213,8 @@
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...🧐',
-                    confirmButtonText: 'Understood!',
+                    confirmButtonText: '<a style="color:#ffffff" href="/#/signin">Login?</a>',
                     text: 'Please login before apply to any job!',
-                    footer: '<a href="/#/signin">Login?</a>',
                     timer: 3000
                 })
             },
