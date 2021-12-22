@@ -153,7 +153,7 @@
         methods: {
             subscribe() {
                 this.spinnerSubmit = true
-                axios.post('/footer/news_letter', this.record)
+                axios.post('/api/footer/news_letter', this.record)
                     .then((response) => {
                         if (response.data.success == true) {
                             Swal.fire({

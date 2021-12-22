@@ -121,7 +121,7 @@
                         Swal.showLoading()
                     },
                 })
-                axios.post('/user-login', this.record)
+                axios.post('api/user-login', this.record)
                     .then((response) => {
                         if (response.data.success == false) {
                             Swal.close()

@@ -766,7 +766,7 @@
         },
         methods: {
             getCompanyJobs(page = 1) {
-                axios.get('get-company-jobs?page=' + page)
+                axios.get('api/get-company-jobs?page=' + page)
                     .then((response) => {
                         this.jobs = response.data.jobs
                         this.totaljobs = response.data.totaljobs
@@ -783,7 +783,7 @@
                     confirmButtonText: 'Yes, delete it!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        axios.get('/delete-job-post/' + id)
+                        axios.get('/api/delete-job-post/' + id)
                             .then((response) => {
                                 if (response.data.success == true) {
                                     Swal.fire(
@@ -817,7 +817,7 @@
                     if (result.isConfirmed) {
                         var $formData = $('#formData');
                         var data = new FormData(formData);
-                        axios.post('/company/post-job', data)
+                        axios.post('/api/company/post-job', data)
                             .then((res) => {
                                 if (res.data.success == false) {
                                     this.errors = res.data.errors
@@ -858,7 +858,7 @@
                 })
             },
             editJobPost(id) {
-                axios.get('/edit-job-post/' + id)
+                axios.get('/api/edit-job-post/' + id)
                     .then((response) => {
                         if (response.data.success == true) {
                             this.record.id = response.data.data.id;
@@ -912,7 +912,7 @@
             updateJobPost() {
                 var $formData = $('#formData');
                 var data = new FormData(formData);
-                axios.post('/company/update-post-job', data)
+                axios.post('/api/company/update-post-job', data)
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
@@ -949,7 +949,7 @@
                     })
             },
             postNewJob() {
-                axios.get('/check-job-post-limit')
+                axios.get('/api/check-job-post-limit')
                     .then((response) => {
                         if (response.data.success == true) {
                             $('#PostNewJobModal').modal('show')

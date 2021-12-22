@@ -445,7 +445,7 @@
         methods: {
             async keywordSearch() {
                 this.showLoader = true
-                axios.get('/companies-keyword-search/' + this.record.keyword)
+                axios.get('/api/companies-keyword-search/' + this.record.keyword)
                     .then((response) => {
                         this.searchData = response.data
                         this.totalCompanies = this.searchData.length

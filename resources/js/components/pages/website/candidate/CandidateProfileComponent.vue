@@ -2318,7 +2318,7 @@
         },
         methods: {
             getCandidateDashboardData() {
-                axios.get('get-dashboard-profile')
+                axios.get('api/get-dashboard-profile')
                     .then((response) => {
                         this.profile = response.data.candidate
                         this.basic_information_record.full_name = response.data.candidate.full_name
@@ -2356,7 +2356,7 @@
                 })
                 var $basicinformationForm = $('#basicinformationForm');
                 var data = new FormData(basicinformationForm);
-                axios.post('/update/basicinformation', data)
+                axios.post('/api/update/basicinformation', data)
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors_basic_information = res.data.errors
@@ -2419,7 +2419,7 @@
                         })
                     }
                 }
-                axios.post('/update/education', this.profile.candidate_education)
+                axios.post('/api/update/education', this.profile.candidate_education)
                 .then((res) => {
                     if (res.data.success == false) {
                         this.errors = res.data.errors
@@ -2552,7 +2552,7 @@
                         }
                     }
                 }
-                axios.post('/update/language', this.profile.candidate_language)
+                axios.post('/api/update/language', this.profile.candidate_language)
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
@@ -2674,7 +2674,7 @@
                         }
                     }
                 }
-                axios.post('/update/award', this.profile.candidate_awards)
+                axios.post('/api/update/award', this.profile.candidate_awards)
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
@@ -2802,7 +2802,7 @@
                         }
                     }
                 }
-                axios.post('/update/skill', this.profile.candidate_skills)
+                axios.post('/api/update/skill', this.profile.candidate_skills)
                 .then((res) => {
                     if (res.data.success == false) {
                         this.errors = res.data.errors
@@ -2909,7 +2909,7 @@
                         Swal.showLoading()
                     },
                 })
-                axios.post('/update/current-job', {
+                axios.post('/api/update/current-job', {
                         isWorkingCurrently: this.profile.is_working_currently,
                         job_end_date: this.profile.job_end_date,
                         job_start_date: this.profile.job_start_date,
@@ -2990,7 +2990,7 @@
                         }
                     }
                 }
-                axios.post('/update/experience', this.profile.candidate_experience)
+                axios.post('/api/update/experience', this.profile.candidate_experience)
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
@@ -3141,7 +3141,7 @@
                         }
                     }
                 }
-                axios.post('/update/project', this.profile.candidate_projects)
+                axios.post('/api/update/project', this.profile.candidate_projects)
                     .then((res) => {
                         if (res.data.success == false) {
                             this.errors = res.data.errors
@@ -3252,7 +3252,7 @@
                 })
                 var $uploadresume = $('#uploadresume');
                 var data = new FormData(uploadresume);
-                axios.post('/update/resume-file', data)
+                axios.post('/api/update/resume-file', data)
                     .then((res) => {
                         if (res.data.success == true) {
                             Swal.close()
@@ -3287,7 +3287,7 @@
                 })
                 var $uploadcnic = $('#uploadcnic');
                 var data = new FormData(uploadcnic);
-                axios.post('/update/cnic-file', data)
+                axios.post('/api/update/cnic-file', data)
                     .then((res) => {
                         if (res.data.success == true) {
                             Swal.close()
@@ -3320,7 +3320,7 @@
                 })
                 var $uploadexperienceletter = $('#uploadexperienceletter');
                 var data = new FormData(uploadexperienceletter);
-                axios.post('/update/experience-letter-file', data)
+                axios.post('/api/update/experience-letter-file', data)
                     .then((res) => {
                         if (res.data.success == true) {
                             Swal.close()

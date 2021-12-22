@@ -292,7 +292,7 @@
                         Swal.showLoading()
                     },
                 })
-                axios.post('/user-registration', this.candidate_record)
+                axios.post('/api/user-registration', this.candidate_record)
                     .then((response) => {
                         if (response.data.success == false) {
                             Swal.close()
@@ -314,7 +314,7 @@
                         Swal.showLoading()
                     },
                 })
-                axios.post('/user-registration', this.company_record)
+                axios.post('/api/user-registration', this.company_record)
                     .then((response) => {
                         if (response.data.success == false) {
                             Swal.close()

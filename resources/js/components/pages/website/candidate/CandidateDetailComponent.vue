@@ -131,13 +131,13 @@
         },
         methods: {
             getSingleCandidateDetail() {  
-                axios.get('/get-single-candidate-detail/' + this.$route.params.id)
+                axios.get('/api/get-single-candidate-detail/' + this.$route.params.id)
                     .then((response) => {
                         this.data = response.data.job
                     });
             },
             download(){
-                window.open('/download-cv/', '_blank')
+                window.open('/api/download-cv/', '_blank')
             },
         },
     };

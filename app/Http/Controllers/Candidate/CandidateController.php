@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Candidate;
 
 use App\Http\Controllers\Controller;
 use App\Mail\CandidateAppliedMail;
+use App\Mail\CandidateAppliedMailToCompany;
 use App\Models\Candidate;
+use App\Models\Company;
 use App\Models\CandidateAppliedJob;
 use App\Models\CandidateAward;
 use App\Models\CandidateEducation;
@@ -398,7 +400,9 @@ class CandidateController extends Controller
                 'company_id' => $job_post->company_id,
                 'candidate_id' => $candidate->id,
             ]);
+            $company = Company::find($job_post->company_id);
             Mail::to($candidate->email)->send(new CandidateAppliedMail($candidateappliedjob));
+            Mail::to($company->email)->send(new CandidateAppliedMailToCompany($candidateappliedjob));
             return response()->json([
                 'success' => true,
                 'message' => 'Applied SuccessfullyD',

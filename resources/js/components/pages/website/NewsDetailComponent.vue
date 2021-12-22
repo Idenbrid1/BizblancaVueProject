@@ -167,14 +167,14 @@
                 this.getSingleNewsDetail();
             },
             getSingleNewsDetail() {
-                axios.get('/get-single-news-detail/' + this.$route.params.id)
+                axios.get('/api/get-single-news-detail/' + this.$route.params.id)
                 .then((response) => {
                     this.data = response.data
                     // this.showShimmer = false 
                 });
             },
             getNews() {
-                axios.get('/landingpage/news')
+                axios.get('/api/landingpage/news')
                     .then( async (response) => {
                     this.news = response.data
                     this.showShimmer = false 
