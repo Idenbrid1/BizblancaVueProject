@@ -55,14 +55,14 @@ Route::middleware('auth:sanctum')->group(function(){
         Route::post('/company-setting-password', [App\Http\Controllers\Company\CompanyController::class, 'settingPassword']);
     });
 
-    Route::get('user-logout', [App\Http\Controllers\Admin\AuthenticationController::class, 'userLogout']);
     Route::get('check-auth-and-already-applied', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkAuthAndJobApplied']);
     Route::get('get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'getData']);
     Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCandidateRole']);
-
-
-
+    
+    
+    
 });
+Route::get('user-logout', [App\Http\Controllers\Admin\AuthenticationController::class, 'userLogout']);
 
 
 Route::get('user/verify/{token}', [App\Http\Controllers\Admin\AuthenticationController::class, 'verifyUser']);

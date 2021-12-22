@@ -426,7 +426,8 @@ class AuthenticationController extends Controller
 
     public function userLogout()
     {
-        Auth::logout();
+        // Auth::logout();
+        Auth::guard('web')->logout();
         return response()->json([
             'success'   => true,
         ]);
