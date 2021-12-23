@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -11736,9 +11735,8 @@ __webpack_require__.r(__webpack_exports__);
       Swal.fire({
         icon: 'error',
         title: 'Oops...🧐',
-        confirmButtonText: 'Understood!',
+        confirmButtonText: '<a style="color:#ffffff" href="/#/signin">Login?</a>',
         text: 'Please login before apply to any job!',
-        footer: '<a href="/#/signin">Login?</a>',
         timer: 3000
       });
     },
@@ -84945,5 +84943,3 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 	
 /******/ })()
 ;
-=======
->>>>>>> 44c4bf31ccfeb3d4476e398953aa1e5b0f047ce0
