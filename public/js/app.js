@@ -1007,7 +1007,7 @@ module.exports = function transformData(data, headers, fns) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
 var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
@@ -5445,6 +5445,35 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -5510,7 +5539,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   methods: {
     swiperInit: function swiperInit() {
       this.$nextTick(function () {
-        $('.parent-spinner').fadeOut();
+        setTimeout(function () {
+          $('#preloader').fadeOut();
+        }, 2000);
         var swiper = new Swiper(".blogs-swiper", _defineProperty({
           slidesPerView: 3.5,
           spaceBetween: 5,
@@ -16830,7 +16861,7 @@ __webpack_require__.r(__webpack_exports__);
  * building robust, powerful web applications using Vue and Laravel.
  */
 // require('./bootstrap');
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"];
+window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
 
 
 Vue.use(__webpack_require__(/*! vue-moment */ "./node_modules/vue-moment/dist/vue-moment.js"));
@@ -16859,7 +16890,7 @@ Vue.use(vue_timeago__WEBPACK_IMPORTED_MODULE_3__["default"], {
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+Vue.component('example-component', (__webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -19643,7 +19674,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.text_loading[data-v-284a2b3e] {\r\n    color: #f1f1f1;\r\n    position: fixed;\r\n    z-index: 200000;\r\n    left: 50%;\r\n    top: 50%;\r\n    transform: translate(-50%, -50%)\n}\n.parent-spinner[data-v-284a2b3e] {\r\n    background: #050115;\r\n    display: flex;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    overflow: hidden;\r\n    position: fixed;\r\n    z-index: 10000;\r\n    opacity: 0.6;\n}\n.spinner[data-v-284a2b3e] {\r\n    width: 10em;\r\n    height: 10em;\r\n    border-top: .5em solid #d5fff7;\r\n    border-right: .5em solid transparent;\r\n    -webkit-animation: spinner-data-v-284a2b3e .4s linear infinite;\r\n            animation: spinner-data-v-284a2b3e .4s linear infinite;\r\n    border-radius: 50%;\r\n    margin: auto\n}\n.head[data-v-284a2b3e] {\r\n    width: 1em;\r\n    height: 1em;\r\n    border-radius: 50%;\r\n    margin-left: 8.5em;\r\n    margin-top: .5em;\r\n    background-color: #d5fff7\n}\n@-webkit-keyframes spinner-data-v-284a2b3e {\nto {\r\n        transform: rotate(360deg)\n}\n}\n@keyframes spinner-data-v-284a2b3e {\nto {\r\n        transform: rotate(360deg)\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.text_loading[data-v-284a2b3e] {\n        color: #f1f1f1;\n        position: fixed;\n        z-index: 200000;\n        left: 50%;\n        top: 50%;\n        transform: translate(-50%, -50%)\n}\n.parent-spinner[data-v-284a2b3e] {\n        background: #050115;\n        display: flex;\n        height: 100vh;\n        width: 100vw;\n        overflow: hidden;\n        position: fixed;\n        z-index: 10000;\n        opacity: 0.6;\n}\n.spinner[data-v-284a2b3e] {\n        width: 10em;\n        height: 10em;\n        border-top: .5em solid #d5fff7;\n        border-right: .5em solid transparent;\n        -webkit-animation: spinner-data-v-284a2b3e .4s linear infinite;\n                animation: spinner-data-v-284a2b3e .4s linear infinite;\n        border-radius: 50%;\n        margin: auto\n}\n.head[data-v-284a2b3e] {\n        width: 1em;\n        height: 1em;\n        border-radius: 50%;\n        margin-left: 8.5em;\n        margin-top: .5em;\n        background-color: #d5fff7\n}\n@-webkit-keyframes spinner-data-v-284a2b3e {\nto {\n            transform: rotate(360deg)\n}\n}\n@keyframes spinner-data-v-284a2b3e {\nto {\n            transform: rotate(360deg)\n}\n}\n\n    /* LOADING  */\n.rs-preloader[data-v-284a2b3e] {\n\t  align-items: center;\n\t  cursor: default;\n\t  display: flex;\n\t  height: 100%;\n\t  justify-content: center;\n\t  position: fixed;\n\t  left: 0;\n\t  top: 0;\n\t  width: 100%;\n\t  background: #fff;\n\t  z-index: 9000;\n}\n.rs-preloader .animation-preloader[data-v-284a2b3e] {\n\t  z-index: 1000;\n}\n.rs-preloader .animation-preloader .spinner1[data-v-284a2b3e] {\n\t  -webkit-animation: preloaderspinner1-data-v-284a2b3e 1s infinite linear;\n\t          animation: preloaderspinner1-data-v-284a2b3e 1s infinite linear;\n\t  border-radius: 50%;\n\t  /* border: 3px solid rgba(0, 0, 0, 0.2);\n\t  border-top-color: rgba(255, 255, 255, 0.2); */\n\t  border: 3px solid #081351;\n\t  border-top-color: rgba(255, 255, 255, 0.2);\n\t  height: 9em;\n\t  margin: 0 auto 3.5em auto;\n\t  width: 9em;\n}\n.rs-preloader .animation-preloader .txt-loading[data-v-284a2b3e] {\n\t  font: bold 5em \"Poppins\", sans-serif;\n\t  text-align: center;\n\t  -webkit-user-select: none;\n\t     -moz-user-select: none;\n\t      -ms-user-select: none;\n\t          user-select: none;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e] {\n\t  color: rgba(0, 0, 0, 0.2);\n\t  position: relative;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:before {\n\t  -webkit-animation: letters-loading-data-v-284a2b3e 4s infinite;\n\t          animation: letters-loading-data-v-284a2b3e 4s infinite;\n\t  /* color: #000; */\n      color: #081351;\n\t  content: attr(data-text-preloader);\n\t  left: 0;\n\t  opacity: 0;\n\t  font-family: \"Poppins\", sans-serif;\n\t  position: absolute;\n\t  top: -3px;\n\t  transform: rotateY(-90deg);\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(2):before {\n\t  -webkit-animation-delay: 0.2s;\n\t          animation-delay: 0.2s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(3):before {\n\t  -webkit-animation-delay: 0.4s;\n\t          animation-delay: 0.4s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(4):before {\n\t  -webkit-animation-delay: 0.6s;\n\t          animation-delay: 0.6s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(5):before {\n\t  -webkit-animation-delay: 0.8s;\n\t          animation-delay: 0.8s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(6):before {\n\t  -webkit-animation-delay: 1s;\n\t          animation-delay: 1s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(7):before {\n\t  -webkit-animation-delay: 1.2s;\n\t          animation-delay: 1.2s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(8):before {\n\t  -webkit-animation-delay: 1.4s;\n\t          animation-delay: 1.4s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(9):before {\n\t  -webkit-animation-delay: 1.6s;\n\t          animation-delay: 1.6s;\n}\n.rs-preloader p[data-v-284a2b3e] {\n\t  font-size: 14px;\n\t  font-weight: 500;\n\t  text-transform: uppercase;\n\t  letter-spacing: 8px;\n\t  color: #3b3b3b;\n}\n@-webkit-keyframes preloaderspinner1-data-v-284a2b3e {\nto {\n\t    transform: rotateZ(360deg);\n}\n}\n@keyframes preloaderspinner1-data-v-284a2b3e {\nto {\n\t    transform: rotateZ(360deg);\n}\n}\n@-webkit-keyframes letters-loading-data-v-284a2b3e {\n0%,\n\t  75%,\n\t  100% {\n\t    opacity: 0;\n\t    transform: rotateY(-90deg);\n}\n25%,\n\t  50% {\n\t    opacity: 1;\n\t    transform: rotateY(0deg);\n}\n}\n@keyframes letters-loading-data-v-284a2b3e {\n0%,\n\t  75%,\n\t  100% {\n\t    opacity: 0;\n\t    transform: rotateY(-90deg);\n}\n25%,\n\t  50% {\n\t    opacity: 1;\n\t    transform: rotateY(0deg);\n}\n}\n@media screen and (max-width:768px) {\n.rs-preloader .animation-preloader .spinner1[data-v-284a2b3e]{\n           height: 5em;\n           width: 5em;\n}\n.rs-preloader .animation-preloader .txt-loading[data-v-284a2b3e]{\n           font-size: 2em;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -36731,7 +36762,7 @@ var render = function () {
                       staticClass: "btn btn-black hero-banner-btn-job mr-2",
                       attrs: { to: { name: "JobSearch" } },
                     },
-                    [_vm._v("Looking for a Jobs")]
+                    [_vm._v("\n                            Looking for a Jobs")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -36740,7 +36771,7 @@ var render = function () {
                       staticClass: "btn btn-black hero-banner-btn-employee",
                       attrs: { to: { name: "CandidateSearch" }, href: "#" },
                     },
-                    [_vm._v("Looking for Employees")]
+                    [_vm._v("Looking for Employees\n                        ")]
                   ),
                 ],
                 1
@@ -36922,7 +36953,9 @@ var render = function () {
                         { attrs: { to: { name: "JobSearch" } } },
                         [
                           _c("span", { staticClass: "looking-h" }, [
-                            _vm._v("Looking For Jobs?"),
+                            _vm._v(
+                              "Looking For\n                                    Jobs?"
+                            ),
                           ]),
                         ]
                       ),
@@ -36986,7 +37019,9 @@ var render = function () {
                         { attrs: { to: { name: "CandidateSearch" } } },
                         [
                           _c("span", { staticClass: "looking-h" }, [
-                            _vm._v("Looking for Employees?"),
+                            _vm._v(
+                              "Looking for\n                                    Employees?"
+                            ),
                           ]),
                         ]
                       ),
@@ -37015,7 +37050,7 @@ var render = function () {
                     staticClass: "process-btn m-auto",
                     attrs: { to: { name: "Signup" } },
                   },
-                  [_vm._v("Register as a job seeker")]
+                  [_vm._v("Register as a job seeker\n                    ")]
                 ),
               ],
               1
@@ -37387,17 +37422,101 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "parent-spinner" }, [
-      _c("span", { staticClass: "text_loading" }, [
-        _vm._v("BizBlanca"),
-        _c("br"),
-        _vm._v("Loading...."),
-      ]),
-      _vm._v(" "),
-      _c("div", {
-        staticClass: "spinner",
-        staticStyle: { "font-size": "16px" },
-      }),
+    return _c("div", { attrs: { id: "preloader" } }, [
+      _c(
+        "div",
+        { staticClass: "rs-preloader", attrs: { id: "rs-preloader" } },
+        [
+          _c("div", { staticClass: "animation-preloader" }, [
+            _c("div", { staticClass: "spinner1" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "txt-loading" }, [
+              _c(
+                "span",
+                {
+                  staticClass: "letters-loading",
+                  attrs: { "data-text-preloader": "B" },
+                },
+                [_vm._v("B")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "letters-loading",
+                  attrs: { "data-text-preloader": "I" },
+                },
+                [_vm._v("I")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "letters-loading",
+                  attrs: { "data-text-preloader": "Z" },
+                },
+                [_vm._v("Z")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "letters-loading",
+                  attrs: { "data-text-preloader": "B" },
+                },
+                [_vm._v("B")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "letters-loading",
+                  attrs: { "data-text-preloader": "L" },
+                },
+                [_vm._v("L")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "letters-loading",
+                  attrs: { "data-text-preloader": "A" },
+                },
+                [_vm._v("A")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "letters-loading",
+                  attrs: { "data-text-preloader": "N" },
+                },
+                [_vm._v("N")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "letters-loading",
+                  attrs: { "data-text-preloader": "C" },
+                },
+                [_vm._v("C")]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "letters-loading",
+                  attrs: { "data-text-preloader": "A" },
+                },
+                [_vm._v("A")]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-center" }, [_vm._v("Loading...")]),
+          ]),
+        ]
+      ),
     ])
   },
   function () {
@@ -84760,7 +84879,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/","#USER"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\wamp64\\\\www\\\\Idenbird\\\\BizblancaVueProject","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 
