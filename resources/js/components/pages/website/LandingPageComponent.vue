@@ -399,7 +399,7 @@
                                         </small>
                                     </div>
                                 </div>
-                                <div class="col-12 px-2">
+                                <div class="col-12 px-0">
                                     <div class="form-group">
                                         <label for="">Email</label>
                                         <input type="email" class="form-control pl-2" v-model="contact_us.email"
@@ -412,7 +412,7 @@
                                         </small>
                                     </div>
                                 </div>
-                                <div class="col-12 px-2">
+                                <div class="col-12 px-0">
                                     <div class="form-group">
                                         <label for="">Phone Number</label>
                                         <input type="number" class="form-control pl-2" v-model="contact_us.phone"
@@ -425,7 +425,7 @@
                                         </small>
                                     </div>
                                 </div>
-                                <div class="col-12 px-2">
+                                <div class="col-12 px-0">
                                     <div class="form-group">
                                         <label for="">Message</label>
                                         <textarea rows="4" type="text" class="form-control pl-3 message-box"
@@ -438,7 +438,7 @@
                                         </small>
                                     </div>
                                 </div>
-                                <div class="col-12 px-2 py-4">
+                                <div class="col-12 px-0 py-4">
                                     <looping-rhombuses-spinner :animation-duration="1800" :size="40" color="#081351"
                                         v-if="spinnerSubmit == true" />
                                     <a @click.prevent="submitContactUs()" class="contact-submit-anker"
