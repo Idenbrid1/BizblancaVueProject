@@ -30,19 +30,19 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'google' => [
-        'client_id' => '600723386292-q2oig6ejuvjk015a6t93c6mqcvvejdnq.apps.googleusercontent.com',
-        'client_secret' => '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',
-        'redirect' => 'https://bizblanca.com/auth/google/callback',
+        'client_id' => '715872452309-i7d075sd6phrlavg2spvosn1hr0am2hv.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'https://bizblanca.com/api/auth/google/callback',
     ],
     'github' => [
         'client_id' => '8311b250ab382b37ecc5',
         'client_secret' => '8211d057596cdea4d249286d4b2eed36afbdfb0c',
-        'redirect' => 'https://bizblanca.com/auth/github/callback',
+        'redirect' => 'https://bizblanca.com/api/auth/github/callback',
     ],
     'linkedin' => [
         'client_id' => '86s11w9v6n8x5m',
         'client_secret' => 'q2vO0O6z93XwuKkb',
-        'redirect' => 'https://bizblanca.com/auth/linkedin/callback',
+        'redirect' => 'https://bizblanca.com/api/auth/linkedin/callback',
     ],
 
 ];

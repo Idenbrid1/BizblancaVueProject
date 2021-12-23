@@ -63,16 +63,16 @@
                                     <div class="direct-login    ">
                                         <ul class="direct-login-icons">
                                             <li>
-                                                <a href="auth/google"><img src="/website/assets/images/search.svg" alt="google" /></a>
+                                                <a href="api/auth/google"><img src="/website/assets/images/search.svg" alt="google" /></a>
                                             </li>
                                             <!-- <li>
                                                 <a ><img src="/website/assets/images/facebookLogin.svg" alt="facebook" /></a>
                                             </li> -->
                                             <li>
-                                                <a href="auth/linkedin"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
+                                                <a href="api/auth/linkedin"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
                                             </li>
                                             <li>
-                                                <a href="auth/github"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
+                                                <a href="api/auth/github"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
                                             </li>
                                         </ul>
                                         <span>Don't have an account?

@@ -537,10 +537,10 @@
         },
         methods: {
             swiperInit() {
+                setTimeout(()=>{
+                    $('#preloader').fadeOut();
+                },2000);
                 this.$nextTick(function () {
-                    setTimeout(()=>{
-                        $('#preloader').fadeOut();
-                    },2000);
                     var swiper = new Swiper(".blogs-swiper", {
                         slidesPerView: 3.5,
                         spaceBetween: 5,

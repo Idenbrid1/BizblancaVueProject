@@ -36,7 +36,7 @@ Route::middleware('auth:sanctum')->group(function(){
         Route::get('get-candidate-wish-list', [App\Http\Controllers\Candidate\CandidateController::class, 'getCandidateWishList']);
     });
 
-    Route::middleware('auth')->group(function(){
+    Route::middleware(['auth', 'web'])->group(function(){
         Route::get('get-company-profile', [App\Http\Controllers\Company\CompanyController::class, 'getCompanyProfile']);
         Route::post('/update/company-basicinformation', [App\Http\Controllers\Company\CompanyController::class, 'updateCompanyBasicInformation'])->name('profile.updateBasicInformationCompany');
         Route::post('/update/socialmedia', [App\Http\Controllers\Company\CompanyController::class, 'socialmediaupdate'])->name('profile.updateSocialMedia');
@@ -105,17 +105,7 @@ Route::get('/landingpage/news', [App\Http\Controllers\CommonController::class, '
 Route::post('/footer/news_letter', [App\Http\Controllers\CommonController::class, 'newsLetter']);
 Route::get('/download-cv/', [App\Http\Controllers\CommonController::class, 'downloadcv']);
 Route::get('get-jobs', [App\Http\Controllers\CommonController::class, 'getJobs']);
-//GOOGLE LOGIN ROUTES
-Route::get('auth/google', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToGoogle']);
-Route::get('auth/google/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleGoogleCallback']);
-Route::post('/user-google-registration', [App\Http\Controllers\Admin\AuthenticationController::class, 'userGoogleRegistration']);
-Route::get('get-social-user-data/{id}', [App\Http\Controllers\Admin\AuthenticationController::class, 'getSocialUserData']);
-//GITHUB LOGIN ROUTES
-Route::get('auth/github', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToGithub']);
-Route::get('auth/github/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleGithubCallback']);
-//LINKEDIN LOGIN ROUTES
-Route::get('auth/linkedin', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToLinkedin']);
-Route::get('auth/linkedin/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleLinkedinCallback']);
+
 
 
 //samad 
@@ -165,3 +155,17 @@ Route::get('/clear', function() {
     Artisan::call('view:clear');
     return "Cleared!";
  });
+
+ Route::middleware(['web'])->group(function(){
+    //GOOGLE LOGIN ROUTES
+    Route::get('auth/google', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToGoogle']);
+    Route::get('auth/google/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleGoogleCallback']);
+    Route::post('/user-google-registration', [App\Http\Controllers\Admin\AuthenticationController::class, 'userGoogleRegistration']);
+    Route::get('get-social-user-data/{id}', [App\Http\Controllers\Admin\AuthenticationController::class, 'getSocialUserData']);
+    //GITHUB LOGIN ROUTES
+    Route::get('auth/github', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToGithub']);
+    Route::get('auth/github/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleGithubCallback']);
+    //LINKEDIN LOGIN ROUTES
+    Route::get('auth/linkedin', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToLinkedin']);
+    Route::get('auth/linkedin/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleLinkedinCallback']);
+});
