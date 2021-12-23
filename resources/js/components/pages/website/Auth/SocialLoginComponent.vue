@@ -102,7 +102,7 @@
             WebsiteNavbar,
         },
         created(){
-            axios.get('api/get-social-user-data/'+this.$route.params.id)
+            axios.get('/api/get-social-user-data/'+this.$route.params.id)
             .then((response) => {
                 this.record.social_name = response.data.social_name 
                 this.record.social_id = response.data.social_id 

@@ -124,11 +124,11 @@ class AuthenticationController extends Controller
         if(isset($verifyUser)){
             $verifyUser->status = 'Active';
             $verifyUser->update();
-            return redirect('/#/signin')->with('success', 'Your Account Verified Successfully.Thanks');
+            return redirect('/signin')->with('success', 'Your Account Verified Successfully.Thanks');
         }
         else
         {
-            return redirect('/#/signin')->with('error', 'Sorry your email cannot be identified.');
+            return redirect('/signin')->with('error', 'Sorry your email cannot be identified.');
         }
         
     }
@@ -268,7 +268,7 @@ class AuthenticationController extends Controller
     public function resetPasswordForm($user_id, $token)
     {
         if(!Auth::check()){
-            return redirect('/#/candidate-new-password')
+            return redirect('/candidate-new-password')
             ->with('user_id', $user_id)
             ->with('token', $token);
         }
@@ -421,7 +421,7 @@ class AuthenticationController extends Controller
 
     public function resetPassword($token)
     {
-        return redirect('/#/candidate-new-password'.$token);
+        return redirect('/candidate-new-password'.$token);
     }
 
     public function userLogout()
@@ -454,8 +454,7 @@ class AuthenticationController extends Controller
     }
     public function handleGoogleCallback() {
         try{
-            $user = Socialite::driver('google')->user();
-            // dd($user);
+            $user = Socialite::driver('google')->stateless()->user();
             $finduser = User::where('email', $user->email)->first();
             if ($finduser) {
                 Auth::login($finduser);
@@ -467,7 +466,7 @@ class AuthenticationController extends Controller
                     'email' => $user->email,
                     'name' => $user->name,
                 ]);
-                return redirect('/#/social-login/'.$user->id);
+                return redirect('/social-login/'.$user->id);
             }
         }
         catch(Exception $e) {
@@ -582,7 +581,7 @@ class AuthenticationController extends Controller
     }
     public function handleGithubCallback() {
         try{
-            $user = Socialite::driver('github')->user();
+            $user = Socialite::driver('github')->stateless()->user();
             $finduser = User::where('email', $user->email)->first();
             if ($finduser) {
                 Auth::login($finduser);
@@ -594,7 +593,7 @@ class AuthenticationController extends Controller
                     'email' => $user->email,
                     'name' => $user->nickname,
                 ]);
-                return redirect('/#/social-login/'.$user->id);
+                return redirect('/social-login/'.$user->id);
             }
         }
         catch(Exception $e) {
@@ -607,7 +606,7 @@ class AuthenticationController extends Controller
     }
     public function handleLinkedinCallback() {
         try{
-            $user = Socialite::driver('linkedin')->user();
+            $user = Socialite::driver('linkedin')->stateless()->user();
             $finduser = User::where('email', $user->email)->first();
             if ($finduser) {
                 Auth::login($finduser);
@@ -619,7 +618,7 @@ class AuthenticationController extends Controller
                     'email' => $user->email,
                     'name' => $user->nickname,
                 ]);
-                return redirect('/#/social-login/'.$user->id);
+                return redirect('/social-login/'.$user->id);
             }
         }
         catch(Exception $e) {

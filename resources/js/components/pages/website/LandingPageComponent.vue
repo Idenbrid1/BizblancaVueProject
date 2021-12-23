@@ -537,9 +537,9 @@
         },
         methods: {
             swiperInit() {
-                setTimeout(()=>{
+                setTimeout(() => {
                     $('#preloader').fadeOut();
-                },2000);
+                }, 2000);
                 this.$nextTick(function () {
                     var swiper = new Swiper(".blogs-swiper", {
                         slidesPerView: 3.5,
@@ -689,110 +689,131 @@
     }
 
     /* LOADING  */
-.rs-preloader {
-	  align-items: center;
-	  cursor: default;
-	  display: flex;
-	  height: 100%;
-	  justify-content: center;
-	  position: fixed;
-	  left: 0;
-	  top: 0;
-	  width: 100%;
-	  background: #fff;
-	  z-index: 9000;
-	}
-	.rs-preloader .animation-preloader {
-	  z-index: 1000;
-	}
-	.rs-preloader .animation-preloader .spinner1 {
-	  animation: preloaderspinner1 1s infinite linear;
-	  border-radius: 50%;
-	  /* border: 3px solid rgba(0, 0, 0, 0.2);
-	  border-top-color: rgba(255, 255, 255, 0.2); */
-	  border: 3px solid #081351;
-	  border-top-color: rgba(255, 255, 255, 0.2);
-	  height: 9em;
-	  margin: 0 auto 3.5em auto;
-	  width: 9em;
-	}
-	.rs-preloader .animation-preloader .txt-loading {
-	  font: bold 5em "Poppins", sans-serif;
-	  text-align: center;
-	  user-select: none;
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading {
-	  color: rgba(0, 0, 0, 0.2);
-	  position: relative;
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading:before {
-	  animation: letters-loading 4s infinite;
-	  /* color: #000; */
-      color: #081351;
-	  content: attr(data-text-preloader);
-	  left: 0;
-	  opacity: 0;
-	  font-family: "Poppins", sans-serif;
-	  position: absolute;
-	  top: -3px;
-	  transform: rotateY(-90deg);
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
-	  animation-delay: 0.2s;
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
-	  animation-delay: 0.4s;
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
-	  animation-delay: 0.6s;
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
-	  animation-delay: 0.8s;
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
-	  animation-delay: 1s;
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
-	  animation-delay: 1.2s;
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
-	  animation-delay: 1.4s;
-	}
-	.rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before {
-	  animation-delay: 1.6s;
-	}
-	.rs-preloader p {
-	  font-size: 14px;
-	  font-weight: 500;
-	  text-transform: uppercase;
-	  letter-spacing: 8px;
-	  color: #3b3b3b;
-	}
-	@keyframes preloaderspinner1 {
-	  to {
-	    transform: rotateZ(360deg);
-	  }
-	}
-	@keyframes letters-loading {
-	  0%,
-	  75%,
-	  100% {
-	    opacity: 0;
-	    transform: rotateY(-90deg);
-	  }
-	  25%,
-	  50% {
-	    opacity: 1;
-	    transform: rotateY(0deg);
-	  }
-	}
-    @media screen and (max-width:768px) {
-       .rs-preloader .animation-preloader .spinner1{
-           height: 5em;
-           width: 5em;
-       } 
-       .rs-preloader .animation-preloader .txt-loading{
-           font-size: 2em;
-       }
+    .rs-preloader {
+        align-items: center;
+        cursor: default;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 9000;
     }
+
+    .rs-preloader .animation-preloader {
+        z-index: 1000;
+    }
+
+    .rs-preloader .animation-preloader .spinner1 {
+        animation: preloaderspinner1 1s infinite linear;
+        border-radius: 50%;
+        /* border: 3px solid rgba(0, 0, 0, 0.2);
+	  border-top-color: rgba(255, 255, 255, 0.2); */
+        border: 3px solid #081351;
+        border-top-color: rgba(255, 255, 255, 0.2);
+        height: 9em;
+        margin: 0 auto 3.5em auto;
+        width: 9em;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading {
+        font: bold 5em "Poppins", sans-serif;
+        text-align: center;
+        user-select: none;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading {
+        color: rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading:before {
+        animation: letters-loading 4s infinite;
+        /* color: #000; */
+        color: #081351;
+        content: attr(data-text-preloader);
+        left: 0;
+        opacity: 0;
+        font-family: "Poppins", sans-serif;
+        position: absolute;
+        top: -3px;
+        transform: rotateY(-90deg);
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+        animation-delay: 0.2s;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+        animation-delay: 0.4s;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+        animation-delay: 0.6s;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+        animation-delay: 0.8s;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+        animation-delay: 1s;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+        animation-delay: 1.2s;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+        animation-delay: 1.4s;
+    }
+
+    .rs-preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before {
+        animation-delay: 1.6s;
+    }
+
+    .rs-preloader p {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        color: #3b3b3b;
+    }
+
+    @keyframes preloaderspinner1 {
+        to {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    @keyframes letters-loading {
+
+        0%,
+        75%,
+        100% {
+            opacity: 0;
+            transform: rotateY(-90deg);
+        }
+
+        25%,
+        50% {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .rs-preloader .animation-preloader .spinner1 {
+            height: 5em;
+            width: 5em;
+        }
+
+        .rs-preloader .animation-preloader .txt-loading {
+            font-size: 2em;
+        }
+    }
+
 </style>
