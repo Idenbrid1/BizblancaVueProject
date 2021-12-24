@@ -7,69 +7,63 @@
                     <div class="nav__col mb-4">
                         <div class="footer-heading-div mb-2">
                             <div class="mr-2 footer-title-effect"></div>
-                            <span class="nav__col-title">For Employers</span>
+                            <span class="nav__col-title">JOBS</span>
                         </div>
-                        <router-link class="nav__item" :to="{ name: 'ForCompanies' }">Authorise Timesheets</router-link>
-                        <router-link class="nav__item" :to="{ name: 'ForCompanies' }">Permanent Recruitment
+                        <router-link class="nav__item" :to="{ name: 'JobSearch' }">Job Search</router-link>
+                        <router-link class="nav__item" :to="{ name: 'CandidateSearch' }">Looking For Candidate
                         </router-link>
-                        <router-link class="nav__item" :to="{ name: 'ForCompanies' }">Temporary Recruitment
+                        <router-link class="nav__item" :to="{ name: 'CompanySearch' }">Looking For Company</router-link>
+                    </div>
+                    <div class="nav__col mb-4">
+                        <div class="footer-heading-div mb-2">
+                            <div class="mr-2 footer-title-effect"></div>
+                            <span class="nav__col-title">RECRUITER</span>
+                        </div>
+                        <router-link class="nav__item" :to="{ name: 'CompanyPostJob' }">Post a Job</router-link>
+                        <router-link class="nav__item" :to="{ name: 'CandidateSearch' }">Cv Search</router-link>
+                        <router-link class="nav__item" :to="{ name: 'CandidateDashboard' }">Cv Create</router-link>
+                    </div>
+                    <div class="nav__col mb-4">
+                        <div class="footer-heading-div mb-2">
+                            <div class="mr-2 footer-title-effect"></div>
+                            <span class="nav__col-title">Info</span>
+                        </div>
+                        <router-link class="nav__item" :to="{ name: 'CompanySearch' }">For Companies</router-link>
+                        <router-link class="nav__item" :to="{ name: 'CandidateSearch' }">For Candidate</router-link>
+                    </div>
+                    <div class="nav__col mb-4">
+                        <div class="footer-heading-div mb-2">
+                            <div class="mr-2 footer-title-effect"></div>
+                            <span class="nav__col-title">HELP</span>
+                        </div>
+                        <router-link class="nav__item" :to="{ name: 'Faq' }">General</router-link>
+                        <router-link class="nav__item" :to="{ name: 'Faq' }">Payment</router-link>
+                        <router-link class="nav__item" :to="{ name: 'Faq' }">Refund</router-link>
+                        <router-link class="nav__item" :to="{ name: 'Faq' }">Products&Services</router-link>
+                        <router-link class="nav__item" :to="{ name: 'Faq' }">Registration Issue</router-link>
+                        <router-link class="nav__item" :to="{ name: 'Faq' }">Technical Issue</router-link>
+                    </div>
+                    <div class="nav__col mb-4">
+                        <div class="footer-heading-div mb-2">
+                            <div class="mr-2 footer-title-effect"></div>
+                            <span class="nav__col-title">RECRUITER</span>
+                        </div>
+                        <router-link class="nav__item" :to="{ name: 'CompanyPostJob' }">Post a Job</router-link>
+                        <router-link class="nav__item" :to="{ name: 'CandidateSearch' }">Cv Search</router-link>
+                        <router-link class="nav__item" :to="{ name: 'CandidateDashboard' }">Cv Create</router-link>
+                    </div>
+                    <div class="nav__col mb-4">
+                        <div class="footer-heading-div mb-2">
+                            <div class="mr-2 footer-title-effect"></div>
+                            <span class="nav__col-title">More from BizBlanca</span>
+                        </div>
+                        <router-link class="nav__item" :to="{ name: 'AboutUs' }">About us</router-link>
+                        <router-link class="nav__item" :to="{ name: 'Faq' }">FAQ's</router-link>
+                        <router-link class="nav__item" :to="{ name: 'ContactUs' }">Contact Us</router-link>
+                        <router-link class="nav__item" :to="{ name: 'TermsCondition' }">Terms & Conditions
                         </router-link>
-                        <router-link class="nav__item" :to="{ name: 'ForCompanies' }">Executive Search</router-link>
-                        <!-- <router-link class="nav__item" :to="{ name: 'ForCompanies' }">All Services</router-link> -->
-                    </div>
-                    <div class="nav__col mb-4">
-                        <div class="footer-heading-div mb-2">
-                            <div class="mr-2 footer-title-effect"></div>
-                            <span class="nav__col-title">For Candidates</span>
-                        </div>
-                        <router-link class="nav__item" :to="{ name: 'ForCompanies' }">Submit Timesheets</router-link>
-                        <router-link class="nav__item" :to="{ name: 'ForCompanies' }">Find a Role</router-link>
-                        <router-link class="nav__item" :to="{ name: 'ForCompanies' }">Work with a Consultant
-                        </router-link>
-                        <router-link class="nav__item" :to="{ name: 'ForCompanies' }">Learning &amp; Development
-                        </router-link>
-                    </div>
-                    <div class="nav__col mb-4">
-                        <div class="footer-heading-div mb-2">
-                            <div class="mr-2 footer-title-effect"></div>
-                            <span class="nav__col-title">Our Expertise</span>
-                        </div>
-                        <a class="nav__item" href="#">Accountancy &amp; Finance</a>
-                        <a class="nav__item" href="#">Business Support</a>
-                        <a class="nav__item" href="#">Education</a>
-                        <a class="nav__item" href="#">Technology</a>
-                        <!-- <a class="nav__item" href="#">All Sectors</a> -->
-                    </div>
-                    <div class="nav__col mb-4">
-                        <div class="footer-heading-div mb-2">
-                            <div class="mr-2 footer-title-effect"></div>
-                            <span class="nav__col-title">Resources</span>
-                        </div>
-                        <a class="nav__item" href="#">Articles</a>
-                        <a class="nav__item" href="#">eBooks, Guides &amp; Tools</a>
-                        <a class="nav__item" href="#">Events</a>
-                    </div>
-                    <div class="nav__col mb-4">
-                        <div class="footer-heading-div mb-2">
-                            <div class="mr-2 footer-title-effect"></div>
-                            <span class="nav__col-title">About Bizblanca</span>
-                        </div>
-                        <a class="nav__item" href="#">Our Story</a>
-                        <a class="nav__item" href="#">Our Social Impact</a>
-                        <a class="nav__item" href="#">The Reed Group</a>
-                        <a class="nav__item" href="#">Work for Reed</a>
-                        <!-- <a class="nav__item" href="#" target="_blank">Franchise Partnerships</a> -->
-                    </div>
-                    <div class="nav__col mb-4">
-                        <div class="footer-heading-div mb-2">
-                            <div class="mr-2 footer-title-effect"></div>
-                            <span class="nav__col-title">Contact</span>
-                        </div>
-                        <a class="nav__item" href="#">Find a Reed Office</a>
-                        <a class="nav__item" href="#">Get In Touch</a>
-                        <a href="#" class="nav__item" target="_blank">Facebook</a>
-                        <!-- <a href="#" class="nav__item" target="_blank">Twitter</a> -->
-                        <a href="#" class="nav__item" target="_blank">LinkedIn</a>
+                        <router-link class="nav__item" :to="{ name: 'PrivacyPolicy' }">Privacy Policy</router-link>
+                        <router-link class="nav__item" :to="{ name: 'NewsDetail' }">News</router-link>
                     </div>
                 </nav>
                 <div class="col-lg-4 col-12 offset-lg-1 p-0">
@@ -118,13 +112,13 @@
                     © IDENBRID INC.™, 2021. All rights reserved.</a>
                 <ul class="social-icons-footer">
                     <li><a target="_blank" href="https://www.facebook.com/bizblanca/">
-                    <i class="fab fa-facebook-square"></i></a></li>
+                            <i class="fab fa-facebook-square"></i></a></li>
                     <li><a target="_blank" href="https://www.linkedin.com/company/bizblanca/">
-                    <i class="fab fa-linkedin"></i></a></li>
+                            <i class="fab fa-linkedin"></i></a></li>
                     <li><a target="_blank" href="https://api.whatsapp.com/send?phone=+923064041221">
-                    <i class="fab fa-whatsapp-square"></i></a></li>
+                            <i class="fab fa-whatsapp-square"></i></a></li>
                     <li><a target="_blank" href="https://www.instagram.com/bizblanca/">
-                    <i class="fab fa-instagram-square"></i></a></li>
+                            <i class="fab fa-instagram-square"></i></a></li>
                 </ul>
             </div>
         </div>
