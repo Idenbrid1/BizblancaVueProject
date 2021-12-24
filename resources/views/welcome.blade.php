@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 
 <head>
+<script>document.addEventListener('contextmenu', event => event.preventDefault());document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+    return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+}</script>
+
     <title>IT Job in Lahore - IT Jobs In Pakistan - BizBlanca</title>
     @if (Auth::check()) 
         <meta name="user_id" content="{{ Auth::user()->id }}" />
@@ -46,9 +64,7 @@
     fbq('init', '656798769016185');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=656798769016185&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=656798769016185&ev=PageView&noscript=1"/></noscript>
     <!-- End Facebook Pixel Code -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V99STZXL36"></script>

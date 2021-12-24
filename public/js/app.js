@@ -7543,7 +7543,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     download: function download() {
-      window.open('/api/download-cv/', '_blank');
+      window.open('/api/company-download-cv/' + this.data.id, '_blank');
     }
   }
 });
@@ -41077,6 +41077,23 @@ var render = function () {
                     },
                   }),
                   _vm._v(_vm._s(_vm.data.city)),
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "v-on-d" }, [
+                  _c(
+                    "a",
+                    {
+                      on: {
+                        click: function ($event) {
+                          return _vm.download()
+                        },
+                      },
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-download" }),
+                      _vm._v(" Download"),
+                    ]
+                  ),
                 ]),
               ]),
               _vm._v(" "),
