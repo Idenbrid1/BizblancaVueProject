@@ -16,7 +16,7 @@
                                 <p>{{data.full_name}}</p>
                             </li>
                             <li class="v-on-d"><img src="/website/assets/images/pin-job.svg" alt="img">{{data.city}}</li>
-                            <!-- <li class="v-on-d"><a @click="download()"><i class="fas fa-download"></i> Download</a></li> -->
+                            <li class="v-on-d"><a @click="download()"><i class="fas fa-download"></i> Download</a></li>
                         </ul>
                         <p class="candidate-designation">{{data.bio}}</p>
                         <ul class="v-on-m m-0 p-0 pt-2 candidate-detail-list-m">
@@ -137,7 +137,7 @@
                     });
             },
             download(){
-                window.open('/api/download-cv/', '_blank')
+                window.open('/api/company-download-cv/'+this.data.id, '_blank')
             },
         },
     };

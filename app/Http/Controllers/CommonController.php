@@ -377,6 +377,13 @@ class CommonController extends Controller
         return $pdf->stream('cv_template.pdf');
     }
 
+    public function CompanyDownloadcv($id)
+    {
+        $candidate = Candidate::where('id', $id)->first();
+        $pdf = PDF::loadView('pdf.cv_template',compact('candidate'))->setPaper('a4', 'portrait');
+        return $pdf->stream('cv_template.pdf');
+    }
+
     public function getJobs()
     {
         return JobPost::where('status', 'Active')->with(['Company'])->orderBy('created_at', 'DESC')->get(); 
