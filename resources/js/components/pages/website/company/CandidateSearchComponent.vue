@@ -614,7 +614,7 @@
                         title: 'Oops...🧐',
                         confirmButtonText: 'Understood!',
                         text: 'Please login before!',
-                        footer: '<a href="/#/signin">Login?</a>',
+                        footer: '<a href="/signin">Login?</a>',
                         timer: 1500
                     })
                 }
@@ -628,7 +628,7 @@
                         title: 'Oops...🧐',
                         confirmButtonText: 'Understood!',
                         text: 'Please login before!',
-                        footer: '<a href="/#/signin">Login?</a>',
+                        footer: '<a href="/signin">Login?</a>',
                         timer: 1500
                     })
                 }

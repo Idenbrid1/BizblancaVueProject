@@ -213,7 +213,7 @@
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...🧐',
-                    confirmButtonText: '<a style="color:#ffffff" href="/#/signin">Login?</a>',
+                    confirmButtonText: '<a style="color:#ffffff" href="/signin">Login?</a>',
                     text: 'Please login before apply to any job!',
                     timer: 3000
                 })
