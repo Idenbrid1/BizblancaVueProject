@@ -60,7 +60,7 @@
                                         <!-- <router-link data-toggle="collapse" :to="{ name: 'Signin' }">or<br />
                                             Sign in with</router-link> -->
                                     </div>
-                                    <div class="direct-login    ">
+                                    <div class="direct-login">
                                         <ul class="direct-login-icons">
                                             <li>
                                                 <a href="api/auth/google"><img src="/website/assets/images/search.svg" alt="google" /></a>
@@ -122,38 +122,38 @@
                     },
                 })
                 axios.post('api/user-login', this.record)
-                    .then((response) => {
-                        if (response.data.success == false) {
-                            Swal.close()
-                            this.errors = response.data.errors
-                        } else if (response.data.success == 'credentials') {
-                            Swal.close()
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Try Again',
-                                text: 'Credentials Not Match',
+                .then((response) => {
+                    if (response.data.success == false) {
+                        Swal.close()
+                        this.errors = response.data.errors
+                    } else if (response.data.success == 'credentials') {
+                        Swal.close()
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Try Again',
+                            text: 'Credentials Not Match',
+                        })
+                    } else if (response.data.status == 'activation') {
+                        Swal.close()
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Account Not Verified',
+                            text: 'Please Verify your Account! Check Your Mail Box',
+                        })
+                    } else {
+                        Swal.close()
+                        if (response.data.user.type == 'candidate') {
+                            this.$router.push({
+                                name: 'CandidateDashboard'
                             })
-                        } else if (response.data.status == 'activation') {
-                            Swal.close()
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Account Not Verified',
-                                text: 'Please Verify your Account! Check Your Mail Box',
-                            })
-                        } else {
-                            Swal.close()
-                            if (response.data.user.type == 'candidate') {
-                                this.$router.push({
-                                    name: 'CandidateDashboard'
-                                })
-                            }
-                            if (response.data.user.type == 'company') {
-                                this.$router.push({
-                                    name: 'CompanyDashboard'
-                                })
-                            }
                         }
-                    });
+                        if (response.data.user.type == 'company') {
+                            this.$router.push({
+                                name: 'CompanyDashboard'
+                            })
+                        }
+                    }
+                });
             },
         }
     };
