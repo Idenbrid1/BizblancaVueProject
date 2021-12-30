@@ -32247,7 +32247,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "direct-login-icons" }, [
       _c("li", [
-        _c("a", { attrs: { href: "api/auth/google" } }, [
+        _c("a", { attrs: { href: "/api/auth/google" } }, [
           _c("img", {
             attrs: { src: "/website/assets/images/search.svg", alt: "google" },
           }),
@@ -32255,7 +32255,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("li", [
-        _c("a", { attrs: { href: "api/auth/linkedin" } }, [
+        _c("a", { attrs: { href: "/api/auth/linkedin" } }, [
           _c("img", {
             attrs: {
               src: "/website/assets/images/linkedin-round.svg",
@@ -32266,7 +32266,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("li", [
-        _c("a", { attrs: { href: "api/auth/github" } }, [
+        _c("a", { attrs: { href: "/api/auth/github" } }, [
           _c("img", {
             attrs: {
               src: "/website/assets/images/github-logo_icon.png",
