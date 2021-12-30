@@ -30,8 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'google' => [
-        'client_id' => '715872452309-i7d075sd6phrlavg2spvosn1hr0am2hv.apps.googleusercontent.com',
-        'client_secret' => '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',
+        'client_id' => '715872452309-d09pui8i6t2nmok80kbd7jba3dh8186o.apps.googleusercontent.com',
+        'client_secret' => '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',
         'redirect' => 'https://bizblanca.com/api/auth/google/callback',
     ],
     'github' => [
