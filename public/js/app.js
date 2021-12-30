@@ -32156,7 +32156,7 @@ var render = function () {
                       _vm._v(" "),
                       _vm._m(2),
                       _vm._v(" "),
-                      _c("div", { staticClass: "direct-login    " }, [
+                      _c("div", { staticClass: "direct-login" }, [
                         _vm._m(3),
                         _vm._v(" "),
                         _c(
