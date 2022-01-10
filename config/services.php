@@ -30,9 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'google' => [
-        'client_id' => '715872452309-d09pui8i6t2nmok80kbd7jba3dh8186o.apps.googleusercontent.com',
-        'client_secret' => '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',
-        'redirect' => 'https://bizblanca.com/api/auth/google/callback',
+        'client_id' => '600723386292-q2oig6ejuvjk015a6t93c6mqcvvejdnq.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'http://127.0.0.1:8000/api/auth/google/callback',
     ],
     'github' => [
         'client_id' => '8311b250ab382b37ecc5',

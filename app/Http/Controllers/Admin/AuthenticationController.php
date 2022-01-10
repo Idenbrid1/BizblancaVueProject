@@ -455,7 +455,7 @@ class AuthenticationController extends Controller
     public function handleGoogleCallback() {
         try{
             $user = Socialite::driver('google')->stateless()->user();
-            $finduser = User::where('email', $user->email)->first();
+            $finduser = User::where('social_id', $user->id)->first();
             if ($finduser) {
                 Auth::login($finduser);
                 return redirect('/');
@@ -466,7 +466,7 @@ class AuthenticationController extends Controller
                     'email' => $user->email,
                     'name' => $user->name,
                 ]);
-                return redirect('/social-login/'.$user->id);
+                return redirect('social-login/'.$user->id);
             }
         }
         catch(Exception $e) {
