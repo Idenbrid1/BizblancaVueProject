@@ -85,7 +85,7 @@ Route::get('/{any}', function () {
 // Route::get('auth/linkedin/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleLinkedinCallback']);
 
 
-// //samad 
+// //samad
 // Route::get('/login', function () {
 //     return view('website/pages/login');
 // })->name('login');
@@ -137,7 +137,7 @@ Route::get('/{any}', function () {
 //     Route::get('candidate/add-to-wish-list/{company_id}', [App\Http\Controllers\Candidate\CandidateController::class, 'addToWishList']);
 //     Route::get('get-candidate-wish-list', [App\Http\Controllers\Candidate\CandidateController::class, 'getCandidateWishList']);
 
-   
+
 //     // Route::post('/update/remark', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateRemark'])->name('profile.updateRemark');
 //     // // Route::post('/update/cnic-back', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateCnicBack'])->name('profile.updateCnicBack');
 //     // Route::post('/update/profile-pic', [App\Http\Controllers\Website\Candidate\ProfileController::class, 'updateProfilePic'])->name('profile.updateProfilePic');
@@ -179,7 +179,7 @@ Route::get('/{any}', function () {
 //         Route::get('/remove-to-wish-list/{candidate_id}', [App\Http\Controllers\Company\CompanyController::class, 'removeToWishList']);
 //         Route::get('/add-to-wish-list/{candidate_id}', [App\Http\Controllers\Company\CompanyController::class, 'addToWishList']);
 //         Route::post('/company-setting-password', [App\Http\Controllers\Company\CompanyController::class, 'settingPassword']);
-        
+
 // 		// Route::get('/home', [App\Http\Controllers\Website\Company\HomeController::class, 'showDashboardPage'])->name('home');
 // 		// Route::get('/profile', [App\Http\Controllers\Website\Company\ProfileController::class, 'show'])->name('profile.show');
 // 		// Route::get('/profile_edit', [App\Http\Controllers\Website\Company\ProfileController::class, 'edit'])->name('profile.edit');

@@ -82,7 +82,7 @@
                     confirm_password: '',
                     active: 0,
                 },
-                isRole: '',
+                isRole: $("meta[name='role']").attr("content"),
                 errors: [],
             };
         },
@@ -111,7 +111,7 @@
                 axios.post('api/candidate-setting-password', this.record)
                 .then((response) => {
                     if (response.data.success == false) {
-                        this.errors = response.data.errors     
+                        this.errors = response.data.errors
                     }else{
                         if(response.data.message == true){
                             Swal.fire({

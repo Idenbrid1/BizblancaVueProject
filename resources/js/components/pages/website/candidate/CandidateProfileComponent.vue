@@ -2722,7 +2722,7 @@
                                 Swal.fire({
                                     icon: 'error',
                                     title: 'You can only add 3 awards',
-                                })    
+                                })
                                 this.addMoreDBAward = false
                                 return false;
                             }else{
@@ -2740,7 +2740,7 @@
                         }
                     }
                 }
-                
+
             },
             deleteAwardArray(index) {
                 this.$delete(this.profile.candidate_awards, index);

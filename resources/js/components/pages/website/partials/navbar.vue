@@ -118,8 +118,9 @@ import axios from 'axios';
     export default {
         data() {
             return {
-                isAuth: false,
+                isAuth: '',
                 url: '',
+                role: $("meta[name='role']").attr("content")
             };
         },
         created() {
@@ -127,16 +128,24 @@ import axios from 'axios';
         },
         methods: {
             checkAuth() {
-                axios.get('/api/check-auth')
-                .then((response) => {
-                    this.isAuth = response.data.isAuth
-                });
+                // axios.get('/api/check-auth')
+                // .then((response) => {
+                //     this.isAuth = response.data.isAuth
+                // });
+                // this.role = $("meta[name='role']").attr("content");
+                if(this.role == "false"){
+                    this.isAuth = false
+                }else{
+                    this.isAuth = true
+                }
             },
             logoutUser()
             {
                 axios.get('/api/user-logout')
                 .then((response) => {
                     if (response.data.success == true) {
+                        this.isAuth = false
+                        this.role = $("meta[name='role']").attr("content", 'false');
                         this.$router.push({ name: 'Signin' })
                     }
                 });

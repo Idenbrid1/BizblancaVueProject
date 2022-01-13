@@ -23,7 +23,7 @@ use PDF;
 class CommonController extends Controller
 {
     public function jobSearch(Request $request)
-    { 
+    {
         if($request->title)
         {
             $jobposts = JobPost::query()->where('title', 'LIKE', "%{$request->title}%")->with('Company')->get();
@@ -32,7 +32,11 @@ class CommonController extends Controller
         else{
             $jobposts = JobPost::where('status', 'Active')->with('Company')->get();
         }
-        $fields = ['experience', 'job_type', 'qualification_level', 'salary_range', 'shift', 'gender'];
+        if($request->gender == 'All'){
+            $fields = ['experience', 'job_type', 'qualification_level', 'salary_range', 'shift'];
+        }else{
+            $fields = ['experience', 'job_type', 'qualification_level', 'salary_range', 'shift', 'gender'];
+        }
         foreach($fields as $field){
             if(!empty($request->$field)){
                 $jobposts = $jobposts->where($field, $request->$field);
@@ -56,8 +60,8 @@ class CommonController extends Controller
     public function jobKeywordSearch($keyword)
     {
         return JobPost::query()->with(['Company'])
-            ->where('title', 'LIKE', "%{$keyword}%") 
-            ->orWhere('designation', 'LIKE', "%{$keyword}%") 
+            ->where('title', 'LIKE', "%{$keyword}%")
+            ->orWhere('designation', 'LIKE', "%{$keyword}%")
             ->get();
     }
     public function candidateKeywordSearch($keyword)
@@ -96,12 +100,12 @@ class CommonController extends Controller
             }
             return $candidate_with_wishlist;
         }
-        
+
     }
     public function companyKeywordSearch($keyword)
     {
         $companies = Company::query()
-            ->where('company_name', 'LIKE', "%{$keyword}%") 
+            ->where('company_name', 'LIKE', "%{$keyword}%")
             ->get();
         if(Auth::check()){
             $user = User::find(Auth::user()->id);
@@ -134,10 +138,10 @@ class CommonController extends Controller
             }
             return $company_with_wishlist;
         }
-        
+
     }
     public function candidateSearch(Request $request)
-    { 
+    {
         if($request->skills)
         {
             foreach($request->skills as $skill)
@@ -154,7 +158,7 @@ class CommonController extends Controller
                 $candidate_skills_lists = Candidate::whereIn('id', $final_skills_array)->with('CandidateSkills')->get();
             }
         }
-        else{ 
+        else{
             $candidate_skills_lists = Candidate::with('CandidateSkills')->get();
         }
         $fields = ['working_experience', 'city', 'gender'];
@@ -234,18 +238,18 @@ class CommonController extends Controller
                     );
                 }
                 return $candidate_with_wishlist;
-            }   
+            }
         }
     }
     public function getCandidateSearch()
     {
-        return Candidate::with('CandidateSkills')->latest()->paginate(12); 
+        return Candidate::with('CandidateSkills')->latest()->paginate(12);
     }
     public function getCompanyDetail($id)
     {
         return Company::with('Jobs')->find($id);
     }
-    
+
     public function getJobDetail($id)
     {
         $job = JobPost::with('Company')->find($id);
@@ -386,7 +390,7 @@ class CommonController extends Controller
 
     public function getJobs()
     {
-        return JobPost::where('status', 'Active')->with(['Company'])->orderBy('created_at', 'DESC')->get(); 
+        return JobPost::where('status', 'Active')->with(['Company'])->orderBy('created_at', 'DESC')->get();
     }
 
     public function checkRole()

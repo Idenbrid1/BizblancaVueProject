@@ -1,7 +1,6 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <CompanyNavbar />
         <h1 class="pricing-plan-title about">About Us</h1>
         <section class="about-us-container container">
             <div class="bizlanca-about-wrap">

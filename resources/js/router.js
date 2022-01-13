@@ -41,7 +41,7 @@ const router = new VueRouter({
     mode: 'history',
     // linkExactActiveClass: 'font-weight-bold',
     routes: [
-        
+
         {
             path: '/',
             name: 'Landing Page',
@@ -71,8 +71,8 @@ const router = new VueRouter({
             path: '/candidate-profile',
             name: 'CandidateProfile',
             component: CandidateProfile,
-            beforeEnter: (to, from, next) => { 
-                axios.get('api/check-candidate-role')
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/check-candidate-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -86,8 +86,8 @@ const router = new VueRouter({
             path: '/company-post-job',
             name: 'CompanyPostJob',
             component: CompanyPostJob,
-            beforeEnter: (to, from, next) => { 
-                axios.get('api/check-company-role')
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -101,8 +101,8 @@ const router = new VueRouter({
             path: '/company-profile',
             name: 'CompanyProfile',
             component: CompanyProfile,
-            beforeEnter: (to, from, next) => { 
-                axios.get('api/check-company-role')
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -126,8 +126,8 @@ const router = new VueRouter({
             path: '/company-account-setting',
             name: 'CompanyAccountSetting',
             component: CompanyAccountSetting,
-            beforeEnter: (to, from, next) => { 
-                axios.get('api/check-company-role')
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -141,8 +141,8 @@ const router = new VueRouter({
             path: '/candidate-account-setting',
             name: 'CandidateAccountSetting',
             component: CandidateAccountSetting,
-            beforeEnter: (to, from, next) => { 
-                axios.get('api/check-candidate-role')
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/check-candidate-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -156,8 +156,8 @@ const router = new VueRouter({
             path: '/job-applied-candidates/:id',
             name: 'JobAppliedCandidates',
             component: JobAppliedCandidates,
-            beforeEnter: (to, from, next) => { 
-                axios.get('api/check-company-role')
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -171,8 +171,8 @@ const router = new VueRouter({
             path: '/company-dashboard',
             name: 'CompanyDashboard',
             component: CompanyDashboard,
-            beforeEnter: (to, from, next) => { 
-                axios.get('api/check-company-role')
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -230,14 +230,14 @@ const router = new VueRouter({
         {
             path: '/company-chat',
             name: 'CompanyChat',
-            component: CompanyChat,            
+            component: CompanyChat,
         },
         {
             path: '/candidate-dashboard',
             name: 'CandidateDashboard',
             component: CandidateDashboard,
             beforeEnter: (to, from, next) => {
-                axios.get('api/check-candidate-role')
+                axios.get('/api/check-candidate-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()
@@ -281,8 +281,8 @@ const router = new VueRouter({
             path: '/package-plans',
             name: 'PackagePlans',
             component: PackagePlans,
-            beforeEnter: (to, from, next) => { 
-                axios.get('api/check-company-role')
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/check-company-role')
                 .then((response) => {
                     if (response.data.success == true) {
                         next()

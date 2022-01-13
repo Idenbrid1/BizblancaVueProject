@@ -224,16 +224,16 @@
                                                     <div class="direct-login">
                                                         <ul class="direct-login-icons">
                                                             <li>
-                                                                <a href="api/auth/google"><img src="/website/assets/images/search.svg" alt="google" /></a>
+                                                                <a href="/api/auth/google"><img src="/website/assets/images/search.svg" alt="google" /></a>
                                                             </li>
                                                             <!-- <li>
                                                                 <a ><img src="/website/assets/images/facebookLogin.svg" alt="facebook" /></a>
                                                             </li> -->
                                                             <li>
-                                                                <a href="api/auth/linkedin"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
+                                                                <a href="/api/auth/linkedin"><img src="/website/assets/images/linkedin-round.svg" alt="linkedin" /></a>
                                                             </li>
                                                             <li>
-                                                                <a href="api/auth/github"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
+                                                                <a href="/api/auth/github"><img src="/website/assets/images/github-logo_icon.png" alt="github" /></a>
                                                             </li>
                                                         </ul>
                                                         <span>Already have an account?
@@ -303,6 +303,9 @@
                                 icon: 'success',
                                 title: 'SignUp Successfully',
                                 text: 'Please Verify your self and check you mail or spam box!Thanks',
+                            });
+                            this.$router.push({
+                                name: 'Signin'
                             })
                         }
                     });
@@ -325,6 +328,9 @@
                                 icon: 'success',
                                 title: 'SignUp Successfully',
                                 text: 'Please Verify your self and check you mail or spam box!Thanks',
+                            });
+                            this.$router.push({
+                                name: 'Signin'
                             })
                         }
                     });

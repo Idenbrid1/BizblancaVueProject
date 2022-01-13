@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar />
-        <CandidateNavbar v-if="is_auth == true" />
+        <CandidateNavbar v-if="is_auth == 'candidate'" />
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
@@ -201,7 +201,7 @@
                             @click="jobToShow += 10">Load more</button>
                     </div>
                 </div>
-                
+
                 <div class="job-list-wrap" v-if="keywordSearchShow == true && is_auth == true">
                     <!-- <div class="job-search-count my-3 mx-1">1 to 20 Results (out of 10,000 results in total)</div> -->
                     <!-- Job List Start -->
@@ -238,15 +238,15 @@
                                     <li>
                                     <a class="candidate-wishlist-btn ml-2 " v-if="searchData[index].is_wish_listed == false"
                                         @click="addToWishList(searchData[index].company.id)"><i
-                                            class="far fa-heart"></i></a>
+                                            class="far fa-bookmark"></i></a>
                                     <a class="candidate-wishlist-btn ml-2 " v-else @click="removeToWishList(searchData[index].company.id)"><i
-                                            class="fas fa-heart"></i></a>
+                                            class="fas fa-bookmark"></i></a>
                                     </li>
                                     <!-- -->
                                 </ul>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="text-center" v-if="this.showLoader == false && searchData.length">
                         <button class="load-more-btn mx-auto"
@@ -572,7 +572,7 @@
                 totalCompanies: 0,
                 showError: false,
                 keywordSearchShow: false,
-                is_auth: false,
+                is_auth: $("meta[name='role']").attr("content"),
             }
         },
         mounted() {
@@ -603,7 +603,7 @@
             this.getJobs()
         },
         methods: {
-            async getJobs() {   
+            async getJobs() {
                 axios.get('api/get-jobs')
                     .then((response) => {
                         this.searchData = []
@@ -676,11 +676,10 @@
                     keyword: '',
                     skills: '',
                 };
-                this.searchData = [],
-                this.totalJobs = 0,
-                this.jobToShow = 10,
-                this.showError = false
-                this.keywordSearchShow = false
+                this.jobToShow = 10;
+                this.showError = false;
+                this.keywordSearchShow = false;
+                this.getJobs()
             }
         },
     };

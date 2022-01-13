@@ -26,8 +26,8 @@
                         <!-- Job List Wrap Start -->
                         <div class="job-list-wrap" style="padding:10px">
                             <!-- Job List Start -->
-                            <div class="row m-0 justify-content-start" v-for="(item, index) in data" :key="index">
-                                <div class="candidate-single">
+                            <div class="row m-0 justify-content-start" >
+                                <div class="candidate-single" v-for="(item, index) in data" :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
                                             <div class="candidate-photo" :style="{ 'background-image': 'url(/storage/images/candidates/' + item.candidate.candidates.profile_image + ')' }">
@@ -64,8 +64,8 @@
                                                     View Profile</router-link>
                                             </li>
                                             <li>
-                                                <a v-if="item.is_wish_listed == false" @click="addToWishList(item.candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="far fa-heart"></i></a>
-                                                <a v-else @click="removeToWishList(item.candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="fas fa-heart"></i></a>
+                                                <a v-if="item.is_wish_listed == false" @click="addToWishList(item.candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="far fa-bookmark"></i></a>
+                                                <a v-else @click="removeToWishList(item.candidate.id)" class="candidate-wishlist-btn ml-2 "><i class="fas fa-bookmark"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -369,9 +369,15 @@
             },
             addToWishList(id) {
                 axios.get('/api/add-to-wish-list/' + id)
+                .then((response) => {
+                    this.getSingleJobDetail()
+                });
             },
             removeToWishList(id) {
                 axios.get('/api/remove-to-wish-list/' + id)
+                .then((response) => {
+                    this.getSingleJobDetail()
+                });
             },
         },
     };
