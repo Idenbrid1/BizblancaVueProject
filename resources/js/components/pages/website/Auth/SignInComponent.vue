@@ -115,6 +115,7 @@
                 })
             },
             Login() {
+
                 Swal.fire({
                     text: 'Please Wait We SettingUp Your Dashboard',
                     didOpen: () => {
