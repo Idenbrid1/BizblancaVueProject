@@ -7,7 +7,7 @@
                 <h1 class="post_new_job_title mx-2">Company Profile</h1>
                 <div class="company_detail_info px-2 row no-gutters">
                     <div class="info_left col-12 col-md-4">
-                        <div class="company_image" :style="{ backgroundImage: 'url(/storage/images/companies/'+data.logo+')'}"></div>
+                        <img class="company_image" :src="'/storage/images/companies/'+data.logo"/>
                         <p class="company_name">{{data.company_name}}</p>
                     </div>
                     <div class="info_right col-12 col-md-8">

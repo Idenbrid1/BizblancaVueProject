@@ -57,18 +57,11 @@
                         <div class="job-list-content col">
                             <div class="job-header">
                                 <h6 class="job-title mb-0">{{searchData[index].company.company_name}}</h6>
-                                <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i> -->
-
                                 <div class="d-flex align-items-center">
                                     <span class="job-post-date">20 hours ago </span>
                                     <i class="far fa-bookmark"></i>
                                 </div>
                             </div>
-
                             <p class="job-description">{{searchData[index].company.description}}</p>
                             <div class="job-content-wrap">
                                 <div class="job-dynamic-values">

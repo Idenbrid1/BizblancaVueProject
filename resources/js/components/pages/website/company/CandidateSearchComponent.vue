@@ -127,9 +127,8 @@
                                     v-for="(item, index) in candidateToShow" :key="index">
                                     <div class="candidate-list-content">
                                         <div class="candidate-image">
-                                            <div class="candidate-photo"
-                                                :style="{ backgroundImage: 'url(/storage/images/candidates/profile/'+searchData[index].candidate.profile_image+')'}">
-                                            </div>
+                                            <img class="candidate-photo"
+                                                :src="'/storage/images/candidates/profile/'+searchData[index].candidate.profile_image" />
                                             <div class="candidate-header mt-2 ml-2">
                                                 <h6 class="candidate-name mb-0">
                                                     {{searchData[index].candidate.full_name}}</h6>

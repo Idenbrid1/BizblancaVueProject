@@ -7528,7 +7528,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -11467,13 +11466,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -12604,7 +12596,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_3__);
-//
 //
 //
 //
@@ -40888,19 +40879,14 @@ var render = function () {
         _c("div", { staticClass: "row no-gutters" }, [
           _c("div", { staticClass: "col-5 col-md-3" }, [
             _c("div", { staticClass: "candidate-pic-detail" }, [
-              _vm.data.profile_image
-                ? _c("div", {
-                    staticClass: "candidate-detail-img",
-                    style: {
-                      "background-image":
-                        "url(/storage/images/candidates/profile/" +
-                        _vm.data.profile_image +
-                        ")",
-                    },
-                  })
-                : _c("div", { staticClass: "candidate-detail-img" }, [
-                    _vm._v(" not avaiable"),
-                  ]),
+              _c("img", {
+                staticClass: "candidate-detail-img",
+                attrs: {
+                  src:
+                    "/storage/images/candidates/profile/" +
+                    _vm.data.profile_image,
+                },
+              }),
             ]),
           ]),
           _vm._v(" "),
@@ -54859,14 +54845,13 @@ var render = function () {
                                     "div",
                                     { staticClass: "candidate-image" },
                                     [
-                                      _c("div", {
+                                      _c("img", {
                                         staticClass: "candidate-photo",
-                                        style: {
-                                          backgroundImage:
-                                            "url(/storage/images/candidates/profile/" +
+                                        attrs: {
+                                          src:
+                                            "/storage/images/candidates/profile/" +
                                             _vm.searchData[index].candidate
-                                              .profile_image +
-                                            ")",
+                                              .profile_image,
                                         },
                                       }),
                                       _vm._v(" "),
@@ -57225,11 +57210,10 @@ var render = function () {
               { staticClass: "company_detail_info px-2 row no-gutters" },
               [
                 _c("div", { staticClass: "info_left col-12 col-md-4" }, [
-                  _c("div", {
+                  _c("img", {
                     staticClass: "company_image",
-                    style: {
-                      backgroundImage:
-                        "url(/storage/images/companies/" + _vm.data.logo + ")",
+                    attrs: {
+                      src: "/storage/images/companies/" + _vm.data.logo,
                     },
                   }),
                   _vm._v(" "),

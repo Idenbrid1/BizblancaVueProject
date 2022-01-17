@@ -5,8 +5,7 @@
             <div class="row no-gutters">
                 <div class="col-5 col-md-3">
                     <div class="candidate-pic-detail">
-                        <div class="candidate-detail-img" v-if="data.profile_image" :style="{ 'background-image': 'url(/storage/images/candidates/profile/' + data.profile_image + ')' }"></div>
-                        <div class="candidate-detail-img" v-else> not avaiable</div>
+                        <img class="candidate-detail-img" :src="'/storage/images/candidates/profile/' + data.profile_image">
                     </div>
                 </div>
                 <div class="col-7 col-md-9 candidate-detail-wrap">
