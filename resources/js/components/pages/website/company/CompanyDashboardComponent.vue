@@ -2,7 +2,6 @@
     <div>
         <WebsiteNavbar />
         <CompanyNavbar />
-
         <div class="container user-profile-container cont-flex p-0">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
@@ -108,7 +107,7 @@
                                             <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
                                                     Profile</a></li>
                                             <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
+                                                        class="far fa-bookmark"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -146,7 +145,7 @@
                                             <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
                                                     Profile</a></li>
                                             <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
+                                                        class="far fa-bookmark"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -184,7 +183,7 @@
                                             <li class="w-100"><a href="#" class="candidate-view-btn w-100">View
                                                     Profile</a></li>
                                             <li><a href="#" class="candidate-wishlist-btn ml-2 "><i
-                                                        class="far fa-heart"></i></a>
+                                                        class="far fa-bookmark"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -200,7 +199,7 @@
                 <div class="candidate">
                     <label class="candidate-tagline">
                         Whishlist
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-bookmark"></i>
                     </label>
                     <!-- Job List Toolbar Start -->
                     <div>
@@ -250,7 +249,7 @@
                                                     View Profile</router-link>
                                             </li>
                                             <li><a @click="removeToWishList(item.id)"
-                                                    class="candidate-wishlist-btn ml-2"><i class="fas fa-heart"></i></a>
+                                                    class="candidate-wishlist-btn ml-2"><i class="fas fa-bookmark"></i></a>
                                             </li>
                                         </ul>
                                     </div>

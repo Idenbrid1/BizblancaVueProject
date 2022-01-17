@@ -65,7 +65,7 @@
 
                                 <div class="d-flex align-items-center">
                                     <span class="job-post-date">20 hours ago </span>
-                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-bookmark"></i>
                                 </div>
                             </div>
 

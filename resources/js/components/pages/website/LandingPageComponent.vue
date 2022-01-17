@@ -37,7 +37,7 @@
                         <span class="seprate-line"></span>
                     </li>
                     <li>
-                        <a href="#expertise" class="secondaymenu" id="secondary-anker">Looking for A job</a><span
+                        <a href="#expertise" class="secondaymenu" id="secondary-anker">Looking for jobs</a><span
                             class="seprate-line"></span>
                     </li>
                     <li>
@@ -73,7 +73,7 @@
                         <h1 class="mb-4">BizBlanca</h1>
                         <div class="d-flex banner-buttons">
                             <router-link :to="{ name: 'JobSearch' }" class="btn btn-black hero-banner-btn-job mr-2">
-                                Looking for a Jobs</router-link>
+                                Looking for Jobs</router-link>
                             <router-link :to="{ name: 'CandidateSearch' }"
                                 class="btn btn-black hero-banner-btn-employee" href="#">Looking for Employees
                             </router-link>
@@ -161,7 +161,7 @@
                         <div id="content-faq-head">
                             <router-link :to="{ name: 'JobSearch' }" class="job-head">
                                 <div>
-                                    <h2>Looking for a Job?</h2>
+                                    <h2>Looking for Job?</h2>
                                     <p>We connect job searchers with reputable software houses as well as provide a
                                         platform for them to easily seek employment.</p>
                                     <span class="text-center btn-look">View more Detail
@@ -483,7 +483,7 @@
     export default {
         data() {
             return {
-                isRole: '',
+                isRole: $("meta[name='role']").attr("content"),
                 contact_us: {
                     name: '',
                     email: '',
@@ -502,7 +502,7 @@
             LoopingRhombusesSpinner,
         },
         created() {
-            this.checkRole();
+            // this.checkRole();
             this.getNews();
         },
         mounted() {
@@ -537,9 +537,18 @@
         },
         methods: {
             swiperInit() {
-                setTimeout(() => {
-                    $('#preloader').fadeOut();
-                }, 2000);
+                if (sessionStorage.getItem("count_loader")) {
+                        $('#preloader').fadeOut(100);
+                } else {
+                    sessionStorage.setItem("count_loader", "0");
+                    if (JSON.parse(sessionStorage.getItem("count_loader")) == 0) {
+                        $('#preloader').fadeIn();
+                        setTimeout(() => {
+                            $('#preloader').fadeOut();
+                        }, 2000)
+                    }
+                }
+
                 this.$nextTick(function () {
                     var swiper = new Swiper(".blogs-swiper", {
                         slidesPerView: 3.5,
@@ -587,14 +596,14 @@
                     });
                 })
             },
-            checkRole() {
-                axios.get('api/navbar-check-roles')
-                    .then((response) => {
-                        if (response.data.success) {
-                            this.isRole = response.data.role
-                        }
-                    });
-            },
+            // checkRole() {
+            //     axios.get('api/navbar-check-roles')
+            //     .then((response) => {
+            //         if (response.data.success) {
+            //             this.isRole = response.data.role
+            //         }
+            //     });
+            // },
             getNews() {
                 axios.get('/api/landingpage/news')
                     .then((response) => {
@@ -643,6 +652,10 @@
 
 </script>
 <style scoped>
+    #preloader {
+        display: none;
+    }
+
     .text_loading {
         color: #f1f1f1;
         position: fixed;

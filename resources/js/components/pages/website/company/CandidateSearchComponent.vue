@@ -1,7 +1,7 @@
 <template>
     <div>
         <WebsiteNavbar/>
-        <CompanyNavbar v-if="is_auth == true"/>
+        <CompanyNavbar v-if="is_auth == 'company'"/>
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
@@ -517,7 +517,7 @@
                     keyword: '',
                     skills: [],
                 },
-                is_auth: false,
+                is_auth: $("meta[name='role']").attr("content"),
                 searchData: '',
                 candidateToShow: 10,
                 totalcandidates: 0,
@@ -539,7 +539,7 @@
         },
         created() {
             this.getCandidate()
-            this.checkAuth()
+            // this.checkAuth()
         },
         components: {
             WebsiteNavbar,
@@ -547,14 +547,14 @@
             Multiselect,
         },
         methods: {
-            checkAuth(){
-                axios.get('api/check-auth')
-                .then((response) => {
-                    if(response.data.isAuth == true){
-                        this.is_auth = response.data.isAuth
-                    }
-                });
-            },
+            // checkAuth(){
+            //     axios.get('api/check-auth')
+            //     .then((response) => {
+            //         if(response.data.isAuth == true){
+            //             this.is_auth = response.data.isAuth
+            //         }
+            //     });
+            // },
             addSkill(newTag) {
                 const tag = {
                     name: newTag,

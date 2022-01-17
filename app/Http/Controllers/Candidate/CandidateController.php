@@ -45,7 +45,7 @@ class CandidateController extends Controller
                 'countries' => $countries,
                 'universities' => $universities,
                 'skill_exist' => $skill_exist,
-                
+
             ]);
 
         }else{
@@ -103,9 +103,9 @@ class CandidateController extends Controller
             $candidate->phone = $request->phone_no;
             $candidate->bio = $request->bio;
             $candidate->zipcode = $request->zipcode;
-            if($request->file('profilePhoto')) 
+            if($request->file('profilePhoto'))
             {
-                
+
                 $file = $request->file('profilePhoto');
                 $imagefilename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
@@ -270,7 +270,7 @@ class CandidateController extends Controller
             ], 200);
         }
         else{
-            if($request->file('resume')) 
+            if($request->file('resume'))
             {
                 $user = Auth::user();
                 $candidate = Candidate::where('user_id', $user->id)->first();
@@ -305,7 +305,7 @@ class CandidateController extends Controller
             ], 200);
         }
         else{
-            if($request->file('uploadcnicfrontback')) 
+            if($request->file('uploadcnicfrontback'))
             {
                 $user = Auth::user();
                 $candidate = Candidate::where('user_id', $user->id)->first();
@@ -339,7 +339,7 @@ class CandidateController extends Controller
             ], 200);
         }
         else{
-            if($request->file('uploadexperienceletter')) 
+            if($request->file('uploadexperienceletter'))
             {
                 $user = Auth::user();
                 $candidate = Candidate::where('user_id', $user->id)->first();
@@ -422,11 +422,11 @@ class CandidateController extends Controller
         if(CandidateAppliedJob::where(['candidate_id'=> $candidate->id, 'job_id' => $id])->first()){
             return response()->json([
                 'already_applied'   => true,
-            ]); 
+            ]);
         }else{
             return response()->json([
                 'already_applied'   => false,
-            ]); 
+            ]);
         }
     }
 
@@ -459,7 +459,7 @@ class CandidateController extends Controller
                 'errors' => $validator->errors(),
                 'success' => false,
             ], 200);
-        } 
+        }
         else
         {
             if(Hash::check($request->current_password, Auth::user()->password)){
@@ -476,7 +476,7 @@ class CandidateController extends Controller
                 ], 200);
             }
         }
-        
+
     }
 
     public function addToWishList($company_id)

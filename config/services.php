@@ -11,7 +11,7 @@ return [
     | as Mailgun, Postmark, AWS and more. This file provides the de facto
     | location for this type of information, allowing packages to have
     | a conventional file to locate the various service credentials.
-    |
+|
     */
 
     'mailgun' => [
@@ -30,9 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'google' => [
-        'client_id' => '600723386292-q2oig6ejuvjk015a6t93c6mqcvvejdnq.apps.googleusercontent.com',
-        'client_secret' => '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',
-        'redirect' => 'http://127.0.0.1:8000/api/auth/google/callback',
+        'client_id' => '715872452309-baki1ubt8saj6qqptg3ebceakq2nub4c.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'https://bizblanca.com/api/auth/google/callback',
     ],
     'github' => [
         'client_id' => '8311b250ab382b37ecc5',

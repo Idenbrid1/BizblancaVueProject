@@ -39,7 +39,7 @@ class AuthenticationController extends Controller
         ];
 
         $messages = [
-            
+
         ];
         if($request->type == 'candidate')
         {
@@ -86,11 +86,11 @@ class AuthenticationController extends Controller
                 $package = Package::where('title', 'Free')->first();
                 $company = new Company;
                 $company->company_name = $request->company_name;
-                $company->email = $request->email; 
+                $company->email = $request->email;
                 $company->phone = $request->phone;
                 $company->user_id = $User->id;
                 $company->package_id = $package->id;
-                $company->save(); 
+                $company->save();
                 $create_Order = Order::create([
                     'package_id' => 1,
                     'company_id' => $company->id,
@@ -108,7 +108,7 @@ class AuthenticationController extends Controller
                 $candidate->email = $User->email;
                 $candidate->phone = $User->phone;
                 $candidate->user_id = $User->id;
-                $candidate->save(); 
+                $candidate->save();
             }
             Mail::to($User->email)->send(new MailUserRegisterVerification($User));
             return response()->json([
@@ -119,7 +119,7 @@ class AuthenticationController extends Controller
     }
 
     public function verifyUser($token)
-    {   
+    {
         $verifyUser = User::where('code', $token)->where('status', 'Inactive')->first();
         if(isset($verifyUser)){
             $verifyUser->status = 'Active';
@@ -130,7 +130,7 @@ class AuthenticationController extends Controller
         {
             return redirect('/signin')->with('error', 'Sorry your email cannot be identified.');
         }
-        
+
     }
 
     public function userLogin(Request $request)
@@ -235,7 +235,7 @@ class AuthenticationController extends Controller
 		            $request->request->add([
 		            	'token'		=> str_replace('/', '', $request->token),
                     ]);
-                    
+
                     try{
                         $transaction = DB::transaction(function () use ($request, $user) {
                             $PasswordReset = PasswordReset::create($request->all());
@@ -251,7 +251,7 @@ class AuthenticationController extends Controller
                         'success'   => true,
                         'message'   => 'We sent you an reset password link! Check your email.',
                         'type'      => 'success',
-                    ]);   
+                    ]);
                 }
             }
             else
@@ -260,7 +260,7 @@ class AuthenticationController extends Controller
                     'success'   => 'notfount',
                     'message'   => 'Email not Found!',
                     'type'      => 'error',
-                ]);   
+                ]);
             }
         }
     }
@@ -311,7 +311,7 @@ class AuthenticationController extends Controller
         else
         {
             $userExist = PasswordReset::where('token', $request->token)->first();
-            
+
             if($userExist)
             {
                 try{
@@ -344,18 +344,18 @@ class AuthenticationController extends Controller
                 ]);
             }
         }
-        
+
     }
 
     public function checkCandidateRole()
     {
         if(Auth::check())
-        { 
+        {
             if(Auth::user()->type == 'candidate')
             {
                 return response()->json([
                     'success'   => true,
-                ]);   
+                ]);
             }
             else{
                 return response()->json([
@@ -373,12 +373,12 @@ class AuthenticationController extends Controller
     public function checkCompanyRole()
     {
         if(Auth::check())
-        { 
+        {
             if(Auth::user()->type == 'company')
             {
                 return response()->json([
                     'success'   => true,
-                ]);   
+                ]);
             }
             else{
                 return response()->json([
@@ -397,13 +397,13 @@ class AuthenticationController extends Controller
     {
         // return UserResource::collection(User::all());
         if(Auth::check())
-        { 
+        {
             if(Auth::user()->type == 'company')
             {
                 return response()->json([
                     'success'   => true,
                     'role'   => 'company',
-                ]);   
+                ]);
             }
             if(Auth::user()->type == 'candidate'){
                 return response()->json([
@@ -458,7 +458,11 @@ class AuthenticationController extends Controller
             $finduser = User::where('social_id', $user->id)->first();
             if ($finduser) {
                 Auth::login($finduser);
-                return redirect('/');
+                if(Auth::user()->type == 'candidate'){
+                    return redirect('/candidate-dashboard');
+                }else{  
+                    return redirect('/company-dashboard');
+                }
             } else {
                 $social_login = SocialLogin::create([
                     'social_name' => 'google',
@@ -486,7 +490,7 @@ class AuthenticationController extends Controller
         ];
 
         $messages = [
-            
+
         ];
         if($request->role == 'candidate')
         {
@@ -625,5 +629,5 @@ class AuthenticationController extends Controller
             dd($e->getMessage());
         }
     }
-    
+
 }

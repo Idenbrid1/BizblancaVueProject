@@ -2,7 +2,6 @@
     <div>
         <WebsiteNavbar />
         <CandidateNavbar />
-
         <div class="container user-profile-container cont-flex">
             <div class="condition-search-feilds">
                 <div class="product_accordion_container">
@@ -55,14 +54,12 @@
                     </div>
 
                 </div>
-                <div class="candidate">
+                <!-- <div class="candidate">
                     <label class="candidate-tagline">
                         Recommended Jobs
                         <i class="fas fa-briefcase"></i>
                     </label>
-                    <!-- Job List Toolbar Start -->
                     <div>
-                        <!-- Job List Wrap Start -->
                         <div class="job-list-wrap p-0">
                             <div class="job-list">
                                 <div class="company-logo col-auto py-2">
@@ -125,14 +122,13 @@
 
                                 </div>
                             </div>
-                            <!-- </div> -->
                         </div>
                     </div>
                     <div class="show-more-anker">
                         <router-link class="show-more-common" to="/candidate-dashboard">Show more</router-link>
                         <p class="notify-unread-msgs">You have <span>12</span> unread messages</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- whishlist -->
                 <div class="candidate">
                     <label class="candidate-tagline">
@@ -183,7 +179,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>

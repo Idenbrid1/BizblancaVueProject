@@ -2466,7 +2466,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2825,7 +2824,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2881,12 +2879,16 @@ __webpack_require__.r(__webpack_exports__);
           Swal.close();
 
           if (response.data.user.type == 'candidate') {
+            $("meta[name='role']").attr("content", 'candidate');
+
             _this.$router.push({
               name: 'CandidateDashboard'
             });
           }
 
           if (response.data.user.type == 'company') {
+            $("meta[name='role']").attr("content", 'company');
+
             _this.$router.push({
               name: 'CompanyDashboard'
             });
@@ -3219,6 +3221,10 @@ __webpack_require__.r(__webpack_exports__);
             title: 'SignUp Successfully',
             text: 'Please Verify your self and check you mail or spam box!Thanks'
           });
+
+          _this.$router.push({
+            name: 'Signin'
+          });
         }
       });
     },
@@ -3241,6 +3247,10 @@ __webpack_require__.r(__webpack_exports__);
             icon: 'success',
             title: 'SignUp Successfully',
             text: 'Please Verify your self and check you mail or spam box!Thanks'
+          });
+
+          _this2.$router.push({
+            name: 'Signin'
           });
         }
       });
@@ -4480,7 +4490,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      isRole: ''
+      isRole: $("meta[name='role']").attr("content")
     };
   },
   components: {
@@ -4912,7 +4922,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      isRole: ''
+      isRole: $("meta[name='role']").attr("content")
     };
   },
   components: {
@@ -5476,7 +5486,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      isRole: '',
+      isRole: $("meta[name='role']").attr("content"),
       contact_us: {
         name: '',
         email: '',
@@ -5495,7 +5505,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     LoopingRhombusesSpinner: epic_spinners__WEBPACK_IMPORTED_MODULE_4__.LoopingRhombusesSpinner
   },
   created: function created() {
-    this.checkRole();
+    // this.checkRole();
     this.getNews();
   },
   mounted: function mounted() {
@@ -5532,9 +5542,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: {
     swiperInit: function swiperInit() {
-      setTimeout(function () {
-        $('#preloader').fadeOut();
-      }, 2000);
+      if (sessionStorage.getItem("count_loader")) {
+        $('#preloader').fadeOut(100);
+      } else {
+        sessionStorage.setItem("count_loader", "0");
+
+        if (JSON.parse(sessionStorage.getItem("count_loader")) == 0) {
+          $('#preloader').fadeIn();
+          setTimeout(function () {
+            $('#preloader').fadeOut();
+          }, 2000);
+        }
+      }
+
       this.$nextTick(function () {
         var swiper = new Swiper(".blogs-swiper", _defineProperty({
           slidesPerView: 3.5,
@@ -5581,29 +5601,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }));
       });
     },
-    checkRole: function checkRole() {
+    // checkRole() {
+    //     axios.get('api/navbar-check-roles')
+    //     .then((response) => {
+    //         if (response.data.success) {
+    //             this.isRole = response.data.role
+    //         }
+    //     });
+    // },
+    getNews: function getNews() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/navbar-check-roles').then(function (response) {
-        if (response.data.success) {
-          _this2.isRole = response.data.role;
-        }
-      });
-    },
-    getNews: function getNews() {
-      var _this3 = this;
-
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/landingpage/news').then(function (response) {
-        _this3.news = response.data;
+        _this2.news = response.data;
 
-        _this3.swiperInit();
+        _this2.swiperInit();
       });
     },
     expireTodayJobs: function expireTodayJobs() {
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/expire-today-jobs');
     },
     submitContactUs: function submitContactUs() {
-      var _this4 = this;
+      var _this3 = this;
 
       this.spinnerSubmit = true;
       Swal.fire({
@@ -5620,18 +5639,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             title: 'Contact us query raised',
             text: 'Please wait we will contact you as soon as possible! THANKS'
           });
-          _this4.contact_us = {
+          _this3.contact_us = {
             name: '',
             email: '',
             phone: '',
             message: ''
           };
-          _this4.errors = [];
-          _this4.spinnerSubmit = false;
+          _this3.errors = [];
+          _this3.spinnerSubmit = false;
         } else {
           Swal.close();
-          _this4.errors = response.data.errors;
-          _this4.spinnerSubmit = false;
+          _this3.errors = response.data.errors;
+          _this3.spinnerSubmit = false;
         }
       });
     }
@@ -6593,7 +6612,7 @@ __webpack_require__.r(__webpack_exports__);
         confirm_password: '',
         active: 0
       },
-      isRole: '',
+      isRole: $("meta[name='role']").attr("content"),
       errors: []
     };
   },
@@ -6854,10 +6873,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CandidateNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CandidateNavbar.vue */ "./resources/js/components/pages/website/partials/CandidateNavbar.vue");
-//
-//
-//
-//
 //
 //
 //
@@ -11737,7 +11752,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       data: {},
       related_job: '',
-      is_auth: '',
+      is_auth: $("meta[name='role']").attr("content"),
       role: '',
       already_applied: ''
     };
@@ -12411,7 +12426,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       totalCompanies: 0,
       showError: false,
       keywordSearchShow: false,
-      is_auth: false
+      is_auth: $("meta[name='role']").attr("content")
     };
   },
   mounted: function mounted() {
@@ -12562,8 +12577,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         keyword: '',
         skills: ''
       };
-      this.searchData = [], this.totalJobs = 0, this.jobToShow = 10, this.showError = false;
+      this.jobToShow = 10;
+      this.showError = false;
       this.keywordSearchShow = false;
+      this.getJobs();
     }
   }
 });
@@ -13099,7 +13116,7 @@ __webpack_require__.r(__webpack_exports__);
         keyword: '',
         skills: []
       },
-      is_auth: false,
+      is_auth: $("meta[name='role']").attr("content"),
       searchData: '',
       candidateToShow: 10,
       totalcandidates: 0,
@@ -13120,8 +13137,7 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   created: function created() {
-    this.getCandidate();
-    this.checkAuth();
+    this.getCandidate(); // this.checkAuth()
   },
   components: {
     WebsiteNavbar: _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -13129,15 +13145,14 @@ __webpack_require__.r(__webpack_exports__);
     Multiselect: (vue_multiselect__WEBPACK_IMPORTED_MODULE_3___default())
   },
   methods: {
-    checkAuth: function checkAuth() {
-      var _this = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-auth').then(function (response) {
-        if (response.data.isAuth == true) {
-          _this.is_auth = response.data.isAuth;
-        }
-      });
-    },
+    // checkAuth(){
+    //     axios.get('api/check-auth')
+    //     .then((response) => {
+    //         if(response.data.isAuth == true){
+    //             this.is_auth = response.data.isAuth
+    //         }
+    //     });
+    // },
     addSkill: function addSkill(newTag) {
       var tag = {
         name: newTag,
@@ -13147,30 +13162,30 @@ __webpack_require__.r(__webpack_exports__);
       this.record.skills.push(tag);
     },
     getCandidate: function getCandidate() {
-      var _this2 = this;
+      var _this = this;
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/get-candidates-search?page=' + page).then(function (response) {
-        _this2.searchData = response.data;
-        _this2.totalcandidates = _this2.searchData.length;
+        _this.searchData = response.data;
+        _this.totalcandidates = _this.searchData.length;
       });
     },
     search: function search() {
-      var _this3 = this;
+      var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/candidate-search', this.record).then(function (response) {
-        _this3.searchData = response.data;
-        _this3.totalcandidates = _this3.searchData.length;
+        _this2.searchData = response.data;
+        _this2.totalcandidates = _this2.searchData.length;
 
         if (response.data.length == 0) {
-          _this3.showError = true;
+          _this2.showError = true;
         } else {
-          _this3.showError = false;
+          _this2.showError = false;
         }
       });
     },
     keywordSearch: function keywordSearch() {
-      var _this4 = this;
+      var _this3 = this;
 
       this.searchData = '';
       this.candidateToShow = 3;
@@ -13183,13 +13198,13 @@ __webpack_require__.r(__webpack_exports__);
         });
       } else {
         axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/candidate-keyword-search/' + this.record.keyword).then(function (response) {
-          _this4.searchData = response.data;
-          _this4.totalcandidates = _this4.searchData.length;
+          _this3.searchData = response.data;
+          _this3.totalcandidates = _this3.searchData.length;
 
           if (response.data.length == 0) {
-            _this4.showError = true;
+            _this3.showError = true;
           } else {
-            _this4.showError = false;
+            _this3.showError = false;
           }
         });
       }
@@ -13338,7 +13353,7 @@ __webpack_require__.r(__webpack_exports__);
         confirm_password: '',
         active: 0
       },
-      isRole: '',
+      isRole: $("meta[name='role']").attr("content"),
       errors: []
     };
   },
@@ -13528,7 +13543,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _partials_navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/navbar.vue */ "./resources/js/components/pages/website/partials/navbar.vue");
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
-//
 //
 //
 //
@@ -14324,7 +14338,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -14371,6 +14384,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_CompanyNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/CompanyNavbar.vue */ "./resources/js/components/pages/website/partials/CompanyNavbar.vue");
 /* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
 /* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_3__);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16364,10 +16384,18 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     addToWishList: function addToWishList(id) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/add-to-wish-list/' + id);
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/add-to-wish-list/' + id).then(function (response) {
+        _this2.getSingleJobDetail();
+      });
     },
     removeToWishList: function removeToWishList(id) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/remove-to-wish-list/' + id);
+      var _this3 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/remove-to-wish-list/' + id).then(function (response) {
+        _this3.getSingleJobDetail();
+      });
     }
   }
 });
@@ -16799,8 +16827,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      isAuth: false,
-      url: ''
+      isAuth: '',
+      url: '',
+      role: $("meta[name='role']").attr("content")
     };
   },
   created: function created() {
@@ -16808,18 +16837,26 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     checkAuth: function checkAuth() {
-      var _this = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-auth').then(function (response) {
-        _this.isAuth = response.data.isAuth;
-      });
+      // axios.get('/api/check-auth')
+      // .then((response) => {
+      //     this.isAuth = response.data.isAuth
+      // });
+      // this.role = $("meta[name='role']").attr("content");
+      if (this.role == "false") {
+        this.isAuth = false;
+      } else {
+        this.isAuth = true;
+      }
     },
     logoutUser: function logoutUser() {
-      var _this2 = this;
+      var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/user-logout').then(function (response) {
         if (response.data.success == true) {
-          _this2.$router.push({
+          _this.isAuth = false;
+          _this.role = $("meta[name='role']").attr("content", 'false');
+
+          _this.$router.push({
             name: 'Signin'
           });
         }
@@ -16853,7 +16890,7 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 
 
 Vue.use(__webpack_require__(/*! vue-moment */ "./node_modules/vue-moment/dist/vue-moment.js"));
-Vue.prototype.$userId = document.querySelector("meta[name='user_id']").getAttribute('content');
+Vue.prototype.$userId = document.querySelector("meta[name='role']").getAttribute('content');
 
 Vue.component('multiselect', (vue_multiselect__WEBPACK_IMPORTED_MODULE_2___default())); // https://www.npmjs.com/package/vue-timeago
 
@@ -17006,7 +17043,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CandidateProfile',
     component: _components_pages_website_candidate_CandidateProfileComponent_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-candidate-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-candidate-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17019,7 +17056,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CompanyPostJob',
     component: _components_pages_website_company_CompanyPostJobComponent_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17032,7 +17069,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CompanyProfile',
     component: _components_pages_website_company_CompanyProfileComponent_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17053,7 +17090,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CompanyAccountSetting',
     component: _components_pages_website_company_CompanyAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17066,7 +17103,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CandidateAccountSetting',
     component: _components_pages_website_candidate_CandidateAccountSettingComponent_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-candidate-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-candidate-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17079,7 +17116,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'JobAppliedCandidates',
     component: _components_pages_website_company_JobAppliedCandidatesComponent_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17092,7 +17129,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CompanyDashboard',
     component: _components_pages_website_company_CompanyDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17145,7 +17182,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'CandidateDashboard',
     component: _components_pages_website_candidate_CandidateDashboardComponent_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-candidate-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-candidate-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -17182,7 +17219,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_34__["default"]({
     name: 'PackagePlans',
     component: _components_pages_admin_PackagePlansComponent_vue__WEBPACK_IMPORTED_MODULE_24__["default"],
     beforeEnter: function beforeEnter(to, from, next) {
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('api/check-company-role').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/check-company-role').then(function (response) {
         if (response.data.success == true) {
           next();
         } else {
@@ -19662,7 +19699,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.text_loading[data-v-284a2b3e] {\n        color: #f1f1f1;\n        position: fixed;\n        z-index: 200000;\n        left: 50%;\n        top: 50%;\n        transform: translate(-50%, -50%)\n}\n.parent-spinner[data-v-284a2b3e] {\n        background: #050115;\n        display: flex;\n        height: 100vh;\n        width: 100vw;\n        overflow: hidden;\n        position: fixed;\n        z-index: 10000;\n        opacity: 0.6;\n}\n.spinner[data-v-284a2b3e] {\n        width: 10em;\n        height: 10em;\n        border-top: .5em solid #d5fff7;\n        border-right: .5em solid transparent;\n        -webkit-animation: spinner-data-v-284a2b3e .4s linear infinite;\n                animation: spinner-data-v-284a2b3e .4s linear infinite;\n        border-radius: 50%;\n        margin: auto\n}\n.head[data-v-284a2b3e] {\n        width: 1em;\n        height: 1em;\n        border-radius: 50%;\n        margin-left: 8.5em;\n        margin-top: .5em;\n        background-color: #d5fff7\n}\n@-webkit-keyframes spinner-data-v-284a2b3e {\nto {\n            transform: rotate(360deg)\n}\n}\n@keyframes spinner-data-v-284a2b3e {\nto {\n            transform: rotate(360deg)\n}\n}\n\n    /* LOADING  */\n.rs-preloader[data-v-284a2b3e] {\n        align-items: center;\n        cursor: default;\n        display: flex;\n        height: 100%;\n        justify-content: center;\n        position: fixed;\n        left: 0;\n        top: 0;\n        width: 100%;\n        background: #fff;\n        z-index: 9000;\n}\n.rs-preloader .animation-preloader[data-v-284a2b3e] {\n        z-index: 1000;\n}\n.rs-preloader .animation-preloader .spinner1[data-v-284a2b3e] {\n        -webkit-animation: preloaderspinner1-data-v-284a2b3e 1s infinite linear;\n                animation: preloaderspinner1-data-v-284a2b3e 1s infinite linear;\n        border-radius: 50%;\n        /* border: 3px solid rgba(0, 0, 0, 0.2);\n\t  border-top-color: rgba(255, 255, 255, 0.2); */\n        border: 3px solid #081351;\n        border-top-color: rgba(255, 255, 255, 0.2);\n        height: 9em;\n        margin: 0 auto 3.5em auto;\n        width: 9em;\n}\n.rs-preloader .animation-preloader .txt-loading[data-v-284a2b3e] {\n        font: bold 5em \"Poppins\", sans-serif;\n        text-align: center;\n        -webkit-user-select: none;\n           -moz-user-select: none;\n            -ms-user-select: none;\n                user-select: none;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e] {\n        color: rgba(0, 0, 0, 0.2);\n        position: relative;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:before {\n        -webkit-animation: letters-loading-data-v-284a2b3e 4s infinite;\n                animation: letters-loading-data-v-284a2b3e 4s infinite;\n        /* color: #000; */\n        color: #081351;\n        content: attr(data-text-preloader);\n        left: 0;\n        opacity: 0;\n        font-family: \"Poppins\", sans-serif;\n        position: absolute;\n        top: -3px;\n        transform: rotateY(-90deg);\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(2):before {\n        -webkit-animation-delay: 0.2s;\n                animation-delay: 0.2s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(3):before {\n        -webkit-animation-delay: 0.4s;\n                animation-delay: 0.4s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(4):before {\n        -webkit-animation-delay: 0.6s;\n                animation-delay: 0.6s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(5):before {\n        -webkit-animation-delay: 0.8s;\n                animation-delay: 0.8s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(6):before {\n        -webkit-animation-delay: 1s;\n                animation-delay: 1s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(7):before {\n        -webkit-animation-delay: 1.2s;\n                animation-delay: 1.2s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(8):before {\n        -webkit-animation-delay: 1.4s;\n                animation-delay: 1.4s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(9):before {\n        -webkit-animation-delay: 1.6s;\n                animation-delay: 1.6s;\n}\n.rs-preloader p[data-v-284a2b3e] {\n        font-size: 14px;\n        font-weight: 500;\n        text-transform: uppercase;\n        letter-spacing: 8px;\n        color: #3b3b3b;\n}\n@-webkit-keyframes preloaderspinner1-data-v-284a2b3e {\nto {\n            transform: rotateZ(360deg);\n}\n}\n@keyframes preloaderspinner1-data-v-284a2b3e {\nto {\n            transform: rotateZ(360deg);\n}\n}\n@-webkit-keyframes letters-loading-data-v-284a2b3e {\n0%,\n        75%,\n        100% {\n            opacity: 0;\n            transform: rotateY(-90deg);\n}\n25%,\n        50% {\n            opacity: 1;\n            transform: rotateY(0deg);\n}\n}\n@keyframes letters-loading-data-v-284a2b3e {\n0%,\n        75%,\n        100% {\n            opacity: 0;\n            transform: rotateY(-90deg);\n}\n25%,\n        50% {\n            opacity: 1;\n            transform: rotateY(0deg);\n}\n}\n@media screen and (max-width:768px) {\n.rs-preloader .animation-preloader .spinner1[data-v-284a2b3e] {\n            height: 5em;\n            width: 5em;\n}\n.rs-preloader .animation-preloader .txt-loading[data-v-284a2b3e] {\n            font-size: 2em;\n}\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#preloader[data-v-284a2b3e] {\n        display: none;\n}\n.text_loading[data-v-284a2b3e] {\n        color: #f1f1f1;\n        position: fixed;\n        z-index: 200000;\n        left: 50%;\n        top: 50%;\n        transform: translate(-50%, -50%)\n}\n.parent-spinner[data-v-284a2b3e] {\n        background: #050115;\n        display: flex;\n        height: 100vh;\n        width: 100vw;\n        overflow: hidden;\n        position: fixed;\n        z-index: 10000;\n        opacity: 0.6;\n}\n.spinner[data-v-284a2b3e] {\n        width: 10em;\n        height: 10em;\n        border-top: .5em solid #d5fff7;\n        border-right: .5em solid transparent;\n        -webkit-animation: spinner-data-v-284a2b3e .4s linear infinite;\n                animation: spinner-data-v-284a2b3e .4s linear infinite;\n        border-radius: 50%;\n        margin: auto\n}\n.head[data-v-284a2b3e] {\n        width: 1em;\n        height: 1em;\n        border-radius: 50%;\n        margin-left: 8.5em;\n        margin-top: .5em;\n        background-color: #d5fff7\n}\n@-webkit-keyframes spinner-data-v-284a2b3e {\nto {\n            transform: rotate(360deg)\n}\n}\n@keyframes spinner-data-v-284a2b3e {\nto {\n            transform: rotate(360deg)\n}\n}\n\n    /* LOADING  */\n.rs-preloader[data-v-284a2b3e] {\n        align-items: center;\n        cursor: default;\n        display: flex;\n        height: 100%;\n        justify-content: center;\n        position: fixed;\n        left: 0;\n        top: 0;\n        width: 100%;\n        background: #fff;\n        z-index: 9000;\n}\n.rs-preloader .animation-preloader[data-v-284a2b3e] {\n        z-index: 1000;\n}\n.rs-preloader .animation-preloader .spinner1[data-v-284a2b3e] {\n        -webkit-animation: preloaderspinner1-data-v-284a2b3e 1s infinite linear;\n                animation: preloaderspinner1-data-v-284a2b3e 1s infinite linear;\n        border-radius: 50%;\n        /* border: 3px solid rgba(0, 0, 0, 0.2);\n\t  border-top-color: rgba(255, 255, 255, 0.2); */\n        border: 3px solid #081351;\n        border-top-color: rgba(255, 255, 255, 0.2);\n        height: 9em;\n        margin: 0 auto 3.5em auto;\n        width: 9em;\n}\n.rs-preloader .animation-preloader .txt-loading[data-v-284a2b3e] {\n        font: bold 5em \"Poppins\", sans-serif;\n        text-align: center;\n        -webkit-user-select: none;\n           -moz-user-select: none;\n            -ms-user-select: none;\n                user-select: none;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e] {\n        color: rgba(0, 0, 0, 0.2);\n        position: relative;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:before {\n        -webkit-animation: letters-loading-data-v-284a2b3e 4s infinite;\n                animation: letters-loading-data-v-284a2b3e 4s infinite;\n        /* color: #000; */\n        color: #081351;\n        content: attr(data-text-preloader);\n        left: 0;\n        opacity: 0;\n        font-family: \"Poppins\", sans-serif;\n        position: absolute;\n        top: -3px;\n        transform: rotateY(-90deg);\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(2):before {\n        -webkit-animation-delay: 0.2s;\n                animation-delay: 0.2s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(3):before {\n        -webkit-animation-delay: 0.4s;\n                animation-delay: 0.4s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(4):before {\n        -webkit-animation-delay: 0.6s;\n                animation-delay: 0.6s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(5):before {\n        -webkit-animation-delay: 0.8s;\n                animation-delay: 0.8s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(6):before {\n        -webkit-animation-delay: 1s;\n                animation-delay: 1s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(7):before {\n        -webkit-animation-delay: 1.2s;\n                animation-delay: 1.2s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(8):before {\n        -webkit-animation-delay: 1.4s;\n                animation-delay: 1.4s;\n}\n.rs-preloader .animation-preloader .txt-loading .letters-loading[data-v-284a2b3e]:nth-child(9):before {\n        -webkit-animation-delay: 1.6s;\n                animation-delay: 1.6s;\n}\n.rs-preloader p[data-v-284a2b3e] {\n        font-size: 14px;\n        font-weight: 500;\n        text-transform: uppercase;\n        letter-spacing: 8px;\n        color: #3b3b3b;\n}\n@-webkit-keyframes preloaderspinner1-data-v-284a2b3e {\nto {\n            transform: rotateZ(360deg);\n}\n}\n@keyframes preloaderspinner1-data-v-284a2b3e {\nto {\n            transform: rotateZ(360deg);\n}\n}\n@-webkit-keyframes letters-loading-data-v-284a2b3e {\n0%,\n        75%,\n        100% {\n            opacity: 0;\n            transform: rotateY(-90deg);\n}\n25%,\n        50% {\n            opacity: 1;\n            transform: rotateY(0deg);\n}\n}\n@keyframes letters-loading-data-v-284a2b3e {\n0%,\n        75%,\n        100% {\n            opacity: 0;\n            transform: rotateY(-90deg);\n}\n25%,\n        50% {\n            opacity: 1;\n            transform: rotateY(0deg);\n}\n}\n@media screen and (max-width:768px) {\n.rs-preloader .animation-preloader .spinner1[data-v-284a2b3e] {\n            height: 5em;\n            width: 5em;\n}\n.rs-preloader .animation-preloader .txt-loading[data-v-284a2b3e] {\n            font-size: 2em;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31209,8 +31246,6 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _c("CompanyNavbar"),
-      _vm._v(" "),
       _c("h1", { staticClass: "pricing-plan-title about" }, [
         _vm._v("About Us"),
       ]),
@@ -32144,11 +32179,7 @@ var render = function () {
                             {
                               attrs: { to: { name: "CandidateResetPassword" } },
                             },
-                            [
-                              _vm._v(
-                                "Forgot Password?\n                                    "
-                              ),
-                            ]
+                            [_vm._v("Forgot Password?")]
                           ),
                         ],
                         1
@@ -33243,7 +33274,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "direct-login-icons" }, [
       _c("li", [
-        _c("a", { attrs: { href: "api/auth/google" } }, [
+        _c("a", { attrs: { href: "/api/auth/google" } }, [
           _c("img", {
             attrs: { src: "/website/assets/images/search.svg", alt: "google" },
           }),
@@ -33251,7 +33282,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("li", [
-        _c("a", { attrs: { href: "api/auth/linkedin" } }, [
+        _c("a", { attrs: { href: "/api/auth/linkedin" } }, [
           _c("img", {
             attrs: {
               src: "/website/assets/images/linkedin-round.svg",
@@ -33262,7 +33293,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("li", [
-        _c("a", { attrs: { href: "api/auth/github" } }, [
+        _c("a", { attrs: { href: "/api/auth/github" } }, [
           _c("img", {
             attrs: {
               src: "/website/assets/images/github-logo_icon.png",
@@ -36751,7 +36782,7 @@ var render = function () {
                       staticClass: "btn btn-black hero-banner-btn-job mr-2",
                       attrs: { to: { name: "JobSearch" } },
                     },
-                    [_vm._v("\n                            Looking for a Jobs")]
+                    [_vm._v("\n                            Looking for Jobs")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -36908,7 +36939,7 @@ var render = function () {
                       },
                       [
                         _c("div", [
-                          _c("h2", [_vm._v("Looking for a Job?")]),
+                          _c("h2", [_vm._v("Looking for Job?")]),
                           _vm._v(" "),
                           _c("p", [
                             _vm._v(
@@ -37541,7 +37572,7 @@ var staticRenderFns = [
                   staticClass: "secondaymenu",
                   attrs: { href: "#expertise", id: "secondary-anker" },
                 },
-                [_vm._v("Looking for A job")]
+                [_vm._v("Looking for jobs")]
               ),
               _c("span", { staticClass: "seprate-line" }),
             ]),
@@ -39968,71 +39999,6 @@ var render = function () {
             _vm._m(4),
             _vm._v(" "),
             _c("div", [
-              _c("div", { staticClass: "job-list-wrap p-0" }, [
-                _c("div", { staticClass: "job-list" }, [
-                  _vm._m(5),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "job-list-content col" }, [
-                    _vm._m(6),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "job-description" }, [
-                      _vm._v(
-                        "As a Data Scientist, you will be in a central position as\n                                    you will be evangelizing data and our methodologies to other functional analysts\n                                    and other stakeholders in the company."
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "job-content-wrap" }, [
-                      _vm._m(7),
-                      _vm._v(" "),
-                      _c("ul", { staticClass: "job-list-fav m-0" }, [
-                        _c(
-                          "li",
-                          [
-                            _c(
-                              "router-link",
-                              {
-                                staticClass: "job-view-btn",
-                                attrs: { to: "/candidate-dashboard" },
-                              },
-                              [
-                                _vm._v(
-                                  "View\n                                            "
-                                ),
-                              ]
-                            ),
-                          ],
-                          1
-                        ),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "show-more-anker" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "show-more-common",
-                    attrs: { to: "/candidate-dashboard" },
-                  },
-                  [_vm._v("Show more")]
-                ),
-                _vm._v(" "),
-                _vm._m(8),
-              ],
-              1
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "candidate" }, [
-            _vm._m(9),
-            _vm._v(" "),
-            _c("div", [
               _vm.wishlist.length > 0
                 ? _c("div", { staticClass: "job-list-wrap" }, [
                     _c(
@@ -40198,7 +40164,7 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _vm._m(10),
+        _vm._m(5),
       ]),
     ],
     1
@@ -40269,121 +40235,6 @@ var staticRenderFns = [
       _c("p", { staticClass: "msg-time-date" }, [
         _vm._v("10/08/2021, 09:10 am"),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "candidate-tagline" }, [
-      _vm._v("\n                    Recommended Jobs\n                    "),
-      _c("i", { staticClass: "fas fa-briefcase" }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "company-logo col-auto py-2" }, [
-      _c("img", { attrs: { src: "", alt: "Company Logo" } }),
-      _vm._v(" "),
-      _c("span", { staticClass: "company-h line-clamp-1" }, [_vm._v("i2c")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-header" }, [
-      _c("h6", { staticClass: "job-title mb-0" }, [_vm._v("Data Analyst")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "d-flex align-items-center" }, [
-        _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
-        _vm._v(" "),
-        _c("i", { staticClass: "far fa-heart" }),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "job-dynamic-values" }, [
-      _c("ul", [
-        _c("li", [
-          _c("img", {
-            attrs: {
-              src: "/website/assets/images/calendar-job.svg",
-              alt: "img",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("Aug 23, 2021")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("img", {
-            attrs: {
-              src: "/website/assets/images/experience-job.svg",
-              alt: "",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("3 Years")]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("ul", [
-        _c("li", [
-          _c("img", {
-            attrs: { src: "/website/assets/images/money-job.svg", alt: "" },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("80K to 100K")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("img", {
-            staticStyle: { margin: "0px 3px" },
-            attrs: {
-              height: "16px",
-              width: "10px",
-              src: "/website/assets/images/pin.svg",
-              alt: "img",
-            },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("Lahore, Pakistan")]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("ul", [
-        _c("li", [
-          _c("img", {
-            attrs: { src: "/website/assets/images/suitcase-job.svg", alt: "" },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("Morning Shift")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("img", {
-            attrs: { src: "/website/assets/images/switch-job.svg", alt: "" },
-          }),
-          _vm._v(" "),
-          _c("span", [_vm._v("Full Time")]),
-        ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "notify-unread-msgs" }, [
-      _vm._v("You have "),
-      _c("span", [_vm._v("12")]),
-      _vm._v(" unread messages"),
     ])
   },
   function () {
@@ -51712,7 +51563,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "d-flex align-items-center" }, [
       _c("span", { staticClass: "job-post-date" }, [_vm._v("20 hours ago ")]),
       _vm._v(" "),
-      _c("i", { staticClass: "far fa-heart" }),
+      _c("i", { staticClass: "far fa-bookmark" }),
     ])
   },
   function () {
@@ -52800,7 +52651,7 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _vm.is_auth == true ? _c("CandidateNavbar") : _vm._e(),
+      _vm.is_auth == "candidate" ? _c("CandidateNavbar") : _vm._e(),
       _vm._v(" "),
       _c("div", { staticClass: "container user-profile-container cont-flex" }, [
         _c("div", { staticClass: "condition-search-feilds" }, [
@@ -53960,7 +53811,8 @@ var render = function () {
                                                 },
                                                 [
                                                   _c("i", {
-                                                    staticClass: "far fa-heart",
+                                                    staticClass:
+                                                      "far fa-bookmark",
                                                   }),
                                                 ]
                                               )
@@ -53980,7 +53832,8 @@ var render = function () {
                                                 },
                                                 [
                                                   _c("i", {
-                                                    staticClass: "fas fa-heart",
+                                                    staticClass:
+                                                      "fas fa-bookmark",
                                                   }),
                                                 ]
                                               ),
@@ -54675,7 +54528,7 @@ var render = function () {
     [
       _c("WebsiteNavbar"),
       _vm._v(" "),
-      _vm.is_auth == true ? _c("CompanyNavbar") : _vm._e(),
+      _vm.is_auth == "company" ? _c("CompanyNavbar") : _vm._e(),
       _vm._v(" "),
       _c("div", { staticClass: "container user-profile-container cont-flex" }, [
         _c("div", { staticClass: "condition-search-feilds" }, [
@@ -56607,7 +56460,7 @@ var render = function () {
                                           },
                                           [
                                             _c("i", {
-                                              staticClass: "fas fa-heart",
+                                              staticClass: "fas fa-bookmark",
                                             }),
                                           ]
                                         ),
@@ -56715,7 +56568,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "candidate-tagline" }, [
       _vm._v("\n                    Whishlist\n                    "),
-      _c("i", { staticClass: "fas fa-heart" }),
+      _c("i", { staticClass: "fas fa-bookmark" }),
     ])
   },
   function () {
@@ -57372,10 +57225,10 @@ var render = function () {
               { staticClass: "company_detail_info px-2 row no-gutters" },
               [
                 _c("div", { staticClass: "info_left col-12 col-md-4" }, [
-                  _c("figure", {
+                  _c("div", {
                     staticClass: "company_image",
                     style: {
-                      "background-image":
+                      backgroundImage:
                         "url(/storage/images/companies/" + _vm.data.logo + ")",
                     },
                   }),
@@ -57920,56 +57773,116 @@ var render = function () {
               { staticClass: "job-list-wrap" },
               _vm._l(_vm.jobs.data, function (item, index) {
                 return _c("div", { key: index, staticClass: "job-list mx-0" }, [
-                  _c("div", { staticClass: "company-logo col-auto py-2" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/storage/images/companies/" + item.banner,
-                        alt: "Company Logo",
-                      },
-                    }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "company-h line-clamp-1" }, [
-                      _vm._v(_vm._s(item.company.company_name)),
-                    ]),
-                  ]),
+                  _c(
+                    "div",
+                    { staticClass: "company-logo col-auto py-2" },
+                    [
+                      _c("img", {
+                        attrs: {
+                          src: "/storage/images/companies/" + item.banner,
+                          alt: "Company Logo",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "job-view-btn",
+                          attrs: {
+                            "data-toggle": "collapse",
+                            to: {
+                              name: "CompanyDetail",
+                              params: { id: item.company.id },
+                            },
+                          },
+                        },
+                        [
+                          _c(
+                            "span",
+                            { staticClass: "company-h line-clamp-1" },
+                            [_vm._v(_vm._s(item.company.company_name))]
+                          ),
+                        ]
+                      ),
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("div", { staticClass: "job-list-content col" }, [
-                    _c("div", { staticClass: "job-header" }, [
-                      _c("h6", { staticClass: "job-title mb-0" }, [
-                        _vm._v(_vm._s(item.title)),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "d-flex align-items-center" }, [
-                        _c(
-                          "span",
-                          { staticClass: "job-post-date" },
-                          [
-                            _c("timeago", {
-                              attrs: { datetime: item.created_at },
-                            }),
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticStyle: { "over-flow": "hidden" } }, [
-                          item.deleted_at
-                            ? _c(
-                                "p",
-                                {
-                                  class: !item.deleted_at
-                                    ? ""
-                                    : "job-deleted-mark",
+                    _c(
+                      "div",
+                      { staticClass: "job-header" },
+                      [
+                        !item.deleted_at
+                          ? _c(
+                              "router-link",
+                              {
+                                staticClass: "job-post-icons",
+                                attrs: {
+                                  to: {
+                                    name: "JobDetail",
+                                    params: { id: item.id },
+                                  },
+                                  "data-toggle": "collapse",
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                                        DELETED"
+                              },
+                              [
+                                _c("h6", { staticClass: "job-title mb-0" }, [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticStyle: {
+                                        color: "#757575 !important",
+                                      },
+                                    },
+                                    [_vm._v(_vm._s(item.title))]
                                   ),
-                                ]
-                              )
-                            : _vm._e(),
-                        ]),
-                      ]),
-                    ]),
+                                ]),
+                              ]
+                            )
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "d-flex align-items-center" },
+                          [
+                            _c(
+                              "span",
+                              { staticClass: "job-post-date" },
+                              [
+                                _c("timeago", {
+                                  attrs: { datetime: item.created_at },
+                                }),
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticStyle: { "over-flow": "hidden" } },
+                              [
+                                item.deleted_at
+                                  ? _c(
+                                      "p",
+                                      {
+                                        class: !item.deleted_at
+                                          ? ""
+                                          : "job-deleted-mark",
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                        DELETED"
+                                        ),
+                                      ]
+                                    )
+                                  : _vm._e(),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
                     _c("p", { staticClass: "job-description" }, [
                       _vm._v(_vm._s(item.description)),
@@ -62389,159 +62302,209 @@ var render = function () {
                     staticClass: "job-list-wrap",
                     staticStyle: { padding: "10px" },
                   },
-                  _vm._l(_vm.data, function (item, index) {
-                    return _c(
+                  [
+                    _c(
                       "div",
-                      {
-                        key: index,
-                        staticClass: "row m-0 justify-content-start",
-                      },
-                      [
-                        _c("div", { staticClass: "candidate-single" }, [
-                          _c("div", { staticClass: "candidate-list-content" }, [
-                            _c("div", { staticClass: "candidate-image" }, [
-                              _c("div", {
-                                staticClass: "candidate-photo",
-                                style: {
-                                  "background-image":
-                                    "url(/storage/images/candidates/" +
-                                    item.candidate.candidates.profile_image +
-                                    ")",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "candidate-header mt-2 ml-2" },
-                                [
-                                  _c(
-                                    "h6",
-                                    { staticClass: "candidate-name mb-0" },
-                                    [
-                                      _vm._v(
-                                        _vm._s(
-                                          item.candidate.candidates.full_name
-                                        )
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]),
-                            _vm._v(" "),
+                      { staticClass: "row m-0 justify-content-start" },
+                      _vm._l(_vm.data, function (item, index) {
+                        return _c(
+                          "div",
+                          { key: index, staticClass: "candidate-single" },
+                          [
                             _c(
-                              "p",
-                              { staticClass: "candidate-description my-1" },
-                              [_vm._v(_vm._s(item.candidate.candidates.bio))]
-                            ),
-                            _vm._v(" "),
-                            _c("ul", { staticClass: "candidate-list-meta" }, [
-                              _c("li", [
-                                _c("i", { staticClass: "fas fa-venus-mars" }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "hide-line-1" }, [
-                                  _vm._v(
-                                    _vm._s(item.candidate.candidates.gender)
-                                  ),
-                                ]),
-                              ]),
-                              _vm._v(" "),
-                              _c("li", { staticClass: "mt-1" }, [
-                                _c("i", {
-                                  staticClass: "fas fa-envelope-open-text",
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "hide-line-1" }, [
-                                  _vm._v(
-                                    _vm._s(
-                                      item.candidate.candidates.experience
-                                    ) + " years"
-                                  ),
-                                ]),
-                              ]),
-                              _vm._v(" "),
-                              _c("li", { staticClass: "mt-1" }, [
-                                _c("i", {
-                                  staticClass: "fas fa-map-marker-alt",
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "hide-line-1" }, [
-                                  _vm._v(
-                                    _vm._s(item.candidate.candidates.city)
-                                  ),
-                                ]),
-                              ]),
-                            ]),
-                            _vm._v(" "),
-                            _c("ul", { staticClass: "candidate-list-fav" }, [
-                              _c(
-                                "li",
-                                { staticClass: "w-100" },
-                                [
+                              "div",
+                              { staticClass: "candidate-list-content" },
+                              [
+                                _c("div", { staticClass: "candidate-image" }, [
+                                  _c("div", {
+                                    staticClass: "candidate-photo",
+                                    style: {
+                                      "background-image":
+                                        "url(/storage/images/candidates/" +
+                                        item.candidate.candidates
+                                          .profile_image +
+                                        ")",
+                                    },
+                                  }),
+                                  _vm._v(" "),
                                   _c(
-                                    "router-link",
+                                    "div",
                                     {
-                                      staticClass: "job-view-btn",
-                                      attrs: {
-                                        "data-toggle": "collapse",
-                                        to: {
-                                          name: "CandidateDetail",
-                                          params: {
-                                            id: item.candidate.candidates.id,
-                                          },
-                                        },
-                                      },
+                                      staticClass: "candidate-header mt-2 ml-2",
                                     },
                                     [
-                                      _vm._v(
-                                        "\n                                                View Profile"
+                                      _c(
+                                        "h6",
+                                        { staticClass: "candidate-name mb-0" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              item.candidate.candidates
+                                                .full_name
+                                            )
+                                          ),
+                                        ]
                                       ),
                                     ]
                                   ),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c("li", [
-                                item.is_wish_listed == false
-                                  ? _c(
-                                      "a",
-                                      {
-                                        staticClass:
-                                          "candidate-wishlist-btn ml-2 ",
-                                        on: {
-                                          click: function ($event) {
-                                            return _vm.addToWishList(
-                                              item.candidate.id
-                                            )
-                                          },
-                                        },
-                                      },
-                                      [_c("i", { staticClass: "far fa-heart" })]
-                                    )
-                                  : _c(
-                                      "a",
-                                      {
-                                        staticClass:
-                                          "candidate-wishlist-btn ml-2 ",
-                                        on: {
-                                          click: function ($event) {
-                                            return _vm.removeToWishList(
-                                              item.candidate.id
-                                            )
-                                          },
-                                        },
-                                      },
-                                      [_c("i", { staticClass: "fas fa-heart" })]
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  { staticClass: "candidate-description my-1" },
+                                  [
+                                    _vm._v(
+                                      _vm._s(item.candidate.candidates.bio)
                                     ),
-                              ]),
-                            ]),
-                          ]),
-                        ]),
-                      ]
-                    )
-                  }),
-                  0
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "ul",
+                                  { staticClass: "candidate-list-meta" },
+                                  [
+                                    _c("li", [
+                                      _c("i", {
+                                        staticClass: "fas fa-venus-mars",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "hide-line-1" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              item.candidate.candidates.gender
+                                            )
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("li", { staticClass: "mt-1" }, [
+                                      _c("i", {
+                                        staticClass:
+                                          "fas fa-envelope-open-text",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "hide-line-1" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              item.candidate.candidates
+                                                .experience
+                                            ) + " years"
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("li", { staticClass: "mt-1" }, [
+                                      _c("i", {
+                                        staticClass: "fas fa-map-marker-alt",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "hide-line-1" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              item.candidate.candidates.city
+                                            )
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "ul",
+                                  { staticClass: "candidate-list-fav" },
+                                  [
+                                    _c(
+                                      "li",
+                                      { staticClass: "w-100" },
+                                      [
+                                        _c(
+                                          "router-link",
+                                          {
+                                            staticClass: "job-view-btn",
+                                            attrs: {
+                                              "data-toggle": "collapse",
+                                              to: {
+                                                name: "CandidateDetail",
+                                                params: {
+                                                  id: item.candidate.candidates
+                                                    .id,
+                                                },
+                                              },
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                                View Profile"
+                                            ),
+                                          ]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c("li", [
+                                      item.is_wish_listed == false
+                                        ? _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "candidate-wishlist-btn ml-2 ",
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.addToWishList(
+                                                    item.candidate.id
+                                                  )
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "far fa-bookmark",
+                                              }),
+                                            ]
+                                          )
+                                        : _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "candidate-wishlist-btn ml-2 ",
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.removeToWishList(
+                                                    item.candidate.id
+                                                  )
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "fas fa-bookmark",
+                                              }),
+                                            ]
+                                          ),
+                                    ]),
+                                  ]
+                                ),
+                              ]
+                            ),
+                          ]
+                        )
+                      }),
+                      0
+                    ),
+                  ]
                 ),
               ]),
             ]),

@@ -504,7 +504,7 @@
     export default {
         data() {
             return {
-                isRole: '',
+                isRole: $("meta[name='role']").attr("content"),
             };
         },
         components: {

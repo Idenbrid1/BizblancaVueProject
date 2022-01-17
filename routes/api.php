@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->group(function(){
-    
+
     Route::middleware('auth')->group(function(){
         Route::post('/update/basicinformation', [App\Http\Controllers\Candidate\CandidateController::class, 'updateBasicInformation'])->name('profile.updateBasicInformation');
         Route::post('/update/education', [App\Http\Controllers\Candidate\CandidateController::class, 'updateEducation'])->name('profile.updateEducation');
@@ -56,12 +56,10 @@ Route::middleware('auth:sanctum')->group(function(){
     });
 
     Route::get('check-auth-and-already-applied', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkAuthAndJobApplied']);
-    Route::get('get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'getData']);
-    Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCandidateRole']);
-    
-    
-    
+
 });
+Route::get('get-dashboard-profile', [App\Http\Controllers\Candidate\CandidateController::class, 'getData']);
+Route::get('check-candidate-role', [App\Http\Controllers\Admin\AuthenticationController::class, 'checkCandidateRole']);
 Route::get('user-logout', [App\Http\Controllers\Admin\AuthenticationController::class, 'userLogout']);
 
 
@@ -109,7 +107,7 @@ Route::get('get-jobs', [App\Http\Controllers\CommonController::class, 'getJobs']
 
 
 
-//samad 
+//samad
 Route::get('/login', function () {
     return view('website/pages/login');
 })->name('login');
@@ -155,9 +153,9 @@ Route::get('/clear', function() {
     Artisan::call('route:clear');
     Artisan::call('view:clear');
     return "Cleared!";
- });
+});
 
- Route::middleware(['web'])->group(function(){
+Route::middleware(['web'])->group(function(){
     //GOOGLE LOGIN ROUTES
     Route::get('auth/google', [App\Http\Controllers\Admin\AuthenticationController::class, 'redirectToGoogle']);
     Route::get('auth/google/callback', [App\Http\Controllers\Admin\AuthenticationController::class, 'handleGoogleCallback']);

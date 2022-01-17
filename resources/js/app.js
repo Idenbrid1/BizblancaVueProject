@@ -11,7 +11,7 @@ import router from './router';
 import App from './components/pages/website/MainApp.vue';
 Vue.use(require('vue-moment'));
 
-Vue.prototype.$userId = document.querySelector("meta[name='user_id']").getAttribute('content');
+Vue.prototype.$userId = document.querySelector("meta[name='role']").getAttribute('content');
 
 
 import Multiselect from 'vue-multiselect'

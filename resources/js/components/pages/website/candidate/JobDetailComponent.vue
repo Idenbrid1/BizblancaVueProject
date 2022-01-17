@@ -189,7 +189,7 @@
             return {
                 data: {},
                 related_job: '',
-                is_auth: '',
+                is_auth: $("meta[name='role']").attr("content"),
                 role: '',
                 already_applied: ''
             }

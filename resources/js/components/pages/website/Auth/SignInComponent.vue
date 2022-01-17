@@ -52,8 +52,7 @@
                                                 id="RememberPassword" />
                                             <label for="RememberPassword">Remember me</label>
                                         </div>
-                                        <router-link :to="{name: 'CandidateResetPassword'}">Forgot Password?
-                                        </router-link>
+                                        <router-link :to="{name: 'CandidateResetPassword'}">Forgot Password?</router-link>
                                     </div>
                                     <div class="login-button">
                                         <button>Login</button>
@@ -144,11 +143,13 @@
                     } else {
                         Swal.close()
                         if (response.data.user.type == 'candidate') {
+                            $("meta[name='role']").attr("content", 'candidate');
                             this.$router.push({
                                 name: 'CandidateDashboard'
                             })
                         }
                         if (response.data.user.type == 'company') {
+                            $("meta[name='role']").attr("content", 'company');
                             this.$router.push({
                                 name: 'CompanyDashboard'
                             })

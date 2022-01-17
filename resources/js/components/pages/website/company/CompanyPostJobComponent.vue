@@ -25,11 +25,18 @@
                     <div class="job-list mx-0" v-for="(item, index) in jobs.data" :key="index">
                         <div class="company-logo col-auto py-2">
                             <img :src="'/storage/images/companies/'+item.banner" alt="Company Logo" />
-                            <span class="company-h line-clamp-1">{{item.company.company_name}}</span>
+                            <router-link class="job-view-btn" data-toggle="collapse"
+                                :to="{ name: 'CompanyDetail', params: { id: item.company.id } }">
+                               <span class="company-h line-clamp-1">{{item.company.company_name}}</span>
+                            </router-link>
                         </div>
                         <div class="job-list-content col">
                             <div class="job-header">
-                                <h6 class="job-title mb-0">{{item.title}}</h6>
+                                <router-link v-if="!item.deleted_at"
+                                    :to="{ name: 'JobDetail', params: { id: item.id } }" data-toggle="collapse"
+                                    class="job-post-icons">
+                                    <h6 class="job-title mb-0"><a style="color: #757575 !important">{{item.title}}</a></h6>
+                                </router-link>
                                 <div class="d-flex align-items-center">
                                     <span class="job-post-date">
                                         <timeago :datetime="item.created_at"></timeago>
